@@ -34,7 +34,8 @@ class _HomeState extends State<Home> {
      "Username":currentUser.Username,
      "Profile picture":currentUser.profilepic,
 
-   }
+   },
+     SetOptions(merge: true)
    );
 setState(() {
 
