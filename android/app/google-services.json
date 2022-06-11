@@ -1,0 +1,83 @@
+{
+  "project_info": {
+    "project_number": "553801742438",
+    "firebase_url": "https://forum2-d63e3-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "forum2-d63e3",
+    "storage_bucket": "forum2-d63e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553801742438:android:36a0d3a9acb13db28d15a7",
+        "android_client_info": {
+          "package_name": "com.Blake.forum2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553801742438-af48huiem6h4mb4mjtbg5tkkag1jjf8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU4TwQCPguq2RO1LZ62Yzd-ZkATQ2lpRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553801742438-af48huiem6h4mb4mjtbg5tkkag1jjf8r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "553801742438-k83s0kdd2fgi16r2ij5m3euqhvdbj02m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Blake.forum2"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553801742438:android:f3e0b054ff51814e8d15a7",
+        "android_client_info": {
+          "package_name": "com.project.forum3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553801742438-af48huiem6h4mb4mjtbg5tkkag1jjf8r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBU4TwQCPguq2RO1LZ62Yzd-ZkATQ2lpRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553801742438-af48huiem6h4mb4mjtbg5tkkag1jjf8r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "553801742438-k83s0kdd2fgi16r2ij5m3euqhvdbj02m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.Blake.forum2"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
