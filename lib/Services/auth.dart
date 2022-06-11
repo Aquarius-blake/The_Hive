@@ -8,6 +8,7 @@ class AuthService{
 //Initialization
   final FirebaseAuth _auth = FirebaseAuth.instance;
   bool guest=false;
+  String? Username;
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
 
   User1? fbuser(User? user){
@@ -29,7 +30,7 @@ class AuthService{
       if(guest){
         return User1(UID: user.uid,Guest: guest,);
       }else{
-        return User1(UID: user.uid,Guest: false,);
+        return User1(UID: user.uid,Guest: false,Username:Username );
       }
     } else {
       return null;
@@ -92,6 +93,7 @@ class AuthService{
         "Gender":gender,
       }
       );
+      Username=username;
       return _userfirebase(user);
     }
     catch(e){
