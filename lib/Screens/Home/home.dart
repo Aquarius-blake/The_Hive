@@ -1,6 +1,7 @@
 
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Users1.dart';
@@ -18,6 +19,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final  AuthService _auth=AuthService();
+  final FirebaseFirestore _firestore=FirebaseFirestore.instance;
+
   final Upload _upload=Upload();
   final User1? u2=User1();
   dynamic image;
@@ -26,6 +29,13 @@ class _HomeState extends State<Home> {
    User? result=await FirebaseAuth.instance.currentUser;
    User1? currentUser =await _auth.fbuser(result);
    currentUser?.profilepic=image;
+   await  _firestore.collection("users").doc(currentUser!.UID).set({
+     "UID":currentUser.UID,
+     "Username":currentUser.Username,
+     "Profile picture":currentUser.profilepic,
+
+   }
+   );
 setState(() {
 
 });
