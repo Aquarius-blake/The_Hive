@@ -9,8 +9,9 @@ class User1{
   late final String? Password;
   late final bool? Guest;
   dynamic profilepic;
+  late final String? Username;
 
 
-  User1({ this.UID, this.profilepic,this.Guest,this.Email,this.Password});
+  User1({ this.UID, this.profilepic,this.Guest,this.Username,this.Email,this.Password});
 
 }
