@@ -94,6 +94,7 @@ class AuthService{
       }
       );
       Username=username;
+
       return _userfirebase(user);
     }
     catch(e){
@@ -116,3 +117,5 @@ class AuthService{
   }
 
 }
+
+//Return Current user in Custom User
