@@ -1,11 +1,11 @@
-//import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:image_picker/image_picker.dart';
 
 
 class Upload{
 
   //store image in database
-  //final FirebaseFirestore _firestore=FirebaseFirestore.instance;
+  final FirebaseFirestore _firestore=FirebaseFirestore.instance;
 
 
 

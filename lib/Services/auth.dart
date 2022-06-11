@@ -10,6 +10,17 @@ class AuthService{
   bool guest=false;
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
 
+  User1? fbuser(User? user){
+    if (user!=null) {
+      if(guest){
+        return User1(UID: user.uid,Guest: guest,);
+      }else{
+        return User1(UID: user.uid,Guest: false);
+      }
+    } else {
+      return null;
+    }
+  }
 
 
 //Convert to Custom User
