@@ -16,7 +16,7 @@ class AuthService{
       if(guest){
         return User1(UID: user.uid,Guest: guest,);
       }else{
-        return User1(UID: user.uid,Guest: false);
+        return User1(UID: user.uid,Guest: false,Username: Username);
       }
     } else {
       return null;
