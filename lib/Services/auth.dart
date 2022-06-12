@@ -119,3 +119,7 @@ class AuthService{
 }
 
 //Return Current user in Custom User
+
+Future CurrentUser()async{
+
+}
