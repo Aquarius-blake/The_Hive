@@ -122,7 +122,7 @@ class AuthService{
     try {
       User? currentu = await _auth.currentUser;
 
-      return fbuser(currentu);
+      return await fbuser(currentu);
     }catch(e){
       print(e.toString());
     }
