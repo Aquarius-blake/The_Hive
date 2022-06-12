@@ -121,6 +121,7 @@ class AuthService{
   Future CurrentUser()async{
     try {
       User? currentu = await _auth.currentUser;
+      await _firestore.collection("users").doc(currentu!.uid).get();
       return fbuser(currentu);
     }catch(e){
       print(e.toString());
