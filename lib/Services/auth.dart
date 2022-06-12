@@ -116,10 +116,19 @@ class AuthService{
 
   }
 
-}
-
 //Return Current user in Custom User
 
-Future CurrentUser()async{
+  Future CurrentUser()async{
+    try {
+      User? currentu = await _auth.currentUser;
+      return fbuser(currentu);
+    }catch(e){
+      print(e.toString());
+    }
+
+
+  }
+
+
 
 }
