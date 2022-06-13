@@ -11,6 +11,7 @@ class AuthService{
   String? Username;
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
 
+  //custom user for current user
   User1? fbuser(User? user){
     if (user!=null) {
       if(guest){
