@@ -25,21 +25,21 @@ class _HomeState extends State<Home> {
   final User1? u2=User1();
   dynamic image;
   void pic()async{
-   image= await _upload.uploadpic(ImageSource.gallery);
-   User? result=await FirebaseAuth.instance.currentUser;
-   User1? currentUser =await _auth.fbuser(result);
-   currentUser?.profilepic=image;
-   await  _firestore.collection("users").doc(currentUser!.UID).set({
-     "UID":currentUser.UID,
-     "Username":currentUser.Username,
-     "Profile picture":currentUser.profilepic,
+    image= await _upload.uploadpic(ImageSource.gallery);
+    User? result=await FirebaseAuth.instance.currentUser;
+    User1? currentUser =await _auth.fbuser(result);
+    currentUser?.profilepic=image;
+    await  _firestore.collection("users").doc(currentUser!.UID).set({
+      "UID":currentUser.UID,
+      "Username":currentUser.Username,
+      "Profile picture":currentUser.profilepic,
 
-   },
-     SetOptions(merge: true)
-   );
-setState(() {
+    },
+        SetOptions(merge: true)
+    );
+    setState(() {
 
-});
+    });
   }
 
   @override
@@ -75,9 +75,9 @@ setState(() {
                         Stack(
                             children:[
                               image!=null? CircleAvatar(
-                              radius: 60.0,
-                              backgroundImage: MemoryImage(image),
-                            ):CircleAvatar(
+                                radius: 60.0,
+                                backgroundImage: MemoryImage(image),
+                              ):CircleAvatar(
                                 radius: 60.0,
                                 backgroundImage: AssetImage('Assets/hac.jpg'),
                               ),
@@ -87,7 +87,7 @@ setState(() {
                                 child: IconButton(
                                     onPressed:() {
                                       pic();
-                                      },
+                                    },
                                     icon:Icon(
                                       Icons.add_a_photo,
                                       color: Colors.white,

@@ -121,6 +121,7 @@ class AuthService{
 
   Future CurrentUser()async{
     try {
+
       User? currentu = await _auth.currentUser;
 
       return await fbuser(currentu);
