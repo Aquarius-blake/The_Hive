@@ -121,17 +121,23 @@ class _SinginState extends State<Singin> {
                             ),
                             onPressed: () async {
                               if(_formKey.currentState?.validate()!=null){
+                                setState(() {
+                                  loading=true;
+                                });
                                 print(email);
                                 dynamic result= await _auth.SigninWithEmail(email, password);
                                 if (result==null){
                                   setState(() {
                                     error="Sigin Failed, Check Signin details";
+                                    loading=false;
                                   }
                                   );
                                 }else{
                                   print("success");
                                 }
-                              }
+                              }else{
+                                error="Signin Failed";}
+                              loading=false;
                             },
 
                             child: Padding(
