@@ -1,5 +1,5 @@
 
-//Taking a slightly long break
+//Taking a moderately long break
 
 /*
 import 'package:firebase_auth/firebase_auth.dart';
