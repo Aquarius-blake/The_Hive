@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/loading.dart';
 import '../../Services/auth.dart';
 
 class Singin extends StatefulWidget {
@@ -23,7 +24,7 @@ class _SinginState extends State<Singin> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading(): Scaffold(
       backgroundColor: Colors.lightBlueAccent[100] ,
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
