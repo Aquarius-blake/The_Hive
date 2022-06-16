@@ -29,7 +29,7 @@ class _SinginState extends State<Singin> {
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
         elevation: 2.0,
-        title: Center(
+        title: const Center(
             child: Text("Welcome")
         ),
       ),
