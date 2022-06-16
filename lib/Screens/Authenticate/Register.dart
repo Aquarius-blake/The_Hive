@@ -258,10 +258,14 @@ class _RegisterState extends State<Register> {
                                 ),
                                 onPressed: () async {
                                   if(_formKey.currentState?.validate()!=null){
+                                    setState(() {
+                                      loading=true;
+                                    });
                                     print(email);
                                     dynamic result=await _auth.RegisterNewUserEmail(email, password,Fnmae,Username,Gender);
                                     if (result==null){
                                       setState(() {
+                                        loading=false;
                                         error="Registeration Failed";
                                       }
                                       );
