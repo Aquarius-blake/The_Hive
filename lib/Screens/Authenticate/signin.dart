@@ -14,6 +14,7 @@ class _SinginState extends State<Singin> {
 
   final AuthService _auth= AuthService();
   final _formKey =GlobalKey<FormState>();
+  bool loading=false;
 
   //Text field States
   String email="";
