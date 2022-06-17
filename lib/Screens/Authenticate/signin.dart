@@ -30,7 +30,11 @@ class _SinginState extends State<Singin> {
         backgroundColor: Colors.lightBlue,
         elevation: 2.0,
         title: const Center(
-            child: Text("Welcome")
+            child: Text(
+              "Welcome",
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+            ),)
         ),
       ),
       body: Padding(
