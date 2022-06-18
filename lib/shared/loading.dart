@@ -20,7 +20,7 @@ class Loading extends StatelessWidget {
             Text(
                 "Loading, Please Wait A Moment",
               style: TextStyle(
-
+fontStyle: FontStyle.italic,
               ),
             )
           ],
