@@ -11,25 +11,28 @@ class Loading extends StatelessWidget {
     return Container(
       color: Colors.lightBlueAccent,
       child: Center(
-        child: Column(
-          children: [
-            SpinKitHourGlass(
-                color: Colors.white,
-                    size: 100.0,
-            ),
-            SizedBox(height: 5.0,),
-            Text(
-                "Loading, Please Wait A Moment",
-              style: GoogleFonts.fascinate(
-                textStyle: TextStyle(
+        child: Container(
+          child: Column(
+            children: [
+              SpinKitHourGlass(
+                  color: Colors.white,
+                      size: 100.0,
 
-                ),
-                fontStyle: FontStyle.italic,
-                fontSize: 25.0,
+              ),
+              SizedBox(height: 5.0,),
+              Text(
+                  "Loading, Please Wait A Moment",
+                style: GoogleFonts.fascinate(
+                  textStyle: TextStyle(
+                            color: Colors.white,
+                  ),
+                  fontStyle: FontStyle.italic,
+                  fontSize: 25.0,
 
+                )
               )
-            )
-          ],
+            ],
+          ),
         ),
       ),
     );
