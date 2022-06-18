@@ -10,9 +10,14 @@ class Loading extends StatelessWidget {
     return Container(
       color: Colors.lightBlueAccent,
       child: Center(
-        child: SpinKitHourGlass(
-            color: Colors.white,
-                size: 100.0,
+        child: Column(
+          children: [
+            SpinKitHourGlass(
+                color: Colors.white,
+                    size: 100.0,
+            ),
+            SizedBox(height: 5.0,)
+          ],
         ),
       ),
     );
