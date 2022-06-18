@@ -18,7 +18,7 @@ class Loading extends StatelessWidget {
             ),
             SizedBox(height: 5.0,),
             Text(
-                "",
+                "Loading, Please Wait A Moment",
               style: TextStyle(
 
               ),
