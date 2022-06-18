@@ -13,7 +13,7 @@ class Loading extends StatelessWidget {
       color: Colors.lightBlueAccent,
       child: Center(
         child: Container(
-         // padding: EdgeInsets.fromLTRB(0, 100, 0, 0),
+
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
