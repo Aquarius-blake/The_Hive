@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 
 class Loading extends StatelessWidget {
@@ -19,9 +20,14 @@ class Loading extends StatelessWidget {
             SizedBox(height: 5.0,),
             Text(
                 "Loading, Please Wait A Moment",
-              style: TextStyle(
-fontStyle: FontStyle.italic,
-              ),
+              style: GoogleFonts.fascinate(
+                textStyle: TextStyle(
+
+                ),
+                fontStyle: FontStyle.italic,
+                fontSize: 25.0,
+
+              )
             )
           ],
         ),
