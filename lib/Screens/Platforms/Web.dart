@@ -24,6 +24,7 @@ class _WebviewState extends State<Webview> {
           ListTile(
             leading: Icon(LineIcons.alternateSignOut),
             title: Text("Sign Out"),
+            onTap: (){},
           ),
         ],
       ),
