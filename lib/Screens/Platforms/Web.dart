@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:line_icons/line_icons.dart';
 
 
 class Webview extends StatefulWidget {
@@ -18,8 +19,12 @@ class _WebviewState extends State<Webview> {
         actions: [
           ElevatedButton(
               onPressed: (){},
-              child: Text(""),
-          )
+              child: Text("Sign Out"),
+          ),
+          ListTile(
+            leading: Icon(LineIcons.alternateSignOut),
+            title: Text("Sign Out"),
+          ),
         ],
       ),
       body: SafeArea(
