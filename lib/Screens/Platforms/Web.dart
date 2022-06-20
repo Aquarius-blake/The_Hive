@@ -11,10 +11,12 @@ class Webview extends StatefulWidget {
 class _WebviewState extends State<Webview> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-          
-        )
+    return Scaffold(
+      body: SafeArea(
+          child: Container(
+
+          )
+      ),
     );
   }
 }
