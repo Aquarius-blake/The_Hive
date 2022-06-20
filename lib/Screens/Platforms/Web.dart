@@ -14,7 +14,7 @@ class _WebviewState extends State<Webview> {
     return Scaffold(
       body: SafeArea(
           child: Container(
-
+child: Text("WEb"),
           )
       ),
     );
