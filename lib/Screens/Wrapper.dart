@@ -1,9 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Platforms/Layout.dart';
 import 'package:provider/provider.dart';
 import '../Models/Users1.dart';
 import 'Authenticate/authenticate.dart';
-import 'Home/home.dart';
+//import 'Home/home.dart';
 
 class Wrapper extends StatelessWidget {
   const Wrapper({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class Wrapper extends StatelessWidget {
       return Authenticate();
     }
     else{
-      return Home();
+      return Layout();
     }
   }
 }
