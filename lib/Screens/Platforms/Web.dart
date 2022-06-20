@@ -12,6 +12,9 @@ class _WebviewState extends State<Webview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text(""),
+      ),
       body: SafeArea(
           child: Container(
 
