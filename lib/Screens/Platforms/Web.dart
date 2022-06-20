@@ -14,6 +14,12 @@ class _WebviewState extends State<Webview> {
     return Scaffold(
       appBar: AppBar(
         title: Text(""),
+        actions: [
+          ElevatedButton(
+              onPressed: (){},
+              child: Text(""),
+          )
+        ],
       ),
       body: SafeArea(
           child: Container(
