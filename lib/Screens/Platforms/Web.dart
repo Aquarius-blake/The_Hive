@@ -15,9 +15,9 @@ class _WebviewState extends State<Webview> {
       body: SafeArea(
           child: Container(
 
-child: Center(
-    child: Text("WEb")
-),
+            child: Center(
+                child: Text("WEb")
+            ),
           )
       ),
     );
