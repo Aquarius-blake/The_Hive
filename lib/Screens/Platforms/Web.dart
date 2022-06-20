@@ -13,6 +13,7 @@ class _WebviewState extends State<Webview> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text(""),
         actions: [
           ElevatedButton(
