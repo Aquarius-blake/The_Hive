@@ -16,6 +16,8 @@ class Wrapper extends StatelessWidget {
 
     print(user);
 
+
+
     //Checks if a user is signed in and returns the appropriate screen
     if (user==null){
       return Authenticate();
