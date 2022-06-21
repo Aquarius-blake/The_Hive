@@ -140,7 +140,13 @@ class _HomeState extends State<Home> {
                   },
                 ),
                 ListTile(
-                  title: Text("Create New Account"),
+                  title: Text(
+                      "Create New Account",
+                    style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                      fontSize: 12.0,
+                    ),
+                  ),
                   onTap: ()async{
 
                   },
