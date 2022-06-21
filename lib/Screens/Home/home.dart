@@ -139,6 +139,7 @@ class _HomeState extends State<Home> {
                     await _auth.SignOut();
                   },
                 ),
+                SizedBox(height: 5.0,),
                 ListTile(
                   title: Text(
                       "Create New Account",
@@ -148,7 +149,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   onTap: ()async{
-
+                    Navigator.pushNamed(context, '/register');
                   },
                 ),
                 SizedBox(height: 20.0,),
