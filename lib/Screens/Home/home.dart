@@ -139,6 +139,12 @@ class _HomeState extends State<Home> {
                     await _auth.SignOut();
                   },
                 ),
+                ListTile(
+                  title: Text("Create New Account"),
+                  onTap: ()async{
+
+                  },
+                ),
                 SizedBox(height: 20.0,),
                 Divider(
                   height: 40,
