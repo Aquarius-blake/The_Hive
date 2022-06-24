@@ -32,7 +32,10 @@ class _WebviewState extends State<Webview> {
           child: Container(
 
             child: Center(
-                child: Text("WEb")
+                child: Text("WEb",
+                style: TextStyle(
+                  fontSize: 30,
+                ),)
             ),
           )
       ),
