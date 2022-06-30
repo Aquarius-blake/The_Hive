@@ -58,6 +58,9 @@ class _ResetpassState extends State<Resetpass> {
                     ),
                     ElevatedButton(
                       onPressed: () async{
+                        if(_formKey.currentState?.validate()!=null){
+                          await _auth.Reset(email);
+                        }
 
                       },
                       child: Text("Reset Password"),
