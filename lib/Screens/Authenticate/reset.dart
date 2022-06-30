@@ -12,7 +12,8 @@ class _ResetpassState extends State<Resetpass> {
   final _formKey =GlobalKey<FormState>();
   final AuthService _auth=AuthService();
   String email="";
-
+String error="";
+bool e=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,7 +78,8 @@ fontSize: 30.0,
                           onPressed: () async{
                             if(_formKey.currentState?.validate()!=null){
                               await _auth.Reset(email);
-                              Navigator.pop(context);
+                              if(e=false){
+                              Navigator.pop(context);}
                             }
                           },
                           child: Padding(

@@ -86,6 +86,7 @@ class AuthService{
     try{
       await _auth.sendPasswordResetEmail(email: email).then((value) {
       });
+      print(email);
       return null;
     }catch(e){
       print(e.toString());
