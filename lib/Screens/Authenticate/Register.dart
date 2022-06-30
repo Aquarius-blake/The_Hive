@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:line_icons/line_icons.dart';
+
 
 import '../../Services/Upload.dart';
 import '../../Services/auth.dart';
@@ -96,11 +96,7 @@ class _RegisterState extends State<Register> {
                         ],
                       ),
                       SizedBox(height:20 ,),
-                      Icon(
-                        LineIcons.newspaper,
-                        color: Colors.white70,
-                        size: 90,
-                      ),
+
                       SizedBox(height:10 ,),
                       TextFormField(
                         validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
