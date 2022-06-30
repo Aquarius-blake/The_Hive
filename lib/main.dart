@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:forum3/Screens/Authenticate/reset.dart';
 import 'package:provider/provider.dart';
 import 'Models/Users1.dart';
 import 'Screens/Authenticate/Register.dart';
@@ -34,6 +35,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/register':(context)=>Register(),
           '/Profile':(context)=>Profile(),
+          '/reset':(context)=>Resetpass(),
         },
       ),
     );

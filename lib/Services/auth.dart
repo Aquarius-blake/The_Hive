@@ -81,7 +81,18 @@ class AuthService{
   }
 
 
-
+//reset password
+  Future Reset(String email)async{
+    try{
+      await _auth.sendPasswordResetEmail(email: email).then((value) {
+      });
+      return null;
+    }catch(e){
+      print(e.toString());
+      return null;
+    }
+  }
+  
   //Register as new User with email and password
   Future RegisterNewUserEmail(String email,String password,String name,String username,String gender)async{
     try{
