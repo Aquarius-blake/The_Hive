@@ -36,29 +36,31 @@ class _ResetpassState extends State<Resetpass> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        TextFormField(
-                          validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
-                          onChanged: (val){
-                            setState(() {
-                              email=val;
-                            });
-                          },
-                          decoration: InputDecoration(
-                            hintText: "Enter Email Address",
-                            filled: true,
-                            fillColor: Colors.white70,
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(100.0),
+                        Container(
+                          child: TextFormField(
+                            validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
+                            onChanged: (val){
+                              setState(() {
+                                email=val;
+                              });
+                            },
+                            decoration: InputDecoration(
+                              hintText: "Enter Email Address",
+                              filled: true,
+                              fillColor: Colors.white70,
+                              enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(100.0),
+
+                              ),
+                              focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.redAccent),
+                                borderRadius: BorderRadius.circular(100.0),
+                              ),
+                            ),
+
+                            style: TextStyle(
 
                             ),
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: BorderSide(color: Colors.redAccent),
-                              borderRadius: BorderRadius.circular(100.0),
-                            ),
-                          ),
-
-                          style: TextStyle(
-
                           ),
                         ),
                         SizedBox(height: 20,),
