@@ -31,6 +31,7 @@ class _ResetpassState extends State<Resetpass> {
                 Form(
                   key: _formKey,
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       TextFormField(
                         validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
