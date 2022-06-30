@@ -44,7 +44,7 @@ fontSize: 30.0,
                         ),),
                         Container(
                           child: Padding(
-                            padding: const EdgeInsets.fromLTRB(70, 10, 70, 30),
+                            padding: const EdgeInsets.fromLTRB(100, 10, 100, 30),
                             child: TextFormField(
                               validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
                               onChanged: (val){
