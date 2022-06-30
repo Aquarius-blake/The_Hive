@@ -104,6 +104,10 @@ class _SinginState extends State<Singin> {
 
                     ),
                   ),
+                  SizedBox(height: 5.0,),
+                  TextButton(
+                      onPressed: (){},
+                      child: Text("Forgot Password")),
                   SizedBox(height: 50,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
