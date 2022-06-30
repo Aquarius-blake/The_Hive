@@ -37,29 +37,32 @@ class _ResetpassState extends State<Resetpass> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Container(
-                          child: TextFormField(
-                            validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
-                            onChanged: (val){
-                              setState(() {
-                                email=val;
-                              });
-                            },
-                            decoration: InputDecoration(
-                              hintText: "Enter Email Address",
-                              filled: true,
-                              fillColor: Colors.white70,
-                              enabledBorder: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(100.0),
+                          child: Padding(
+                            padding: const EdgeInsets.all(70.0),
+                            child: TextFormField(
+                              validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
+                              onChanged: (val){
+                                setState(() {
+                                  email=val;
+                                });
+                              },
+                              decoration: InputDecoration(
+                                hintText: "Enter Email Address",
+                                filled: true,
+                                fillColor: Colors.white70,
+                                enabledBorder: OutlineInputBorder(
+                                  borderRadius: BorderRadius.circular(100.0),
+
+                                ),
+                                focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.redAccent),
+                                  borderRadius: BorderRadius.circular(100.0),
+                                ),
+                              ),
+
+                              style: TextStyle(
 
                               ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.redAccent),
-                                borderRadius: BorderRadius.circular(100.0),
-                              ),
-                            ),
-
-                            style: TextStyle(
-
                             ),
                           ),
                         ),
