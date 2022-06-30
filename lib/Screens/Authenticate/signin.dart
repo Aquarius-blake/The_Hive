@@ -32,9 +32,9 @@ class _SinginState extends State<Singin> {
         title: const Center(
             child: Text(
               "Welcome",
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-            ),)
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),)
         ),
       ),
       body: Padding(
@@ -113,9 +113,10 @@ class _SinginState extends State<Singin> {
                         },
                         child: Text(
                           "Forgot Password?",
-                        style: TextStyle(
-color: Colors.white,
-                        ),)
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontStyle: FontStyle.italic
+                          ),)
                     ),
                   ),
                   SizedBox(height: 50,),
