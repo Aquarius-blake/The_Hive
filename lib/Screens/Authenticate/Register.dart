@@ -64,6 +64,9 @@ class _RegisterState extends State<Register> {
                   key: _formKey,
                   child: Column(
                     children: <Widget>[
+                      Stack(
+
+                      ),
                       SizedBox(height:20 ,),
                       Icon(
                         LineIcons.newspaper,
