@@ -62,6 +62,7 @@ class _ResetpassState extends State<Resetpass> {
                         onPressed: () async{
                           if(_formKey.currentState?.validate()!=null){
                             await _auth.Reset(email);
+                            Navigator.pop(context);
                           }
 
                         },
