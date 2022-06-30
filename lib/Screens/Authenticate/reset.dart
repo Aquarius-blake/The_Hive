@@ -75,11 +75,14 @@ class _ResetpassState extends State<Resetpass> {
                             }
 
                           },
-                          child: Text(
-                              "Reset Password",
-                                  style: TextStyle(
-                                    color: Colors.blue
-                                  ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Text(
+                                "Reset Password",
+                                    style: TextStyle(
+                                      color: Colors.blue
+                                    ),
+                            ),
                           ),
                           style: ElevatedButton.styleFrom(
                               elevation: 6.0,
