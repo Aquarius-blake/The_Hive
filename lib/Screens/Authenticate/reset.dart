@@ -36,6 +36,10 @@ class _ResetpassState extends State<Resetpass> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+                        Text("Reset Password",
+                        style: TextStyle(
+
+                        ),),
                         Container(
                           child: Padding(
                             padding: const EdgeInsets.all(70.0),
@@ -73,7 +77,6 @@ class _ResetpassState extends State<Resetpass> {
                               await _auth.Reset(email);
                               Navigator.pop(context);
                             }
-
                           },
                           child: Padding(
                             padding: const EdgeInsets.all(15.0),
