@@ -65,7 +65,11 @@ class _RegisterState extends State<Register> {
                   child: Column(
                     children: <Widget>[
                       Stack(
+children: [
+  CircleAvatar(
 
+  )
+],
                       ),
                       SizedBox(height:20 ,),
                       Icon(
