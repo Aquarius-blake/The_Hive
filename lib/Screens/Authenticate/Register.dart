@@ -70,20 +70,21 @@ class _RegisterState extends State<Register> {
                     children: <Widget>[
                       Stack(
                         children: [
-                         image!=null? CircleAvatar(
+                          image!=null? CircleAvatar(
                             radius: 60.0,
                             backgroundImage:MemoryImage(image) ,
 
                           ):CircleAvatar(
-                    radius: 60.0,
-                ),
+                            radius: 60.0,
+                          ),
                           Positioned(
                               bottom: -5,
                               left: 65,
                               child: IconButton(
-                                  onPressed: (){
-                                    setState(() async {
-                                      image=await _upload.uploadpic(ImageSource.gallery);
+                                  onPressed: ()async{
+                                    image=await _upload.uploadpic(ImageSource.gallery);
+                                    setState(()  {
+
                                     });
                                   },
                                   icon: Icon(
