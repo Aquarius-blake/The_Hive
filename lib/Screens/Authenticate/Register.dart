@@ -95,7 +95,7 @@ class _RegisterState extends State<Register> {
                           )
                         ],
                       ),
-                      SizedBox(height:20 ,),
+                      SizedBox(height:10 ,),
 
                       SizedBox(height:10 ,),
                       TextFormField(
