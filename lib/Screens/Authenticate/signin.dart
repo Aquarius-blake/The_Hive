@@ -105,11 +105,19 @@ class _SinginState extends State<Singin> {
                     ),
                   ),
                   SizedBox(height: 5.0,),
-                  TextButton(
-                      onPressed: (){
-                        Navigator.pushNamed(context, '/reset');
-                      },
-                      child: Text("Forgot Password")),
+                  Align(
+                    alignment: Alignment.bottomRight,
+                    child: TextButton(
+                        onPressed: (){
+                          Navigator.pushNamed(context, '/reset');
+                        },
+                        child: Text(
+                          "Forgot Password?",
+                        style: TextStyle(
+color: Colors.black,
+                        ),)
+                    ),
+                  ),
                   SizedBox(height: 50,),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
