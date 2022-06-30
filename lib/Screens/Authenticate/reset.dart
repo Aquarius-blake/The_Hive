@@ -26,6 +26,7 @@ class _ResetpassState extends State<Resetpass> {
 
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Form(
