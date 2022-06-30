@@ -38,7 +38,8 @@ class _ResetpassState extends State<Resetpass> {
                       children: [
                         Text("Reset Password",
                         style: TextStyle(
-
+fontSize: 20.0,
+                          fontWeight: FontWeight.bold
                         ),),
                         Container(
                           child: Padding(
