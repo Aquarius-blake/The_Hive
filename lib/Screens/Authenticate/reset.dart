@@ -58,6 +58,7 @@ class _ResetpassState extends State<Resetpass> {
 
                         ),
                       ),
+                      SizedBox(height: 20,),
                       ElevatedButton(
                         onPressed: () async{
                           if(_formKey.currentState?.validate()!=null){
