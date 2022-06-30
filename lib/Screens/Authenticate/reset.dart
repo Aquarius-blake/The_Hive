@@ -36,7 +36,7 @@ class _ResetpassState extends State<Resetpass> {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text("Reset Password",
+                        Text("Password Reset",
                         style: TextStyle(
 fontSize: 30.0,
                           fontWeight: FontWeight.bold,
