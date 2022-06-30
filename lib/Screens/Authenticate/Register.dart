@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/shared/loading.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 
+import '../../Services/Upload.dart';
 import '../../Services/auth.dart';
 
 class Register extends StatefulWidget {
@@ -19,6 +21,7 @@ class _RegisterState extends State<Register> {
   String Fnmae= "";
   String Gender="";
   String error="";
+  dynamic image;
 
   bool loading=false;
 
@@ -29,6 +32,7 @@ class _RegisterState extends State<Register> {
 
   final AuthService _auth= AuthService();
   final _formKey =GlobalKey<FormState>();
+  final Upload _upload=Upload();
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +78,11 @@ class _RegisterState extends State<Register> {
                               bottom: -5,
                               left: 65,
                               child: IconButton(
-                                  onPressed: (){},
+                                  onPressed: (){
+                                    setState(() async {
+                                      image=await _upload.uploadpic(ImageSource.gallery);
+                                    });
+                                  },
                                   icon: Icon(
                                     Icons.add_a_photo,
                                     color: Colors.white,
