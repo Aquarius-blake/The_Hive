@@ -114,7 +114,7 @@ class _SinginState extends State<Singin> {
                         child: Text(
                           "Forgot Password?",
                         style: TextStyle(
-color: Colors.black,
+color: Colors.white,
                         ),)
                     ),
                   ),
