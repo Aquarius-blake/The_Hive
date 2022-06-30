@@ -77,6 +77,7 @@ fontSize: 30.0,
                         ElevatedButton(
                           onPressed: () async{
                             if(_formKey.currentState?.validate()!=null){
+                              print(email);
                               await _auth.Reset(email);
                               if(e=false){
                               Navigator.pop(context);}
