@@ -70,11 +70,13 @@ class _RegisterState extends State<Register> {
                     children: <Widget>[
                       Stack(
                         children: [
-                          CircleAvatar(
+                         image!=null? CircleAvatar(
                             radius: 60.0,
                             backgroundImage:MemoryImage(image) ,
 
-                          ),
+                          ):CircleAvatar(
+                    radius: 60.0,
+                ),
                           Positioned(
                               bottom: -5,
                               left: 65,
