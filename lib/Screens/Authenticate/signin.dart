@@ -107,7 +107,7 @@ class _SinginState extends State<Singin> {
                   SizedBox(height: 5.0,),
                   TextButton(
                       onPressed: (){
-                        Navigator.pushNamed(context, '/reser');
+                        Navigator.pushNamed(context, '/reset');
                       },
                       child: Text("Forgot Password")),
                   SizedBox(height: 50,),

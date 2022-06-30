@@ -21,71 +21,73 @@ class _ResetpassState extends State<Resetpass> {
       appBar: AppBar(
         title: Text("Reset Password"),
       ),
-      body: Container(
+      body: SafeArea(
+        child: Container(
 
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Form(
-                key: _formKey,
-                child: Column(
-                  children: [
-                    TextFormField(
-                      validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
-                      onChanged: (val){
-                        setState(() {
-                          email=val;
-                        });
-                      },
-                      decoration: InputDecoration(
-                        hintText: "Enter Email Address",
-                        filled: true,
-                        fillColor: Colors.white70,
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(100.0),
+          child: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Form(
+                  key: _formKey,
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
+                        onChanged: (val){
+                          setState(() {
+                            email=val;
+                          });
+                        },
+                        decoration: InputDecoration(
+                          hintText: "Enter Email Address",
+                          filled: true,
+                          fillColor: Colors.white70,
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(100.0),
 
-                        ),
-                        focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.redAccent),
-                          borderRadius: BorderRadius.circular(100.0),
-                        ),
-                      ),
-
-                      style: TextStyle(
-
-                      ),
-                    ),
-                    ElevatedButton(
-                      onPressed: () async{
-                        if(_formKey.currentState?.validate()!=null){
-                          await _auth.Reset(email);
-                        }
-
-                      },
-                      child: Text("Reset Password"),
-                      style: ElevatedButton.styleFrom(
-                          elevation: 6.0,
-                          shadowColor: Colors.black,
-                          primary: Colors.white,
-                          side: BorderSide(
-                            color: Colors.blue,
-                            width: 2.0,
                           ),
+                          focusedBorder: OutlineInputBorder(
+                            borderSide: BorderSide(color: Colors.redAccent),
+                            borderRadius: BorderRadius.circular(100.0),
+                          ),
+                        ),
 
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(100.0)
-                          )
+                        style: TextStyle(
+
+                        ),
                       ),
-                    )
-                  ],
+                      ElevatedButton(
+                        onPressed: () async{
+                          if(_formKey.currentState?.validate()!=null){
+                            await _auth.Reset(email);
+                          }
+
+                        },
+                        child: Text("Reset Password"),
+                        style: ElevatedButton.styleFrom(
+                            elevation: 6.0,
+                            shadowColor: Colors.black,
+                            primary: Colors.white,
+                            side: BorderSide(
+                              color: Colors.blue,
+                              width: 2.0,
+                            ),
+
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100.0)
+                            )
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              ),
 
-            ],
+              ],
+            ),
           ),
-        ),
 
+        ),
       ),
     );
   }
