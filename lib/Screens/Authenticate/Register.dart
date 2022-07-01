@@ -154,6 +154,14 @@ class _RegisterState extends State<Register> {
                       TextFormField(
                         onTap: (){
                          Future<DateTime?> newdate= showDatePicker(context: context, initialDate: date, firstDate: DateTime(1900), lastDate: DateTime(2100));
+                       if(newdate==null){
+                         return;
+                       }
+                       else{
+                         setState(() {
+
+                         });
+                       }
                         },
                       ),
                       SizedBox(height: 20,),
