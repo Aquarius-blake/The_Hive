@@ -23,6 +23,7 @@ class _RegisterState extends State<Register> {
   String error="";
   dynamic image;
   DateTime date=DateTime(2022,01,01);
+  String bdate="";
 
   bool loading=false;
 
@@ -152,14 +153,19 @@ class _RegisterState extends State<Register> {
                       ),
                       SizedBox(height: 20,),
                       TextFormField(
+
+                        onChanged: (val){
+                          val=bdate;
+                        },
                         onTap: (){
+
                          Future<DateTime?> newdate= showDatePicker(context: context, initialDate: date, firstDate: DateTime(1900), lastDate: DateTime(2100));
                        if(newdate==null){
                          return;
                        }
                        else{
                          setState(() {
-
+                             bdate=newdate.toString();
                          });
                        }
                         },
