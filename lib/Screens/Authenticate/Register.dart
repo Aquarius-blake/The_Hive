@@ -23,14 +23,11 @@ class _RegisterState extends State<Register> {
   String error="";
   dynamic image;
   DateTime date=DateTime(2022,01,01);
-  String bdate="";
+
 
   bool loading=false;
 
-  //todo:make error disappear after a fixed time
-  Future Eload()async{
 
-  }
 
   final AuthService _auth= AuthService();
   final _formKey =GlobalKey<FormState>();
@@ -152,24 +149,7 @@ class _RegisterState extends State<Register> {
                         ),
                       ),
                       SizedBox(height: 20,),
-                      TextFormField(
 
-                        onChanged: (val){
-                          val=bdate;
-                        },
-                        onTap: (){
-
-                         Future<DateTime?> newdate= showDatePicker(context: context, initialDate: date, firstDate: DateTime(1900), lastDate: DateTime(2100));
-                       if(newdate==null){
-                         return;
-                       }
-                       else{
-                         setState(() {
-                             bdate=newdate.toString();
-                         });
-                       }
-                        },
-                      ),
                       SizedBox(height: 20,),
                       TextFormField(
                         validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
