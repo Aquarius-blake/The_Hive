@@ -10,7 +10,7 @@ class User1{
   late final bool? Guest;
   dynamic profilepic;
   late final String? Username;
-  late final Future<DateTime?>? DOB;
+  late final DateTime? DOB;
 
 
   User1({ this.UID, this.profilepic,this.Guest,this.Username,this.Email,this.Password,this.DOB});
