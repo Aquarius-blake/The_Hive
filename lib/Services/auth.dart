@@ -99,7 +99,7 @@ class AuthService{
     try{
       UserCredential result= await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
-      User1(UID: user?.uid,Username: username,);
+      User1(UID: user?.uid,Username: username,Name: name,);
       await  _firestore.collection("users").doc(user!.uid).set({
         "UID":user.uid,
         "Username":username,

@@ -14,6 +14,7 @@ class User1{
   late final String? imageurl;
   late final String? ppurl;
   late final String? Name;
+  late final String? Gender;
 
 
   User1({ this.UID,
@@ -25,7 +26,8 @@ class User1{
     this.DOB,
     this.imageurl,
     this.ppurl,
-    this.Name
+    this.Name,
+    this.Gender
   });
 
   Map<String,dynamic> toJson()=>{
