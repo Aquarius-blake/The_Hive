@@ -24,7 +24,8 @@ class User1{
     this.Password,
     this.DOB,
     this.imageurl,
-    this.ppurl
+    this.ppurl,
+    this.Name
   });
 
   Map<String,dynamic> toJson()=>{
