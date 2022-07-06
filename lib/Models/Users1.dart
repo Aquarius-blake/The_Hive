@@ -13,6 +13,7 @@ class User1{
   late final DateTime? DOB;
   late final String? imageurl;
   late final String? ppurl;
+  late final String? Name;
 
 
   User1({ this.UID,
@@ -32,7 +33,8 @@ class User1{
     "email":Email,
     "password":Password,
     "DatwofBirth":DOB,
-    "profilepic":ppurl
+    "profilepic":ppurl,
+    "Full Name":Name,
 
 
   };
