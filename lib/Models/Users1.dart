@@ -16,4 +16,7 @@ class User1{
 
   User1({ this.UID, this.profilepic,this.Guest,this.Username,this.Email,this.Password,this.DOB,this.imageurl});
 
+  Map<String,dynamic> toJson()=>{
+
+  };
 }
