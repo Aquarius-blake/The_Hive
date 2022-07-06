@@ -30,6 +30,9 @@ class User1{
     "username":Username,
     "uid":UID,
     "email":Email,
+    "password":Password,
+    "DatwofBirth":DOB,
+    "profilepic":ppurl
 
 
   };
