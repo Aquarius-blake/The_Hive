@@ -291,7 +291,7 @@ class _RegisterState extends State<Register> {
                                       loading=true;
                                     });
                                     print(email);
-                                    dynamic result=await _auth.RegisterNewUserEmail(email, password,Fnmae,Username,Gender);
+                                    dynamic result=await _auth.RegisterNewUserEmail(email, password,Fnmae,Username,Gender,image);
                                     if (result==null){
                                       setState(() {
                                         loading=false;
