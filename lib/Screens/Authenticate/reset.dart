@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Services/auth.dart';
 
@@ -15,8 +16,19 @@ class _ResetpassState extends State<Resetpass> {
   String email="";
 String error="";
 bool e=false;
+int padd=0;
 
-
+@override
+  void initState() {
+    // TODO: implement initState
+  if(kIsWeb){
+padd=150;
+  }
+  else{
+    padd=80;
+  }
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
 
@@ -27,7 +39,7 @@ bool e=false;
         title: Text("Reset Password"),
       ),
       body: SafeArea(
-        
+
         child: Container(
           padding: const EdgeInsets.all(150),
           child: Card(
