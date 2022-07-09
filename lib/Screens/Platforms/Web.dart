@@ -21,7 +21,7 @@ class _WebviewState extends State<Webview> {
       backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(
         centerTitle: true,
-        title: Text(""),
+        title: Text("Web"),
         actions: [
           ElevatedButton(
             onPressed: ()async{
