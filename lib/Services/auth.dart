@@ -101,8 +101,7 @@ class AuthService{
     try{
       UserCredential result= await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
-   //   String photourl= await StorageMethods().Storageip("Profilepic", image, false).toString();
-   //   print(photourl);
+
     String photourl= await  Store.Storageip("Profilepic", image, false);
      User1 user1= User1(UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl);
 
