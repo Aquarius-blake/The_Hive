@@ -38,6 +38,8 @@ class _WebviewState extends State<Webview> {
       ),
       body: SafeArea(
           child: Container(
+            padding: EdgeInsets.all(100),
+
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
