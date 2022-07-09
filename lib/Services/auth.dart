@@ -102,7 +102,7 @@ class AuthService{
       User? user = result.user;
       String photourl= await StorageMethods().Storageip("Profilepic", image, false).toString();
       print(photourl);
-     User1 user1= User1(UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email);
+     User1 user1= User1(UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl);
 
       await  _firestore.collection("users").doc(user!.uid).set(user1.toJson(),
           /*{
