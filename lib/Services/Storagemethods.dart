@@ -15,7 +15,7 @@ class StorageMethods{
 //add image to storage
   Future <String?> Storageip(String name,dynamic file,bool isPost) async{
     Reference ref=_Storage.ref().child(name).child(_auth.currentUser!.uid);
-    UploadTask uploadTask= ref.putFile(file);
+    UploadTask uploadTask= ref.putData(file);
     TaskSnapshot snap= await uploadTask;
     String downloadurl= snap.ref.getDownloadURL().toString() ;
 

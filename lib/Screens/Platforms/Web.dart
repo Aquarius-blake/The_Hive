@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../Services/auth.dart';
 //import 'package:line_icons/line_icons.dart';
 
 
@@ -8,6 +10,8 @@ class Webview extends StatefulWidget {
   @override
   State<Webview> createState() => _WebviewState();
 }
+final  AuthService _auth=AuthService();
+
 
 class _WebviewState extends State<Webview> {
   @override
@@ -18,7 +22,9 @@ class _WebviewState extends State<Webview> {
         title: Text(""),
         actions: [
           ElevatedButton(
-              onPressed: (){},
+              onPressed: ()async{
+                await _auth.SignOut();
+              },
               child: Text("Sign Out"),
           ),
           /*ListTile(
