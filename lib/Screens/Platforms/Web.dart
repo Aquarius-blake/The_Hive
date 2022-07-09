@@ -40,6 +40,7 @@ class _WebviewState extends State<Webview> {
           child: Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
                 Column(
                   children: <Widget>[
