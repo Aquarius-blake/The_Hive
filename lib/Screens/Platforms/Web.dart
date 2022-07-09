@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../Services/auth.dart';
@@ -38,6 +39,7 @@ class _WebviewState extends State<Webview> {
       body: SafeArea(
           child: Container(
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Column(
                   children: <Widget>[
