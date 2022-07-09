@@ -1,6 +1,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:forum3/Services/Storagemethods.dart';
 import '../Models/Users1.dart';
 
 
@@ -100,6 +101,7 @@ class AuthService{
       UserCredential result= await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
      User1 user1= User1(UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email);
+     StorageMethods().Storageip("Profilepic", image, false);
       await  _firestore.collection("users").doc(user!.uid).set(user1.toJson(),
           /*{
         "UID":user.uid,
