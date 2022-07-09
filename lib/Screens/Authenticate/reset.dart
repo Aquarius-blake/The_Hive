@@ -37,6 +37,7 @@ padd=150;
 
       appBar: AppBar(
         title: Text("Reset Password"),
+        centerTitle: true,
       ),
       body: SafeArea(
 
