@@ -36,12 +36,13 @@ class _WebviewState extends State<Webview> {
       ),
       body: SafeArea(
           child: Container(
+            child: Row(
+              children: <Widget>[
+                Column(),
+                Column(),
+                Column(),
 
-            child: Center(
-                child: Text("WEb",
-                style: TextStyle(
-                  fontSize: 30,
-                ),)
+              ],
             ),
           )
       ),
