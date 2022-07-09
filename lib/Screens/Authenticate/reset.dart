@@ -29,6 +29,8 @@ bool e=false;
           child: Card(
             margin: EdgeInsets.fromLTRB(16.0, 16.0,16.0, 0),
             color: Colors.white,
+            shadowColor: Colors.black,
+            elevation: 6.0,
             child: Container(
 
               child: Padding(
