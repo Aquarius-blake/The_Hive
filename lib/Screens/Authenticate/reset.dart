@@ -32,7 +32,7 @@ bool e=false;
             shadowColor: Colors.black,
             elevation: 12.0,
             shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(80.0)
+                borderRadius: BorderRadius.circular(60.0)
             ),
             child: Container(
 
