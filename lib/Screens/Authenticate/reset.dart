@@ -16,11 +16,11 @@ class _ResetpassState extends State<Resetpass> {
   String email="";
 String error="";
 bool e=false;
-int padd=0;
+double padd=0;
 
 @override
   void initState() {
-    // TODO: implement initState
+
   if(kIsWeb){
 padd=150;
   }
@@ -41,7 +41,7 @@ padd=150;
       body: SafeArea(
 
         child: Container(
-          padding: const EdgeInsets.all(150),
+          padding:  EdgeInsets.all(padd),
           child: Card(
             margin: EdgeInsets.fromLTRB(16.0, 16.0,16.0, 0),
             color: Colors.white,
