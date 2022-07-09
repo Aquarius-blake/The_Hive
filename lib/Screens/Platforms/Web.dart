@@ -41,7 +41,14 @@ class _WebviewState extends State<Webview> {
               children: <Widget>[
                 Column(
                   children: <Widget>[
-                    Card()
+                    Card(
+                      color: Colors.white,
+                      child: Column(
+                        children: <Widget>[
+
+                        ],
+                      ),
+                    )
                   ],
                 ),
                 Column(
@@ -51,7 +58,13 @@ class _WebviewState extends State<Webview> {
                 ),
                 Column(
                   children: <Widget>[
-                    Card()
+                    Card(
+                      child: Column(
+                        children: <Widget>[
+
+                        ],
+                      ),
+                    )
                   ],
                 ),
 
