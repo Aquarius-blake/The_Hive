@@ -30,7 +30,7 @@ bool e=false;
             margin: EdgeInsets.fromLTRB(16.0, 16.0,16.0, 0),
             color: Colors.white,
             shadowColor: Colors.black,
-            elevation: 6.0,
+            elevation: 12.0,
             child: Container(
 
               child: Padding(
