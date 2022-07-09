@@ -1,6 +1,6 @@
 
 //Taking a moderately long break
-/*
+
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -19,6 +19,6 @@ class StorageMethods{
     TaskSnapshot snap= await uploadTask;
     String downloadurl= snap.ref.getDownloadURL().toString() ;
 
-    return ;
+    return downloadurl ;
   }
-}*/
+}
