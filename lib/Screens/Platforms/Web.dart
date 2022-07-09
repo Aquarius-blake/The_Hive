@@ -40,7 +40,7 @@ class _WebviewState extends State<Webview> {
               children: <Widget>[
                 Column(
                   children: <Widget>[
-
+Card()
                   ],
                 ),
                 Column(
@@ -50,7 +50,7 @@ class _WebviewState extends State<Webview> {
                 ),
                 Column(
                   children: <Widget>[
-
+Card()
                   ],
                 ),
 
