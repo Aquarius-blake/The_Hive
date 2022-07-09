@@ -30,7 +30,7 @@ bool e=false;
               child: Container(
 
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(2.0),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
