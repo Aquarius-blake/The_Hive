@@ -17,6 +17,7 @@ class _WebviewState extends State<Webview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(
         centerTitle: true,
         title: Text(""),
