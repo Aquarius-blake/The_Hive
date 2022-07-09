@@ -38,9 +38,21 @@ class _WebviewState extends State<Webview> {
           child: Container(
             child: Row(
               children: <Widget>[
-                Column(),
-                Column(),
-                Column(),
+                Column(
+                  children: <Widget>[
+
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+
+                  ],
+                ),
+                Column(
+                  children: <Widget>[
+
+                  ],
+                ),
 
               ],
             ),
