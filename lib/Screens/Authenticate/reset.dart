@@ -31,6 +31,9 @@ bool e=false;
             color: Colors.white,
             shadowColor: Colors.black,
             elevation: 12.0,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(100.0)
+            ),
             child: Container(
 
               child: Padding(
@@ -49,7 +52,7 @@ bool e=false;
                             style: TextStyle(
 fontSize: 30.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.white
+                              color: Colors.black
                             ),),
                             Container(
                               child: Padding(
