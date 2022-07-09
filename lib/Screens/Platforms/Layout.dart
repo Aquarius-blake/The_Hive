@@ -6,7 +6,6 @@ import 'package:forum3/shared/dim.dart';
 //Seperates the view for android and web based on screen size.
 class Layout extends StatelessWidget {
 
-  const Layout({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

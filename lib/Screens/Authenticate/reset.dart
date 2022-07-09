@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:forum3/Services/auth.dart';
 
+
 class Resetpass extends StatefulWidget {
   Resetpass({Key? key}) : super(key: key);
 
@@ -14,8 +15,11 @@ class _ResetpassState extends State<Resetpass> {
   String email="";
 String error="";
 bool e=false;
+
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent[100],
 
