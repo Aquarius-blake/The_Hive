@@ -22,10 +22,10 @@ class _WebviewState extends State<Webview> {
         title: Text(""),
         actions: [
           ElevatedButton(
-              onPressed: ()async{
-                await _auth.SignOut();
-              },
-              child: Text("Sign Out"),
+            onPressed: ()async{
+              await _auth.SignOut();
+            },
+            child: Text("Sign Out"),
           ),
           /*ListTile(
             leading: Icon(LineIcons.alternateSignOut),
@@ -40,7 +40,7 @@ class _WebviewState extends State<Webview> {
               children: <Widget>[
                 Column(
                   children: <Widget>[
-Card()
+                    Card()
                   ],
                 ),
                 Column(
@@ -50,7 +50,7 @@ Card()
                 ),
                 Column(
                   children: <Widget>[
-Card()
+                    Card()
                   ],
                 ),
 
