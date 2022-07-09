@@ -25,7 +25,7 @@ bool e=false;
       body: SafeArea(
         
         child: Container(
-          padding: const EdgeInsets.all(180),
+          padding: const EdgeInsets.all(150),
           child: Card(
             margin: EdgeInsets.fromLTRB(16.0, 16.0,16.0, 0),
             color: Colors.white,
