@@ -38,42 +38,47 @@ class _WebviewState extends State<Webview> {
       ),
       body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(100),
+            padding: EdgeInsets.all(10),
 
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                Column(
-                  children: <Widget>[
-                    Card(
-                      color: Colors.white,
-                      child: Column(
-                        children: <Widget>[
+            child: Center(
+              child: Row(
 
-                        ],
-                      ),
-                    )
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
 
-                  ],
-                ),
-                Column(
-                  children: <Widget>[
-                    Card(
-                      child: Column(
-                        children: <Widget>[
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Card(
+                        color: Colors.white,
+                        child: Column(
+                          children: <Widget>[
+Text("fsdg")
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
 
-                        ],
-                      ),
-                    )
-                  ],
-                ),
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Card(
+                        child: Column(
 
-              ],
+                          children: <Widget>[
+Text("dgdfgd")
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+
+                ],
+              ),
             ),
           )
       ),
