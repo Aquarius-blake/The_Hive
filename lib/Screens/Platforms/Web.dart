@@ -46,7 +46,7 @@ class _WebviewState extends State<Webview> {
       ),
       body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(60),
 
             child: Center(
               child: Row(
@@ -59,34 +59,38 @@ class _WebviewState extends State<Webview> {
                     children: <Widget>[
                       Card(
                         color: Colors.white,
-                        child: Column(
-                          children: <Widget>[
-                            Text("fsdg"),
-                            CircleAvatar(),
-                            ListView(
-                              children: <Widget>[
-                                SizedBox(height: 10,),
-                                ListTile(
-                                  leading: Icon(Icons.person,
-                                    color: Colors.black, size:50.0,),
-                                  title: Text(
-                                    "Profile",
-                                    style: TextStyle(
-                                      fontSize: 18.0,
-                                      fontWeight: FontWeight.bold,
-                                      fontStyle: FontStyle.italic,
+                        shape:  RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0)
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(50,50,50,50),
+                          child: Column(
 
-                                    ),
+                            children: <Widget>[
+                              Text("fsdg"),
+                              CircleAvatar(
+                                radius: 50.0,
+                              ),
+                              SizedBox(height: 10,),
+                              ListTile(
+                                leading: Icon(Icons.person,
+                                  color: Colors.black, size:50.0,),
+                                title: Text(
+                                  "Profile",
+                                  style: TextStyle(
+                                    fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                    fontStyle: FontStyle.italic,
 
                                   ),
-                                  onTap: () async{
-                                    Navigator.pushNamed(context, '/wprofile');
-                                  },
-                                ),
-                              ],
-                            )
 
-                          ],
+                                ),
+                                onTap: () async{
+                                  Navigator.pushNamed(context, '/Profile');
+                                },
+                              ),
+                            ],
+                          ),
                         ),
                       )
                     ],
