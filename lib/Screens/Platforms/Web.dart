@@ -68,10 +68,11 @@ class _WebviewState extends State<Webview> {
                             child: Column(
 
                               children: <Widget>[
-                                Text("fsdg"),
                                 CircleAvatar(
                                   radius: 50.0,
                                 ),
+                                SizedBox(height: 10,),
+                                Text(""),
                                 SizedBox(height: 10,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -82,6 +83,7 @@ class _WebviewState extends State<Webview> {
                                       iconSize: 60.0,
 
                                     ),
+
                                     GestureDetector(
                                       onTap: (){},
                                       child: Text("Profile",
@@ -93,6 +95,7 @@ fontSize: 20.0,
                                   ],
                                 ),
                                 Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     IconButton(
                                       onPressed: (){},
@@ -100,9 +103,29 @@ fontSize: 20.0,
                                       iconSize: 60.0,
 
                                     ),
+
                                     GestureDetector(
                                       onTap: (){},
                                       child: Text("Messages",
+                                        style: TextStyle(
+                                          fontSize: 20.0,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    IconButton(
+                                      onPressed: (){},
+                                      icon: Icon(Icons.search),
+                                      iconSize: 60.0,
+
+                                    ),
+
+                                    GestureDetector(
+                                      onTap: (){},
+                                      child: Text("Search",
                                         style: TextStyle(
                                           fontSize: 20.0,
                                         ),
