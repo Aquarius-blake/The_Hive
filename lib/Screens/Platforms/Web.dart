@@ -1,6 +1,6 @@
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../../Services/auth.dart';
 //import 'package:line_icons/line_icons.dart';
 
@@ -14,7 +14,16 @@ class Webview extends StatefulWidget {
 final  AuthService _auth=AuthService();
 
 
+
 class _WebviewState extends State<Webview> {
+  @override
+  void initState() {
+    initial();
+    super.initState();
+  }
+  void initial()async{
+
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
