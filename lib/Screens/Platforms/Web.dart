@@ -134,7 +134,14 @@ fontSize: 19.0,
                                     )
                                   ],
                                 ),
+SizedBox(height: 30,),
+                                TextButton(
+                                    onPressed: (){},
+                                    child: Text("Create New Account",
+                                    style: TextStyle(
 
+                                    ),)
+                                )
 
                               ],
                             ),
