@@ -17,15 +17,21 @@ class _ResetpassState extends State<Resetpass> {
 String error="";
 bool e=false;
 double padd=0;
+double fp=0;
+double cp=0;
 
 @override
   void initState() {
 
   if(kIsWeb){
 padd=150;
+ fp=100;
+ cp=16;
   }
   else{
-    padd=80;
+    padd=10;
+     fp=50;
+     cp=30;
   }
     super.initState();
   }
@@ -44,7 +50,7 @@ padd=150;
         child: Container(
           padding:  EdgeInsets.all(padd),
           child: Card(
-            margin: EdgeInsets.fromLTRB(16.0, 16.0,16.0, 0),
+            margin: EdgeInsets.fromLTRB(16.0, cp,16.0, cp),
             color: Colors.white,
             shadowColor: Colors.black,
             elevation: 12.0,
@@ -54,7 +60,7 @@ padd=150;
             child: Container(
 
               child: Padding(
-                padding: const EdgeInsets.all(20.0),
+                padding: const EdgeInsets.all(2.0),
                 child: Center(
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -64,6 +70,7 @@ padd=150;
                         key: _formKey,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
+
                           children: [
                             Text("Password Reset",
                             style: TextStyle(
@@ -73,7 +80,7 @@ fontSize: 30.0,
                             ),),
                             Container(
                               child: Padding(
-                                padding: const EdgeInsets.fromLTRB(100, 10, 100, 30),
+                                padding:  EdgeInsets.fromLTRB(fp, 10, fp, 30),
                                 child: TextFormField(
                                   validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
                                   onChanged: (val){
