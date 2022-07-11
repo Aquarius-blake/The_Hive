@@ -11,7 +11,9 @@ class _WprofileState extends State<Wprofile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+appBar: AppBar(
+  title: Text("Pofile"),
+),
     );
   }
 }
