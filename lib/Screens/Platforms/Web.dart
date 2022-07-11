@@ -72,7 +72,9 @@ class _WebviewState extends State<Webview> {
                                 CircleAvatar(
                                   radius: 50.0,
                                 ),
+                                SizedBox(height: 10,),
                                 Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     IconButton(
                                         onPressed: (){},
@@ -89,7 +91,25 @@ fontSize: 20.0,
                                       ),
                                     )
                                   ],
-                                )
+                                ),
+                                Row(
+                                  children: <Widget>[
+                                    IconButton(
+                                      onPressed: (){},
+                                      icon: Icon(Icons.mail_outline),
+                                      iconSize: 60.0,
+
+                                    ),
+                                    GestureDetector(
+                                      onTap: (){},
+                                      child: Text("Messages",
+                                        style: TextStyle(
+                                          fontSize: 20.0,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
 
                               ],
                             ),
