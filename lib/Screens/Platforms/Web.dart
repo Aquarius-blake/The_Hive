@@ -65,7 +65,24 @@ class _WebviewState extends State<Webview> {
                             CircleAvatar(),
                             ListView(
                               children: <Widget>[
+                                SizedBox(height: 10,),
+                                ListTile(
+                                  leading: Icon(Icons.person,
+                                    color: Colors.black, size:50.0,),
+                                  title: Text(
+                                    "Profile",
+                                    style: TextStyle(
+                                      fontSize: 18.0,
+                                      fontWeight: FontWeight.bold,
+                                      fontStyle: FontStyle.italic,
 
+                                    ),
+
+                                  ),
+                                  onTap: () async{
+                                    Navigator.pushNamed(context, '/wprofile');
+                                  },
+                                ),
                               ],
                             )
 
