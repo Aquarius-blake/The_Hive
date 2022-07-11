@@ -51,7 +51,7 @@ class _WebviewState extends State<Webview> {
             child: Center(
               child: Row(
 
-                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.stretch,
 
                 children: <Widget>[
@@ -64,32 +64,35 @@ class _WebviewState extends State<Webview> {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(50,50,50,50),
-                          child: Column(
+                          child: SingleChildScrollView(
+                            child: Column(
 
-                            children: <Widget>[
-                              Text("fsdg"),
-                              CircleAvatar(
-                                radius: 50.0,
-                              ),
-                              SizedBox(height: 10,),
-                              ListTile(
-                                leading: Icon(Icons.person,
-                                  color: Colors.black, size:50.0,),
-                                title: Text(
-                                  "Profile",
-                                  style: TextStyle(
-                                    fontSize: 18.0,
-                                    fontWeight: FontWeight.bold,
-                                    fontStyle: FontStyle.italic,
-
-                                  ),
-
+                              children: <Widget>[
+                                Text("fsdg"),
+                                CircleAvatar(
+                                  radius: 50.0,
                                 ),
-                                onTap: () async{
-                                  Navigator.pushNamed(context, '/Profile');
-                                },
-                              ),
-                            ],
+                                Row(
+                                  children: <Widget>[
+                                    IconButton(
+                                        onPressed: (){},
+                                        icon: Icon(Icons.wifi),
+                                      iconSize: 20.0,
+
+                                    ),
+                                    GestureDetector(
+                                      onTap: (){},
+                                      child: Text("profile",
+                                        style: TextStyle(
+
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                )
+
+                              ],
+                            ),
                           ),
                         ),
                       )
