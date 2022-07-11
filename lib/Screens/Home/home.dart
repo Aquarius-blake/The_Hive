@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
@@ -20,6 +21,8 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   final  AuthService _auth=AuthService();
   final FirebaseFirestore _firestore=FirebaseFirestore.instance;
+  final StorageMethods store=StorageMethods();
+
 
   final Upload _upload=Upload();
   final User1? u2=User1();
@@ -28,13 +31,18 @@ class _HomeState extends State<Home> {
     image= await _upload.uploadpic(ImageSource.gallery);
     User? result=await FirebaseAuth.instance.currentUser;
     User1? currentUser =await _auth.fbuser(result);
-    currentUser?.profilepic=image;
-    await  _firestore.collection("users").doc(currentUser!.UID).set({
+
+    String photourl= await  store.Storageip("Profilepic", image, false);
+    currentUser?.ppurl=photourl;
+
+    await  _firestore.collection("users").doc(currentUser!.UID).set(
+      currentUser.toJson()
+      /*
       "UID":currentUser.UID,
       "Username":currentUser.Username,
       "Profile picture":currentUser.profilepic,
-
-    },
+*/
+    ,
         SetOptions(merge: true)
     );
     setState(() {
