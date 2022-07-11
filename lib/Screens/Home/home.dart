@@ -43,14 +43,14 @@ class _HomeState extends State<Home> {
   }
 
   @override
-void initState() {
+  void initState() {
     initial();
     super.initState();
   }
 
-void initial()async{
+  void initial()async{
 
-}
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -148,7 +148,7 @@ void initial()async{
                 SizedBox(height: 5.0,),
                 ListTile(
                   title: Text(
-                      "Create New Account",
+                    "Create New Account",
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
                       fontSize: 12.0,
