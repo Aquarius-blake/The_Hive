@@ -1,4 +1,3 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../Services/auth.dart';
@@ -62,7 +61,7 @@ class _WebviewState extends State<Webview> {
                         color: Colors.white,
                         child: Column(
                           children: <Widget>[
-Text("fsdg")
+                            Text("fsdg")
                           ],
                         ),
                       )
@@ -79,7 +78,7 @@ Text("fsdg")
                         child: Column(
 
                           children: <Widget>[
-Text("dgdfgd")
+                            Text("dgdfgd")
                           ],
                         ),
                       )
