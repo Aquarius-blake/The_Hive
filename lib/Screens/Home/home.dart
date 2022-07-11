@@ -43,8 +43,14 @@ class _HomeState extends State<Home> {
   }
 
   @override
+void initState() {
+    initial();
+    super.initState();
+  }
 
+void initial()async{
 
+}
   @override
   Widget build(BuildContext context) {
     return Scaffold(
