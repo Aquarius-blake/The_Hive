@@ -36,13 +36,7 @@ class _HomeState extends State<Home> {
     currentUser?.ppurl=photourl;
 
     await  _firestore.collection("users").doc(currentUser!.UID).set(
-      currentUser.toJson()
-      /*
-      "UID":currentUser.UID,
-      "Username":currentUser.Username,
-      "Profile picture":currentUser.profilepic,
-*/
-    ,
+      currentUser.toJson(),
         SetOptions(merge: true)
     );
     setState(() {
