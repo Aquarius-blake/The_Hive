@@ -14,6 +14,15 @@ class _WprofileState extends State<Wprofile> {
 appBar: AppBar(
   title: Text("Pofile"),
 ),
+      body: SafeArea(
+          child: Container(
+            child: Column(
+              children: <Widget>[
+
+              ],
+            ),
+          )
+      ),
     );
   }
 }
