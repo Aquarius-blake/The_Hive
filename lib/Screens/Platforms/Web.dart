@@ -76,15 +76,15 @@ class _WebviewState extends State<Webview> {
                                   children: <Widget>[
                                     IconButton(
                                         onPressed: (){},
-                                        icon: Icon(Icons.wifi),
-                                      iconSize: 20.0,
+                                        icon: Icon(Icons.person),
+                                      iconSize: 60.0,
 
                                     ),
                                     GestureDetector(
                                       onTap: (){},
-                                      child: Text("profile",
+                                      child: Text("Profile",
                                         style: TextStyle(
-
+fontSize: 20.0,
                                         ),
                                       ),
                                     )
