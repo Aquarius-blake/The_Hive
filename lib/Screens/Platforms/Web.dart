@@ -69,8 +69,25 @@ class _WebviewState extends State<Webview> {
                             child: Column(
 
                               children: <Widget>[
-                                CircleAvatar(
-                                  radius: 50.0,
+                                Stack(
+                                  children:<Widget>[
+                                    CircleAvatar(
+                                    radius: 50.0,
+                                  ),
+                                    Positioned(
+                                      bottom: -5,
+                                      left: 65,
+                                      child: IconButton(
+                                          onPressed:() {
+
+                                          },
+                                          icon:Icon(
+                                            Icons.add_a_photo,
+                                            color: Colors.white,
+                                          )
+                                      ),
+                                    )
+                                ]
                                 ),
                                 SizedBox(height: 10,),
                                 Text(""),
