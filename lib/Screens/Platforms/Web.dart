@@ -58,6 +58,7 @@ class _WebviewState extends State<Webview> {
                   Column(
                     children: <Widget>[
                       Card(
+                        elevation: 15.0,
                         color: Colors.white,
                         shape:  RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(15.0)
@@ -133,6 +134,7 @@ fontSize: 20.0,
                                     )
                                   ],
                                 ),
+
 
                               ],
                             ),
