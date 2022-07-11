@@ -81,7 +81,7 @@ class _WebviewState extends State<Webview> {
                                     IconButton(
                                         onPressed: (){},
                                         icon: Icon(Icons.person),
-                                      iconSize: 60.0,
+                                      iconSize: 40.0,
 
                                     ),
 
@@ -89,7 +89,7 @@ class _WebviewState extends State<Webview> {
                                       onTap: (){},
                                       child: Text("Profile",
                                         style: TextStyle(
-fontSize: 20.0,
+fontSize: 19.0,
                                         ),
                                       ),
                                     )
@@ -101,7 +101,7 @@ fontSize: 20.0,
                                     IconButton(
                                       onPressed: (){},
                                       icon: Icon(Icons.mail_outline),
-                                      iconSize: 60.0,
+                                      iconSize: 40.0,
 
                                     ),
 
@@ -109,7 +109,7 @@ fontSize: 20.0,
                                       onTap: (){},
                                       child: Text("Messages",
                                         style: TextStyle(
-                                          fontSize: 20.0,
+                                          fontSize: 19.0,
                                         ),
                                       ),
                                     )
@@ -120,7 +120,7 @@ fontSize: 20.0,
                                     IconButton(
                                       onPressed: (){},
                                       icon: Icon(Icons.search),
-                                      iconSize: 60.0,
+                                      iconSize: 40.0,
 
                                     ),
 
@@ -128,7 +128,7 @@ fontSize: 20.0,
                                       onTap: (){},
                                       child: Text("Search",
                                         style: TextStyle(
-                                          fontSize: 20.0,
+                                          fontSize: 19.0,
                                         ),
                                       ),
                                     )
