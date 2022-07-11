@@ -61,7 +61,14 @@ class _WebviewState extends State<Webview> {
                         color: Colors.white,
                         child: Column(
                           children: <Widget>[
-                            Text("fsdg")
+                            Text("fsdg"),
+                            CircleAvatar(),
+                            ListView(
+                              children: <Widget>[
+
+                              ],
+                            )
+
                           ],
                         ),
                       )

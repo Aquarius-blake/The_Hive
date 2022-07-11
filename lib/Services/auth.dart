@@ -142,7 +142,7 @@ class AuthService{
 
       User? result = await _auth.currentUser;
 
-      return await _userfirebase(result);
+      return  _userfirebase(result);
     }catch(e){
       print(e.toString());
     }
