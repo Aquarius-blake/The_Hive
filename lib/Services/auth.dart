@@ -137,7 +137,6 @@ class AuthService{
     try {
       User? result = await _auth.currentUser;
       DocumentSnapshot snap= await _firestore.collection("users").doc(result!.uid).get();
-
       return User1.FromSnap(snap) ;
     }catch(e){
       print(e.toString());
