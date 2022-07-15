@@ -13,7 +13,7 @@ class Webview extends StatefulWidget {
   State<Webview> createState() => _WebviewState();
 }
 final  AuthService _auth=AuthService();
-String? username;
+String username="";
 
 
 
