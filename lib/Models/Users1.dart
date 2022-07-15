@@ -47,6 +47,7 @@ class User1{
     var snapshot= snap.data() as Map<String,dynamic>;
     return User1(
       Username: snapshot['username'],
+      UID: snapshot['uid'],
       Email: snapshot['Email'],
       DOB: snapshot['DateofBirth'],
       ppurl: snapshot['profilepic'],
