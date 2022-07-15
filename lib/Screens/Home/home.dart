@@ -53,10 +53,10 @@ class _HomeState extends State<Home> {
   }
 
   void initial()async{
-
     UserProvider _userprovider=Provider.of(context,listen: false);
     await _userprovider.Refreshuser();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
