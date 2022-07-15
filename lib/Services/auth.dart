@@ -101,19 +101,13 @@ class AuthService{
     try{
       UserCredential result= await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
-      bool pass=false;
-      if (image==null){
-        pass=false;
-      }
-      else{
-        pass=true;
-      }
-      String photourl= await  Store.Storageip("Profilepic", image, false);
-      User1 user1= User1(UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl);
-      if(pass==true){
-        await  _firestore.collection("users").doc(user!.uid).set(
-          user1.toJson(),
-        );}
+
+    String photourl= await  Store.Storageip("Profilepic", image, false);
+     User1 user1= User1(UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl);
+
+      await  _firestore.collection("users").doc(user!.uid).set(
+        user1.toJson(),
+      );
       Username=username;
 
       return _userfirebase(user);
@@ -141,18 +135,13 @@ class AuthService{
 
   Future<User1?> CurrentUserDetails()async{
     try {
-
       User? result = await _auth.currentUser;
       DocumentSnapshot snap= await _firestore.collection("users").doc(result!.uid).get();
 
       return User1.FromSnap(snap) ;
-
-
     }catch(e){
       print(e.toString());
     }
-
-
   }
 
 
