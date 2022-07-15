@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../../Services/auth.dart';
@@ -21,7 +23,9 @@ class _WebviewState extends State<Webview> {
     super.initState();
   }
   void initial()async{
+    DocumentSnapshot snap= await FirebaseFirestore.instance.collection("users").doc(FirebaseAuth.instance.currentUser!.uid).get(
 
+    );
   }
   @override
   Widget build(BuildContext context) {
@@ -70,24 +74,24 @@ class _WebviewState extends State<Webview> {
 
                               children: <Widget>[
                                 Stack(
-                                  children:<Widget>[
-                                    CircleAvatar(
-                                    radius: 50.0,
-                                  ),
-                                    Positioned(
-                                      bottom: -5,
-                                      left: 65,
-                                      child: IconButton(
-                                          onPressed:() {
-
-                                          },
-                                          icon:Icon(
-                                            Icons.add_a_photo,
-                                            color: Colors.lightBlueAccent,
-                                          )
+                                    children:<Widget>[
+                                      CircleAvatar(
+                                        radius: 50.0,
                                       ),
-                                    )
-                                ]
+                                      Positioned(
+                                        bottom: -5,
+                                        left: 65,
+                                        child: IconButton(
+                                            onPressed:() {
+
+                                            },
+                                            icon:Icon(
+                                              Icons.add_a_photo,
+                                              color: Colors.lightBlueAccent,
+                                            )
+                                        ),
+                                      )
+                                    ]
                                 ),
                                 SizedBox(height: 10,),
                                 Text(""),
@@ -96,8 +100,8 @@ class _WebviewState extends State<Webview> {
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     IconButton(
-                                        onPressed: (){},
-                                        icon: Icon(Icons.person),
+                                      onPressed: (){},
+                                      icon: Icon(Icons.person),
                                       iconSize: 40.0,
 
                                     ),
@@ -106,7 +110,7 @@ class _WebviewState extends State<Webview> {
                                       onTap: (){},
                                       child: Text("Profile",
                                         style: TextStyle(
-fontSize: 19.0,
+                                          fontSize: 19.0,
                                         ),
                                       ),
                                     )
@@ -151,13 +155,13 @@ fontSize: 19.0,
                                     )
                                   ],
                                 ),
-SizedBox(height: 30,),
+                                SizedBox(height: 30,),
                                 TextButton(
                                     onPressed: (){},
                                     child: Text("Create New Account",
-                                    style: TextStyle(
+                                      style: TextStyle(
 
-                                    ),)
+                                      ),)
                                 )
 
                               ],
