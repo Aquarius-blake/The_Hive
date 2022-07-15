@@ -2,6 +2,8 @@
 // Custom User Class
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class User1{
 
   late final  String? UID;
@@ -38,7 +40,10 @@ class User1{
     "DatwofBirth":DOB,
     "profilepic":ppurl,
     "Full Name":Name,
-
-
   };
+
+  static User1 FromSnap(DocumentSnapshot snap){
+    var snapshot= snap.data() as Map<String,dynamic>;
+    return User1();
+  }
 }
