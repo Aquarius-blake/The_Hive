@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         StreamProvider<User1?>.value(value: AuthService().user, initialData: null),
-        ChangeNotifierProvider(create: (_)=>UserProvider())
+        ChangeNotifierProvider(create: (_)=>UserProvider(),),
       ],
       child: MaterialApp(
         home: Wrapper(),
