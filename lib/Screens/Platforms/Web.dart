@@ -13,6 +13,7 @@ class Webview extends StatefulWidget {
   State<Webview> createState() => _WebviewState();
 }
 final  AuthService _auth=AuthService();
+String? username;
 
 
 
@@ -23,9 +24,11 @@ class _WebviewState extends State<Webview> {
     super.initState();
   }
   void initial()async{
-    DocumentSnapshot snap= await FirebaseFirestore.instance.collection("users").doc(FirebaseAuth.instance.currentUser!.uid).get(
+    DocumentSnapshot snap= await FirebaseFirestore.instance.collection("users").doc(FirebaseAuth.instance.currentUser!.uid).get();
+    setState(() {
+      username=(snap.data() as Map<String,dynamic>)['username'];
 
-    );
+    });
   }
   @override
   Widget build(BuildContext context) {
