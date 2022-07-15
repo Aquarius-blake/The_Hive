@@ -102,7 +102,7 @@ class _WebviewState extends State<Webview> {
                                     ]
                                 ),
                                 SizedBox(height: 10,),
-                                Text("$username"),
+                                Text(user1.Username!),
                                 SizedBox(height: 10,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
