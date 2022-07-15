@@ -12,6 +12,7 @@ class UserProvider with ChangeNotifier{
 
   Future<void> Refreshuser()async{
     User1? user1 = await _auth.CurrentUserDetails();
+    _user1=user1;
   }
 
 }
