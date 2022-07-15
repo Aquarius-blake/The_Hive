@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:provider/provider.dart';
+import '../../Models/Users1.dart';
 import '../../Services/auth.dart';
 
 
@@ -35,6 +36,7 @@ class _WebviewState extends State<Webview> {
   }
   @override
   Widget build(BuildContext context) {
+    User1 user1= Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(

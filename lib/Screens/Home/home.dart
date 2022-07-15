@@ -59,6 +59,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    User1 user1= Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
