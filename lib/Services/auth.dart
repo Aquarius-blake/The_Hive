@@ -137,13 +137,13 @@ class AuthService{
 
 //Return Current user in Custom User
 
-  Future CurrentUserDetails()async{
+  Future<User1?> CurrentUserDetails()async{
     try {
 
       User? result = await _auth.currentUser;
-      DocumentSnapshot sna= await _firestore.collection("users").doc(result!.uid).get();
+      DocumentSnapshot snap= await _firestore.collection("users").doc(result!.uid).get();
 
-      return  _userfirebase(result);
+      return User1.FromSnap(snap) ;
 
 
     }catch(e){
