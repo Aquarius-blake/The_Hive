@@ -37,7 +37,7 @@ class User1{
     "uid":UID,
     "email":Email,
     "password":Password,
-    "DatwofBirth":DOB,
+    "DateofBirth":DOB,
     "profilepic":ppurl,
     "Full Name":Name,
   };
@@ -46,6 +46,12 @@ class User1{
     var snapshot= snap.data() as Map<String,dynamic>;
     return User1(
       Username: snapshot['username'],
+      Email: snapshot['Email'],
+      DOB: snapshot['DateofBirth'],
+      ppurl: snapshot['profilepic'],
+
+
+
     );
   }
 }
