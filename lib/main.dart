@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Screens/Authenticate/reset.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/webprofile.dart';
 import 'package:provider/provider.dart';
@@ -28,9 +29,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return StreamProvider<User1?>.value(
-      value: AuthService().user,
-      initialData: null,
+    return MultiProvider(
+      providers: [
+        StreamProvider<User1?>.value(value: AuthService().user, initialData: null),
+        ChangeNotifierProvider(create: (_)=>UserProvider())
+      ],
       child: MaterialApp(
         home: Wrapper(),
         routes: {
