@@ -40,6 +40,7 @@ class User1{
     "DateofBirth":DOB,
     "profilepic":ppurl,
     "Full Name":Name,
+    "Gender":Gender,
   };
 
   static User1 FromSnap(DocumentSnapshot snap){
@@ -49,6 +50,10 @@ class User1{
       Email: snapshot['Email'],
       DOB: snapshot['DateofBirth'],
       ppurl: snapshot['profilepic'],
+      Name: snapshot['Full Name'],
+      Gender: snapshot['Gender'],
+
+
 
 
 
