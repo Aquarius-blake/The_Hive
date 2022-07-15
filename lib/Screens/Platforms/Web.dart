@@ -1,9 +1,9 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
+import 'package:forum3/Provider/user_provider.dart';
+import 'package:provider/provider.dart';
 import '../../Services/auth.dart';
-//import 'package:line_icons/line_icons.dart';
+
 
 
 class Webview extends StatefulWidget {
@@ -24,11 +24,14 @@ class _WebviewState extends State<Webview> {
     super.initState();
   }
   void initial()async{
-    DocumentSnapshot snap= await FirebaseFirestore.instance.collection("users").doc(FirebaseAuth.instance.currentUser!.uid).get();
+   /* DocumentSnapshot snap= await FirebaseFirestore.instance.collection("users").doc(FirebaseAuth.instance.currentUser!.uid).get();
     setState(() {
       username=(snap.data() as Map<String,dynamic>)['username'];
+    });*/
 
-    });
+    UserProvider _userprovider=Provider.of(context,listen: false);
+    await _userprovider.Refreshuser();
+
   }
   @override
   Widget build(BuildContext context) {

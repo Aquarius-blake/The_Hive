@@ -9,6 +9,8 @@ import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:provider/provider.dart';
+import '../../Provider/user_provider.dart';
 import '../../Services/auth.dart';
 
 //Home Screen
@@ -52,6 +54,8 @@ class _HomeState extends State<Home> {
 
   void initial()async{
 
+    UserProvider _userprovider=Provider.of(context,listen: false);
+    await _userprovider.Refreshuser();
   }
   @override
   Widget build(BuildContext context) {
