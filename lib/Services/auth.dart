@@ -95,23 +95,25 @@ class AuthService{
       return null;
     }
   }
-  
+
   //Register as new User with email and password
   Future RegisterNewUserEmail(String email,String password,String name,String username,String gender,dynamic image)async{
     try{
       UserCredential result= await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
-    String photourl= await  Store.Storageip("Profilepic", image, false);
-     User1 user1= User1(UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl);
-
-      await  _firestore.collection("users").doc(user!.uid).set(user1.toJson(),
-          /*{
-        "UID":user.uid,
-        "Username":username,
-        "Full Name":name,
-        "Gender":gender,
-      }*/
-      );
+      bool pass=false;
+      if (image==null){
+        pass=false;
+      }
+      else{
+        pass=true;
+      }
+      String photourl= await  Store.Storageip("Profilepic", image, false);
+      User1 user1= User1(UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl);
+      if(pass==true){
+        await  _firestore.collection("users").doc(user!.uid).set(
+          user1.toJson(),
+        );}
       Username=username;
 
       return _userfirebase(user);

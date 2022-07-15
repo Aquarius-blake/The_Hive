@@ -20,7 +20,7 @@ String username="";
 class _WebviewState extends State<Webview> {
   @override
   void initState() {
-    initial();
+  //  initial();
     super.initState();
   }
   void initial()async{
