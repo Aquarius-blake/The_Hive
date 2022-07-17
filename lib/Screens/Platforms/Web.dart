@@ -36,7 +36,7 @@ class _WebviewState extends State<Webview> {
   }
   @override
   Widget build(BuildContext context) {
-    User1 user1= Provider.of<UserProvider>(context).getUser;
+    User1? user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(
@@ -102,7 +102,8 @@ class _WebviewState extends State<Webview> {
                                     ]
                                 ),
                                 SizedBox(height: 10,),
-                                Text(user1.Username!),
+                               user1.Username!=null? Text(user1.Username!):
+                                   Text("Loading"),
                                 SizedBox(height: 10,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
