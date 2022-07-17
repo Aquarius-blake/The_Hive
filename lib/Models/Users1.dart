@@ -43,21 +43,23 @@ class User1{
     "Gender":Gender,
   };
 
-  static User1 FromSnap(DocumentSnapshot snap){
+  static User1? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
-    return User1(
+    User1? User12=User1(
       Username: snapshot['username'],
       UID: snapshot['uid'],
       Email: snapshot['Email'],
       DOB: snapshot['DateofBirth'],
       ppurl: snapshot['profilepic'],
       Name: snapshot['Full Name'],
-      Gender: snapshot['Gender'],
+      Gender: snapshot['Gender'],);
+
+    return User12;
 
 
 
 
 
-    );
+
   }
 }
