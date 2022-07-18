@@ -59,8 +59,8 @@ pageController=PageController();
   }
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
+    pageController.dispose();
   }
 
   void initial()async{
