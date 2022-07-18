@@ -57,6 +57,11 @@ class _HomeState extends State<Home> {
 pageController=PageController();
     super.initState();
   }
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
 
   void initial()async{
     UserProvider _userprovider=Provider.of(context,listen: false);
