@@ -52,7 +52,7 @@ class _HomeState extends State<Home> {
   }
   int _page=0;
   late PageController pageController;
-  String title="";
+  String title="home";
 
   @override
   void initState() {
@@ -83,6 +83,16 @@ void pagechange(int page){
       else if(_page==1){
         title="Search";
       }
+      else if(_page==2){
+        title="Post";
+      }
+      else if(_page==3){
+        title="Notifications";
+      }
+      else if(_page==4){
+        title="Messages";
+      }
+
     });
 }
 
@@ -98,7 +108,7 @@ void pagechange(int page){
         title: Row(
           children: <Widget>[
             Text(
-              "Homepage",
+              "$title",
               style: TextStyle(
 
               ),
