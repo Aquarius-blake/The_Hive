@@ -195,7 +195,9 @@ class _HomeState extends State<Home> {
         child: Text("+"),
       ),
       bottomNavigationBar: CupertinoTabBar(
-          items: [],
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home))
+          ],
       ),
     );
   }
