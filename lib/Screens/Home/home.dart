@@ -221,6 +221,7 @@ void pagechange(int page){
 
         ],
         controller: pageController,
+        onPageChanged: pagechange,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
