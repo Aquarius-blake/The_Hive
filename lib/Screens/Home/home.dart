@@ -68,7 +68,9 @@ pageController=PageController();
     await _userprovider.Refreshuser();
   }
 
-  void Navitap(int page){}
+  void Navitap(int page){
+    pageController.jumpToPage(page);
+  }
   
   
   @override
