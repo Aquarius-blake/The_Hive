@@ -48,11 +48,13 @@ class _HomeState extends State<Home> {
 
     });
   }
+  int _page=0;
+  late PageController pageController;
 
   @override
   void initState() {
   //  initial();
-
+pageController=PageController();
     super.initState();
   }
 
@@ -60,14 +62,14 @@ class _HomeState extends State<Home> {
     UserProvider _userprovider=Provider.of(context,listen: false);
     await _userprovider.Refreshuser();
   }
-int _page=0;
-  
+
+  void Navitap(int page){}
   
   
   @override
   Widget build(BuildContext context) {
    // try{
-    User1 user1=  Provider.of<UserProvider>(context).getUser;
+  late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
       appBar: AppBar(
@@ -241,6 +243,7 @@ int _page=0;
               backgroundColor: Colors.white,
             ),
           ],
+        onTap: Navitap,
       ),
     );
   //  }catch(e){
