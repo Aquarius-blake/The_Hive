@@ -234,7 +234,9 @@ int _page=0;
               backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.mail_outline),
+              icon: Icon(Icons.mail_outline,
+                color: _page==4? Colors.lightBlueAccent:Colors.white,
+              ),
               label: '',
               backgroundColor: Colors.white,
             ),
