@@ -49,7 +49,7 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    initial();
+  //  initial();
     super.initState();
   }
 
@@ -57,10 +57,10 @@ class _HomeState extends State<Home> {
     UserProvider _userprovider=Provider.of(context,listen: false);
     await _userprovider.Refreshuser();
   }
-
+int _page=0;
   @override
   Widget build(BuildContext context) {
-    User1 user1= Provider.of<UserProvider>(context).getUser;
+    //User1 user1= Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
