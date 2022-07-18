@@ -196,7 +196,11 @@ class _HomeState extends State<Home> {
       ),
       bottomNavigationBar: CupertinoTabBar(
           items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home))
+            BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+              label: '',
+              backgroundColor: Colors.white,
+            )
           ],
       ),
     );
