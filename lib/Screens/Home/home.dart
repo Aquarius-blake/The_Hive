@@ -7,6 +7,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Mhome.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Msearch.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/Services/Upload.dart';
 //import 'package:forum3/shared/loading.dart';
@@ -213,8 +215,8 @@ void pagechange(int page){
       ),
       body: PageView(
         children: [
-          Text("Home"),
-          Text("Home"),
+          Mhome(),
+          Msearch(),
           Text("Home"),
           Text("Home"),
           Text("Home")
