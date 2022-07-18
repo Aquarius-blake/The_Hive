@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
     currentUser?.ppurl=photourl;
 
     await  _firestore.collection("users").doc(currentUser!.UID).set(
-      currentUser.toJson(),
+        currentUser.toJson(),
         SetOptions(merge: true)
     );
     setState(() {
@@ -53,8 +53,8 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-  //  initial();
-pageController=PageController();
+    //  initial();
+    pageController=PageController();
     super.initState();
   }
   @override
@@ -71,12 +71,12 @@ pageController=PageController();
   void Navitap(int page){
     pageController.jumpToPage(page);
   }
-  
-  
+void pagechange(){}
+
   @override
   Widget build(BuildContext context) {
-   // try{
-  late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    // try{
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
       appBar: AppBar(
@@ -209,57 +209,63 @@ pageController=PageController();
       ),
       body: PageView(
         children: [
+          Text("Home"),
+          Text("Home"),
+          Text("Home"),
+          Text("Home"),
+          Text("Home")
 
         ],
+        controller: pageController,
       ),
       floatingActionButton: FloatingActionButton(
-          onPressed: (){},
+        onPressed: (){},
         child: Text("+"),
       ),
       bottomNavigationBar: CupertinoTabBar(
-          items: [
-            BottomNavigationBarItem(
-                icon: Icon(
-                    Icons.home,
-                  color: _page==0? Colors.lightBlueAccent:Colors.white,
-                ),
-              label: '',
-              backgroundColor: Colors.white,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              color: _page==0? Colors.lightBlueAccent:Colors.white,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search,
+            label: '',
+            backgroundColor: Colors.white,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.search,
               color: _page==1? Colors.lightBlueAccent:Colors.white,
-              ),
-              label: '',
-              backgroundColor: Colors.white,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.add_circle,
-                color: _page==2? Colors.lightBlueAccent:Colors.white,
-              ),
-              label: '',
-              backgroundColor: Colors.white,
+            label: '',
+            backgroundColor: Colors.white,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.add_circle,
+              color: _page==2? Colors.lightBlueAccent:Colors.white,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(LineIcons.bell,
-                color: _page==3? Colors.lightBlueAccent:Colors.white,
-              ),
-              label: '',
-              backgroundColor: Colors.white,
+            label: '',
+            backgroundColor: Colors.white,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(LineIcons.bell,
+              color: _page==3? Colors.lightBlueAccent:Colors.white,
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.mail_outline,
-                color: _page==4? Colors.lightBlueAccent:Colors.white,
-              ),
-              label: '',
-              backgroundColor: Colors.white,
+            label: '',
+            backgroundColor: Colors.white,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.mail_outline,
+              color: _page==4? Colors.lightBlueAccent:Colors.white,
             ),
-          ],
+            label: '',
+            backgroundColor: Colors.white,
+          ),
+        ],
         onTap: Navitap,
       ),
     );
-  //  }catch(e){
-  //    return Loading();
-  //  }
+    //  }catch(e){
+    //    return Loading();
+    //  }
   }
 }
