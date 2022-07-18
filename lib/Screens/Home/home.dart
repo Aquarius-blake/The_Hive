@@ -215,7 +215,7 @@ int _page=0;
               backgroundColor: Colors.white,
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.doorbell),
+              icon: Icon(LineIcons.bell),
               label: '',
               backgroundColor: Colors.white,
             ),
