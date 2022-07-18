@@ -52,6 +52,7 @@ class _HomeState extends State<Home> {
   }
   int _page=0;
   late PageController pageController;
+  String title="";
 
   @override
   void initState() {
@@ -76,6 +77,12 @@ class _HomeState extends State<Home> {
 void pagechange(int page){
     setState(() {
       _page=page;
+      if(_page==0){
+        title="homepage";
+      }
+      else if(_page==1){
+        title="Search";
+      }
     });
 }
 
