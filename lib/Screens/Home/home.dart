@@ -71,7 +71,11 @@ class _HomeState extends State<Home> {
   void Navitap(int page){
     pageController.jumpToPage(page);
   }
-void pagechange(){}
+void pagechange(int page){
+    setState(() {
+      _page=page;
+    });
+}
 
   @override
   Widget build(BuildContext context) {
