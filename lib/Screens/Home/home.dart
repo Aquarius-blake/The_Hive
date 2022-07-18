@@ -5,9 +5,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/Services/Upload.dart';
+import 'package:forum3/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
@@ -50,6 +52,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
   //  initial();
+
     super.initState();
   }
 
@@ -58,9 +61,14 @@ class _HomeState extends State<Home> {
     await _userprovider.Refreshuser();
   }
 int _page=0;
+  
+  
+  
   @override
   Widget build(BuildContext context) {
-    //User1 user1= Provider.of<UserProvider>(context).getUser;
+    try{
+    User1 user1=  Provider.of<UserProvider>(context).getUser;
+    
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
@@ -112,7 +120,7 @@ int _page=0;
                         ),
                         Center(
 
-                          child: Text("Username"),
+                          child: Text(user1.Username!),
                         ),
                       ],
                     )
@@ -227,5 +235,8 @@ int _page=0;
           ],
       ),
     );
+    }catch(e){
+      return Loading();
+    }
   }
 }
