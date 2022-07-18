@@ -207,6 +207,7 @@ pageController=PageController();
         ),
 
       ),
+      body: PageView(),
       floatingActionButton: FloatingActionButton(
           onPressed: (){},
         child: Text("+"),
