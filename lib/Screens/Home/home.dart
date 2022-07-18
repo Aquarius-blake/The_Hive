@@ -200,7 +200,19 @@ class _HomeState extends State<Home> {
                 icon: Icon(Icons.home),
               label: '',
               backgroundColor: Colors.white,
-            )
+            ),BottomNavigationBarItem(
+              icon: Icon(Icons.search),
+              label: '',
+              backgroundColor: Colors.white,
+            ),BottomNavigationBarItem(
+              icon: Icon(Icons.add_circle),
+              label: '',
+              backgroundColor: Colors.white,
+            ),BottomNavigationBarItem(
+              icon: Icon(Icons.mail_outline),
+              label: '',
+              backgroundColor: Colors.white,
+            ),
           ],
       ),
     );
