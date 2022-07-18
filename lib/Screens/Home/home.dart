@@ -3,6 +3,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Services/Storagemethods.dart';
@@ -192,6 +193,9 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
           onPressed: (){},
         child: Text("+"),
+      ),
+      bottomNavigationBar: CupertinoTabBar(
+          items: [],
       ),
     );
   }
