@@ -197,7 +197,10 @@ int _page=0;
       bottomNavigationBar: CupertinoTabBar(
           items: [
             BottomNavigationBarItem(
-                icon: Icon(Icons.home),
+                icon: Icon(
+                    Icons.home,
+                  color: _page==0? Colors.lightBlueAccent:Colors.white,
+                ),
               label: '',
               backgroundColor: Colors.white,
             ),
