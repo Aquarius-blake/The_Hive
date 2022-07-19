@@ -74,7 +74,7 @@ class _HomeState extends State<Home> {
   void Navitap(int page){
     pageController.jumpToPage(page);
   }
-void pagechange(int page){
+  void pagechange(int page){
     setState(() {
       _page=page;
       if(_page==0){
@@ -94,7 +94,7 @@ void pagechange(int page){
       }
 
     });
-}
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -156,7 +156,8 @@ void pagechange(int page){
                           child: Text(
                             user1.Username!,
                             style: TextStyle(
-fontSize: 16,
+                              fontSize: 16,
+
                             ),
                           ),
                         ),

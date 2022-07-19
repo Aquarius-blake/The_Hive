@@ -102,7 +102,12 @@ class _WebviewState extends State<Webview> {
                                     ]
                                 ),
                                 SizedBox(height: 10,),
-                               user1.Username!=null? Text(user1.Username!):
+                               user1.Username!=null? Text(
+                                   user1.Username!,
+                                 style: TextStyle(
+
+                                 ),
+                               ):
                                    Text("Loading"),
                                 SizedBox(height: 10,),
                                 Row(
