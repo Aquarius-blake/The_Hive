@@ -151,6 +151,7 @@ class _HomeState extends State<Home> {
                               )
                             ]
                         ),
+                        SizedBox(height: 10,),
                         Center(
 
                           child: Text(
