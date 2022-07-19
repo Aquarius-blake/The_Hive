@@ -117,6 +117,7 @@ void pagechange(int page){
         ),
 
       ),
+
       drawer: Drawer(
         backgroundColor: Colors.white70,
         child: Container(
@@ -152,7 +153,12 @@ void pagechange(int page){
                         ),
                         Center(
 
-                          child: Text(user1.Username!),
+                          child: Text(
+                            user1.Username!,
+                            style: TextStyle(
+
+                            ),
+                          ),
                         ),
                       ],
                     )
