@@ -156,7 +156,7 @@ void pagechange(int page){
                           child: Text(
                             user1.Username!,
                             style: TextStyle(
-
+fontSize: 16.
                             ),
                           ),
                         ),
