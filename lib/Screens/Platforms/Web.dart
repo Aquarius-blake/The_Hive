@@ -304,6 +304,9 @@ void nav(){
                     child: SingleChildScrollView(
                       child: Column(
                         children: <Widget>[
+                          SizedBox(
+
+                          ),
                                         SizedBox(
 
                                           height: 100,
@@ -316,8 +319,7 @@ void nav(){
                                                 Text("Page4")
 
                                               ],
-                                              physics: ScrollPhysics(
-                                              ),
+                                              physics: ScrollPhysics(),
                                               controller: pageController,
                                               onPageChanged: pagechange,
                                             ),
