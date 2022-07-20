@@ -233,7 +233,13 @@ class _WebviewState extends State<Webview> {
                   ),
                   Column(
                     children: <Widget>[
+                                    PageView(
+                                      children: [
 
+                                      ],
+                                      controller: pageController,
+                                      onPageChanged: pagechange,
+                                    )
                     ],
                   ),
                   Column(
