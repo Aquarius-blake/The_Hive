@@ -237,7 +237,13 @@ void nav(){
                                     ),
 
                                     GestureDetector(
-                                      onTap: (){},
+                                      onTap: (){
+
+                                        setState(() {
+                                          page=2;
+                                        });
+                                        Navitap(page);
+                                      },
                                       child: Text("Messages",
                                         style: TextStyle(
                                           fontSize: 19.0,
