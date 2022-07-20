@@ -21,6 +21,7 @@ String username="";
 class _WebviewState extends State<Webview> {
 
   int _page=0;
+  int page=0;
   late PageController pageController;
   String title="home";
 
@@ -77,7 +78,9 @@ class _WebviewState extends State<Webview> {
     });
   }
 
-
+void nav(){
+    Navitap(page);
+}
 
 
   @override
@@ -161,13 +164,44 @@ class _WebviewState extends State<Webview> {
                                   children: <Widget>[
                                     IconButton(
                                       onPressed: (){},
+                                      icon: Icon(Icons.home),
+                                      iconSize: 40.0,
+
+                                    ),
+
+                                    GestureDetector(
+                                      onTap: (){
+                                        setState(() {
+                                          page=1;
+                                        });
+                                        Navitap(page);
+                                      },
+                                      child: Text("Profile",
+                                        style: TextStyle(
+                                          fontSize: 19.0,
+                                        ),
+                                      ),
+                                    )
+                                  ],
+                                ),
+                                SizedBox(),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: <Widget>[
+                                    IconButton(
+                                      onPressed: (){},
                                       icon: Icon(Icons.person),
                                       iconSize: 40.0,
 
                                     ),
 
                                     GestureDetector(
-                                      onTap: (){},
+                                      onTap: (){
+                                        setState(() {
+                                          page=1;
+                                        });
+                                        Navitap(page);
+                                      },
                                       child: Text("Profile",
                                         style: TextStyle(
                                           fontSize: 19.0,
@@ -236,6 +270,10 @@ class _WebviewState extends State<Webview> {
                       children: <Widget>[
                                       PageView(
                                         children: [
+                                          Text("Page1"),
+                                          Text("Page3"),
+                                          Text("Page3"),
+                                          Text("Page4")
 
                                         ],
                                         controller: pageController,
