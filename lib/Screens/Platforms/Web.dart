@@ -27,13 +27,13 @@ class _WebviewState extends State<Webview> {
 
   @override
   void initState() {
-   // initial();
+    // initial();
     pageController=PageController();
 
     super.initState();
   }
   void initial()async{
-   /* DocumentSnapshot snap= await FirebaseFirestore.instance.collection("users").doc(FirebaseAuth.instance.currentUser!.uid).get();
+    /* DocumentSnapshot snap= await FirebaseFirestore.instance.collection("users").doc(FirebaseAuth.instance.currentUser!.uid).get();
     setState(() {
       username=(snap.data() as Map<String,dynamic>)['username'];
     });*/
@@ -78,9 +78,9 @@ class _WebviewState extends State<Webview> {
     });
   }
 
-void nav(){
+  void nav(){
     Navitap(page);
-}
+  }
 
 
   @override
@@ -151,13 +151,13 @@ void nav(){
                                     ]
                                 ),
                                 SizedBox(height: 10,),
-                               user1.Username!=null? Text(
-                                   user1.Username!,
-                                 style: TextStyle(
+                                user1.Username!=null? Text(
+                                  user1.Username!,
+                                  style: TextStyle(
 
-                                 ),
-                               ):
-                                   Text("Loading"),
+                                  ),
+                                ):
+                                Text("Loading"),
                                 SizedBox(height: 10,),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
@@ -307,24 +307,24 @@ void nav(){
                           SizedBox(
 
                           ),
-                                        SizedBox(
+                          SizedBox(
 
-                                          height: 100,
-                                          child: Center(
-                                            child: PageView(
-                                              children: [
-                                                Text("Page1"),
-                                                Text("Page2"),
-                                                Text("Page3"),
-                                                Text("Page4")
+                            height: 100,
+                            child: Center(
+                              child: PageView(
+                                children: [
+                                  Text("Page1"),
+                                  Text("Page2"),
+                                  Text("Page3"),
+                                  Text("Page4")
 
-                                              ],
-                                              physics: ScrollPhysics(),
-                                              controller: pageController,
-                                              onPageChanged: pagechange,
-                                            ),
-                                          ),
-                                        )
+                                ],
+                                physics: ScrollPhysics(),
+                                controller: pageController,
+                                onPageChanged: pagechange,
+                              ),
+                            ),
+                          )
                         ],
                       ),
                     ),
