@@ -310,7 +310,10 @@ class _WebviewState extends State<Webview> {
                                 children: [
                                   Row(
                                     children: [
-
+                                      CircleAvatar(
+                                        backgroundColor: Colors.lightBlueAccent,
+                                        backgroundImage: NetworkImage(user1.ppurl!),
+                                      )
                                     ],
                                   )
                                 ],
