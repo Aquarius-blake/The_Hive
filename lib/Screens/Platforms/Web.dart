@@ -194,7 +194,12 @@ void nav(){
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     IconButton(
-                                      onPressed: (){},
+                                      onPressed: (){
+                                        setState(() {
+                                          page=1;
+                                        });
+                                        Navitap(page);
+                                      },
                                       icon: Icon(Icons.person),
                                       iconSize: 40.0,
 
@@ -219,7 +224,13 @@ void nav(){
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     IconButton(
-                                      onPressed: (){},
+                                      onPressed: (){
+
+                                        setState(() {
+                                          page=2;
+                                        });
+                                        Navitap(page);
+                                      },
                                       icon: Icon(Icons.mail_outline),
                                       iconSize: 40.0,
 
@@ -270,21 +281,30 @@ void nav(){
                       )
                     ],
                   ),
-                  SingleChildScrollView(
-                    child: Column(
-                      children: <Widget>[
-                                      PageView(
-                                        children: [
-                                          Text("Page1"),
-                                          Text("Page3"),
-                                          Text("Page3"),
-                                          Text("Page4")
+                  Flexible(
+                    fit: FlexFit.tight,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: <Widget>[
+                                        SizedBox(
 
-                                        ],
-                                        controller: pageController,
-                                        onPageChanged: pagechange,
-                                      )
-                      ],
+                                          height: 100,
+                                          child: Center(
+                                            child: PageView(
+                                              children: [
+                                                Text("Page1"),
+                                                Text("Page2"),
+                                                Text("Page3"),
+                                                Text("Page4")
+
+                                              ],
+                                              controller: pageController,
+                                              onPageChanged: pagechange,
+                                            ),
+                                          ),
+                                        )
+                        ],
+                      ),
                     ),
                   ),
                   Column(
