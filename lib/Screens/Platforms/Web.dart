@@ -316,6 +316,8 @@ void nav(){
                                                 Text("Page4")
 
                                               ],
+                                              physics: ScrollPhysics(
+                                              ),
                                               controller: pageController,
                                               onPageChanged: pagechange,
                                             ),
