@@ -19,9 +19,16 @@ String username="";
 
 
 class _WebviewState extends State<Webview> {
+
+  int _page=0;
+  late PageController pageController;
+  String title="home";
+
   @override
   void initState() {
    // initial();
+    pageController=PageController();
+
     super.initState();
   }
   void initial()async{
@@ -30,10 +37,49 @@ class _WebviewState extends State<Webview> {
       username=(snap.data() as Map<String,dynamic>)['username'];
     });*/
 
+
     UserProvider _userprovider=Provider.of(context,listen: false);
     await _userprovider.Refreshuser();
 
   }
+
+  @override
+  void dispose() {
+    super.dispose();
+    pageController.dispose();
+  }
+
+
+
+
+  void Navitap(int page){
+    pageController.jumpToPage(page);
+  }
+  void pagechange(int page){
+    setState(() {
+      _page=page;
+      if(_page==0){
+        title="homepage";
+      }
+      else if(_page==1){
+        title="Search";
+      }
+      else if(_page==2){
+        title="Post";
+      }
+      else if(_page==3){
+        title="Notifications";
+      }
+      else if(_page==4){
+        title="Messages";
+      }
+
+    });
+  }
+
+
+
+
   @override
   Widget build(BuildContext context) {
     User1? user1=  Provider.of<UserProvider>(context).getUser;
