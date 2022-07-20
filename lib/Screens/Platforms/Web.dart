@@ -305,13 +305,17 @@ class _WebviewState extends State<Webview> {
                       child: Column(
                         children: <Widget>[
                           SizedBox(
-                                      child: Card(
-                                        child: Column(
-                                          children: [
+                            child: Card(
+                              child: Column(
+                                children: [
+                                  Row(
+                                    children: [
 
-                                          ],
-                                        ),
-                                      ),
+                                    ],
+                                  )
+                                ],
+                              ),
+                            ),
                           ),
                           SizedBox(
 
