@@ -163,7 +163,12 @@ void nav(){
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     IconButton(
-                                      onPressed: (){},
+                                      onPressed: (){
+                                        setState(() {
+                                          page=0;
+                                        });
+                                        Navitap(page);
+                                      },
                                       icon: Icon(Icons.home),
                                       iconSize: 40.0,
 
@@ -176,7 +181,7 @@ void nav(){
                                         });
                                         Navitap(page);
                                       },
-                                      child: Text("Profile",
+                                      child: Text("Home",
                                         style: TextStyle(
                                           fontSize: 19.0,
                                         ),
