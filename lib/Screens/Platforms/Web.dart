@@ -231,16 +231,18 @@ class _WebviewState extends State<Webview> {
                       )
                     ],
                   ),
-                  Column(
-                    children: <Widget>[
-                                    PageView(
-                                      children: [
+                  SingleChildScrollView(
+                    child: Column(
+                      children: <Widget>[
+                                      PageView(
+                                        children: [
 
-                                      ],
-                                      controller: pageController,
-                                      onPageChanged: pagechange,
-                                    )
-                    ],
+                                        ],
+                                        controller: pageController,
+                                        onPageChanged: pagechange,
+                                      )
+                      ],
+                    ),
                   ),
                   Column(
                     children: <Widget>[
