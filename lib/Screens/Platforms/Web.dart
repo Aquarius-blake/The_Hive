@@ -255,14 +255,26 @@ void nav(){
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
                                     IconButton(
-                                      onPressed: (){},
+                                      onPressed: (){
+
+                                        setState(() {
+                                          page=3;
+                                        });
+                                        Navitap(page);
+                                      },
                                       icon: Icon(Icons.search),
                                       iconSize: 40.0,
 
                                     ),
 
                                     GestureDetector(
-                                      onTap: (){},
+                                      onTap: (){
+
+                                        setState(() {
+                                          page=3;
+                                        });
+                                        Navitap(page);
+                                      },
                                       child: Text("Search",
                                         style: TextStyle(
                                           fontSize: 19.0,
