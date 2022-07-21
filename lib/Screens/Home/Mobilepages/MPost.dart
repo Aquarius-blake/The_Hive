@@ -67,7 +67,10 @@ class _MpostState extends State<Mpost> {
                         Divider(),
                         Row(
                           children: [
-
+                            IconButton(onPressed: (){},
+                                icon: Icon(Icons.add_a_photo
+                                )
+                            )
                           ],
                         )
                       ],
