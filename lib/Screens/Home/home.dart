@@ -144,6 +144,7 @@ class _HomeState extends State<Home> {
                       children: <Widget>[
                         Stack(
                             children:[
+                              Avatar(image, user1),
                               image!=null? CircleAvatar(
                                 radius: 60.0,
                                 backgroundImage: MemoryImage(image),
