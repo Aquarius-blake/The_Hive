@@ -75,19 +75,19 @@ class _HomeState extends State<Home> {
     try{
      return image!=null?  CircleAvatar(
        radius: 50,
-       maxRadius: 50,
+
        backgroundImage: MemoryImage(image),
      ): CircleAvatar(
        backgroundImage: NetworkImage(user1.ppurl!),
        radius: 50,
-       maxRadius: 50,
+
      );
     }
     catch(e){
     return CircleAvatar(
       backgroundImage: AssetImage('Assets/hac.jpg'),
       radius: 50,
-      maxRadius: 50,
+
     );
     }
   }
