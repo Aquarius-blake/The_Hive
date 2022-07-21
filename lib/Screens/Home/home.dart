@@ -87,10 +87,11 @@ class _HomeState extends State<Home> {
     if(_page==2){
       return FloatingActionButton(
           onPressed: (){
-            ScaffoldMessenger(
-                child: SnackBar(
-                    content: Text("Post Success")
-                )
+
+            ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                content: Text("Post Success")
+            )
             );
           },
       child: Text("Post"),);
