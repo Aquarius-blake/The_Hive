@@ -16,7 +16,9 @@ class _MpostState extends State<Mpost> {
     body: SafeArea(
         child: Card(
 child: Column(
+children: [
 
+],
 ),
     )
     ),
