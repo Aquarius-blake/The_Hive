@@ -332,7 +332,7 @@ class _WebviewState extends State<Webview> {
                                         width: MediaQuery.of(context).size.width*0.4,
                                         child: TextField(
                                           decoration: InputDecoration(
-
+                                            hintText:"Write Something",
                                           ),
                                         ),
                                       ),
