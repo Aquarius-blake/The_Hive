@@ -341,9 +341,10 @@ class _WebviewState extends State<Webview> {
                                       child: SizedBox(
                                         width: MediaQuery.of(context).size.width*0.4,
                                         child: TextField(
-                                          maxLines: 8,
+                                          maxLines: 5,
                                           decoration: InputDecoration(
                                             hintText:"Write Something",
+                                            border: InputBorder.none,
                                           ),
                                         ),
                                       ),
