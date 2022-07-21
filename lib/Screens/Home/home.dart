@@ -305,8 +305,8 @@ class _HomeState extends State<Home> {
           Mhome(),
           Msearch(),
           Mpost(),
-          Text("Home"),
-          Text("Home")
+          Text("Notification"),
+          Text("Messages")
 
         ],
         controller: pageController,
