@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+import '../../../Models/Users1.dart';
+
 class Mpost extends StatefulWidget {
-  const Mpost({Key? key}) : super(key: key);
+   Mpost({Key? key,required User1 user1}) : super(key: key);
 
   @override
   State<Mpost> createState() => _MpostState();
