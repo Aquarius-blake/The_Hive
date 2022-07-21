@@ -33,22 +33,25 @@ class _MpostState extends State<Mpost> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       body: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Card(
-              elevation: 2.0,
-              child: Column(
-                children: [
-                  Row(
+          child: Column(
+            children: [
+              Card(
+                child: Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: Column(
                     children: [
-                      Avatar(user1),
-                      SizedBox(width: 15,),
-                      Text(user1.Username!),
+                      Row(
+                        children: [
+                          Avatar(user1),
+                          SizedBox(width: 15,),
+                          Text(user1.Username!),
+                        ],
+                      )
                     ],
-                  )
-                ],
+                  ),
+                ),
               ),
-            ),
+            ],
           )
       ),
     );
