@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -49,7 +50,11 @@ class _MpostState extends State<Mpost> {
                         ],
                       ),
                       SizedBox(height: 15,),
-                      TextField(),
+                      TextField(
+                        decoration: InputDecoration(
+
+                        ),
+                      ),
                     ],
                   ),
                 ),
