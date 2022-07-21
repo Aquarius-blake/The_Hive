@@ -17,7 +17,9 @@ class _MpostState extends State<Mpost> {
           child: Card(
             child: Column(
               children: [
+Row(
 
+)
               ],
             ),
           )
