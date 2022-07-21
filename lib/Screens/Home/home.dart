@@ -75,8 +75,10 @@ class _HomeState extends State<Home> {
   FloatingActionButton _floatingActionButton(){
     if(_page==0){
       return FloatingActionButton(
-        onPressed: (){},
-        child: Text("Psot"),
+        onPressed: (){
+          Navitap(2);
+        },
+        child: Text("+"),
       );
     }
     if(_page==1){
