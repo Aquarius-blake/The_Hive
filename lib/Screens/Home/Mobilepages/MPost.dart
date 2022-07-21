@@ -17,10 +17,12 @@ class _MpostState extends State<Mpost> {
   Widget Avatar(User1 user1){
     try{
       return CircleAvatar(
+        radius: 30,
         backgroundImage: NetworkImage(user1.ppurl!),
       );
     }catch(e){
       return CircleAvatar(
+        radius: 30,
         backgroundImage: AssetImage('Assets/hac.jpg'),
       );
     }
