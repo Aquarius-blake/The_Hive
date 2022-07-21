@@ -55,6 +55,10 @@ class _MpostState extends State<Mpost> {
                           hintText: "Title",
                         ),
                       ),
+                      SizedBox(height: 5,),
+                      TextField(
+
+                      )
                     ],
                   ),
                 ),
