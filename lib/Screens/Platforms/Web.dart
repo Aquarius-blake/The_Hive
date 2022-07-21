@@ -333,6 +333,7 @@ class _WebviewState extends State<Webview> {
                                         child: TextField(
                                           decoration: InputDecoration(
                                             hintText:"Write Something",
+                                            hintMaxLines: 6,
                                           ),
                                         ),
                                       ),
