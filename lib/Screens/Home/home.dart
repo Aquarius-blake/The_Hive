@@ -101,6 +101,7 @@ class _HomeState extends State<Home> {
       return FloatingActionButton(
         onPressed: (){},
         backgroundColor: Colors.white10,
+        elevation: 0.0,
         child: Text("Psot"),);
     }
     if(_page==4){
