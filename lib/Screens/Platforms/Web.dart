@@ -370,6 +370,18 @@ class _WebviewState extends State<Webview> {
                                           child: ElevatedButton(
                                               onPressed: (){},
                                               child: Text("Post"),
+                                            style: ElevatedButton.styleFrom(
+                                                elevation: 7.0,
+                                                shadowColor: Colors.black,
+                                                primary: Colors.blue[400],
+                                                side: BorderSide(
+                                                  color: Colors.white70,
+                                                  width: 2.0,
+                                                ),
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius: BorderRadius.circular(100.0)
+                                                )
+                                            ),
                                           ),
                                         )
                                       ],
