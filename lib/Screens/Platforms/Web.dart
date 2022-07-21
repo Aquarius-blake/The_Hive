@@ -358,7 +358,15 @@ class _WebviewState extends State<Webview> {
                                       children: [
                                         IconButton(
                                             onPressed: (){},
-                                            icon: Icon(Icons.add_a_photo))
+                                            icon: Icon(Icons.add_a_photo)
+                                        ),
+                                        Align(
+                                          alignment: Alignment.bottomRight,
+                                          child: ElevatedButton(
+                                              onPressed: (){},
+                                              child: Text("Post"),
+                                          ),
+                                        )
                                       ],
                                     )
                                   ],
