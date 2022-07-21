@@ -142,9 +142,9 @@ class _HomeState extends State<Home> {
                 DrawerHeader(
                     child: Column(
                       children: <Widget>[
+                        Avatar(image, user1),
                         Stack(
                             children:[
-                              Avatar(image, user1),
                               image!=null? CircleAvatar(
                                 radius: 60.0,
                                 backgroundImage: MemoryImage(image),
