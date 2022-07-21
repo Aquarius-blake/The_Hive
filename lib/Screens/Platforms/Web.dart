@@ -1,4 +1,5 @@
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:provider/provider.dart';
@@ -107,7 +108,7 @@ class _WebviewState extends State<Webview> {
       ),
       body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(60),
+            padding: EdgeInsets.all(30),
 
             child: Center(
               child: Row(
@@ -359,6 +360,10 @@ class _WebviewState extends State<Webview> {
                                         IconButton(
                                             onPressed: (){},
                                             icon: Icon(Icons.add_a_photo)
+                                        ),
+                                        Flexible(
+                                          fit: FlexFit.tight,
+                                            child: SizedBox()
                                         ),
                                         Align(
                                           alignment: Alignment.bottomRight,
