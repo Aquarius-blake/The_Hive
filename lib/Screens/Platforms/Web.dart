@@ -314,9 +314,16 @@ class _WebviewState extends State<Webview> {
                                       CircleAvatar(
                                         backgroundColor: Colors.lightBlueAccent,
                                         backgroundImage: NetworkImage(user1.ppurl!),
+                                      ),
+                                      Text(
+                                          user1.Username!,
+                                        style: TextStyle(
+
+                                        ),
                                       )
+                                      ,
                                     ],
-                                  )
+                                  ),
                                 ],
                               ),
                             ),
