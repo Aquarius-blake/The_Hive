@@ -315,6 +315,7 @@ class _WebviewState extends State<Webview> {
                                         backgroundColor: Colors.lightBlueAccent,
                                         backgroundImage: NetworkImage(user1.ppurl!),
                                       ),
+                                      SizedBox(width: 20,),
                                       Text(
                                           user1.Username!,
                                         style: TextStyle(
