@@ -13,7 +13,9 @@ class _MpostState extends State<Mpost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    body: SafeArea(child: Card(
 
+    )),
     );
   }
 }
