@@ -61,7 +61,7 @@ class _MpostState extends State<Mpost> {
                           maxLines: 6,
                             decoration: InputDecoration(
 hintText: "Write Something.....",
-
+border: InputBorder.none,
                             ),
                         )
                       ],
