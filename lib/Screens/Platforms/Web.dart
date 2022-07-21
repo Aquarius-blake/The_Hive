@@ -308,7 +308,7 @@ class _WebviewState extends State<Webview> {
                           SizedBox(
                             child: Card(
                               child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.all(15.0),
                                 child: Column(
                                   children: [
                                     Row(
