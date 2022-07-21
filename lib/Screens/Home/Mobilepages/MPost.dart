@@ -39,6 +39,7 @@ class _MpostState extends State<Mpost> {
                 Row(
                   children: [
                     Avatar(user1),
+                    SizedBox(width: 30,),
                     Text(user1.Username!),
                   ],
                 )
