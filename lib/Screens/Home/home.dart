@@ -74,11 +74,11 @@ class _HomeState extends State<Home> {
   Widget Avatar(dynamic image,User1 user1){
     try{
      return image!=null?  CircleAvatar(
-       radius: 60,
+       radius: 50,
        backgroundImage: MemoryImage(image),
      ): CircleAvatar(
        backgroundImage: NetworkImage(user1.ppurl!),
-       radius: 60,
+       radius: 50,
      );
     }
     catch(e){
@@ -173,7 +173,7 @@ class _HomeState extends State<Home> {
                           child: Text(
                             user1.Username!,
                             style: TextStyle(
-                              fontSize: 14,
+                              fontSize: 16,
 
                             ),
                           ),
