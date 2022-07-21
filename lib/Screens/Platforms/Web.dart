@@ -307,25 +307,28 @@ class _WebviewState extends State<Webview> {
                         children: <Widget>[
                           SizedBox(
                             child: Card(
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      CircleAvatar(
-                                        backgroundColor: Colors.lightBlueAccent,
-                                        backgroundImage: NetworkImage(user1.ppurl!),
-                                      ),
-                                      SizedBox(width: 20,),
-                                      Text(
-                                          user1.Username!,
-                                        style: TextStyle(
-
+                              child: Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        CircleAvatar(
+                                          backgroundColor: Colors.lightBlueAccent,
+                                          backgroundImage: NetworkImage(user1.ppurl!),
                                         ),
-                                      )
-                                      ,
-                                    ],
-                                  ),
-                                ],
+                                        SizedBox(width: 20,),
+                                        Text(
+                                            user1.Username!,
+                                          style: TextStyle(
+
+                                          ),
+                                        )
+                                        ,
+                                      ],
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
