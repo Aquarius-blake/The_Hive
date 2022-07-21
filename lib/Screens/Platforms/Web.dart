@@ -336,6 +336,7 @@ class _WebviewState extends State<Webview> {
                                         ),
                                       ),
                                     ),
+                                    SizedBox(height: 10,),
                                     Center(
                                       child: SizedBox(
                                         width: MediaQuery.of(context).size.width*0.4,
