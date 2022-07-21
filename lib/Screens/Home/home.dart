@@ -71,6 +71,45 @@ class _HomeState extends State<Home> {
     UserProvider _userprovider=Provider.of(context,listen: false);
     await _userprovider.Refreshuser();
   }
+
+  FloatingActionButton _floatingActionButton(){
+    if(_page==0){
+      return FloatingActionButton(
+        onPressed: (){},
+        child: Text("Psot"),
+      );
+    }
+    if(_page==1){
+      return FloatingActionButton(
+        onPressed: (){},
+        child: Text("Psot"),);
+    }
+    if(_page==2){
+      return FloatingActionButton(
+          onPressed: (){
+            ScaffoldMessenger(
+                child: SnackBar(
+                    content: Text("Post Success")
+                )
+            );
+          },
+      child: Text("Post"),);
+    }
+    if(_page==3){
+      return FloatingActionButton(
+        onPressed: (){},
+        child: Text("Psot"),);
+    }
+    if(_page==4){
+      return FloatingActionButton(
+        onPressed: (){},
+        child: Icon(Icons.chat),);
+    }
+    return FloatingActionButton(
+        onPressed: (){}
+        );
+  }
+
   Widget Avatar(dynamic image,User1 user1){
     try{
      return image!=null?  CircleAvatar(
@@ -269,10 +308,7 @@ class _HomeState extends State<Home> {
         controller: pageController,
         onPageChanged: pagechange,
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        child: Text("+"),
-      ),
+      floatingActionButton: _floatingActionButton(),
       bottomNavigationBar: CupertinoTabBar(
         items: [
           BottomNavigationBarItem(
