@@ -243,7 +243,7 @@ class _HomeState extends State<Home> {
         children: [
           Mhome(),
           Msearch(),
-          Mpost(user1: user1),
+          Mpost(),
           Text("Home"),
           Text("Home")
 
