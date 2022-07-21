@@ -344,11 +344,15 @@ class _WebviewState extends State<Webview> {
                                           maxLines: 5,
                                           decoration: InputDecoration(
                                             hintText:"Write Something........",
-                                            border: InputBorder.none,
+                                           // border: InputBorder.none,
                                           ),
                                         ),
                                       ),
                                     ),
+                                    Divider(
+                                      height: 20,
+                                    )
+
                                   ],
                                 ),
                               ),
