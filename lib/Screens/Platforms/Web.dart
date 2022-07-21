@@ -321,11 +321,20 @@ class _WebviewState extends State<Webview> {
                                         Text(
                                           user1.Username!,
                                           style: TextStyle(
-
+                                          fontSize: 19,
                                           ),
                                         )
                                         ,
                                       ],
+                                    ),Center(
+                                      child: SizedBox(
+                                        width: MediaQuery.of(context).size.width*0.4,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            hintText:"Write Something",
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                     Center(
                                       child: SizedBox(
@@ -333,11 +342,10 @@ class _WebviewState extends State<Webview> {
                                         child: TextField(
                                           decoration: InputDecoration(
                                             hintText:"Write Something",
-                                            hintMaxLines: 6,
                                           ),
                                         ),
                                       ),
-                                    )
+                                    ),
                                   ],
                                 ),
                               ),
