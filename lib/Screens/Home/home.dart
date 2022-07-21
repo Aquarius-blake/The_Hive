@@ -82,7 +82,7 @@ class _HomeState extends State<Home> {
     if(_page==1){
       return FloatingActionButton(
         onPressed: (){},
-        child: Text("Psot"),);
+        child: Text("Search"),);
     }
     if(_page==2){
       return FloatingActionButton(
