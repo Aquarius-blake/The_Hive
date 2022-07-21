@@ -355,7 +355,11 @@ class _WebviewState extends State<Webview> {
                                       thickness: 2,
                                     ),
                                     Row(
-                                      children: [],
+                                      children: [
+                                        IconButton(
+                                            onPressed: (){},
+                                            icon: Icon(Icons.add_a_photo))
+                                      ],
                                     )
                                   ],
                                 ),
