@@ -34,40 +34,42 @@ class _MpostState extends State<Mpost> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       body: SafeArea(
-          child: Column(
-            children: [
-              SizedBox(height: 10,),
-              Card(
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Avatar(user1),
-                          SizedBox(width: 15,),
-                          Text(user1.Username!),
-                        ],
-                      ),
-                      SizedBox(height: 15,),
-                      TextField(
-                        decoration: InputDecoration(
-                          hintText: "Title",
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                SizedBox(height: 10,),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Avatar(user1),
+                            SizedBox(width: 15,),
+                            Text(user1.Username!),
+                          ],
                         ),
-                      ),
-                      SizedBox(height: 10,),
-                      TextField(
-                        maxLines: 6,
+                        SizedBox(height: 15,),
+                        TextField(
                           decoration: InputDecoration(
+                            hintText: "Title",
+                          ),
+                        ),
+                        SizedBox(height: 10,),
+                        TextField(
+                          maxLines: 6,
+                            decoration: InputDecoration(
 hintText: "Write Something.....",
 
-                          ),
-                      )
-                    ],
+                            ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           )
       ),
     );
