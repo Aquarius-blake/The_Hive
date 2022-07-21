@@ -58,7 +58,7 @@ class _MpostState extends State<Mpost> {
                       SizedBox(height: 5,),
                       TextField(
                           decoration: InputDecoration(
-
+hintText: "Write Something....."
                           ),
                       )
                     ],
