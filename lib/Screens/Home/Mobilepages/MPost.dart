@@ -36,6 +36,7 @@ class _MpostState extends State<Mpost> {
           child: Padding(
             padding: const EdgeInsets.all(15.0),
             child: Card(
+              elevation: 2.0,
               child: Column(
                 children: [
                   Row(
