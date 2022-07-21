@@ -352,6 +352,7 @@ class _WebviewState extends State<Webview> {
                                     SizedBox(height: 20,),
                                     Divider(
                                       height: 20,
+                                      thickness: 2,
                                     )
 
                                   ],
