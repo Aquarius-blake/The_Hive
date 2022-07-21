@@ -65,7 +65,11 @@ class _MpostState extends State<Mpost> {
                           ),
                         ),
                         Divider(),
-                        Row()
+                        Row(
+                          children: [
+
+                          ],
+                        )
                       ],
                     ),
                   ),
