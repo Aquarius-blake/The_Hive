@@ -35,6 +35,7 @@ class _MpostState extends State<Mpost> {
       body: SafeArea(
           child: Column(
             children: [
+              SizedBox(height: 10,),
               Card(
                 child: Padding(
                   padding: const EdgeInsets.all(15.0),
