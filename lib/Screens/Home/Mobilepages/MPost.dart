@@ -59,11 +59,12 @@ class _MpostState extends State<Mpost> {
                         SizedBox(height: 10,),
                         TextField(
                           maxLines: 6,
-                            decoration: InputDecoration(
-hintText: "Write Something.....",
-border: InputBorder.none,
-                            ),
-                        )
+                          decoration: InputDecoration(
+                            hintText: "Write Something.....",
+                            border: InputBorder.none,
+                          ),
+                        ),
+                        Divider()
                       ],
                     ),
                   ),
