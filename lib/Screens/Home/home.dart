@@ -98,6 +98,7 @@ class _HomeState extends State<Home> {
     if(_page==3){
       return FloatingActionButton(
         onPressed: (){},
+        backgroundColor: Colors.white10,
         child: Text("Psot"),);
     }
     if(_page==4){
