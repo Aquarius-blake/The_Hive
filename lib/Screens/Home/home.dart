@@ -71,6 +71,20 @@ class _HomeState extends State<Home> {
     UserProvider _userprovider=Provider.of(context,listen: false);
     await _userprovider.Refreshuser();
   }
+  Widget Avatar(dynamic image,User1 user1){
+    try{
+     return image!=null?  CircleAvatar(
+       radius: 60,
+       backgroundImage: MemoryImage(image),
+     ): CircleAvatar(
+       backgroundImage: NetworkImage(user1.ppurl!),
+       radius: 60,
+     );
+    }
+    catch(e){
+    return CircleAvatar();
+    }
+  }
 
   void Navitap(int page){
     pageController.jumpToPage(page);
