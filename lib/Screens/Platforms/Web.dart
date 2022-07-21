@@ -319,7 +319,7 @@ class _WebviewState extends State<Webview> {
                                         ),
                                         SizedBox(width: 20,),
                                         Text(
-                                            user1.Username!,
+                                          user1.Username!,
                                           style: TextStyle(
 
                                           ),
@@ -327,13 +327,15 @@ class _WebviewState extends State<Webview> {
                                         ,
                                       ],
                                     ),
-                                    SizedBox(
-                                      width: MediaQuery.of(context).size.width*0.2,
-                                   child: TextField(
-                                                      decoration: InputDecoration(
+                                    Center(
+                                      child: SizedBox(
+                                        width: MediaQuery.of(context).size.width*0.4,
+                                        child: TextField(
+                                          decoration: InputDecoration(
 
-                                                      ),
-                                   ),
+                                          ),
+                                        ),
+                                      ),
                                     )
                                   ],
                                 ),
