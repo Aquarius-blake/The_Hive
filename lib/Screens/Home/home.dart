@@ -86,15 +86,14 @@ class _HomeState extends State<Home> {
     }
     if(_page==2){
       return FloatingActionButton(
-          onPressed: (){
-
-            ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                content: Text("Post Success")
-            )
-            );
-          },
-      child: Text("Post"),);
+        onPressed: (){
+          ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                  content: Text("Post Success")
+              )
+          );
+        },
+        child: Text("Post"),);
     }
     if(_page==3){
       return FloatingActionButton(
@@ -108,24 +107,24 @@ class _HomeState extends State<Home> {
     }
     return FloatingActionButton(
         onPressed: (){}
-        );
+    );
   }
 
   Widget Avatar(dynamic image,User1 user1){
     try{
-     return image!=null?  CircleAvatar(
-       radius: 50,
-       backgroundImage: MemoryImage(image),
-     ): CircleAvatar(
-       backgroundImage: NetworkImage(user1.ppurl!),
-       radius: 50,
-     );
+      return image!=null?  CircleAvatar(
+        radius: 50,
+        backgroundImage: MemoryImage(image),
+      ): CircleAvatar(
+        backgroundImage: NetworkImage(user1.ppurl!),
+        radius: 50,
+      );
     }
     catch(e){
-    return CircleAvatar(
-      backgroundImage: AssetImage('Assets/hac.jpg'),
-      radius: 50,
-    );
+      return CircleAvatar(
+        backgroundImage: AssetImage('Assets/hac.jpg'),
+        radius: 50,
+      );
     }
   }
 
