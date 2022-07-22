@@ -91,7 +91,7 @@ class _HomeState extends State<Home> {
           onPressed: (){
             ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
-                    content: Text("Post Success")
+                    content: Text("Post Successful")
                 )
             );
           },
