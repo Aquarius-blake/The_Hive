@@ -15,45 +15,45 @@ class Mpost extends StatefulWidget {
 }
 
 class _MpostState extends State<Mpost> {
-dynamic _image;
-Upload Selection=Upload();
+  dynamic _image;
+  Upload Selection=Upload();
 
-_selectimage(BuildContext context)async{
-return showDialog(
-    context: context,
-    builder: (context){
-      return SimpleDialog(
-        title: Text("Create Post"),
-        children: [
-          SimpleDialogOption(
-padding: EdgeInsets.all(15.0),
-            child: Text("Take a Photo"),
-            onPressed: ()async{
-Navigator.of(context).pop();
-dynamic file=await Selection.uploadpic(ImageSource.camera);
-setState(() {
-  _image=file;
-});
-            },
-          ),SimpleDialogOption(
-            padding: EdgeInsets.all(15.0),
-            child: Text("Choose from gallery"),
-            onPressed: ()async{
-              Navigator.of(context).pop();
-              dynamic file=await Selection.uploadpic(ImageSource.gallery);
-              setState(() {
-                _image=file;
-              });
-            },
-          )
-        ],
-      );
-    }
-);
+  _selectimage(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: Text("Create Post"),
+            children: [
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Take a Photo"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.camera);
+                  setState(() {
+                    _image=file;
+                  });
+                },
+              ),SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Choose from gallery"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.gallery);
+                  setState(() {
+                    _image=file;
+                  });
+                },
+              )
+            ],
+          );
+        }
+    );
 
 
 
-}
+  }
 
 
   Widget Avatar(User1 user1){
