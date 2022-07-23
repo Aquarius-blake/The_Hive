@@ -113,6 +113,7 @@ class _MpostState extends State<Mpost> {
                             border: InputBorder.none,
                           ),
                         ),
+                        Post(),
                         Divider(),
                         Row(
                           children: [
