@@ -28,7 +28,7 @@ return showDialog(
 padding: EdgeInsets.all(15.0),
             child: Text("Take a Photo"),
             onPressed: ()async{
-
+Navigator.of(context).pop();
             },
           )
         ],
