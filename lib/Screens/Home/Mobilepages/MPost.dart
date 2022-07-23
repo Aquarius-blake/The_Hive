@@ -21,7 +21,9 @@ _selectimage(BuildContext context)async{
 return showDialog(
     context: context,
     builder: (context){
-      return SimpleDialog();
+      return SimpleDialog(
+        title: Text("Create Post"),
+      );
     }
 );
 
