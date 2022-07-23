@@ -50,7 +50,7 @@ class _MpostState extends State<Mpost> {
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
                 child: Text("Cancel"),
-                onPressed: ()async{
+                onPressed: (){
                   Navigator.of(context).pop();
                 },
               )
