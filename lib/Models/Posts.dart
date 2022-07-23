@@ -6,10 +6,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Post{
 
-  late final  String? UID;
-  late final String? Email;
-  late final String? Password;
-  late final bool? Guest;
+  late final  String? author_uid;
+  late final String? author;
+  late final String? title;
+  late final String? detail;
   dynamic profilepic;
   late final String? Username;
   late final DateTime? DOB;
@@ -19,12 +19,12 @@ class Post{
   late final String? Gender;
 
 
-  Post({ this.UID,
+  Post({ this.author_uid,
     this.profilepic,
-    this.Guest,
+    this.detail,
     this.Username,
-    this.Email,
-    this.Password,
+    this.author,
+    this.title,
     this.DOB,
     this.imageurl,
     this.ppurl,
@@ -34,9 +34,9 @@ class Post{
 
   Map<String,dynamic> toJson()=>{
     "username":Username,
-    "uid":UID,
-    "email":Email,
-    "password":Password,
+    "author uid":author_uid,
+    "author":author,
+    "title":title,
     "DateofBirth":DOB,
     "profilepic":ppurl,
     "Full Name":Name,
@@ -47,8 +47,8 @@ class Post{
     var snapshot= snap.data() as Map<String,dynamic>;
     Post? Post12=Post(
       Username: snapshot['username'],
-      UID: snapshot['uid'],
-      Email: snapshot['Email'],
+      author_uid: snapshot['author uid'],
+      author: snapshot['author'],
       DOB: snapshot['DateofBirth'],
       ppurl: snapshot['profilepic'],
       Name: snapshot['Full Name'],
