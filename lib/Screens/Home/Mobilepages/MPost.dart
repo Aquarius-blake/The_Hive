@@ -34,8 +34,9 @@ class _MpostState extends State<Mpost> {
                   setState(() {
                     _image=file;
                   });
-                },
-              ),SimpleDialogOption(
+                 },
+              ),
+              SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
                 child: Text("Choose from gallery"),
                 onPressed: ()async{
@@ -45,6 +46,9 @@ class _MpostState extends State<Mpost> {
                     _image=file;
                   });
                 },
+              ),
+              SimpleDialogOption(
+
               )
             ],
           );
