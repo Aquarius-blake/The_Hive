@@ -2,6 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Provider/user_provider.dart';
+import 'package:forum3/Services/Upload.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../../Models/Users1.dart';
 import '../../Services/auth.dart';
@@ -25,10 +27,32 @@ class _WebviewState extends State<Webview> {
   int page=0;
   late PageController pageController;
   String title="home";
+  dynamic _image;
+Upload Selection=Upload();
+  _selectimage()async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: Text("Upload image"),
+            children: [
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Choose from gallery"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.gallery);
+                  setState(() {
+                    _image=file;
+                  });
+                },
+              ),
 
-  _selectimage(){
-
-  }
+            ],
+          );
+        }
+    );
+    }
 
   @override
   void initState() {
