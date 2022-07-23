@@ -25,7 +25,8 @@ return showDialog(
         title: Text("Create Post"),
         children: [
           SimpleDialogOption(
-
+padding: EdgeInsets.all(15.0),
+            child: Text("Take a Photo"),
           )
         ],
       );
