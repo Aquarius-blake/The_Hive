@@ -13,6 +13,7 @@ class Mpost extends StatefulWidget {
 }
 
 class _MpostState extends State<Mpost> {
+dynamic image;
 
 
   Widget Avatar(User1 user1){
