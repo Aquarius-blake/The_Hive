@@ -12,11 +12,11 @@ class Post{
   late final String? detail;
   dynamic profilepic;
   late final String? Username;
-  late final DateTime? DOB;
+  late final DateTime? Timeposted;
   late final String? imageurl;
   late final String? ppurl;
   late final String? Name;
-  late final String? Gender;
+  late final String? imageUrl;
 
 
   Post({ this.author_uid,
@@ -25,11 +25,11 @@ class Post{
     this.Username,
     this.author,
     this.title,
-    this.DOB,
+    this.Timeposted,
     this.imageurl,
     this.ppurl,
     this.Name,
-    this.Gender
+    this.imageUrl
   });
 
   Map<String,dynamic> toJson()=>{
@@ -37,10 +37,10 @@ class Post{
     "author uid":author_uid,
     "author":author,
     "title":title,
-    "DateofBirth":DOB,
+    "Post Time":Timeposted,
     "profilepic":ppurl,
     "Full Name":Name,
-    "Gender":Gender,
+    "Imageurl":imageUrl,
   };
 
   static Post? FromSnap(DocumentSnapshot snap){
@@ -49,10 +49,10 @@ class Post{
       Username: snapshot['username'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
-      DOB: snapshot['DateofBirth'],
+      Timeposted: snapshot['Post Time'],
       ppurl: snapshot['profilepic'],
       Name: snapshot['Full Name'],
-      Gender: snapshot['Gender'],);
+      imageUrl: snapshot['Imageurl'],);
 
     return Post12;
 
