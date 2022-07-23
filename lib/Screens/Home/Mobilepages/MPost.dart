@@ -15,7 +15,7 @@ class Mpost extends StatefulWidget {
 }
 
 class _MpostState extends State<Mpost> {
-dynamic image;
+dynamic _image;
 Upload Selection=Upload();
 
 _selectimage(BuildContext context)async{
@@ -31,6 +31,9 @@ padding: EdgeInsets.all(15.0),
             onPressed: ()async{
 Navigator.of(context).pop();
 dynamic file=await Selection.uploadpic(ImageSource.camera);
+setState(() {
+  _image=file;
+});
             },
           )
         ],
