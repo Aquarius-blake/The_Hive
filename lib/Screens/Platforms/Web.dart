@@ -55,6 +55,13 @@ Upload Selection=Upload();
     );
     }
 
+    Widget Post(dynamic image){
+    return image==null?SizedBox():SizedBox(
+      width: MediaQuery.of(context).size.width*0.3,
+      child: Image.memory(image),
+    );
+    }
+
   @override
   void initState() {
     // initial();
@@ -376,6 +383,7 @@ Upload Selection=Upload();
                                         ),
                                       ),
                                     ),
+                                    Post(_image),
                                     SizedBox(height: 20,),
                                     Divider(
                                       height: 20,
