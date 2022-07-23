@@ -26,23 +26,24 @@ class _WebviewState extends State<Webview> {
   late PageController pageController;
   String title="home";
 
+  _selectimage(){
+
+  }
+
   @override
   void initState() {
     // initial();
     pageController=PageController();
-
     super.initState();
   }
+
   void initial()async{
     /* DocumentSnapshot snap= await FirebaseFirestore.instance.collection("users").doc(FirebaseAuth.instance.currentUser!.uid).get();
     setState(() {
       username=(snap.data() as Map<String,dynamic>)['username'];
     });*/
-
-
     UserProvider _userprovider=Provider.of(context,listen: false);
     await _userprovider.Refreshuser();
-
   }
 
   @override
