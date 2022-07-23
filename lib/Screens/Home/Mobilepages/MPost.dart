@@ -23,6 +23,11 @@ return showDialog(
     builder: (context){
       return SimpleDialog(
         title: Text("Create Post"),
+        children: [
+          SimpleDialogOption(
+
+          )
+        ],
       );
     }
 );
