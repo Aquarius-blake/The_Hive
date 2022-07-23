@@ -15,6 +15,10 @@ class Mpost extends StatefulWidget {
 class _MpostState extends State<Mpost> {
 dynamic image;
 
+_selectimage()async{
+
+}
+
 
   Widget Avatar(User1 user1){
     try{
