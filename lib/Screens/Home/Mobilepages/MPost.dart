@@ -17,7 +17,15 @@ class _MpostState extends State<Mpost> {
 dynamic image;
 Upload Selection=Upload();
 
-_selectimage()async{
+_selectimage(BuildContext context)async{
+return showDialog(
+    context: context,
+    builder: (context){
+      return SimpleDialog();
+    }
+);
+
+
 
 }
 
