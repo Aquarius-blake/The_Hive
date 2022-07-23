@@ -35,6 +35,16 @@ setState(() {
   _image=file;
 });
             },
+          ),SimpleDialogOption(
+            padding: EdgeInsets.all(15.0),
+            child: Text("Choose from gallery"),
+            onPressed: ()async{
+              Navigator.of(context).pop();
+              dynamic file=await Selection.uploadpic(ImageSource.gallery);
+              setState(() {
+                _image=file;
+              });
+            },
           )
         ],
       );
