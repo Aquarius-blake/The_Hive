@@ -70,6 +70,14 @@ class _MpostState extends State<Mpost> {
     }
   }
 
+  Widget Post(){
+   return _image==null?SizedBox():SizedBox(
+     width: MediaQuery.of(context).size.width*0.5,
+     child:Image.memory(_image),
+   );
+  }
+  
+  
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
