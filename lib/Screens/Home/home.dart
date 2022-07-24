@@ -268,7 +268,6 @@ class _HomeState extends State<Home> {
           Mpost(),
           Notifications(),
           Mmessages()
-
         ],
         controller: pageController,
         onPageChanged: pagechange,

@@ -13,7 +13,6 @@ class Post{
   late final String? ppurl;
   late final String? imageUrl;
   late final String postuid;
-  late final String category;
   late final List likes;
   late final List posturl;
 
@@ -26,7 +25,7 @@ class Post{
     this.ppurl,
     required this.posturl,
     this.imageUrl,
-    required this.category,
+
 
   });
 
@@ -41,7 +40,6 @@ class Post{
     "Image Url":imageUrl,
     "Post Uid":postuid,
     "detail":detail,
-    "Category":category
   };
 
   static Post? FromSnap(DocumentSnapshot snap){
@@ -55,7 +53,7 @@ class Post{
         posturl: snapshot['Post url'],
         imageUrl: snapshot['Image Url'],
         postuid: snapshot['Post Uid'],
-      category: snapshot['Category']
+
     );
 
     return Post12;
