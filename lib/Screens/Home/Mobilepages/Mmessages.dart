@@ -16,6 +16,9 @@ body: SafeArea(
 
     )
 ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+      child: Icon(Icons.chat),),
     );
   }
 }
