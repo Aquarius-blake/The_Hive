@@ -9,12 +9,9 @@ class Post{
   late final String? author;
   late final String? title;
   late final String? detail;
-
   late final String? Username;
   late final DateTime? Timeposted;
-  late final String? imageurl;
   late final String? ppurl;
-  late final String? Name;
   late final String? imageUrl;
   late final String postuid;
   late final List likes;
@@ -26,7 +23,6 @@ class Post{
     required this.author,
     this.title,
     required  this.Timeposted,
-    this.imageurl,
     this.ppurl,
     required this.posturl,
     this.imageUrl
