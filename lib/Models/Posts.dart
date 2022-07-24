@@ -21,12 +21,11 @@ class Post{
 late final List likes;
 late final List posturl;
 
-  Post({ this.author_uid,
+  Post({ required this.author_uid,
     required this.postuid,
     this.profilepic,
     this.detail,
-
-    this.author,
+   required this.author,
     this.title,
   required  this.Timeposted,
     this.imageurl,
