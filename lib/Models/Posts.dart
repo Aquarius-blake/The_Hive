@@ -44,6 +44,7 @@ late final List posturl;
     "profilepic":ppurl,
     "Post Url":posturl,
     "Imageurl":imageUrl,
+    "Post Uid":postuid,
   };
 
   static Post? FromSnap(DocumentSnapshot snap){
@@ -55,7 +56,9 @@ late final List posturl;
       Timeposted: snapshot['Post Time'],
       ppurl: snapshot['profilepic'],
       posturl: snapshot['Post url'],
-      imageUrl: snapshot['Imageurl'],);
+      imageUrl: snapshot['Imageurl'],
+      postuid: snapshot['Post Uid']
+    );
 
     return Post12;
 
