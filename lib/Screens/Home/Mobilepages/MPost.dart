@@ -20,6 +20,9 @@ class _MpostState extends State<Mpost> {
   dynamic _image;
   Upload Selection=Upload();
 
+  _posting(){}
+
+
   _selectimage(BuildContext context)async{
     return showDialog(
         context: context,
@@ -141,7 +144,7 @@ class _MpostState extends State<Mpost> {
           )
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: ()=>_posting(),
       child: LineIcon(LineIcons.earlybirds),
       ),
 
