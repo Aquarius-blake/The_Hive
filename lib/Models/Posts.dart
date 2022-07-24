@@ -18,19 +18,19 @@ class Post{
   late final String? Name;
   late final String? imageUrl;
   late final String postuid;
-late final List likes;
-late final List posturl;
+  late final List likes;
+  late final List posturl;
 
   Post({ required this.author_uid,
     required this.postuid,
     this.profilepic,
-  required  this.detail,
-   required this.author,
+    required  this.detail,
+    required this.author,
     this.title,
-  required  this.Timeposted,
+    required  this.Timeposted,
     this.imageurl,
     this.ppurl,
-   required this.posturl,
+    required this.posturl,
     this.imageUrl
   });
 
@@ -50,14 +50,14 @@ late final List posturl;
   static Post? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
     Post? Post12=Post(
-      detail: snapshot['detail'],
-      author_uid: snapshot['author uid'],
-      author: snapshot['author'],
-      Timeposted: snapshot['Post Time'],
-      ppurl: snapshot['profilepic'],
-      posturl: snapshot['Post url'],
-      imageUrl: snapshot['Imageurl'],
-      postuid: snapshot['Post Uid']
+        detail: snapshot['detail'],
+        author_uid: snapshot['author uid'],
+        author: snapshot['author'],
+        Timeposted: snapshot['Post Time'],
+        ppurl: snapshot['profilepic'],
+        posturl: snapshot['Post url'],
+        imageUrl: snapshot['Imageurl'],
+        postuid: snapshot['Post Uid']
     );
 
     return Post12;
