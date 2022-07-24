@@ -34,9 +34,9 @@ class Post{
     "author":author,
     "title":title,
     "Post Time":Timeposted,
-    "profilepic":ppurl,
+    "Profile Pic":ppurl,
     "Post Url":posturl,
-    "Imageurl":imageUrl,
+    "Image Url":imageUrl,
     "Post Uid":postuid,
     "detail":detail,
   };
@@ -48,9 +48,9 @@ class Post{
         author_uid: snapshot['author uid'],
         author: snapshot['author'],
         Timeposted: snapshot['Post Time'],
-        ppurl: snapshot['profilepic'],
+        ppurl: snapshot['Profile Pic'],
         posturl: snapshot['Post url'],
-        imageUrl: snapshot['Imageurl'],
+        imageUrl: snapshot['Image Url'],
         postuid: snapshot['Post Uid']
     );
 
