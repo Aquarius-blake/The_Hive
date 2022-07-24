@@ -360,12 +360,23 @@ Upload Selection=Upload();
                                         )
                                         ,
                                       ],
-                                    ),Center(
+                                    ),
+                                    Center(
                                       child: SizedBox(
                                         width: MediaQuery.of(context).size.width*0.4,
                                         child: TextField(
                                           decoration: InputDecoration(
                                             hintText:"Title",
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Center(
+                                      child: SizedBox(
+                                        width: MediaQuery.of(context).size.width*0.4,
+                                        child: TextField(
+                                          decoration: InputDecoration(
+                                            hintText:"Category",
                                           ),
                                         ),
                                       ),
