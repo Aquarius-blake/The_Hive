@@ -143,6 +143,32 @@ class _MpostState extends State<Mpost> {
             ),
           )
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+      child: Text("Post"),
+      ),
+
+
+
+
+
+
+
+
+
     );
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
