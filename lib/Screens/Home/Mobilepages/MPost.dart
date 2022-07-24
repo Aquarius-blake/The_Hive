@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:line_icons/line_icon.dart';
+import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
@@ -140,7 +142,7 @@ class _MpostState extends State<Mpost> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){},
-      child: Text("Post"),
+      child: LineIcon(LineIcons.earlybirds),
       ),
 
 
