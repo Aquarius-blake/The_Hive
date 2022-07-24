@@ -9,7 +9,7 @@ class Post{
   late final String? author;
   late final String? title;
   late final String? detail;
-  dynamic profilepic;
+
   late final String? Username;
   late final DateTime? Timeposted;
   late final String? imageurl;
@@ -22,7 +22,6 @@ class Post{
 
   Post({ required this.author_uid,
     required this.postuid,
-    this.profilepic,
     required  this.detail,
     required this.author,
     this.title,
