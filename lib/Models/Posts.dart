@@ -17,7 +17,7 @@ class Post{
   late final String? ppurl;
   late final String? Name;
   late final String? imageUrl;
-
+late List likes;
 
   Post({ this.author_uid,
     this.profilepic,
