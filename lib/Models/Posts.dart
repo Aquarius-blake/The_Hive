@@ -24,7 +24,7 @@ late final List posturl;
   Post({ required this.author_uid,
     required this.postuid,
     this.profilepic,
-    this.detail,
+  required  this.detail,
    required this.author,
     this.title,
   required  this.Timeposted,
@@ -44,12 +44,13 @@ late final List posturl;
     "Post Url":posturl,
     "Imageurl":imageUrl,
     "Post Uid":postuid,
+    "detail":detail,
   };
 
   static Post? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
     Post? Post12=Post(
-
+      detail: snapshot['detail'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
       Timeposted: snapshot['Post Time'],
