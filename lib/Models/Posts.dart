@@ -17,10 +17,12 @@ class Post{
   late final String? ppurl;
   late final String? Name;
   late final String? imageUrl;
+  late final String postuid;
 late final List likes;
 late final List posturl;
 
   Post({ this.author_uid,
+    required this.postuid,
     this.profilepic,
     this.detail,
     this.Username,
