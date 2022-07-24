@@ -371,16 +371,6 @@ Upload Selection=Upload();
                                         ),
                                       ),
                                     ),
-                                    Center(
-                                      child: SizedBox(
-                                        width: MediaQuery.of(context).size.width*0.4,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            hintText:"Category",
-                                          ),
-                                        ),
-                                      ),
-                                    ),
                                     SizedBox(height: 10,),
                                     Center(
                                       child: SizedBox(

@@ -110,11 +110,6 @@ class _MpostState extends State<Mpost> {
                           decoration: InputDecoration(
                             hintText: "Title",
                           ),
-                        ),SizedBox(height: 10,),
-                        TextField(
-                          decoration: InputDecoration(
-                            hintText: "Category",
-                          ),
                         ),
                         SizedBox(height: 10,),
                         TextField(
