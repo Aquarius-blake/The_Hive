@@ -11,7 +11,11 @@ class _MmessagesState extends State<Mmessages> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+body: SafeArea(
+    child: Container(
 
+    )
+),
     );
   }
 }
