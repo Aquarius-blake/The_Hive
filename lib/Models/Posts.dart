@@ -18,6 +18,7 @@ class Post{
   late final String? Name;
   late final String? imageUrl;
 late final List likes;
+late final List posturl;
 
   Post({ this.author_uid,
     this.profilepic,
@@ -28,7 +29,7 @@ late final List likes;
     this.Timeposted,
     this.imageurl,
     this.ppurl,
-    this.Name,
+   required this.posturl,
     this.imageUrl
   });
 
@@ -39,7 +40,7 @@ late final List likes;
     "title":title,
     "Post Time":Timeposted,
     "profilepic":ppurl,
-    "Full Name":Name,
+    "Post Url":posturl,
     "Imageurl":imageUrl,
   };
 
@@ -51,7 +52,7 @@ late final List likes;
       author: snapshot['author'],
       Timeposted: snapshot['Post Time'],
       ppurl: snapshot['profilepic'],
-      Name: snapshot['Full Name'],
+      posturl: snapshot['Post url'],
       imageUrl: snapshot['Imageurl'],);
 
     return Post12;
