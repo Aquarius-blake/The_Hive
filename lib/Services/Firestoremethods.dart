@@ -11,7 +11,6 @@ class FirestoreMethods{
 
     //Upload post
 Future <String> Uploadpost(
-    BuildContext context,
     String Title,
     String Details,
     dynamic file,
