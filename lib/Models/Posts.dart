@@ -9,7 +9,7 @@ class Post{
   late final String? author;
   late final String? title;
   late final String? detail;
-  late final DateTime? Timeposted;
+  late final  Timeposted;
   late final String? ppurl;
   late final String? imageUrl;
   late final String postuid;
@@ -24,6 +24,7 @@ class Post{
     required  this.Timeposted,
     this.ppurl,
     this.imageUrl,
+    required this.likes,
 
 
   });
@@ -48,7 +49,6 @@ class Post{
         author: snapshot['author'],
         Timeposted: snapshot['Post Time'],
         ppurl: snapshot['Profile Pic'],
-
         imageUrl: snapshot['Image Url'],
         postuid: snapshot['Post Uid'],
 
