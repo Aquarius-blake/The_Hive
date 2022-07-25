@@ -31,9 +31,8 @@ class Loading extends StatelessWidget {
                       ),
                       fontStyle: FontStyle.italic,
                       fontSize: 25.0,
-
-                    )
-                  )
+                    ),
+                  ),
                 ],
               ),
             ),
