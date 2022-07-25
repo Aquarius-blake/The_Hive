@@ -2,9 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Services/Upload.dart';
+import 'package:forum3/shared/error_handling.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 
@@ -24,7 +24,8 @@ class _MpostState extends State<Mpost> {
     try{
 
     }catch(e){
-
+String err=e.toString();
+errormessage(err, context);
     }
   }
 
