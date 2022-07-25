@@ -6,7 +6,10 @@ import 'package:forum3/Services/Upload.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../../Models/Users1.dart';
+import '../../Services/Firestoremethods.dart';
 import '../../Services/auth.dart';
+import '../../shared/Pop_up.dart';
+import '../../shared/error_handling.dart';
 
 
 
@@ -28,7 +31,35 @@ class _WebviewState extends State<Webview> {
   late PageController pageController;
   String title="home";
   dynamic _image;
-Upload Selection=Upload();
+  bool _isloading=false;
+  final TextEditingController _textEditingController=TextEditingController();
+  final TextEditingController _textEditingController2=TextEditingController();
+
+  Upload Selection=Upload();
+
+  void _posting(String uid,String author,dynamic profilepic)async{
+    setState(() {
+      _isloading=true;
+    });
+    try{
+      String res=await FirestoreMethods().Uploadpost(_textEditingController.text, _textEditingController2.text, _image, uid, author, profilepic);
+      if(res=="success"){
+        setState(() {
+          _isloading=false;
+        });
+        Showsnackbar("Post Successful", context);
+      }
+      else{
+        setState(() {
+          _isloading=false;
+        });
+        Showsnackbar(res, context);
+      }
+    }catch(e){
+      String err=e.toString();
+      errormessage(err, context);
+    }
+  }
 
   _selectimage()async{
     return showDialog(
@@ -140,330 +171,335 @@ Upload Selection=Upload();
         ],
       ),
       body: SafeArea(
-          child: Container(
-            padding: EdgeInsets.all(30),
+          child: Column(
+            children: [
+              _isloading? LinearProgressIndicator():Container(),
+              Container(
+                padding: EdgeInsets.all(30),
 
-            child: Center(
-              child: Row(
+                child: Center(
+                  child: Row(
 
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                crossAxisAlignment: CrossAxisAlignment.stretch,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
 
-                children: <Widget>[
-                  Column(
                     children: <Widget>[
-                      Card(
-                        elevation: 15.0,
-                        color: Colors.white,
-                        shape:  RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0)
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(50,50,50,50),
-                          child: SingleChildScrollView(
-                            child: Column(
-
-                              children: <Widget>[
-                                Stack(
-                                    children:<Widget>[
-                                      CircleAvatar(
-                                        radius: 50.0,
-                                        backgroundImage: NetworkImage(user1.ppurl!),
-                                      ),
-                                      Positioned(
-                                        bottom: -5,
-                                        left: 65,
-                                        child: IconButton(
-                                            onPressed:() {
-
-                                            },
-                                            icon:Icon(
-                                              Icons.add_a_photo,
-                                              color: Colors.lightBlueAccent,
-                                            )
-                                        ),
-                                      )
-                                    ]
-                                ),
-                                SizedBox(height: 10,),
-                                user1.Username!=null? Text(
-                                  user1.Username!,
-                                  style: TextStyle(
-
-                                  ),
-                                ):
-                                Text("Loading"),
-                                SizedBox(height: 10,),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    IconButton(
-                                      onPressed: (){
-                                        setState(() {
-                                          page=0;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      icon: Icon(Icons.home),
-                                      iconSize: 40.0,
-
-                                    ),
-
-                                    GestureDetector(
-                                      onTap: (){
-                                        setState(() {
-                                          page=1;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      child: Text("Home",
-                                        style: TextStyle(
-                                          fontSize: 19.0,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                SizedBox(),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    IconButton(
-                                      onPressed: (){
-                                        setState(() {
-                                          page=1;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      icon: Icon(Icons.person),
-                                      iconSize: 40.0,
-
-                                    ),
-
-                                    GestureDetector(
-                                      onTap: (){
-                                        setState(() {
-                                          page=1;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      child: Text("Profile",
-                                        style: TextStyle(
-                                          fontSize: 19.0,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    IconButton(
-                                      onPressed: (){
-
-                                        setState(() {
-                                          page=2;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      icon: Icon(Icons.mail_outline),
-                                      iconSize: 40.0,
-
-                                    ),
-
-                                    GestureDetector(
-                                      onTap: (){
-
-                                        setState(() {
-                                          page=2;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      child: Text("Messages",
-                                        style: TextStyle(
-                                          fontSize: 19.0,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    IconButton(
-                                      onPressed: (){
-
-                                        setState(() {
-                                          page=3;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      icon: Icon(Icons.search),
-                                      iconSize: 40.0,
-
-                                    ),
-
-                                    GestureDetector(
-                                      onTap: (){
-
-                                        setState(() {
-                                          page=3;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      child: Text("Search",
-                                        style: TextStyle(
-                                          fontSize: 19.0,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                SizedBox(height: 30,),
-                                TextButton(
-                                    onPressed: (){},
-                                    child: Text("Create New Account",
-                                      style: TextStyle(
-
-                                      ),)
-                                )
-
-                              ],
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                  Flexible(
-                    fit: FlexFit.tight,
-                    child: SingleChildScrollView(
-                      child: Column(
+                      Column(
                         children: <Widget>[
-                          SizedBox(
-                            child: Card(
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
+                          Card(
+                            elevation: 15.0,
+                            color: Colors.white,
+                            shape:  RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15.0)
+                            ),
+                            child: Padding(
+                              padding: const EdgeInsets.fromLTRB(50,50,50,50),
+                              child: SingleChildScrollView(
                                 child: Column(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        CircleAvatar(
-                                          backgroundColor: Colors.lightBlueAccent,
-                                          backgroundImage: NetworkImage(user1.ppurl!),
-                                        ),
-                                        SizedBox(width: 20,),
-                                        Text(
-                                          user1.Username!,
-                                          style: TextStyle(
-                                          fontSize: 19,
+
+                                  children: <Widget>[
+                                    Stack(
+                                        children:<Widget>[
+                                          CircleAvatar(
+                                            radius: 50.0,
+                                            backgroundImage: NetworkImage(user1.ppurl!),
                                           ),
-                                        )
-                                        ,
-                                      ],
-                                    ),
-                                    Center(
-                                      child: SizedBox(
-                                        width: MediaQuery.of(context).size.width*0.4,
-                                        child: TextField(
-                                          decoration: InputDecoration(
-                                            hintText:"Title",
-                                          ),
-                                        ),
-                                      ),
+                                          Positioned(
+                                            bottom: -5,
+                                            left: 65,
+                                            child: IconButton(
+                                                onPressed:() {
+
+                                                },
+                                                icon:Icon(
+                                                  Icons.add_a_photo,
+                                                  color: Colors.lightBlueAccent,
+                                                )
+                                            ),
+                                          )
+                                        ]
                                     ),
                                     SizedBox(height: 10,),
-                                    Center(
-                                      child: SizedBox(
-                                        width: MediaQuery.of(context).size.width*0.4,
-                                        child: TextField(
-                                          maxLines: 4,
-                                          decoration: InputDecoration(
-                                            hintText:"Write Something........",
-                                           // border: InputBorder.none,
-                                          ),
-                                        ),
+                                    user1.Username!=null? Text(
+                                      user1.Username!,
+                                      style: TextStyle(
+
                                       ),
-                                    ),
-                                    Post(_image),
-                                    SizedBox(height: 20,),
-                                    Divider(
-                                      height: 20,
-                                      thickness: 2,
-                                    ),
+                                    ):
+                                    Text("Loading"),
+                                    SizedBox(height: 10,),
                                     Row(
-                                      children: [
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: <Widget>[
                                         IconButton(
-                                            onPressed: ()=>_selectimage(),
-                                            icon: Icon(Icons.add_a_photo)
+                                          onPressed: (){
+                                            setState(() {
+                                              page=0;
+                                            });
+                                            Navitap(page);
+                                          },
+                                          icon: Icon(Icons.home),
+                                          iconSize: 40.0,
+
                                         ),
-                                        Flexible(
-                                          fit: FlexFit.tight,
-                                            child: SizedBox()
-                                        ),
-                                        Align(
-                                          alignment: Alignment.bottomRight,
-                                          child: ElevatedButton(
-                                              onPressed: (){},
-                                              child: Text("Post"),
-                                            style: ElevatedButton.styleFrom(
-                                                elevation: 0.0,
-                                                shadowColor: Colors.black,
-                                                primary: Colors.blue[400],
-                                                side: BorderSide(
-                                                  color: Colors.white70,
-                                                  width: 2.0,
-                                                ),
-                                                shape: RoundedRectangleBorder(
-                                                    borderRadius: BorderRadius.circular(100.0)
-                                                )
+
+                                        GestureDetector(
+                                          onTap: (){
+                                            setState(() {
+                                              page=1;
+                                            });
+                                            Navitap(page);
+                                          },
+                                          child: Text("Home",
+                                            style: TextStyle(
+                                              fontSize: 19.0,
                                             ),
                                           ),
                                         )
                                       ],
+                                    ),
+                                    SizedBox(),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: <Widget>[
+                                        IconButton(
+                                          onPressed: (){
+                                            setState(() {
+                                              page=1;
+                                            });
+                                            Navitap(page);
+                                          },
+                                          icon: Icon(Icons.person),
+                                          iconSize: 40.0,
+
+                                        ),
+
+                                        GestureDetector(
+                                          onTap: (){
+                                            setState(() {
+                                              page=1;
+                                            });
+                                            Navitap(page);
+                                          },
+                                          child: Text("Profile",
+                                            style: TextStyle(
+                                              fontSize: 19.0,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: <Widget>[
+                                        IconButton(
+                                          onPressed: (){
+
+                                            setState(() {
+                                              page=2;
+                                            });
+                                            Navitap(page);
+                                          },
+                                          icon: Icon(Icons.mail_outline),
+                                          iconSize: 40.0,
+
+                                        ),
+
+                                        GestureDetector(
+                                          onTap: (){
+
+                                            setState(() {
+                                              page=2;
+                                            });
+                                            Navitap(page);
+                                          },
+                                          child: Text("Messages",
+                                            style: TextStyle(
+                                              fontSize: 19.0,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),Row(
+                                      mainAxisAlignment: MainAxisAlignment.start,
+                                      children: <Widget>[
+                                        IconButton(
+                                          onPressed: (){
+
+                                            setState(() {
+                                              page=3;
+                                            });
+                                            Navitap(page);
+                                          },
+                                          icon: Icon(Icons.search),
+                                          iconSize: 40.0,
+
+                                        ),
+
+                                        GestureDetector(
+                                          onTap: (){
+
+                                            setState(() {
+                                              page=3;
+                                            });
+                                            Navitap(page);
+                                          },
+                                          child: Text("Search",
+                                            style: TextStyle(
+                                              fontSize: 19.0,
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    ),
+                                    SizedBox(height: 30,),
+                                    TextButton(
+                                        onPressed: (){},
+                                        child: Text("Create New Account",
+                                          style: TextStyle(
+
+                                          ),)
                                     )
+
                                   ],
                                 ),
-                              ),
-                            ),
-                          ),
-                          SizedBox(
-
-                            height: 100,
-                            child: Center(
-                              child: PageView(
-                                children: [
-                                  Text("Page1"),
-                                  Text("Page2"),
-                                  Text("Page3"),
-                                  Text("Page4")
-
-                                ],
-                                physics: ScrollPhysics(),
-                                controller: pageController,
-                                onPageChanged: pagechange,
                               ),
                             ),
                           )
                         ],
                       ),
-                    ),
-                  ),
-                  Column(
-                    children: <Widget>[
-                      Card(
-                        child: Column(
+                      Flexible(
+                        fit: FlexFit.tight,
+                        child: SingleChildScrollView(
+                          child: Column(
+                            children: <Widget>[
+                              SizedBox(
+                                child: Card(
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: Column(
+                                      children: [
+                                        Row(
+                                          children: [
+                                            CircleAvatar(
+                                              backgroundColor: Colors.lightBlueAccent,
+                                              backgroundImage: NetworkImage(user1.ppurl!),
+                                            ),
+                                            SizedBox(width: 20,),
+                                            Text(
+                                              user1.Username!,
+                                              style: TextStyle(
+                                              fontSize: 19,
+                                              ),
+                                            )
+                                            ,
+                                          ],
+                                        ),
+                                        Center(
+                                          child: SizedBox(
+                                            width: MediaQuery.of(context).size.width*0.4,
+                                            child: TextField(
+                                              decoration: InputDecoration(
+                                                hintText:"Title",
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        SizedBox(height: 10,),
+                                        Center(
+                                          child: SizedBox(
+                                            width: MediaQuery.of(context).size.width*0.4,
+                                            child: TextField(
+                                              maxLines: 4,
+                                              decoration: InputDecoration(
+                                                hintText:"Write Something........",
+                                               // border: InputBorder.none,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Post(_image),
+                                        SizedBox(height: 20,),
+                                        Divider(
+                                          height: 20,
+                                          thickness: 2,
+                                        ),
+                                        Row(
+                                          children: [
+                                            IconButton(
+                                                onPressed: ()=>_selectimage(),
+                                                icon: Icon(Icons.add_a_photo)
+                                            ),
+                                            Flexible(
+                                              fit: FlexFit.tight,
+                                                child: SizedBox()
+                                            ),
+                                            Align(
+                                              alignment: Alignment.bottomRight,
+                                              child: ElevatedButton(
+                                                  onPressed: ()=>_posting(user1.UID!, user1.Username!, user1.ppurl),
+                                                  child: Text("Post"),
+                                                style: ElevatedButton.styleFrom(
+                                                    elevation: 0.0,
+                                                    shadowColor: Colors.black,
+                                                    primary: Colors.blue[400],
+                                                    side: BorderSide(
+                                                      color: Colors.white70,
+                                                      width: 2.0,
+                                                    ),
+                                                    shape: RoundedRectangleBorder(
+                                                        borderRadius: BorderRadius.circular(100.0)
+                                                    )
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              SizedBox(
 
-                          children: <Widget>[
-                            Text("dgdfgd")
-                          ],
+                                height: 100,
+                                child: Center(
+                                  child: PageView(
+                                    children: [
+                                      Text("Page1"),
+                                      Text("Page2"),
+                                      Text("Page3"),
+                                      Text("Page4")
+
+                                    ],
+                                    physics: ScrollPhysics(),
+                                    controller: pageController,
+                                    onPageChanged: pagechange,
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
                         ),
-                      )
+                      ),
+                      Column(
+                        children: <Widget>[
+                          Card(
+                            child: Column(
+
+                              children: <Widget>[
+                                Text("dgdfgd")
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+
                     ],
                   ),
-
-                ],
+                ),
               ),
-            ),
+            ],
           )
       ),
     );
