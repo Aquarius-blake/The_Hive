@@ -9,30 +9,34 @@ class Loading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.lightBlueAccent,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SpinKitHourGlass(
-                color: Colors.white,
-                    size: 100.0,
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          color: Colors.lightBlueAccent,
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SpinKitHourGlass(
+                    color: Colors.white,
+                        size: 100.0,
 
-            ),
-            SizedBox(height: 5.0,),
-            Text(
-                "Loading, Please Wait A Moment",
-              style: GoogleFonts.abel(
-                textStyle: TextStyle(
-                          color: Colors.white,
                 ),
-                fontStyle: FontStyle.italic,
-                fontSize: 25.0,
+                SizedBox(height: 5.0,),
+                Text(
+                    "Loading, Please Wait A Moment",
+                  style: GoogleFonts.abel(
+                    textStyle: TextStyle(
+                              color: Colors.white,
+                    ),
+                    fontStyle: FontStyle.italic,
+                    fontSize: 25.0,
 
-              )
-            )
-          ],
+                  )
+                )
+              ],
+            ),
+          ),
         ),
       ),
     );
