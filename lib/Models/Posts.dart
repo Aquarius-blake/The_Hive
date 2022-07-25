@@ -14,7 +14,7 @@ class Post{
   late final String? imageUrl;
   late final String postuid;
   late final List likes;
-  late final List posturl;
+  late final String posturl;
 
   Post({ required this.author_uid,
     required this.postuid,
