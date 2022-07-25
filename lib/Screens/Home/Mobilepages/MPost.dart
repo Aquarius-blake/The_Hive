@@ -32,9 +32,15 @@ class _MpostState extends State<Mpost> {
     try{
       String res=await FirestoreMethods().Uploadpost(_textEditingController.text, _textEditingController2.text, _image, uid, author, profilepic);
       if(res=="success"){
+        setState(() {
+          _isloading=false;
+        });
         Showsnackbar("Post Successful", context);
       }
       else{
+        setState(() {
+          _isloading=false;
+        });
         Showsnackbar(res, context);
       }
     }catch(e){
@@ -132,6 +138,7 @@ class _MpostState extends State<Mpost> {
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
                       children: [
+                        _isloading? const LinearProgressIndicator():Container(),
                         Row(
                           children: [
                             Avatar(user1),
