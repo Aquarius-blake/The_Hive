@@ -160,7 +160,9 @@ class _MpostState extends State<Mpost> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: ()=>_posting(user1.UID!,user1.Username!,user1.ppurl),
-        child: FaIcon(FontAwesomeIcons.feather),
+        child: FaIcon(
+            FontAwesomeIcons.feather,
+        ),
       ),
 
 
