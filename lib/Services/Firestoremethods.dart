@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:forum3/Models/Posts.dart';
 import 'package:forum3/Services/Storagemethods.dart';
-import 'package:forum3/shared/Pop_up.dart';
+
 import 'package:uuid/uuid.dart';
 
 class FirestoreMethods{
@@ -37,7 +37,7 @@ Future <String> Uploadpost(
             author: author,
             Timeposted: DateTime.now(),
             imageUrl: photourl,
-          ppurl: ppurl,
+            ppurl: ppurl,
             likes: [],
         );
         
@@ -46,10 +46,10 @@ Future <String> Uploadpost(
             SetOptions(merge: true),
         );
         err="success";
+        return err;
     }
-    catch(e){
-     String  err=e.toString();
-     Showsnackbar(err,context);
+    catch(e){err=e.toString();
+     return err;
     }
 }
 }
