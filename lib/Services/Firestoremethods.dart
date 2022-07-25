@@ -16,6 +16,7 @@ Future <String> Uploadpost(
     dynamic file,
     String uid,
     String author,
+    String ppurl
     )async{
     String photourl;
     try{
@@ -28,10 +29,12 @@ Future <String> Uploadpost(
         Post post=Post(
             author_uid: uid,
             postuid: postuid,
+            title: Title,
             detail: Details,
             author: author,
             Timeposted: DateTime.now(),
-            posturl: photourl
+            imageUrl: photourl,
+          ppurl: ppurl,
         )
     }
     catch(e){
