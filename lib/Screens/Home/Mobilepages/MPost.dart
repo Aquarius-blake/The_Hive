@@ -144,7 +144,7 @@ class _MpostState extends State<Mpost> {
                           children: [
                             IconButton(
                                 onPressed: ()=>_selectimage(context),
-                                icon: Icon(
+                                icon: const Icon(
                                     Icons.add_a_photo,
                                 ),
                             )
@@ -160,7 +160,7 @@ class _MpostState extends State<Mpost> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: ()=>_posting(user1.UID!,user1.Username!,user1.ppurl),
-        child: FaIcon(
+        child: const FaIcon(
             FontAwesomeIcons.feather,
         ),
       ),
