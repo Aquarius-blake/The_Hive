@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
             value: AuthService().user,
             initialData: null),
         ChangeNotifierProvider(
-          create: (_)=>UserProvider(),
+          create: (_)=> UserProvider(),
         ),
       ],
       child: MaterialApp(

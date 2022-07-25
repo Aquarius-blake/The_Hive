@@ -20,7 +20,9 @@ class _MpostState extends State<Mpost> {
   dynamic _image;
   Upload Selection=Upload();
 
-  _posting(){}
+  void _posting()async{
+
+  }
 
 
   _selectimage(BuildContext context)async{
