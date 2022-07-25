@@ -20,6 +20,7 @@ Future <String> Uploadpost(
     String ppurl
     )async{
     String photourl;
+    String err;
     try{
         if(file!=null){
              photourl=await StorageMethods().Storageip("Posts", file, true);
@@ -44,6 +45,7 @@ Future <String> Uploadpost(
             post.toJson(),
             SetOptions(merge: true),
         );
+        err="success";
     }
     catch(e){
      String  err=e.toString();
