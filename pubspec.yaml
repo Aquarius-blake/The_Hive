@@ -45,6 +45,7 @@ dependencies:
   google_fonts: ^3.0.1
   uuid: ^3.0.6
   intl: ^0.17.0
+  font_awesome_flutter: ^10.1.0
 
 dev_dependencies:
   flutter_test:
