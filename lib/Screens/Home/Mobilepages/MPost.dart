@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/error_handling.dart';
 import 'package:image_picker/image_picker.dart';
@@ -19,10 +20,12 @@ class _MpostState extends State<Mpost> {
   dynamic _image;
   Upload Selection=Upload();
   final TextEditingController _textEditingController=TextEditingController();
+  final TextEditingController _textEditingController2=TextEditingController();
+
 
   void _posting(String uid,String author,dynamic profilepic)async{
     try{
-
+String res=await FirestoreMethods().Uploadpost(_textEditingController.text, _textEditingController2.text, _image, uid, author, profilepic);
     }catch(e){
 String err=e.toString();
 errormessage(err, context);
@@ -99,6 +102,8 @@ errormessage(err, context);
   void dispose() {
     super.dispose();
     _textEditingController.dispose();
+    _textEditingController2.dispose();
+
 
   }
 
@@ -132,7 +137,7 @@ errormessage(err, context);
                         ),
                         SizedBox(height: 10,),
                         TextField(
-                          controller: _textEditingController,
+                          controller: _textEditingController2,
                           maxLines: 6,
                           decoration: const InputDecoration(
                             hintText: "Write Something.....",
