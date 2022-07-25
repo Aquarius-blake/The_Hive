@@ -97,8 +97,9 @@ class _MpostState extends State<Mpost> {
 
   @override
   void dispose() {
-    _textEditingController.dispose();
     super.dispose();
+    _textEditingController.dispose();
+
   }
 
   @override
