@@ -26,16 +26,16 @@ class _MpostState extends State<Mpost> {
 
   void _posting(String uid,String author,dynamic profilepic)async{
     try{
-String res=await FirestoreMethods().Uploadpost(_textEditingController.text, _textEditingController2.text, _image, uid, author, profilepic);
-if(res=="success"){
-  Showsnackbar("Post Successful", context);
-}
-else{
-  Showsnackbar(res, context);
-}
+      String res=await FirestoreMethods().Uploadpost(_textEditingController.text, _textEditingController2.text, _image, uid, author, profilepic);
+      if(res=="success"){
+        Showsnackbar("Post Successful", context);
+      }
+      else{
+        Showsnackbar(res, context);
+      }
     }catch(e){
-String err=e.toString();
-errormessage(err, context);
+      String err=e.toString();
+      errormessage(err, context);
     }
   }
 
@@ -156,10 +156,10 @@ errormessage(err, context);
                         Row(
                           children: [
                             IconButton(
-                                onPressed: ()=>_selectimage(context),
-                                icon: const Icon(
-                                    Icons.add_a_photo,
-                                ),
+                              onPressed: ()=>_selectimage(context),
+                              icon: const Icon(
+                                Icons.add_a_photo,
+                              ),
                             )
                           ],
                         )
@@ -174,7 +174,7 @@ errormessage(err, context);
       floatingActionButton: FloatingActionButton(
         onPressed: ()=>_posting(user1.UID!,user1.Username!,user1.ppurl),
         child: const FaIcon(
-            FontAwesomeIcons.featherPointed,
+          FontAwesomeIcons.featherPointed,
         ),
       ),
 
