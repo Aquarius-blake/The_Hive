@@ -21,11 +21,11 @@ class _MpostState extends State<Mpost> {
   Upload Selection=Upload();
 
   void _posting(String uid,String author,dynamic profilepic)async{
-try{
+    try{
 
-}catch(e){
+    }catch(e){
 
-}
+    }
   }
 
 
@@ -45,7 +45,7 @@ try{
                   setState(() {
                     _image=file;
                   });
-                 },
+                },
               ),
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
@@ -88,13 +88,13 @@ try{
   }
 
   Widget Post(){
-   return _image==null?SizedBox():SizedBox(
-     width: MediaQuery.of(context).size.width*0.5,
-     child:Image.memory(_image),
-   );
+    return _image==null?SizedBox():SizedBox(
+      width: MediaQuery.of(context).size.width*0.5,
+      child:Image.memory(_image),
+    );
   }
-  
-  
+
+
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
@@ -151,7 +151,7 @@ try{
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: ()=>_posting(user1.UID!,user1.Username!,user1.ppurl),
-      child: LineIcon(LineIcons.earlybirds),
+        child: LineIcon(LineIcons.earlybirds),
       ),
 
 
