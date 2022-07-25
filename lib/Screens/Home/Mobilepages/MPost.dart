@@ -20,7 +20,7 @@ class _MpostState extends State<Mpost> {
   dynamic _image;
   Upload Selection=Upload();
 
-  void _posting()async{
+  void _posting(String uid,String author,dynamic profilepic)async{
 
   }
 
@@ -146,7 +146,7 @@ class _MpostState extends State<Mpost> {
           )
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: ()=>_posting(),
+        onPressed: ()=>_posting(user1.UID!,user1.Username!,user1.ppurl),
       child: LineIcon(LineIcons.earlybirds),
       ),
 
