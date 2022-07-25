@@ -38,7 +38,9 @@ Future <String> Uploadpost(
             imageUrl: photourl,
           ppurl: ppurl,
             likes: [],
-        )
+        );
+        
+        _firestore.collection("Posts").doc(postid).set(post.toJson());
     }
     catch(e){
      String  err=e.toString();
