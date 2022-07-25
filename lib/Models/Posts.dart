@@ -39,6 +39,7 @@ class Post{
     "Image Url":imageUrl,
     "Post Uid":postuid,
     "detail":detail,
+    "likes":likes,
   };
 
   static Post? FromSnap(DocumentSnapshot snap){
@@ -51,7 +52,7 @@ class Post{
         ppurl: snapshot['Profile Pic'],
         imageUrl: snapshot['Image Url'],
         postuid: snapshot['Post Uid'],
-
+        likes: snapshot['likes']
     );
 
     return Post12;
