@@ -40,7 +40,10 @@ Future <String> Uploadpost(
             likes: [],
         );
         
-        _firestore.collection("Posts").doc(postid).set(post.toJson());
+        _firestore.collection("Posts").doc(postid).set(
+            post.toJson(),
+            SetOptions(merge: true),
+        );
     }
     catch(e){
      String  err=e.toString();
