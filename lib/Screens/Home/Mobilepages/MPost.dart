@@ -22,9 +22,13 @@ class _MpostState extends State<Mpost> {
   Upload Selection=Upload();
   final TextEditingController _textEditingController=TextEditingController();
   final TextEditingController _textEditingController2=TextEditingController();
+  bool _isloading=false;
 
 
   void _posting(String uid,String author,dynamic profilepic)async{
+    setState(() {
+      _isloading=true;
+    });
     try{
       String res=await FirestoreMethods().Uploadpost(_textEditingController.text, _textEditingController2.text, _image, uid, author, profilepic);
       if(res=="success"){
