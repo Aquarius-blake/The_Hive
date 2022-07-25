@@ -21,7 +21,11 @@ class _MpostState extends State<Mpost> {
   Upload Selection=Upload();
 
   void _posting(String uid,String author,dynamic profilepic)async{
+try{
 
+}catch(e){
+
+}
   }
 
 
