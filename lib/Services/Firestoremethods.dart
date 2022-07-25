@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:forum3/Models/Posts.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:uuid/uuid.dart';
 
 class FirestoreMethods{
     final FirebaseFirestore _firestore=FirebaseFirestore.instance;
@@ -26,15 +27,17 @@ Future <String> Uploadpost(
         else{
             photourl="";
         }
+        String postid= const Uuid().v1();
         Post post=Post(
             author_uid: uid,
-            postuid: postuid,
+            postuid: postid,
             title: Title,
             detail: Details,
             author: author,
             Timeposted: DateTime.now(),
             imageUrl: photourl,
           ppurl: ppurl,
+            likes: [],
         )
     }
     catch(e){
