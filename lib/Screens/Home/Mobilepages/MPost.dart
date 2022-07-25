@@ -19,6 +19,7 @@ class Mpost extends StatefulWidget {
 class _MpostState extends State<Mpost> {
   dynamic _image;
   Upload Selection=Upload();
+  final TextEditingController _textEditingController=TextEditingController();
 
   void _posting(String uid,String author,dynamic profilepic)async{
     try{
@@ -118,12 +119,14 @@ class _MpostState extends State<Mpost> {
                         ),
                         SizedBox(height: 15,),
                         TextField(
+                          controller: _textEditingController,
                           decoration: InputDecoration(
                             hintText: "Title",
                           ),
                         ),
                         SizedBox(height: 10,),
                         TextField(
+                          controller: _textEditingController,
                           maxLines: 6,
                           decoration: InputDecoration(
                             hintText: "Write Something.....",
