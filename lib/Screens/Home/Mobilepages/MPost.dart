@@ -162,7 +162,7 @@ errormessage(err, context);
       floatingActionButton: FloatingActionButton(
         onPressed: ()=>_posting(user1.UID!,user1.Username!,user1.ppurl),
         child: const FaIcon(
-            FontAwesomeIcons.feather,
+            FontAwesomeIcons.featherPointed,
         ),
       ),
 
