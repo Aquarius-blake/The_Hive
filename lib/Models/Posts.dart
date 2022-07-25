@@ -52,7 +52,8 @@ class Post{
         ppurl: snapshot['Profile Pic'],
         imageUrl: snapshot['Image Url'],
         postuid: snapshot['Post Uid'],
-        likes: snapshot['likes']
+        likes: snapshot['likes'],
+      title: snapshot['title']
     );
 
     return Post12;
