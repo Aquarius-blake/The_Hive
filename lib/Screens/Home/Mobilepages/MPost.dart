@@ -154,12 +154,14 @@ class _MpostState extends State<Mpost> {
                           ),
                         ),
                         SizedBox(height: 10,),
-                        TextField(
-                          controller: _textEditingController2,
-                          maxLines: 6,
-                          decoration: const InputDecoration(
-                            hintText: "Write Something.....",
-                            border: InputBorder.none,
+                        SingleChildScrollView(
+                          child: TextField(
+                            controller: _textEditingController2,
+                            maxLines: 6,
+                            decoration: const InputDecoration(
+                              hintText: "Write Something.....",
+                              border: InputBorder.none,
+                            ),
                           ),
                         ),
                         Post(),
