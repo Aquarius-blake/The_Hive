@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/error_handling.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -26,6 +27,12 @@ class _MpostState extends State<Mpost> {
   void _posting(String uid,String author,dynamic profilepic)async{
     try{
 String res=await FirestoreMethods().Uploadpost(_textEditingController.text, _textEditingController2.text, _image, uid, author, profilepic);
+if(res=="success"){
+  Showsnackbar("Post Successful", context);
+}
+else{
+  Showsnackbar(res, context);
+}
     }catch(e){
 String err=e.toString();
 errormessage(err, context);
