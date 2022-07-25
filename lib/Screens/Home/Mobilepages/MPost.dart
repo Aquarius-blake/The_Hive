@@ -157,7 +157,7 @@ class _MpostState extends State<Mpost> {
                         SingleChildScrollView(
                           child: TextField(
                             controller: _textEditingController2,
-                            maxLines: 9,
+                            maxLines: 6,
                             decoration: const InputDecoration(
                               hintText: "Write Something.....",
                               border: InputBorder.none,
