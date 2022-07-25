@@ -125,7 +125,7 @@ class _MpostState extends State<Mpost> {
                         SizedBox(height: 15,),
                         TextField(
                           controller: _textEditingController,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: "Title",
                           ),
                         ),
@@ -133,7 +133,7 @@ class _MpostState extends State<Mpost> {
                         TextField(
                           controller: _textEditingController,
                           maxLines: 6,
-                          decoration: InputDecoration(
+                          decoration: const InputDecoration(
                             hintText: "Write Something.....",
                             border: InputBorder.none,
                           ),
