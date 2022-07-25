@@ -132,13 +132,13 @@ class _MpostState extends State<Mpost> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                _isloading? const LinearProgressIndicator():Container(),
                 SizedBox(height: 10,),
                 Card(
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
                       children: [
-                        _isloading? const LinearProgressIndicator():Container(),
                         Row(
                           children: [
                             Avatar(user1),
