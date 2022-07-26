@@ -30,7 +30,7 @@ class PostCard extends StatelessWidget {
                           ],
                         ) ,
                         padding:const EdgeInsets.only(
-                            left: 8.0
+                            left: 10.0
                         )
                     )
                 ),
