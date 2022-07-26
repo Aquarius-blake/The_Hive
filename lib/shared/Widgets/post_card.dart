@@ -5,6 +5,8 @@ class PostCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      padding: EdgeInsets.all(15.0),
+    );
   }
 }
