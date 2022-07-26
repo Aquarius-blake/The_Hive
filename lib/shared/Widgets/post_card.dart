@@ -69,7 +69,7 @@ class PostCard extends StatelessWidget {
             ),
             Container(
               padding: EdgeInsets.only(
-                top: 10,
+                top: 5,
               ),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width*0.8,
