@@ -20,6 +20,7 @@ class PostCard extends StatelessWidget {
                     child: Padding(
                       child:Column(
                         mainAxisSize: MainAxisSize.min,
+                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
 
                         ],
