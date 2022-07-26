@@ -9,7 +9,9 @@ class PostCard extends StatelessWidget {
       padding: const EdgeInsets.all(15.0),
       child: Card(
         child: Column(
+children: [
 
+],
         ),
       ),
     );
