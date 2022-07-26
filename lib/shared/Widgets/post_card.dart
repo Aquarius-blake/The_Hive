@@ -89,7 +89,7 @@ class PostCard extends StatelessWidget {
                 width: MediaQuery.of(context).size.width*0.8,
                 child: Text(
                   "Detailsnjsndjfksfnksjndjksnfdksjdnfkjsdnfkjsdnfkjdsnfjksnfjdnksjnfkjsdnfjksnfksjdnkjsdndskjnksjdfnkjsnfkjndskfjnsdkjfskfjnsdkfnsdfnskfnsdfnsldfnsndfjsdnkfjsnfkjskfbsfksf"
-                      "kjnknkjnkjnkjnkbkbkjbkjbkjbkjbknlklkn",
+                      "kjnknkjnkjnkjnkbkbkjbkjbkjbkjbknlklknjnknlnlnkjnkkfsnnslflsnfdjfskdfjkdsjnksdjnfjksdfksdbfn",
                   style: const TextStyle(
                     fontSize: 16,
                   ),
