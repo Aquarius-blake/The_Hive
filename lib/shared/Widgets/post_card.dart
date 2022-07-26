@@ -125,7 +125,7 @@ IconButton(
                 IconButton(
                     onPressed: (){},
                     icon: Icon(
-                      Icons.favorite_border_outlined,
+                      Icons.share,
                       color: Colors.red,
                     )
                 ),
