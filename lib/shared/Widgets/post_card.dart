@@ -80,6 +80,20 @@ class PostCard extends StatelessWidget {
                   ),
                 ),
               ),
+            ),
+            Container(
+              padding:const EdgeInsets.only(
+                top: 5,
+              ),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width*0.8,
+                child: Text(
+                  "Details",
+                  style: const TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
             )
           ],
         ),
