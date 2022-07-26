@@ -118,8 +118,15 @@ IconButton(
                 IconButton(
                     onPressed: (){},
                     icon: Icon(
-                      Icons.comment,
+                      Icons.comment_outlined,
                       color: Colors.black,
+                    )
+                ),
+                IconButton(
+                    onPressed: (){},
+                    icon: Icon(
+                      Icons.favorite_border_outlined,
+                      color: Colors.red,
                     )
                 ),
               ],
