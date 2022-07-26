@@ -68,7 +68,7 @@ class PostCard extends StatelessWidget {
               ],
             ),
             Container(
-              padding: EdgeInsets.only(
+              padding:const EdgeInsets.only(
                 top: 5,
               ),
               child: SizedBox(
