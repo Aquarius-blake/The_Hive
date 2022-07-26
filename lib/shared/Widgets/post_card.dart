@@ -18,15 +18,19 @@ class PostCard extends StatelessWidget {
                 ),
                 Expanded(
                     child: Padding(
-                      child:Column(
-                        mainAxisSize: MainAxisSize.min,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-
-                        ],
-                      ) ,
+                        child:Column(
+                          mainAxisSize: MainAxisSize.min,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Username",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold
+                              ),)
+                          ],
+                        ) ,
                         padding:const EdgeInsets.only(
-                          left: 8.0
+                            left: 8.0
                         )
                     )
                 )
