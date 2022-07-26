@@ -111,7 +111,7 @@ class PostCard extends StatelessWidget {
 IconButton(
     onPressed: (){},
     icon: Icon(
-        Icons.favorite,
+        Icons.favorite_border_outlined,
       color: Colors.red,
     )
 )
