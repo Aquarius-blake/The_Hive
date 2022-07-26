@@ -73,7 +73,12 @@ class PostCard extends StatelessWidget {
               ),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width*0.8,
-                child: Text("Title"),
+                child: Text(
+                    "Title",
+                  style: TextStyle(
+
+                  ),
+                ),
               ),
             )
           ],
