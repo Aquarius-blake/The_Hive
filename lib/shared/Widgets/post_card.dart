@@ -10,7 +10,11 @@ class PostCard extends StatelessWidget {
       child: Card(
         child: Column(
           children: [
-            Row(),
+            Row(
+              children: [
+
+              ],
+            ),
           ],
         ),
       ),
