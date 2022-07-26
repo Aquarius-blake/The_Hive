@@ -107,6 +107,9 @@ class PostCard extends StatelessWidget {
             ),
             Postimage(_image, context),
             Container(
+              padding: EdgeInsets.only(
+                top: 3.0,
+              ),
               child: Align(
                 alignment: Alignment.bottomLeft,
                 child:   Text(
