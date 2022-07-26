@@ -110,12 +110,10 @@ class PostCard extends StatelessWidget {
 child: Align(
   alignment: Alignment.bottomLeft,
   child:   Text(
-
-      "DAte",
-
+      "Date",
     style: TextStyle(
-
-      fontSize: 10,
+color: Colors.grey,
+      fontSize: 12,
 
     ),
 
