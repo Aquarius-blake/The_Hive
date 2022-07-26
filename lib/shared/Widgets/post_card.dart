@@ -18,6 +18,7 @@ class PostCard extends StatelessWidget {
                 ),
                 Expanded(
                     child: Padding(
+                      child:Column() ,
                         padding:const EdgeInsets.only(
                           left: 8.0
                         )
