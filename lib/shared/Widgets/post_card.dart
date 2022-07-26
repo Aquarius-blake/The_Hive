@@ -17,7 +17,12 @@ class PostCard extends StatelessWidget {
                   radius: 16,
                 ),
                 Expanded(
-                    child: Padding(padding: EdgeInsets.only()))
+                    child: Padding(
+                        padding:const EdgeInsets.only(
+                          left: 8.0
+                        )
+                    )
+                )
 
               ],
             ),
