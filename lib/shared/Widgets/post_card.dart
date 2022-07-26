@@ -106,11 +106,12 @@ class PostCard extends StatelessWidget {
               ),
             ),
             Postimage(_image, context),
-            Row(
-              children: [
-                Text(
-                  "123",
-                ),
+            Container(
+              child: Row(
+                children: [
+                  Text(
+                    "123",
+                  ),
 IconButton(
     onPressed: (){},
     icon: Icon(
@@ -118,28 +119,29 @@ IconButton(
       color: Colors.red,
     )
 ),
-                Expanded(
-                    child: SizedBox()
-                ),
-                Text("12344"),
-                IconButton(
-                    onPressed: (){},
-                    icon: Icon(
-                      Icons.comment_outlined,
-                      color: Colors.black,
-                    )
-                ),
-                Expanded(
-                    child: SizedBox()
-                ),
-                IconButton(
-                    onPressed: (){},
-                    icon: Icon(
-                      Icons.share,
-                      color: Colors.black,
-                    )
-                ),
-              ],
+                  Expanded(
+                      child: SizedBox()
+                  ),
+                  Text("12344"),
+                  IconButton(
+                      onPressed: (){},
+                      icon: Icon(
+                        Icons.comment_outlined,
+                        color: Colors.black,
+                      )
+                  ),
+                  Expanded(
+                      child: SizedBox()
+                  ),
+                  IconButton(
+                      onPressed: (){},
+                      icon: Icon(
+                        Icons.share,
+                        color: Colors.black,
+                      )
+                  ),
+                ],
+              ),
             )
           ],
         ),
