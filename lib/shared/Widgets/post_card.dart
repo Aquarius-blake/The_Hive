@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
 class PostCard extends StatelessWidget {
-  const PostCard({Key? key}) : super(key: key);
 
-  Widget Postimage(dynamic image,BuildContext context){
+
+  dynamic _image;
+
+ Widget Postimage(dynamic image,BuildContext context){
     return image!=null? SizedBox(
       width: MediaQuery.of(context).size.width*0.8,
       child: Image.network(image),
@@ -102,7 +104,8 @@ class PostCard extends StatelessWidget {
                   ),
                 ),
               ),
-            )
+            ),
+            Postimage(_image, context)
           ],
         ),
       ),
