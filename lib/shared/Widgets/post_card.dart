@@ -107,18 +107,18 @@ class PostCard extends StatelessWidget {
             ),
             Postimage(_image, context),
             Container(
-child: Align(
-  alignment: Alignment.bottomLeft,
-  child:   Text(
-      "Date",
-    style: TextStyle(
-color: Colors.grey,
-      fontSize: 12,
+              child: Align(
+                alignment: Alignment.bottomLeft,
+                child:   Text(
+                  "Date",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
 
-    ),
+                  ),
 
-  ),
-),
+                ),
+              ),
             ),
             Container(
               padding: const EdgeInsets.symmetric(
