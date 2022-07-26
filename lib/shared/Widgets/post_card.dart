@@ -114,7 +114,14 @@ IconButton(
         Icons.favorite_border_outlined,
       color: Colors.red,
     )
-)
+),
+                IconButton(
+                    onPressed: (){},
+                    icon: Icon(
+                      Icons.comment,
+                      color: Colors.black,
+                    )
+                ),
               ],
             )
           ],
