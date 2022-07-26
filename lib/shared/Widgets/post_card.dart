@@ -121,7 +121,7 @@ IconButton(
                 Expanded(
                     child: SizedBox()
                 ),
-                Text(""),
+                Text("12344"),
                 IconButton(
                     onPressed: (){},
                     icon: Icon(
