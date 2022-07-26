@@ -108,7 +108,12 @@ class PostCard extends StatelessWidget {
             Postimage(_image, context),
             Row(
               children: [
-
+IconButton(
+    onPressed: (){},
+    icon: Icon(
+        Icons.favorite_border,
+    )
+)
               ],
             )
           ],
