@@ -19,6 +19,7 @@ class PostCard extends StatelessWidget {
                 Expanded(
                     child: Padding(
                       child:Column(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
 
                         ],
