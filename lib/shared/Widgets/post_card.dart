@@ -24,7 +24,7 @@ class PostCard extends StatelessWidget {
                           children: [
                             Text(
                               "Username",
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontWeight: FontWeight.bold
                               ),)
                           ],
@@ -33,7 +33,8 @@ class PostCard extends StatelessWidget {
                             left: 8.0
                         )
                     )
-                )
+                ),
+                IconButton(onPressed: (){}, icon: Icon(Icons.more_vert))
 
               ],
             ),
