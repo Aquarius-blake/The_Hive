@@ -7,6 +7,11 @@ class PostCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(15.0),
+      child: Card(
+        child: Column(
+
+        ),
+      ),
     );
   }
 }
