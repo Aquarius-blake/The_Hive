@@ -67,6 +67,9 @@ class PostCard extends StatelessWidget {
 
               ],
             ),
+            SizedBox(
+
+            )
           ],
         ),
       ),
