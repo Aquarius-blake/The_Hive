@@ -107,7 +107,12 @@ class PostCard extends StatelessWidget {
             ),
             Postimage(_image, context),
             Container(
-
+child: Text(
+    "DAte",
+  style: TextStyle(
+    fontSize: 10,
+  ),
+),
             ),
             Container(
               padding: const EdgeInsets.symmetric(
