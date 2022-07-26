@@ -118,6 +118,10 @@ IconButton(
       color: Colors.red,
     )
 ),
+                Expanded(
+                    child: SizedBox()
+                ),
+                Text(""),
                 IconButton(
                     onPressed: (){},
                     icon: Icon(
