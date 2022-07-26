@@ -35,40 +35,40 @@ class PostCard extends StatelessWidget {
                     )
                 ),
                 IconButton(
-                    onPressed: (){
-                      showDialog(context: context, builder: (context)=>Dialog(
-                                  child: ListView(
-                                    padding: const EdgeInsets.symmetric(
-                                      vertical: 16,),
-                                    shrinkWrap: true,
-                                    children: [
-                                      'Edit',
-                                      'Delete'
-                                    ].map((e) => InkWell(
-                                      onTap: (){},
-                                      child: Container(
-                                        padding: EdgeInsets.symmetric(
-                                          vertical: 12,
-                                          horizontal: 16,
-                                        ),
-                                        child: Text(e),
-                                      ),
-                                    )
-                                    ).toList(),
-                                  ),
-                      )
-                      );
-                    },
-                    icon: const Icon(
-                        Icons.more_vert,
-                      color: Colors.black,
-                    ),
+                  onPressed: (){
+                    showDialog(context: context, builder: (context)=>Dialog(
+                      child: ListView(
+                        padding: const EdgeInsets.symmetric(
+                          vertical: 16,),
+                        shrinkWrap: true,
+                        children: [
+                          'Edit',
+                          'Delete'
+                        ].map((e) => InkWell(
+                          onTap: (){},
+                          child: Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 12,
+                              horizontal: 16,
+                            ),
+                            child: Text(e),
+                          ),
+                        )
+                        ).toList(),
+                      ),
+                    )
+                    );
+                  },
+                  icon: const Icon(
+                    Icons.more_vert,
+                    color: Colors.black,
+                  ),
                 )
 
               ],
             ),
             SizedBox(
-  width: MediaQuery.of(context).size.width*0.8,
+              width: MediaQuery.of(context).size.width*0.8,
               child: Text("Title"),
             )
           ],
