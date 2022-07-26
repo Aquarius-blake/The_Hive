@@ -106,7 +106,11 @@ class PostCard extends StatelessWidget {
               ),
             ),
             Postimage(_image, context),
-            Row()
+            Row(
+              children: [
+
+              ],
+            )
           ],
         ),
       ),
