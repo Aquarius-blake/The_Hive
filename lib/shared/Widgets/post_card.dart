@@ -5,7 +5,7 @@ class PostCard extends StatelessWidget {
 
   dynamic _image;
 
- Widget Postimage(dynamic image,BuildContext context){
+  Widget Postimage(dynamic image,BuildContext context){
     return image!=null? SizedBox(
       width: MediaQuery.of(context).size.width*0.8,
       child: Image.network(image),
@@ -108,20 +108,20 @@ class PostCard extends StatelessWidget {
             Postimage(_image, context),
             Container(
               padding: const EdgeInsets.symmetric(
-              horizontal: 30,
-            ),
+                horizontal: 30,
+              ),
               child: Row(
                 children: [
                   Text(
                     "123",
                   ),
-IconButton(
-    onPressed: (){},
-    icon: Icon(
-        Icons.favorite_border_outlined,
-      color: Colors.red,
-    )
-),
+                  IconButton(
+                      onPressed: (){},
+                      icon: Icon(
+                        Icons.favorite_border_outlined,
+                        color: Colors.red,
+                      )
+                  ),
                   Expanded(
                       child: SizedBox()
                   ),
