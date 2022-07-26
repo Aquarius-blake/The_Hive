@@ -126,7 +126,7 @@ IconButton(
                     onPressed: (){},
                     icon: Icon(
                       Icons.share,
-                      color: Colors.red,
+                      color: Colors.black,
                     )
                 ),
               ],
