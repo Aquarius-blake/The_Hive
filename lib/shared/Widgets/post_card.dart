@@ -37,7 +37,9 @@ class PostCard extends StatelessWidget {
                 IconButton(
                     onPressed: (){
                       showDialog(context: context, builder: (context)=>Dialog(
-                                  child: ListView(),
+                                  child: ListView(
+                                    padding: const EdgeInsets.symmetric(),
+                                  ),
                       )
                       );
                     },
