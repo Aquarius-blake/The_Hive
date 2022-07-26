@@ -13,6 +13,10 @@ class PostCard extends StatelessWidget {
             Row(
               children: [
 
+                CircleAvatar(
+                  radius: 16,
+                )
+
               ],
             ),
           ],
