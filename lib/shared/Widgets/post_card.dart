@@ -15,7 +15,9 @@ class PostCard extends StatelessWidget {
 
                 CircleAvatar(
                   radius: 16,
-                )
+                ),
+                Expanded(
+                    child: Padding(padding: EdgeInsets.only()))
 
               ],
             ),
