@@ -76,7 +76,7 @@ class PostCard extends StatelessWidget {
                 child: Text(
                   "Title",
                   style: const TextStyle(
-                    fontSize: 18,
+                    fontSize: 20,
                   ),
                 ),
               ),
