@@ -11,8 +11,8 @@ class Mhome extends StatefulWidget {
 class _MhomeState extends State<Mhome> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("homepage"),
+    return Scaffold(
+
     );
   }
 }
