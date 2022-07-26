@@ -90,7 +90,7 @@ class PostCard extends StatelessWidget {
                 child: Text(
                   "Details",
                   style: const TextStyle(
-                    fontSize: 20,
+                    fontSize: 16,
                   ),
                 ),
               ),
