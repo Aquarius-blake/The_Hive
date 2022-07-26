@@ -6,6 +6,7 @@ class PostCard extends StatelessWidget {
   Widget Postimage(dynamic image,BuildContext context){
     return image!=null? SizedBox(
       width: MediaQuery.of(context).size.width*0.8,
+      child: Image.network(image),
     ):SizedBox();
   }
 
