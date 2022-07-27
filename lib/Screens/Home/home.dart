@@ -128,6 +128,9 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
         elevation: 2.0,
         title: Container(
+          padding: EdgeInsets.only(
+            right: 10
+          ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
