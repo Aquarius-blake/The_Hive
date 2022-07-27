@@ -139,7 +139,7 @@ class _HomeState extends State<Home> {
         ),
 centerTitle: true,
       ),
-
+drawerScrimColor: Colors.black,
       drawer: Drawer(
         backgroundColor: Colors.white70,
         child: Container(
