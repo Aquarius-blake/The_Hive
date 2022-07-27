@@ -129,7 +129,7 @@ class _HomeState extends State<Home> {
         elevation: 2.0,
         title: Container(
           padding: EdgeInsets.only(
-            right: 25
+            right: 30
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
