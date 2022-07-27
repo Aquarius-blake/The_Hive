@@ -470,7 +470,8 @@ class _WebviewState extends State<Webview> {
                                   child: Center(
                                     child: PageView(
                                       children: [
-                                        WebHome(),
+                                        //WebHome(),
+                                        Text(""),
                                         Text("Page2"),
                                         Text("Page3"),
                                         Text("Page4")
