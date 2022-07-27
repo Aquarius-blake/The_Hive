@@ -125,14 +125,14 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.lightBlueAccent,
+        backgroundColor: Colors.white,
         elevation: 2.0,
         title: Row(
           children: <Widget>[
             Text(
               "$title",
               style: TextStyle(
-
+                          color: Colors.black
               ),
             )
           ],
