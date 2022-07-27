@@ -13,7 +13,10 @@ class _WebHomeState extends State<WebHome> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: PostCard(),
+      child: SizedBox(
+        width: MediaQuery.of(context).size.width*0.9,
+          child: PostCard()
+      ),
     );
   }
 }
