@@ -127,19 +127,20 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 2.0,
-        title: Row(
-          children: <Widget>[
-            Text(
-              "$title",
-              style: TextStyle(
-                          color: Colors.black
-              ),
-            )
-          ],
+        title: Center(
+          child: Row(
+            children: <Widget>[
+              Text(
+                "$title",
+                style: TextStyle(
+                            color: Colors.black
+                ),
+              )
+            ],
+          ),
         ),
-centerTitle: true,
       ),
-drawerScrimColor: Colors.black,
+
       drawer: Drawer(
         backgroundColor: Colors.white70,
         child: Container(
