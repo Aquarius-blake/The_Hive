@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Widgets/post_card.dart';
 
 
 class WebHome extends StatefulWidget {
@@ -11,6 +12,8 @@ class WebHome extends StatefulWidget {
 class _WebHomeState extends State<WebHome> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: PostCard(),
+    );
   }
 }
