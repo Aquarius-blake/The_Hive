@@ -177,8 +177,7 @@ class _WebviewState extends State<Webview> {
               children: [
                 _isloading? LinearProgressIndicator():Container(),
                 Container(
-                  padding: EdgeInsets.all(30),
-
+                  padding: EdgeInsets.all(10),
                   child: Center(
                     child: Row(
 
