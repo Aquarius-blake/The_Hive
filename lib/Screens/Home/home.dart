@@ -127,17 +127,19 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 2.0,
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              "$title",
-              style: TextStyle(
-                          color: Colors.black
-              ),
-            )
-          ],
+        title: Container(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: <Widget>[
+              Text(
+                "$title",
+                style: TextStyle(
+                            color: Colors.black
+                ),
+              )
+            ],
+          ),
         ),
       ),
 
