@@ -129,6 +129,7 @@ class _HomeState extends State<Home> {
         elevation: 2.0,
         title: Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
                 "$title",
