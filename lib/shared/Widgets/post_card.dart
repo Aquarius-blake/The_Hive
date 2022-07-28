@@ -130,7 +130,7 @@ class _PostCardState extends State<PostCard> {
                 child: Align(
                   alignment: Alignment.bottomLeft,
                   child:   Text(
-                    DateFormat.yMMMd().format(widget.snap['Post Timr'].toDate()),
+                    DateFormat.yMMMd().format(widget.snap['Post Timr'],),
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 12,
