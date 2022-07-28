@@ -100,7 +100,7 @@ class _HomeState extends State<Home> {
     setState(() {
       _page=page;
       if(_page==0){
-        title="homepage";
+        title="Home";
       }
       else if(_page==1){
         title="Search";
