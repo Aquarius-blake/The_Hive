@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class PostCard extends StatefulWidget {
   final snap;
@@ -129,7 +130,7 @@ class _PostCardState extends State<PostCard> {
                 child: Align(
                   alignment: Alignment.bottomLeft,
                   child:   Text(
-                    "Date",
+                    DateFormat.yMMMd().format(widget.snap['Post Timr'].toDate()),
                     style: TextStyle(
                       color: Colors.grey,
                       fontSize: 12,
