@@ -33,7 +33,7 @@ class PostCard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Username",
+                              snap['author'],
                               style: const TextStyle(
                                   fontWeight: FontWeight.bold
                               ),)
@@ -74,7 +74,6 @@ class PostCard extends StatelessWidget {
                     color: Colors.black,
                   ),
                 )
-
               ],
             ),
             Container(
