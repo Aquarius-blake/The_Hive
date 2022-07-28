@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class PostCard extends StatelessWidget {
   final snap;
   PostCard({ Key? key,this.snap}) : super(key: key);
-  dynamic _image;
+  //dynamic _image;
 
   Widget Postimage(dynamic image,BuildContext context){
     return image!=null? SizedBox(
@@ -104,7 +104,7 @@ class PostCard extends StatelessWidget {
                 ),
               ),
             ),
-            Postimage(_image, context),
+            Postimage(snap['Image Url'], context),
             Container(
               padding: EdgeInsets.only(
                 top: 3.0,
