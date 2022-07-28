@@ -22,7 +22,9 @@ class _MhomeState extends State<Mhome> {
             child: CircularProgressIndicator(),
           );
       }
-      return ListView.builder(itemBuilder: (context, index) => Container(
+      return ListView.builder(
+        itemCount: snapshot.data!.docs.length,
+          itemBuilder: (context, index) => Container(
         child: PostCard(),
       )
       );
