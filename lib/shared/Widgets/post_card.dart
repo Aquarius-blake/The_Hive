@@ -1,15 +1,21 @@
 import 'package:flutter/material.dart';
 
-class PostCard extends StatelessWidget {
+class PostCard extends StatefulWidget {
   final snap;
   PostCard({ Key? key,this.snap}) : super(key: key);
-  //dynamic _image;
 
+  @override
+  State<PostCard> createState() => _PostCardState();
+}
+
+class _PostCardState extends State<PostCard> {
+  //dynamic _image;
   Widget Postimage(dynamic image,BuildContext context){
     if(image==""){
-      image=null;
+      setState(() {
+        image=null;
+      });
     }
-
     return image!=null? SizedBox(
       width: MediaQuery.of(context).size.width*0.8,
       child: Image.network(image),
@@ -28,7 +34,7 @@ class PostCard extends StatelessWidget {
 
                 CircleAvatar(
                   radius: 16,
-                  backgroundImage: NetworkImage(snap['Profile Pic']),
+                  backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                 ),
                 Expanded(
                     child: Padding(
@@ -37,7 +43,7 @@ class PostCard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              snap['author'],
+                              widget.snap['author'],
                               style: const TextStyle(
                                   fontWeight: FontWeight.bold
                               ),)
@@ -87,7 +93,7 @@ class PostCard extends StatelessWidget {
               child: SizedBox(
                 width: MediaQuery.of(context).size.width*0.8,
                 child: Text(
-                  snap['title'],
+                  widget.snap['title'],
                   style: const TextStyle(
                     fontSize: 20,
                   ),
@@ -101,14 +107,14 @@ class PostCard extends StatelessWidget {
               child: SizedBox(
                 width: MediaQuery.of(context).size.width*0.8,
                 child: Text(
-                  snap['detail'],
+                  widget.snap['detail'],
                   style: const TextStyle(
                     fontSize: 16,
                   ),
                 ),
               ),
             ),
-            Postimage(snap['Image Url'], context),
+            Postimage(widget.snap['Image Url'], context),
             Container(
               padding: EdgeInsets.only(
                 top: 3.0,
