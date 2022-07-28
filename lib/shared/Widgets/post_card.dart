@@ -146,7 +146,7 @@ class _PostCardState extends State<PostCard> {
                 child: Row(
                   children: [
                     Text(
-                      "123",
+                      "${widget.snap['likes'].length}",
                     ),
                     IconButton(
                         onPressed: (){},
