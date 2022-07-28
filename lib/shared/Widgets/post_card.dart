@@ -24,6 +24,7 @@ class PostCard extends StatelessWidget {
 
                 CircleAvatar(
                   radius: 16,
+                  backgroundImage: NetworkImage(snap['Profile Pic']),
                 ),
                 Expanded(
                     child: Padding(
