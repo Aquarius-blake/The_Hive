@@ -17,7 +17,7 @@ class _PostCardState extends State<PostCard> {
       });
     }
     return image!=null? SizedBox(
-      width: MediaQuery.of(context).size.width*0.8,
+      width: MediaQuery.of(context).size.width*0.7,
       child: Image.network(image),
     ):SizedBox();
   }
