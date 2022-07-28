@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PostCard extends StatelessWidget {
-
-
+  final snap;
+  PostCard({Key? key,required this.snap});
   dynamic _image;
 
   Widget Postimage(dynamic image,BuildContext context){
