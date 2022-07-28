@@ -133,9 +133,9 @@ class _PostCardState extends State<PostCard> {
                   child:   Text(
                     DateFormat.yMMMd().format(widget.snap['Post Time'].toDate(),),
                     style: const TextStyle(
-                      color: Colors.grey,
-                      fontSize: 12,
-fontStyle: FontStyle.italic
+                        color: Colors.grey,
+                        fontSize: 12,
+                        fontStyle: FontStyle.italic
                     ),
 
                   ),
