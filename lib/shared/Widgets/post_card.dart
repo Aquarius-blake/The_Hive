@@ -25,7 +25,12 @@ class _PostCardState extends State<PostCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(1.0),
+      padding: const EdgeInsets.only(
+        top: 5,
+        left: 15,
+        right: 15,
+        bottom: 5,
+      ),
       child: Card(
         child: Column(
           children: [
