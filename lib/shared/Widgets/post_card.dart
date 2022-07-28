@@ -102,7 +102,7 @@ class _PostCardState extends State<PostCard> {
                   child: Text(
                     widget.snap['title'],
                     style: const TextStyle(
-                      fontSize: 20,
+                      fontSize: 22,
                     ),
                   ),
                 ),
@@ -116,7 +116,7 @@ class _PostCardState extends State<PostCard> {
                   child: Text(
                     widget.snap['detail'],
                     style: const TextStyle(
-                      fontSize: 16,
+                      fontSize: 14,
                     ),
                   ),
                 ),
