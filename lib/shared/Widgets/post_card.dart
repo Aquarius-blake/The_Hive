@@ -131,10 +131,10 @@ class _PostCardState extends State<PostCard> {
                   alignment: Alignment.bottomLeft,
                   child:   Text(
                     DateFormat.yMMMd().format(widget.snap['Post Time'].toDate(),),
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: Colors.grey,
                       fontSize: 12,
-
+fontStyle: FontStyle.italic
                     ),
 
                   ),
