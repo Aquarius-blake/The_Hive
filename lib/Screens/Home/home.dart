@@ -125,6 +125,7 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         backgroundColor: Colors.white,
         elevation: 2.0,
         title: Container(
