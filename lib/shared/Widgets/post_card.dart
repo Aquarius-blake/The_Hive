@@ -33,7 +33,7 @@ class _PostCardState extends State<PostCard> {
       ),
       child: Card(
         child: Container(
-          padding: const EdgeInsets.all(5.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(
             children: [
               Row(
