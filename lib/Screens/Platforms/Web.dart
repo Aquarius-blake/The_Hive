@@ -364,10 +364,7 @@ class _WebviewState extends State<Webview> {
                   Flexible(
                     fit: FlexFit.tight,
                     child: SingleChildScrollView(
-                      controller: ScrollController(
-                        initialScrollOffset:2,
-                        keepScrollOffset: true,
-                      ),
+                      
                       child: Column(
                         children: <Widget>[
                           SizedBox(
