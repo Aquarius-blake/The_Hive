@@ -364,7 +364,6 @@ class _WebviewState extends State<Webview> {
                   Flexible(
                     fit: FlexFit.tight,
                     child: SingleChildScrollView(
-                      
                       child: Column(
                         children: <Widget>[
                           SizedBox(
