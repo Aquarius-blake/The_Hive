@@ -486,7 +486,7 @@ class _WebviewState extends State<Webview> {
                         child: Column(
 
                           children: <Widget>[
-                            SizedBox(width: 500,),
+                            SizedBox(width: 300,),
                             Text("dgdfgd")
                           ],
                         ),
