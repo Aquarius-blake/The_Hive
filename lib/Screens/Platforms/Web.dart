@@ -367,7 +367,7 @@ class _WebviewState extends State<Webview> {
                       child: Column(
                         children: <Widget>[
                           SizedBox(
-                            child: Card(
+                            child: _isloading?CircularProgressIndicator(): Card(
                               child: Padding(
                                 padding: const EdgeInsets.all(15.0),
                                 child: Column(
