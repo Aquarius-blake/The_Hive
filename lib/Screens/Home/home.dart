@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
   }
   int _page=0;
   late PageController pageController;
-  String title="home";
+  String title="Home";
 
   @override
   void initState() {
