@@ -366,6 +366,7 @@ class _WebviewState extends State<Webview> {
                     child: SingleChildScrollView(
                       controller: ScrollController(
                         initialScrollOffset:2,
+                        keepScrollOffset: true,
                       ),
                       child: Column(
                         children: <Widget>[
