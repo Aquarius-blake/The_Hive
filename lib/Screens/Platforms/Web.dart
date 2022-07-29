@@ -363,117 +363,118 @@ class _WebviewState extends State<Webview> {
                   ),
                   Flexible(
                     fit: FlexFit.tight,
-                    child: Column(
-                      children: <Widget>[
-                        SizedBox(
-                          child: Card(
-                            child: Padding(
-                              padding: const EdgeInsets.all(15.0),
-                              child: Column(
-                                children: [
-                                  Row(
-                                    children: [
-                                      CircleAvatar(
-                                        backgroundColor: Colors.lightBlueAccent,
-                                        backgroundImage: NetworkImage(user1.ppurl!),
-                                      ),
-                                      SizedBox(width: 20,),
-                                      Text(
-                                        user1.Username!,
-                                        style: TextStyle(
-                                        fontSize: 19,
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            child: Card(
+                              child: Padding(
+                                padding: const EdgeInsets.all(15.0),
+                                child: Column(
+                                  children: [
+                                    Row(
+                                      children: [
+                                        CircleAvatar(
+                                          backgroundColor: Colors.lightBlueAccent,
+                                          backgroundImage: NetworkImage(user1.ppurl!),
                                         ),
-                                      )
-                                      ,
-                                    ],
-                                  ),
-                                  Center(
-                                    child: SizedBox(
-                                      width: MediaQuery.of(context).size.width*0.4,
-                                      child: TextField(
-                                        controller: _textEditingController,
-                                        decoration: InputDecoration(
-                                          hintText:"Title",
-                                        ),
-                                      ),
+                                        SizedBox(width: 20,),
+                                        Text(
+                                          user1.Username!,
+                                          style: TextStyle(
+                                          fontSize: 19,
+                                          ),
+                                        )
+                                        ,
+                                      ],
                                     ),
-                                  ),
-                                  SizedBox(height: 10,),
-                                  Center(
-                                    child: SizedBox(
-                                      width: MediaQuery.of(context).size.width*0.4,
-                                      child: TextField(
-                                        controller: _textEditingController2,
-                                        maxLines: 4,
-                                        decoration: InputDecoration(
-                                          hintText:"Write Something........",
-                                         // border: InputBorder.none,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                  Post(_image),
-                                  SizedBox(height: 20,),
-                                  Divider(
-                                    height: 20,
-                                    thickness: 2,
-                                  ),
-                                  Row(
-                                    children: [
-                                      IconButton(
-                                          onPressed: ()=>_selectimage(),
-                                          icon: Icon(Icons.add_a_photo)
-                                      ),
-                                      Flexible(
-                                        fit: FlexFit.tight,
-                                          child: SizedBox()
-                                      ),
-                                      Align(
-                                        alignment: Alignment.bottomRight,
-                                        child: ElevatedButton(
-                                            onPressed: ()=>_posting(user1.UID!, user1.Username!, user1.ppurl),
-                                            child: Text("Post"),
-                                          style: ElevatedButton.styleFrom(
-                                              elevation: 0.0,
-                                              shadowColor: Colors.black,
-                                              primary: Colors.blue[400],
-                                              side: BorderSide(
-                                                color: Colors.white70,
-                                                width: 2.0,
-                                              ),
-                                              shape: RoundedRectangleBorder(
-                                                  borderRadius: BorderRadius.circular(100.0)
-                                              )
+                                    Center(
+                                      child: SizedBox(
+                                        width: MediaQuery.of(context).size.width*0.4,
+                                        child: TextField(
+                                          controller: _textEditingController,
+                                          decoration: InputDecoration(
+                                            hintText:"Title",
                                           ),
                                         ),
-                                      )
-                                    ],
-                                  )
-                                ],
+                                      ),
+                                    ),
+                                    SizedBox(height: 10,),
+                                    Center(
+                                      child: SizedBox(
+                                        width: MediaQuery.of(context).size.width*0.4,
+                                        child: TextField(
+                                          controller: _textEditingController2,
+                                          maxLines: 4,
+                                          decoration: InputDecoration(
+                                            hintText:"Write Something........",
+                                           // border: InputBorder.none,
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                    Post(_image),
+                                    SizedBox(height: 20,),
+                                    Divider(
+                                      height: 20,
+                                      thickness: 2,
+                                    ),
+                                    Row(
+                                      children: [
+                                        IconButton(
+                                            onPressed: ()=>_selectimage(),
+                                            icon: Icon(Icons.add_a_photo)
+                                        ),
+                                        Flexible(
+                                          fit: FlexFit.tight,
+                                            child: SizedBox()
+                                        ),
+                                        Align(
+                                          alignment: Alignment.bottomRight,
+                                          child: ElevatedButton(
+                                              onPressed: ()=>_posting(user1.UID!, user1.Username!, user1.ppurl),
+                                              child: Text("Post"),
+                                            style: ElevatedButton.styleFrom(
+                                                elevation: 0.0,
+                                                shadowColor: Colors.black,
+                                                primary: Colors.blue[400],
+                                                side: BorderSide(
+                                                  color: Colors.white70,
+                                                  width: 2.0,
+                                                ),
+                                                shape: RoundedRectangleBorder(
+                                                    borderRadius: BorderRadius.circular(100.0)
+                                                )
+                                            ),
+                                          ),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        SizedBox(
+                          SizedBox(
 
-                          height: MediaQuery.of(context).size.height,
-                          child: Center(
-                            child: PageView(
-                              children: [
-                                WebHome(),
-                              //  Text(""),
-                                Text("Page2"),
-                                Text("Page3"),
-                                Text("Page4")
-
-                              ],
-                              physics: ScrollPhysics(),
-                              controller: pageController,
-                              onPageChanged: pagechange,
+                            height: MediaQuery.of(context).size.height,
+                            child: Center(
+                              child: PageView(
+                                children: [
+                                  WebHome(),
+                                //  Text(""),
+                                  Text("Page2"),
+                                  Text("Page3"),
+                                  Text("Page4")
+                                ],
+                                physics: ScrollPhysics(),
+                                controller: pageController,
+                                onPageChanged: pagechange,
+                              ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Column(
