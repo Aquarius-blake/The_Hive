@@ -189,175 +189,173 @@ class _WebviewState extends State<Webview> {
                         ),
                         child: Padding(
                           padding: const EdgeInsets.fromLTRB(50,50,50,50),
-                          child: SingleChildScrollView(
-                            child: Column(
+                          child: Column(
 
-                              children: <Widget>[
-                                Stack(
-                                    children:<Widget>[
-                                      CircleAvatar(
-                                        radius: 50.0,
-                                        backgroundImage: NetworkImage(user1.ppurl!),
+                            children: <Widget>[
+                              Stack(
+                                  children:<Widget>[
+                                    CircleAvatar(
+                                      radius: 50.0,
+                                      backgroundImage: NetworkImage(user1.ppurl!),
+                                    ),
+                                    Positioned(
+                                      bottom: -5,
+                                      left: 65,
+                                      child: IconButton(
+                                          onPressed:() {
+
+                                          },
+                                          icon:Icon(
+                                            Icons.add_a_photo,
+                                            color: Colors.lightBlueAccent,
+                                          )
                                       ),
-                                      Positioned(
-                                        bottom: -5,
-                                        left: 65,
-                                        child: IconButton(
-                                            onPressed:() {
+                                    )
+                                  ]
+                              ),
+                              SizedBox(height: 10,),
+                              user1.Username!=null? Text(
+                                user1.Username!,
+                                style: TextStyle(
 
-                                            },
-                                            icon:Icon(
-                                              Icons.add_a_photo,
-                                              color: Colors.lightBlueAccent,
-                                            )
-                                        ),
-                                      )
-                                    ]
                                 ),
-                                SizedBox(height: 10,),
-                                user1.Username!=null? Text(
-                                  user1.Username!,
-                                  style: TextStyle(
+                              ):
+                              Text("Loading"),
+                              SizedBox(height: 10,),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  IconButton(
+                                    onPressed: (){
+                                      setState(() {
+                                        page=0;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    icon: Icon(Icons.home),
+                                    iconSize: 40.0,
 
                                   ),
-                                ):
-                                Text("Loading"),
-                                SizedBox(height: 10,),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    IconButton(
-                                      onPressed: (){
-                                        setState(() {
-                                          page=0;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      icon: Icon(Icons.home),
-                                      iconSize: 40.0,
 
-                                    ),
-
-                                    GestureDetector(
-                                      onTap: (){
-                                        setState(() {
-                                          page=1;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      child: Text("Home",
-                                        style: TextStyle(
-                                          fontSize: 19.0,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                SizedBox(),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    IconButton(
-                                      onPressed: (){
-                                        setState(() {
-                                          page=1;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      icon: Icon(Icons.person),
-                                      iconSize: 40.0,
-
-                                    ),
-
-                                    GestureDetector(
-                                      onTap: (){
-                                        setState(() {
-                                          page=1;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      child: Text("Profile",
-                                        style: TextStyle(
-                                          fontSize: 19.0,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    IconButton(
-                                      onPressed: (){
-
-                                        setState(() {
-                                          page=2;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      icon: Icon(Icons.mail_outline),
-                                      iconSize: 40.0,
-
-                                    ),
-
-                                    GestureDetector(
-                                      onTap: (){
-
-                                        setState(() {
-                                          page=2;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      child: Text("Messages",
-                                        style: TextStyle(
-                                          fontSize: 19.0,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    IconButton(
-                                      onPressed: (){
-
-                                        setState(() {
-                                          page=3;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      icon: Icon(Icons.search),
-                                      iconSize: 40.0,
-
-                                    ),
-
-                                    GestureDetector(
-                                      onTap: (){
-
-                                        setState(() {
-                                          page=3;
-                                        });
-                                        Navitap(page);
-                                      },
-                                      child: Text("Search",
-                                        style: TextStyle(
-                                          fontSize: 19.0,
-                                        ),
-                                      ),
-                                    )
-                                  ],
-                                ),
-                                SizedBox(height: 30,),
-                                TextButton(
-                                    onPressed: (){},
-                                    child: Text("Create New Account",
+                                  GestureDetector(
+                                    onTap: (){
+                                      setState(() {
+                                        page=1;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    child: Text("Home",
                                       style: TextStyle(
+                                        fontSize: 19.0,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              SizedBox(),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  IconButton(
+                                    onPressed: (){
+                                      setState(() {
+                                        page=1;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    icon: Icon(Icons.person),
+                                    iconSize: 40.0,
 
-                                      ),)
-                                )
+                                  ),
 
-                              ],
-                            ),
+                                  GestureDetector(
+                                    onTap: (){
+                                      setState(() {
+                                        page=1;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    child: Text("Profile",
+                                      style: TextStyle(
+                                        fontSize: 19.0,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  IconButton(
+                                    onPressed: (){
+
+                                      setState(() {
+                                        page=2;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    icon: Icon(Icons.mail_outline),
+                                    iconSize: 40.0,
+
+                                  ),
+
+                                  GestureDetector(
+                                    onTap: (){
+
+                                      setState(() {
+                                        page=2;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    child: Text("Messages",
+                                      style: TextStyle(
+                                        fontSize: 19.0,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  IconButton(
+                                    onPressed: (){
+
+                                      setState(() {
+                                        page=3;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    icon: Icon(Icons.search),
+                                    iconSize: 40.0,
+
+                                  ),
+
+                                  GestureDetector(
+                                    onTap: (){
+
+                                      setState(() {
+                                        page=3;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    child: Text("Search",
+                                      style: TextStyle(
+                                        fontSize: 19.0,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              SizedBox(height: 30,),
+                              TextButton(
+                                  onPressed: (){},
+                                  child: Text("Create New Account",
+                                    style: TextStyle(
+
+                                    ),)
+                              )
+
+                            ],
                           ),
                         ),
                       )
