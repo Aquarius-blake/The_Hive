@@ -173,7 +173,7 @@ class _WebviewState extends State<Webview> {
       ),
       body: SafeArea(
           child: Container(
-            padding: EdgeInsets.all(10),
+            padding:const EdgeInsets.all(10),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -467,7 +467,8 @@ class _WebviewState extends State<Webview> {
                                   Text("Page3"),
                                   Text("Page4")
                                 ],
-                                physics: const ScrollPhysics(
+
+                                physics:const  ScrollPhysics(
                                   parent: NeverScrollableScrollPhysics(),
                                 ),
                                 controller: pageController,
