@@ -467,7 +467,9 @@ class _WebviewState extends State<Webview> {
                                   Text("Page3"),
                                   Text("Page4")
                                 ],
-                                physics: ScrollPhysics(),
+                                physics: const ScrollPhysics(
+                                  parent: NeverScrollableScrollPhysics(),
+                                ),
                                 controller: pageController,
                                 onPageChanged: pagechange,
                               ),
