@@ -43,7 +43,9 @@ class _PostCardState extends State<PostCard> {
             opacity: islikeanimating?1:0,
             child: likeAnimation(
               child: const Icon(
-                Icons.favorite, color: Colors.redAccent,
+                Icons.favorite,
+                color: Colors.redAccent,
+                size: 100,
               ),
               isAnimating: islikeanimating,
               duration: const Duration(
