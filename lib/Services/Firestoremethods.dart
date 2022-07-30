@@ -54,7 +54,7 @@ Future <String> Uploadpost(
     try{
         if(likes.contains(author_uid)){
             _firestore.collection("Posts").doc(postid).update(
-                {}
+                {'likes':FieldValue.arrayRemove([author_uid])}
             );
             }
 
