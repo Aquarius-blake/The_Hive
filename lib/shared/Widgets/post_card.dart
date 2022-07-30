@@ -50,7 +50,7 @@ class _PostCardState extends State<PostCard> {
                   milliseconds: 400),
               onEnd: (){
                 setState(() {
-                  islikeanimating=true;
+                  islikeanimating=false;
                 });
               },
             ),
