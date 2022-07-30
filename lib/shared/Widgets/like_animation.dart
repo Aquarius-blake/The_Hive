@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class likeAnimation extends StatefulWidget {
@@ -21,12 +23,15 @@ class likeAnimation extends StatefulWidget {
 
 class _likeAnimationState extends State<likeAnimation> with SingleTickerProviderStateMixin{
  late AnimationController controller;
+late Animation<Double> scale;
 
 @override
   void initState() {
 
     super.initState();
-    controller= AnimationController(vsync: this,duration: Duration(milliseconds: widget.duration.inMilliseconds ~/2));
+    controller= AnimationController(vsync: this,duration: Duration(milliseconds: widget.duration.inMilliseconds ~/2
+    )
+    );
   }
   @override
   Widget build(BuildContext context) {
