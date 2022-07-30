@@ -381,7 +381,7 @@ class _WebviewState extends State<Webview> {
                                         SizedBox(width: 20,),
                                         Text(
                                           user1.Username!,
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                           fontSize: 19,
                                           ),
                                         )
