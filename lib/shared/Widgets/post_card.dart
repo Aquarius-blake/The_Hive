@@ -22,9 +22,13 @@ class _PostCardState extends State<PostCard> {
         image=null;
       });
     }
-    return image!=null? SizedBox(
-      width: MediaQuery.of(context).size.width*0.7,
-      child: Image.network(image),
+    return image!=null? Stack(
+      children: [
+        SizedBox(
+          width: MediaQuery.of(context).size.width*0.7,
+          child: Image.network(image),
+        ),
+      ],
     ):SizedBox();
   }
 
