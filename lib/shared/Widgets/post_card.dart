@@ -18,7 +18,7 @@ class PostCard extends StatefulWidget {
 
 class _PostCardState extends State<PostCard> {
   bool islikeanimating=false;
-
+bool liked=false;
   //dynamic _image;
   Widget Postimage(dynamic image,BuildContext context){
     if(image==""){
