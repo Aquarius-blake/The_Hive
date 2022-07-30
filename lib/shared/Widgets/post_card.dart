@@ -19,6 +19,7 @@ class PostCard extends StatefulWidget {
 class _PostCardState extends State<PostCard> {
   bool islikeanimating=false;
 bool liked=false;
+
   //dynamic _image;
   Widget Postimage(dynamic image,BuildContext context){
     if(image==""){
@@ -68,10 +69,20 @@ bool liked=false;
     ):SizedBox();
   }
 
+  void likedf(String authoruid,List list){
+    setState(() {
+      if(list.contains(authoruid)){
+        liked=true;
+      }else{liked=false;}
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-
+String authoruid=widget.snap['author uid'];
+List list=widget.snap['likes'];
+likedf(authoruid, list);
     return Container(
       padding: const EdgeInsets.only(
         top: 5,
@@ -208,7 +219,7 @@ bool liked=false;
                                 widget.snap['likes']
                             );
                           },
-                          icon: Icon(
+                          icon: liked? Icon(Icons.favorite): Icon(
                             Icons.favorite_border_outlined,
                             color: Colors.red,
                           )
