@@ -28,6 +28,7 @@ class _PostCardState extends State<PostCard> {
           width: MediaQuery.of(context).size.width*0.7,
           child: Image.network(image),
         ),
+        likeAnimation(child: const Icon(Icons.favorite, color: Colors.redAccent,), isAnimating: isAnimating)
       ],
     ):SizedBox();
   }
