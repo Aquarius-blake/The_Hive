@@ -159,6 +159,7 @@ class _PostCardState extends State<PostCard> {
                     ),
                     likeAnimation(
                       isAnimating: widget.snap['likes'].contains(user1.UID),
+                      smallLike: true,
                       child: IconButton(
                           onPressed: (){},
                           icon: Icon(
