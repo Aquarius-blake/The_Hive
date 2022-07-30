@@ -69,6 +69,15 @@ class _wpostState extends State<wpost> {
     );
   }
 
+  Widget Post(dynamic image){
+    return image==null?SizedBox():SizedBox(
+      width: MediaQuery.of(context).size.width*0.3,
+      child: Image.memory(image),
+    );
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
