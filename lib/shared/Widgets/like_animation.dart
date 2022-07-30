@@ -33,6 +33,12 @@ late Animation<double> scale;
     );
     scale=Tween<double>(begin: 1.0,end: 1.2).animate(controller);
   }
+
+  @override
+  void didUpdateWidget(covariant likeAnimation oldWidget) {
+    // TODO: implement didUpdateWidget
+    super.didUpdateWidget(oldWidget);
+  }
   @override
   Widget build(BuildContext context) {
     return Container();
