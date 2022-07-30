@@ -190,7 +190,7 @@ class _WebviewState extends State<Webview> {
                                       });
                                       Navitap(page);
                                     },
-                                    child: Text("Home",
+                                    child: const Text("Home",
                                       style: TextStyle(
                                         fontSize: 19.0,
                                       ),
