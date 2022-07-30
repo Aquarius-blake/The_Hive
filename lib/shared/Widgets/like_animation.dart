@@ -43,7 +43,9 @@ startanimation();
     }
   }
 
-  startanimation(){}
+  startanimation()async{
+
+  }
 
   @override
   Widget build(BuildContext context) {
