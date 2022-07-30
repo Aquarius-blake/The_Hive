@@ -219,7 +219,11 @@ likedf(authoruid, list);
                                 widget.snap['likes']
                             );
                           },
-                          icon: liked? Icon(Icons.favorite): Icon(
+                          icon: liked? Icon(
+                              Icons.favorite,
+                            color: Colors.red,
+                          )
+                              : Icon(
                             Icons.favorite_border_outlined,
                             color: Colors.red,
                           )
