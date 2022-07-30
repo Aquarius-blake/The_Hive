@@ -321,7 +321,7 @@ class _WebviewState extends State<Webview> {
                                     onPressed: (){
 
                                       setState(() {
-                                        page=2;
+                                        page=3;
                                       });
                                       Navitap(page);
                                     },
@@ -334,7 +334,7 @@ class _WebviewState extends State<Webview> {
                                     onTap: (){
 
                                       setState(() {
-                                        page=2;
+                                        page=3;
                                       });
                                       Navitap(page);
                                     },
@@ -352,7 +352,7 @@ class _WebviewState extends State<Webview> {
                                     onPressed: (){
 
                                       setState(() {
-                                        page=3;
+                                        page=4;
                                       });
                                       Navitap(page);
                                     },
@@ -365,7 +365,7 @@ class _WebviewState extends State<Webview> {
                                     onTap: (){
 
                                       setState(() {
-                                        page=3;
+                                        page=4;
                                       });
                                       Navitap(page);
                                     },
