@@ -2,7 +2,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Provider/user_provider.dart';
-import 'package:forum3/Screens/Platforms/WebSceens/Whome.dart';
+  //import 'package:forum3/Screens/Platforms/WebSceens/Whome.dart';
+import 'package:forum3/Screens/Platforms/WebSceens/wpost.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -461,7 +462,8 @@ class _WebviewState extends State<Webview> {
                             child: Center(
                               child: PageView(
                                 children: [
-                                  WebHome(),
+                                  wpost(),
+                                  //WebHome(),
                                 //  Text(""),
                                   Text("Page2"),
                                   Text("Page3"),
