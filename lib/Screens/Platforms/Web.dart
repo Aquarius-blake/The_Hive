@@ -339,17 +339,12 @@ class _WebviewState extends State<Webview> {
                   ),
                   Flexible(
                     fit: FlexFit.tight,
-                    child: Scrollbar(
-                      interactive: true,
-                      isAlwaysShown: true,
-                      controller: ScrollController(
-                      ),
-                      scrollbarOrientation: ScrollbarOrientation.left,
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height,
-                            child: Center(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height,
+                          child: Center(
+                            child: SingleChildScrollView(
                               child: PageView(
                                 children: const [
                                   WebHome(),
@@ -366,9 +361,9 @@ class _WebviewState extends State<Webview> {
                                 onPageChanged: pagechange,
                               ),
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   Column(
