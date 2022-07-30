@@ -38,18 +38,22 @@ class _PostCardState extends State<PostCard> {
             width: MediaQuery.of(context).size.width*0.7,
             child: Image.network(image),
           ),
-          likeAnimation(
-            child: const Icon(
-              Icons.favorite, color: Colors.redAccent,
+          AnimatedOpacity(
+            duration: Duration(milliseconds: 200),
+            opacity: islikeanimating?1:0,
+            child: likeAnimation(
+              child: const Icon(
+                Icons.favorite, color: Colors.redAccent,
+              ),
+              isAnimating: islikeanimating,
+              duration: const Duration(
+                  milliseconds: 400),
+              onEnd: (){
+                setState(() {
+                  islikeanimating=true;
+                });
+              },
             ),
-            isAnimating: islikeanimating,
-            duration: const Duration(
-                milliseconds: 400),
-            onEnd: (){
-              setState(() {
-                islikeanimating=true;
-              });
-            },
           )
         ],
       ),
