@@ -14,6 +14,7 @@ class _likeAnimationState extends State<likeAnimation> with SingleTickerProvider
   void initState() {
 
     super.initState();
+    controller= AnimationController(vsync: this);
   }
   @override
   Widget build(BuildContext context) {
