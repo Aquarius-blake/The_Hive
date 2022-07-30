@@ -341,8 +341,10 @@ class _WebviewState extends State<Webview> {
                     fit: FlexFit.tight,
                     child: Scrollbar(
                       interactive: true,
+                      isAlwaysShown: true,
                       controller: ScrollController(
                       ),
+                      scrollbarOrientation: ScrollbarOrientation.right,
                       child: Column(
                         children: <Widget>[
                           SizedBox(
