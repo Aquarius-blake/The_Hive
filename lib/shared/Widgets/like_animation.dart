@@ -44,7 +44,9 @@ startanimation();
   }
 
   startanimation()async{
-if(widget.isAnimating || widget.smallLike){}
+if(widget.isAnimating || widget.smallLike){
+
+}
   }
 
   @override
