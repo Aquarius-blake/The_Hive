@@ -28,7 +28,7 @@ class _PostCardState extends State<PostCard> {
     }
     return image!=null? GestureDetector(
       onDoubleTap: ()async{
-        FirestoreMethods().likepost(
+       await FirestoreMethods().likepost(
             widget.snap['Post Uid'],
             widget.snap['author uid'],
             widget.snap['likes']
