@@ -339,11 +339,10 @@ class _WebviewState extends State<Webview> {
                   ),
                   Flexible(
                     fit: FlexFit.tight,
-                    child: SingleChildScrollView(
+                    child: Scrollbar(
                       child: Column(
                         children: <Widget>[
                           SizedBox(
-
                             height: MediaQuery.of(context).size.height,
                             child: Center(
                               child: PageView(
