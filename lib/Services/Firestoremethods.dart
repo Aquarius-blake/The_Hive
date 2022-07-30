@@ -50,7 +50,13 @@ Future <String> Uploadpost(
     }
 }
 
-    Future<void>likepost(String postid,String author_uid,List likes)async {}
+    Future<void>likepost(String postid,String author_uid,List likes)async {
+    try{
+
+    }catch(e){
+    print(e.toString());
+        }
+    }
 
 
 
