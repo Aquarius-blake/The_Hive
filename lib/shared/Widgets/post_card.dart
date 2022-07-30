@@ -14,7 +14,10 @@ class PostCard extends StatefulWidget {
   State<PostCard> createState() => _PostCardState();
 }
 
+
 class _PostCardState extends State<PostCard> {
+  bool islikeanimating=false;
+
   //dynamic _image;
   Widget Postimage(dynamic image,BuildContext context){
     if(image==""){
@@ -28,7 +31,16 @@ class _PostCardState extends State<PostCard> {
           width: MediaQuery.of(context).size.width*0.7,
           child: Image.network(image),
         ),
-        likeAnimation(child: const Icon(Icons.favorite, color: Colors.redAccent,), isAnimating: isAnimating,duration: const Duration(milliseconds: 150),)
+        likeAnimation(
+          child: const Icon(
+            Icons.favorite, color: Colors.redAccent,
+          ),
+          isAnimating: islikeanimating,
+          duration: const Duration(
+              milliseconds: 400),
+          onEnd: (){
+
+          },)
       ],
     ):SizedBox();
   }
