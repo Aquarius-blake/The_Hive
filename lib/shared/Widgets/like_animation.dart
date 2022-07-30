@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class likeAnimation extends StatefulWidget {
+  final Widget child;
+  final bool isAnimating;
+  final Duration duration;
+
   const likeAnimation({Key? key}) : super(key: key);
 
   @override
