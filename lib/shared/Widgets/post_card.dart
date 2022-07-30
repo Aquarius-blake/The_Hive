@@ -26,11 +26,11 @@ class _PostCardState extends State<PostCard> {
       });
     }
     return image!=null? GestureDetector(
-onDoubleTap: (){
-  setState(() {
-    islikeanimating=true;
-  });
-},
+      onDoubleTap: (){
+        setState(() {
+          islikeanimating=true;
+        });
+      },
       child: Stack(
         children: [
           SizedBox(
