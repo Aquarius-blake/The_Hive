@@ -122,6 +122,7 @@ class _WebviewState extends State<Webview> {
             padding:const EdgeInsets.all(10),
             child: Center(
               child: Scrollbar(
+                isAlwaysShown: true,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
