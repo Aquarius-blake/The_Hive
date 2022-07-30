@@ -25,26 +25,29 @@ class _PostCardState extends State<PostCard> {
         image=null;
       });
     }
-    return image!=null? Stack(
-      children: [
-        SizedBox(
-          width: MediaQuery.of(context).size.width*0.7,
-          child: Image.network(image),
-        ),
-        likeAnimation(
-          child: const Icon(
-            Icons.favorite, color: Colors.redAccent,
+    return image!=null? GestureDetector(
+
+      child: Stack(
+        children: [
+          SizedBox(
+            width: MediaQuery.of(context).size.width*0.7,
+            child: Image.network(image),
           ),
-          isAnimating: islikeanimating,
-          duration: const Duration(
-              milliseconds: 400),
-          onEnd: (){
-            setState(() {
-              islikeanimating=true;
-            });
-          },
-        )
-      ],
+          likeAnimation(
+            child: const Icon(
+              Icons.favorite, color: Colors.redAccent,
+            ),
+            isAnimating: islikeanimating,
+            duration: const Duration(
+                milliseconds: 400),
+            onEnd: (){
+              setState(() {
+                islikeanimating=true;
+              });
+            },
+          )
+        ],
+      ),
     ):SizedBox();
   }
 
