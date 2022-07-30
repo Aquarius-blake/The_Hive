@@ -241,7 +241,7 @@ class _WebviewState extends State<Webview> {
                                   GestureDetector(
                                     onTap: (){
                                       setState(() {
-                                        page=1;
+                                        page=0;
                                       });
                                       Navitap(page);
                                     },
@@ -273,6 +273,36 @@ class _WebviewState extends State<Webview> {
                                     onTap: (){
                                       setState(() {
                                         page=1;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    child: Text("Post",
+                                      style: TextStyle(
+                                        fontSize: 19.0,
+                                      ),
+                                    ),
+                                  )
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: <Widget>[
+                                  IconButton(
+                                    onPressed: (){
+                                      setState(() {
+                                        page=2;
+                                      });
+                                      Navitap(page);
+                                    },
+                                    icon: Icon(Icons.person),
+                                    iconSize: 40.0,
+
+                                  ),
+
+                                  GestureDetector(
+                                    onTap: (){
+                                      setState(() {
+                                        page=2;
                                       });
                                       Navitap(page);
                                     },
