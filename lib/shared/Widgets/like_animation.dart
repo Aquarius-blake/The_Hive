@@ -7,7 +7,14 @@ class likeAnimation extends StatefulWidget {
   State<likeAnimation> createState() => _likeAnimationState();
 }
 
-class _likeAnimationState extends State<likeAnimation> {
+class _likeAnimationState extends State<likeAnimation> with SingleTickerProviderStateMixin{
+ late AnimationController controller;
+
+@override
+  void initState() {
+
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Container();
