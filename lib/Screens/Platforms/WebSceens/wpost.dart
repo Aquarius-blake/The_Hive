@@ -8,8 +8,15 @@ class wpost extends StatefulWidget {
 }
 
 class _wpostState extends State<wpost> {
+  dynamic _image;
+  bool _isloading=false;
+  final TextEditingController _textEditingController=TextEditingController();
+  final TextEditingController _textEditingController2=TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+
+    );
   }
 }
