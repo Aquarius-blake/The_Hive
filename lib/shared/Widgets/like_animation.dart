@@ -38,7 +38,7 @@ late Animation<double> scale;
   void didUpdateWidget(covariant likeAnimation oldWidget) {
 
     super.didUpdateWidget(oldWidget);
-    if(widget.isAnimating!=oldWidget){}
+    if(widget.isAnimating!=oldWidget.isAnimating){}
   }
   @override
   Widget build(BuildContext context) {
