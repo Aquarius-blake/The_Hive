@@ -196,9 +196,8 @@ class _WebviewState extends State<Webview> {
                                       ),
                                     ),
                                   ),
-                                  Flexible(
-                                      child: SizedBox()
-                                  )
+                                  Expanded(child: SizedBox(width: MediaQuery.of(context).size.width,
+                                  height: MediaQuery.of(context).size.height,))
                                 ],
                               ),
                               SizedBox(),
