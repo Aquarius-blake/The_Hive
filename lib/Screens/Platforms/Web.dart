@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Provider/user_provider.dart';
-  //import 'package:forum3/Screens/Platforms/WebSceens/Whome.dart';
+import 'package:forum3/Screens/Platforms/WebSceens/Whome.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/wpost.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:image_picker/image_picker.dart';
@@ -492,10 +492,9 @@ class _WebviewState extends State<Webview> {
                             height: MediaQuery.of(context).size.height,
                             child: Center(
                               child: PageView(
-                                children: [
+                                children: const [
+                                  WebHome(),
                                   wpost(),
-                                  //WebHome(),
-                                //  Text(""),
                                   Text("Page2"),
                                   Text("Page3"),
                                   Text("Page4")
