@@ -339,31 +339,29 @@ class _WebviewState extends State<Webview> {
                   ),
                   Flexible(
                     fit: FlexFit.tight,
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
-                            height: MediaQuery.of(context).size.height*0.89,
-                            child: Center(
-                              child: PageView(
-                                children: const [
-                                  WebHome(),
-                                  wpost(),
-                                  Text("Page2"),
-                                  Text("Page3"),
-                                  Text("Page4")
-                                ],
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height*0.89,
+                          child: Center(
+                            child: PageView(
+                              children: const [
+                                WebHome(),
+                                wpost(),
+                                Text("Page2"),
+                                Text("Page3"),
+                                Text("Page4")
+                              ],
 
-                                physics:const  ScrollPhysics(
-                                 parent: NeverScrollableScrollPhysics(),
-                                ),
-                                controller: pageController,
-                                onPageChanged: pagechange,
+                              physics:const  ScrollPhysics(
+                               parent: NeverScrollableScrollPhysics(),
                               ),
+                              controller: pageController,
+                              onPageChanged: pagechange,
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   Column(
