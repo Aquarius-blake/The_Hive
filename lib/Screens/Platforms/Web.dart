@@ -266,7 +266,7 @@ class _WebviewState extends State<Webview> {
                                       Navitap(page);
                                     },
                                     icon: FaIcon(FontAwesomeIcons.featherPointed),
-                                    iconSize: 20.0,
+                                    iconSize: 25.0,
 
                                   ),
 
