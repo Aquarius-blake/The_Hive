@@ -344,7 +344,7 @@ class _WebviewState extends State<Webview> {
                       isAlwaysShown: true,
                       controller: ScrollController(
                       ),
-                      scrollbarOrientation: ScrollbarOrientation.right,
+                      scrollbarOrientation: ScrollbarOrientation.left,
                       child: Column(
                         children: <Widget>[
                           SizedBox(
