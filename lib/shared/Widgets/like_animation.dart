@@ -47,6 +47,10 @@ startanimation();
 if(widget.isAnimating || widget.smallLike){
 await controller.forward();
 await controller.reverse();
+await Future.delayed(const Duration(
+    milliseconds: 200
+)
+);
 }
   }
 
