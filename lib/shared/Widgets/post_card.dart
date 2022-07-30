@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Widgets/like_animation.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -27,6 +28,11 @@ class _PostCardState extends State<PostCard> {
     }
     return image!=null? GestureDetector(
       onDoubleTap: ()async{
+        FirestoreMethods().likepost(
+            widget.snap['Post Uid'],
+            widget.snap['author uid'],
+            widget.snap['likes']
+        );
         setState(() {
           islikeanimating=true;
         });
