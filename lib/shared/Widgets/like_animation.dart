@@ -39,7 +39,7 @@ late Animation<double> scale;
 
     super.didUpdateWidget(oldWidget);
     if(widget.isAnimating!=oldWidget.isAnimating){
-
+startanimation();
     }
   }
 
