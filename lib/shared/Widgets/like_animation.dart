@@ -4,8 +4,16 @@ class likeAnimation extends StatefulWidget {
   final Widget child;
   final bool isAnimating;
   final Duration duration;
+  final VoidCallback onEnd;
+  final bool smallLike;
 
-  const likeAnimation({Key? key}) : super(key: key);
+  const likeAnimation({Key? key,
+    required this.duration,
+    required this.child,
+    required this.isAnimating,
+    required this.onEnd,
+    required this.smallLike,
+  }) : super(key: key);
 
   @override
   State<likeAnimation> createState() => _likeAnimationState();
