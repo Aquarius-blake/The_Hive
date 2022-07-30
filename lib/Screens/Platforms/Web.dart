@@ -155,6 +155,7 @@ class _WebviewState extends State<Webview> {
   Widget build(BuildContext context) {
     User1? user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
+      
       backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(
         centerTitle: true,
@@ -395,32 +396,30 @@ class _WebviewState extends State<Webview> {
                   ),
                   Flexible(
                     fit: FlexFit.tight,
-                    child: SingleChildScrollView(
-                      child: Column(
-                        children: <Widget>[
-                          SizedBox(
+                    child: Column(
+                      children: <Widget>[
+                        SizedBox(
 
-                            height: MediaQuery.of(context).size.height,
-                            child: Center(
-                              child: PageView(
-                                children: const [
-                                  WebHome(),
-                                  wpost(),
-                                  Text("Page2"),
-                                  Text("Page3"),
-                                  Text("Page4")
-                                ],
+                          height: MediaQuery.of(context).size.height,
+                          child: Center(
+                            child: PageView(
+                              children: const [
+                                WebHome(),
+                                wpost(),
+                                Text("Page2"),
+                                Text("Page3"),
+                                Text("Page4")
+                              ],
 
-                                physics:const  ScrollPhysics(
-                                  parent: NeverScrollableScrollPhysics(),
-                                ),
-                                controller: pageController,
-                                onPageChanged: pagechange,
+                              physics:const  ScrollPhysics(
+                                parent: NeverScrollableScrollPhysics(),
                               ),
+                              controller: pageController,
+                              onPageChanged: pagechange,
                             ),
-                          )
-                        ],
-                      ),
+                          ),
+                        )
+                      ],
                     ),
                   ),
                   Column(
