@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Widgets/like_animation.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
+
+import '../../Models/Users1.dart';
+import '../../Provider/user_provider.dart';
 
 class PostCard extends StatefulWidget {
   final snap;
@@ -25,6 +30,8 @@ class _PostCardState extends State<PostCard> {
 
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+
     return Container(
       padding: const EdgeInsets.only(
         top: 5,
@@ -150,12 +157,15 @@ class _PostCardState extends State<PostCard> {
                     Text(
                       "${widget.snap['likes'].length}",
                     ),
-                    IconButton(
-                        onPressed: (){},
-                        icon: Icon(
-                          Icons.favorite_border_outlined,
-                          color: Colors.red,
-                        )
+                    likeAnimation(
+                      isAnimating: widget.snap['likes'].contains(user1.UID),
+                      child: IconButton(
+                          onPressed: (){},
+                          icon: Icon(
+                            Icons.favorite_border_outlined,
+                            color: Colors.red,
+                          )
+                      ),
                     ),
                     Expanded(
                         child: SizedBox()
