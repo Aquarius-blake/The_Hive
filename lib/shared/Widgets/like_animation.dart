@@ -64,6 +64,6 @@ class _likeAnimationState extends State<likeAnimation> with SingleTickerProvider
   }
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return ScaleTransition(scale: scale);
   }
 }
