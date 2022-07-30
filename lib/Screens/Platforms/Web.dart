@@ -339,12 +339,12 @@ class _WebviewState extends State<Webview> {
                   ),
                   Flexible(
                     fit: FlexFit.tight,
-                    child: Column(
-                      children: <Widget>[
-                        SizedBox(
-                          height: MediaQuery.of(context).size.height,
-                          child: Center(
-                            child: SingleChildScrollView(
+                    child: SingleChildScrollView(
+                      child: Column(
+                        children: <Widget>[
+                          SizedBox(
+                            height: MediaQuery.of(context).size.height*0.8,
+                            child: Center(
                               child: PageView(
                                 children: const [
                                   WebHome(),
@@ -361,9 +361,9 @@ class _WebviewState extends State<Webview> {
                                 onPageChanged: pagechange,
                               ),
                             ),
-                          ),
-                        )
-                      ],
+                          )
+                        ],
+                      ),
                     ),
                   ),
                   Column(
