@@ -380,7 +380,7 @@ class _WebviewState extends State<Webview> {
                       )
                     ],
                   ),
-
+Scrollbar(child:SizedBox() )
                 ],
               ),
             ),
