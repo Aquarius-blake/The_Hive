@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 
+import '../../../Models/Users1.dart';
+import '../../../Provider/user_provider.dart';
 import '../../../Services/Firestoremethods.dart';
 import '../../../Services/Upload.dart';
 import '../../../shared/Pop_up.dart';
@@ -80,6 +83,8 @@ class _wpostState extends State<wpost> {
 
   @override
   Widget build(BuildContext context) {
+    User1? user1=  Provider.of<UserProvider>(context).getUser;
+
     return Container(
 
     );
