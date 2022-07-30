@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Provider/user_provider.dart';
   //import 'package:forum3/Screens/Platforms/WebSceens/Whome.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/wpost.dart';
@@ -264,7 +265,7 @@ class _WebviewState extends State<Webview> {
                                       });
                                       Navitap(page);
                                     },
-                                    icon: Icon(Icons.person),
+                                    icon: FaIcon(FontAwesomeIcons.featherPointed),
                                     iconSize: 40.0,
 
                                   ),
