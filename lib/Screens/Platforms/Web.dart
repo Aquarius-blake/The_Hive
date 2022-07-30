@@ -196,8 +196,8 @@ class _WebviewState extends State<Webview> {
                                       ),
                                     ),
                                   ),
-                                  Expanded(
-                                    child: SizedBox(),
+                                  Flexible(
+                                      child: SizedBox()
                                   )
                                 ],
                               ),
