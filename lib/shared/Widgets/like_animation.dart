@@ -51,7 +51,9 @@ class _likeAnimationState extends State<likeAnimation> with SingleTickerProvider
           milliseconds: 200
       )
       );
-      if(widget.onEnd!=null){}
+      if(widget.onEnd!=null){
+        widget.onEnd!();
+      }
     }
   }
 
