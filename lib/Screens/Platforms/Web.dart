@@ -195,6 +195,9 @@ class _WebviewState extends State<Webview> {
                                         fontSize: 19.0,
                                       ),
                                     ),
+                                  ),
+                                  Expanded(
+                                    child: SizedBox(),
                                   )
                                 ],
                               ),

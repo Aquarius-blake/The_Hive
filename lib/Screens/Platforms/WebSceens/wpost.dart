@@ -87,7 +87,9 @@ class _wpostState extends State<wpost> {
 
     return   SizedBox(
       height: MediaQuery.of(context).size.height*0.5,
-      child: _isloading?CircularProgressIndicator(): Card(
+      child: _isloading?CircularProgressIndicator():
+      Card(
+
         child: Padding(
           padding: const EdgeInsets.all(15.0),
           child: Column(
