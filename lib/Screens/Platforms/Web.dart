@@ -343,7 +343,7 @@ class _WebviewState extends State<Webview> {
                       child: Column(
                         children: <Widget>[
                           SizedBox(
-                            height: MediaQuery.of(context).size.height*0.8,
+                            height: MediaQuery.of(context).size.height*0.9,
                             child: Center(
                               child: PageView(
                                 children: const [
