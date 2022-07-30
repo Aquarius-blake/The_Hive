@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../Services/Firestoremethods.dart';
 import '../../../Services/Upload.dart';
@@ -41,6 +42,31 @@ class _wpostState extends State<wpost> {
       String err=e.toString();
       errormessage(err, context);
     }
+  }
+
+  _selectimage()async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: Text("Upload image"),
+            children: [
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Choose from gallery"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.gallery);
+                  setState(() {
+                    _image=file;
+                  });
+                },
+              ),
+
+            ],
+          );
+        }
+    );
   }
 
   @override
