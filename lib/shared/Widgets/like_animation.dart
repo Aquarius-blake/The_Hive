@@ -9,11 +9,11 @@ class likeAnimation extends StatefulWidget {
   final bool smallLike;
 
   const likeAnimation({Key? key,
-     this.duration=const Duration(milliseconds: 150),
+    this.duration=const Duration(milliseconds: 150),
     required this.child,
     required this.isAnimating,
-     this.onEnd,
-     this.smallLike=false,
+    this.onEnd,
+    this.smallLike=false,
   }) : super(key: key);
 
   @override
@@ -21,10 +21,10 @@ class likeAnimation extends StatefulWidget {
 }
 
 class _likeAnimationState extends State<likeAnimation> with SingleTickerProviderStateMixin{
- late AnimationController controller;
-late Animation<double> scale;
+  late AnimationController controller;
+  late Animation<double> scale;
 
-@override
+  @override
   void initState() {
 
     super.initState();
@@ -39,19 +39,19 @@ late Animation<double> scale;
 
     super.didUpdateWidget(oldWidget);
     if(widget.isAnimating!=oldWidget.isAnimating){
-startanimation();
+      startanimation();
     }
   }
 
   startanimation()async{
-if(widget.isAnimating || widget.smallLike){
-await controller.forward();
-await controller.reverse();
-await Future.delayed(const Duration(
-    milliseconds: 200
-)
-);
-}
+    if(widget.isAnimating || widget.smallLike){
+      await controller.forward();
+      await controller.reverse();
+      await Future.delayed(const Duration(
+          milliseconds: 200
+      )
+      );
+    }
   }
 
   @override
