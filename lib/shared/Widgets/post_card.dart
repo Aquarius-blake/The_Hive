@@ -39,7 +39,9 @@ class _PostCardState extends State<PostCard> {
           duration: const Duration(
               milliseconds: 400),
           onEnd: (){
+setState(() {
 
+});
           },)
       ],
     ):SizedBox();
