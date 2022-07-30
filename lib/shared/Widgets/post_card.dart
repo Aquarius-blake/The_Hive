@@ -26,7 +26,7 @@ class _PostCardState extends State<PostCard> {
       });
     }
     return image!=null? GestureDetector(
-      onDoubleTap: (){
+      onDoubleTap: ()async{
         setState(() {
           islikeanimating=true;
         });

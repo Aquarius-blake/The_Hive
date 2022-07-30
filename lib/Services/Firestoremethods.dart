@@ -57,7 +57,7 @@ Future <String> Uploadpost(
                 {'likes':FieldValue.arrayRemove([author_uid])}
             );
             }else{
-            _firestore.collection("Posts").doc(postid).update(
+          await  _firestore.collection("Posts").doc(postid).update(
                 {'likes':FieldValue.arrayUnion([author_uid])}
             );
         }
