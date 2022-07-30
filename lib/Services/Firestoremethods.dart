@@ -53,7 +53,7 @@ Future <String> Uploadpost(
     Future<void>likepost(String postid,String author_uid,List likes)async {
     try{
         if(likes.contains(author_uid)){
-            _firestore.collection("Posts").doc(postid).update(
+           await _firestore.collection("Posts").doc(postid).update(
                 {'likes':FieldValue.arrayRemove([author_uid])}
             );
             }else{
