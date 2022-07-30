@@ -86,7 +86,7 @@ class _wpostState extends State<wpost> {
     User1? user1=  Provider.of<UserProvider>(context).getUser;
 
     return   SizedBox(
-      height: MediaQuery.of(context).size.height*0.8,
+      height: MediaQuery.of(context).size.height*0.5,
       child: _isloading?CircularProgressIndicator(): Card(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
