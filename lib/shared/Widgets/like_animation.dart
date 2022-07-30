@@ -58,6 +58,11 @@ class _likeAnimationState extends State<likeAnimation> with SingleTickerProvider
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    controller.dispose();
+  }
+  @override
   Widget build(BuildContext context) {
     return Container();
   }
