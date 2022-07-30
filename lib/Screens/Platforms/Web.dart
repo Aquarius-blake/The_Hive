@@ -6,14 +6,9 @@ import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/Whome.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/wpost.dart';
 import 'package:forum3/Services/Upload.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../../Models/Users1.dart';
-import '../../Services/Firestoremethods.dart';
 import '../../Services/auth.dart';
-import '../../shared/Pop_up.dart';
-import '../../shared/error_handling.dart';
-
 
 
 class Webview extends StatefulWidget {
@@ -33,61 +28,9 @@ class _WebviewState extends State<Webview> {
   int page=0;
   late PageController pageController;
   String title="home";
-  dynamic _image;
-  bool _isloading=false;
-  final TextEditingController _textEditingController=TextEditingController();
-  final TextEditingController _textEditingController2=TextEditingController();
-
   Upload Selection=Upload();
 
-  void _posting(String uid,String author,dynamic profilepic)async{
-    setState(() {
-      _isloading=true;
-    });
-    try{
-      String res=await FirestoreMethods().Uploadpost(_textEditingController.text, _textEditingController2.text, _image, uid, author, profilepic);
-      if(res=="success"){
-        setState(() {
-          _isloading=false;
-        });
-        Showsnackbar("Post Successful", context);
-      }
-      else{
-        setState(() {
-          _isloading=false;
-        });
-        Showsnackbar(res, context);
-      }
-    }catch(e){
-      String err=e.toString();
-      errormessage(err, context);
-    }
-  }
 
-  _selectimage()async{
-    return showDialog(
-        context: context,
-        builder: (context){
-          return SimpleDialog(
-            title: Text("Upload image"),
-            children: [
-              SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
-                child: Text("Choose from gallery"),
-                onPressed: ()async{
-                  Navigator.of(context).pop();
-                  dynamic file=await Selection.uploadpic(ImageSource.gallery);
-                  setState(() {
-                    _image=file;
-                  });
-                },
-              ),
-
-            ],
-          );
-        }
-    );
-    }
 
     Widget Post(dynamic image){
     return image==null?SizedBox():SizedBox(
@@ -412,9 +355,9 @@ class _WebviewState extends State<Webview> {
                                   Text("Page4")
                                 ],
 
-                           //     physics:const  ScrollPhysics(
-                           //       parent: NeverScrollableScrollPhysics(),
-                            //    ),
+                                physics:const  ScrollPhysics(
+                                 parent: NeverScrollableScrollPhysics(),
+                                ),
                                 controller: pageController,
                                 onPageChanged: pagechange,
                               ),
