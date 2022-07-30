@@ -225,7 +225,7 @@ likedf(authoruid, list);
                           )
                               : Icon(
                             Icons.favorite_border_outlined,
-                            color: Colors.red,
+                            color: Colors.black,
                           )
                       ),
                     ),
