@@ -32,6 +32,7 @@ class _PostCardState extends State<PostCard> {
         });
       },
       child: Stack(
+        alignment: Alignment.center,
         children: [
           SizedBox(
             width: MediaQuery.of(context).size.width*0.7,
