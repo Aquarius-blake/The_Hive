@@ -41,10 +41,15 @@ class _McommentsScreenState extends State<McommentsScreen> {
                   radius: 18,
                 ),
                 Expanded(
-                  child: TextField(
-                    decoration: InputDecoration(
-                      hintText: "Comment as Username",
-                      border: InputBorder.none,
+                  child: Padding(
+                    padding: const EdgeInsets.only(
+                        left: 12.0,
+                        right: 8.0),
+                    child: TextField(
+                      decoration: InputDecoration(
+                        hintText: "Comment as Username",
+                        border: InputBorder.none,
+                      ),
                     ),
                   ),
                 ),
