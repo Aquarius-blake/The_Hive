@@ -40,7 +40,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
                   //backgroundColor: NetworkImage(),
                   radius: 18,
                 ),
-                const SizedBox(width: 5,),
+                const SizedBox(width: 10,),
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
