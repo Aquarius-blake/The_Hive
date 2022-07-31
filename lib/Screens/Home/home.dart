@@ -148,7 +148,7 @@ class _HomeState extends State<Home> {
       ),
 
       drawer: Drawer(
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.white,
         child: Container(
           child: SingleChildScrollView(
             child: Column(
