@@ -16,7 +16,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
         title:const Text(
             "Comments",
           style: TextStyle(
-
+color: Colors.black,
           ),
         ),
         centerTitle: true,
