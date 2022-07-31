@@ -60,7 +60,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0,
                       shadowColor: Colors.black,
-                      primary: Colors.blue[400],
+                      primary: Colors.lightBlueAccent,
                       side: BorderSide(
                         color: Colors.white70,
                         width: 2.0,
