@@ -26,6 +26,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
               left: 16,
               right: 8,
             ),
+            child: Row(),
           )
       ),
     );
