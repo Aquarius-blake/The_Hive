@@ -44,7 +44,8 @@ class _McommentsScreenState extends State<McommentsScreen> {
                   child: Padding(
                     padding: const EdgeInsets.only(
                         left: 12.0,
-                        right: 8.0),
+                        right: 1.0
+                    ),
                     child: TextField(
                       decoration: InputDecoration(
                         hintText: "Comment as Username",
@@ -53,8 +54,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
                     ),
                   ),
                 ),
-
-
+                InkWell()
               ],
             ),
           )
