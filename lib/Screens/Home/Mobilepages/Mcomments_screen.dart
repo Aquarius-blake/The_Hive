@@ -12,7 +12,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
-
+backgroundColor: Colors.white,
 ),
     );
   }
