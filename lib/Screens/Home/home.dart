@@ -197,11 +197,11 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(height: 10,),
                 ListTile(
-                  leading: Icon(Icons.person,
+                  leading: const Icon(Icons.person,
                     color: Colors.black,
                     size:0.0,
                   ),
-                  title: Text(
+                  title: const Text(
                     "Profile",
                     style: TextStyle(
                       fontSize: 15.0,
