@@ -28,9 +28,10 @@ class _McommentsScreenState extends State<McommentsScreen> {
             ),
             child: Row(
               children: [
-CircleAvatar(
-  //backgroundColor: NetworkImage(),
-),
+                CircleAvatar(
+                  //backgroundColor: NetworkImage(),
+                  radius: 18,
+                ),
               ],
             ),
           )
