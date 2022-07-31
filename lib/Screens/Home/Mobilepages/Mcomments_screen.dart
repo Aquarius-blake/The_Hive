@@ -17,9 +17,9 @@ class _McommentsScreenState extends State<McommentsScreen> {
         ),
         backgroundColor: Colors.white,
         title:const Text(
-            "Comments",
+          "Comments",
           style: TextStyle(
-color: Colors.black,
+            color: Colors.black,
           ),
         ),
         centerTitle: true,
@@ -43,7 +43,7 @@ color: Colors.black,
                 Expanded(
                   child: TextField(
                     decoration: InputDecoration(
-hintText: "Comment as Username",
+                      hintText: "Comment as Username",
                       border: InputBorder.none,
                     ),
                   ),
