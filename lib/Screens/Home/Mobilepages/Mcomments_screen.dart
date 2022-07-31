@@ -40,18 +40,10 @@ class _McommentsScreenState extends State<McommentsScreen> {
                   //backgroundColor: NetworkImage(),
                   radius: 18,
                 ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-
-
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        hintText: "Comment as Username",
-                        border: InputBorder.none,
-                      ),
-                    ),
+                TextField(
+                  decoration: InputDecoration(
+                    hintText: "Comment as Username",
+                    border: InputBorder.none,
                   ),
                 ),
                 InkWell(
