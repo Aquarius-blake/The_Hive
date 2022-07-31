@@ -20,7 +20,7 @@ backgroundColor: Colors.white,
           child: Container(
 height: kToolbarHeight,
             margin: EdgeInsets.only(
-
+bottom: MediaQuery.of(context).viewInsets.bottom
             ),
           )
       ),
