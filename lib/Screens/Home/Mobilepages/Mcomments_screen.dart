@@ -43,7 +43,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
-                        left: 16,
+                        left: 12,
                         right: 8.0
                     ),
                     child: TextField(
