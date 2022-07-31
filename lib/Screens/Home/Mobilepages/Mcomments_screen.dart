@@ -17,7 +17,9 @@ backgroundColor: Colors.white,
   centerTitle: true,
 ),
       bottomNavigationBar: SafeArea(
-          child: Container()
+          child: Container(
+
+          )
       ),
     );
   }
