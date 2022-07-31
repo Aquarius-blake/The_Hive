@@ -13,7 +13,12 @@ class _McommentsScreenState extends State<McommentsScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title:const Text("Comments"),
+        title:const Text(
+            "Comments",
+          style: TextStyle(
+
+          ),
+        ),
         centerTitle: true,
       ),
       bottomNavigationBar: SafeArea(
