@@ -46,9 +46,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
                     border: InputBorder.none,
                   ),
                 ),
-                InkWell(
-onTap: (){},
-                )
+
               ],
             ),
           )
