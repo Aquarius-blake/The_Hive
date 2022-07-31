@@ -34,7 +34,8 @@ class _McommentsScreenState extends State<McommentsScreen> {
                 ),
                 TextField(
                   decoration: InputDecoration(
-hintText: "Comment as Username"
+hintText: "Comment as Username",
+                    border: InputBorder.none,
                   ),
                 ),
               ],
