@@ -18,7 +18,7 @@ backgroundColor: Colors.white,
 ),
       bottomNavigationBar: SafeArea(
           child: Container(
-
+height: kToolbarHeight,
           )
       ),
     );
