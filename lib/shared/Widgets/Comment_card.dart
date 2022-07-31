@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Commentcard extends StatefulWidget {
-  const Commentcard({Key? key}) : super(key: key);
+  final snap;
+  const Commentcard({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Commentcard> createState() => _CommentcardState();
