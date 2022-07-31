@@ -16,6 +16,9 @@ backgroundColor: Colors.white,
   title:const Text("Comments"),
   centerTitle: true,
 ),
+      bottomNavigationBar: SafeArea(
+          child: Container()
+      ),
     );
   }
 }
