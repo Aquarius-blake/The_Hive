@@ -54,7 +54,11 @@ class _McommentsScreenState extends State<McommentsScreen> {
                     ),
                   ),
                 ),
-                ElevatedButton(onPressed: (){}, child: Text(""))
+                ElevatedButton(
+                    onPressed: (){},
+                    child: Text("Post"),
+
+                )
               ],
             ),
           )
