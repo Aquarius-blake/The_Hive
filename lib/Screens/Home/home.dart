@@ -204,7 +204,7 @@ class _HomeState extends State<Home> {
                   title: Text(
                     "Profile",
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 15.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
 
