@@ -22,8 +22,9 @@ height: kToolbarHeight,
             margin: EdgeInsets.only(
 bottom: MediaQuery.of(context).viewInsets.bottom
             ),
-            padding: EdgeInsets.only(
-
+            padding: const EdgeInsets.only(
+left: 16,
+              right: 8,
             ),
           )
       ),
