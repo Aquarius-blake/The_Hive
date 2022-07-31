@@ -32,6 +32,11 @@ class _McommentsScreenState extends State<McommentsScreen> {
                   //backgroundColor: NetworkImage(),
                   radius: 18,
                 ),
+                TextField(
+                  decoration: InputDecoration(
+
+                  ),
+                ),
               ],
             ),
           )
