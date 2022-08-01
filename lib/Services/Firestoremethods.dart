@@ -89,7 +89,7 @@ String ress;
                ress="Comment success";
                return ress;
             }
-            return "";
+            return "Empty field";
         }catch(e){
             return e.toString();
         }
