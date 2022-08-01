@@ -12,7 +12,11 @@ class _CommentcardState extends State<Commentcard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Card(),
+      child: Card(
+        child: Container(
+
+        ),
+      ),
     );
   }
 }
