@@ -26,8 +26,8 @@ class _CommentcardState extends State<Commentcard> {
                   CircleAvatar(
                     radius: 16,
                   ),
-                  Padding
-                    (padding: const EdgeInsets.only(
+                  Padding(
+                    padding: const EdgeInsets.only(
                     left: 12,
                   ),
                     child: Column(
