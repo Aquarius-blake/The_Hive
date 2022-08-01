@@ -54,7 +54,11 @@ RichText(
 
   ],
 ),
-)
+),
+                Padding(
+                    padding: const EdgeInsets.only(
+                      top: 4.0,)
+                )
                     ],
                     ),
                   )
