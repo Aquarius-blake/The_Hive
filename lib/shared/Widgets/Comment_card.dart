@@ -73,6 +73,7 @@ RichText(
                 ],
               ),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TextButton(
                       onPressed: (){},
