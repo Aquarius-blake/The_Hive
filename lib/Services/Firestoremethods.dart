@@ -91,7 +91,8 @@ String ress;
             }
             return "Empty field";
         }catch(e){
-            return e.toString();
+            ress=e.toString();
+            return ress;
         }
     }
 
