@@ -48,7 +48,7 @@ RichText(
       text: "Comment",
       style: const TextStyle(
         color: Colors.black,
-        fontWeight: FontWeight.bold,
+        fontStyle: FontStyle.italic,
       ),
     ),
 
