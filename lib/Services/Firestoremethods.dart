@@ -80,6 +80,7 @@ class FirestoreMethods{
                     detail: text,
                     author: author,
                     Timeposted: DateTime.now(),
+                    ppurl: ppurl
                 );
                 _firestore.collection("Posts").doc(postid).collection("comments").doc(commentid).set(
                     comments.toJson(),
