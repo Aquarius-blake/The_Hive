@@ -14,18 +14,18 @@ class _CommentcardState extends State<Commentcard> {
     return Container(
       child: Card(
         child: Container(
-child: Column(
-children: [
-Row(
-children: [
+          child: Column(
+            children: [
+              Row(
+                children: [
 
-],
-),
-  Row(
+                ],
+              ),
+              Row(
 
-  )
-],
-),
+              )
+            ],
+          ),
         ),
       ),
     );
