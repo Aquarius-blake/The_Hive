@@ -60,7 +60,9 @@ RichText(
                       top: 4.0,),
                    child: Text(
                      "Date",
-                     style: TextStyle(),
+                     style: TextStyle(
+                       color: Colors.grey,
+                     ),
                    ),
                 )
                     ],
