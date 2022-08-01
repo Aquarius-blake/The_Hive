@@ -62,7 +62,8 @@ RichText(
                      "Date",
                      style: TextStyle(
                        color: Colors.grey,
-                       fontSize: 10
+                       fontSize: 10,
+                       fontStyle: FontStyle.italic
                      ),
                    ),
                 )
