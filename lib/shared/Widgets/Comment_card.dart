@@ -38,7 +38,8 @@ RichText(
     text: TextSpan(
   children: [
     TextSpan(
-      text: "Username"
+      text: "Username",
+      style: const TextStyle(),
     )
 
   ],
