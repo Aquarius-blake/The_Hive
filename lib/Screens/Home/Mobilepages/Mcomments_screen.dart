@@ -17,6 +17,7 @@ class McommentsScreen extends StatefulWidget {
 
 class _McommentsScreenState extends State<McommentsScreen> {
 
+
   commenting(String postid, String text,String author_uid,String author,String ppurl) async{
     String ress=await FirestoreMethods().postcomment(postid, text, author_uid, author, ppurl);
     if( ress=="Comment success"){
@@ -28,6 +29,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
       Showsnackbar(ress, context);
     }
   }
+  TextEditingController text=TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -70,6 +72,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
                         right: 1.0
                     ),
                     child: TextField(
+                      controller: text,
                       decoration: InputDecoration(
                         hintText: "Comment as ${user1.Username}",
                         border: InputBorder.none,
