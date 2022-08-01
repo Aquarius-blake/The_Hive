@@ -26,48 +26,50 @@ class _CommentcardState extends State<Commentcard> {
                   CircleAvatar(
                     radius: 16,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 12,
-                    ),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text: "Username",
-                                style: const TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                        left: 12,
+                      ),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: "Username",
+                                  style: const TextStyle(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                  ),
                                 ),
-                              ),
-                              TextSpan(
-                                text: "Comment",
-                                style: const TextStyle(
-                                  color: Colors.black,
-                                  fontStyle: FontStyle.italic,
+                                TextSpan(
+                                  text: "Comment",
+                                  style: const TextStyle(
+                                    color: Colors.black,
+                                    fontStyle: FontStyle.italic,
+                                  ),
                                 ),
-                              ),
 
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            top: 4.0,),
-                          child: Text(
-                            "Date",
-                            style: const TextStyle(
-                                color: Colors.grey,
-                                fontSize: 10,
-                                fontStyle: FontStyle.italic
+                              ],
                             ),
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              top: 4.0,),
+                            child: Text(
+                              "Date",
+                              style: const TextStyle(
+                                  color: Colors.grey,
+                                  fontSize: 10,
+                                  fontStyle: FontStyle.italic
+                              ),
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   )
                 ],
