@@ -55,7 +55,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
                     ),
                     child: TextField(
                       decoration: InputDecoration(
-                        hintText: "Comment as Username",
+                        hintText: "Comment as ${user1.Username}",
                         border: InputBorder.none,
                       ),
                     ),
