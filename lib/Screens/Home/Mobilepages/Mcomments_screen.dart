@@ -21,6 +21,9 @@ class _McommentsScreenState extends State<McommentsScreen> {
     if( ress=="Comment success"){
       Showsnackbar(ress, context);
     }else if(ress=="Empty field"){
+      ress="Please Enter text";
+      Showsnackbar(ress, context);
+    }else{
       Showsnackbar(ress, context);
     }
   }
