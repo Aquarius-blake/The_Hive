@@ -34,7 +34,7 @@ class _CommentcardState extends State<Commentcard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-
+RichText(text: TextSpan())
                     ],
                     ),
                   )
