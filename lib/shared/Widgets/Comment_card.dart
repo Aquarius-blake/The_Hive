@@ -79,6 +79,9 @@ RichText(
                       onPressed: (){},
                       child: Text(
                         "Edit",
+                        style: TextStyle(
+
+                        ),
                       )
                   ),
                   TextButton(
