@@ -41,6 +41,7 @@ RichText(
       text: "Username",
       style: const TextStyle(
         color: Colors.black,
+        fontWeight: FontWeight.bold,
       ),
     )
 
