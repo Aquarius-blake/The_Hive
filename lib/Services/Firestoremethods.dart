@@ -82,7 +82,7 @@ class FirestoreMethods{
                     Timeposted: DateTime.now(),
                     ppurl: ppurl
                 );
-                _firestore.collection("Posts").doc(postid).collection("comments").doc(commentid).set(
+               await _firestore.collection("Posts").doc(postid).collection("comments").doc(commentid).set(
                     comments.toJson(),
                     SetOptions(merge: true)
                 );
