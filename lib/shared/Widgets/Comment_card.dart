@@ -88,6 +88,9 @@ color: Colors.lightBlueAccent,
                       onPressed: (){},
                       child: const Text(
                         "Delete",
+                        style: TextStyle(
+
+                        ),
                       )
                   ),
                 ],
