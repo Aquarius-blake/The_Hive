@@ -12,7 +12,7 @@ class _CommentcardState extends State<Commentcard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         vertical: 18,
         horizontal: 16,
       ),
