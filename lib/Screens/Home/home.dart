@@ -222,7 +222,7 @@ class _HomeState extends State<Home> {
                   title: Text(
                     "Sign Out",
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 12.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
 
