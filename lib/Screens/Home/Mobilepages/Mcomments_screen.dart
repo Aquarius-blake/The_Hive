@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:forum3/shared/Widgets/Comment_card.dart';
+import 'package:provider/provider.dart';
+
+import '../../../Models/Users1.dart';
+import '../../../Provider/user_provider.dart';
 
 class McommentsScreen extends StatefulWidget {
   const McommentsScreen({Key? key}) : super(key: key);
@@ -11,6 +15,8 @@ class McommentsScreen extends StatefulWidget {
 class _McommentsScreenState extends State<McommentsScreen> {
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
@@ -38,7 +44,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
             child: Row(
               children: [
                 CircleAvatar(
-                  //backgroundColor: NetworkImage(),
+                backgroundImage: NetworkImage(user1.ppurl!),
                   radius: 18,
                 ),
                 Expanded(
