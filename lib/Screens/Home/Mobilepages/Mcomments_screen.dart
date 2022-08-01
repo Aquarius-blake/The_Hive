@@ -8,7 +8,8 @@ import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 
 class McommentsScreen extends StatefulWidget {
-  const McommentsScreen({Key? key}) : super(key: key);
+  final snap;
+  const McommentsScreen({Key? key,this.snap}) : super(key: key);
 
   @override
   State<McommentsScreen> createState() => _McommentsScreenState();

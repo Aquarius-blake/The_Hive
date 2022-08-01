@@ -238,7 +238,9 @@ likedf(authoruid, list);
                         onPressed: (){
                           Navigator.of(context).push(
                               MaterialPageRoute(
-                                  builder: (context)=>McommentsScreen(),
+                                  builder: (context)=>McommentsScreen(
+                                    snap: widget.snap,
+                                  ),
                               )
                           );
                         },
