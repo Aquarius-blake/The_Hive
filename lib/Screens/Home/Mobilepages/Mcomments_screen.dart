@@ -81,7 +81,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
                   ),
                 ),
                 ElevatedButton(
-                    onPressed: ()=>commenting(widget.snap['postid'], text.text, user1.UID!, user1.Username!, user1.ppurl!),
+                    onPressed: ()=>commenting(widget.snap['Post Uid'], text.text, user1.UID!, user1.Username!, user1.ppurl!),
                     child: const Text("Post"),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0,
