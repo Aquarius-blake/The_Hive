@@ -77,7 +77,7 @@ RichText(
                 children: [
                   TextButton(
                       onPressed: (){},
-                      child: Text(
+                      child: const Text(
                         "Edit",
                         style: TextStyle(
 
@@ -86,7 +86,7 @@ RichText(
                   ),
                   TextButton(
                       onPressed: (){},
-                      child: Text(
+                      child: const Text(
                         "Delete",
                       )
                   ),
