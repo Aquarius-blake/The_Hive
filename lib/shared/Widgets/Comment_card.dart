@@ -22,7 +22,9 @@ class _CommentcardState extends State<Commentcard> {
                 ],
               ),
               Row(
+                children: [
 
+                ],
               )
             ],
           ),
