@@ -39,7 +39,9 @@ RichText(
   children: [
     TextSpan(
       text: "Username",
-      style: const TextStyle(),
+      style: const TextStyle(
+        color: Colors.black,
+      ),
     )
 
   ],
