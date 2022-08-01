@@ -28,7 +28,6 @@ class Comments{
   );
 
   Map<String,dynamic> toJson()=>{
-
     "author uid":author_uid,
     "author":author,
     "title":title,
@@ -47,7 +46,7 @@ class Comments{
         author: snapshot['author'],
         Timeposted: snapshot['Comment Time'],
         ppurl: snapshot['Profile Pic'],
-        commentuid: snapshot['Commment Uid'],
+        commentuid: snapshot['Comment Uid'],
         likes: snapshot['likes'],
         title: snapshot['title']
     );
