@@ -34,7 +34,16 @@ class _CommentcardState extends State<Commentcard> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-RichText(text: TextSpan())
+RichText(
+    text: TextSpan(
+  children: [
+    TextSpan(
+      text: "Username"
+    )
+
+  ],
+),
+)
                     ],
                     ),
                   )
