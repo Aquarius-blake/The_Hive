@@ -43,7 +43,14 @@ RichText(
         color: Colors.black,
         fontWeight: FontWeight.bold,
       ),
-    )
+    ),
+    TextSpan(
+      text: "Comment",
+      style: const TextStyle(
+        color: Colors.black,
+        fontWeight: FontWeight.bold,
+      ),
+    ),
 
   ],
 ),
