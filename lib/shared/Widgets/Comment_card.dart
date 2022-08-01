@@ -30,7 +30,10 @@ class _CommentcardState extends State<Commentcard> {
                     (padding: const EdgeInsets.only(
                     left: 12,
                   ),
-                    child: Column(),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+
+                    ),
                   )
                 ],
               ),
