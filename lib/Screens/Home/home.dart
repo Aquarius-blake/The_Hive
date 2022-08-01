@@ -199,12 +199,12 @@ class _HomeState extends State<Home> {
                 ListTile(
                   leading: const Icon(Icons.person,
                     color: Colors.black,
-                    size:0.0,
+                    size:20.0,
                   ),
                   title: const Text(
                     "Profile",
                     style: TextStyle(
-                      fontSize: 15.0,
+                      fontSize: 12.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
 
