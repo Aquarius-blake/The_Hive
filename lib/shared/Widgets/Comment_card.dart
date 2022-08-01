@@ -12,6 +12,10 @@ class _CommentcardState extends State<Commentcard> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(
+        vertical: 18,
+        horizontal: 16,
+      ),
       child: Card(
         child: Container(
           child: Column(
