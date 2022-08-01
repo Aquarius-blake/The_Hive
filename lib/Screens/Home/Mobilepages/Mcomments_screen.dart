@@ -20,6 +20,8 @@ class _McommentsScreenState extends State<McommentsScreen> {
     String ress=await FirestoreMethods().postcomment(postid, text, author_uid, author, ppurl);
     if( ress=="Comment success"){
       Showsnackbar(ress, context);
+    }else if(ress=="Empty field"){
+      Showsnackbar(ress, context);
     }
   }
 
