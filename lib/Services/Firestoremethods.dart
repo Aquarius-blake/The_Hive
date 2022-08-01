@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:forum3/Models/Comments.dart';
 import 'package:forum3/Models/Posts.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 
@@ -72,7 +73,9 @@ Future <String> Uploadpost(
 
     try{
         if(text.isNotEmpty){
-
+String commentid=const Uuid().v1();
+Comments comments=Comments(author_uid: author_uid, commentuid: commentid, detail: text, author: author, Timeposted: DateTime.now(), );
+_firestore.collection("Posts").doc(postid).collection("comments").doc(commentid).set(comments.toJson());
         }
         return "";
     }catch(e){

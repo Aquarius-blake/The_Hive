@@ -11,8 +11,6 @@ class Comments{
   late final  Timeposted;
   late final String? ppurl;
   late final String commentuid;
-  late final List likes;
-
 
   Comments(
       { required this.author_uid,
@@ -21,7 +19,6 @@ class Comments{
     required this.author,
     required  this.Timeposted,
     this.ppurl,
-    required this.likes,
   }
   );
 
@@ -32,7 +29,6 @@ class Comments{
     "Profile Pic":ppurl,
     "Comment Uid":commentuid,
     "detail":detail,
-    "likes":likes,
   };
 
   static Comments? FromSnap(DocumentSnapshot snap){
@@ -44,7 +40,6 @@ class Comments{
         Timeposted: snapshot['Comment Time'],
         ppurl: snapshot['Profile Pic'],
         commentuid: snapshot['Comment Uid'],
-        likes: snapshot['likes'],
     );
 
     return Comments12;
