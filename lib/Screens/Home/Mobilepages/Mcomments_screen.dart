@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Widgets/Comment_card.dart';
 
 class McommentsScreen extends StatefulWidget {
   const McommentsScreen({Key? key}) : super(key: key);
@@ -74,6 +75,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
             ),
           )
       ),
+      body: Commentcard(),
     );
   }
 }
