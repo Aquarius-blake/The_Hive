@@ -70,7 +70,7 @@ class FirestoreMethods{
 
 
     Future<String> postcomment(String postid, String text,String author_uid,String author,String ppurl) async{
-
+String ress;
         try{
             if(text.isNotEmpty){
                 String commentid=const Uuid().v1();
@@ -86,6 +86,8 @@ class FirestoreMethods{
                     comments.toJson(),
                     SetOptions(merge: true)
                 );
+               ress="Comment success";
+               return ress;
             }
             return "";
         }catch(e){
