@@ -33,6 +33,9 @@ class _CommentcardState extends State<Commentcard> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+
+                    ],
                     ),
                   )
                 ],
