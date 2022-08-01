@@ -76,11 +76,15 @@ RichText(
                 children: [
                   TextButton(
                       onPressed: (){},
-                      child: Text("Edit")
+                      child: Text(
+                        "Edit",
+                      )
                   ),
                   TextButton(
                       onPressed: (){},
-                      child: Text("Delete")
+                      child: Text(
+                        "Delete",
+                      )
                   ),
                 ],
               )
