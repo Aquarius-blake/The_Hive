@@ -14,7 +14,9 @@ class _CommentcardState extends State<Commentcard> {
     return Container(
       child: Card(
         child: Container(
+child: Column(
 
+),
         ),
       ),
     );
