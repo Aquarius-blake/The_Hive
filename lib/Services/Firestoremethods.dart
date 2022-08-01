@@ -68,5 +68,16 @@ Future <String> Uploadpost(
     }
 
 
+    Future<String> postcomment()async{
+
+    try{
+        return "";
+    }catch(e){
+        return e.toString();
+    }
+    }
+
+
+
 
 }
