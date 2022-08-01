@@ -16,18 +16,17 @@ class Comments{
   late final List likes;
 
 
-  Comments({ required this.author_uid,
+  Comments(
+      { required this.author_uid,
     required this.postuid,
     required  this.detail,
     required this.author,
     this.title,
     required  this.Timeposted,
     this.ppurl,
-    this.imageUrl,
     required this.likes,
-
-
-  });
+  }
+  );
 
   Map<String,dynamic> toJson()=>{
 
