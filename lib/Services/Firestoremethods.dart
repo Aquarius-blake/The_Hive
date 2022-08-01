@@ -71,6 +71,9 @@ Future <String> Uploadpost(
     Future<String> postcomment(String postid, String text,String author_uid,String author,String ppurl) async{
 
     try{
+        if(text.isNotEmpty){
+
+        }
         return "";
     }catch(e){
         return e.toString();
