@@ -7,7 +7,6 @@ class Comments{
 
   late final  String? author_uid;
   late final String? author;
-  late final String? title;
   late final String? detail;
   late final  Timeposted;
   late final String? ppurl;
@@ -20,7 +19,6 @@ class Comments{
     required this.commentuid,
     required  this.detail,
     required this.author,
-    this.title,
     required  this.Timeposted,
     this.ppurl,
     required this.likes,
@@ -30,7 +28,6 @@ class Comments{
   Map<String,dynamic> toJson()=>{
     "author uid":author_uid,
     "author":author,
-    "title":title,
     "Comment Time":Timeposted,
     "Profile Pic":ppurl,
     "Comment Uid":commentuid,
@@ -48,7 +45,6 @@ class Comments{
         ppurl: snapshot['Profile Pic'],
         commentuid: snapshot['Comment Uid'],
         likes: snapshot['likes'],
-        title: snapshot['title']
     );
 
     return Comments12;
