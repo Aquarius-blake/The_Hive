@@ -17,7 +17,9 @@ class _CommentcardState extends State<Commentcard> {
 child: Column(
 children: [
 Row(
+children: [
 
+],
 )
 ],
 ),
