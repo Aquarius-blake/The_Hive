@@ -28,46 +28,46 @@ class _CommentcardState extends State<Commentcard> {
                   ),
                   Padding(
                     padding: const EdgeInsets.only(
-                    left: 12,
-                  ),
+                      left: 12,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-RichText(
-    text: TextSpan(
-  children: [
-    TextSpan(
-      text: "Username",
-      style: const TextStyle(
-        color: Colors.black,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    TextSpan(
-      text: "Comment",
-      style: const TextStyle(
-        color: Colors.black,
-        fontStyle: FontStyle.italic,
-      ),
-    ),
+                      children: [
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "Username",
+                                style: const TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              TextSpan(
+                                text: "Comment",
+                                style: const TextStyle(
+                                  color: Colors.black,
+                                  fontStyle: FontStyle.italic,
+                                ),
+                              ),
 
-  ],
-),
-),
-                 Padding(
-                    padding: const EdgeInsets.only(
-                      top: 4.0,),
-                   child: Text(
-                     "Date",
-                     style: const TextStyle(
-                       color: Colors.grey,
-                       fontSize: 10,
-                       fontStyle: FontStyle.italic
-                     ),
-                   ),
-                )
-                    ],
+                            ],
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(
+                            top: 4.0,),
+                          child: Text(
+                            "Date",
+                            style: const TextStyle(
+                                color: Colors.grey,
+                                fontSize: 10,
+                                fontStyle: FontStyle.italic
+                            ),
+                          ),
+                        )
+                      ],
                     ),
                   )
                 ],
@@ -80,7 +80,7 @@ RichText(
                       child: const Text(
                         "Edit",
                         style: TextStyle(
-color: Colors.lightBlueAccent,
+                          color: Colors.lightBlueAccent,
                         ),
                       )
                   ),
@@ -89,7 +89,7 @@ color: Colors.lightBlueAccent,
                       child: const Text(
                         "Delete",
                         style: TextStyle(
-color: Colors.lightBlueAccent,
+                          color: Colors.lightBlueAccent,
                         ),
                       )
                   ),
