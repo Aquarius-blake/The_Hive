@@ -18,6 +18,7 @@ class _CommentcardState extends State<Commentcard> {
       ),
       child: Card(
         child: Container(
+          padding: EdgeInsets.all(5.0),
           child: Column(
             children: [
               Row(
