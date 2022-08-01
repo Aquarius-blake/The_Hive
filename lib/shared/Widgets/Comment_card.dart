@@ -80,7 +80,7 @@ RichText(
                       child: const Text(
                         "Edit",
                         style: TextStyle(
-
+color: Colors.lightBlueAccent,
                         ),
                       )
                   ),
