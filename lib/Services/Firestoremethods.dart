@@ -68,7 +68,7 @@ Future <String> Uploadpost(
     }
 
 
-    Future<String> postcomment(String postid, String text) async{
+    Future<String> postcomment(String postid, String text,String author_uid,String author) async{
 
     try{
         return "";
