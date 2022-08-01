@@ -89,7 +89,7 @@ color: Colors.lightBlueAccent,
                       child: const Text(
                         "Delete",
                         style: TextStyle(
-
+color: Colors.lightBlueAccent,
                         ),
                       )
                   ),
