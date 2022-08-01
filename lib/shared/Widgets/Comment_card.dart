@@ -60,7 +60,7 @@ RichText(
                       top: 4.0,),
                    child: Text(
                      "Date",
-                     style: TextStyle(
+                     style: const TextStyle(
                        color: Colors.grey,
                        fontSize: 10,
                        fontStyle: FontStyle.italic
