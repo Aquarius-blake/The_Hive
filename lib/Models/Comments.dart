@@ -11,14 +11,13 @@ class Comments{
   late final String? detail;
   late final  Timeposted;
   late final String? ppurl;
-  late final String? imageUrl;
-  late final String postuid;
+  late final String commentuid;
   late final List likes;
 
 
   Comments(
       { required this.author_uid,
-    required this.postuid,
+    required this.commentuid,
     required  this.detail,
     required this.author,
     this.title,
@@ -35,7 +34,7 @@ class Comments{
     "title":title,
     "Post Time":Timeposted,
     "Profile Pic":ppurl,
-    "Post Uid":postuid,
+    "Comment Uid":commentuid,
     "detail":detail,
     "likes":likes,
   };
@@ -48,7 +47,7 @@ class Comments{
         author: snapshot['author'],
         Timeposted: snapshot['Post Time'],
         ppurl: snapshot['Profile Pic'],
-        postuid: snapshot['Post Uid'],
+        commentuid: snapshot['Commment Uid'],
         likes: snapshot['likes'],
         title: snapshot['title']
     );
