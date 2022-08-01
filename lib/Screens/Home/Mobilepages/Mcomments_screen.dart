@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/Comment_card.dart';
 import 'package:provider/provider.dart';
 
@@ -13,6 +15,14 @@ class McommentsScreen extends StatefulWidget {
 }
 
 class _McommentsScreenState extends State<McommentsScreen> {
+
+  commenting(String postid, String text,String author_uid,String author,String ppurl) async{
+    String ress=await FirestoreMethods().postcomment(postid, text, author_uid, author, ppurl);
+    if( ress=="Comment success"){
+      Showsnackbar(ress, context);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
