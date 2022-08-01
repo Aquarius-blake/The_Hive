@@ -68,7 +68,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
                       elevation: 0.0,
                       shadowColor: Colors.black,
                       primary: Colors.lightBlueAccent,
-                      side: BorderSide(
+                      side: const BorderSide(
                         color: Colors.white70,
                         width: 2.0,
                       ),
