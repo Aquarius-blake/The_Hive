@@ -74,7 +74,10 @@ RichText(
               ),
               Row(
                 children: [
-                  TextButton(onPressed: (){}, child: Text("Edit"))
+                  TextButton(
+                      onPressed: (){},
+                      child: Text("Edit")
+                  )
                 ],
               )
             ],
