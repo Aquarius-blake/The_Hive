@@ -23,7 +23,9 @@ class _CommentcardState extends State<Commentcard> {
             children: [
               Row(
                 children: [
+CircleAvatar(
 
+)
                 ],
               ),
               Row(
