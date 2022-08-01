@@ -217,9 +217,10 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(height: 10,),
                 ListTile(
-                  leading: Icon(LineIcons.alternateSignOut,
-                    color: Colors.black, size:20.0,),
-                  title: Text(
+                  leading: const Icon(LineIcons.alternateSignOut,
+                    color: Colors.black,
+                    size:20.0,),
+                  title: const Text(
                     "Sign Out",
                     style: TextStyle(
                       fontSize: 12.0,
