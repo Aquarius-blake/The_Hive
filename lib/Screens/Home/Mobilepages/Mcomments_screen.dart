@@ -58,7 +58,7 @@ text.dispose();
         centerTitle: true,
       ),
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").snapshots(),
+        stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").orderBy("Comment Time").snapshots(),
           builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
             if(snapshots.connectionState==ConnectionState.waiting){
               return const Center(
