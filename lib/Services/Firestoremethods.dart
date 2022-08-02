@@ -96,8 +96,20 @@ String ress;
         }
     }
 
-//Delete post
+            //Delete post
+Future<void>Deletepost()async {}
+
+
+
+
 
 
 
 }
+
+
+
+
+
+
+
