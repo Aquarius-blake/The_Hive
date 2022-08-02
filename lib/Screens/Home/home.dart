@@ -131,7 +131,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
         elevation: 2.0,
         title: Container(
-          padding: EdgeInsets.only(
+          padding: const EdgeInsets.only(
             right: 40
           ),
           child: Row(
