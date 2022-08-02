@@ -34,7 +34,7 @@ int commentlen=0;
             children: [
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
-                child: Text("Take a Photo"),
+                child: Text("Edit Post"),
                 onPressed: (){},
               ),
               SimpleDialogOption(
