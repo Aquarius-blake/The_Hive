@@ -57,7 +57,7 @@ text.dispose();
         centerTitle: true,
       ),
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['']).collection("comments").snapshots(),
+        stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").snapshots(),
           builder: builder
       ),
       bottomNavigationBar: SafeArea(
