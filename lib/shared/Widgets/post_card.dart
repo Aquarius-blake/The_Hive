@@ -71,6 +71,7 @@ int commentlen=0;
     ):SizedBox();
   }
 
+
   getcommentlen()async{}
 
   void likedf(String authoruid,List list){
@@ -79,6 +80,11 @@ int commentlen=0;
         liked=true;
       }else{liked=false;}
     });
+  }
+  @override
+  void initState() {
+    super.initState();
+    getcommentlen();
   }
 
   @override
