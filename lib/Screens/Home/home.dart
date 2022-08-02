@@ -219,11 +219,11 @@ class _HomeState extends State<Home> {
                 ListTile(
                   leading: const Icon(LineIcons.alternateSignOut,
                     color: Colors.black,
-                    size:20.0,),
+                    size:30.0,),
                   title: const Text(
                     "Sign Out",
                     style: TextStyle(
-                      fontSize: 12.0,
+                      fontSize: 16.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
 
