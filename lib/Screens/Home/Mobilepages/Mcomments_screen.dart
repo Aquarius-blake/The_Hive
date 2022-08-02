@@ -19,8 +19,8 @@ class McommentsScreen extends StatefulWidget {
 class _McommentsScreenState extends State<McommentsScreen> {
 
 
-  commenting(String postid, String text,String author_uid,String author,String ppurl) async{
-    String ress=await FirestoreMethods().postcomment(postid, text, author_uid, author, ppurl);
+  commenting(String postid, String textt,String author_uid,String author,String ppurl) async{
+    String ress=await FirestoreMethods().postcomment(postid, textt, author_uid, author, ppurl);
     if( ress=="Comment success"){
       Showsnackbar(ress, context);
     }else if(ress=="Empty field"){
@@ -29,6 +29,9 @@ class _McommentsScreenState extends State<McommentsScreen> {
     }else{
       Showsnackbar(ress, context);
     }
+    setState(() {
+      text.text="";
+    });
 
   }
   TextEditingController text=TextEditingController();
