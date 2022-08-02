@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
+
+import '../../Models/Users1.dart';
+import '../../Provider/user_provider.dart';
 
 class Commentcard extends StatefulWidget {
   final snap;
@@ -12,6 +16,7 @@ class Commentcard extends StatefulWidget {
 class _CommentcardState extends State<Commentcard> {
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Container(
       padding: const EdgeInsets.symmetric(
         vertical: 18,
