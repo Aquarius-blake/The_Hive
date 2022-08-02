@@ -33,7 +33,7 @@ class _McommentsScreenState extends State<McommentsScreen> {
 
   @override
   void dispose() {
-
+text.dispose();
     super.dispose();
   }
 
