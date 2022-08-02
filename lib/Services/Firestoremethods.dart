@@ -70,7 +70,7 @@ class FirestoreMethods{
 
 
     Future<String> postcomment(String postid, String text,String author_uid,String author,String ppurl) async{
-String ress;
+        String ress;
         try{
             if(text.isNotEmpty){
                 String commentid=const Uuid().v1();
@@ -82,12 +82,12 @@ String ress;
                     Timeposted: DateTime.now(),
                     ppurl: ppurl
                 );
-               await _firestore.collection("Posts").doc(postid).collection("comments").doc(commentid).set(
+                await _firestore.collection("Posts").doc(postid).collection("comments").doc(commentid).set(
                     comments.toJson(),
                     SetOptions(merge: true)
                 );
-               ress="Comment success";
-               return ress;
+                ress="Comment success";
+                return ress;
             }
             return "Empty field";
         }catch(e){
@@ -96,19 +96,19 @@ String ress;
         }
     }
 
-            //Delete post
-Future<String>Deletepost(String postid)async {
-       String ress="";
+    //Delete post
+    Future<String>Deletepost(String postid)async {
+        String ress="";
         try{
-          await  _firestore.collection("Posts").doc(postid).delete();
-ress="Post Deleted";
-return ress;
+            await  _firestore.collection("Posts").doc(postid).delete();
+            ress="Post Deleted";
+            return ress;
         }
         catch(e){
-ress=e.toString();
-return ress;
+            ress=e.toString();
+            return ress;
         }
-}
+    }
 
 
 
