@@ -186,7 +186,7 @@ class _HomeState extends State<Home> {
 
                           child: Text(
                             user1.Username!,
-                            style: TextStyle(
+                            style: const TextStyle(
                               fontSize: 16,
 
                             ),
