@@ -100,7 +100,7 @@ String ress;
 Future<void>Deletepost(String postid)async {
        String ress="";
         try{
-            _firestore.collection("Posts").doc(postid).delete();
+          await  _firestore.collection("Posts").doc(postid).delete();
 ress="Post Deleted";
         }
         catch(e){
