@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:forum3/shared/Widgets/Comment_card.dart';
 import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
@@ -58,7 +59,19 @@ text.dispose();
       ),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").snapshots(),
-          builder: builder
+          builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
+            if(snapshots.connectionState==ConnectionState.waiting){
+              return Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            return ListView.builder(
+                itemCount: snapshots.data!.docs.length,
+                itemBuilder: (context, index) => Container(
+                  child: Commentcard(),
+                )
+            );
+          }
       ),
       bottomNavigationBar: SafeArea(
           child: Container(
