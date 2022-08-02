@@ -195,7 +195,9 @@ class _HomeState extends State<Home> {
                       ],
                     )
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(
+                  height: 5,
+                ),
                 ListTile(
                   leading: const Icon(Icons.person,
                     color: Colors.black,
