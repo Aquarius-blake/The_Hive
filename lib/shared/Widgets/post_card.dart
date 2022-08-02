@@ -252,7 +252,7 @@ likedf(authoruid, list);
                     Expanded(
                         child: SizedBox()
                     ),
-                    Text("12344"),
+                    Text("$commentlen"),
                     IconButton(
                         onPressed: (){
                           Navigator.of(context).push(
