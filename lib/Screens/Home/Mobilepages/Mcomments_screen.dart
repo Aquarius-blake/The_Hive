@@ -32,6 +32,12 @@ class _McommentsScreenState extends State<McommentsScreen> {
   TextEditingController text=TextEditingController();
 
   @override
+  void dispose() {
+
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
