@@ -30,7 +30,7 @@ int commentlen=0;
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: Text("Create Post"),
+            title: const Text("More options"),
             children: [
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
