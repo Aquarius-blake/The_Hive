@@ -60,27 +60,23 @@ text.dispose();
         ),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          StreamBuilder(
-            stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").orderBy("Comment Time").snapshots(),
-              builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
-                if(snapshots.connectionState==ConnectionState.waiting){
-                  return const Center(
-                    child: CircularProgressIndicator(),
-                  );
-                }
-                return ListView.builder(
-                    itemCount: snapshots.data!.docs.length,
-                    itemBuilder: (context, index) => Container(
-                      child: Commentcard(
-                        snap: snapshots.data!.docs[index].data(),
-                      ),
-                    )
-                );
-              }
-          ),
-        ],
+      body: StreamBuilder(
+        stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").orderBy("Comment Time").snapshots(),
+          builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
+            if(snapshots.connectionState==ConnectionState.waiting){
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            return ListView.builder(
+                itemCount: snapshots.data!.docs.length,
+                itemBuilder: (context, index) => Container(
+                  child: Commentcard(
+                    snap: snapshots.data!.docs[index].data(),
+                  ),
+                )
+            );
+          }
       ),
       bottomNavigationBar: SafeArea(
           child: Container(
