@@ -62,7 +62,6 @@ text.dispose();
       ),
       body: Column(
         children: [
-          SizedBox(height: 10,),
           StreamBuilder(
             stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").orderBy("Comment Time").snapshots(),
               builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
