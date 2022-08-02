@@ -40,7 +40,9 @@ int commentlen=0;
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
                 child: Text("Delete"),
-                onPressed: (){},
+                onPressed: ()async{
+                  await FirestoreMethods().Deletepost(widget.snap['Post Uid']);
+                },
               ),
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
