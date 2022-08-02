@@ -100,7 +100,7 @@ String ress;
 Future<void>Deletepost(String postid)async {
        String ress="";
         try{
-
+ress="Post Deleted";
         }
         catch(e){
 ress=e.toString();
