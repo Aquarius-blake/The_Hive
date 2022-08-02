@@ -97,7 +97,7 @@ String ress;
     }
 
             //Delete post
-Future<void>Deletepost()async {}
+Future<void>Deletepost(String postid)async {}
 
 
 
