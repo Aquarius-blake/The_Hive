@@ -77,6 +77,7 @@ int commentlen=0;
   getcommentlen()async{
     try{
 QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").get();
+commentlen=snapshot.docs.length;
     }
     catch(e){
       Showsnackbar(e.toString(), context);
