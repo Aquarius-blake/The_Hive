@@ -25,7 +25,7 @@ bool liked=false;
 int commentlen=0;
 
 
-  _selectimage(BuildContext context)async{
+  _options(BuildContext context)async{
     return showDialog(
         context: context,
         builder: (context){
@@ -176,30 +176,7 @@ likedf(authoruid, list);
                       )
                   ),
                   IconButton(
-                    onPressed: (){
-                      showDialog(context: context, builder: (context)=>Dialog(
-                        child: ListView(
-                          padding: const EdgeInsets.symmetric(
-                            vertical: 16,),
-                          shrinkWrap: true,
-                          children: [
-                            'Edit',
-                            'Delete'
-                          ].map((e) => InkWell(
-                            onTap: (){},
-                            child: Container(
-                              padding: EdgeInsets.symmetric(
-                                vertical: 12,
-                                horizontal: 16,
-                              ),
-                              child: Text(e),
-                            ),
-                          )
-                          ).toList(),
-                        ),
-                      )
-                      );
-                    },
+                    onPressed: ()=>_options(context),
                     icon: const Icon(
                       Icons.more_vert,
                       color: Colors.black,
