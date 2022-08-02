@@ -215,7 +215,7 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/Profile');
                   },
                 ),
-                SizedBox(height: 10,),
+                const SizedBox(height: 5,),
                 ListTile(
                   leading: const Icon(LineIcons.alternateSignOut,
                     color: Colors.black,
