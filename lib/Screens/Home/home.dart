@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
             children: <Widget>[
               Text(
                 "$title",
-                style: TextStyle(
+                style: const TextStyle(
                             color: Colors.black
                 ),
               )
