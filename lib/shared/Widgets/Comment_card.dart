@@ -19,7 +19,7 @@ class _CommentcardState extends State<Commentcard> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Container(
       padding: const EdgeInsets.symmetric(
-        vertical: 18,
+        vertical: 10,
         horizontal: 16,
       ),
       child: Card(
