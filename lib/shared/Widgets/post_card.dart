@@ -41,7 +41,8 @@ int commentlen=0;
                 padding: EdgeInsets.all(15.0),
                 child: Text("Delete"),
                 onPressed: ()async{
-                  await FirestoreMethods().Deletepost(widget.snap['Post Uid']);
+                String ress=  await FirestoreMethods().Deletepost(widget.snap['Post Uid']);
+                Showsnackbar(ress, context);
                 },
               ),
               SimpleDialogOption(
