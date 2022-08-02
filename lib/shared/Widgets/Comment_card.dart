@@ -25,7 +25,7 @@ class _CommentcardState extends State<Commentcard> {
                 children: [
                   CircleAvatar(
                     radius: 16,
-                    backgroundImage: NetworkImage(widget.snap['ppurl']),
+                    backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                   ),
                   Expanded(
                     child: Padding(
@@ -40,7 +40,7 @@ class _CommentcardState extends State<Commentcard> {
                             text: TextSpan(
                               children: [
                                 TextSpan(
-                                  text: "Username",
+                                  text: widget.snap['author'],
                                   style: const TextStyle(
                                     color: Colors.black,
                                     fontWeight: FontWeight.bold,
