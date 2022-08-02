@@ -81,7 +81,7 @@ class _CommentcardState extends State<Commentcard> {
                   )
                 ],
               ),
-              Row(
+           widget.snap['author uid']==user1.UID?   Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TextButton(
@@ -103,7 +103,7 @@ class _CommentcardState extends State<Commentcard> {
                       )
                   ),
                 ],
-              )
+              ):SizedBox(),
             ],
           ),
         ),
