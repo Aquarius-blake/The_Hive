@@ -43,6 +43,7 @@ int commentlen=0;
                 onPressed: ()async{
                 String ress=  await FirestoreMethods().Deletepost(widget.snap['Post Uid']);
                 Showsnackbar(ress, context);
+                Navigator.of(context).pop();
                 },
               ),
               SimpleDialogOption(
