@@ -98,7 +98,12 @@ String ress;
 
             //Delete post
 Future<void>Deletepost(String postid)async {
-        try{}catch(e){}
+        try{
+
+        }
+        catch(e){
+
+        }
 }
 
 
