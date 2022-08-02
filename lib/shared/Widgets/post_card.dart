@@ -24,7 +24,7 @@ class _PostCardState extends State<PostCard> {
 bool liked=false;
 int commentlen=0;
 
-
+//more options
   _options(BuildContext context)async{
     return showDialog(
         context: context,
