@@ -24,6 +24,40 @@ class _PostCardState extends State<PostCard> {
 bool liked=false;
 int commentlen=0;
 
+
+  _selectimage(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: Text("Create Post"),
+            children: [
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Take a Photo"),
+                onPressed: (){},
+              ),
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Delete"),
+                onPressed: (){},
+              ),
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Cancel"),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        }
+    );
+
+  }
+
+
+
   //dynamic _image;
   Widget Postimage(dynamic image,BuildContext context){
     if(image==""){
