@@ -25,6 +25,7 @@ class _CommentcardState extends State<Commentcard> {
                 children: [
                   CircleAvatar(
                     radius: 16,
+                    backgroundImage: NetworkImage(widget.snap['ppurl']),
                   ),
                   Expanded(
                     child: Padding(
