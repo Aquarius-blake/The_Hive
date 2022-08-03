@@ -32,6 +32,8 @@ class _wpostState extends State<wpost> {
       if(res=="success"){
         setState(() {
           _isloading=false;
+          _textEditingController.text="";
+          _textEditingController2.text="";
         });
         Showsnackbar("Post Successful", context);
       }
