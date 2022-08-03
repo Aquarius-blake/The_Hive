@@ -135,7 +135,7 @@ class FirestoreMethods{
     }
 
 //editcomment
-    Future<String?>Editcomment(String postid,String commentid,String details)async{
+    Future<String>Editcomment(String postid,String commentid,String details)async{
         String ress;
         try{
             await  _firestore.collection("Posts").doc(postid).collection('comments').doc(commentid).update({
@@ -143,6 +143,7 @@ class FirestoreMethods{
                 'Comment Time':DateTime.now()
             });
             ress="Comment Successfully Edited";
+            return ress;
         }catch(e){
             ress=e.toString();
             return ress;
