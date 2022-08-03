@@ -9,6 +9,9 @@ class webcomedit extends StatefulWidget {
 }
 
 class _webcomeditState extends State<webcomedit> {
+
+  TextEditingController _comment=TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +34,10 @@ child: Container(
       SizedBox(width: MediaQuery.of(context).size.width,),
       SizedBox(
         child: TextField(
-          decoration: InputDecoration(),
+          controller: _comment,
+          decoration: InputDecoration(
+            hintText: "Edit comment",
+          ),
         ),
       ),
 
