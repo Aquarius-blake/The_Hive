@@ -12,13 +12,13 @@ class _WcommentScreenState extends State<WcommentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-appBar: AppBar(
-title: Text(
-    "",
-style: TextStyle(
+      appBar: AppBar(
+        title: Text(
+          "Discussion",
+          style: TextStyle(
 
-),),
-),
+          ),),
+      ),
     );
   }
 }
