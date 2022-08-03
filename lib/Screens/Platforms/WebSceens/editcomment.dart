@@ -59,6 +59,7 @@ child: Container(
       ),
 Divider(),
       Align(
+        alignment: Alignment.bottomRight,
         child: ElevatedButton(
           onPressed: (){},
           child: Text("Comment"),
