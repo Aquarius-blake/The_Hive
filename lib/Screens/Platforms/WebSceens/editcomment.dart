@@ -63,6 +63,9 @@ Divider(
   thickness: 2,
   height: 20,
 ),
+      SizedBox(
+        height: 20,
+      ),
       Align(
         alignment: Alignment.bottomRight,
         child: ElevatedButton(
