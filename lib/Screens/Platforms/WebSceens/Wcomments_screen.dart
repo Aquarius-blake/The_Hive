@@ -12,7 +12,9 @@ class _WcommentScreenState extends State<WcommentScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+appBar: AppBar(
 
+),
     );
   }
 }
