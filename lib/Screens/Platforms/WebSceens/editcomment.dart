@@ -45,8 +45,15 @@ class _webcomeditState extends State<webcomedit> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    CircleAvatar(
-                      backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                        ),
+                        SizedBox(
+                          child: Text(widget.snap['author']),
+                        )
+                      ],
                     ),
                     SizedBox(
                       width: MediaQuery.of(context).size.width*0.7,
