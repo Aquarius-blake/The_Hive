@@ -43,6 +43,7 @@ child: Container(
   padding: EdgeInsets.all(50),
   child: Column(
     children: [
+      CircleAvatar(),
       SizedBox(
         width: MediaQuery.of(context).size.width*0.7,
         child: TextField(
