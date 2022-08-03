@@ -96,6 +96,7 @@ class _CommentcardState extends State<Commentcard> {
                               MaterialPageRoute(
                                 builder: (context)=>webcomedit(
                                   snap: widget.snap,
+                                  postid: widget.postid,
                                 ),
                               )
                           );
