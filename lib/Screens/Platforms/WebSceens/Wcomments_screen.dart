@@ -37,7 +37,8 @@ child: PageView(
   children:  [
     webcom(
     snap: widget.snap,
-  ),]
+  ),],
+      physics: NeverScrollableScrollPhysics(),
 ),
             ),
           ),
