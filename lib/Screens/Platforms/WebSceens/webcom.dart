@@ -27,7 +27,6 @@ class _webcomState extends State<webcom> {
             return ListView.builder(
                 itemCount: snapshots.data!.docs.length,
                 itemBuilder: (context, index) => Container(
-                  padding: EdgeInsets.all(20),
                   child: Commentcard(
                     snap: snapshots.data!.docs[index].data(),
                     postid: widget.snap['Post Uid'],
