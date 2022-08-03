@@ -59,6 +59,7 @@ child: Container(
       ),
 Divider(
   thickness: 2,
+  height: 20,
 ),
       Align(
         alignment: Alignment.bottomRight,
