@@ -276,7 +276,7 @@ likedf(authoruid, list);
                          if(kIsWeb){
                            Navigator.of(context).push(
                                MaterialPageRoute(
-                                 builder: (context)=>WcommentScreen(
+                                 builder: (context)=>Wcommentd(
                                    snap: widget.snap,
                                  ),
                                )

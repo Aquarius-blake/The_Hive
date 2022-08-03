@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class WcommentScreen extends StatefulWidget {
+class Wcommentd extends StatefulWidget {
   final snap;
-  const WcommentScreen({Key? key,this.snap}) : super(key: key);
+  const Wcommentd({Key? key,this.snap}) : super(key: key);
 
   @override
-  State<WcommentScreen> createState() => _WcommentScreenState();
+  State<Wcommentd> createState() => _WcommentdState();
 }
 
-class _WcommentScreenState extends State<WcommentScreen> {
+class _WcommentdState extends State<Wcommentd> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
