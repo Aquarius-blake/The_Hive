@@ -130,16 +130,18 @@ String ress;
 
         }catch(e){
 ress=e.toString();
+return ress;
         }
     }
 
 //editcomment
     Future<String?>Editcomment(String postid,String commentid)async{
-
+String ress;
         try{
 
         }catch(e){
-
+            ress=e.toString();
+return ress;
         }
 
     }
