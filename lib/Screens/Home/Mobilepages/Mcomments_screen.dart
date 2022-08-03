@@ -73,6 +73,7 @@ text.dispose();
                 itemBuilder: (context, index) => Container(
                   child: Commentcard(
                     snap: snapshots.data!.docs[index].data(),
+                    postid: widget.snap['Post Uid'],
                   ),
                 )
             );
