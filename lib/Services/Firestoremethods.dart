@@ -124,12 +124,15 @@ class FirestoreMethods{
     }
 
 //Edit post
-Future<String?>Editpost(String postid)async{
+    Future<String?>Editpost(String postid)async{
 
-}
+        try{}catch(e){}
+    }
 
 //editcomment
     Future<String?>Editcomment(String postid,String commentid)async{
+
+        try{}catch(e){}
 
     }
 
