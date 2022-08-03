@@ -12,6 +12,7 @@ class _webcomeditState extends State<webcomedit> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
         title: const Text(
           "Edit Comment",
