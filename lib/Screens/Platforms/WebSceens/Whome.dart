@@ -44,6 +44,7 @@ web=false;
                   itemBuilder: (context, index) => Container(
                     child: PostCard(
                       snap: snapshot.data!.docs[index].data(),
+                      web: web,
                     ),
                   )
               );
