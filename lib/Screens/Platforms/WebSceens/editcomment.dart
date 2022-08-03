@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 class webcomedit extends StatefulWidget {
   final snap;
-  const webcomedit({Key? key,this.snap}) : super(key: key);
+  final postid;
+  const webcomedit({Key? key,this.snap,this.postid}) : super(key: key);
 
   @override
   State<webcomedit> createState() => _webcomeditState();
@@ -39,43 +40,43 @@ class _webcomeditState extends State<webcomedit> {
           child: Container(
             padding: EdgeInsets.all(50),
             child: Card(
-child: Container(
-  padding: EdgeInsets.all(50),
-  child: Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      CircleAvatar(
-        backgroundImage: NetworkImage(widget.snap['Profile Pic']),
-      ),
-      SizedBox(
-        width: MediaQuery.of(context).size.width*0.7,
-        child: TextField(
-          maxLines: 8,
-          controller: _comment,
-          decoration: const InputDecoration(
-            border: InputBorder.none,
-            hintText: "Edit comment",
-          ),
-        ),
-      ),
+              child: Container(
+                padding: EdgeInsets.all(50),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    CircleAvatar(
+                      backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                    ),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width*0.7,
+                      child: TextField(
+                        maxLines: 8,
+                        controller: _comment,
+                        decoration: const InputDecoration(
+                          border: InputBorder.none,
+                          hintText: "Edit comment",
+                        ),
+                      ),
+                    ),
 
-const  Divider(
-  thickness: 2,
-  height: 20,
-),
-      const SizedBox(
-        height: 20,
-      ),
-      Align(
-        alignment: Alignment.bottomRight,
-        child: ElevatedButton(
-          onPressed: (){},
-          child: Text("Comment"),
-        ),
-      )
-    ],
-  ),
-),
+                    const  Divider(
+                      thickness: 2,
+                      height: 20,
+                    ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: ElevatedButton(
+                        onPressed: (){},
+                        child: Text("Comment"),
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ),
           ),
         ),
