@@ -72,6 +72,18 @@ class _webcomeditState extends State<webcomedit> {
                       child: ElevatedButton(
                         onPressed: (){},
                         child: Text("Comment"),
+                        style: ElevatedButton.styleFrom(
+                            elevation: 0.0,
+                            shadowColor: Colors.black,
+                            primary: Colors.lightBlueAccent,
+                            side: const BorderSide(
+                              color: Colors.white70,
+                              width: 2.0,
+                            ),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(100.0)
+                            )
+                        ),
                       ),
                     )
                   ],
