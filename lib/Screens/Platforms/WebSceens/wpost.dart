@@ -34,6 +34,7 @@ class _wpostState extends State<wpost> {
           _isloading=false;
           _textEditingController.text="";
           _textEditingController2.text="";
+          _image=null;
         });
         Showsnackbar("Post Successful", context);
       }
