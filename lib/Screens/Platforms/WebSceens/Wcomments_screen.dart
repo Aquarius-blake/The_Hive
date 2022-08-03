@@ -24,7 +24,7 @@ class _WcommentdState extends State<Wcommentd> {
       body: SafeArea(
         child: Center(
           child: Container(
-
+child: Card(),
           ),
         ),
       ),
