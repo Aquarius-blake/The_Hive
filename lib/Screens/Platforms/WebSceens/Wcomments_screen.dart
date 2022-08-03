@@ -33,8 +33,11 @@ class _WcommentdState extends State<Wcommentd> {
               shape:  RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0)
               ),
-child: webcom(
-  snap: widget.snap,
+child: PageView(
+  children:  [
+    webcom(
+    snap: widget.snap,
+  ),]
 ),
             ),
           ),
