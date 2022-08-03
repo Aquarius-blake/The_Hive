@@ -57,7 +57,9 @@ child: Container(
           ),
         ),
       ),
-Divider(),
+Divider(
+  thickness: 2,
+),
       Align(
         alignment: Alignment.bottomRight,
         child: ElevatedButton(
