@@ -51,6 +51,9 @@ class _webcomeditState extends State<webcomedit> {
                           backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                         ),
                         SizedBox(
+                          width: MediaQuery.of(context).size.width*0.01,
+                        ),
+                        SizedBox(
                           child: Text(widget.snap['author']),
                         )
                       ],
