@@ -123,7 +123,8 @@ class FirestoreMethods{
         }
     }
 
-
+//Edit post
+Future<String?>Editpost()async{}
 
 
 
