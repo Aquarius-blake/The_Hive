@@ -44,7 +44,7 @@ child: Container(
   child: Column(
     children: [
       CircleAvatar(
-        backgroundImage: NetworkImage(widget.snap['ppurl']),
+        backgroundImage: NetworkImage(widget.snap['Profile Pic']),
       ),
       SizedBox(
         width: MediaQuery.of(context).size.width*0.7,
