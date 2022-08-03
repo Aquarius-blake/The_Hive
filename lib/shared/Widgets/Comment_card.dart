@@ -88,7 +88,7 @@ class _CommentcardState extends State<Commentcard> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TextButton(
-                      onPressed: ()async{},
+                      onPressed: (){},
                       child: const Text(
                         "Edit",
                         style: TextStyle(
