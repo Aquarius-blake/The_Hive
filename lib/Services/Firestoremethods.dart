@@ -124,7 +124,7 @@ class FirestoreMethods{
     }
 
 //Edit post
-    Future<String?>Editpost(String postid)async{
+    Future<String?>Editpost(String postid,String? title)async{
         String ress;
         try{
 
