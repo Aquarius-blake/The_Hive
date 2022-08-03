@@ -42,6 +42,7 @@ class _webcomeditState extends State<webcomedit> {
 child: Container(
   padding: EdgeInsets.all(50),
   child: Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
     children: [
       CircleAvatar(
         backgroundImage: NetworkImage(widget.snap['Profile Pic']),
