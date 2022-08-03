@@ -46,6 +46,7 @@ class _webcomState extends State<webcom> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
+      backgroundColor: Colors.white10,
       body: StreamBuilder(
           stream: FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").orderBy("Comment Time",descending: true).snapshots(),
           builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
