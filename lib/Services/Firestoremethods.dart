@@ -142,6 +142,7 @@ class FirestoreMethods{
                 'detail':details,
                 'Comment Time':DateTime.now()
             });
+            ress="Comment Successfully Edited";
         }catch(e){
             ress=e.toString();
             return ress;
