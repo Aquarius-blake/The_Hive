@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
+import 'package:forum3/shared/Pop_up.dart';
 
 class webcomedit extends StatefulWidget {
   final snap;
@@ -80,7 +82,10 @@ class _webcomeditState extends State<webcomedit> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: ElevatedButton(
-                        onPressed: (){},
+                        onPressed: ()async{
+                          String ress=await FirestoreMethods().Editcomment(widget.postid, widget.snap['Comment Uid'], _comment.text);
+                          Showsnackbar(ress, context);
+                        },
                         child: Text(
                           "Edit Comment",
                           style: TextStyle(
