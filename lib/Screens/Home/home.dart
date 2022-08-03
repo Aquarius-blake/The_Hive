@@ -257,7 +257,7 @@ class _HomeState extends State<Home> {
                   color: Colors.black,
                   thickness: 3,
                 ),
-                Center(
+                const Center(
                   child: Text(
                     "POWERED by Firebase",
                     style: TextStyle(
