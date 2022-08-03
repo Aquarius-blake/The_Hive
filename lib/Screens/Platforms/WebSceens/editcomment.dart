@@ -48,6 +48,7 @@ child: Container(
         backgroundImage: NetworkImage(widget.snap['Profile Pic']),
       ),
       SizedBox(
+        height: MediaQuery.of(context).size.height*0.4,
         width: MediaQuery.of(context).size.width*0.7,
         child: TextField(
           controller: _comment,
@@ -57,6 +58,7 @@ child: Container(
           ),
         ),
       ),
+
 Divider(
   thickness: 2,
   height: 20,
