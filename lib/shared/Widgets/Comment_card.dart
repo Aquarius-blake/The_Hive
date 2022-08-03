@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
+import '../Pop_up.dart';
 
 class Commentcard extends StatefulWidget {
   final snap;
@@ -96,7 +98,9 @@ class _CommentcardState extends State<Commentcard> {
                   ),
                   TextButton(
                       onPressed: ()async{
-
+                        String ress= await FirestoreMethods().Deletecomment(widget.postid, widget.snap['Comment Uid']);
+                        Showsnackbar(ress, context);
+                        Navigator.of(context).pop();
                       },
                       child: const Text(
                         "Delete",
