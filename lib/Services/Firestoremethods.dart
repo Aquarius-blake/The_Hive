@@ -140,6 +140,7 @@ class FirestoreMethods{
         try{
             await  _firestore.collection("Posts").doc(postid).collection('comments').doc(commentid).update({
                 'detail':details,
+                'Comment Time':DateTime.now()
             });
         }catch(e){
             ress=e.toString();
