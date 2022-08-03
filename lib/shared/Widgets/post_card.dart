@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 
 import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
+import '../../Screens/Platforms/WebSceens/Wcomments_screen.dart';
 
 class PostCard extends StatefulWidget {
   final snap;
@@ -273,7 +274,13 @@ likedf(authoruid, list);
                     IconButton(
                         onPressed: (){
                          if(kIsWeb){
-
+                           Navigator.of(context).push(
+                               MaterialPageRoute(
+                                 builder: (context)=>WcommentScreen(
+                                   snap: widget.snap,
+                                 ),
+                               )
+                           );
                          }else{
                            Navigator.of(context).push(
                                MaterialPageRoute(
