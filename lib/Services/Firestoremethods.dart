@@ -129,7 +129,9 @@ Future<String?>Editpost(String postid)async{
 }
 
 //editcomment
-    Future<String?>Editcomment()async{}
+    Future<String?>Editcomment(String postid,String commentid)async{
+
+    }
 
 
 
