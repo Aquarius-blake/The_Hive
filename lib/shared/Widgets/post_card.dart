@@ -35,7 +35,7 @@ class _PostCardState extends State<PostCard> {
             title: const Text("More options"),
             children: [
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Text("Edit Post"),
                 onPressed: (){},
               ),
