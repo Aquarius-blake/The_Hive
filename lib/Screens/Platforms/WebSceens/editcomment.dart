@@ -81,7 +81,12 @@ class _webcomeditState extends State<webcomedit> {
                       alignment: Alignment.bottomRight,
                       child: ElevatedButton(
                         onPressed: (){},
-                        child: Text("Comment"),
+                        child: Text(
+                          "Edit Comment",
+                          style: TextStyle(
+
+                          ),
+                        ),
                         style: ElevatedButton.styleFrom(
                             elevation: 2.0,
                             shadowColor: Colors.black,
