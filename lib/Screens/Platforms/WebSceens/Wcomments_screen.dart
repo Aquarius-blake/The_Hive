@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Platforms/WebSceens/webcom.dart';
 
 class Wcommentd extends StatefulWidget {
   final snap;
@@ -31,7 +32,9 @@ class _WcommentdState extends State<Wcommentd> {
               shape:  RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0)
               ),
-
+child: webcom(
+  snap: widget.snap,
+),
             ),
           ),
         ),
