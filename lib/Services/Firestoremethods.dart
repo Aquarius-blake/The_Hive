@@ -110,10 +110,10 @@ class FirestoreMethods{
         }
     }
 
-    Future<String>Deletecomment(String postid)async {
+    Future<String>Deletecomment(String postid,String commentid)async {
         String ress="";
         try{
-            await  _firestore.collection("Posts").doc(postid).delete();
+            await  _firestore.collection("Posts").doc(postid).collection('comments').doc(commentid).delete();
             ress="Post Deleted";
             return ress;
         }
