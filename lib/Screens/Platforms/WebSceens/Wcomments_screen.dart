@@ -26,7 +26,7 @@ class _WcommentdState extends State<Wcommentd> {
       body: SafeArea(
         child: Center(
           child: Container(
-            padding: EdgeInsets.all(50),
+            padding: const EdgeInsets.all(50),
             child: Card(
               elevation: 15.0,
               color: Colors.white,
