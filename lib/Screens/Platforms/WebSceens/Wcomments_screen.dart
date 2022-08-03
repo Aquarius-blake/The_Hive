@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class WcommentScreen extends StatefulWidget {
-  const WcommentScreen({Key? key}) : super(key: key);
+  final snap;
+  const WcommentScreen({Key? key,this.snap}) : super(key: key);
 
   @override
   State<WcommentScreen> createState() => _WcommentScreenState();
