@@ -30,7 +30,9 @@ child: Container(
     children: [
       SizedBox(width: MediaQuery.of(context).size.width,),
       SizedBox(
-        child: TextField(),
+        child: TextField(
+          decoration: InputDecoration(),
+        ),
       ),
 
     ],
