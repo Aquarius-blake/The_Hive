@@ -29,7 +29,9 @@ child: Container(
   child: Column(
     children: [
       SizedBox(width: MediaQuery.of(context).size.width,),
-      SizedBox()
+      SizedBox(
+        child: TextField(),
+      ),
 
     ],
   ),
