@@ -28,7 +28,8 @@ child: Container(
   padding: EdgeInsets.all(10),
   child: Column(
     children: [
-      SizedBox(width: MediaQuery.of(context).size.width,)
+      SizedBox(width: MediaQuery.of(context).size.width,),
+      SizedBox()
 
     ],
   ),
