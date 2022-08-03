@@ -13,6 +13,12 @@ class _webcomeditState extends State<webcomedit> {
   TextEditingController _comment=TextEditingController();
 
   @override
+  void initState() {
+    _comment.text=widget.snap['detail'];
+    super.initState();
+  }
+
+  @override
   void dispose() {
     _comment.dispose();
     super.dispose();
