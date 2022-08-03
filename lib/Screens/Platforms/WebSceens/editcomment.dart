@@ -23,6 +23,7 @@ class _webcomeditState extends State<webcomedit> {
           child: Container(
             child: Card(
 child: Container(
+  padding: EdgeInsets.all(10),
   child: Column(
     children: [
 
