@@ -23,8 +23,8 @@ class PostCard extends StatefulWidget {
 
 class _PostCardState extends State<PostCard> {
   bool islikeanimating=false;
-bool liked=false;
-int commentlen=0;
+  bool liked=false;
+  int commentlen=0;
 
 //more options
   _options(BuildContext context)async{
@@ -43,9 +43,9 @@ int commentlen=0;
                 padding: EdgeInsets.all(15.0),
                 child: Text("Delete"),
                 onPressed: ()async{
-                String ress=  await FirestoreMethods().Deletepost(widget.snap['Post Uid']);
-                Showsnackbar(ress, context);
-                Navigator.of(context).pop();
+                  String ress=  await FirestoreMethods().Deletepost(widget.snap['Post Uid']);
+                  Showsnackbar(ress, context);
+                  Navigator.of(context).pop();
                 },
               ),
               SimpleDialogOption(
@@ -73,7 +73,7 @@ int commentlen=0;
     }
     return image!=null? GestureDetector(
       onDoubleTap: ()async{
-       await FirestoreMethods().likepost(
+        await FirestoreMethods().likepost(
             widget.snap['Post Uid'],
             widget.snap['author uid'],
             widget.snap['likes']
@@ -116,10 +116,10 @@ int commentlen=0;
 
   getcommentlen()async{
     try{
-QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").get();
-setState(() {
-  commentlen=snapshot.docs.length;
-});    }
+      QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").get();
+      setState(() {
+        commentlen=snapshot.docs.length;
+      });    }
     catch(e){
       Showsnackbar(e.toString(), context);
     }
@@ -141,9 +141,9 @@ setState(() {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-String authoruid=user1.UID!;
-List list=widget.snap['likes'];
-likedf(authoruid, list);
+    String authoruid=user1.UID!;
+    List list=widget.snap['likes'];
+    likedf(authoruid, list);
     return Container(
       padding: const EdgeInsets.only(
         top: 5,
@@ -181,7 +181,7 @@ likedf(authoruid, list);
                           )
                       )
                   ),
-              widget.snap['author uid']==user1.UID? IconButton(
+                  widget.snap['author uid']==user1.UID? IconButton(
                     onPressed: ()=>_options(context),
                     icon: const Icon(
                       Icons.more_vert,
@@ -251,14 +251,14 @@ likedf(authoruid, list);
                       smallLike: true,
                       child: IconButton(
                           onPressed: ()async{
-                         await   FirestoreMethods().likepost(
+                            await   FirestoreMethods().likepost(
                                 widget.snap['Post Uid'],
                                 user1.UID!,
                                 widget.snap['likes']
                             );
                           },
                           icon: liked? Icon(
-                              Icons.favorite,
+                            Icons.favorite,
                             color: Colors.red,
                           )
                               : Icon(
@@ -273,23 +273,23 @@ likedf(authoruid, list);
                     Text("$commentlen"),
                     IconButton(
                         onPressed: (){
-                         if(kIsWeb){
-                           Navigator.of(context).push(
-                               MaterialPageRoute(
-                                 builder: (context)=>Wcommentd(
-                                   snap: widget.snap,
-                                 ),
-                               )
-                           );
-                         }else{
-                           Navigator.of(context).push(
-                               MaterialPageRoute(
-                                 builder: (context)=>McommentsScreen(
-                                   snap: widget.snap,
-                                 ),
-                               )
-                           );
-                         }
+                          if(kIsWeb){
+                            Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context)=>Wcommentd(
+                                    snap: widget.snap,
+                                  ),
+                                )
+                            );
+                          }else{
+                            Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context)=>McommentsScreen(
+                                    snap: widget.snap,
+                                  ),
+                                )
+                            );
+                          }
                         },
                         icon: Icon(
                           Icons.comment_outlined,
