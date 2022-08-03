@@ -12,18 +12,9 @@ class WebHome extends StatefulWidget {
 }
 
 class _WebHomeState extends State<WebHome> {
-bool web=true;
 
 
-@override
-  void initState() {
-  if(kIsWeb){
-    web=true;
-  }else{
-web=false;
-  }
-    super.initState();
-  }
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -44,7 +35,6 @@ web=false;
                   itemBuilder: (context, index) => Container(
                     child: PostCard(
                       snap: snapshot.data!.docs[index].data(),
-                      web: web,
                     ),
                   )
               );
