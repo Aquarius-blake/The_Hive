@@ -138,7 +138,9 @@ class FirestoreMethods{
     Future<String?>Editcomment(String postid,String commentid,String details)async{
         String ress;
         try{
-
+            await  _firestore.collection("Posts").doc(postid).collection('comments').doc(commentid).update({
+                'detail':details,
+            });
         }catch(e){
             ress=e.toString();
             return ress;
