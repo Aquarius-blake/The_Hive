@@ -100,7 +100,6 @@ class _CommentcardState extends State<Commentcard> {
                       onPressed: ()async{
                         String ress= await FirestoreMethods().Deletecomment(widget.postid, widget.snap['Comment Uid']);
                         Showsnackbar(ress, context);
-                        Navigator.of(context).pop();
                       },
                       child: const Text(
                         "Delete",
