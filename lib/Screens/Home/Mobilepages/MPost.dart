@@ -34,6 +34,8 @@ class _MpostState extends State<Mpost> {
       if(res=="success"){
         setState(() {
           _isloading=false;
+          _textEditingController.text="";
+          _textEditingController2.text="";
         });
         Showsnackbar("Post Successful", context);
       }
