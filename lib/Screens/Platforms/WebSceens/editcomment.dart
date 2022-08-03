@@ -40,7 +40,7 @@ class _webcomeditState extends State<webcomedit> {
             padding: EdgeInsets.all(50),
             child: Card(
 child: Container(
-  padding: EdgeInsets.all(30),
+  padding: EdgeInsets.all(50),
   child: Column(
     children: [
       SizedBox(
