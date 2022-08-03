@@ -7,7 +7,8 @@ import '../../Provider/user_provider.dart';
 
 class Commentcard extends StatefulWidget {
   final snap;
-  const Commentcard({Key? key,this.snap}) : super(key: key);
+  final postid;
+  const Commentcard({Key? key,this.snap,this.postid}) : super(key: key);
 
   @override
   State<Commentcard> createState() => _CommentcardState();
