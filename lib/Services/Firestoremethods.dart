@@ -135,7 +135,7 @@ class FirestoreMethods{
     }
 
 //editcomment
-    Future<String?>Editcomment(String postid,String commentid)async{
+    Future<String?>Editcomment(String postid,String commentid,String details)async{
         String ress;
         try{
 
