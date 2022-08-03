@@ -253,7 +253,7 @@ likedf(authoruid, list);
                           onPressed: ()async{
                          await   FirestoreMethods().likepost(
                                 widget.snap['Post Uid'],
-                                widget.snap['author uid'],
+                                user1.UID!,
                                 widget.snap['likes']
                             );
                           },
