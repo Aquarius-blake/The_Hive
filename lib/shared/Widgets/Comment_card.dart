@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Platforms/WebSceens/editcomment.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -88,7 +90,19 @@ class _CommentcardState extends State<Commentcard> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   TextButton(
-                      onPressed: (){},
+                      onPressed: (){
+                        if(kIsWeb){
+                          Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context)=>webcomedit(
+                                  snap: widget.snap,
+                                ),
+                              )
+                          );
+                        }else{
+
+                        }
+                      },
                       child: const Text(
                         "Edit",
                         style: TextStyle(
