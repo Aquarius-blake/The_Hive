@@ -181,13 +181,13 @@ likedf(authoruid, list);
                           )
                       )
                   ),
-              widget.snap['author uid']==user1.UID?    IconButton(
+              widget.snap['author uid']==user1.UID? IconButton(
                     onPressed: ()=>_options(context),
                     icon: const Icon(
                       Icons.more_vert,
                       color: Colors.black,
                     ),
-                  ):SizedBox()
+                  ):const SizedBox()
                 ],
               ),
               Container(
