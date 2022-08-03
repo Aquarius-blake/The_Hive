@@ -25,6 +25,11 @@ class _WcommentdState extends State<Wcommentd> {
         child: Center(
           child: Container(
             child: Card(
+              elevation: 15.0,
+              color: Colors.white,
+              shape:  RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0)
+              ),
               child: Column(
                 children: [],
               ),
