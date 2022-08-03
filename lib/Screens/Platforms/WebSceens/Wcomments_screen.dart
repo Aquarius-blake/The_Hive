@@ -31,9 +31,7 @@ class _WcommentdState extends State<Wcommentd> {
               shape:  RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(15.0)
               ),
-              child: Column(
-                children: [],
-              ),
+
             ),
           ),
         ),
