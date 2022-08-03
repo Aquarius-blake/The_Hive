@@ -141,7 +141,7 @@ setState(() {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-String authoruid=widget.snap['author uid'];
+String authoruid=user1.UID!;
 List list=widget.snap['likes'];
 likedf(authoruid, list);
     return Container(
