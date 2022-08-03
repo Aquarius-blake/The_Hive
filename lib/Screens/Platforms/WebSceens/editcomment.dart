@@ -59,11 +59,11 @@ child: Container(
         ),
       ),
 
-Divider(
+const  Divider(
   thickness: 2,
   height: 20,
 ),
-      SizedBox(
+      const SizedBox(
         height: 20,
       ),
       Align(
