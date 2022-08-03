@@ -13,11 +13,13 @@ class _WcommentScreenState extends State<WcommentScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        centerTitle: true,
+        title: const Text(
           "Discussion",
           style: TextStyle(
 
-          ),),
+          ),
+        ),
       ),
     );
   }
