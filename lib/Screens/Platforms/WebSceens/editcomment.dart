@@ -43,7 +43,9 @@ child: Container(
   padding: EdgeInsets.all(50),
   child: Column(
     children: [
-      CircleAvatar(),
+      CircleAvatar(
+        backgroundImage: NetworkImage(widget.snap['ppurl']),
+      ),
       SizedBox(
         width: MediaQuery.of(context).size.width*0.7,
         child: TextField(
