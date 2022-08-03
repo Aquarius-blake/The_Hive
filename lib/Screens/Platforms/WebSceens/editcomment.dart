@@ -58,6 +58,12 @@ child: Container(
         ),
       ),
 Divider(),
+      Align(
+        child: ElevatedButton(
+          onPressed: (){},
+          child: Text("Comment"),
+        ),
+      )
     ],
   ),
 ),
