@@ -12,6 +12,7 @@ class _WcommentdState extends State<Wcommentd> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
         centerTitle: true,
         title: const Text(
