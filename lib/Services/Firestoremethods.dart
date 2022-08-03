@@ -114,7 +114,7 @@ class FirestoreMethods{
         String ress="";
         try{
             await  _firestore.collection("Posts").doc(postid).collection('comments').doc(commentid).delete();
-            ress="Post Deleted";
+            ress="Comment Deleted";
             return ress;
         }
         catch(e){
