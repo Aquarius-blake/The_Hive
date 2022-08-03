@@ -52,6 +52,7 @@ child: Container(
         child: TextField(
           controller: _comment,
           decoration: const InputDecoration(
+            border: InputBorder.none,
             hintText: "Edit comment",
           ),
         ),
