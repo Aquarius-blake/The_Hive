@@ -125,23 +125,23 @@ class FirestoreMethods{
 
 //Edit post
     Future<String?>Editpost(String postid)async{
-String ress;
+        String ress;
         try{
 
         }catch(e){
-ress=e.toString();
-return ress;
+            ress=e.toString();
+            return ress;
         }
     }
 
 //editcomment
     Future<String?>Editcomment(String postid,String commentid)async{
-String ress;
+        String ress;
         try{
 
         }catch(e){
             ress=e.toString();
-return ress;
+            return ress;
         }
 
     }
