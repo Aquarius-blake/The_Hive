@@ -84,7 +84,8 @@ class _webcomeditState extends State<webcomedit> {
                       child: ElevatedButton(
                         onPressed: ()async{
                           String ress=await FirestoreMethods().Editcomment(widget.postid, widget.snap['Comment Uid'], _comment.text);
-                          Showsnackbar(ress, context);
+                        await  Showsnackbar(ress, context);
+                        Navigator.of(context).pop();
                         },
                         child: Text(
                           "Edit Comment",
