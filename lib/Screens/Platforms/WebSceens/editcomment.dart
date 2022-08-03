@@ -18,6 +18,11 @@ class _webcomeditState extends State<webcomedit> {
           style: TextStyle(),
         ),
       ),
+      body: SafeArea(
+        child: Center(
+
+        ),
+      ),
     );
   }
 }
