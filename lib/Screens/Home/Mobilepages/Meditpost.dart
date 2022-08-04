@@ -15,10 +15,10 @@ class _MobeditpostState extends State<Mobeditpost> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         centerTitle: true,
-        iconTheme: IconThemeData(
+        iconTheme:const IconThemeData(
           color: Colors.black,
         ),
-        title: Text(
+        title:const Text(
           "Edit Post",
           style: TextStyle(
 color: Colors.black,
