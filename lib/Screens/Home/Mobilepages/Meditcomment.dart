@@ -43,9 +43,12 @@ CircleAvatar(
   maxRadius: 18,
   backgroundImage: NetworkImage(user1.ppurl!),
 ),
-                    SizedBox(
+                    Padding(
+                      padding: const EdgeInsets.only(left: 5),
+                      child: SizedBox(
 width: MediaQuery.of(context).size.width*0.5,
 child: Text(user1.Username!),
+                      ),
                     )
                   ],
                 )
