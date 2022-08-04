@@ -24,7 +24,7 @@ class _MobcomeditState extends State<Mobcomedit> {
           color: Colors.black,
         ),
         title: const Text(
-            "Edit Comment",
+          "Edit Comment",
           style: TextStyle(
             color: Colors.black,
           ),
@@ -34,15 +34,17 @@ class _MobcomeditState extends State<Mobcomedit> {
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.all(12),
-child: Card(
-  child: Column(
-    children: [
-Row(
+          child: Card(
+            child: Column(
+              children: [
+                Row(
+                  children: [
 
-)
-    ],
-  ),
-),
+                  ],
+                )
+              ],
+            ),
+          ),
         ),
       ),
       bottomNavigationBar: SafeArea(
