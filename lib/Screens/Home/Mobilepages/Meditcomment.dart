@@ -44,7 +44,7 @@ CircleAvatar(
   backgroundImage: NetworkImage(user1.ppurl!),
 ),
                     SizedBox(
-
+width: MediaQuery.of(context).size.width,
                     )
                   ],
                 )
