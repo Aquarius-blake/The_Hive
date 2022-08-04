@@ -70,7 +70,8 @@ class _MobcomeditState extends State<Mobcomedit> {
                     border: InputBorder.none,
                     hintText: "Edit comment as ${user1.Username}",
                   ),
-                )
+                ),
+                Divider()
               ],
             ),
           ),
