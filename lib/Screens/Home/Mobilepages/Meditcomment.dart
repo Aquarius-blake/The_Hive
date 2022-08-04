@@ -59,9 +59,9 @@ class _MobcomeditState extends State<Mobcomedit> {
                     )
                   ],
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 TextField(
-controller: text,
+                  controller: text,
                   decoration:  InputDecoration(
                     border: InputBorder.none,
                     hintText: "Edit comment as ${user1.Username}",
@@ -72,57 +72,7 @@ controller: text,
           ),
         ),
       ),
-      bottomNavigationBar: SafeArea(
-          child: Container(
-            height: kToolbarHeight,
-            margin: EdgeInsets.only(
-                bottom: MediaQuery.of(context).viewInsets.bottom
-            ),
-            padding: const EdgeInsets.only(
-              left: 16,
-              right: 8,
-            ),
-            child: Row(
-              children: [
-                CircleAvatar(
-                  backgroundImage: NetworkImage(user1.ppurl!),
-                  radius: 18,
-                ),
-                Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.only(
-                        left: 12.0,
-                        right: 1.0
-                    ),
-                    child: TextField(
-                      controller: text,
-                      decoration: InputDecoration(
-                        hintText: "Edit Comment as ${user1.Username}",
-                        border: InputBorder.none,
-                      ),
-                    ),
-                  ),
-                ),
-                ElevatedButton(
-                  onPressed: (){},
-                  child: const Text("Edit"),
-                  style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
-                      shadowColor: Colors.black,
-                      primary: Colors.lightBlueAccent,
-                      side: const BorderSide(
-                        color: Colors.white70,
-                        width: 2.0,
-                      ),
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(100.0)
-                      )
-                  ),
-                )
-              ],
-            ),
-          )
-      ),
+
     );
   }
 }
