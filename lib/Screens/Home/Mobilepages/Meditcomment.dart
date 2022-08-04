@@ -90,6 +90,7 @@ class _MobcomeditState extends State<Mobcomedit> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        elevation: 4.0,
         backgroundColor: Colors.lightBlueAccent,
         onPressed: () async{
           String ress=await FirestoreMethods().Editcomment(widget.postid, widget.snap['Comment Uid'], text.text);
