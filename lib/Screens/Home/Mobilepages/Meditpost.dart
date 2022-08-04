@@ -20,6 +20,9 @@ class _MobeditpostState extends State<Mobeditpost> {
         ),
         title: Text(
           "Edit Post",
+          style: TextStyle(
+
+          ),
         ),
       ),
     );
