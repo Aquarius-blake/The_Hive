@@ -15,6 +15,9 @@ class _MobcomeditState extends State<Mobcomedit> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
         title: Text(
             "Edit Comment",
           style: TextStyle(
