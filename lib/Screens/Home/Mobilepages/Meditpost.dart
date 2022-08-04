@@ -13,6 +13,7 @@ class _MobeditpostState extends State<Mobeditpost> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
         centerTitle: true,
         iconTheme: IconThemeData(
           color: Colors.black,
