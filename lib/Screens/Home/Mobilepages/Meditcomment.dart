@@ -15,6 +15,7 @@ class _MobcomeditState extends State<Mobcomedit> {
     return Scaffold(
       appBar: AppBar(
 title: Text("Edit Comment"),
+        backgroundColor:Colors.white ,
       ),
     );
   }
