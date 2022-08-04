@@ -44,13 +44,18 @@ class _MobcomeditState extends State<Mobcomedit> {
                       backgroundImage: NetworkImage(user1.ppurl!),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 5),
+                      padding: const EdgeInsets.only(
+                          left: 5
+                      ),
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width*0.5,
                         child: Text(user1.Username!),
                       ),
                     )
                   ],
+                ),
+                TextField(
+
                 )
               ],
             ),
