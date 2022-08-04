@@ -62,6 +62,10 @@ class _MobcomeditState extends State<Mobcomedit> {
                 SizedBox(height: 20,),
                 TextField(
 controller: text,
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Edit comment",
+                  ),
                 )
               ],
             ),
