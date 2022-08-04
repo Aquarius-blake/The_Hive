@@ -75,8 +75,11 @@ class _MobcomeditState extends State<Mobcomedit> {
         ),
       ),
 floatingActionButton: FloatingActionButton(
+  backgroundColor: Colors.lightBlueAccent,
   onPressed: (){},
-  child: FaIcon(FontAwesomeIcons.comments),
+  child: FaIcon(
+      FontAwesomeIcons.comments
+  ),
 ),
     );
   }
