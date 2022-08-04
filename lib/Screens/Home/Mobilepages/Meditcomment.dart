@@ -43,6 +43,9 @@ class _MobcomeditState extends State<Mobcomedit> {
         child: Container(
           padding: const EdgeInsets.all(12),
           child: Card(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(50)
+            ),
             child: SingleChildScrollView(
               child: Column(
                 children: [
