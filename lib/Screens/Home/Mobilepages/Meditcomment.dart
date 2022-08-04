@@ -37,7 +37,9 @@ class _MobcomeditState extends State<Mobcomedit> {
 child: Card(
   child: Column(
     children: [
+Row(
 
+)
     ],
   ),
 ),
