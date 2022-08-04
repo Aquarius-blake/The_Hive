@@ -14,7 +14,7 @@ class _MobcomeditState extends State<Mobcomedit> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-
+title: Text("Edit Comment"),
       ),
     );
   }
