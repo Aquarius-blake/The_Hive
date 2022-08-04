@@ -65,7 +65,7 @@ class _MobcomeditState extends State<Mobcomedit> {
                 const SizedBox(height: 20,),
                 TextField(
                   controller: text,
-                  maxLines: 8,
+                  maxLines: 12,
                   decoration:  InputDecoration(
                     border: InputBorder.none,
                     hintText: "Edit comment as ${user1.Username}",
