@@ -12,7 +12,15 @@ class _MobeditpostState extends State<Mobeditpost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        centerTitle: true,
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
+        title: Text(
+          "Edit Post",
+        ),
+      ),
     );
   }
 }
