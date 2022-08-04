@@ -74,13 +74,13 @@ class _MobcomeditState extends State<Mobcomedit> {
           ),
         ),
       ),
-floatingActionButton: FloatingActionButton(
-  backgroundColor: Colors.lightBlueAccent,
-  onPressed: () async{},
-  child: const FaIcon(
-      FontAwesomeIcons.comment
-  ),
-),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.lightBlueAccent,
+        onPressed: () async{},
+        child: const FaIcon(
+            FontAwesomeIcons.comment
+        ),
+      ),
     );
   }
 }
