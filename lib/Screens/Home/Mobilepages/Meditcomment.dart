@@ -18,7 +18,7 @@ class _MobcomeditState extends State<Mobcomedit> {
         iconTheme: const IconThemeData(
           color: Colors.black,
         ),
-        title: Text(
+        title: const Text(
             "Edit Comment",
           style: TextStyle(
             color: Colors.black,
