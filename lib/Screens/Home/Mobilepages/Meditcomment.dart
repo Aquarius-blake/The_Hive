@@ -3,6 +3,8 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
+import '../../../Services/Firestoremethods.dart';
+import '../../../shared/Pop_up.dart';
 
 class Mobcomedit extends StatefulWidget {
   final snap;
@@ -76,7 +78,11 @@ class _MobcomeditState extends State<Mobcomedit> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.lightBlueAccent,
-        onPressed: () async{},
+        onPressed: () async{
+          String ress=await FirestoreMethods().Editcomment(widget.postid, widget.snap['Comment Uid'], text.text);
+          await  Showsnackbar(ress, context);
+          Navigator.of(context).pop();
+        },
         child: const FaIcon(
             FontAwesomeIcons.comment
         ),
