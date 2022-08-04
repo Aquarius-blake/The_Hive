@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 
 import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
+import '../../Screens/Home/Mobilepages/Meditcomment.dart';
 import '../Pop_up.dart';
 
 class Commentcard extends StatefulWidget {
@@ -101,7 +102,14 @@ class _CommentcardState extends State<Commentcard> {
                               )
                           );
                         }else{
-
+                          Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context)=>Mobcomedit(
+                                  snap: widget.snap,
+                                  postid: widget.postid,
+                                ),
+                              )
+                          );
                         }
                       },
                       child: const Text(
