@@ -40,7 +40,7 @@ class _MobcomeditState extends State<Mobcomedit> {
                 Row(
                   children: [
 CircleAvatar(
-  maxRadius: 12,
+  maxRadius: 16,
 )
                   ],
                 )
