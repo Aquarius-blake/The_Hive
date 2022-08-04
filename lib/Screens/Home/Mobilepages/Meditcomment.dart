@@ -72,6 +72,7 @@ class _MobcomeditState extends State<Mobcomedit> {
                   ),
                 ),
                 Divider(
+                  height: 5,
                   thickness: 2,
                 )
               ],
