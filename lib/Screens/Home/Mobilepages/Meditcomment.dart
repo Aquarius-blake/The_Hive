@@ -73,7 +73,10 @@ class _MobcomeditState extends State<Mobcomedit> {
           ),
         ),
       ),
-
+floatingActionButton: FloatingActionButton(
+  onPressed: (){},
+  child: Text(""),
+),
     );
   }
 }
