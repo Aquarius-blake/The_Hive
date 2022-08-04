@@ -26,6 +26,11 @@ class _MobcomeditState extends State<Mobcomedit> {
         ),
         backgroundColor:Colors.white ,
       ),
+      body: SafeArea(
+        child: Container(
+
+        ),
+      ),
     );
   }
 }
