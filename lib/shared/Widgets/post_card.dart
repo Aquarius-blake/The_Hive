@@ -7,7 +7,6 @@ import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/like_animation.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-
 import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
 import '../../Screens/Platforms/WebSceens/Wcomments_screen.dart';
@@ -37,7 +36,9 @@ class _PostCardState extends State<PostCard> {
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
                 child: const Text("Edit Post"),
-                onPressed: (){},
+                onPressed: (){
+                  if(kIsWeb){}else{}
+                },
               ),
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),

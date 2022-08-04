@@ -21,7 +21,7 @@ class _MobeditpostState extends State<Mobeditpost> {
         title:const Text(
           "Edit Post",
           style: TextStyle(
-color: Colors.black,
+            color: Colors.black,
           ),
         ),
       ),
