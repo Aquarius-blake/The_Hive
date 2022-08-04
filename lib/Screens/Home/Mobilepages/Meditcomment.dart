@@ -42,7 +42,10 @@ class _MobcomeditState extends State<Mobcomedit> {
 CircleAvatar(
   maxRadius: 18,
   backgroundImage: NetworkImage(user1.ppurl!),
-)
+),
+                    SizedBox(
+
+                    )
                   ],
                 )
               ],
