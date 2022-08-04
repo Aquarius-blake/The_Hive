@@ -33,8 +33,14 @@ class _MobcomeditState extends State<Mobcomedit> {
       ),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.all(12),
-child: Card(),
+          padding: const EdgeInsets.all(12),
+child: Card(
+  child: Column(
+    children: [
+
+    ],
+  ),
+),
         ),
       ),
       bottomNavigationBar: SafeArea(
