@@ -42,6 +42,10 @@ class _webcomeditState extends State<webcomedit> {
           child: Container(
             padding: EdgeInsets.all(50),
             child: Card(
+              elevation: 2.0,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(60.0)
+              ),
               child: Container(
                 padding: EdgeInsets.all(50),
                 child: Column(
