@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Mobcomedit extends StatefulWidget {
-  const Mobcomedit({Key? key}) : super(key: key);
+  final snap;
+  final postid;
+  const Mobcomedit({Key? key,this.snap,this.postid}) : super(key: key);
 
   @override
   State<Mobcomedit> createState() => _MobcomeditState();
