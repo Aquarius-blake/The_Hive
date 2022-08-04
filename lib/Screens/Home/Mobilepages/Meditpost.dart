@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Mobeditpost extends StatefulWidget {
-  const Mobeditpost({Key? key}) : super(key: key);
+  final snap;
+  const Mobeditpost({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Mobeditpost> createState() => _MobeditpostState();
