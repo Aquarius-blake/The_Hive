@@ -80,7 +80,7 @@ class _MobcomeditState extends State<Mobcomedit> {
                     thickness: 2,
                   ),
                 const  SizedBox(
-                    height: 20,
+                    height: 40,
                   )
                 ],
               ),
