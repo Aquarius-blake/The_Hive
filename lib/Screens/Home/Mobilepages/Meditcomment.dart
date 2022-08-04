@@ -78,7 +78,7 @@ floatingActionButton: FloatingActionButton(
   backgroundColor: Colors.lightBlueAccent,
   onPressed: (){},
   child: FaIcon(
-      FontAwesomeIcons.comments
+      FontAwesomeIcons.comment
   ),
 ),
     );
