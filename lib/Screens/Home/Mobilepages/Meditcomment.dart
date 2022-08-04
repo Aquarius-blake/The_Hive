@@ -15,6 +15,11 @@ class Mobcomedit extends StatefulWidget {
 class _MobcomeditState extends State<Mobcomedit> {
   TextEditingController text=TextEditingController();
   @override
+  void initState() {
+    text.text=widget.snap['detail'];
+    super.initState();
+  }
+  @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
@@ -56,7 +61,7 @@ class _MobcomeditState extends State<Mobcomedit> {
                 ),
                 SizedBox(height: 20,),
                 TextField(
-
+controller: text,
                 )
               ],
             ),
