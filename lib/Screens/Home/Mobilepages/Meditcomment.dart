@@ -71,7 +71,9 @@ class _MobcomeditState extends State<Mobcomedit> {
                     hintText: "Edit comment as ${user1.Username}",
                   ),
                 ),
-                Divider()
+                Divider(
+                  thickness: 2,
+                )
               ],
             ),
           ),
