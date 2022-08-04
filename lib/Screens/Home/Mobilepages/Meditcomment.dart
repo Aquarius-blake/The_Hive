@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
@@ -75,7 +76,7 @@ class _MobcomeditState extends State<Mobcomedit> {
       ),
 floatingActionButton: FloatingActionButton(
   onPressed: (){},
-  child: Text(""),
+  child: FaIcon(FontAwesomeIcons.comments),
 ),
     );
   }
