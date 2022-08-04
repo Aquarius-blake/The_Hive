@@ -11,6 +11,6 @@ class Mobeditpost extends StatefulWidget {
 class _MobeditpostState extends State<Mobeditpost> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
