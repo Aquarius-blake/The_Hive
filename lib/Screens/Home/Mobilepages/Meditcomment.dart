@@ -14,7 +14,12 @@ class _MobcomeditState extends State<Mobcomedit> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-title: Text("Edit Comment"),
+        title: Text(
+            "Edit Comment",
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
         backgroundColor:Colors.white ,
       ),
     );
