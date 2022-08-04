@@ -43,39 +43,41 @@ class _MobcomeditState extends State<Mobcomedit> {
         child: Container(
           padding: const EdgeInsets.all(12),
           child: Card(
-            child: Column(
-              children: [
-                Row(
-                  children: [
-                    CircleAvatar(
-                      maxRadius: 18,
-                      backgroundImage: NetworkImage(user1.ppurl!),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                          left: 5
+            child: SingleChildScrollView(
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        maxRadius: 18,
+                        backgroundImage: NetworkImage(user1.ppurl!),
                       ),
-                      child: SizedBox(
-                        width: MediaQuery.of(context).size.width*0.5,
-                        child: Text(user1.Username!),
-                      ),
-                    )
-                  ],
-                ),
-                const SizedBox(height: 20,),
-                TextField(
-                  controller: text,
-                  maxLines: 12,
-                  decoration:  InputDecoration(
-                    border: InputBorder.none,
-                    hintText: "Edit comment as ${user1.Username}",
+                      Padding(
+                        padding: const EdgeInsets.only(
+                            left: 5
+                        ),
+                        child: SizedBox(
+                          width: MediaQuery.of(context).size.width*0.5,
+                          child: Text(user1.Username!),
+                        ),
+                      )
+                    ],
                   ),
-                ),
-                Divider(
-                  height: 5,
-                  thickness: 2,
-                )
-              ],
+                  const SizedBox(height: 20,),
+                  TextField(
+                    controller: text,
+                    maxLines: 12,
+                    decoration:  InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "Edit comment as ${user1.Username}",
+                    ),
+                  ),
+                  Divider(
+                    height: 5,
+                    thickness: 2,
+                  )
+                ],
+              ),
             ),
           ),
         ),
