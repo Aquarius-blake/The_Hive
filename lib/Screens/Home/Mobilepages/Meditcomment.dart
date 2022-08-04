@@ -70,7 +70,7 @@ class _MobcomeditState extends State<Mobcomedit> {
                 ),
                 ElevatedButton(
                   onPressed: (){},
-                  child: const Text("Post"),
+                  child: const Text("Edit"),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0,
                       shadowColor: Colors.black,
