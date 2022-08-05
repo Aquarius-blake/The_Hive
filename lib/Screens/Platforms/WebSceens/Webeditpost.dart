@@ -57,6 +57,12 @@ class _WebeditpostState extends State<Webeditpost> {
     );
   }
 
+  @override
+  void initState() {
+    _title.text=widget.snap['title'];
+
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +91,9 @@ radius: 18,
               width: MediaQuery.of(context).size.width*0.7,
               child: TextField(
                 controller: _title,
-decoration: InputDecoration(),
+decoration: InputDecoration(
+  hintText: "Title",
+),
               ),
             ),
             Post(_image),
