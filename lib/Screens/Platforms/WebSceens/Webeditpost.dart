@@ -71,7 +71,7 @@ class _WebeditpostState extends State<Webeditpost> {
             Row(
               children: [
                 IconButton(
-                    onPressed: (){},
+                    onPressed: ()=>_selectimage(),
                     icon: Icon(
                         Icons.add_a_photo
                     )
