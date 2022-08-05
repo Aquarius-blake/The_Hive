@@ -130,6 +130,12 @@ class FirestoreMethods{
         try{
             if(image!=null && upload){
                 photourl=await StorageMethods().Storageip("Posts", image, true);
+                _firestore.collection("Posts").doc(postid).update({
+                    'Post Time':DateTime.now(),
+                    'Image Url':photourl,
+
+                }
+                );
 
             }
         }catch(e){
