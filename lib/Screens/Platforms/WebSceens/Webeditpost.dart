@@ -71,7 +71,8 @@ class _WebeditpostState extends State<Webeditpost> {
                 CircleAvatar(
 radius: 18,
                   backgroundImage: NetworkImage(user1.ppurl!),
-                )
+                ),
+                SizedBox()
               ],
             ),
             SizedBox(),
