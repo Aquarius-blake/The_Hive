@@ -16,6 +16,8 @@ class Webeditpost extends StatefulWidget {
 class _WebeditpostState extends State<Webeditpost> {
   dynamic _image;
   Upload Selection=Upload();
+  TextEditingController _title=TextEditingController();
+  TextEditingController _detail=TextEditingController();
 
 
   _selectimage()async{
