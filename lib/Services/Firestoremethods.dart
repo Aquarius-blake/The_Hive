@@ -133,10 +133,11 @@ class FirestoreMethods{
                 _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
                     'Image Url':photourl,
-
                 }
                 );
-
+                if(title!=""){
+                    _firestore.collection("Posts").doc(postid).update({});
+                    }
             }
         }catch(e){
             ress=e.toString();
