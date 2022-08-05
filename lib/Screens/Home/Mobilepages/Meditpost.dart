@@ -17,6 +17,11 @@ class _MobeditpostState extends State<Mobeditpost> {
   final TextEditingController _detail=TextEditingController();
   bool _isloading=false;
 
+  @override
+  void initState() {
+_image=widget.snap['Image Url'];
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
