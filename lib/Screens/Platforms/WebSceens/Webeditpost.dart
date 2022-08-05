@@ -86,65 +86,67 @@ class _WebeditpostState extends State<Webeditpost> {
     return Card(
       child: Container(
         padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 18,
-                  backgroundImage: NetworkImage(user1.ppurl!),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width*0.5,
-                  child: Text(user1.Username!),
-                )
-              ],
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width*0.7,
-              child: TextField(
-                controller: _title,
-                decoration: InputDecoration(
-                  hintText: "Title",
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 18,
+                    backgroundImage: NetworkImage(user1.ppurl!),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width*0.5,
+                    child: Text(user1.Username!),
+                  )
+                ],
+              ),
+              SizedBox(
+                width: MediaQuery.of(context).size.width*0.7,
+                child: TextField(
+                  controller: _title,
+                  decoration: InputDecoration(
+                    hintText: "Title",
+                  ),
                 ),
               ),
-            ),
-            SizedBox(
-              width: MediaQuery.of(context).size.width*0.7,
-              child: TextField(
-                controller: _detail,
-                maxLines: 8,
-                decoration: InputDecoration(
-                  hintText: "Detals",
-                  border: InputBorder.none,
+              SizedBox(
+                width: MediaQuery.of(context).size.width*0.7,
+                child: TextField(
+                  controller: _detail,
+                  maxLines: 8,
+                  decoration: InputDecoration(
+                    hintText: "Detals",
+                    border: InputBorder.none,
+                  ),
                 ),
               ),
-            ),
-            Post(_image),
-            Divider(),
-            Row(
-              children: [
-                IconButton(
-                    onPressed: ()=>_selectimage(),
-                    icon: Icon(
-                        Icons.add_a_photo
-                    )
-                ),
-                IconButton(onPressed: (){
-                  setState(() {
-                    _image=null;
-                  });
-                },
-                    icon: Icon(
-                        Icons.remove_circle
-                    )
-                )
-              ],
-            )
-          ],
+              Post(_image),
+              Divider(),
+              Row(
+                children: [
+                  IconButton(
+                      onPressed: ()=>_selectimage(),
+                      icon: Icon(
+                          Icons.add_a_photo
+                      )
+                  ),
+                  IconButton(onPressed: (){
+                    setState(() {
+                      _image=null;
+                    });
+                  },
+                      icon: Icon(
+                          Icons.remove_circle
+                      )
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
