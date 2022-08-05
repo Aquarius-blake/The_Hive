@@ -12,7 +12,14 @@ class _WebedState extends State<Webed> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+            "",
+          style: TextStyle(
+
+          ),
+        ),
+      ),
     );
   }
 }
