@@ -84,6 +84,7 @@ radius: 18,
             SizedBox(
               width: MediaQuery.of(context).size.width*0.7,
               child: TextField(
+                controller: _title,
 decoration: InputDecoration(),
               ),
             ),
