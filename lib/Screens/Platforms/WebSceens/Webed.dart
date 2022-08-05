@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Platforms/WebSceens/Webeditpost.dart';
 
 class Webed extends StatefulWidget {
   final snap;
@@ -25,7 +26,10 @@ class _WebedState extends State<Webed> {
       body:SafeArea(
         child: Center(
           child: Container(
-
+            padding: EdgeInsets.all(29),
+            child: Webeditpost(
+              snap: widget.snap,
+            ),
           ),
         ),
       ),
