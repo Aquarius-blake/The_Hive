@@ -85,7 +85,7 @@ class _WebeditpostState extends State<Webeditpost> {
     User1? user1=  Provider.of<UserProvider>(context).getUser;
     return Card(
       child: Container(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(40.0),
         child: SingleChildScrollView(
           child: Column(
             children: [
