@@ -181,7 +181,7 @@ _detail.text=widget.snap['detail'];
                                 Icons.add_a_photo,
                               ),
                             ),
-                            IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.recycle))
+                            IconButton(onPressed: (){}, icon: Icon(Icons.remove_circle))
                           ],
                         )
                       ],
