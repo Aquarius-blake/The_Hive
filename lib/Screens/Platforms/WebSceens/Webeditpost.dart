@@ -81,7 +81,9 @@ radius: 18,
                 )
               ],
             ),
-            SizedBox(),
+            SizedBox(
+              width: MediaQuery.of(context).size.width*0.7,
+            ),
             Post(_image),
             Divider(),
             Row(
