@@ -125,7 +125,10 @@ class _WebeditpostState extends State<Webeditpost> {
                 ),
               ),
               Post(_image),
-              Divider(),
+              Divider(
+                height: 20,
+                thickness: 2,
+              ),
               Row(
                 children: [
                   IconButton(
