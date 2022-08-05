@@ -70,7 +70,12 @@ class _WebeditpostState extends State<Webeditpost> {
             Divider(),
             Row(
               children: [
-
+IconButton(
+    onPressed: (){},
+    icon: Icon(
+        Icons.add_a_photo
+    )
+)
               ],
             )
           ],
