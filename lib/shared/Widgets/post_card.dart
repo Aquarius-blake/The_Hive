@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mcomments_screen.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Meditpost.dart';
+import 'package:forum3/Screens/Platforms/WebSceens/Webed.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/like_animation.dart';
@@ -40,7 +41,13 @@ class _PostCardState extends State<PostCard> {
                 onPressed: (){
                   Navigator.of(context).pop();
                   if(kIsWeb){
-
+                    Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context)=>Webed(
+                            snap: widget.snap,
+                          ),
+                        )
+                    );
                   }else{
                     Navigator.of(context).push(
                         MaterialPageRoute(
