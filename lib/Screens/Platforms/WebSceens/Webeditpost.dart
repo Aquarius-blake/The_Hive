@@ -1,7 +1,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 
+import '../../../Models/Users1.dart';
+import '../../../Provider/user_provider.dart';
 import '../../../Services/Upload.dart';
 
 
@@ -57,6 +60,7 @@ class _WebeditpostState extends State<Webeditpost> {
 
   @override
   Widget build(BuildContext context) {
+    User1? user1=  Provider.of<UserProvider>(context).getUser;
     return Card(
       child: Container(
         padding: const EdgeInsets.all(20.0),
@@ -65,7 +69,8 @@ class _WebeditpostState extends State<Webeditpost> {
             Row(
               children: [
                 CircleAvatar(
-
+radius: 18,
+                  backgroundImage: NetworkImage(user1.ppurl!),
                 )
               ],
             ),
