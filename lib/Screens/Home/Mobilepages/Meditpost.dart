@@ -25,6 +25,8 @@ class _MobeditpostState extends State<Mobeditpost> {
   @override
   void initState() {
 _image=widget.snap['Image Url'];
+_title.text=widget.snap['title'];
+_detail.text=widget.snap['detail'];
     super.initState();
   }
   Widget Avatar(User1 user1){
