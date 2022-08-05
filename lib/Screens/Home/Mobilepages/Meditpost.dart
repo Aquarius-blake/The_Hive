@@ -180,7 +180,8 @@ _detail.text=widget.snap['detail'];
                               icon: const Icon(
                                 Icons.add_a_photo,
                               ),
-                            )
+                            ),
+                            IconButton(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.recycle))
                           ],
                         )
                       ],
