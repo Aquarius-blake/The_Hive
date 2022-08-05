@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 
 import '../../../Models/Users1.dart';
 import '../../../Services/Upload.dart';
@@ -43,6 +44,51 @@ _image=widget.snap['Image Url'];
       child:Image.network(_image),
     );
   }
+
+  _selectimage(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: Text("Create Post"),
+            children: [
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Take a Photo"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.camera);
+                  setState(() {
+                    _image=file;
+                  });
+                },
+              ),
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Choose from gallery"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.gallery);
+                  setState(() {
+                    _image=file;
+                  });
+                },
+              ),
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: Text("Cancel"),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        }
+    );
+
+  }
+
+
 
   @override
   void dispose() {
