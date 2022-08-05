@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
@@ -192,7 +194,8 @@ _detail.text=widget.snap['detail'];
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.lightBlueAccent,
         onPressed: ()async{
-
+          String ress=await FirestoreMethods().Editpost(widget.snap['Post Uid'], _title.text, _detail.text, _image, memorypost);
+          Showsnackbar(ress, context);
         },
         child: const FaIcon(
             FontAwesomeIcons.pencil
