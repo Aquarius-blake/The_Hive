@@ -13,6 +13,7 @@ class _WebedState extends State<Webed> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
         centerTitle: true,
         iconTheme: IconThemeData(),
