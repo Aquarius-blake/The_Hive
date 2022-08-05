@@ -118,6 +118,15 @@ class _WebeditpostState extends State<Webeditpost> {
                     icon: Icon(
                         Icons.add_a_photo
                     )
+                ),
+                IconButton(onPressed: (){
+                  setState(() {
+                    _image=null;
+                  });
+                },
+                    icon: Icon(
+                        Icons.remove_circle
+                    )
                 )
               ],
             )
