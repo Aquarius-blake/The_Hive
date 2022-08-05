@@ -51,7 +51,7 @@ _detail.text=widget.snap['detail'];
       return _image!=null? SizedBox(
         width: MediaQuery.of(context).size.width*0.8,
         child: Image.memory(_image),
-      ):SizedBox();
+      ):const SizedBox();
     }else{
     return _image==null || _image==""?SizedBox():SizedBox(
       width: MediaQuery.of(context).size.width*0.8,
