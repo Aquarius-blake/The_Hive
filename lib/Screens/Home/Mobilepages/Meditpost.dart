@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
+import '../../../Provider/user_provider.dart';
 import '../../../Services/Upload.dart';
 
 class Mobeditpost extends StatefulWidget {
@@ -102,6 +104,7 @@ _image=widget.snap['Image Url'];
 
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -115,6 +118,62 @@ _image=widget.snap['Image Url'];
             color: Colors.black,
           ),
         ),
+      ),
+      body: SafeArea(
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _isloading? const LinearProgressIndicator():Container(),
+                SizedBox(height: 10,),
+                Card(
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Avatar(user1),
+                            SizedBox(width: 15,),
+                            Text(user1.Username!),
+                          ],
+                        ),
+                        SizedBox(height: 15,),
+                        TextField(
+                          controller: _title,
+                          decoration: const InputDecoration(
+                            hintText: "Title",
+                          ),
+                        ),
+                        SizedBox(height: 10,),
+                        SingleChildScrollView(
+                          child: TextField(
+                            controller: _detail,
+                            maxLines: 8,
+                            decoration: const InputDecoration(
+                              hintText: "Write Something.....",
+                              border: InputBorder.none,
+                            ),
+                          ),
+                        ),
+                        Post(),
+                        Divider(),
+                        Row(
+                          children: [
+                            IconButton(
+                              onPressed: ()=>_selectimage(context),
+                              icon: const Icon(
+                                Icons.add_a_photo,
+                              ),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          )
       ),
     );
   }
