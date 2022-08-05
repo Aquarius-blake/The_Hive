@@ -44,6 +44,14 @@ _image=widget.snap['Image Url'];
     );
   }
 
+  @override
+  void dispose() {
+    _title.dispose();
+    _detail.dispose();
+    super.dispose();
+  }
+
+
 
 
   @override
