@@ -130,30 +130,32 @@ class FirestoreMethods{
         try{
             if(image!=null && upload){
                 photourl=await StorageMethods().Storageip("Posts", image, true);
-                _firestore.collection("Posts").doc(postid).update({
+              await  _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
                     'Image Url':photourl,
                     'detail':details
                 }
                 );
                 if(title!=""){
-                    _firestore.collection("Posts").doc(postid).update({
+                 await   _firestore.collection("Posts").doc(postid).update({
                         'title':title
                     });
                     }
 
             }else{
-                _firestore.collection("Posts").doc(postid).update({
+              await  _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
                     'detail':details
                 }
                 );
                 if(title!=""){
-                    _firestore.collection("Posts").doc(postid).update({
+                await    _firestore.collection("Posts").doc(postid).update({
                         'title':title
                     });
                 }
             }
+            ress="Edit Succesful";
+            return ress;
         }catch(e){
             ress=e.toString();
             return ress;
