@@ -126,8 +126,12 @@ class FirestoreMethods{
 //Edit post
     Future<String?>Editpost(String postid,String? title,String? details,dynamic image,bool upload)async{
         String ress;
+        String photourl;
         try{
-            if(image!=null && upload){}
+            if(image!=null && upload){
+                photourl=await StorageMethods().Storageip("Posts", image, true);
+
+            }
         }catch(e){
             ress=e.toString();
             return ress;
