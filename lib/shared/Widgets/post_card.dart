@@ -38,6 +38,7 @@ class _PostCardState extends State<PostCard> {
                 padding: const EdgeInsets.all(15.0),
                 child: const Text("Edit Post"),
                 onPressed: (){
+                  Navigator.of(context).pop();
                   if(kIsWeb){
 
                   }else{
