@@ -18,7 +18,7 @@ class _WebedState extends State<Webed> {
         centerTitle: true,
         iconTheme: IconThemeData(),
         title: Text(
-            "",
+            "Edit Post",
           style: TextStyle(
 
           ),
