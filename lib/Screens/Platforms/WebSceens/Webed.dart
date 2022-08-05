@@ -11,6 +11,6 @@ class Webed extends StatefulWidget {
 class _WebedState extends State<Webed> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
