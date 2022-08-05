@@ -30,12 +30,21 @@ _image=widget.snap['Image Url'];
         backgroundImage: NetworkImage(user1.ppurl!),
       );
     }catch(e){
-      return CircleAvatar(
+      return const CircleAvatar(
         radius: 20,
         backgroundImage: AssetImage('Assets/hac.jpg'),
       );
     }
   }
+
+  Widget Post(){
+    return _image==null?SizedBox():SizedBox(
+      width: MediaQuery.of(context).size.width*0.8,
+      child:Image.network(_image),
+    );
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
