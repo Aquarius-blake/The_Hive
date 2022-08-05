@@ -143,9 +143,11 @@ class FirestoreMethods{
                     }
 
             }else{
+                photourl="";
               await  _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
-                    'detail':details
+                  'Image Url':photourl,
+                  'detail':details
                 }
                 );
                 if(title!=""){
