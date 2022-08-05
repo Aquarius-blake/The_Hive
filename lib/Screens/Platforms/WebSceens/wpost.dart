@@ -135,16 +135,16 @@ class _wpostState extends State<wpost> {
                   child: TextField(
                     controller: _textEditingController2,
                     maxLines: 4,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       hintText:"Write Something........",
-                      // border: InputBorder.none,
+                       border: InputBorder.none,
                     ),
                   ),
                 ),
               ),
               Post(_image),
               SizedBox(height: 20,),
-              Divider(
+              const Divider(
                 height: 20,
                 thickness: 2,
               ),
