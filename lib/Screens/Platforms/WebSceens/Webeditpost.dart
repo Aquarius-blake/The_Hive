@@ -53,10 +53,16 @@ class _WebeditpostState extends State<Webeditpost> {
 
 
   Widget Post(dynamic image){
-    return image==null?SizedBox():SizedBox(
-      width: MediaQuery.of(context).size.width*0.3,
-      child: Image.memory(image),
-    );
+    if(memoryimage){
+      return _image!=null? SizedBox(
+        width: MediaQuery.of(context).size.width*0.8,
+        child: Image.memory(_image),
+      ):const SizedBox();
+    }else{
+      return _image==null || _image==""?SizedBox():SizedBox(
+        width: MediaQuery.of(context).size.width*0.8,
+        child:Image.network(_image),
+      );}
   }
 
   @override
