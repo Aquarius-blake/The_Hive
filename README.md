@@ -4,4 +4,7 @@
 
 ## Getting Started
 
-A forum Application project
+A Forum Application project with flutter front-end UI and Firebase back-end.
+
+
+
