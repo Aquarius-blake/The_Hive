@@ -60,7 +60,7 @@ class _WebeditpostState extends State<Webeditpost> {
   @override
   void initState() {
     _title.text=widget.snap['title'];
-    _detail=widget.snap['detail'];
+    _detail.text=widget.snap['detail'];
     super.initState();
   }
 
