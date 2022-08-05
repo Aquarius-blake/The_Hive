@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class Webeditpost extends StatefulWidget {
-  const Webeditpost({Key? key}) : super(key: key);
+  final snap;
+  const Webeditpost({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Webeditpost> createState() => _WebeditpostState();
