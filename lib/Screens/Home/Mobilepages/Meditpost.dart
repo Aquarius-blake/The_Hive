@@ -20,6 +20,7 @@ class _MobeditpostState extends State<Mobeditpost> {
   final TextEditingController _title=TextEditingController();
   final TextEditingController _detail=TextEditingController();
   bool _isloading=false;
+  bool memorypost=false;
 
   @override
   void initState() {
@@ -41,13 +42,20 @@ _image=widget.snap['Image Url'];
   }
 
   Widget Post(){
+    if(memorypost){
+      return SizedBox(
+        width: MediaQuery.of(context).size.width*0.8,
+        child: Image.memory(_image),
+      );
+    }else{
     return _image==null?SizedBox():SizedBox(
       width: MediaQuery.of(context).size.width*0.8,
       child:Image.network(_image),
-    );
+    );}
   }
 
   _selectimage(BuildContext context)async{
+
     return showDialog(
         context: context,
         builder: (context){
@@ -62,6 +70,7 @@ _image=widget.snap['Image Url'];
                   dynamic file=await Selection.uploadpic(ImageSource.camera);
                   setState(() {
                     _image=file;
+                    memorypost=true;
                   });
                 },
               ),
