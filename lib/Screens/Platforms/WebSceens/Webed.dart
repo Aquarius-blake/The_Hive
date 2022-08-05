@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Webed extends StatefulWidget {
-  const Webed({Key? key}) : super(key: key);
+  final snap;
+  const Webed({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Webed> createState() => _WebedState();
