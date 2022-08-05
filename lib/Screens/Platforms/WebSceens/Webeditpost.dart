@@ -14,7 +14,7 @@ class _WebeditpostState extends State<Webeditpost> {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        padding: EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
 
