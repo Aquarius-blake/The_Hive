@@ -22,6 +22,13 @@ class _WebedState extends State<Webed> {
           ),
         ),
       ),
+      body:SafeArea(
+        child: Center(
+          child: Container(
+
+          ),
+        ),
+      ),
     );
   }
 }
