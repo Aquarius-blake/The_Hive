@@ -191,7 +191,9 @@ _detail.text=widget.snap['detail'];
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.lightBlueAccent,
-        onPressed: (){},
+        onPressed: ()async{
+
+        },
         child: const FaIcon(
             FontAwesomeIcons.pencil
         ),
