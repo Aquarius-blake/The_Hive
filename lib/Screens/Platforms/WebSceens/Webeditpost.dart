@@ -12,6 +12,6 @@ class Webeditpost extends StatefulWidget {
 class _WebeditpostState extends State<Webeditpost> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Card();
   }
 }
