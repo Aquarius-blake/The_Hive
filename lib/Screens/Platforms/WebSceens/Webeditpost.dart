@@ -60,6 +60,13 @@ class _WebeditpostState extends State<Webeditpost> {
   }
 
   @override
+  void dispose() {
+    _title.dispose();
+    _detail.dispose();
+    super.dispose();
+  }
+
+  @override
   void initState() {
     _title.text=widget.snap['title'];
     _detail.text=widget.snap['detail'];
