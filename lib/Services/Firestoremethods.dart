@@ -133,6 +133,7 @@ class FirestoreMethods{
                 _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
                     'Image Url':photourl,
+                    'detail':details
                 }
                 );
                 if(title!=""){
@@ -140,11 +141,7 @@ class FirestoreMethods{
                         'title':title
                     });
                     }
-                if(details!=""){
-                    _firestore.collection("Posts").doc(postid).update({
-                        'detail':details
-                    });
-                }
+
             }
         }catch(e){
             ress=e.toString();
