@@ -13,6 +13,8 @@ class _WebedState extends State<Webed> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
+        iconTheme: IconThemeData(),
         title: Text(
             "",
           style: TextStyle(
