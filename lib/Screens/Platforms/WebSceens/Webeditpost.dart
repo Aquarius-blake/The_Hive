@@ -76,6 +76,7 @@ class _WebeditpostState extends State<Webeditpost> {
   void initState() {
     _title.text=widget.snap['title'];
     _detail.text=widget.snap['detail'];
+    _image=widget.snap['Image Url']
     super.initState();
   }
 
