@@ -82,6 +82,8 @@ _image=widget.snap['Image Url'];
                   dynamic file=await Selection.uploadpic(ImageSource.gallery);
                   setState(() {
                     _image=file;
+                    memorypost=true;
+
                   });
                 },
               ),
