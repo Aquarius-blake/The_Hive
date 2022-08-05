@@ -14,7 +14,11 @@ class _WebeditpostState extends State<Webeditpost> {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        child: Column(),
+        child: Column(
+          children: [
+
+          ],
+        ),
       ),
     );
   }
