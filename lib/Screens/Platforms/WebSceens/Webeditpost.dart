@@ -100,6 +100,7 @@ class _WebeditpostState extends State<Webeditpost> {
               width: MediaQuery.of(context).size.width*0.7,
               child: TextField(
                 controller: _detail,
+                maxLines: 8,
                 decoration: InputDecoration(
                   hintText: "Detals",
                 ),
