@@ -14,8 +14,10 @@ class _MobeditpostState extends State<Mobeditpost> {
   dynamic _image;
   Upload Selection=Upload();
   final TextEditingController _title=TextEditingController();
-  final TextEditingController _textEditingController2=TextEditingController();
+  final TextEditingController _detail=TextEditingController();
   bool _isloading=false;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
