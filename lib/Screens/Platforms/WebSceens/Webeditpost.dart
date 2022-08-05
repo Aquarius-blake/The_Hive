@@ -64,7 +64,9 @@ class _WebeditpostState extends State<Webeditpost> {
           children: [
             Row(
               children: [
+                CircleAvatar(
 
+                )
               ],
             ),
             SizedBox(),
