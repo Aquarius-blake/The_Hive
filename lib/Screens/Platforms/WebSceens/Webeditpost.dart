@@ -60,7 +60,7 @@ class _WebeditpostState extends State<Webeditpost> {
   @override
   void initState() {
     _title.text=widget.snap['title'];
-_detail=widget.snap['detail'];
+    _detail=widget.snap['detail'];
     super.initState();
   }
 
@@ -75,7 +75,7 @@ _detail=widget.snap['detail'];
             Row(
               children: [
                 CircleAvatar(
-radius: 18,
+                  radius: 18,
                   backgroundImage: NetworkImage(user1.ppurl!),
                 ),
                 SizedBox(
@@ -91,9 +91,18 @@ radius: 18,
               width: MediaQuery.of(context).size.width*0.7,
               child: TextField(
                 controller: _title,
-decoration: InputDecoration(
-  hintText: "Title",
-),
+                decoration: InputDecoration(
+                  hintText: "Title",
+                ),
+              ),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width*0.7,
+              child: TextField(
+                controller: _detail,
+                decoration: InputDecoration(
+                  hintText: "Detals",
+                ),
               ),
             ),
             Post(_image),
