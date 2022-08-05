@@ -10,6 +10,15 @@ class Webeditpost extends StatefulWidget {
 }
 
 class _WebeditpostState extends State<Webeditpost> {
+ dynamic image;
+  Widget Post(dynamic image){
+    return image==null?SizedBox():SizedBox(
+      width: MediaQuery.of(context).size.width*0.3,
+      child: Image.memory(image),
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -23,6 +32,7 @@ class _WebeditpostState extends State<Webeditpost> {
               ],
             ),
             SizedBox(),
+            Post(image),
             Divider(),
             Row(
               children: [
