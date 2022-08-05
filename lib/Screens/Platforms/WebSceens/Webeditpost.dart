@@ -145,7 +145,8 @@ class _WebeditpostState extends State<Webeditpost> {
                       icon: Icon(
                           Icons.remove_circle
                       )
-                  )
+                  ),
+                  Align()
                 ],
               )
             ],
