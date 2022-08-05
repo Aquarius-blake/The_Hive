@@ -146,7 +146,24 @@ class _WebeditpostState extends State<Webeditpost> {
                           Icons.remove_circle
                       )
                   ),
-                  Align()
+                  Align(
+                    child: ElevatedButton(
+                      onPressed: (){},
+                      child: Text("Edit Post"),
+                      style: ElevatedButton.styleFrom(
+                          elevation: 0.0,
+                          shadowColor: Colors.black,
+                          primary: Colors.blue[400],
+                          side: BorderSide(
+                            color: Colors.white70,
+                            width: 2.0,
+                          ),
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(100.0)
+                          )
+                      ),
+                    ),
+                  )
                 ],
               )
             ],
