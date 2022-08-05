@@ -48,7 +48,7 @@ _image=widget.snap['Image Url'];
         child: Image.memory(_image),
       );
     }else{
-    return _image==null?SizedBox():SizedBox(
+    return _image==null || _image==""?SizedBox():SizedBox(
       width: MediaQuery.of(context).size.width*0.8,
       child:Image.network(_image),
     );}
