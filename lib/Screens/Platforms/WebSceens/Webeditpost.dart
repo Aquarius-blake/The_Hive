@@ -103,6 +103,7 @@ class _WebeditpostState extends State<Webeditpost> {
                 maxLines: 8,
                 decoration: InputDecoration(
                   hintText: "Detals",
+                  border: InputBorder.none,
                 ),
               ),
             ),
