@@ -136,8 +136,15 @@ class FirestoreMethods{
                 }
                 );
                 if(title!=""){
-                    _firestore.collection("Posts").doc(postid).update({});
+                    _firestore.collection("Posts").doc(postid).update({
+                        'title':title
+                    });
                     }
+                if(details!=""){
+                    _firestore.collection("Posts").doc(postid).update({
+                        'detail':details
+                    });
+                }
             }
         }catch(e){
             ress=e.toString();
