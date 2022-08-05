@@ -142,6 +142,17 @@ class FirestoreMethods{
                     });
                     }
 
+            }else{
+                _firestore.collection("Posts").doc(postid).update({
+                    'Post Time':DateTime.now(),
+                    'detail':details
+                }
+                );
+                if(title!=""){
+                    _firestore.collection("Posts").doc(postid).update({
+                        'title':title
+                    });
+                }
             }
         }catch(e){
             ress=e.toString();
