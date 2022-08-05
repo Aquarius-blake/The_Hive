@@ -21,6 +21,7 @@ class _WebeditpostState extends State<Webeditpost> {
   Upload Selection=Upload();
   TextEditingController _title=TextEditingController();
   TextEditingController _detail=TextEditingController();
+  bool memoryimage=false;
 
 
   _selectimage()async{
@@ -38,6 +39,7 @@ class _WebeditpostState extends State<Webeditpost> {
                   dynamic file=await Selection.uploadpic(ImageSource.gallery);
                   setState(() {
                     _image=file;
+                    memoryimage=true;
                   });
                 },
               ),
