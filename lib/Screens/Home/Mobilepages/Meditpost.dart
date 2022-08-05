@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../Models/Users1.dart';
 import '../../../Services/Upload.dart';
 
 class Mobeditpost extends StatefulWidget {
@@ -21,6 +22,19 @@ class _MobeditpostState extends State<Mobeditpost> {
   void initState() {
 _image=widget.snap['Image Url'];
     super.initState();
+  }
+  Widget Avatar(User1 user1){
+    try{
+      return CircleAvatar(
+        radius: 20,
+        backgroundImage: NetworkImage(user1.ppurl!),
+      );
+    }catch(e){
+      return CircleAvatar(
+        radius: 20,
+        backgroundImage: AssetImage('Assets/hac.jpg'),
+      );
+    }
   }
 
   @override
