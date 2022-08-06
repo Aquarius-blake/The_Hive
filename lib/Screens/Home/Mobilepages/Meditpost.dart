@@ -204,7 +204,7 @@ _detail.text=widget.snap['detail'];
         backgroundColor: Colors.lightBlueAccent,
         onPressed: ()async{
           String ress=await FirestoreMethods().Editpost(widget.snap['Post Uid'], _title.text, _detail.text, _image, memorypost);
-          Showsnackbar(ress, context);
+         await Showsnackbar(ress, context);
           Navigator.of(context).pop();
         },
         child: const FaIcon(
