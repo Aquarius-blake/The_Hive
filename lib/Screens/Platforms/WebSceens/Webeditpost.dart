@@ -5,7 +5,9 @@ import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
+import '../../../Services/Firestoremethods.dart';
 import '../../../Services/Upload.dart';
+import '../../../shared/Pop_up.dart';
 
 
 class Webeditpost extends StatefulWidget {
@@ -152,7 +154,11 @@ class _WebeditpostState extends State<Webeditpost> {
                   ),
                   Align(
                     child: ElevatedButton(
-                      onPressed: (){},
+                      onPressed: ()async{
+                        String ress=await FirestoreMethods().Editpost(widget.snap['Post Uid'], _title.text, _detail.text, _image, memoryimage);
+                        Showsnackbar(ress, context);
+                        Navigator.of(context).pop();
+                      },
                       child: Text("Edit Post"),
                       style: ElevatedButton.styleFrom(
                           elevation: 0.0,
