@@ -53,6 +53,11 @@ appBar: AppBar(
           leading: CircleAvatar(
             backgroundImage: NetworkImage(snapshot.data!.docs[index]['profilepic']),
           ),
+          title: Text(snapshot.data!.docs[index]['username'],
+            style: TextStyle(
+              color: Colors.black
+            ),
+          ),
         );
         }
     );
