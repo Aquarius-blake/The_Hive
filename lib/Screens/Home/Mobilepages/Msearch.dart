@@ -11,7 +11,7 @@ class _MsearchState extends State<Msearch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
+appBar: AppBar(),
     );
   }
 }
