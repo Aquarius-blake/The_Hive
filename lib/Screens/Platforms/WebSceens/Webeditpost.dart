@@ -146,7 +146,7 @@ class _WebeditpostState extends State<Webeditpost> {
                           Icons.remove_circle
                       )
                   ),
-                  Flexible(
+                  const Flexible(
                       fit: FlexFit.tight,
                       child: SizedBox()
                   ),
@@ -158,7 +158,7 @@ class _WebeditpostState extends State<Webeditpost> {
                           elevation: 0.0,
                           shadowColor: Colors.black,
                           primary: Colors.blue[400],
-                          side: BorderSide(
+                          side: const BorderSide(
                             color: Colors.white70,
                             width: 2.0,
                           ),
