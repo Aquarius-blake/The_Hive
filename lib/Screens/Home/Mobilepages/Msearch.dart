@@ -31,8 +31,8 @@ appBar: AppBar(
   ),
 ),
 
-      body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("users").where("username",isGreaterThanOrEqualTo: _search.text).snapshots(),
+      body: FutureBuilder(
+        future: FirebaseFirestore.instance.collection("users").where("username",isGreaterThanOrEqualTo: _search.text).get(),
     builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
     if(snapshot.connectionState==ConnectionState.waiting){
     return Center(
