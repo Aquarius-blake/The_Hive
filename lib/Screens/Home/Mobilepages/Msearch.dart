@@ -8,12 +8,16 @@ class Msearch extends StatefulWidget {
 }
 
 class _MsearchState extends State<Msearch> {
+  TextEditingController _search=TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
   elevation: 0.0,
-  title: TextFormField(),
+  title: TextFormField(
+    controller: _search,
+  ),
 ),
     );
   }
