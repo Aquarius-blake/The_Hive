@@ -11,7 +11,8 @@ class _MsearchState extends State<Msearch> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Text("Search"),
+      child: Card(
+          child: Text("Search")),
     );
   }
 }
