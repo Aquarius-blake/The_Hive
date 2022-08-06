@@ -154,7 +154,7 @@ class _wpostState extends State<wpost> {
                       onPressed: ()=>_selectimage(),
                       icon: Icon(Icons.add_a_photo)
                   ),
-                  Flexible(
+                  const Flexible(
                       fit: FlexFit.tight,
                       child: SizedBox()
                   ),

@@ -146,6 +146,10 @@ class _WebeditpostState extends State<Webeditpost> {
                           Icons.remove_circle
                       )
                   ),
+                  Flexible(
+                      fit: FlexFit.tight,
+                      child: SizedBox()
+                  ),
                   Align(
                     child: ElevatedButton(
                       onPressed: (){},
