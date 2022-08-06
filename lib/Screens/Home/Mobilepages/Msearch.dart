@@ -31,7 +31,7 @@ appBar: AppBar(
     if(snapshot.connectionState==ConnectionState.waiting){
     return Center(
     child: CircularProgressIndicator(),
-    )
+    );
     }else if(!snapshot.hasData){
       return Center(
         child: Text("No match found"),
@@ -39,8 +39,10 @@ appBar: AppBar(
     }
     return ListView.builder(
       itemCount: snapshot.data!.docs.length,
-        itemBuilder: itemBuilder
-    )
+        itemBuilder: (context,index){
+        return ListTile();
+        }
+    );
     }
       ),
     );
