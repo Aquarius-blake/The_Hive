@@ -51,6 +51,7 @@ appBar: AppBar(
         itemBuilder: (context,index){
         return ListTile(
           leading: CircleAvatar(
+            backgroundImage: NetworkImage(snapshot.data!.docs[index]['profilepic']),
           ),
         );
         }
