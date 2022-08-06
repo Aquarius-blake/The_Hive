@@ -17,6 +17,7 @@ appBar: AppBar(
   elevation: 0.0,
   title: TextFormField(
     controller: _search,
+    decoration: InputDecoration(),
   ),
 ),
     );
