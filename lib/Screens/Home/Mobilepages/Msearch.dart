@@ -10,12 +10,8 @@ class Msearch extends StatefulWidget {
 class _MsearchState extends State<Msearch> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Card(
-          child: Container(
-              child: Text("Search")
-          )
-      ),
+    return Scaffold(
+
     );
   }
 }
