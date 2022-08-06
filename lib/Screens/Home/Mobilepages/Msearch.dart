@@ -40,7 +40,9 @@ appBar: AppBar(
     return ListView.builder(
       itemCount: snapshot.data!.docs.length,
         itemBuilder: (context,index){
-        return ListTile();
+        return ListTile(
+          leading: CircleAvatar(),
+        );
         }
     );
     }
