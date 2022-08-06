@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/Whome.dart';
+import 'package:forum3/Screens/Platforms/WebSceens/Wsearch.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/wpost.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:provider/provider.dart';
@@ -370,7 +371,7 @@ class _WebviewState extends State<Webview> {
                                 wpost(),
                                 Text("Page2"),
                                 Text("Page3"),
-                                Text("Page4")
+                                Wsearch()
                               ],
 
                               physics:const  ScrollPhysics(
