@@ -12,6 +12,11 @@ class _MsearchState extends State<Msearch> {
   TextEditingController _search=TextEditingController();
 
   @override
+  void dispose() {
+    _search.dispose();
+    super.dispose();
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
