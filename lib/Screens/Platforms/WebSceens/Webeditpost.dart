@@ -156,7 +156,7 @@ class _WebeditpostState extends State<Webeditpost> {
                     child: ElevatedButton(
                       onPressed: ()async{
                         String ress=await FirestoreMethods().Editpost(widget.snap['Post Uid'], _title.text, _detail.text, _image, memoryimage);
-                        Showsnackbar(ress, context);
+                      await  Showsnackbar(ress, context);
                         Navigator.of(context).pop();
                       },
                       child: Text("Edit Post"),
