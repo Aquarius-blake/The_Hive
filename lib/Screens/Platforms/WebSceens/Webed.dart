@@ -19,7 +19,7 @@ class _WebedState extends State<Webed> {
         iconTheme: const IconThemeData(
           color: Colors.white
         ),
-        title: Text(
+        title: const Text(
             "Edit Post",
           style: TextStyle(
 
