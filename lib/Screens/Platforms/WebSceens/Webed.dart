@@ -16,7 +16,7 @@ class _WebedState extends State<Webed> {
       backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
         centerTitle: true,
-        iconTheme: IconThemeData(
+        iconTheme: const IconThemeData(
           color: Colors.white
         ),
         title: Text(
