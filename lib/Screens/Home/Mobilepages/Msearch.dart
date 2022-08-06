@@ -32,7 +32,7 @@ appBar: AppBar(
 ),
 
       body: FutureBuilder(
-        future: FirebaseFirestore.instance.collection("users").where('username',isGreaterThanOrEqualTo: _search.text).get(),
+        future: FirebaseFirestore.instance.collection("users").where("username",isGreaterThanOrEqualTo: _search.text).get(),
     builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
     if(!snapshot.hasData){
     return Center(
