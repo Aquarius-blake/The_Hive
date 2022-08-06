@@ -13,7 +13,9 @@ class _MsearchState extends State<Msearch> {
     return Container(
       child: Card(
           child: Container(
-              child: Text("Search"))),
+              child: Text("Search")
+          )
+      ),
     );
   }
 }
