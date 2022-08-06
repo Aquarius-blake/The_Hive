@@ -388,7 +388,6 @@ class _WebviewState extends State<Webview> {
                     children: <Widget>[
                       Card(
                         child: Column(
-
                           children: <Widget>[
                             SizedBox(width: 300,),
                             Text("Notifications")
