@@ -142,7 +142,7 @@ class _WebeditpostState extends State<Webeditpost> {
                       _image=null;
                     });
                   },
-                      icon: Icon(
+                      icon: const Icon(
                           Icons.remove_circle
                       )
                   ),
