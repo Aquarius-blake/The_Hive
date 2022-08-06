@@ -13,6 +13,7 @@ class _MsearchState extends State<Msearch> {
     return Scaffold(
 appBar: AppBar(
   elevation: 0.0,
+  title: TextFormField(),
 ),
     );
   }
