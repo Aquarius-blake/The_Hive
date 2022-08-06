@@ -41,7 +41,9 @@ appBar: AppBar(
       itemCount: snapshot.data!.docs.length,
         itemBuilder: (context,index){
         return ListTile(
-          leading: CircleAvatar(),
+          leading: CircleAvatar(
+            backgroundImage: NetworkImage(snapshot.data!.docs[index]['Profile Pic']),
+          ),
         );
         }
     );
