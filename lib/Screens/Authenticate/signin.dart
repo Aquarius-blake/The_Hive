@@ -59,6 +59,7 @@ class _SinginState extends State<Singin> {
                       });
                     },
                     decoration: InputDecoration(
+                      labelText: "Email Address",
                       hintText: "Enter Email Address",
                       filled: true,
                       fillColor: Colors.white70,
@@ -78,7 +79,6 @@ class _SinginState extends State<Singin> {
                   ),
                   SizedBox(height: 20,),
                   TextFormField(
-
                     validator: (val)=>val!.isEmpty ? "Please Enter A Valid Password" : null,
                     onChanged: (val){
                       setState(() {
@@ -87,7 +87,7 @@ class _SinginState extends State<Singin> {
                     },
                     obscureText: true,
                     decoration: InputDecoration(
-
+labelText: "Password",
                       hintText: "Enter Password",
                       filled: true,
                       fillColor: Colors.white70,
