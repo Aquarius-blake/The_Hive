@@ -35,7 +35,10 @@ appBar: AppBar(
     );
     }else if(!snapshot.hasData){
       return Center(
-        child: Text("No match found"),
+        child: Text("No match found",
+        style: TextStyle(
+            color: Colors.black,
+        ),),
       );
     }
     return ListView.builder(
