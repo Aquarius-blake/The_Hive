@@ -10,6 +10,7 @@ class Msearch extends StatefulWidget {
 
 class _MsearchState extends State<Msearch> {
   TextEditingController _search=TextEditingController();
+  bool isShowuser=false;
 
   @override
   void dispose() {
@@ -24,7 +25,11 @@ appBar: AppBar(
   elevation: 0.0,
   title: TextFormField(
     controller: _search,
-    onFieldSubmitted: (String _){},
+    onFieldSubmitted: (String _){
+      setState(() {
+        isShowuser=true;
+      });
+    },
     decoration: InputDecoration(
       labelText: "Search user",
     ),
