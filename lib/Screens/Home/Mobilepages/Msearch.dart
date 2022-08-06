@@ -29,7 +29,7 @@ appBar: AppBar(
       body: FutureBuilder(
         future: FirebaseFirestore.instance.collection("users").where('username',isGreaterThanOrEqualTo: _search.text).get(),
     builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
-    if(snapshot.connectionState==ConnectionState.waiting){
+    if(!snapshot.hasData){
     return Center(
     child: CircularProgressIndicator(),
     );
