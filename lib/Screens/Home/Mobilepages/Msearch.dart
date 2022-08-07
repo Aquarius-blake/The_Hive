@@ -30,6 +30,15 @@ if(queryResultset.length==0 && value.lenth==1 ){
       queryResultset.add(snapshot.docs[i].data());
     }
   });
+}else{
+  tempSearchstore=[];
+  queryResultset.forEach((element) {
+    if(element['usernmae'].startsWith(capvalue)){
+      setState(() {
+
+      });
+    }
+  });
 }
   }
 
