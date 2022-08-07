@@ -56,7 +56,8 @@ class Post{
         imageUrl: snapshot['Image Url'],
         postuid: snapshot['Post Uid'],
         likes: snapshot['likes'],
-      title: snapshot['title']
+      title: snapshot['title'],
+      searchkey: snapshot['searchkey']
     );
 
     return Post12;
