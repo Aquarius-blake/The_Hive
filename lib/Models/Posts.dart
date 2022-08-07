@@ -22,6 +22,7 @@ class Post{
     required  this.detail,
     required this.author,
     this.title,
+    this.searchkey,
     required  this.Timeposted,
     this.ppurl,
     this.imageUrl,
