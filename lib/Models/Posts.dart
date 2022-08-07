@@ -36,6 +36,7 @@ class Post{
     "author uid":author_uid,
     "author":author,
     "title":title,
+    "searchkey":searchkey,
     "Post Time":Timeposted,
     "Profile Pic":ppurl,
     "Image Url":imageUrl,
