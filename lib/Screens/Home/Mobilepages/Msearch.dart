@@ -68,7 +68,11 @@ class _MsearchState extends State<Msearch> {
         ),
       ),
 
-      body: isShowuser? ListView()
+      body: isShowuser? ListView(
+        children: [
+
+        ],
+      )
 
       /*FutureBuilder(
           future: FirebaseFirestore.instance.collection("users").where("username",isGreaterThanOrEqualTo: _search.text.trim()).get(),
