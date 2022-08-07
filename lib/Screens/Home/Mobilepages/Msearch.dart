@@ -15,7 +15,7 @@ var queryResultset=[];
 var tempSearchstore=[];
 
 
-  initiateusersearch(){}
+  initiateusersearch(value){}
 
 
   @override
