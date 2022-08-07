@@ -9,6 +9,7 @@ class Post{
   late final String? author;
   late final String? title;
   late final String? detail;
+  late String? searchkey=title!.substring(0,1);
   late final  Timeposted;
   late final String? ppurl;
   late final String? imageUrl;
