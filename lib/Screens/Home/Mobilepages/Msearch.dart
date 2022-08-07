@@ -12,6 +12,11 @@ class _MsearchState extends State<Msearch> {
   TextEditingController _search=TextEditingController();
   bool isShowuser=false;
 
+
+
+  initiatesearc(){}
+
+
   @override
   void dispose() {
     _search.dispose();
