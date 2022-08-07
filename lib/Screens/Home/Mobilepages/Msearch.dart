@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Searchmethods.dart';
 
 class Msearch extends StatefulWidget {
   const Msearch({Key? key}) : super(key: key);
@@ -23,7 +24,9 @@ var tempSearchstore=[];
       });
     }
     var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
-if(queryResultset.length==0 && value.lenth==1 ){}
+if(queryResultset.length==0 && value.lenth==1 ){
+  SearchService().SearchUser(value).then((QuerySnapshot docs){});
+}
   }
 
 
