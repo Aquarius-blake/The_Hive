@@ -12,6 +12,7 @@ class User1{
   late final bool? Guest;
   dynamic profilepic;
   late final String? Username;
+  late  String? searchkey=Username!.substring(0,1);
   late final DateTime? DOB;
   late final String? imageurl;
   late final String? ppurl;
@@ -29,11 +30,13 @@ class User1{
     this.imageurl,
     this.ppurl,
     this.Name,
-    this.Gender
+    this.Gender,
+    this.searchkey,
   });
 
   Map<String,dynamic> toJson()=>{
     "username":Username,
+    "searchkey":searchkey,
     "uid":UID,
     "email":Email,
     "password":Password,
@@ -52,8 +55,9 @@ class User1{
       DOB: snapshot['DateofBirth'],
       ppurl: snapshot['profilepic'],
       Name: snapshot['Full Name'],
-      Gender: snapshot['Gender'],);
-
+      Gender: snapshot['Gender'],
+      searchkey: snapshot['searchkey']
+    );
     return User12;
 
 
