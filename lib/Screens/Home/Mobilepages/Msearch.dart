@@ -68,7 +68,9 @@ class _MsearchState extends State<Msearch> {
         ),
       ),
 
-      body: isShowuser? FutureBuilder(
+      body: isShowuser? ListView()
+
+      /*FutureBuilder(
           future: FirebaseFirestore.instance.collection("users").where("username",isGreaterThanOrEqualTo: _search.text.trim()).get(),
           builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
             if(snapshot.connectionState==ConnectionState.waiting){
@@ -99,7 +101,7 @@ class _MsearchState extends State<Msearch> {
                 }
             );
           }
-      ):Text("Post"),
+      )*/:Text("Post"),
     );
   }
 }
