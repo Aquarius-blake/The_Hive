@@ -31,7 +31,7 @@ class User1{
     this.ppurl,
     this.Name,
     this.Gender,
-    this.searchkey,
+     this.searchkey,
   });
 
   Map<String,dynamic> toJson()=>{
