@@ -153,8 +153,10 @@ class FirestoreMethods{
                 );
                 if(title!=""){
                 await    _firestore.collection("Posts").doc(postid).update({
-                        'title':title
-                    });
+                        'title':title,
+                    'searchkey':title!.substring(0,1)
+
+                });
                 }
             }
             ress="Edit Succesful";
