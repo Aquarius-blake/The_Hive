@@ -12,6 +12,7 @@ class _MsearchState extends State<Msearch> {
   TextEditingController _search=TextEditingController();
   bool isShowuser=false;
 var queryResultset=[];
+var tempSearchstore=[];
 
 
   initiatesearc(){}
