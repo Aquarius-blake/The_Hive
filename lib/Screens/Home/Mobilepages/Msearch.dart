@@ -56,7 +56,8 @@ class _MsearchState extends State<Msearch> {
         elevation: 0.0,
         title: TextFormField(
           controller: _search,
-          onFieldSubmitted: (String _){
+          onFieldSubmitted: (value){
+            initiateusersearch(value);
             setState(() {
               isShowuser=true;
             });
