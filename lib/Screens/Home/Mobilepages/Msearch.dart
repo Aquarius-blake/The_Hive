@@ -16,7 +16,12 @@ var tempSearchstore=[];
 
 
   initiateusersearch(value){
-    if(value.length==0){}
+    if(value.length==0){
+      setState(() {
+        queryResultset=[];
+        tempSearchstore=[];
+      });
+    }
   }
 
 
