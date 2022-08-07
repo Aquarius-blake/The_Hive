@@ -31,6 +31,7 @@ class FirestoreMethods{
                 author_uid: uid,
                 postuid: postid,
                 title: Title,
+                searchkey: Title.substring(0,1),
                 detail: Details,
                 author: author,
                 Timeposted: DateTime.now(),
