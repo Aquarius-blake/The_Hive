@@ -23,7 +23,7 @@ var tempSearchstore=[];
       });
     }
     var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
-
+if(queryResultset.length==0 && value.lenth==1 ){}
   }
 
 
