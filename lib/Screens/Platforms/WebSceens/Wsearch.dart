@@ -13,8 +13,8 @@ class Wsearch extends StatefulWidget {
 
 class _WsearchState extends State<Wsearch> {
   TextEditingController _search=TextEditingController();
-var queryResultset;
-var tempSearchstore;
+var queryResultset=[];
+var tempSearchstore=[];
 bool postsearch=false;
 
   initiateusersearch(value){
