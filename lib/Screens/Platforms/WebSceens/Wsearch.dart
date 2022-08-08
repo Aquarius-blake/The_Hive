@@ -67,7 +67,7 @@ ElevatedButton(
             width: 2.0,
           ),
           shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(200.0)
+              borderRadius: BorderRadius.circular(20.0)
           )
       ),
     ),
