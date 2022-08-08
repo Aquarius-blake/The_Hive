@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:forum3/Services/Searchmethods.dart';
 
 class Msearch extends StatefulWidget {
   const Msearch({Key? key}) : super(key: key);
@@ -16,7 +15,7 @@ class _MsearchState extends State<Msearch> {
   var tempSearchstore=[];
 
 
-  initiateusersearch(value){
+  initiateusersearch(value,snapshot){
     if(value.length==0){
       setState(() {
         queryResultset=[];
@@ -25,11 +24,9 @@ class _MsearchState extends State<Msearch> {
     }
     var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
     if(queryResultset.length==0 && value.lenth==1 ){
-      SearchService().SearchUser(value).then((QuerySnapshot snapshot){
-        for(int i=0;i<snapshot.docs.length;++i){
-          queryResultset.add(snapshot.docs[i].data());
-        }
-      });
+      for(int i=0;i<snapshot.docs.length;++i){
+        queryResultset.add(snapshot.docs[i].data());
+      }
     }else{
       tempSearchstore=[];
       queryResultset.forEach((element) {
@@ -79,7 +76,6 @@ class _MsearchState extends State<Msearch> {
         title: TextFormField(
           controller: _search,
           onFieldSubmitted: (value){
-            initiateusersearch(value);
             setState(() {
               isShowuser=true;
             });
@@ -112,21 +108,7 @@ class _MsearchState extends State<Msearch> {
                   ),),
               );
             }
-            return ListView.builder(
-                itemCount: snapshot.data!.docs.length,
-                itemBuilder: (context,index){
-                  return ListTile(
-                    leading: CircleAvatar(
-                      backgroundImage: NetworkImage(snapshot.data!.docs[index]['profilepic']),
-                    ),
-                    title: Text(snapshot.data!.docs[index]['username'],
-                      style: TextStyle(
-                          color: Colors.black
-                      ),
-                    ),
-                  );
-                }
-            );
+            return ListView();
           }
       ):Text("Post"),
     );
