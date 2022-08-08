@@ -91,6 +91,9 @@ class _SinginState extends State<Singin> {
                     obscureText: true,
                     decoration: InputDecoration(
 labelText: "Password",
+                      labelStyle: TextStyle(
+                        color: Colors.black
+                      ),
                       hintText: "Enter Password",
                       filled: true,
                       fillColor: Colors.white70,
