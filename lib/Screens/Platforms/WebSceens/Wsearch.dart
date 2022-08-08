@@ -12,7 +12,9 @@ class _WsearchState extends State<Wsearch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-appBar: AppBar(),
+appBar: AppBar(
+  backgroundColor: Colors.white,
+),
     );
   }
 }
