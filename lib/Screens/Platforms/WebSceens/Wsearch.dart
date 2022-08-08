@@ -76,6 +76,9 @@ bool postsearch=false;
         backgroundColor: Colors.white,
         title: TextFormField(
           controller: _search,
+          onFieldSubmitted: (String value){
+            initiateusersearch(value);
+          },
           decoration: const InputDecoration(
             border: InputBorder.none,
             label: Text(
