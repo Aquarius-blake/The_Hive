@@ -146,7 +146,9 @@ await initiateusersearch(_search.text);
 
         ],
       ),
-      body: loadin?CircularProgressIndicator() : ListView(
+      body: loadin?CircularProgressIndicator(
+        color: Colors.red,
+      ) : ListView(
         children:tempSearchstore.map((element){
           return secard(element);
         }).toList()
