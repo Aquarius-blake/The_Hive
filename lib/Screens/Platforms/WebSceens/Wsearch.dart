@@ -56,7 +56,7 @@ ElevatedButton(
     ElevatedButton(
       onPressed: (){},
       child: Text(
-        "User",
+        "Post",
       ),
       style: ElevatedButton.styleFrom(
           elevation: 0.0,
