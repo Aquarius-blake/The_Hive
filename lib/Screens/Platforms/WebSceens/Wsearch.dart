@@ -30,6 +30,7 @@ bool loadin=false;
       SearchService().SearchUser(value).then((QuerySnapshot snapshot){
         for(int i=0;i<snapshot.docs.length;++i){
           queryResultset.add(snapshot.docs[i].data());
+
         }
       });
     }else{
