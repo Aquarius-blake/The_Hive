@@ -24,6 +24,7 @@ appBar: AppBar(
   backgroundColor: Colors.white,
   title: TextFormField(
     controller: _search,
+    decoration: InputDecoration(),
   ),
 ),
     );
