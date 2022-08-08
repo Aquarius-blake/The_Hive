@@ -14,6 +14,7 @@ class _WsearchState extends State<Wsearch> {
     return Scaffold(
 appBar: AppBar(
   backgroundColor: Colors.white,
+  title: TextFormField(),
 ),
     );
   }
