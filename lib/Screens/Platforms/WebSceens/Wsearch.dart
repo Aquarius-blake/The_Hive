@@ -22,7 +22,9 @@ _search.dispose();
     return Scaffold(
 appBar: AppBar(
   backgroundColor: Colors.white,
-  title: TextFormField(),
+  title: TextFormField(
+    controller: _search,
+  ),
 ),
     );
   }
