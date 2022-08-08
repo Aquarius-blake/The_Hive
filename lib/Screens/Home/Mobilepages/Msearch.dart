@@ -48,6 +48,7 @@ class _MsearchState extends State<Msearch> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10)
       ),
+      elevation: 2.0,
     );
   }
 
