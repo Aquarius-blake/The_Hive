@@ -61,7 +61,7 @@ class _SinginState extends State<Singin> {
                     decoration: InputDecoration(
                       labelText: "Email Address",
                       labelStyle: TextStyle(
-                        color: Colors.white
+                        color: Colors.black
                       ),
                       hintText: "Enter Email Address",
                       filled: true,
