@@ -15,6 +15,7 @@ class _WsearchState extends State<Wsearch> {
   TextEditingController _search=TextEditingController();
 var queryResultset;
 var tempSearchstore;
+bool postsearch=false;
 
   initiateusersearch(value){
     if(value.length==0){
@@ -68,7 +69,9 @@ var tempSearchstore;
         ),
         actions: [
           ElevatedButton(
-            onPressed: (){},
+            onPressed: ()async{
+
+            },
             child: Text(
               "User",
             ),
