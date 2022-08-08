@@ -43,7 +43,7 @@ class _MsearchState extends State<Msearch> {
   }
 
 
-  Widget secard(){
+  Widget secard(data){
     return Card();
   }
 
@@ -75,9 +75,10 @@ class _MsearchState extends State<Msearch> {
       ),
 
       body: isShowuser? ListView(
-        children: [
-
-        ],
+        children:tempSearchstore.map((element){
+          return secard(element);
+        }).toList()
+        ,
       )
 
       /*FutureBuilder(
