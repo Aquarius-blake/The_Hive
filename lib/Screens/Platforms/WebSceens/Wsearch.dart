@@ -25,7 +25,12 @@ appBar: AppBar(
   title: TextFormField(
     controller: _search,
     decoration: InputDecoration(
-      label: Text("Search"),
+      label: Text(
+          "Search",
+      style: TextStyle(
+
+      ),
+      ),
     ),
   ),
 ),
