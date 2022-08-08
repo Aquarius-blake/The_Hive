@@ -43,7 +43,12 @@ bool loadin=false;
         }
       });
     }
+    setState(() {
+      loadin=false;
+    });
   }
+
+
   Widget secard(data){
     print(data['username']);
     return Card(
@@ -98,10 +103,11 @@ bool loadin=false;
         actions: [
           ElevatedButton(
             onPressed: ()async{
+              setState(() {
+                loadin=true;
+              });
 await initiateusersearch(_search.text);
-setState(() {
 
-});
             },
             child: Text(
               "User",
