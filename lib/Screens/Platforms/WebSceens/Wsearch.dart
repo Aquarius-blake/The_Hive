@@ -56,7 +56,10 @@ bool postsearch=false;
             CircleAvatar(
               backgroundImage: NetworkImage(data['profilepic']),
             ),
-            Text(data['username'])
+            Text(data['username'],
+            style: TextStyle(
+              color: Colors.red
+            ),)
           ],
         ),
       ),
