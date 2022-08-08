@@ -108,7 +108,12 @@ class _MsearchState extends State<Msearch> {
                   ),),
               );
             }
-            return ListView();
+            initiateusersearch(_search.text, snapshot);
+            return ListView(
+                children:tempSearchstore.map((element){
+                  return secard(element);
+                }).toList()
+            );
           }
       ):Text("Post"),
     );
