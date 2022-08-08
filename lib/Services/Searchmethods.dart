@@ -5,9 +5,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class SearchService{
 
 
-    SearchUser(String searchfield) async{
+    SearchUser(String searchfield) {
 
-        return await FirebaseFirestore.instance
+        return  FirebaseFirestore.instance
             .collection("users")
             .where("searchkey",isEqualTo: searchfield.substring(0,1).toUpperCase())
             .get();
