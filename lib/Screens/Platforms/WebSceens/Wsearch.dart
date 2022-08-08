@@ -42,6 +42,25 @@ bool postsearch=false;
       });
     }
   }
+  Widget secard(data){
+    return Card(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10)
+      ),
+      elevation: 2.0,
+      child: Container(
+        padding: EdgeInsets.all(10),
+        child: Row(
+          children: [
+            CircleAvatar(
+              backgroundImage: NetworkImage(data['profilepic']),
+            ),
+            Text(data['username'])
+          ],
+        ),
+      ),
+    );
+  }
 
 
   @override
@@ -109,6 +128,26 @@ initiateusersearch(_search.text);
 
         ],
       ),
+      body: ListView(
+        children:tempSearchstore.map((element){
+          return secard(element);
+        }).toList()
+        ,
+      ),
     );
   }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
