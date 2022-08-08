@@ -25,6 +25,7 @@ appBar: AppBar(
   title: TextFormField(
     controller: _search,
     decoration: InputDecoration(
+      border: InputBorder.none,
       label: Text(
           "Search",
       style: TextStyle(
