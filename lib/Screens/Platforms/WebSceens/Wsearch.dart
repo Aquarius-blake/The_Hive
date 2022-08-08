@@ -34,6 +34,7 @@ bool postsearch=false;
     }else{
       tempSearchstore=[];
       queryResultset.forEach((element) {
+        print(element['username']);
         if(element['usernmae'].startsWith(capvalue)){
           setState(() {
             tempSearchstore.add(element);
