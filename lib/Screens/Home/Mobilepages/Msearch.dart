@@ -44,7 +44,11 @@ class _MsearchState extends State<Msearch> {
 
 
   Widget secard(data){
-    return Card();
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(10)
+      ),
+    );
   }
 
 
