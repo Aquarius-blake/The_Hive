@@ -35,7 +35,12 @@ appBar: AppBar(
     ),
   ),
   actions: [
-ElevatedButton(onPressed: (){}, child: Text("User"))
+ElevatedButton(
+    onPressed: (){},
+    child: Text(
+        "User",
+    )
+)
   ],
 ),
     );
