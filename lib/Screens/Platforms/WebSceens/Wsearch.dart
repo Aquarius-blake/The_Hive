@@ -16,6 +16,7 @@ class _WsearchState extends State<Wsearch> {
 var queryResultset=[];
 var tempSearchstore=[];
 bool postsearch=false;
+bool loadin=false;
 
   initiateusersearch(value){
     if(value.length==0){
@@ -139,7 +140,7 @@ setState(() {
 
         ],
       ),
-      body: ListView(
+      body: loadin?CircularProgressIndicator() : ListView(
         children:tempSearchstore.map((element){
           return secard(element);
         }).toList()
