@@ -11,8 +11,8 @@ class Wsearch extends StatefulWidget {
 class _WsearchState extends State<Wsearch> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("search"),
+    return Scaffold(
+
     );
   }
 }
