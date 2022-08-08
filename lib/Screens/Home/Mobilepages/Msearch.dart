@@ -50,9 +50,13 @@ class _MsearchState extends State<Msearch> {
       ),
       elevation: 2.0,
       child: Container(
-        child: Column(
+        padding: EdgeInsets.all(10),
+        child: Row(
           children: [
-
+CircleAvatar(
+  backgroundImage: NetworkImage(data['profilepic']),
+),
+            Text(data['username'])
           ],
         ),
       ),
