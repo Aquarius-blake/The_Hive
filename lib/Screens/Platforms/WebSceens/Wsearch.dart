@@ -70,7 +70,7 @@ bool postsearch=false;
         actions: [
           ElevatedButton(
             onPressed: ()async{
-
+initiateusersearch(_search.text);
             },
             child: Text(
               "User",
