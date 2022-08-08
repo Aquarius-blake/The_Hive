@@ -44,6 +44,7 @@ bool postsearch=false;
     }
   }
   Widget secard(data){
+    print(data['username']);
     return Card(
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10)
