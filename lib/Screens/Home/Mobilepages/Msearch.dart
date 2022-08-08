@@ -90,15 +90,15 @@ class _MsearchState extends State<Msearch> {
         ),
       ),
 
-      body: isShowuser? ListView(
+      body: isShowuser?/* ListView(
         children:tempSearchstore.map((element){
           return secard(element);
         }).toList()
         ,
-      )
+      )*/
 
-      /*FutureBuilder(
-          future: FirebaseFirestore.instance.collection("users").where("username",isGreaterThanOrEqualTo: _search.text.trim()).get(),
+      StreamBuilder(
+          stream: FirebaseFirestore.instance.collection("users").where("searchkey",isEqualTo: _search.text.substring(0,1)).snapshots(),
           builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
             if(snapshot.connectionState==ConnectionState.waiting){
               return Center(
@@ -128,7 +128,7 @@ class _MsearchState extends State<Msearch> {
                 }
             );
           }
-      )*/:Text("Post"),
+      ):Text("Post"),
     );
   }
 }
