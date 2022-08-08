@@ -43,6 +43,12 @@ class _MsearchState extends State<Msearch> {
   }
 
 
+  Widget secard(){
+    return Card();
+  }
+
+
+
   @override
   void dispose() {
     _search.dispose();
