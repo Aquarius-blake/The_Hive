@@ -23,7 +23,7 @@ class _MsearchState extends State<Msearch> {
       });
     }
     var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
-    if(queryResultset.length==0 && value.lenth==1 ){
+    if(queryResultset.length==0 && value.length==1 ){
       for(int i=0;i<snapshot.docs.length;++i){
         queryResultset.add(snapshot.docs[i].data());
       }
