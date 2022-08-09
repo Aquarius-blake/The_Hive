@@ -109,6 +109,7 @@ setState(() {
                   ),),
               );
             }
+
             initiateusersearch(_search.text, snapshot);
             return ListView.builder(
 itemCount: tempSearchstore.length,
