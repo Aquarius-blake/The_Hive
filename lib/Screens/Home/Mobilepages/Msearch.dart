@@ -32,8 +32,9 @@ class _MsearchState extends State<Msearch> {
       queryResultset.forEach((element) {
         if(element['username'].startsWith(capvalue)){
 
-            tempSearchstore.add(element);
-
+setState(() {
+  tempSearchstore.add(element);
+});
         }
       });
     }
