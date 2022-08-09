@@ -129,7 +129,7 @@ bool loadin=false;
         ],
       ),
       body: StreamBuilder(
-          stream: FirebaseFirestore.instance.collection("users").where("searchkey",isEqualTo: _search.text.substring(0,1)).snapshots(),
+          stream: FirebaseFirestore.instance.collection("users").where("searchkey",isGreaterThanOrEqualTo: _search.text.substring(0,1)).snapshots(),
           builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
             if(snapshot.connectionState==ConnectionState.waiting){
               return Center(
