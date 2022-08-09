@@ -176,8 +176,7 @@ class _RegisterState extends State<Register> {
 
                         ),
                       ),
-                      SizedBox(height: 20,),
-
+                     const SizedBox(height: 20,),
                       TextFormField(
                         validator: (val)=>val!.length < 6 ? "Enter a Password longer than 6 characters" : null,
                         onChanged: (val){
