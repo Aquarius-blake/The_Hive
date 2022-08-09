@@ -76,6 +76,7 @@ setState(() {
         elevation: 0.0,
         title: TextFormField(
           controller: _search,
+          onChanged: (value){},
           onFieldSubmitted: (value){
             setState(() {
               isShowuser=true;
