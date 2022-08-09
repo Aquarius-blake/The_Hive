@@ -212,6 +212,7 @@ class _RegisterState extends State<Register> {
                           });
                         },
                         decoration: InputDecoration(
+                          label: const Text("Gender"),
                           hintText: "Enter either Male, Female or Other",
                           filled: true,
                           fillColor: Colors.white70,
