@@ -229,7 +229,7 @@ class _RegisterState extends State<Register> {
 
                         ),
                       ),
-                      SizedBox(height: 50,),
+                      const SizedBox(height: 50,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.stretch,
 
