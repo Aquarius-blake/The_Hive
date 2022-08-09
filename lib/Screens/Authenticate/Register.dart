@@ -225,7 +225,7 @@ class _RegisterState extends State<Register> {
                           ),
                         ),
 
-                        style: TextStyle(
+                        style: const TextStyle(
 
                         ),
                       ),
