@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 
@@ -49,25 +48,6 @@ bool loadin=false;
     super.dispose();
   }
 
-  Widget secard(data){
-    return Card(
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10)
-      ),
-      elevation: 2.0,
-      child: Container(
-        padding: EdgeInsets.all(10),
-        child: Row(
-          children: [
-            CircleAvatar(
-              backgroundImage: NetworkImage(data['profilepic']),
-            ),
-            Text(data['username'])
-          ],
-        ),
-      ),
-    );
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -127,29 +107,6 @@ bool loadin=false;
           ),
 
         ],
-      ),
-      body: StreamBuilder(
-          stream: FirebaseFirestore.instance.collection("users").where("searchkey",isLessThanOrEqualTo: _search.text.substring(0,1)).snapshots(),
-          builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
-            if(snapshot.connectionState==ConnectionState.waiting){
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            }else if(!snapshot.hasData){
-              return Center(
-                child: Text("No match found",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),),
-              );
-            }
-            initiateusersearch(_search.text, snapshot);
-            return ListView(
-                children:tempSearchstore.map((element){
-                  return secard(element);
-                }).toList()
-            );
-          }
       ),
 
     );
