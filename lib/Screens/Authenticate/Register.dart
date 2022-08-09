@@ -238,7 +238,6 @@ class _RegisterState extends State<Register> {
                           Center(
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(100.0)
                                     )
