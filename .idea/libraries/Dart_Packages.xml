@@ -152,14 +152,7 @@
         <entry key="firebase_dynamic_links">
           <value>
             <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_dynamic_links-4.3.3/lib" />
-            </list>
-          </value>
-        </entry>
-        <entry key="firebase_dynamic_links_platform_interface">
-          <value>
-            <list>
-              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_dynamic_links_platform_interface-0.2.3+8/lib" />
+              <option value="$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_dynamic_links-2.0.6/lib" />
             </list>
           </value>
         </entry>
@@ -649,8 +642,7 @@
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_core-1.17.1/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_core_platform_interface-4.5.0/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_core_web-1.6.4/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_dynamic_links-4.3.3/lib" />
-      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_dynamic_links_platform_interface-0.2.3+8/lib" />
+      <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_dynamic_links-2.0.6/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_storage-10.2.17/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_storage_platform_interface-4.1.7/lib" />
       <root url="file://$USER_HOME$/AppData/Local/Pub/Cache/hosted/pub.dartlang.org/firebase_storage_web-3.2.16/lib" />
