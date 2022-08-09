@@ -109,10 +109,12 @@ class _MsearchState extends State<Msearch> {
               );
             }
             initiateusersearch(_search.text, snapshot);
-            return ListView(
-                children:tempSearchstore.map((element){
-                  return secard(element);
-                }).toList()
+            return ListView.builder(
+itemCount: tempSearchstore.length,
+                itemBuilder: (BuildContext context, int index) {
+  return secard(tempSearchstore[index]);
+                },
+
             );
           }
       ):Text("Post"),
