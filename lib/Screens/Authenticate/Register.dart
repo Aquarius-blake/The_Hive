@@ -203,8 +203,7 @@ class _RegisterState extends State<Register> {
 
                         ),
                       ),
-                      SizedBox(height: 20,),
-
+                    const   SizedBox(height: 20,),
                       TextFormField(
                         onChanged: (val){
                           setState(() {
