@@ -187,7 +187,7 @@ class _RegisterState extends State<Register> {
                         },
                         obscureText: true,
                         decoration: InputDecoration(
-                          label: Text("Password"),
+                          label: const Text("Password"),
                           hintText: "Enter Password",
                           filled: true,
                           fillColor: Colors.white70,
