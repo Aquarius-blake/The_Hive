@@ -317,7 +317,6 @@ class _RegisterState extends State<Register> {
                                       color: Colors.blue,
 
                                     ),
-
                                   ),
                                 )
                             ),
@@ -329,7 +328,6 @@ class _RegisterState extends State<Register> {
                               ),
                             ),
                           )
-
                         ],
                       ),
                     ],
