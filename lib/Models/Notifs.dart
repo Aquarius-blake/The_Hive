@@ -44,7 +44,7 @@ class Notifs{
       message: snapshot['message'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
-      Timeposted: snapshot['Comment Time'],
+      Timeposted: snapshot['Event Time'],
       ppurl: snapshot['Profile Pic'],
       commentuid: snapshot['Comment Uid'],
       owner_uid: snapshot['owner uid'],
