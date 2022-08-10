@@ -122,7 +122,7 @@ class _RegisterState extends State<Register> {
 
                         ),
                       ),
-                      SizedBox(height: 20,),
+                      const SizedBox(height: 20,),
                       TextFormField(
                         validator: (val)=>val!.isEmpty ? "Enter Username" : null,
                         onChanged: (val){
