@@ -86,7 +86,7 @@ class _RegisterState extends State<Register> {
 
                                     });
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     Icons.add_a_photo,
                                     color: Colors.white,
                                   )
