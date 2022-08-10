@@ -55,7 +55,7 @@ class _RegisterState extends State<Register> {
 
           child: Container(
             color: Colors.white,
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Container(
 
               padding: EdgeInsets.all(6.0),
