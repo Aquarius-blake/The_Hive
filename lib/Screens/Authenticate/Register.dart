@@ -131,6 +131,7 @@ class _RegisterState extends State<Register> {
                           });
                         },
                         decoration: InputDecoration(
+                          label: const Text("Username"),
                           hintText: "Enter Username",
                           filled: true,
                           fillColor: Colors.white70,
