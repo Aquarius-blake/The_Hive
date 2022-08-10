@@ -41,9 +41,9 @@ class _RegisterState extends State<Register> {
         backgroundColor: Colors.lightBlue,
         elevation: 2.0,
         title: Row(
-          children:<Widget> [
+          children:const <Widget> [
             Padding(
-              padding: const EdgeInsets.fromLTRB(20.0,0,0,0),
+              padding: EdgeInsets.fromLTRB(20.0,0,0,0),
               child:   Text("Register New Account"),
             )
           ],
