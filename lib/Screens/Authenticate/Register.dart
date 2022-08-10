@@ -148,9 +148,7 @@ class _RegisterState extends State<Register> {
 
                         ),
                       ),
-                      SizedBox(height: 20,),
-
-                      SizedBox(height: 20,),
+                      const SizedBox(height: 20,),
                       TextFormField(
                         validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
                         onChanged: (val){
