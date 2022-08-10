@@ -10,14 +10,14 @@ class Notifs{
   late final String? message;
   late final  Timeposted;
   late final String? ppurl;
-  late final String commentuid;
+  late final String Eventuid;
   late final String owner;
   late final String owner_uid;
 
 
   Notifs(
       { required this.author_uid,
-        required this.commentuid,
+        required this.Eventuid,
         required  this.message,
         required this.author,
         required  this.Timeposted,
@@ -32,7 +32,7 @@ class Notifs{
     "author":author,
     "Event Time":Timeposted,
     "Profile Pic":ppurl,
-    "Comment Uid":commentuid,
+    "Event Uid":Eventuid,
     "message":message,
     "owner":owner,
     "owner uid":owner_uid
@@ -46,7 +46,7 @@ class Notifs{
       author: snapshot['author'],
       Timeposted: snapshot['Event Time'],
       ppurl: snapshot['Profile Pic'],
-      commentuid: snapshot['Comment Uid'],
+      Eventuid: snapshot['Event Uid'],
       owner_uid: snapshot['owner uid'],
       owner: snapshot['owner'],
 
