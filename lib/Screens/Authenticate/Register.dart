@@ -324,7 +324,7 @@ class _RegisterState extends State<Register> {
                           ),
                           Center(
                             child: Text(error,
-                              style: TextStyle(
+                              style: const TextStyle(
                                 color: Colors.red,
                               ),
                             ),
