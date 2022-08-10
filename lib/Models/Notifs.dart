@@ -7,15 +7,16 @@ class Notifs{
 
   late final  String? author_uid;
   late final String? author;
-  late final String? detail;
+  late final String? message;
   late final  Timeposted;
   late final String? ppurl;
   late final String commentuid;
 
+
   Notifs(
       { required this.author_uid,
         required this.commentuid,
-        required  this.detail,
+        required  this.message,
         required this.author,
         required  this.Timeposted,
         this.ppurl,
@@ -28,13 +29,13 @@ class Notifs{
     "Comment Time":Timeposted,
     "Profile Pic":ppurl,
     "Comment Uid":commentuid,
-    "detail":detail,
+    "message":message,
   };
 
   static Notifs? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
     Notifs? Notif12=Notifs(
-      detail: snapshot['detail'],
+      message: snapshot['message'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
       Timeposted: snapshot['Comment Time'],
