@@ -281,7 +281,7 @@ class _RegisterState extends State<Register> {
                                     primary: Colors.white,
                                     side: const BorderSide(
                                       color: Colors.blue,
-                                      width: 2.0,
+                                     width: 2.0,
                                     ),
 
                                     shape: RoundedRectangleBorder(
