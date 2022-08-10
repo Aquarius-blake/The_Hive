@@ -26,7 +26,7 @@ class Notifs{
   Map<String,dynamic> toJson()=>{
     "author uid":author_uid,
     "author":author,
-    "Comment Time":Timeposted,
+    "Event Time":Timeposted,
     "Profile Pic":ppurl,
     "Comment Uid":commentuid,
     "message":message,
