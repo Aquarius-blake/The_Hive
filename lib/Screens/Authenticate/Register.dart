@@ -159,7 +159,7 @@ class _RegisterState extends State<Register> {
                           });
                         },
                         decoration: InputDecoration(
-                          label: Text("Email Address"),
+                          label: const Text("Email Address"),
                           hintText: "Enter Email Address",
                           filled: true,
                           fillColor: Colors.white70,
