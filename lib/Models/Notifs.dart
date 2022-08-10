@@ -22,6 +22,8 @@ class Notifs{
         required this.author,
         required  this.Timeposted,
         this.ppurl,
+        required this.owner,
+        required this.owner_uid
       }
       );
 
@@ -32,6 +34,8 @@ class Notifs{
     "Profile Pic":ppurl,
     "Comment Uid":commentuid,
     "message":message,
+    "owner":owner,
+    "owner uid":owner_uid
   };
 
   static Notifs? FromSnap(DocumentSnapshot snap){
@@ -43,6 +47,10 @@ class Notifs{
       Timeposted: snapshot['Comment Time'],
       ppurl: snapshot['Profile Pic'],
       commentuid: snapshot['Comment Uid'],
+      owner_uid: snapshot['owner uid'],
+      owner: snapshot['owner'],
+
+
     );
 
     return Notif12;
