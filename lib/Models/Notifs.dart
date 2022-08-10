@@ -11,6 +11,8 @@ class Notifs{
   late final  Timeposted;
   late final String? ppurl;
   late final String commentuid;
+  late final String owner;
+  late final String owner_uid;
 
 
   Notifs(
