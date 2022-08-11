@@ -14,7 +14,9 @@ class _NetconState extends State<Netcon> {
       backgroundColor: Colors.white,
 body: SafeArea(
   child: Center(
+child: Container(
 
+),
   ),
 ),
     );
