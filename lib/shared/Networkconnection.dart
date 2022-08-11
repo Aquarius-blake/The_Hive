@@ -10,6 +10,8 @@ class Netcon extends StatefulWidget {
 class _NetconState extends State<Netcon> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+
+    );
   }
 }
