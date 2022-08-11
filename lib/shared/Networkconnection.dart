@@ -11,6 +11,7 @@ class _NetconState extends State<Netcon> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
 body: SafeArea(
   child: Center(
 
