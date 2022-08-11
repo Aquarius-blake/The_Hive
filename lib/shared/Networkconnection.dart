@@ -12,13 +12,13 @@ class _NetconState extends State<Netcon> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-body: SafeArea(
-  child: Center(
-child: Container(
+      body: SafeArea(
+        child: Center(
+          child: Container(
 
-),
-  ),
-),
+          ),
+        ),
+      ),
     );
   }
 }
