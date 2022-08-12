@@ -123,7 +123,7 @@ class _SinginState extends State<Singin> {
                         onPressed: (){
                           Navigator.pushNamed(context, '/reset');
                         },
-                        child: Text(
+                        child: const Text(
                           "Forgot Password?",
                           style: TextStyle(
                               color: Colors.white,
