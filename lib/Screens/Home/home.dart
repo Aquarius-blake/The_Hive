@@ -240,7 +240,7 @@ class _HomeState extends State<Home> {
                 ),
                 SizedBox(height: 5.0,),
                 ListTile(
-                  title: Text(
+                  title: const Text(
                     "Create New Account",
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
