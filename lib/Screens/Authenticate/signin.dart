@@ -46,13 +46,13 @@ class _SinginState extends State<Singin> {
               key: _formKey,
               child: Column(
                 children: <Widget>[
-               const   SizedBox(height:30 ,),
-                 const FaIcon(
-                      FontAwesomeIcons.peopleGroup,
+                  const   SizedBox(height:30 ,),
+                  const FaIcon(
+                    FontAwesomeIcons.peopleGroup,
                     color: Colors.white,
                     size: 180,
                   ),
-                 const SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   TextFormField(
