@@ -118,8 +118,8 @@ fontSize: 30.0,
                                   Navigator.pop(context);
                                 }
                               },
-                              child: Padding(
-                                padding: const EdgeInsets.all(15.0),
+                              child: const Padding(
+                                padding: EdgeInsets.all(15.0),
                                 child: Text(
                                     "Reset Password",
                                         style: TextStyle(
