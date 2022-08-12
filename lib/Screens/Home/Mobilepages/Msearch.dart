@@ -98,33 +98,7 @@ class _MsearchState extends State<Msearch> {
         }).toList()
         ,
       )
-/*
-      StreamBuilder(
-          stream: FirebaseFirestore.instance.collection("users").where("searchkey",isEqualTo: _search.text.substring(0,1).toUpperCase()).snapshots(),
-          builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
-            if(snapshot.connectionState==ConnectionState.waiting){
-              return Center(
-                child: CircularProgressIndicator(),
-              );
-            }else if(!snapshot.hasData){
-              return Center(
-                child: Text("No match found",
-                  style: TextStyle(
-                    color: Colors.black,
-                  ),),
-              );
-            }
-
-            initiateusersearch(_search.text,);
-            return ListView.builder(
-itemCount: tempSearchstore.length,
-                itemBuilder: (BuildContext context, int index) {
-  return secard(tempSearchstore[index]);
-                },
-
-            );
-          }
-      )*/:Text("Post"),
+:Text("Post"),
     );
   }
 }
