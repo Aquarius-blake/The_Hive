@@ -52,6 +52,9 @@ class _SinginState extends State<Singin> {
                     color: Colors.white,
                     size: 180,
                   ),
+                  SizedBox(
+                    height: 20,
+                  ),
                   TextFormField(
                     validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
                     onChanged: (val){
