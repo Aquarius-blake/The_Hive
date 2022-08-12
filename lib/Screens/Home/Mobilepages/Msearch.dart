@@ -94,7 +94,7 @@ class _MsearchState extends State<Msearch> {
           ElevatedButton(
             onPressed: (){
             },
-            child: isShowuser? Text(
+            child: !isShowuser? Text(
               "User",
             ):Text(
                 "Post"),
