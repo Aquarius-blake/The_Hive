@@ -131,7 +131,7 @@ fontSize: 30.0,
                                   elevation: 6.0,
                                   shadowColor: Colors.black,
                                   primary: Colors.white,
-                                  side: BorderSide(
+                                  side: const BorderSide(
                                     color: Colors.blue,
                                     width: 2.0,
                                   ),
