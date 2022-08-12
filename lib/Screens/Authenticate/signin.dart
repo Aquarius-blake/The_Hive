@@ -61,7 +61,7 @@ class _SinginState extends State<Singin> {
                     decoration: InputDecoration(
                       labelText: "Email Address",
                       labelStyle: TextStyle(
-                        color: Colors.black
+                          color: Colors.black
                       ),
                       hintText: "Enter Email Address",
                       filled: true,
@@ -90,9 +90,9 @@ class _SinginState extends State<Singin> {
                     },
                     obscureText: true,
                     decoration: InputDecoration(
-labelText: "Password",
-                      labelStyle: TextStyle(
-                        color: Colors.black
+                      labelText: "Password",
+                      labelStyle: const TextStyle(
+                          color: Colors.black
                       ),
                       hintText: "Enter Password",
                       filled: true,
