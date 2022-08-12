@@ -47,12 +47,12 @@ class _SinginState extends State<Singin> {
               child: Column(
                 children: <Widget>[
                   SizedBox(height:30 ,),
-                  FaIcon(
+                 const FaIcon(
                       FontAwesomeIcons.peopleGroup,
                     color: Colors.white,
                     size: 180,
                   ),
-                  SizedBox(
+                 const SizedBox(
                     height: 20,
                   ),
                   TextFormField(
