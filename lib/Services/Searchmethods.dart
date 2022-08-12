@@ -6,7 +6,6 @@ class SearchService{
 
 
     SearchUser(String searchfield) {
-
         return  FirebaseFirestore.instance
             .collection("users")
             .where("searchkey",isEqualTo: searchfield.substring(0,1).toUpperCase())

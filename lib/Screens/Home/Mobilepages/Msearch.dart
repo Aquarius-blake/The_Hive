@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Searchmethods.dart';
 
 class Msearch extends StatefulWidget {
   const Msearch({Key? key}) : super(key: key);
@@ -15,7 +16,7 @@ class _MsearchState extends State<Msearch> {
   var tempSearchstore=[];
 
 
-  initiateusersearch(value,snapshot)async{
+  initiateusersearch(value)async{
     if(value.length==0){
       setState(() {
         queryResultset=[];
@@ -24,9 +25,11 @@ class _MsearchState extends State<Msearch> {
     }
     var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
     if(queryResultset.length==0 && value.length==1 ){
-      for(int i=0;i<snapshot.data.docs.length;++i){
-        queryResultset.add(snapshot.data.docs[i]);
-      }
+      SearchService().SearchUser(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
+        for(int i=0;i<snapshot.docs.length;++i){
+          queryResultset.add(snapshot.docs[i]);
+        }
+      });
     }else{
       tempSearchstore=[];
       queryResultset.forEach((element) {
@@ -113,7 +116,7 @@ setState(() {
               );
             }
 
-            initiateusersearch(_search.text, snapshot);
+            initiateusersearch(_search.text,);
             return ListView.builder(
 itemCount: tempSearchstore.length,
                 itemBuilder: (BuildContext context, int index) {
