@@ -92,13 +92,13 @@ initiateusersearch(value);
         ),
       ),
 
-      body: isShowuser?/* ListView(
+      body: isShowuser? ListView(
         children:tempSearchstore.map((element){
           return secard(element);
         }).toList()
         ,
-      )*/
-
+      )
+/*
       StreamBuilder(
           stream: FirebaseFirestore.instance.collection("users").where("searchkey",isEqualTo: _search.text.substring(0,1).toUpperCase()).snapshots(),
           builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
@@ -124,7 +124,7 @@ itemCount: tempSearchstore.length,
 
             );
           }
-      ):Text("Post"),
+      )*/:Text("Post"),
     );
   }
 }
