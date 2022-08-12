@@ -46,7 +46,7 @@ class _SinginState extends State<Singin> {
               key: _formKey,
               child: Column(
                 children: <Widget>[
-                  SizedBox(height:30 ,),
+               const   SizedBox(height:30 ,),
                  const FaIcon(
                       FontAwesomeIcons.peopleGroup,
                     color: Colors.white,
