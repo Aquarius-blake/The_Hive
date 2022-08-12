@@ -49,7 +49,7 @@ class _SinginState extends State<Singin> {
                   const   SizedBox(height:30 ,),
                   const FaIcon(
                     FontAwesomeIcons.peopleGroup,
-                    color: Colors.white,
+                    color: Colors.white70,
                     size: 180,
                   ),
                   const SizedBox(
