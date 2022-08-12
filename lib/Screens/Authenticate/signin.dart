@@ -1,6 +1,7 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/shared/loading.dart';
 import '../../Services/auth.dart';
 
@@ -50,6 +51,10 @@ class _SinginState extends State<Singin> {
                     Icons.forum,
                     color: Colors.white70,
                     size: 180,
+                  ),
+                  FaIcon(
+                      FontAwesomeIcons.peopleGroup,
+                    color: Colors.white,
                   ),
                   TextFormField(
                     validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
