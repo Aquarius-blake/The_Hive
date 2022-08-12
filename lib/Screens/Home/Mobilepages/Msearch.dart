@@ -27,7 +27,7 @@ class _MsearchState extends State<Msearch> {
     if(queryResultset.length==0 && value.length==1 ){
       SearchService().SearchUser(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
         for(int i=0;i<snapshot.docs.length;++i){
-          queryResultset.add(snapshot.docs[i]);
+          queryResultset.add(snapshot.docs[i].data());
         }
       });
     }else{
