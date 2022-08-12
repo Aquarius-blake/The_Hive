@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Services/Searchmethods.dart';
+import 'package:forum3/shared/Widgets/post_card.dart';
 
 class Msearch extends StatefulWidget {
   const Msearch({Key? key}) : super(key: key);
@@ -174,7 +175,12 @@ class _MsearchState extends State<Msearch> {
         }).toList()
         ,
       )
-:Text("Post"),
+:ListView(
+        children:tempSearchstore.map((element){
+          return PostCard(snap: element,);
+        }).toList()
+        ,
+      ),
     );
   }
 }
