@@ -42,7 +42,9 @@ padd=150;
       backgroundColor: Colors.lightBlueAccent[100],
 
       appBar: AppBar(
-        title: const Text("Reset Password"),
+        title: const Text(
+            "Reset Password",
+        ),
         centerTitle: true,
       ),
       body: SafeArea(
