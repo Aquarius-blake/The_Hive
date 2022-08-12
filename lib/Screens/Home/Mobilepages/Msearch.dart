@@ -91,7 +91,26 @@ class _MsearchState extends State<Msearch> {
           ),
         ),
         actions: [
-
+          ElevatedButton(
+            onPressed: (){
+            },
+            child: isShowuser? Text(
+              "User",
+            ):Text(
+                "Post"),
+            style: ElevatedButton.styleFrom(
+                elevation: 0.0,
+                shadowColor: Colors.black,
+                primary: Colors.blue[400],
+                side: const BorderSide(
+                  color: Colors.white70,
+                  width: 2.0,
+                ),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0)
+                )
+            ),
+          ),
         ],
       ),
 
