@@ -71,7 +71,7 @@ class _SinginState extends State<Singin> {
 
                       ),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(
+                        borderSide: const BorderSide(
                             color: Colors.redAccent
                         ),
                         borderRadius: BorderRadius.circular(100.0),
