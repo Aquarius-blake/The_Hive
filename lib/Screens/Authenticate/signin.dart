@@ -47,14 +47,10 @@ class _SinginState extends State<Singin> {
               child: Column(
                 children: <Widget>[
                   SizedBox(height:30 ,),
-                  Icon(
-                    Icons.forum,
-                    color: Colors.white70,
-                    size: 180,
-                  ),
                   FaIcon(
                       FontAwesomeIcons.peopleGroup,
                     color: Colors.white,
+                    size: 180,
                   ),
                   TextFormField(
                     validator: (val)=>val!.isEmpty ? "Please Enter A Valid Email" : null,
