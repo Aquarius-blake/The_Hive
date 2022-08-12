@@ -43,7 +43,7 @@ class _MsearchState extends State<Msearch> {
   }
 
 
-  Widget secard(data){
+  Widget usercard(data){
     return Card(
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10)
@@ -94,7 +94,7 @@ class _MsearchState extends State<Msearch> {
 
       body: isShowuser? ListView(
         children:tempSearchstore.map((element){
-          return secard(element);
+          return usercard(element);
         }).toList()
         ,
       )
