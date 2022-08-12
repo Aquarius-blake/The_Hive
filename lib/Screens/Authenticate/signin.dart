@@ -80,7 +80,7 @@ class _SinginState extends State<Singin> {
 
                     ),
                   ),
-                  SizedBox(height: 20,),
+                  const SizedBox(height: 20,),
                   TextFormField(
                     validator: (val)=>val!.isEmpty ? "Please Enter A Valid Password" : null,
                     onChanged: (val){
