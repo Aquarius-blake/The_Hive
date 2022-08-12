@@ -97,9 +97,9 @@ class _MsearchState extends State<Msearch> {
                 isShowuser=!isShowuser;
               });
             },
-            child: !isShowuser? Text(
+            child: !isShowuser? const Text(
               "User",
-            ):Text(
+            ):const Text(
                 "Post"),
             style: ElevatedButton.styleFrom(
                 elevation: 0.0,
