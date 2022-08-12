@@ -278,7 +278,12 @@ class _HomeState extends State<Home> {
       body: PageView(
         children: [
           Mhome(),
-          Msearch(),
+          Padding(
+            padding: const EdgeInsets.only(
+                top: 8.0
+            ),
+            child: Msearch(),
+          ),
           Mpost(),
           Notifications(),
           Mmessages()
