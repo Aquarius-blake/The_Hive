@@ -34,9 +34,9 @@ class _MsearchState extends State<Msearch> {
       tempSearchstore=[];
       queryResultset.forEach((element) {
         if(element['username'].startsWith(capvalue)){
-setState(() {
-  tempSearchstore.add(element);
-});
+          setState(() {
+            tempSearchstore.add(element);
+          });
         }
       });
     }
@@ -79,7 +79,7 @@ setState(() {
         title: TextFormField(
           controller: _search,
           onChanged: (value){
-initiateusersearch(value);
+            initiateusersearch(value);
           },
           onFieldSubmitted: (value){
             setState(() {

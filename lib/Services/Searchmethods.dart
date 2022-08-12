@@ -11,7 +11,12 @@ class SearchService{
             .where("searchkey",isEqualTo: searchfield.substring(0,1).toUpperCase())
             .get();
     }
-
+    SearchPost(String searchfield) {
+        return  FirebaseFirestore.instance
+            .collection("Posts")
+            .where("searchkey",isEqualTo: searchfield.substring(0,1).toUpperCase())
+            .get();
+    }
 
 
 }
