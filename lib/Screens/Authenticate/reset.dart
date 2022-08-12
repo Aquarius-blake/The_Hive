@@ -48,7 +48,6 @@ padd=150;
         centerTitle: true,
       ),
       body: SafeArea(
-
         child: Container(
           padding:  EdgeInsets.all(padd),
           child: Card(
