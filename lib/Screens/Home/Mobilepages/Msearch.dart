@@ -14,7 +14,7 @@ class Msearch extends StatefulWidget {
 class _MsearchState extends State<Msearch> {
   TextEditingController _search=TextEditingController();
   bool isShowuser=false;
-  String se="Post";
+  String se="";
   var queryResultset=[];
   var tempSearchstore=[];
 
