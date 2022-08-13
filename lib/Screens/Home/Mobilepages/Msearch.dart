@@ -150,6 +150,8 @@ Showsnackbar(e.toString(), context);
                 isShowuser=!isShowuser;
                 if(isShowuser){
                   se="user";
+                }else{
+                  se="Post";
                 }
               });
             },
