@@ -17,30 +17,6 @@ bool postsearch=false;
 bool loadin=false;
 
 
-  initiateusersearch(value,snapshot){
-    if(value.length==0){
-      setState(() {
-        queryResultset=[];
-        tempSearchstore=[];
-      });
-    }
-    var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
-    if(queryResultset.length==0 && value.lenth==1 ){
-      for(int i=0;i<snapshot.docs.length;++i){
-        queryResultset.add(snapshot.docs[i].data());
-      }
-    }else{
-      tempSearchstore=[];
-      queryResultset.forEach((element) {
-        if(element['usernmae'].startsWith(capvalue)){
-          setState(() {
-            tempSearchstore.add(element);
-          });
-        }
-      });
-    }
-  }
-
 
   @override
   void dispose() {
