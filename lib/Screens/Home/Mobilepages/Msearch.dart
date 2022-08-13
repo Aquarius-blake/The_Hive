@@ -171,10 +171,7 @@ Showsnackbar(e.toString(), context);
 
       body: isShowuser? ListView(
         children:tempSearchstore.map((element){
-          try{
-          return usercard(element);}catch(e){
-            return Card();
-          }
+          return usercard(element);
         }).toList()
         ,
       )
