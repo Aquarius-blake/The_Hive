@@ -15,7 +15,11 @@ class _WprofileState extends State<Wprofile> {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Container(),
+          child: Container(
+            child: Card(
+              child: Column(),
+            ),
+          ),
         ),
       ),
     );
