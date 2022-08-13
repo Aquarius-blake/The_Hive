@@ -33,7 +33,7 @@ bool loadin=false;
     }
     var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
     if(queryResultset.length==0 && value.length==1 ){
-      SearchService().SearchPost(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
+     await SearchService().SearchPost(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
         for(int i=0;i<snapshot.docs.length;++i){
           queryResultset.add(snapshot.docs[i].data());
         }
@@ -61,7 +61,7 @@ bool loadin=false;
     }
     var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
     if(queryResultset.length==0 && value.length==1 ){
-      SearchService().SearchUser(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
+      await SearchService().SearchUser(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
         for(int i=0;i<snapshot.docs.length;++i){
           queryResultset.add(snapshot.docs[i].data());
         }
