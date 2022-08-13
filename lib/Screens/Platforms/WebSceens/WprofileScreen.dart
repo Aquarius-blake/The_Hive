@@ -12,6 +12,12 @@ class Wprofile extends StatefulWidget {
 class _WprofileState extends State<Wprofile> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      body: SafeArea(
+        child: Center(
+          child: Container(),
+        ),
+      ),
+    );
   }
 }
