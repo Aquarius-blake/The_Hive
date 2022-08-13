@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/shared/error_handling.dart';
 import '../../../Services/Searchmethods.dart';
+import '../../../shared/Widgets/post_card.dart';
 
 
 
@@ -197,7 +198,17 @@ bool loadin=false;
           ),*/
         ],
       ),
-
+      body: isShowuser? ListView(
+        children:tempSearchstore.map((element){
+          return usercard(element);
+        }).toList()
+        ,
+      )
+          :ListView(
+        children: tempSearchstore.map((element){
+          return PostCard(snap: element,);
+        }).toList(),
+      ),
     );
   }
 
