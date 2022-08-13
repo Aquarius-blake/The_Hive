@@ -176,11 +176,9 @@ Showsnackbar(e.toString(), context);
         ,
       )
 :ListView(
-
         children: tempSearchstore.map((element){
           return PostCard(snap: element,);
         }).toList(),
-
       ),
     );
   }
