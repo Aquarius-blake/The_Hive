@@ -24,7 +24,7 @@ var tempSearchstore=[];
 bool postsearch=false;
   bool isShowuser=false;
 bool loadin=false;
-  initiatepostsearch(value)async{
+  initiatepostsearch(value){
     if(value.length==0){
       setState(() {
         queryResultset=[];
@@ -33,7 +33,7 @@ bool loadin=false;
     }
     var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
     if(queryResultset.length==0 && value.length==1 ){
-     await SearchService().SearchPost(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
+     SearchService().SearchPost(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
         for(int i=0;i<snapshot.docs.length;++i){
           queryResultset.add(snapshot.docs[i].data());
         }
@@ -52,7 +52,7 @@ bool loadin=false;
 
 
 
-  initiateusersearch(value)async{
+  initiateusersearch(value){
     if(value.length==0){
       setState(() {
         queryResultset=[];
@@ -61,7 +61,7 @@ bool loadin=false;
     }
     var capvalue=value.substring(0,1).toUpperCase()+value.substring(1);
     if(queryResultset.length==0 && value.length==1 ){
-      await SearchService().SearchUser(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
+       SearchService().SearchUser(value).then((QuerySnapshot<Map<String,dynamic>> snapshot){
         for(int i=0;i<snapshot.docs.length;++i){
           queryResultset.add(snapshot.docs[i].data());
         }
