@@ -126,11 +126,14 @@ class _MsearchState extends State<Msearch> {
         title: TextFormField(
           controller: _search,
           onChanged: (value){
+            try{
             if(isShowuser){
               initiateusersearch(value);
 
             }else {
               initiatepostsearch(value);
+            }}catch(e){
+
             }
             },
 
