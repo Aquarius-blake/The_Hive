@@ -22,6 +22,7 @@ class _WprofileState extends State<Wprofile> {
               color: Colors.white,
               child: Column(
                 children: [
+                  SizedBox(width: MediaQuery.of(context).size.width,),
                   Text("sdsafdsf")
                 ],
               ),
