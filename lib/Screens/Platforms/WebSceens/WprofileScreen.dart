@@ -20,11 +20,14 @@ class _WprofileState extends State<Wprofile> {
             padding: EdgeInsets.all(40),
             child: Card(
               color: Colors.white,
-              child: Column(
-                children: [
-                  SizedBox(width: MediaQuery.of(context).size.width,),
-                  Text("sdsafdsf")
-                ],
+              child: Container(
+                padding: EdgeInsets.all(20),
+                child: Column(
+                  children: [
+                    SizedBox(width: MediaQuery.of(context).size.width,),
+                    Text("sdsafdsf")
+                  ],
+                ),
               ),
             ),
           ),
