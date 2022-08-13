@@ -76,9 +76,9 @@ class _MsearchState extends State<Msearch> {
 
   Widget usercard(data){
     return GestureDetector(
-onTap: (){
+      onTap: (){
 
-},
+      },
       child: Card(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10)
@@ -116,15 +116,15 @@ onTap: (){
           controller: _search,
           onChanged: (value){
             try{
-            if(isShowuser){
-              initiateusersearch(value);
+              if(isShowuser){
+                initiateusersearch(value);
 
-            }else {
-              initiatepostsearch(value);
-            }}catch(e){
-Showsnackbar(e.toString(), context);
+              }else {
+                initiatepostsearch(value);
+              }}catch(e){
+              Showsnackbar(e.toString(), context);
             }
-            },
+          },
 
           decoration: InputDecoration(
             labelText: "Search $se",
@@ -148,10 +148,10 @@ Showsnackbar(e.toString(), context);
                 color: Colors.lightBlueAccent,
               ),
             ):const Text(
-                "Post",
-            style: TextStyle(
-color: Colors.lightBlueAccent,
-            ),
+              "Post",
+              style: TextStyle(
+                color: Colors.lightBlueAccent,
+              ),
             ),
             style: ElevatedButton.styleFrom(
                 elevation: 0.0,
@@ -175,7 +175,7 @@ color: Colors.lightBlueAccent,
         }).toList()
         ,
       )
-:ListView(
+          :ListView(
         children: tempSearchstore.map((element){
           return PostCard(snap: element,);
         }).toList(),
