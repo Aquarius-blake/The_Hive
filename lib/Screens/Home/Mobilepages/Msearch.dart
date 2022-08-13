@@ -14,6 +14,7 @@ class Msearch extends StatefulWidget {
 class _MsearchState extends State<Msearch> {
   TextEditingController _search=TextEditingController();
   bool isShowuser=false;
+  String se="Post";
   var queryResultset=[];
   var tempSearchstore=[];
 
@@ -139,7 +140,7 @@ Showsnackbar(e.toString(), context);
             },
 
           decoration: InputDecoration(
-            labelText: "Search user",
+            labelText: "Search $se",
           ),
         ),
         actions: [
@@ -147,6 +148,9 @@ Showsnackbar(e.toString(), context);
             onPressed: (){
               setState(() {
                 isShowuser=!isShowuser;
+                if(isShowuser){
+                  se+"user";
+                }
               });
             },
             child: !isShowuser? const Text(
