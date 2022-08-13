@@ -133,11 +133,7 @@ class _MsearchState extends State<Msearch> {
               initiatepostsearch(value);
             }
             },
-          onFieldSubmitted: (value){
-            setState(() {
-              isShowuser=true;
-            });
-          },
+
           decoration: InputDecoration(
             labelText: "Search user",
           ),
