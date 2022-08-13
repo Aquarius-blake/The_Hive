@@ -175,7 +175,7 @@ class _MsearchState extends State<Msearch> {
       )
           :ListView(
         children: tempSearchstore.map((element){
-          return PostCard(snap: element,);
+          return new PostCard(snap: element,);
         }).toList(),
       ),
     );
