@@ -45,25 +45,7 @@ class _MsearchState extends State<Msearch> {
     }
   }
 
-  Widget ppostcard(data){
-    return Card(
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10)
-      ),
-      elevation: 2.0,
-      child: Container(
-        padding: EdgeInsets.all(10),
-        child: Row(
-          children: [
-            CircleAvatar(
-              backgroundImage: NetworkImage(data['Profile Pic']),
-            ),
-            Text(data['author'])
-          ],
-        ),
-      ),
-    );
-  }
+
 
   initiateusersearch(value)async{
     if(value.length==0){
