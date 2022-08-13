@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/error_handling.dart';
 
 import '../../../Services/Searchmethods.dart';
+import '../../../shared/Pop_up.dart';
 
 
 
@@ -115,7 +117,17 @@ bool loadin=false;
         backgroundColor: Colors.white,
         title: TextFormField(
           controller: _search,
-          onChanged: (value){},
+          onChanged: (value){
+            try{
+              if(isShowuser){
+                initiateusersearch(value);
+
+              }else {
+                initiatepostsearch(value);
+              }}catch(e){
+              errormessage(e.toString(), context);
+            }
+          },
           decoration: const InputDecoration(
             border: InputBorder.none,
             label: Text(
