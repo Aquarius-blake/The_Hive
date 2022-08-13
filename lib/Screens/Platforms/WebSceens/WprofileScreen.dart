@@ -19,7 +19,12 @@ class _WprofileState extends State<Wprofile> {
           child: Container(
             padding: EdgeInsets.all(40),
             child: Card(
-              child: Column(),
+              color: Colors.white,
+              child: Column(
+                children: [
+                  Text("sdsafdsf")
+                ],
+              ),
             ),
           ),
         ),
