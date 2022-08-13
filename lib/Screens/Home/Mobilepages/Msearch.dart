@@ -160,9 +160,9 @@ color: Colors.lightBlueAccent
             style: ElevatedButton.styleFrom(
                 elevation: 0.0,
                 shadowColor: Colors.black,
-                primary: Colors.blue[400],
+                primary: Colors.white,
                 side: const BorderSide(
-                  color: Colors.white70,
+                  color: Colors.lightBlueAccent,
                   width: 2.0,
                 ),
                 shape: RoundedRectangleBorder(
