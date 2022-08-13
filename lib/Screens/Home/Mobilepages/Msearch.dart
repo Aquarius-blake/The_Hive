@@ -171,15 +171,19 @@ Showsnackbar(e.toString(), context);
 
       body: isShowuser? ListView(
         children:tempSearchstore.map((element){
-          return usercard(element);
+          try{
+          return usercard(element);}catch(e){
+            return Card();
+          }
         }).toList()
         ,
       )
 :ListView(
-        children:tempSearchstore.map((element){
+
+        children: tempSearchstore.map((element){
           return PostCard(snap: element,);
-        }).toList()
-        ,
+        }).toList(),
+
       ),
     );
   }
