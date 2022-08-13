@@ -151,16 +151,19 @@ Showsnackbar(e.toString(), context);
             },
             child: !isShowuser? const Text(
               "User",
+              style: TextStyle(
+
+              ),
             ):const Text(
                 "Post",
             style: TextStyle(
-color: Colors.lightBlueAccent
+color: Colors.lightBlueAccent,
             ),
             ),
             style: ElevatedButton.styleFrom(
                 elevation: 0.0,
                 shadowColor: Colors.black,
-                primary: Colors.white,
+                primary: Colors.white10,
                 side: const BorderSide(
                   color: Colors.lightBlueAccent,
                   width: 2.0,
