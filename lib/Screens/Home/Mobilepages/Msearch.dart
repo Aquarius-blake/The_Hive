@@ -76,7 +76,9 @@ class _MsearchState extends State<Msearch> {
 
   Widget usercard(data){
     return GestureDetector(
-onTap: (){},
+onTap: (){
+
+},
       child: Card(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10)
