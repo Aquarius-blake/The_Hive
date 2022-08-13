@@ -154,7 +154,7 @@ Showsnackbar(e.toString(), context);
             ):const Text(
                 "Post",
             style: TextStyle(
-
+color: Colors.lightBlueAccent
             ),
             ),
             style: ElevatedButton.styleFrom(
