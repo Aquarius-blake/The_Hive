@@ -13,6 +13,7 @@ class _WprofileState extends State<Wprofile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlueAccent,
       body: SafeArea(
         child: Center(
           child: Container(
