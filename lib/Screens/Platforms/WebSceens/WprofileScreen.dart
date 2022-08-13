@@ -16,6 +16,7 @@ class _WprofileState extends State<Wprofile> {
       body: SafeArea(
         child: Center(
           child: Container(
+            padding: EdgeInsets.all(40),
             child: Card(
               child: Column(),
             ),
