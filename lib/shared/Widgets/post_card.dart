@@ -159,6 +159,10 @@ class _PostCardState extends State<PostCard> {
   }
 
   @override
+  void dispose() {
+    super.dispose();
+  }
+  @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     String authoruid=user1.UID!;

@@ -115,10 +115,8 @@ class _MsearchState extends State<Msearch> {
         title: TextFormField(
           controller: _search,
           onFieldSubmitted: (value){
-
               if(isShowuser){
                 initiateusersearch(value);
-
               }else {
                 initiatepostsearch(value);
               }
@@ -175,7 +173,7 @@ class _MsearchState extends State<Msearch> {
       )
           :ListView(
         children: tempSearchstore.map((element){
-          return new PostCard(snap: element,);
+          return  PostCard(snap: element,);
         }).toList(),
       ),
     );
