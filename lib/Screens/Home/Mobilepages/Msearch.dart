@@ -152,7 +152,11 @@ Showsnackbar(e.toString(), context);
             child: !isShowuser? const Text(
               "User",
             ):const Text(
-                "Post"),
+                "Post",
+            style: TextStyle(
+
+            ),
+            ),
             style: ElevatedButton.styleFrom(
                 elevation: 0.0,
                 shadowColor: Colors.black,
