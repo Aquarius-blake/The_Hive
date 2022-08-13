@@ -75,20 +75,23 @@ class _MsearchState extends State<Msearch> {
 
 
   Widget usercard(data){
-    return Card(
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10)
-      ),
-      elevation: 2.0,
-      child: Container(
-        padding: EdgeInsets.all(10),
-        child: Row(
-          children: [
-            CircleAvatar(
-              backgroundImage: NetworkImage(data['profilepic']),
-            ),
-            Text(data['username'])
-          ],
+    return GestureDetector(
+
+      child: Card(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10)
+        ),
+        elevation: 2.0,
+        child: Container(
+          padding: EdgeInsets.all(10),
+          child: Row(
+            children: [
+              CircleAvatar(
+                backgroundImage: NetworkImage(data['profilepic']),
+              ),
+              Text(data['username'])
+            ],
+          ),
         ),
       ),
     );
