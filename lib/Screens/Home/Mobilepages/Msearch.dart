@@ -115,11 +115,15 @@ class _MsearchState extends State<Msearch> {
         title: TextFormField(
           controller: _search,
           onChanged: (value){
+            try{
               if(isShowuser){
                 initiateusersearch(value);
+
               }else {
                 initiatepostsearch(value);
-              }
+              }}catch(e){
+              Showsnackbar(e.toString(), context);
+            }
           },
 
           decoration: InputDecoration(
@@ -173,7 +177,7 @@ class _MsearchState extends State<Msearch> {
       )
           :ListView(
         children: tempSearchstore.map((element){
-          return  PostCard(snap: element,);
+          return PostCard(snap: element,);
         }).toList(),
       ),
     );
