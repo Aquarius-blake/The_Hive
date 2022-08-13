@@ -17,6 +17,7 @@ class _WsearchState extends State<Wsearch> {
 var queryResultset=[];
 var tempSearchstore=[];
 bool postsearch=false;
+  bool isShowuser=false;
 bool loadin=false;
   initiatepostsearch(value)async{
     if(value.length==0){
@@ -144,25 +145,6 @@ bool loadin=false;
                 )
             ),
           ),
-          ElevatedButton(
-            onPressed: (){},
-            child: const Text(
-              "Post",
-            ),
-            style: ElevatedButton.styleFrom(
-                elevation: 0.0,
-                shadowColor: Colors.black,
-                primary: Colors.blue[400],
-                side: const BorderSide(
-                  color: Colors.white70,
-                  width: 2.0,
-                ),
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0)
-                )
-            ),
-          ),
-
         ],
       ),
 
