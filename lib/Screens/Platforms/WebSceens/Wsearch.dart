@@ -20,7 +20,7 @@ class _WsearchState extends State<Wsearch> {
   TextEditingController _search=TextEditingController();
 var queryResultset=[];
 var tempSearchstore=[];
-  String se="";
+  String se="Post";
 bool postsearch=false;
   bool isShowuser=false;
 bool loadin=false;
