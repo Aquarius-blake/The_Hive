@@ -16,6 +16,7 @@ class _WsearchState extends State<Wsearch> {
   TextEditingController _search=TextEditingController();
 var queryResultset=[];
 var tempSearchstore=[];
+  String se="";
 bool postsearch=false;
   bool isShowuser=false;
 bool loadin=false;
@@ -127,6 +128,42 @@ bool loadin=false;
         ),
         actions: [
           ElevatedButton(
+            onPressed: (){
+              setState(() {
+                isShowuser=!isShowuser;
+                if(isShowuser){
+                  se="user";
+                }else{
+                  se="Post";
+                }
+              });
+            },
+            child: !isShowuser? const Text(
+              "User",
+              style: TextStyle(
+                color: Colors.lightBlueAccent,
+              ),
+            ):const Text(
+              "Post",
+              style: TextStyle(
+                color: Colors.lightBlueAccent,
+              ),
+            ),
+            style: ElevatedButton.styleFrom(
+                elevation: 0.0,
+                shadowColor: Colors.black,
+                primary: Colors.white,
+                side: const BorderSide(
+                  color: Colors.lightBlueAccent,
+                  width: 2.0,
+                ),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0)
+                )
+            ),
+          ),
+          /*
+          ElevatedButton(
             onPressed: ()async{
             },
             child: Text(
@@ -144,7 +181,7 @@ bool loadin=false;
                     borderRadius: BorderRadius.circular(50.0)
                 )
             ),
-          ),
+          ),*/
         ],
       ),
 
