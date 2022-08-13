@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 
 class Mprofile extends StatefulWidget {
-  const Mprofile({Key? key}) : super(key: key);
+  final snap;
+  const Mprofile({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Mprofile> createState() => _MprofileState();
