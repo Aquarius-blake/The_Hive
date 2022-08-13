@@ -96,7 +96,7 @@ bool loadin=false;
               CircleAvatar(
                 backgroundImage: NetworkImage(data['profilepic']),
               ),
-              SizedBox(width: 10,),
+              const SizedBox(width: 10,),
               Text(
                   data['username'],
                 style: const TextStyle(),
