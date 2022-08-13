@@ -134,11 +134,11 @@ bool loadin=false;
               errormessage(e.toString(), context);
             }
           },
-          decoration: const InputDecoration(
+          decoration:  InputDecoration(
             border: InputBorder.none,
             label: Text(
-              "Search",
-              style: TextStyle(
+              "Search $se",
+              style: const TextStyle(
 
               ),
             ),
