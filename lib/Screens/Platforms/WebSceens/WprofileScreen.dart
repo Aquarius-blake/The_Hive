@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class Wprofile extends StatefulWidget {
-  const Wprofile({Key? key}) : super(key: key);
+  final snap;
+  const Wprofile({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Wprofile> createState() => _WprofileState();
