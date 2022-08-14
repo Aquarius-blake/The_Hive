@@ -40,6 +40,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
   radius: 50,
 ),
                     Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Row(
                           children: [
