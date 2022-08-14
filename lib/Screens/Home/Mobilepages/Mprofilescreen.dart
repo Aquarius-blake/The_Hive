@@ -60,7 +60,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                               ),
                             ),
                             SizedBox(width: 10,),
-                            Text(
+                           const Text(
                               "Posts",
                             style: TextStyle(
                               fontSize: 24,
