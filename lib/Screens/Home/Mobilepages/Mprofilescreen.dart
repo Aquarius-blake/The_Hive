@@ -40,10 +40,10 @@ class _MprofileState extends State<Mprofile> {
               children: [
                 Row(
                   children: [
-CircleAvatar(
-backgroundImage: NetworkImage(widget.snap['profilepic']),
-  radius: 50,
-),
+                    CircleAvatar(
+                      backgroundImage: NetworkImage(widget.snap['profilepic']),
+                      radius: 50,
+                    ),
                     SizedBox(width: MediaQuery.of(context).size.width*0.05,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -60,13 +60,13 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                               ),
                             ),
                             SizedBox(width: 10,),
-                           const Text(
+                            const Text(
                               "Posts",
-                            style: TextStyle(
-                              fontSize: 24,
-                              fontStyle: FontStyle.italic,
-                              fontWeight: FontWeight.bold
-                            ),
+                              style: TextStyle(
+                                  fontSize: 24,
+                                  fontStyle: FontStyle.italic,
+                                  fontWeight: FontWeight.bold
+                              ),
                             )
                           ],
                         ),
@@ -74,18 +74,18 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                         Row(
                           children: [
                             widget.snap['uid']!=user1.UID? ElevatedButton(
-                                onPressed: (){},
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
-                                      left: 16.0,
-                                  right: 16.0),
-                                  child: Text(
-                                    "Message",
+                              onPressed: (){},
+                              child: Padding(
+                                padding: const EdgeInsets.only(
+                                    left: 16.0,
+                                    right: 16.0),
+                                child: Text(
+                                  "Message",
                                   style: TextStyle(
-                                    color: Colors.lightBlueAccent
-                                  ),
+                                      color: Colors.lightBlueAccent
                                   ),
                                 ),
+                              ),
                               style: ElevatedButton.styleFrom(
                                   elevation: 6.0,
                                   shadowColor: Colors.black,
@@ -113,19 +113,19 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                                       borderRadius: BorderRadius.circular(100.0)
                                   )
                               ),
-                                onPressed: (){},
-                                child: const Padding(
-                                  padding: EdgeInsets.only(
-                                      left:18.0,
-                                    right: 18.0,
-                                  ),
-                                  child: Text(
-                                    "Edit Profile",
-                                    style: TextStyle(
-                                        color: Colors.lightBlueAccent
-                                    ),
+                              onPressed: (){},
+                              child: const Padding(
+                                padding: EdgeInsets.only(
+                                  left:18.0,
+                                  right: 18.0,
+                                ),
+                                child: Text(
+                                  "Edit Profile",
+                                  style: TextStyle(
+                                      color: Colors.lightBlueAccent
                                   ),
                                 ),
+                              ),
                             )
                           ],
                         )
@@ -135,12 +135,12 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                 ),
                 SizedBox(height: 15.0,),
                 Container(
-alignment: Alignment.centerLeft,
+                  alignment: Alignment.centerLeft,
                   child: Text(
-                      widget.snap['username'],
+                    widget.snap['username'],
                     style: TextStyle(
-fontWeight: FontWeight.bold,
-                      fontSize: 18
+                        fontWeight: FontWeight.bold,
+                        fontSize: 18
                     ),
                   ),
                 )
