@@ -77,7 +77,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                                 child: Padding(
                                   padding: const EdgeInsets.only(
                                       left: 16.0,
-                                  right: 116.0),
+                                  right: 16.0),
                                   child: Text(
                                     "Message",
                                   style: TextStyle(
