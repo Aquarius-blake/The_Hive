@@ -15,7 +15,11 @@ class _MprofileState extends State<Mprofile> {
   Widget build(BuildContext context) {
     return Scaffold(
 appBar: AppBar(
+  iconTheme: IconThemeData(
+
+  ),
   title: Text("Profile"),
+  centerTitle: true,
 ),
     );
   }
