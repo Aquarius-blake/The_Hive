@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import '../../../Models/Users1.dart';
+import '../../../Provider/user_provider.dart';
 
 
 class Wprofile extends StatefulWidget {
@@ -12,6 +16,7 @@ class Wprofile extends StatefulWidget {
 class _WprofileState extends State<Wprofile> {
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       body: SafeArea(
