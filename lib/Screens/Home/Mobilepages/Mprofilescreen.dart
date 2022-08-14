@@ -72,7 +72,12 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                         ),
                         Row(
                           children: [
-
+                            widget.snap['uid']!=user1.UID? ElevatedButton(
+                                onPressed: (){},
+                                child: Text("Message")
+                            ):ElevatedButton(
+                                onPressed: (){},
+                                child: Text("Edit Profile"))
                           ],
                         )
                       ],
