@@ -86,7 +86,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                                   primary: Colors.white,
                                   side: const BorderSide(
                                     color: Colors.blue,
-                                    width: 2.0,
+                                    width: 4.0,
                                   ),
 
                                   shape: RoundedRectangleBorder(
