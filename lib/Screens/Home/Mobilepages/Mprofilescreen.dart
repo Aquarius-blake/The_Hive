@@ -155,6 +155,7 @@ class _MprofileState extends State<Mprofile> {
                     ),
                   ),
                 ),
+        SizedBox(),
         Container(
           alignment: Alignment.centerLeft,
           child: Text(
