@@ -143,6 +143,9 @@ class _MprofileState extends State<Mprofile> {
                         fontSize: 18
                     ),
                   ),
+                ),
+                Container(
+                  child: Text("Name ${widget.snap['Full Name']}"),
                 )
               ],
             ),
