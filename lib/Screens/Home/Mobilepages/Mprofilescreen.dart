@@ -47,6 +47,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                         Row(
                           children: [
                             Text("20"),
+                            SizedBox(width: 10,),
                             Text("Posts")
                           ],
                         ),
