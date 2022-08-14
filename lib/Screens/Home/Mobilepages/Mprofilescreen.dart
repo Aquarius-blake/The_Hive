@@ -33,11 +33,13 @@ class _MprofileState extends State<Mprofile> {
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: [
-Row(
-  children: [
+                Row(
+                  children: [
+CircleAvatar(
 
-  ],
 )
+                  ],
+                )
               ],
             ),
           ),
