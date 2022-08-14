@@ -53,6 +53,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                             style: TextStyle(
                               fontSize: 24,
                               fontStyle: FontStyle.italic,
+                              fontWeight: FontWeight.bold
                             ),
                             )
                           ],
