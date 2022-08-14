@@ -70,6 +70,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                             )
                           ],
                         ),
+                        SizedBox(height: 10,),
                         Row(
                           children: [
                             widget.snap['uid']!=user1.UID? ElevatedButton(
