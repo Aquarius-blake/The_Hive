@@ -134,7 +134,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                   ],
                 ),
                 Container(
-
+alignment: Alignment.centerLeft,
                 )
               ],
             ),
