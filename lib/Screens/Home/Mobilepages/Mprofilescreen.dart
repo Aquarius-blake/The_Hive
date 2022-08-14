@@ -20,17 +20,17 @@ class _MprofileState extends State<Mprofile> {
             color: Colors.black
         ),
         title: Text(
-            "Profile",
+          "Profile",
           style: TextStyle(
-            color: Colors.black
+              color: Colors.black
           ),
         ),
         centerTitle: true,
       ),
       body: ListView(
-children: [
-Column()
-],
+        children: [
+          Column()
+        ],
       ),
     );
   }
