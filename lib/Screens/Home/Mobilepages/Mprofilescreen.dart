@@ -44,7 +44,7 @@ CircleAvatar(
 backgroundImage: NetworkImage(widget.snap['profilepic']),
   radius: 50,
 ),
-                    SizedBox(width: MediaQuery.of(context).size.width*0.15,),
+                    SizedBox(width: MediaQuery.of(context).size.width*0.05,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -113,8 +113,8 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                                   )
                               ),
                                 onPressed: (){},
-                                child: Padding(
-                                  padding: const EdgeInsets.only(
+                                child: const Padding(
+                                  padding: EdgeInsets.only(
                                       left:18.0,
                                     right: 18.0,
                                   ),
