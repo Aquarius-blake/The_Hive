@@ -172,7 +172,7 @@ class _MprofileState extends State<Mprofile> {
       ]
                 ),
                 Container(
-
+alignment: Alignment.centerLeft,
                 )
               ],
             ),
