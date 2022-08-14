@@ -29,7 +29,10 @@ class _MprofileState extends State<Mprofile> {
       ),
       body: ListView(
         children: [
-          Column()
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(),
+          )
         ],
       ),
     );
