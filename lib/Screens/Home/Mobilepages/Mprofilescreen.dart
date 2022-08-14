@@ -144,6 +144,8 @@ class _MprofileState extends State<Mprofile> {
                     ),
                   ),
                 ),
+                Row(
+      children:[
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
@@ -152,16 +154,8 @@ class _MprofileState extends State<Mprofile> {
                       color: Colors.grey
                     ),
                   ),
-                ),
-                Container(
-                  alignment: Alignment.centerLeft,
-                  child: Text(
-                    "Gender: ${widget.snap['Gender']}",
-                    style: TextStyle(
-                        color: Colors.grey
-                    ),
-                  ),
-                ),
+                )
+      ],)
               ],
             ),
           ),
