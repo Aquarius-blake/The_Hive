@@ -41,6 +41,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
 ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Row(
                           children: [
