@@ -99,6 +99,19 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                                   )
                               ),
                             ):ElevatedButton(
+                              style: ElevatedButton.styleFrom(
+                                  elevation: 6.0,
+                                  shadowColor: Colors.black,
+                                  primary: Colors.white,
+                                  side: const BorderSide(
+                                    color: Colors.blue,
+                                    width: 2.0,
+                                  ),
+
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(100.0)
+                                  )
+                              ),
                                 onPressed: (){},
                                 child: Text("Edit Profile"),
                             )
