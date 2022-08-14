@@ -4,6 +4,8 @@ import 'package:forum3/Services/Searchmethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/post_card.dart';
 
+import 'Mprofilescreen.dart';
+
 class Msearch extends StatefulWidget {
   const Msearch({Key? key}) : super(key: key);
 
@@ -77,7 +79,13 @@ class _MsearchState extends State<Msearch> {
   Widget usercard(data){
     return GestureDetector(
       onTap: (){
-
+        Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context)=>Mprofile(
+                snap: data,
+              ),
+            )
+        );
       },
       child: Card(
         shape: RoundedRectangleBorder(
