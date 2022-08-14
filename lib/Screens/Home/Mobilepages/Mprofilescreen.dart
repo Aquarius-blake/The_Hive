@@ -36,7 +36,7 @@ class _MprofileState extends State<Mprofile> {
                 Row(
                   children: [
 CircleAvatar(
-
+backgroundImage: NetworkImage(widget.snap['profilepic']),
 )
                   ],
                 )
