@@ -38,7 +38,8 @@ class _MprofileState extends State<Mprofile> {
 CircleAvatar(
 backgroundImage: NetworkImage(widget.snap['profilepic']),
   radius: 50,
-)
+),
+                    Column()
                   ],
                 )
               ],
