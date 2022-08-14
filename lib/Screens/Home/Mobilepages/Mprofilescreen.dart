@@ -173,6 +173,7 @@ class _MprofileState extends State<Mprofile> {
                 ),
                 Container(
 alignment: Alignment.centerLeft,
+                  child: widget.snap['DateofBirth']==null || widget.snap['DateofBirth']==""? SizedBox():Text("Date of Birth: ${widget.snap['DateoBirth']}"),
                 )
               ],
             ),
