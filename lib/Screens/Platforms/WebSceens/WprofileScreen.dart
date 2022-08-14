@@ -21,7 +21,7 @@ class _WprofileState extends State<Wprofile> {
             child: Card(
               color: Colors.white,
               child: Container(
-                padding: EdgeInsets.all(20),
+                padding: const EdgeInsets.all(20),
                 child: Column(
                   children: [
                     SizedBox(width: MediaQuery.of(context).size.width,),
