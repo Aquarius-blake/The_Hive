@@ -65,7 +65,11 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                             )
                           ],
                         ),
-                        Row()
+                        Row(
+                          children: [
+
+                          ],
+                        )
                       ],
                     )
                   ],
