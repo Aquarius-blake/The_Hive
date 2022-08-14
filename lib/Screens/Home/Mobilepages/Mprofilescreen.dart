@@ -167,7 +167,7 @@ class _MprofileState extends State<Mprofile> {
             ),
           ),
         ),
-        SizedBox(width: 40,)
+        SizedBox(width: 80,)
       ]
                 )
               ],
