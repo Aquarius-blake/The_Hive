@@ -39,7 +39,11 @@ CircleAvatar(
 backgroundImage: NetworkImage(widget.snap['profilepic']),
   radius: 50,
 ),
-                    Column()
+                    Column(
+                      children: [
+                        Row()
+                      ],
+                    )
                   ],
                 )
               ],
