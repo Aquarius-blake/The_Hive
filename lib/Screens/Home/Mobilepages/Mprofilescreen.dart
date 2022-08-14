@@ -113,7 +113,12 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                                   )
                               ),
                                 onPressed: (){},
-                                child: Text("Edit Profile"),
+                                child: Text(
+                                  "Edit Profile",
+                                  style: TextStyle(
+                                      color: Colors.lightBlueAccent
+                                  ),
+                                ),
                             )
                           ],
                         )
