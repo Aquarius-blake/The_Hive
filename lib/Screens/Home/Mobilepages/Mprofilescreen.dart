@@ -16,7 +16,7 @@ class _MprofileState extends State<Mprofile> {
     return Scaffold(
 appBar: AppBar(
   iconTheme: IconThemeData(
-
+color: Colors.black
   ),
   title: Text("Profile"),
   centerTitle: true,
