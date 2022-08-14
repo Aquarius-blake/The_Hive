@@ -51,7 +51,8 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                             Text(
                               "Posts",
                             style: TextStyle(
-                              fontSize: 22
+                              fontSize: 24,
+                              fontStyle: FontStyle.italic,
                             ),
                             )
                           ],
