@@ -139,7 +139,8 @@ alignment: Alignment.centerLeft,
                   child: Text(
                       widget.snap['username'],
                     style: TextStyle(
-
+fontWeight: FontWeight.bold,
+                      fontSize: 18
                     ),
                   ),
                 )
