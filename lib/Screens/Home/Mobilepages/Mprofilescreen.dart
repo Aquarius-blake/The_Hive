@@ -74,10 +74,24 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                           children: [
                             widget.snap['uid']!=user1.UID? ElevatedButton(
                                 onPressed: (){},
-                                child: Text("Message")
+                                child: Text("Message"),
+                              style: ElevatedButton.styleFrom(
+                                  elevation: 6.0,
+                                  shadowColor: Colors.black,
+                                  primary: Colors.white,
+                                  side: const BorderSide(
+                                    color: Colors.blue,
+                                    width: 2.0,
+                                  ),
+
+                                  shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(100.0)
+                                  )
+                              ),
                             ):ElevatedButton(
                                 onPressed: (){},
-                                child: Text("Edit Profile"))
+                                child: Text("Edit Profile"),
+                            )
                           ],
                         )
                       ],
