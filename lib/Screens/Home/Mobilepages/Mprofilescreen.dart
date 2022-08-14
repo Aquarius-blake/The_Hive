@@ -75,7 +75,9 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                             widget.snap['uid']!=user1.UID? ElevatedButton(
                                 onPressed: (){},
                                 child: Padding(
-                                  padding: const EdgeInsets.all(8.0),
+                                  padding: const EdgeInsets.only(
+                                      left: 8.0,
+                                  right: 12.0),
                                   child: Text(
                                     "Message",
                                   style: TextStyle(
