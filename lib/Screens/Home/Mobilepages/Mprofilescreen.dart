@@ -133,6 +133,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                     )
                   ],
                 ),
+                SizedBox(),
                 Container(
 alignment: Alignment.centerLeft,
                   child: Text(widget.snap['username']),
