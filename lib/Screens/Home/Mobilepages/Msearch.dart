@@ -97,7 +97,9 @@ class _MsearchState extends State<Msearch> {
           child: Row(
             children: [
               CircleAvatar(
-                backgroundImage: NetworkImage(data['profilepic']),
+                backgroundImage: NetworkImage(
+                    data['profilepic']
+                ),
               ),
               Text(data['username'])
             ],
