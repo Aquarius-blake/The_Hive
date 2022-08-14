@@ -17,7 +17,7 @@ class _WprofileState extends State<Wprofile> {
       body: SafeArea(
         child: Center(
           child: Container(
-            padding: EdgeInsets.all(40),
+            padding: const EdgeInsets.all(40),
             child: Card(
               color: Colors.white,
               child: Container(
