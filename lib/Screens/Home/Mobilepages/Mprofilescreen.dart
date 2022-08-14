@@ -146,7 +146,12 @@ class _MprofileState extends State<Mprofile> {
                 ),
                 Container(
                   alignment: Alignment.centerLeft,
-                  child: Text("Name ${widget.snap['Full Name']}"),
+                  child: Text(
+                      "Name: ${widget.snap['Full Name']}",
+                    style: TextStyle(
+                      color: Colors.grey
+                    ),
+                  ),
                 )
               ],
             ),
