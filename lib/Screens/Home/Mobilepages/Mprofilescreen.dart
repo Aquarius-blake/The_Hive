@@ -132,6 +132,9 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                       ],
                     )
                   ],
+                ),
+                Container(
+
                 )
               ],
             ),
