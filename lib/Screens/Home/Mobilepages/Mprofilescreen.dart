@@ -55,6 +55,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                               "20",
                               style: TextStyle(
                                   fontSize: 24,
+                                  fontStyle: FontStyle.italic,
                                   fontWeight: FontWeight.bold
                               ),
                             ),
@@ -63,6 +64,7 @@ backgroundImage: NetworkImage(widget.snap['profilepic']),
                               "Posts",
                             style: TextStyle(
                               fontSize: 24,
+                              fontStyle: FontStyle.italic,
                               fontWeight: FontWeight.bold
                             ),
                             )
