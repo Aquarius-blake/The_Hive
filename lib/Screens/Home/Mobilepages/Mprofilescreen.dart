@@ -39,7 +39,7 @@ CircleAvatar(
 backgroundImage: NetworkImage(widget.snap['profilepic']),
   radius: 50,
 ),
-                    SizedBox(width: MediaQuery.of(context).size.width*0.5,),
+                    SizedBox(width: MediaQuery.of(context).size.width*0.4,),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
