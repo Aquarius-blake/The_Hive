@@ -159,7 +159,7 @@ class _MprofileState extends State<Mprofile> {
         Expanded(
             child: SizedBox()
         ),
-      widget.snap['Gender']==null|| widget.snap['Gender']==""?  Container(
+      widget.snap['Gender']!=null|| widget.snap['Gender']!=""?  Container(
           alignment: Alignment.centerLeft,
           child: Text(
             "Gender: ${widget.snap['Gender']}",
