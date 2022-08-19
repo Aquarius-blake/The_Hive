@@ -1,6 +1,6 @@
 
 
-# Social Media app
+# Social Media App
 
 ## Getting Started
 
