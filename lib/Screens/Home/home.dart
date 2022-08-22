@@ -311,17 +311,17 @@ class _HomeState extends State<Home> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add_circle,
-              color: _page==2? Colors.lightBlueAccent:Colors.black,
+              color: _page==2? Colors.lightBlueAccent:Colors.white,
             ),
             label: '',
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(LineIcons.bell,
-              color: _page==3? Colors.lightBlueAccent:Colors.black,
+              color: _page==3? Colors.lightBlueAccent:Colors.white,
             ),
             label: '',
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.mail_outline,
