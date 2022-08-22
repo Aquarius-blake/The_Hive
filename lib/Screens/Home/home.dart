@@ -304,10 +304,10 @@ class _HomeState extends State<Home> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search,
-              color: _page==1? Colors.lightBlueAccent:Colors.black,
+              color: _page==1? Colors.lightBlueAccent:Colors.white,
             ),
             label: '',
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add_circle,
