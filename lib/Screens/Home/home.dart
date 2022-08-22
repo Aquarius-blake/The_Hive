@@ -325,7 +325,7 @@ class _HomeState extends State<Home> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.mail_outline,
-              color: _page==4? Colors.lightBlueAccent:Colors.black,
+              color: _page==4? Colors.lightBlueAccent:Colors.white,
             ),
             label: '',
             backgroundColor: Colors.black,
