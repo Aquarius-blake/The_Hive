@@ -1,6 +1,4 @@
 
-
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -126,9 +124,9 @@ class _HomeState extends State<Home> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(
-            color: Colors.black
+            color: Colors.white
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         elevation: 2.0,
         title: Container(
           padding: const EdgeInsets.only(
