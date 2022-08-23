@@ -139,7 +139,7 @@ class _HomeState extends State<Home> {
               Text(
                 "$title",
                 style: const TextStyle(
-                            color: Colors.black
+                            color: Colors.white
                 ),
               )
             ],
