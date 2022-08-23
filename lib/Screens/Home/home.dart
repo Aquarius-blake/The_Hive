@@ -297,10 +297,10 @@ class _HomeState extends State<Home> {
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: _page==0? Colors.lightBlueAccent:Colors.black,
+              color: _page==0? Colors.lightBlueAccent:Colors.white,
             ),
             label: '',
-            backgroundColor: Colors.white,
+            backgroundColor: Colors.black,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search,
