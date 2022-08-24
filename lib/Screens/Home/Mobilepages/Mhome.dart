@@ -14,6 +14,7 @@ class _MhomeState extends State<Mhome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:Colors. black, 
   body: StreamBuilder(
     stream: FirebaseFirestore.instance.collection('Posts').snapshots(),
       builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
