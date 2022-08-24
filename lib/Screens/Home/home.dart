@@ -247,6 +247,7 @@ color:Colors.white,
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
                       fontSize: 12.0,
+color:Colors.white,
                     ),
                   ),
                   onTap: ()async{
@@ -266,6 +267,7 @@ color:Colors.white,
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
+color:Colors.white,
 
                     ),
                   ),
