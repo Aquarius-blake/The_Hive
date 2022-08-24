@@ -240,6 +240,7 @@ class _PostCardState extends State<PostCard> {
                     widget.snap['detail'],
                     style: const TextStyle(
                       fontSize: 14,
+                      color:Colors.white, 
                     ),
                   ),
                 ),
