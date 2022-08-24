@@ -300,7 +300,12 @@ class _PostCardState extends State<PostCard> {
                     Expanded(
                         child: SizedBox()
                     ),
-                    Text("$commentlen"),
+                    Text(
+                      "$commentlen",
+                      style:TextStyle(
+                        color:Colors.white, 
+                      )
+                    ),
                     IconButton(
                         onPressed: (){
                           if(kIsWeb){
