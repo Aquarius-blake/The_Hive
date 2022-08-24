@@ -328,7 +328,7 @@ class _PostCardState extends State<PostCard> {
                         },
                         icon: Icon(
                           Icons.comment_outlined,
-                          color: Colors.black,
+                          color: Colors.white,
                         )
                     ),
                     Expanded(
@@ -338,7 +338,7 @@ class _PostCardState extends State<PostCard> {
                         onPressed: (){},
                         icon: Icon(
                           Icons.share,
-                          color: Colors.black,
+                          color: Colors.white,
                         )
                     ),
                   ],
