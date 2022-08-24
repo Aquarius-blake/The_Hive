@@ -297,6 +297,7 @@ color:Colors.white,
       ),
 
       bottomNavigationBar: CupertinoTabBar(
+        backgroundColor:Colors.black,
         items: [
           BottomNavigationBarItem(
             icon: Icon(
