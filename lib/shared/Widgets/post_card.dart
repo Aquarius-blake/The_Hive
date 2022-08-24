@@ -272,6 +272,9 @@ class _PostCardState extends State<PostCard> {
                   children: [
                     Text(
                       "${widget.snap['likes'].length}",
+                      style:TextStyle(
+                        color:Colors.white,
+                      )
                     ),
                     likeAnimation(
                       isAnimating: widget.snap['likes'].contains(user1.UID),
