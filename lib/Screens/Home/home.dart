@@ -189,6 +189,7 @@ class _HomeState extends State<Home> {
                             user1.Username!,
                             style: const TextStyle(
                               fontSize: 16,
+color: Colors.white,
 
                             ),
                           ),
@@ -201,7 +202,7 @@ class _HomeState extends State<Home> {
                 ),
                 ListTile(
                   leading: const Icon(Icons.person,
-                    color: Colors.black,
+                    color: Colors.white,
                     size:35.0,
                   ),
                   title: const Text(
@@ -221,7 +222,7 @@ class _HomeState extends State<Home> {
                 const SizedBox(height: 5,),
                 ListTile(
                   leading: const Icon(LineIcons.alternateSignOut,
-                    color: Colors.black,
+                    color: Colors.white,
                     size:35.0,),
                   title: const Text(
                     "Sign Out",
