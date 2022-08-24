@@ -176,6 +176,7 @@ class _PostCardState extends State<PostCard> {
         bottom: 5,
       ),
       child: Card(
+        backgroundColor:Colors.black,
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
@@ -196,7 +197,8 @@ class _PostCardState extends State<PostCard> {
                               Text(
                                 widget.snap['author'],
                                 style: const TextStyle(
-                                    fontWeight: FontWeight.bold
+                                    fontWeight: FontWeight.bold,
+                                    color:Colors.white,
                                 ),)
                             ],
                           ) ,
