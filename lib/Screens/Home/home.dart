@@ -211,6 +211,7 @@ color: Colors.white,
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
+color:Colors.white,
 
                     ),
 
@@ -230,6 +231,7 @@ color: Colors.white,
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
+color:Colors.white,
 
                     ),
 
