@@ -120,7 +120,7 @@ class _MsearchState extends State<Msearch> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         elevation: 0.0,
         title: TextFormField(
           controller: _search,
