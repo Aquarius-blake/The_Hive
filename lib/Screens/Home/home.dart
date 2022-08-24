@@ -257,7 +257,7 @@ color:Colors.white,
                 SizedBox(height: 20.0,),
               const  Divider(
                   height: 40,
-                  color: Colors.black,
+                  color: Colors.white,
                   thickness: 3,
                 ),
                 const Center(
