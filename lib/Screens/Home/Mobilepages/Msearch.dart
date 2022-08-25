@@ -102,7 +102,12 @@ class _MsearchState extends State<Msearch> {
                     data['profilepic']
                 ),
               ),
-              Text(data['username'])
+              Text(
+                data['username'],
+                style:TextStyle(
+                  
+                ),
+              )
             ],
           ),
         ),
