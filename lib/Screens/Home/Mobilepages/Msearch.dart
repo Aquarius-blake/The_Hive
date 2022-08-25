@@ -105,7 +105,7 @@ class _MsearchState extends State<Msearch> {
               Text(
                 data['username'],
                 style:TextStyle(
-                  
+                  color:Colors.white,
                 ),
               )
             ],
