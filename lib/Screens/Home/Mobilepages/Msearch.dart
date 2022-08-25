@@ -88,6 +88,7 @@ class _MsearchState extends State<Msearch> {
         );
       },
       child: Card(
+        color:Colors.black,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10)
         ),
