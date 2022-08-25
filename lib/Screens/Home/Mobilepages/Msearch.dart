@@ -119,6 +119,7 @@ class _MsearchState extends State<Msearch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor:Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 0.0,
