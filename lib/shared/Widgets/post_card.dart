@@ -176,7 +176,7 @@ class _PostCardState extends State<PostCard> {
         bottom: 5,
       ),
       child: Card(
-        backgroundColor:Colors.black,
+        color:Colors.black,
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: Column(
@@ -211,7 +211,7 @@ class _PostCardState extends State<PostCard> {
                     onPressed: ()=>_options(context),
                     icon: const Icon(
                       Icons.more_vert,
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ):const SizedBox()
                 ],
@@ -226,6 +226,7 @@ class _PostCardState extends State<PostCard> {
                     widget.snap['title'],
                     style: const TextStyle(
                       fontSize: 22,
+                      color:Colors.white,
                     ),
                   ),
                 ),
