@@ -55,7 +55,7 @@ class _CommentcardState extends State<Commentcard> {
                                 TextSpan(
                                   text: widget.snap['author'],
                                   style: const TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
