@@ -29,6 +29,7 @@ class _CommentcardState extends State<Commentcard> {
         horizontal: 16,
       ),
       child: Card(
+        color:Colors.black,
         child: Container(
           padding: const EdgeInsets.all(5.0),
           child: Column(
