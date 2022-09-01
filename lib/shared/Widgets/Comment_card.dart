@@ -29,6 +29,7 @@ class _CommentcardState extends State<Commentcard> {
         horizontal: 16,
       ),
       child: Card(
+        color:Colors.black,
         child: Container(
           padding: const EdgeInsets.all(5.0),
           child: Column(
@@ -54,14 +55,14 @@ class _CommentcardState extends State<Commentcard> {
                                 TextSpan(
                                   text: widget.snap['author'],
                                   style: const TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 TextSpan(
                                   text: "   ${widget.snap['detail']}",
                                   style: const TextStyle(
-                                    color: Colors.black,
+                                    color: Colors.white,
                                     fontStyle: FontStyle.italic,
                                   ),
                                 ),
