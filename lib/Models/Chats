@@ -40,6 +40,7 @@ class Chats{
     "author pic":appurl,
   };
 
+
   static Chats? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
     Chats? Chats12=Chats(
