@@ -15,7 +15,20 @@ class _NetconState extends State<Netcon> {
       body: SafeArea(
         child: Center(
           child: Container(
-
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Icon(
+                  Icons.wifi_off,
+                  size: 40,
+                  color: Colors.black,
+                ),
+                Text(
+                    "Check Network Connections",
+                  style: TextStyle(),
+                )
+              ],
+            ),
           ),
         ),
       ),
