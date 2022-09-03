@@ -24,7 +24,7 @@ class _NetconState extends State<Netcon> {
                   color: Colors.black,
                 ),
                 Text(
-                    "Check Network Connection",
+                    "Check Network Connections",
                   style: TextStyle(),
                 )
               ],
