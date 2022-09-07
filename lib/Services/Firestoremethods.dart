@@ -1,5 +1,8 @@
+
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:forum3/Models/Chats.dart';
 import 'package:forum3/Models/Comments.dart';
+import 'package:forum3/Models/Notifs.dart';
 import 'package:forum3/Models/Posts.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 
@@ -52,7 +55,7 @@ class FirestoreMethods{
         }
     }
 
-    Future<void>likepost(String postid,String author_uid,List likes)async {
+    Future<void>likepost(String postid,String author_uid,List likes,String owneruid,String author,String ppurl,String title )async {
         try{
             if(likes.contains(author_uid)){
                 await _firestore.collection("Posts").doc(postid).update(
@@ -62,6 +65,14 @@ class FirestoreMethods{
                 await  _firestore.collection("Posts").doc(postid).update(
                     {'likes':FieldValue.arrayUnion([author_uid])}
                 );
+
+                String message=" Liked your post: ";
+                String notifid=const Uuid().v1();
+                Notifs nots=  Notifs(title: title,ppurl: ppurl,author_uid: author_uid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owneruid, notifid: notifid);
+                await _firestore.collection("Notification").doc(owneruid).collection("Notifs").doc(notifid).set(
+                    nots.toJson(),
+                    SetOptions(merge: true)
+                );
             }
 
         }catch(e){
@@ -70,7 +81,7 @@ class FirestoreMethods{
     }
 
 
-    Future<String> postcomment(String postid, String text,String author_uid,String author,String ppurl) async{
+    Future<String> postcomment(String postid, String text,String author_uid,String author,String ppurl,String title,String owner_uid) async{
         String ress;
         try{
             if(text.isNotEmpty){
@@ -85,6 +96,15 @@ class FirestoreMethods{
                 );
                 await _firestore.collection("Posts").doc(postid).collection("comments").doc(commentid).set(
                     comments.toJson(),
+                    SetOptions(merge: true)
+                );
+
+                //TODO: Write comment Notification code here
+                String notifid=const Uuid().v1();
+                String message=" Commented on your post: ";
+                Notifs notifs=Notifs(commentuid: commentid,ppurl: ppurl,author_uid: author_uid, notifid: notifid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owner_uid, title: title);
+                await _firestore.collection("Notification").doc(owner_uid).collection("Notifs").doc(notifid).set(
+                    notifs.toJson(),
                     SetOptions(merge: true)
                 );
                 ress="Comment success";
@@ -131,33 +151,33 @@ class FirestoreMethods{
         try{
             if(image!=null && upload){
                 photourl=await StorageMethods().Storageip("Posts", image, true);
-              await  _firestore.collection("Posts").doc(postid).update({
+                await  _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
                     'Image Url':photourl,
                     'detail':details
                 }
                 );
                 if(title!=""){
-                 await   _firestore.collection("Posts").doc(postid).update({
+                    await   _firestore.collection("Posts").doc(postid).update({
                         'title':title,
-                     'searchkey':title!.substring(0,1)
+                        'searchkey':title!.substring(0,1)
                     });
-                    }
+                }
 
             }else{
                 photourl="";
-              await  _firestore.collection("Posts").doc(postid).update({
+                await  _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
-                  'Image Url':photourl,
-                  'detail':details
+                    'Image Url':photourl,
+                    'detail':details
                 }
                 );
                 if(title!=""){
-                await    _firestore.collection("Posts").doc(postid).update({
+                    await    _firestore.collection("Posts").doc(postid).update({
                         'title':title,
-                    'searchkey':title!.substring(0,1)
+                        'searchkey':title!.substring(0,1)
 
-                });
+                    });
                 }
             }
             ress="Edit Succesful";
@@ -185,12 +205,214 @@ class FirestoreMethods{
 
     }
 
+    //Edit Profile
+    Future<String> EditProfile(String userid,String Fname,String Username,String DOB,String Bio,String Gender,dynamic image,String Profileurl)async{
+        String ress;
+        try{
+            String ppurl;
+            if(image!=null){
+                ppurl =await StorageMethods().Storageip("Profilepic", image, false);
+            }else{
+                ppurl=Profileurl;
+            }
+
+            await _firestore.collection('users').doc(userid).update({
+                "profilepic":ppurl,
+                "Gender":Gender,
+                "Full Name":Fname,
+                "DateofBirth":DOB,
+                "username":Username,
+                "Bio":Bio,
+            });
+
+
+            ress="Success";
+            return ress;
+        }catch(e){
+            ress=e.toString();
+            return ress;
+        }
+    }
+
+
+    Future<void> Updatepostpic(String postid,String ppurl)async{
+
+        await _firestore.collection("Posts").doc(postid).update({
+            "profile Pic":ppurl,
+        });
+    }
+
+    Future<void> Updatecommentpic(String postid,String ppurl,String commentid)async{
+
+        await _firestore.collection("Posts").doc(postid).collection("comments").doc(commentid).update({
+            "profile Pic":ppurl,
+        });
+    }
+
+    Future<String?> Sendmessage(
+        String author,
+        String author_uid,
+        String receiver,
+        String receiver_uid,
+        String message,
+        String ppurl,
+        String appurl,
+        )async{
+        String ress;
+        try{
+
+            dynamic Timeposted=DateTime.now();
+            String  message_uid= Uuid().v1();
+
+            Chats chats=Chats(
+                author_uid: author_uid,
+                message_uid: message_uid,
+                message: message,
+                receiver_uid: receiver_uid,
+                author: author,
+                Timeposted: Timeposted,
+                ppurl: ppurl,
+                appurl: appurl,
+                receiver: receiver);
+
+            await _firestore
+                .collection("Chats")
+                .doc(author_uid)
+                .collection("Chathead")
+                .doc(receiver_uid)
+                .collection("message")
+                .doc(message_uid)
+                .set(
+                    chats.toJson(),
+                    SetOptions(merge: true)
+            );
+            await _firestore
+                .collection("Chats")
+                .doc(author_uid)
+                .collection("Chathead")
+                .doc(receiver_uid).set(
+                {
+                    "Sender uid":author_uid,
+                    "Sender":author,
+                    "Receiver":receiver,
+                    "Receiver uid":receiver_uid,
+                    "Last Message":message,
+                    "Profile Pic":ppurl,
+                    "Chat Time":Timeposted,
+                    "author pic":appurl,
+                },
+                SetOptions(merge: true)
+            );
+
+//Receiver Side
+            Chats chatr=Chats(author_uid: author_uid, message_uid: message_uid, message: message, receiver_uid: receiver_uid, author: author, Timeposted: Timeposted, ppurl: appurl, receiver: receiver, appurl: ppurl);
+            await _firestore
+                .collection("Chats")
+                .doc(receiver_uid)
+                .collection("Chathead")
+                .doc(author_uid)
+                .collection("message")
+                .doc(message_uid)
+                .set(
+                chatr.toJson(),
+                SetOptions(merge: true)
+            );
+            await _firestore
+                .collection("Chats")
+                .doc(receiver_uid)
+                .collection("Chathead")
+                .doc(author_uid).set(
+                {
+                    "Sender uid":receiver_uid,
+                    "Sender":receiver,
+                    "Receiver":author,
+                    "Receiver uid":author_uid,
+                    "Last Message":message,
+                    "Profile Pic":appurl,
+                    "author pic":ppurl,
+                    "Chat Time":Timeposted
+                },
+                SetOptions(merge: true)
+            );
+
+
+            ress="Message Sent";
+            return ress;
+        }catch(e){
+            ress=e.toString();
+            return ress;
+        }
+    }
+
+
+    Future<String>Deletemessage(  String author,
+        String author_uid,
+        String receiver,
+        String receiver_uid,
+        String message_uid,
+        )async {
+        String ress;
+        try{
+            //Sender Side
+            await _firestore
+                .collection("Chats")
+                .doc(author_uid)
+                .collection("Chathead")
+                .doc(receiver_uid)
+                .collection("message")
+                .doc(message_uid)
+                .delete();
+
+            await _firestore
+                .collection("Chats")
+                .doc(author_uid)
+                .collection("Chathead")
+                .doc(receiver_uid).update(
+                {
+                    "Sender uid":author_uid,
+                    "Sender":author,
+                    "Receiver":receiver,
+                    "Receiver uid":receiver_uid,
+                    "Last Message":"This message was deleted",
+                },
+            );
+
+            //Receiver Side
+            await _firestore
+                .collection("Chats")
+                .doc(receiver_uid)
+                .collection("Chathead")
+                .doc(author_uid)
+                .collection("message")
+                .doc(message_uid)
+                .delete();
+
+            await _firestore
+                .collection("Chats")
+                .doc(receiver_uid)
+                .collection("Chathead")
+                .doc(author_uid).update(
+                {
+                    "Sender uid":receiver_uid,
+                    "Sender":receiver,
+                    "Receiver":author,
+                    "Receiver uid":author_uid,
+                    "Last Message":"This message was deleted",
+                },
+            );
+
+            ress="Message Deleted";
+            return ress;
+        }catch(e){
+            ress=e.toString() ;
+            return ress;
+        }
+    }
+
+
 
 
 }
-
-
-
 
 
 
