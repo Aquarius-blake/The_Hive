@@ -57,6 +57,13 @@ class AuthService{
       UserCredential result= await _auth.signInAnonymously();
       User? user = result.user;
       guest=true;
+
+      User1 user1= User1(Bio: "Ghost of Sushima",Guest: true,UID: user?.uid,Username:"Guest",Name:"Guest",Gender:"Unknown",Email: "Guest@Guest.com",ppurl:"",searchkey: "Guest".substring(0,1));
+
+      await  _firestore.collection("users").doc(user!.uid).set(
+        user1.toJson(),
+      );
+
       return _userfirebase(user);
     }catch(e){
       print(e.toString());
@@ -103,7 +110,7 @@ class AuthService{
       User? user = result.user;
 
     String photourl= await  Store.Storageip("Profilepic", image, false);
-     User1 user1= User1(UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl,searchkey: username.substring(0,1));
+     User1 user1= User1(Guest: false,UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl,searchkey: username.substring(0,1));
 
       await  _firestore.collection("users").doc(user!.uid).set(
         user1.toJson(),
@@ -121,8 +128,10 @@ class AuthService{
 
 
   //sign out
-  Future SignOut()async{
+  Future SignOut(bool guest,String uid)async{
     try{
+      if(guest){
+      await  _firestore.collection("users").doc(uid).delete();}
       return await _auth.signOut();
     }catch(e){
       print(e.toString());
