@@ -8,6 +8,7 @@ A Social Media Application project with flutter front-end UI and Firebase back-e
 
 
 ## ScreenShots
+
 (Will be added later)
 
 
