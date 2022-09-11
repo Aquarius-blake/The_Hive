@@ -95,10 +95,10 @@ class _MchatusersearchState extends State<Mchatusersearch> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         elevation: 3.0,
         iconTheme: const IconThemeData(
-          color: Colors.black,
+          color: Colors.white,
         ),
         title: TextFormField(
           controller: _search,
@@ -135,7 +135,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
             style: ElevatedButton.styleFrom(
                 elevation: 0.0,
                 shadowColor: Colors.black,
-                primary: Colors.white,
+                primary: Colors.black,
                 side: const BorderSide(
                   color: Colors.lightBlueAccent,
                   width: 2.0,
