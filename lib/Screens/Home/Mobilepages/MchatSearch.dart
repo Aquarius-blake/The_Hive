@@ -72,7 +72,9 @@ class _MchatusersearchState extends State<Mchatusersearch> {
                 ),
               ),
               const SizedBox(width: 20,),
-              Text(data['username'])
+              Text(data['username']),
+              SizedBox(width:5,),
+              Text("Admin"),
             ],
           ),
         ),
