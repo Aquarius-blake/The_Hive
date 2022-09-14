@@ -18,6 +18,7 @@ class User1{
   late final String? ppurl;
   late final String? Name;
   late final String? Gender;
+  late final String? Bio;
 
 
   User1({ this.UID,
@@ -32,6 +33,7 @@ class User1{
     this.Name,
     this.Gender,
      this.searchkey,
+     this.Bio,
   });
 
   Map<String,dynamic> toJson()=>{
@@ -44,6 +46,7 @@ class User1{
     "profilepic":ppurl,
     "Full Name":Name,
     "Gender":Gender,
+    "Bio":Bio,
   };
 
   static User1? FromSnap(DocumentSnapshot snap){
@@ -56,7 +59,8 @@ class User1{
       ppurl: snapshot['profilepic'],
       Name: snapshot['Full Name'],
       Gender: snapshot['Gender'],
-      searchkey: snapshot['searchkey']
+      searchkey: snapshot['searchkey'],
+      Bio: snapshot['Bio'],
     );
     return User12;
 
