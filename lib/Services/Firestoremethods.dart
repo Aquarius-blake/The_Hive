@@ -409,7 +409,69 @@ class FirestoreMethods{
         }
     }
 
+Future<String> Makerequest(String author,String uid,String ppurl)async{
+        String ress;
+        try{
+            String requestuid=Uuid().v1();
+            Request request=Request(ppurl: ppurl,author_uid: uid, requestuid: requestuid, author: author, Timeposted: DateTime.now());
+            await _firestore.collection("Requests").doc(uid).set(
+                request.toJson(),
+                SetOptions(
+                    merge: true
+                )
+            );
 
+            ress='Request Sent';
+            return ress;
+        }catch(e){
+            ress=e.toString();
+            return ress;
+        }
+    }
+
+
+    Future<String> Approval(String uid)async{
+        String ress;
+        try{
+            await _firestore.collection("users").doc(uid).update(
+                {"Admin":true},
+            );
+
+            await _firestore.collection("Requests").doc(uid).delete();
+            ress="Request Approved";
+            return ress;
+        }catch(e){
+            ress=e.toString();
+            return ress;
+        }
+    }
+
+
+    Future<String> DenyRequest(String uid)async{
+        String ress;
+        try{
+            await _firestore.collection("Requests").doc(uid).delete();
+            ress="Request Denied Successfully";
+            return ress;
+        }catch(e){
+            ress=e.toString();
+            return ress;
+        }
+    }
+
+    Future<String> RemoveAdmin(String uid)async{
+        String ress;
+        try{
+            await _firestore.collection("users").doc(uid).update(
+                {"Admin":false},
+            );
+            ress="Admin removed successfully";
+            return ress;
+        }catch(e){
+            ress=e.toString();
+            return ress;
+        }
+    }
 
 
 
