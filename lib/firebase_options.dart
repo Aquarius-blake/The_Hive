@@ -47,32 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyDNc1boJMAmFYKMHFf-TF6In4l79-E31EY',
-    appId: '1:553801742438:web:ec339d78f166367b8d15a7',
-    messagingSenderId: '553801742438',
-    projectId: 'forum2-d63e3',
-    authDomain: 'forum2-d63e3.firebaseapp.com',
-    databaseURL: 'https://forum2-d63e3-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'forum2-d63e3.appspot.com',
+    apiKey: 'AIzaSyANUxR9CkPkRS1LJFfv92gVWssvkUuFxjs',
+    appId: '1:753826641492:web:585cc77b366979f7a25fc1',
+    messagingSenderId: '753826641492',
+    projectId: 'bsocialp',
+    authDomain: 'bsocialp.firebaseapp.com',
+    storageBucket: 'bsocialp.appspot.com',
+    measurementId: 'G-F06LFWW30W',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyBU4TwQCPguq2RO1LZ62Yzd-ZkATQ2lpRg',
-    appId: '1:553801742438:android:f3e0b054ff51814e8d15a7',
-    messagingSenderId: '553801742438',
-    projectId: 'forum2-d63e3',
-    databaseURL: 'https://forum2-d63e3-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'forum2-d63e3.appspot.com',
+    apiKey: 'AIzaSyCNU4hDLJnu4AnDY_9R5OVeJpL_izckYnA',
+    appId: '1:753826641492:android:abea7295963a275ca25fc1',
+    messagingSenderId: '753826641492',
+    projectId: 'bsocialp',
+    storageBucket: 'bsocialp.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyAlShrAkHU_kixQ7feF1P4mYD7aHdNS0Yo',
-    appId: '1:553801742438:ios:53d0659dade18c358d15a7',
-    messagingSenderId: '553801742438',
-    projectId: 'forum2-d63e3',
-    databaseURL: 'https://forum2-d63e3-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'forum2-d63e3.appspot.com',
-    iosClientId: '553801742438-4073bdll7ccas7q4t72o9ikcumd1lkp0.apps.googleusercontent.com',
-    iosBundleId: 'com.project.forum3',
+    apiKey: 'AIzaSyD0I7zUPIc1yRJTbCbeeh5owsUgrDsg83w',
+    appId: '1:753826641492:ios:9d01f7e9f0aa3f65a25fc1',
+    messagingSenderId: '753826641492',
+    projectId: 'bsocialp',
+    storageBucket: 'bsocialp.appspot.com',
+    iosClientId: '753826641492-qh2n9ph68aifhcjt6udh59pea1h0utah.apps.googleusercontent.com',
+    iosBundleId: 'com.blake.social',
   );
 }
