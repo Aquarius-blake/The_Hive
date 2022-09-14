@@ -19,8 +19,8 @@ class webcom extends StatefulWidget {
 
 class _webcomState extends State<webcom> {
 
-  commenting(String postid, String textt,String author_uid,String author,String ppurl) async{
-    String ress=await FirestoreMethods().postcomment(postid, textt, author_uid, author, ppurl);
+  commenting(String postid, String textt,String author_uid,String author,String ppurl,String title,String owner_uid) async{
+    String ress=await FirestoreMethods().postcomment(postid, textt, author_uid, author, ppurl,title,owner_uid);
     if( ress=="Comment success"){
       Showsnackbar(ress, context);
     }else if(ress=="Empty field"){
@@ -98,7 +98,7 @@ class _webcomState extends State<webcom> {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: ()=>commenting(widget.snap['Post Uid'], text.text, user1.UID!, user1.Username!, user1.ppurl!),
+                  onPressed: ()=>commenting(widget.snap['Post Uid'], text.text, user1.UID!, user1.Username!, user1.ppurl!,widget.snap['title'],widget.snap['author uid']),
                   child: const Text("Post"),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0,

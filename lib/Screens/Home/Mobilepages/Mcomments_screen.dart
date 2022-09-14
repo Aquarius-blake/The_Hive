@@ -17,10 +17,10 @@ class McommentsScreen extends StatefulWidget {
 }
 
 class _McommentsScreenState extends State<McommentsScreen> {
+dynamic image;
 
-
-  commenting(String postid, String textt,String author_uid,String author,String ppurl) async{
-    String ress=await FirestoreMethods().postcomment(postid, textt, author_uid, author, ppurl);
+  commenting(String postid, String textt,String author_uid,String author,String ppurl,String title,String onweruid) async{
+    String ress=await FirestoreMethods().postcomment(postid, textt, author_uid, author, ppurl,title,onweruid);
     if( ress=="Comment success"){
       Showsnackbar(ress, context);
     }else if(ress=="Empty field"){
@@ -42,6 +42,27 @@ text.dispose();
     super.dispose();
   }
 
+  Widget Avatar(dynamic image,User1 user1){
+    try{
+      return image!=null?  CircleAvatar(
+        radius: 20,
+        backgroundImage: MemoryImage(image),
+      ):user1.ppurl!=""? CircleAvatar(
+        backgroundImage: NetworkImage(user1.ppurl!),
+        radius: 20,
+      ):const CircleAvatar(
+        backgroundImage: AssetImage('Assets/hac.jpg'),
+        radius: 20,
+      );
+    }
+    catch(e){
+      return const CircleAvatar(
+        backgroundImage: AssetImage('Assets/hac.jpg'),
+        radius: 20,
+      );
+    }
+  }
+  
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
@@ -49,13 +70,13 @@ text.dispose();
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: Colors.white,
+          color: Colors.black,
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.white,
         title:const Text(
-          "Comments",
+          "Discussion",
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.black,
           ),
         ),
         centerTitle: true,
@@ -91,10 +112,7 @@ text.dispose();
             ),
             child: Row(
               children: [
-                CircleAvatar(
-                backgroundImage: NetworkImage(user1.ppurl!),
-                  radius: 18,
-                ),
+               Avatar(image, user1) ,
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.only(
@@ -111,7 +129,20 @@ text.dispose();
                   ),
                 ),
                 ElevatedButton(
-                    onPressed: ()=>commenting(widget.snap['Post Uid'], text.text, user1.UID!, user1.Username!, user1.ppurl!),
+                    onPressed: ()async{
+                     try {
+                       commenting(
+                           widget.snap['Post Uid'],
+                           text.text,
+                           user1.UID!,
+                           user1.Username!,
+                           user1.ppurl!,
+                           widget.snap['title'],
+                           widget.snap['author uid']);
+                     }catch(e){
+                       Showsnackbar(e.toString(), context);
+                     }
+                      },
                     child: const Text("Post"),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0,

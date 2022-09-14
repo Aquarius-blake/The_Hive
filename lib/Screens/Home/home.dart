@@ -237,7 +237,7 @@ color:Colors.white,
 
                   ),
                   onTap: () async{
-                    await _auth.SignOut();
+                  await _auth.SignOut(user1.Guest!,user1.UID!);
                   },
                 ),
                 SizedBox(height: 5.0,),

@@ -48,6 +48,7 @@ dependencies:
   font_awesome_flutter: ^10.1.0
   share_plus: ^4.0.10
   get: ^4.6.5
+  firebase_dynamic_links: ^2.0.6
 
 dev_dependencies:
   flutter_test:

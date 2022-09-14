@@ -107,7 +107,8 @@ class _WebviewState extends State<Webview> {
         actions: [
           ElevatedButton(
             onPressed: ()async{
-              await _auth.SignOut();
+                                await _auth.SignOut(user1.Guest!,user1.UID!);
+
             },
             child: Text("Sign Out"),
           ),
