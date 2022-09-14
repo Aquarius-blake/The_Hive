@@ -15,6 +15,7 @@ class _RequestCardState extends State<RequestCard> {
   Widget build(BuildContext context) {
     return Container(
       child: Card(
+        color:Colors.black,
         elevation: 2.0,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
