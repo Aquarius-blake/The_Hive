@@ -38,21 +38,21 @@ class _RequestCardState extends State<RequestCard> {
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                    color:Colors.black,
+                                    color:Colors.white,
                                 )
                               ),
                               TextSpan(
                                 text: " Requested for Administrative permissions, ",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
-                                  color: Colors.black
+                                  color: Colors.white
                                 ),
                               ),
                               TextSpan(
                                   text: "Approve or Deny request?",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.black,
+                                  color: Colors.white,
                                 ),
                               ),
                             ]
