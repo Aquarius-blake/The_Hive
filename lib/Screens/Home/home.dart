@@ -124,6 +124,7 @@ class _HomeState extends State<Home> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         iconTheme: IconThemeData(
             color: Colors.white
