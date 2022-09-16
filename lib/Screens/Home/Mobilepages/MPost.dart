@@ -163,6 +163,9 @@ class _MpostState extends State<Mpost> {
                             hintText: "Title",
                             label: Text(
                               "Title",
+                              style: TextStyle(
+                                color: Colors.white
+                              ),
                               ),
                           ),
                         ),
