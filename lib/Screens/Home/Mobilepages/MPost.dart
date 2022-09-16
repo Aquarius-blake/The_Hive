@@ -148,7 +148,10 @@ class _MpostState extends State<Mpost> {
                           children: [
                             Avatar(user1),
                             SizedBox(width: 15,),
-                            Text(user1.Username!),
+                            Text(
+                              user1.Username!,
+                              style:TextStyle(),
+                              ),
                           ],
                         ),
                         SizedBox(height: 15,),
