@@ -227,7 +227,7 @@ class _WebviewState extends State<Webview> {
                                       });
                                       Navitap(page);
                                     },
-                                    child: Text("Post",
+                                    child: const Text("Post",
                                       style: TextStyle(
                                         fontSize: 19.0,
                                       ),
