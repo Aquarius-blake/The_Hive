@@ -131,6 +131,7 @@ class _MpostState extends State<Mpost> {
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
+      backgroundColor: Colors.black,
       body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
