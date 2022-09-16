@@ -150,7 +150,7 @@ class _MpostState extends State<Mpost> {
                             SizedBox(width: 15,),
                             Text(
                               user1.Username!,
-                              style:TextStyle(
+                              style:const TextStyle(
                                 color:Colors.white
                               ),
                               ),
