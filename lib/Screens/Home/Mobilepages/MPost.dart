@@ -179,6 +179,7 @@ class _MpostState extends State<Mpost> {
                               onPressed: ()=>_selectimage(context),
                               icon: const Icon(
                                 Icons.add_a_photo,
+                                color:Colors.white
                               ),
                             )
                           ],
