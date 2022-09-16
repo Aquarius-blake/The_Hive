@@ -314,7 +314,7 @@ class _PostCardState extends State<PostCard> {
                     ),
                   ),
                 ),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 Postimage(widget.snap['Image Url'], context,user1),
                 Container(
                   padding: const EdgeInsets.only(
