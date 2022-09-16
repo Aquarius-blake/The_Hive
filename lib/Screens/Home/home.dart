@@ -119,7 +119,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    // try{
+     try{
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
@@ -189,7 +189,7 @@ class _HomeState extends State<Home> {
                             user1.Username!,
                             style: const TextStyle(
                               fontSize: 16,
-color: Colors.white,
+                              color: Colors.white,
 
                             ),
                           ),
@@ -211,10 +211,8 @@ color: Colors.white,
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
-color:Colors.white,
-
+                      color:Colors.white,
                     ),
-
                   ),
                   onTap: () async{
                     Navigator.pushNamed(context, '/Profile');
@@ -231,7 +229,7 @@ color:Colors.white,
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
-color:Colors.white,
+                      color:Colors.white,
 
                     ),
 
@@ -247,7 +245,7 @@ color:Colors.white,
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
                       fontSize: 12.0,
-color:Colors.white,
+                      color:Colors.white,
                     ),
                   ),
                   onTap: ()async{
@@ -339,8 +337,8 @@ color:Colors.white,
         onTap: Navitap,
       ),
     );
-    //  }catch(e){
-    //    return Loading();
-    //  }
+      }catch(e){
+      return Loading();
+    }
   }
 }
