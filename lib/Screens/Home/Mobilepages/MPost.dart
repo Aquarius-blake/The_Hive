@@ -197,6 +197,13 @@ class _MpostState extends State<Mpost> {
                                 Icons.add_a_photo,
                                 color:Colors.white
                               ),
+                            ),
+                            IconButton(
+                              onPressed: (){},
+                              icon: const Icon(
+                                FontAwesomeIcons.xmark,
+                                color:Colors.white
+                              ),
                             )
                           ],
                         )
