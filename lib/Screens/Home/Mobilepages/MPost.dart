@@ -177,11 +177,16 @@ class _MpostState extends State<Mpost> {
                             decoration: const InputDecoration(
                               hintText: "Write Something.....",
                               border: InputBorder.none,
+                              label:Text("Details",
+                                style: TextStyle(
+                                  color: Colors.white
+                                ),
+                                ),
                             ),
                           ),
                         ),
                         Post(),
-                        Divider(
+                       const Divider(
                           color:Colors.white
                         ),
                         Row(
