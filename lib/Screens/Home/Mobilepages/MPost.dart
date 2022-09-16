@@ -161,6 +161,9 @@ class _MpostState extends State<Mpost> {
                           controller: _textEditingController,
                           decoration: const InputDecoration(
                             hintText: "Title",
+                            label: Text(
+                              "Title",
+                              ),
                           ),
                         ),
                         SizedBox(height: 10,),
