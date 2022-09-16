@@ -199,7 +199,11 @@ class _MpostState extends State<Mpost> {
                               ),
                             ),
                             IconButton(
-                              onPressed: (){},
+                              onPressed: (){
+                                setState(() {
+                                  _image=null;
+                                });
+                              },
                               icon: const Icon(
                                 FontAwesomeIcons.xmark,
                                 color:Colors.white
