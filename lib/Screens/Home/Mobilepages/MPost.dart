@@ -139,6 +139,7 @@ class _MpostState extends State<Mpost> {
                 _isloading? const LinearProgressIndicator():Container(),
                 SizedBox(height: 10,),
                 Card(
+                  color:Colors.black,
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -169,7 +170,9 @@ class _MpostState extends State<Mpost> {
                           ),
                         ),
                         Post(),
-                        Divider(),
+                        Divider(
+                          color:Colors.white
+                        ),
                         Row(
                           children: [
                             IconButton(
