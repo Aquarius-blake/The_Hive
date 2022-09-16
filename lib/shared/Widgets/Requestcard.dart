@@ -35,20 +35,20 @@ class _RequestCardState extends State<RequestCard> {
                             children: [
                               TextSpan(
                                 text: widget.snap['author'],
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22,
                                     color:Colors.white,
                                 )
                               ),
-                              TextSpan(
+                            const  TextSpan(
                                 text: " Requested for Administrative permissions, ",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
                                   color: Colors.white
                                 ),
                               ),
-                              TextSpan(
+                            const  TextSpan(
                                   text: "Approve or Deny request?",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
