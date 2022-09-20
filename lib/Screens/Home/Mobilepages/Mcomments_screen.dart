@@ -72,11 +72,11 @@ text.dispose();
         iconTheme: const IconThemeData(
           color: Colors.black,
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         title:const Text(
           "Discussion",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
         centerTitle: true,
