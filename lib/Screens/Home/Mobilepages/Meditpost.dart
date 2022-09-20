@@ -65,11 +65,11 @@ _detail.text=widget.snap['detail'];
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: Text("Create Post"),
+            title: const Text("Create Post"),
             children: [
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
-                child: Text("Take a Photo"),
+                padding: const EdgeInsets.all(15.0),
+                child: const Text("Take a Photo"),
                 onPressed: ()async{
                   Navigator.of(context).pop();
                   dynamic file=await Selection.uploadpic(ImageSource.camera);
