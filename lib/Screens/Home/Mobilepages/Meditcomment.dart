@@ -56,6 +56,7 @@ class _MobcomeditState extends State<Mobcomedit> {
                       CircleAvatar(
                         maxRadius: 18,
                         backgroundImage: NetworkImage(user1.ppurl!),
+                        backgroundColor:Colors.transparent,
                       ),
                       Padding(
                         padding: const EdgeInsets.only(
