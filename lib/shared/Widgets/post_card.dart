@@ -283,7 +283,7 @@ class _PostCardState extends State<PostCard> {
                       onPressed: ()=>_options(context,user1),
                       icon: const Icon(
                         Icons.more_vert,
-                        color: Colors.black,
+                        color: Colors.white,
                       ),
                     ):const SizedBox()
                   ],
