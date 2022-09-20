@@ -298,6 +298,7 @@ class _PostCardState extends State<PostCard> {
                       widget.snap['title'],
                       style: const TextStyle(
                         fontSize: 22,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -312,6 +313,7 @@ class _PostCardState extends State<PostCard> {
                       widget.snap['detail'],
                       style: const TextStyle(
                         fontSize: 14,
+                        color: Colors.white,
                       ),
                     ),
                   ),
@@ -334,6 +336,9 @@ class _PostCardState extends State<PostCard> {
 
                     ),
                   ),
+                ),
+               const Divider(
+                color: Colors.grey,  
                 ),
                 Container(
                   padding: const EdgeInsets.symmetric(
