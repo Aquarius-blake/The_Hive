@@ -104,6 +104,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         elevation: 3.0,
