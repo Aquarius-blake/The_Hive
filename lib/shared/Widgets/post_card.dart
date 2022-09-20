@@ -373,7 +373,7 @@ class _PostCardState extends State<PostCard> {
                             )
                                 : const Icon(
                               Icons.favorite_border_outlined,
-                              color: Colors.black,
+                              color: Colors.white,
                             )
                         ),
                       ),
