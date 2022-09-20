@@ -408,7 +408,7 @@ class _PostCardState extends State<PostCard> {
                           },
                           icon: const FaIcon(
                             FontAwesomeIcons.comments,
-                            color: Colors.black,
+                            color: Colors.white,
                           )
                       ),
                       const Expanded(
