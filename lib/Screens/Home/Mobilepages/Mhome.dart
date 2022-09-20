@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/shared/Widgets/post_card.dart';
 
 
@@ -18,6 +19,15 @@ class _MhomeState extends State<Mhome> {
 appBar:AppBar(
   backgroundColor: Colors.black,
   elevation: 0.0,
+  actions: [
+    IconButton(
+      onPressed: (){},
+     icon: const FaIcon(
+        FontAwesomeIcons.sort,
+        color: Colors.white,
+     ),
+     ),
+  ],
 ),
   body: StreamBuilder(
     stream: FirebaseFirestore.instance.collection('Posts').snapshots(),
