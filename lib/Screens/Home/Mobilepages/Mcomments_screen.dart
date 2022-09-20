@@ -70,7 +70,7 @@ text.dispose();
     return Scaffold(
       appBar: AppBar(
         iconTheme: const IconThemeData(
-          color: Colors.black,
+          color: Colors.white,
         ),
         backgroundColor: Colors.black,
         title:const Text(
