@@ -43,6 +43,7 @@ class _MobcomeditState extends State<Mobcomedit> {
         child: Container(
           padding: const EdgeInsets.all(12),
           child: Card(
+            color: Colors.black,
             elevation: 4.0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50)
