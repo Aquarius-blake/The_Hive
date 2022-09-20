@@ -159,7 +159,7 @@ _detail.text=widget.snap['detail'];
                             ),
                           ],
                         ),
-                        SizedBox(height: 15,),
+                       const SizedBox(height: 15,),
                         TextField(
                           controller: _title,
                           decoration: const InputDecoration(
