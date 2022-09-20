@@ -153,7 +153,7 @@ _detail.text=widget.snap['detail'];
                             SizedBox(width: 15,),
                             Text(
                               user1.Username!,
-                            style:TextStyle(
+                            style:const TextStyle(
                             color:Colors.white
                             ),
                             ),
