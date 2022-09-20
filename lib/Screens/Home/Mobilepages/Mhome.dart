@@ -77,7 +77,9 @@ appBar:AppBar(
   elevation: 0.0,
   actions: [
     IconButton(
-      onPressed: (){},
+      onPressed: (){
+        _options(context);
+      },
      icon: const FaIcon(
         FontAwesomeIcons.sort,
         color: Colors.white,
