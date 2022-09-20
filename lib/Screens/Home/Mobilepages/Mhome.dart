@@ -12,6 +12,62 @@ class Mhome extends StatefulWidget {
 }
 
 class _MhomeState extends State<Mhome> {
+
+late String sortby="Post Time";
+
+ _options(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: const Text(
+                "Sort by",
+              style: TextStyle(
+                fontStyle: FontStyle.italic,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            children: [
+             SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text(
+                    "Recent Post",
+                  style: TextStyle(
+                    fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onPressed: (){},
+              ),
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text(
+                    "Author",
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onPressed: ()async{},
+              ),
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text(
+                  "Cancel",
+                  style: TextStyle(
+                      fontStyle: FontStyle.italic,
+                  ),
+                ),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        }
+    );
+
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +85,7 @@ appBar:AppBar(
      ),
   ],
 ),
+
   body: StreamBuilder(
     stream: FirebaseFirestore.instance.collection('Posts').snapshots(),
       builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
