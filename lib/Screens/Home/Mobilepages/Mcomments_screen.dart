@@ -86,7 +86,9 @@ text.dispose();
           builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
             if(snapshots.connectionState==ConnectionState.waiting){
               return const Center(
-                child: CircularProgressIndicator(),
+                child: CircularProgressIndicator(
+                  color: Colors.white,
+                ),
               );
             }
             return ListView.builder(
