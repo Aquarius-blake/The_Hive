@@ -164,6 +164,12 @@ _detail.text=widget.snap['detail'];
                           controller: _title,
                           decoration: const InputDecoration(
                             hintText: "Title",
+                            hintStyle: TextStyle(
+                              color: Colors.white,
+                            ),
+                          ),
+                          style:const TextStyle(
+                            color: Colors.white,
                           ),
                         ),
                        const SizedBox(height: 10,),
@@ -175,10 +181,13 @@ _detail.text=widget.snap['detail'];
                               hintText: "Write Something.....",
                               border: InputBorder.none,
                             ),
+                            style:const TextStyle(
+                              color: Colors.white,
+                            ),
                           ),
                         ),
                         Post(),
-                        Divider(),
+                        const Divider(),
                         Row(
                           children: [
                             IconButton(
@@ -192,7 +201,7 @@ _detail.text=widget.snap['detail'];
                                 _image=null;
                               });
                             },
-                                icon: Icon(
+                                icon: const Icon(
                                 Icons.remove_circle
                             )
                             )
