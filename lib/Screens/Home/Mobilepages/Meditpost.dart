@@ -166,7 +166,7 @@ _detail.text=widget.snap['detail'];
                             hintText: "Title",
                           ),
                         ),
-                        SizedBox(height: 10,),
+                       const SizedBox(height: 10,),
                         SingleChildScrollView(
                           child: TextField(
                             controller: _detail,
