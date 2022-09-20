@@ -64,7 +64,12 @@ class _MobcomeditState extends State<Mobcomedit> {
                         ),
                         child: SizedBox(
                           width: MediaQuery.of(context).size.width*0.5,
-                          child: Text(user1.Username!),
+                          child: Text(
+                            user1.Username!,
+                            style:const TextStyle(
+                              color: Colors.white,
+                            ),
+                            ),
                         ),
                       )
                     ],
