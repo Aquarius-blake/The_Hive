@@ -29,15 +29,15 @@ class _MobcomeditState extends State<Mobcomedit> {
       appBar: AppBar(
         centerTitle: true,
         iconTheme: const IconThemeData(
-          color: Colors.black,
+          color: Colors.white,
         ),
         title: const Text(
           "Edit Comment",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
-        backgroundColor:Colors.white ,
+        backgroundColor:Colors.black ,
       ),
       body: SafeArea(
         child: Container(
