@@ -247,6 +247,7 @@ class _PostCardState extends State<PostCard> {
         bottom: 5,
       ),
       child: Card(
+        color: Colors.black,
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: SingleChildScrollView(
@@ -254,7 +255,6 @@ class _PostCardState extends State<PostCard> {
               children: [
                 Row(
                   children: [
-
                     CircleAvatar(
                       radius: 16,
                       backgroundImage: NetworkImage(widget.snap['Profile Pic']),
