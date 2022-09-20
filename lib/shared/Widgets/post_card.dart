@@ -258,6 +258,7 @@ class _PostCardState extends State<PostCard> {
                     CircleAvatar(
                       radius: 16,
                       backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                      backgroundColor: Colors.transparent,
                     ),
                     Expanded(
                         child: Padding(
@@ -268,7 +269,8 @@ class _PostCardState extends State<PostCard> {
                                 Text(
                                   widget.snap['author'],
                                   style: const TextStyle(
-                                      fontWeight: FontWeight.bold
+                                      fontWeight: FontWeight.bold,
+                                      color:Colors.white
                                   ),)
                               ],
                             ) ,
