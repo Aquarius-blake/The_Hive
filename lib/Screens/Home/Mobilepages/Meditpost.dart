@@ -123,15 +123,15 @@ _detail.text=widget.snap['detail'];
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         centerTitle: true,
         iconTheme:const IconThemeData(
-          color: Colors.black,
+          color: Colors.white,
         ),
         title:const Text(
           "Edit Post",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),
@@ -142,6 +142,7 @@ _detail.text=widget.snap['detail'];
                 _isloading? const LinearProgressIndicator():Container(),
                 SizedBox(height: 10,),
                 Card(
+                  color:Colors.black,
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -150,7 +151,12 @@ _detail.text=widget.snap['detail'];
                           children: [
                             Avatar(user1),
                             SizedBox(width: 15,),
-                            Text(user1.Username!),
+                            Text(
+                              user1.Username!,
+                            style:TextStyle(
+                            color:Colors.white
+                            ),
+                            ),
                           ],
                         ),
                         SizedBox(height: 15,),
