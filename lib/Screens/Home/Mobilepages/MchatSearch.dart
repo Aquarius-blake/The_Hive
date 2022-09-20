@@ -57,6 +57,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
         );
       },
       child: Card(
+        color: Colors.black,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10)
         ),
@@ -66,13 +67,19 @@ class _MchatusersearchState extends State<Mchatusersearch> {
           child: Row(
             children: [
               CircleAvatar(
-                backgroundColor: Colors.lightBlueAccent,
+                backgroundColor: Colors.transparent,
                 backgroundImage: NetworkImage(
                     data['profilepic']
                 ),
               ),
               const SizedBox(width: 20,),
-              Text(data['username']),
+              Text(
+                data['username'],
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                ),
+                ),
               SizedBox(width:5,),
              data['Admin']==true ?Text("Admin",
               style :TextStyle(),
