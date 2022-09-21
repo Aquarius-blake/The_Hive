@@ -45,14 +45,14 @@ late String sortby="Post Time";
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
                 child: const Text(
-                    "Title",
+                    "Most Liked",
                   style: TextStyle(
                       fontStyle: FontStyle.italic,
                   ),
                 ),
                 onPressed: ()async{
                   setState(() {
-                    sortby='title';
+                    sortby='nol';
                   });
                 },
               ),
