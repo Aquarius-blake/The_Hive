@@ -19,6 +19,7 @@ class _NotificationsState extends State<Notifications> {
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return user1.Guest==true?  Scaffold(
+      backgroundColor:Colors.black ,
       body: SafeArea(
         child: Center(
             child:Column(
@@ -30,7 +31,7 @@ class _NotificationsState extends State<Notifications> {
                         TextSpan(
                           text: "Access Denied",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 32,
                               fontWeight: FontWeight.bold
                           ),
