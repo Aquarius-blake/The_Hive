@@ -23,6 +23,7 @@ class _MmessagesState extends State<Mmessages> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return user1.Guest==true?  Scaffold(
+      backgroundColor:Colors.black,
       body: SafeArea(
         child: Center(
             child:Column(
@@ -34,7 +35,7 @@ class _MmessagesState extends State<Mmessages> {
                         TextSpan(
                           text: "Access Denied",
                           style: TextStyle(
-                              color: Colors.black,
+                              color: Colors.white,
                               fontSize: 32,
                               fontWeight: FontWeight.bold
                           ),
