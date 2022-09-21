@@ -54,6 +54,7 @@ Future.delayed(const Duration(
 );
     return Container(
       child:  Card(
+        color:Colors.black,
         elevation: 2.0,
         child: Padding(
           padding: const EdgeInsets.all(18.0),
@@ -79,14 +80,14 @@ Future.delayed(const Duration(
                                       text: widget.snap['author'],
                                       style: const TextStyle(
                                           fontWeight: FontWeight.bold,
-                                        color: Colors.black,
+                                        color: Colors.white,
                                         fontSize: 18,
                                       ),
                                     ),
                                     TextSpan(
                                       text: widget.snap['message'],
                                       style: const TextStyle(
-                                        color: Colors.black,
+                                        color: Colors.white,
                                         fontStyle: FontStyle.italic,
                                       )
                                     ),
@@ -94,7 +95,7 @@ Future.delayed(const Duration(
                                       text: widget.snap['Event Title'],
                                       style: const TextStyle(
                                         fontWeight: FontWeight.bold,
-                                            color:Colors.black,
+                                            color:Colors.white,
                                       )
                                     )
                                   ]
