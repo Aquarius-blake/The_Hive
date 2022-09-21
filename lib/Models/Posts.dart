@@ -15,6 +15,7 @@ class Post{
   late final String? imageUrl;
   late final String postuid;
   late final List likes;
+  late final int nol;
 
 
   Post({ required this.author_uid,
@@ -27,7 +28,7 @@ class Post{
     this.ppurl,
     this.imageUrl,
     required this.likes,
-
+    required this.nol
 
   });
 
@@ -43,6 +44,7 @@ class Post{
     "Post Uid":postuid,
     "detail":detail,
     "likes":likes,
+    "nol":nol
   };
 
   static Post? FromSnap(DocumentSnapshot snap){
@@ -57,7 +59,8 @@ class Post{
         postuid: snapshot['Post Uid'],
         likes: snapshot['likes'],
       title: snapshot['title'],
-      searchkey: snapshot['searchkey']
+      searchkey: snapshot['searchkey'],
+      nol: snapshot['nol']
     );
 
     return Post12;
