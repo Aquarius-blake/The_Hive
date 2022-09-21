@@ -264,9 +264,9 @@ class _HomeState extends State<Home> {
                 ),
                const SizedBox(height: 20.0,),
                user1.Admin==true?  ListTile(
-             title: Text(
+             title: const Text(
                  "View Requests",
-             style: TextStyle(
+             style:  TextStyle(
                fontStyle: FontStyle.italic,
                color: Colors.white,
              ),
@@ -280,7 +280,7 @@ class _HomeState extends State<Home> {
              },
            ):
            ListTile(
-             title: Text(
+             title: const Text(
                "Request Admin Privileges",
                style: TextStyle(
                  fontStyle: FontStyle.italic,
