@@ -99,7 +99,12 @@ class _MpostState extends State<Mpost> {
 
   Widget Avatar(User1 user1){
     try{
-      return CircleAvatar(
+      return user1.ppurl==""?CircleAvatar(
+           radius: 20,
+        backgroundImage: AssetImage('Assets/hac.jpg'),
+     
+      )
+       : CircleAvatar(
         radius: 20,
         backgroundImage: NetworkImage(user1.ppurl!),
       );
