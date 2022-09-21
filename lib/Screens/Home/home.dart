@@ -9,10 +9,13 @@ import 'package:forum3/Screens/Home/Mobilepages/MPost.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mhome.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mmessages.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mnotifications.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Mrequest_page.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Msearch.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Networkconnection.dart';
+import 'package:forum3/shared/Pop_up.dart';
 //import 'package:forum3/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
@@ -80,7 +83,12 @@ class _HomeState extends State<Home> {
      return image!=null?  CircleAvatar(
        radius: 50,
        backgroundImage: MemoryImage(image),
-     ): CircleAvatar(
+     ): user1.ppurl==""? const CircleAvatar(
+      radius:50,
+      backgroundImage: AssetImage('Assets/hac.jpg'),
+      backgroundColor: Colors.transparent,
+     ) 
+     : CircleAvatar(
        backgroundImage: NetworkImage(user1.ppurl!),
        radius: 50,
      );
@@ -200,7 +208,7 @@ class _HomeState extends State<Home> {
                     )
                 ),
                 const SizedBox(
-                  height: 5,
+                  height: 30,
                 ),
                 ListTile(
                   leading: const Icon(Icons.person,
@@ -220,7 +228,7 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/Profile');
                   },
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(height: 15,),
                 ListTile(
                   leading: const Icon(LineIcons.alternateSignOut,
                     color: Colors.white,
@@ -254,7 +262,37 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/register');
                   },
                 ),
-                SizedBox(height: 20.0,),
+               const SizedBox(height: 20.0,),
+               user1.Admin==true?  ListTile(
+             title: const Text(
+                 "View Requests",
+             style:  TextStyle(
+               fontStyle: FontStyle.italic,
+               color: Colors.white,
+             ),
+             ),
+             onTap: (){
+               Navigator.of(context).push(
+                   MaterialPageRoute(
+                     builder: (context)=>Request_page(),
+                   )
+               );
+             },
+           ):
+           ListTile(
+             title: const Text(
+               "Request Admin Privileges",
+               style: TextStyle(
+                 fontStyle: FontStyle.italic,
+                 color: Colors.white
+               ),
+             ),
+             onTap: ()async{
+               String content= await FirestoreMethods().Makerequest(user1.Username!, user1.UID!, user1.ppurl!);
+               Showsnackbar(content, context);
+             },
+           ),
+             const SizedBox(height: 120.0,),
               const  Divider(
                   height: 40,
                   color: Colors.white,
