@@ -33,7 +33,7 @@ class _PostCardState extends State<PostCard> {
 
   //Build dynamiclink
   buildDynamicLinks(String title,String image,String docId) async {
-    String url = "http://blakesocial.page.link";
+    String url = "http://bsocialp.page.link";
     final DynamicLinkParameters parameters = DynamicLinkParameters(
       uriPrefix: url,
       link: Uri.parse('$url/$docId'),
