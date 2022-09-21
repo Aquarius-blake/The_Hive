@@ -114,6 +114,8 @@ class FirestoreMethods{
                     notifs.toJson(),
                     SetOptions(merge: true)
                 );
+
+
                 ress="Comment success";
                 return ress;
             }
