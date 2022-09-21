@@ -33,12 +33,12 @@ class _PostCardState extends State<PostCard> {
 
   //Build dynamiclink
   buildDynamicLinks(String title,String image,String docId) async {
-    String url = "http://blakeforum.page.link";
+    String url = "http://blakesocial.page.link";
     final DynamicLinkParameters parameters = DynamicLinkParameters(
       uriPrefix: url,
       link: Uri.parse('$url/$docId'),
       androidParameters: AndroidParameters(
-        packageName: "com.project.forum3",
+        packageName: "com.blake.social",
         minimumVersion: 0,
       ),
       iosParameters: IosParameters(
@@ -242,8 +242,8 @@ class _PostCardState extends State<PostCard> {
     return Container(
       padding: const EdgeInsets.only(
         top: 5,
-        left: 15,
-        right: 15,
+        left: 10,
+        right: 10,
         bottom: 5,
       ),
       child: Card(
