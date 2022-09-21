@@ -99,7 +99,7 @@ class _MpostState extends State<Mpost> {
 
   Widget Avatar(User1 user1){
     try{
-      return user1.ppurl==""?CircleAvatar(
+      return user1.ppurl==""?const CircleAvatar(
            radius: 20,
         backgroundImage: AssetImage('Assets/hac.jpg'),
      
@@ -109,7 +109,7 @@ class _MpostState extends State<Mpost> {
         backgroundImage: NetworkImage(user1.ppurl!),
       );
     }catch(e){
-      return CircleAvatar(
+      return const CircleAvatar(
         radius: 20,
         backgroundImage: AssetImage('Assets/hac.jpg'),
       );
@@ -173,20 +173,28 @@ class _MpostState extends State<Mpost> {
                               ),
                               ),
                           ),
+                          style: const TextStyle(
+                            color:Colors.white
+                          ),
                         ),
-                        SizedBox(height: 10,),
                         SingleChildScrollView(
                           child: TextField(
                             controller: _textEditingController2,
                             maxLines: 8,
                             decoration: const InputDecoration(
                               hintText: "Write Something.....",
+                        hintStyle: TextStyle(
+                          color:Colors.white
+                        ),
                               border: InputBorder.none,
                               label:Text("Details",
                                 style: TextStyle(
                                   color: Colors.white
                                 ),
                                 ),
+                            ),
+                            style: TextStyle(
+                              color:Colors.white,
                             ),
                           ),
                         ),
