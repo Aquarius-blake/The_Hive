@@ -208,7 +208,7 @@ class _HomeState extends State<Home> {
                     )
                 ),
                 const SizedBox(
-                  height: 5,
+                  height: 30,
                 ),
                 ListTile(
                   leading: const Icon(Icons.person,
@@ -228,7 +228,7 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/Profile');
                   },
                 ),
-                const SizedBox(height: 5,),
+                const SizedBox(height: 15,),
                 ListTile(
                   leading: const Icon(LineIcons.alternateSignOut,
                     color: Colors.white,
