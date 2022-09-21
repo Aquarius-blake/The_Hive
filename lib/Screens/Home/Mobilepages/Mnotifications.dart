@@ -52,6 +52,7 @@ class _NotificationsState extends State<Notifications> {
         ),
       ),
     ):Scaffold(
+      backgroundColor:Colors.black ,
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
             .collection('Notification')
