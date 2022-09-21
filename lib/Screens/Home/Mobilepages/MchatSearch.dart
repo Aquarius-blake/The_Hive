@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Mpprofile_screen.dart';
 import 'package:forum3/Services/Searchmethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
-import 'Mprofilescreen.dart';
 
 class Mchatusersearch extends StatefulWidget {
   const Mchatusersearch({Key? key}) : super(key: key);
