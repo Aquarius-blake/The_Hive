@@ -78,12 +78,15 @@ appBar:AppBar(
   actions: [
     Row(
       children: [
-        const Text(
-      "Sort By",
-      style: TextStyle(
-        color:Colors.white
-      ),
-      ),
+          GestureDetector(
+            onTap:(){} ,
+          child: const Text(
+              "Sort By",
+              style: TextStyle(
+          color:Colors.white
+              ),
+              ),
+        ),
         IconButton(
           onPressed: (){
             _options(context);
