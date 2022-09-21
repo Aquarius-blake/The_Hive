@@ -36,17 +36,25 @@ late String sortby="Post Time";
                     fontStyle: FontStyle.italic,
                   ),
                 ),
-                onPressed: (){},
+                onPressed: (){
+                  setState(() {
+                    sortby='Post Time';
+                  });
+                },
               ),
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
                 child: const Text(
-                    "Author",
+                    "Title",
                   style: TextStyle(
                       fontStyle: FontStyle.italic,
                   ),
                 ),
-                onPressed: ()async{},
+                onPressed: ()async{
+                  setState(() {
+                    sortby='title';
+                  });
+                },
               ),
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
@@ -81,12 +89,12 @@ appBar:AppBar(
           GestureDetector(
             onTap:(){
              _options(context);
-
             } ,
           child: const Text(
               "Sort By",
               style: TextStyle(
-          color:Colors.white
+          color:Colors.white,
+          fontStyle: FontStyle.italic
               ),
               ),
         ),
