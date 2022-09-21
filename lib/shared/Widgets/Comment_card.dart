@@ -36,7 +36,10 @@ class _CommentcardState extends State<Commentcard> {
             children: [
               Row(
                 children: [
-                  CircleAvatar(
+                widget.snap['Profile Pic']==""?const CircleAvatar(
+                  radius:16,
+                  backgroundImage: AssetImage('Assets/hac.jpg'),
+                ) : CircleAvatar(
                     radius: 16,
                     backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                   ),
