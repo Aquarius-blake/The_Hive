@@ -79,7 +79,10 @@ appBar:AppBar(
     Row(
       children: [
           GestureDetector(
-            onTap:(){} ,
+            onTap:(){
+             _options(context);
+
+            } ,
           child: const Text(
               "Sort By",
               style: TextStyle(
