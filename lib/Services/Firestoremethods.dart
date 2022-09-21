@@ -106,7 +106,6 @@ class FirestoreMethods{
                     SetOptions(merge: true)
                 );
 
-                //TODO: Write comment Notification code here
                 String notifid=const Uuid().v1();
                 String message=" Commented on your post: ";
                 Notifs notifs=Notifs(commentuid: commentid,ppurl: ppurl,author_uid: author_uid, notifid: notifid, Eventuid: postid, message: message, author: author, Timeposted: DateTime.now(), owner_uid: owner_uid, title: title);
