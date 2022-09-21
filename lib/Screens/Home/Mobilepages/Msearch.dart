@@ -145,9 +145,12 @@ class _MsearchState extends State<Msearch> {
 
           decoration: InputDecoration(
             labelText: "Search $se",
-            labelStyle: TextStyle(
+            labelStyle: const TextStyle(
               color:Colors.white
             ),
+          ),
+          style: const TextStyle(
+            color:Colors.white
           ),
         ),
         actions: [
