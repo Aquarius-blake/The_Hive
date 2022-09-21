@@ -431,7 +431,6 @@ class _PostCardState extends State<PostCard> {
                   }
 
                 }
-
                           },
                           icon: const Icon(
                             Icons.share,
