@@ -192,6 +192,8 @@ class _MpostState extends State<Mpost> {
                                   color: Colors.white
                                 ),
                                 ),
+                                floatingLabelAlignment: FloatingLabelAlignment.start,
+                                floatingLabelBehavior: FloatingLabelBehavior.always,
                             ),
                             style: TextStyle(
                               color:Colors.white,
