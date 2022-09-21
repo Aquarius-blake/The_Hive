@@ -423,7 +423,13 @@ class _PostCardState extends State<PostCard> {
                                   try{
                 buildDynamicLinks(widget.snap['title'], widget.snap['Profile Pic'], widget.snap['Post Uid']);
                 }catch(e){
+                  if(widget.snap['Profile Pic']==""){
+                    String content="Access Denied,Please sign in to continue";
+                    Showsnackbar(content, context);
+                  }else{
                   Showsnackbar(e.toString(), context);
+                  }
+
                 }
 
                           },
