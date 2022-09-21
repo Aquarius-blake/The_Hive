@@ -420,7 +420,12 @@ class _PostCardState extends State<PostCard> {
                       ),
                       IconButton(
                           onPressed: (){
+                                  try{
                 buildDynamicLinks(widget.snap['title'], widget.snap['Profile Pic'], widget.snap['Post Uid']);
+                }catch(e){
+                  Showsnackbar(e.toString(), context);
+                }
+
                           },
                           icon: const Icon(
                             Icons.share,
