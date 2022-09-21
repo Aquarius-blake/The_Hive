@@ -47,7 +47,7 @@ class _MmessagesState extends State<Mmessages> {
                     text: const TextSpan(
                       text: "Please Sign in/Sign up to continue",
                       style: TextStyle(
-                          color: Colors.black
+                          color: Colors.white
                       ),
                     )
                 )
