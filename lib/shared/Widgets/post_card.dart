@@ -429,7 +429,6 @@ class _PostCardState extends State<PostCard> {
                   }else{
                   Showsnackbar(e.toString(), context);
                   }
-
                 }
                           },
                           icon: const Icon(
