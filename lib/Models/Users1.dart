@@ -50,6 +50,7 @@ class User1{
     "Gender":Gender,
     "Bio":Bio,
     "Admin":Admin,
+    "Guest":Guest,
   };
 
   static User1? FromSnap(DocumentSnapshot snap){
@@ -65,6 +66,7 @@ class User1{
       searchkey: snapshot['searchkey'],
       Bio: snapshot['Bio'],
       Admin: snapshot['Admin'],
+      Guest: snapshot['Guest'],
     );
     return User12;
 
