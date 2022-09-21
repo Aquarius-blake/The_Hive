@@ -43,7 +43,7 @@ class _NotificationsState extends State<Notifications> {
                     text: const TextSpan(
                       text: "Please Sign in/Sign up to continue",
                       style: TextStyle(
-                          color: Colors.black
+                          color: Colors.white
                       ),
                     )
                 )
