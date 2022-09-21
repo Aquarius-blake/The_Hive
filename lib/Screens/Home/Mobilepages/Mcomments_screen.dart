@@ -68,6 +68,7 @@ text.dispose();
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         iconTheme: const IconThemeData(
           color: Colors.white,

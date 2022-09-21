@@ -40,6 +40,7 @@ late String sortby="Post Time";
                   setState(() {
                     sortby='Post Time';
                   });
+                  Navigator.pop(context);
                 },
               ),
               SimpleDialogOption(
@@ -54,6 +55,7 @@ late String sortby="Post Time";
                   setState(() {
                     sortby='nol';
                   });
+                  Navigator.of(context).pop();
                 },
               ),
               SimpleDialogOption(
@@ -114,7 +116,7 @@ appBar:AppBar(
 ),
 
   body: StreamBuilder(
-    stream: FirebaseFirestore.instance.collection('Posts').snapshots(),
+    stream: FirebaseFirestore.instance.collection('Posts').orderBy(sortby,descending: true).snapshots(),
       builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
       if(snapshot.connectionState==ConnectionState.waiting){
           return Center(
