@@ -259,7 +259,9 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/register');
                   },
                 ),
-                SizedBox(height: 20.0,),
+               const SizedBox(height: 20.0,),
+
+
               const  Divider(
                   height: 40,
                   color: Colors.white,

@@ -56,6 +56,7 @@ class _MmessagesState extends State<Mmessages> {
         ),
       ),
     ): Scaffold(
+      backgroundColor:Colors.black,
       body: StreamBuilder(
         stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").orderBy("Chat Time",descending: true).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
