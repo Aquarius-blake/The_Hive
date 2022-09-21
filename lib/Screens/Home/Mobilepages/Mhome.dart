@@ -76,15 +76,25 @@ appBar:AppBar(
   backgroundColor: Colors.black,
   elevation: 0.0,
   actions: [
-    IconButton(
-      onPressed: (){
-        _options(context);
-      },
-     icon: const FaIcon(
-        FontAwesomeIcons.sort,
-        color: Colors.white,
-     ),
-     ),
+    Row(
+      children: [
+        const Text(
+      "Sort By",
+      style: TextStyle(
+        color:Colors.white
+      ),
+      ),
+        IconButton(
+          onPressed: (){
+            _options(context);
+          },
+         icon: const FaIcon(
+            FontAwesomeIcons.sort,
+            color: Colors.white,
+         ),
+         ),
+      ],
+    ),
   ],
 ),
 
