@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class Netcon extends StatefulWidget {
   const Netcon({Key? key}) : super(key: key);
@@ -8,8 +9,27 @@ class Netcon extends StatefulWidget {
 }
 
 class _NetconState extends State<Netcon> {
+
+  late String message="Slow Internet Connection";
+
+  Future delay()async{
+    await Future.delayed(
+      const Duration(
+          minutes: 1
+      ),
+    );
+    setState(() {
+      message="Check Network Connection";
+    });
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
+    delay();
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
@@ -17,16 +37,20 @@ class _NetconState extends State<Netcon> {
           child: Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                Icon(
+              children:  [
+                const Icon(
                   Icons.wifi_off,
                   size: 40,
                   color: Colors.black,
                 ),
                 Text(
-                    "Check Network Connections",
+                  message,
                   style: TextStyle(),
-                )
+                ),
+                SizedBox(height: 20,),
+                SpinKitPouringHourGlassRefined(
+                    color: Colors.black,
+                size: 100,)
               ],
             ),
           ),
