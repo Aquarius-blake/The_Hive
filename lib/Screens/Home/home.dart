@@ -268,6 +268,7 @@ class _HomeState extends State<Home> {
                  "View Requests",
              style: TextStyle(
                fontStyle: FontStyle.italic,
+               color: Colors.white,
              ),
              ),
              onTap: (){
@@ -282,7 +283,8 @@ class _HomeState extends State<Home> {
              title: Text(
                "Request Admin Privileges",
                style: TextStyle(
-                 fontStyle: FontStyle.italic
+                 fontStyle: FontStyle.italic,
+                 color: Colors.white
                ),
              ),
              onTap: ()async{
