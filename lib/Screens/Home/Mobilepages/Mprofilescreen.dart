@@ -7,15 +7,15 @@ import '../../../Provider/user_provider.dart';
 
 
 
-class Mprofile extends StatefulWidget {
+class Mprofilel extends StatefulWidget {
   final snap;
-  const Mprofile({Key? key,this.snap}) : super(key: key);
+  const Mprofilel({Key? key,this.snap}) : super(key: key);
 
   @override
-  State<Mprofile> createState() => _MprofileState();
+  State<Mprofilel> createState() => _MprofileState();
 }
 
-class _MprofileState extends State<Mprofile> {
+class _MprofileState extends State<Mprofilel> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
