@@ -94,7 +94,8 @@ appBar:AppBar(
               "Sort By",
               style: TextStyle(
           color:Colors.white,
-          fontStyle: FontStyle.italic
+          fontStyle: FontStyle.italic,
+          fontWeight: FontWeight.bold
               ),
               ),
         ),
