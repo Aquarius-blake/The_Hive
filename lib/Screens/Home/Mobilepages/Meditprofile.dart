@@ -88,7 +88,7 @@ late DateTime? _dateTime;
      !widget.drawer? Bio.text=widget.snap['Bio']:Bio.text=widget.user1!.Bio!;
      !widget.drawer? username.text=widget.snap['username']:username.text=widget.user1!.Username!;
      !widget.drawer? gender.text=widget.snap['Gender']:gender.text=widget.user1!.Gender!;
-     !widget.drawer? DOB.text=widget.snap['DateofBirth']:DOB.text=widget.user1!.DOB!.toString();
+     !widget.drawer? DOB.text=widget.snap['DateofBirth']:DOB.text=widget.user1!.DOB!;
 
     }catch(e){
       errormessage(e.toString(), context);

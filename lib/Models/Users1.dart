@@ -13,7 +13,7 @@ class User1{
   dynamic profilepic;
   late final String? Username;
   late  String? searchkey=Username!.substring(0,1);
-  late final DateTime? DOB;
+  late final String? DOB;
   late final String? imageurl;
   late final String? ppurl;
   late final String? Name;
