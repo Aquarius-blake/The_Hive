@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class GroupPage extends StatefulWidget {
@@ -17,7 +19,10 @@ class _GroupPageState extends State<GroupPage> {
         iconTheme: const IconThemeData(
           color: Colors.white,
         ),
-        title: const Text(""),
+        title: const Text(
+          "Group List",
+          style: TextStyle(),
+          ),
       ),
     );
   }
