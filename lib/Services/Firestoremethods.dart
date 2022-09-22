@@ -480,9 +480,15 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             return ress;
         }
     }
-    Future CreateGroup(String uid)async{
+    Future<String> CreateGroup(String uid,String grpname,String grpdesc)async{
       String ress;
-      try{}catch(e){}
+      try{
+        ress="Group Created Successfully";
+        return ress;
+      }catch(e){
+        ress=e.toString();
+        return ress;
+      }
     }
 
 
