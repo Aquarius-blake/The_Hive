@@ -480,7 +480,9 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             return ress;
         }
     }
-    Future CreateGroup()async{}
+    Future CreateGroup(String uid)async{
+
+    }
 
 
 
