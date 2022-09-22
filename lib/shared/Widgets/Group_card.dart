@@ -18,7 +18,9 @@ class _GroupCardState extends State<GroupCard> {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
-            children: [],
+            children: [
+              CircleAvatar(),
+            ],
           ),
         ),
       ),
