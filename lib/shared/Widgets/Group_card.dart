@@ -17,7 +17,9 @@ class _GroupCardState extends State<GroupCard> {
         color:Colors.black,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: Column(),
+          child: Row(
+            children: [],
+          ),
         ),
       ),
     );
