@@ -13,6 +13,7 @@ class _GroupPageState extends State<GroupPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar:AppBar(
+        backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
           color: Colors.white,
         ),
