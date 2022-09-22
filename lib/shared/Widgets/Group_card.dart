@@ -13,7 +13,10 @@ class _GroupCardState extends State<GroupCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:Card(),
+      child:Card(
+        color:Colors.black,
+        child: Column(),
+      ),
     );
   }
 }
