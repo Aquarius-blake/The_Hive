@@ -21,6 +21,9 @@ class _GroupCardState extends State<GroupCard> {
           child: Row(
             children: [
               CircleAvatar(),
+              Column(
+                children: [],
+              ),
             ],
           ),
         ),
