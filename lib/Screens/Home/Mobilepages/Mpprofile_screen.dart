@@ -53,14 +53,14 @@ class _MprofileState extends State<Mprofile>with
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
-            color: Colors.black
+            color: Colors.white
         ),
         title: const Text(
           "Profile",
           style: TextStyle(
-              color: Colors.black
+              color: Colors.white
           ),
         ),
         centerTitle: true,
