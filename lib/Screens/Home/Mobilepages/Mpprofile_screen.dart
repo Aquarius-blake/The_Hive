@@ -52,6 +52,7 @@ class _MprofileState extends State<Mprofile>with
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
@@ -89,6 +90,7 @@ class _MprofileState extends State<Mprofile>with
                               style: const TextStyle(
                                   fontSize: 24,
                                   fontStyle: FontStyle.italic,
+                                  color:Colors.white
                               ),
                             ),
                             const SizedBox(width: 10,),
@@ -97,17 +99,18 @@ class _MprofileState extends State<Mprofile>with
                               style: TextStyle(
                                   fontSize: 24,
                                   fontStyle: FontStyle.italic,
-                                  fontWeight: FontWeight.bold
+                                  fontWeight: FontWeight.bold,
+                                  color:Colors.white
                               ),
                             )
                           ],
                         ),
-                        SizedBox(height: 10,),
+                       const SizedBox(height: 10,),
                         widget.snap['Admin']==true && user1.Admin==true ?ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 elevation: 6.0,
                                 shadowColor: Colors.black,
-                                primary: Colors.white,
+                                primary: Colors.black,
                                 side: const BorderSide(
                                   color: Colors.blue,
                                   width: 2.0,
@@ -155,7 +158,7 @@ class _MprofileState extends State<Mprofile>with
                               style: ElevatedButton.styleFrom(
                                   elevation: 6.0,
                                   shadowColor: Colors.black,
-                                  primary: Colors.white,
+                                  primary: Colors.black,
                                   side: const BorderSide(
                                     color: Colors.blue,
                                     width: 2.0,
@@ -169,7 +172,7 @@ class _MprofileState extends State<Mprofile>with
                               style: ElevatedButton.styleFrom(
                                   elevation: 6.0,
                                   shadowColor: Colors.black,
-                                  primary: Colors.white,
+                                  primary: Colors.black,
                                   side: const BorderSide(
                                     color: Colors.blue,
                                     width: 2.0,
@@ -265,6 +268,7 @@ class _MprofileState extends State<Mprofile>with
                 ),
                 const Divider(
                   height: 40,
+                  color:Colors.white,
                 )
               ],
             ),
@@ -283,7 +287,7 @@ class _MprofileState extends State<Mprofile>with
                           right: 35
                         ),
                         isScrollable: true,
-                        unselectedLabelColor: Colors.black,
+                        unselectedLabelColor: Colors.white,
                         controller: _tabController,
                         tabs: [
                           Tab(text: "Posts",),
