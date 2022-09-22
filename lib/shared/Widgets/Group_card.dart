@@ -22,6 +22,7 @@ class _GroupCardState extends State<GroupCard> {
             children: [
               CircleAvatar(
                 backgroundImage: NetworkImage(widget.snap['Group Pic']),
+                radius:20,
               ),
               Column(
                 children: [],
