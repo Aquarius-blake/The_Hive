@@ -298,9 +298,12 @@ late DateTime? _dateTime;
                             },
                             decoration: InputDecoration(
                               label: const Text("Date of Birth"),
+                              labelStyle: const TextStyle(
+                                color: Colors.white,
+                              ),
                               hintText: "Enter Date of Birth",
                               filled: true,
-                              fillColor: Colors.white70,
+                              fillColor: Colors.black,
                               focusedBorder: OutlineInputBorder(
                                 borderSide: const BorderSide(
                                     color: Colors.redAccent
