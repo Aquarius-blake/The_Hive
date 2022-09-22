@@ -27,7 +27,7 @@ class Group{
   Map<String,dynamic> toJson()=>{
     "author uid":author_uid,
     "author":author,
-    "Request Time":Timeposted,
+    "Creation Time":Timeposted,
     "Profile Pic":ppurl,
     "Request Uid":Group_uid,
     "Members":members
@@ -38,7 +38,7 @@ class Group{
     Group? Group12=Group(
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
-      Timeposted: snapshot['Request Time'],
+      Timeposted: snapshot['Creation Time'],
       ppurl: snapshot['Profile Pic'],
       Group_uid: snapshot['Request Uid'],
       members: snapshot['Members']
