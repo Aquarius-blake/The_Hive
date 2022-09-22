@@ -21,7 +21,9 @@ class _GroupPageState extends State<GroupPage> {
         ),
         title: const Text(
           "Group List",
-          style: TextStyle(),
+          style: TextStyle(
+            color:Colors.white,
+          ),
           ),
       ),
     );
