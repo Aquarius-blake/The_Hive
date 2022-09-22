@@ -27,7 +27,10 @@ class _GroupCardState extends State<GroupCard> {
               ),
               Column(
                 children: [
-                  Text("${widget.snap['Group Name']}"),
+                  Text(
+                    "${widget.snap['Group Name']}",
+                    style: const TextStyle(),
+                    ),
                   Text("${widget.snap['Group Description']}"),
                 ],
               ),
