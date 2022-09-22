@@ -12,6 +12,7 @@ class Group{
   late final  Timeposted;
   late final String? ppurl;
   late final String Group_uid;
+  late final List members;
 
   Group(
       { required this.author_uid,
@@ -19,6 +20,7 @@ class Group{
         required this.author,
         required  this.Timeposted,
         this.ppurl,
+        required this.members
       }
       );
 
@@ -28,6 +30,7 @@ class Group{
     "Request Time":Timeposted,
     "Profile Pic":ppurl,
     "Request Uid":Group_uid,
+    "Members":members
   };
 
   static Group? FromSnap(DocumentSnapshot snap){
@@ -38,6 +41,7 @@ class Group{
       Timeposted: snapshot['Request Time'],
       ppurl: snapshot['Profile Pic'],
       Group_uid: snapshot['Request Uid'],
+      members: snapshot['Members']
     );
 
     return Group12;
