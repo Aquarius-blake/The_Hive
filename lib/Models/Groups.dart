@@ -13,6 +13,8 @@ class Group{
   late final String? ppurl;
   late final String Group_uid;
   late final List members;
+  late final String Group_name;
+  
 
   Group(
       { required this.author_uid,
