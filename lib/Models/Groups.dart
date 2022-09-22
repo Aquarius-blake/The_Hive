@@ -33,7 +33,7 @@ class Group{
     "author":author,
     "Creation Time":Timeposted,
     "Group Pic":ppurl,
-    "Request Uid":Group_uid,
+    "Group Uid":Group_uid,
     "Members":members,
     "Group Name":Group_name,
     "Group Description":Group_description
@@ -46,7 +46,7 @@ class Group{
       author: snapshot['author'],
       Timeposted: snapshot['Creation Time'],
       ppurl: snapshot['Group Pic'],
-      Group_uid: snapshot['Request Uid'],
+      Group_uid: snapshot['Group Uid'],
       members: snapshot['Members'],
       Group_name: snapshot['Group Name'],
       Group_description: snapshot['Group Description']
