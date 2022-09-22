@@ -492,7 +492,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             else{
                 photourl="";
             }
-            String groupid= Uuid().v1();
+            String groupid= const Uuid().v1();
 
             Group group= Group(author_uid: uid, Group_uid: groupid, author: author, Timeposted: DateTime.now(), members: [], Group_name: grpname, Group_description: grpdesc);
 
