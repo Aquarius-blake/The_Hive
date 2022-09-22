@@ -32,7 +32,7 @@ class Group{
 
   static Group? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
-    Group? Request12=Group(
+    Group? Group12=Group(
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
       Timeposted: snapshot['Request Time'],
@@ -40,7 +40,7 @@ class Group{
       Group_uid: snapshot['Request Uid'],
     );
 
-    return Request12;
+    return Group12;
 
 
 
