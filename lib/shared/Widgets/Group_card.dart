@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 
 class GroupCard extends StatefulWidget {
-  const GroupCard({ Key? key }) : super(key: key);
+  final snap;
+  const GroupCard({ Key? key , this.snap}) : super(key: key);
 
   @override
   State<GroupCard> createState() => _GroupCardState();
