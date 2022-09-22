@@ -14,7 +14,9 @@ class _GroupCardState extends State<GroupCard> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(10.0),
       child:Card(
+        elevation: 0.0,
         color:Colors.black,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
