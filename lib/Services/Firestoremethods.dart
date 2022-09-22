@@ -494,7 +494,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             }
             String groupid= const Uuid().v1();
 
-            Group group= Group(author_uid: uid, Group_uid: groupid, author: author, Timeposted: DateTime.now(), members: [], Group_name: grpname, Group_description: grpdesc);
+            Group group= Group(author_uid: uid, Group_uid: groupid, author: author, Timeposted: DateTime.now(), members: [], Group_name: grpname, Group_description: grpdesc,ppurl: photourl);
 
           _firestore.collection("Groups").doc(groupid).set(
             group.toJson(),
