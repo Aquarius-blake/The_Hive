@@ -34,7 +34,9 @@ class _GroupPageState extends State<GroupPage> {
           ),
           actions: [
             TextButton(
-              onPressed: (){},
+              onPressed: (){
+                
+              },
              child: const Text("Create New Group"),
              )
           ],
