@@ -124,6 +124,7 @@ late DateTime? _dateTime;
       ),
       body: Container(
         child: Card(
+          color: Colors.black,
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: ListView(
@@ -173,6 +174,9 @@ late DateTime? _dateTime;
                           decoration: InputDecoration(
                             label: const Text("Full Name"),
                             hintText: "Enter Full Name",
+                            hintStyle:const TextStyle(
+                              color: Colors.white,
+                            ) ,
                             filled: true,
                             fillColor: Colors.white70,
                             focusedBorder: OutlineInputBorder(
