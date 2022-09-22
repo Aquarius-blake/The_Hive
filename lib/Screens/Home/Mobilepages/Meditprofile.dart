@@ -173,12 +173,15 @@ late DateTime? _dateTime;
                           },
                           decoration: InputDecoration(
                             label: const Text("Full Name"),
+                            labelStyle: const TextStyle(
+                              color: Colors.white,
+                            ),
                             hintText: "Enter Full Name",
                             hintStyle:const TextStyle(
                               color: Colors.white,
                             ) ,
                             filled: true,
-                            fillColor: Colors.white70,
+                            fillColor: Colors.black,
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                   color: Colors.redAccent
@@ -204,9 +207,12 @@ late DateTime? _dateTime;
                           },
                           decoration: InputDecoration(
                             label: const Text("Username"),
+                            labelStyle: const TextStyle(
+                              color: Colors.white,
+                            ),
                             hintText: "Enter Nick Name",
                             filled: true,
-                            fillColor: Colors.white70,
+                            fillColor: Colors.black,
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                   color: Colors.redAccent
@@ -273,7 +279,8 @@ late DateTime? _dateTime;
                               });
                             },
                             child: const FaIcon(
-                                FontAwesomeIcons.calendar
+                                FontAwesomeIcons.calendar,
+                                color: Colors.white,
                             ),
                           ),
                           horizontalTitleGap: 0.0,
