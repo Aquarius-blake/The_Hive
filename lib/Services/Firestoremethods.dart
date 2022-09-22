@@ -480,7 +480,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             return ress;
         }
     }
-    Future<String> CreateGroup(String uid,String grpname,String grpdesc)async{
+    Future<String> CreateGroup(String uid,String grpname,String grpdesc,dynamic image)async{
       String ress;
       try{
         ress="Group Created Successfully";
