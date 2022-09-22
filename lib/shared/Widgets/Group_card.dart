@@ -15,7 +15,10 @@ class _GroupCardState extends State<GroupCard> {
     return Container(
       child:Card(
         color:Colors.black,
-        child: Column(),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(),
+        ),
       ),
     );
   }
