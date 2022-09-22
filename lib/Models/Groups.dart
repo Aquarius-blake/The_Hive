@@ -14,7 +14,7 @@ class Group{
   late final String Group_uid;
   late final List members;
   late final String Group_name;
-  
+  late final String Group_description;
 
   Group(
       { required this.author_uid,
@@ -22,7 +22,9 @@ class Group{
         required this.author,
         required  this.Timeposted,
         this.ppurl,
-        required this.members
+        required this.members,
+        required this.Group_name,
+        required this.Group_description
       }
       );
 
@@ -32,7 +34,9 @@ class Group{
     "Creation Time":Timeposted,
     "Profile Pic":ppurl,
     "Request Uid":Group_uid,
-    "Members":members
+    "Members":members,
+    "Group Name":Group_name,
+    "Group Description":Group_description
   };
 
   static Group? FromSnap(DocumentSnapshot snap){
@@ -43,7 +47,9 @@ class Group{
       Timeposted: snapshot['Creation Time'],
       ppurl: snapshot['Profile Pic'],
       Group_uid: snapshot['Request Uid'],
-      members: snapshot['Members']
+      members: snapshot['Members'],
+      Group_name: snapshot['Group Name'],
+      Group_description: snapshot['Group Description']
     );
 
     return Group12;
