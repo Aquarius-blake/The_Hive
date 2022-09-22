@@ -15,6 +15,7 @@ class _LikedpostsState extends State<Likedposts> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       body:  StreamBuilder(
         stream: FirebaseFirestore.instance.collection('Posts').where('likes',arrayContains: widget.snap['uid']).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
