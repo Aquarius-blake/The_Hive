@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 
 class GroupPage extends StatefulWidget {
@@ -12,6 +10,6 @@ class GroupPage extends StatefulWidget {
 class _GroupPageState extends State<GroupPage> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold();
   }
 }
