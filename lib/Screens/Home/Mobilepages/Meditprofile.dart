@@ -81,7 +81,7 @@ late DateTime? _dateTime;
     super.initState();
   }
 
-  @override
+ /* @override
   void didChangeDependencies() {
     try {
      !widget.drawer? Fname.text = widget.snap['Full Name']:Fname.text=widget.user1!.Name!;
@@ -93,7 +93,7 @@ late DateTime? _dateTime;
     }catch(e){
       errormessage(e.toString(), context);
     }    super.didChangeDependencies();
-  }
+  }*/
 
   @override
   void dispose() {
@@ -108,16 +108,17 @@ late DateTime? _dateTime;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
-          color: Colors.black,
+          color: Colors.white,
         ),
         title: const Text(
           "Edit Profile",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
       ),
@@ -159,6 +160,9 @@ late DateTime? _dateTime;
                           height: 20,
                         ),
                         TextFormField(
+                          style: const TextStyle(
+                            color: Colors.white,
+                          ),
                           controller: Fname,
                           validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
                           onChanged: (val){
@@ -182,8 +186,6 @@ late DateTime? _dateTime;
 
                             ),
                           ),
-
-                          style: const TextStyle(),
                         ),
                         const SizedBox(
                           height: 20,
@@ -214,6 +216,7 @@ late DateTime? _dateTime;
                           ),
 
                           style: const TextStyle(
+                            color: Colors.white,
                           ),
                         ),
                         const SizedBox(height: 20,),
@@ -242,7 +245,10 @@ late DateTime? _dateTime;
                             ),
                           ),
 
-                          style: const TextStyle(),
+                          style: const TextStyle(
+                            color: Colors.white,
+                        
+                          ),
                         ),
                         const SizedBox(height: 10,),
                         ListTile(
@@ -293,7 +299,10 @@ late DateTime? _dateTime;
                               ),
                             ),
 
-                            style: const TextStyle(),
+                            style: const TextStyle(
+                              color: Colors.white,
+                            
+                            ),
                           ),
                         ),
                         const SizedBox( height: 10,),
@@ -327,7 +336,9 @@ late DateTime? _dateTime;
                             ),
                           ),
 
-                          style: const TextStyle(),
+                          style: const TextStyle(
+                            color: Colors.white,
+                          ),
                         ),
                         const SizedBox(height: 20,),
                         Center(
