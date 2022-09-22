@@ -1,6 +1,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:forum3/Models/Comments.dart';
+import 'package:forum3/Models/Groups.dart';
 import 'package:forum3/Models/Notifs.dart';
 import 'package:forum3/Models/Posts.dart';
 import 'package:forum3/Models/Requests.dart';
@@ -480,10 +481,26 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             return ress;
         }
     }
-    Future<String> CreateGroup(String uid,String grpname,String grpdesc,dynamic file)async{
+    Future<String> CreateGroup(String uid,String author,String grpname,String grpdesc,dynamic file)async{
       String ress;
       String photourl;
       try{
+
+        if(file!=null){
+                photourl=await StorageMethods().Storageip("Group Profile", file, true);
+            }
+            else{
+                photourl="";
+            }
+            String groupid= Uuid().v1();
+
+            Group group= Group(author_uid: uid, Group_uid: groupid, author: author, Timeposted: DateTime.now(), members: [], Group_name: grpname, Group_description: grpdesc);
+
+          _firestore.collection("Groups").doc(groupid).set(
+            group.toJson(),
+            SetOptions(merge: true)
+            );
+
         ress="Group Created Successfully";
         return ress;
       }catch(e){
