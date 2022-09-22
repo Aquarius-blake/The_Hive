@@ -16,12 +16,13 @@ class _ProfilepostState extends State<Profilepost> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
     body:  StreamBuilder(
         stream: FirebaseFirestore.instance.collection('Posts').where('author uid', isEqualTo: widget.snap['uid'] ).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
           if(snapshot.connectionState==ConnectionState.waiting){
-            return Center(
-              child: CircularProgressIndicator(),
+            return const Center(
+              child:  CircularProgressIndicator(),
             );
           }
           return ListView.builder(
