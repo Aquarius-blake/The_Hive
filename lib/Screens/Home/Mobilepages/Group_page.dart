@@ -15,6 +15,7 @@ class _GroupPageState extends State<GroupPage> {
         iconTheme: const IconThemeData(
           color: Colors.white,
         ),
+        title: const Text(""),
       ),
     );
   }
