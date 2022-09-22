@@ -336,11 +336,14 @@ late DateTime? _dateTime;
                               "Bio",
                               textAlign: TextAlign.start,
                             ),
+                            labelStyle: const TextStyle(
+                              color: Colors.white,
+                            ),
                             floatingLabelAlignment: FloatingLabelAlignment.start,
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             hintText: "Write Something about yourself",
                             filled: true,
-                            fillColor: Colors.white70,
+                            fillColor: Colors.black,
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                   color: Colors.redAccent
