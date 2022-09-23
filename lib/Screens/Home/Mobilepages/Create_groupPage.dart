@@ -17,6 +17,9 @@ class Creation extends StatefulWidget {
 class _CreationState extends State<Creation> {
   dynamic image;
   final Upload Selection=Upload();
+  TextEditingController Group_name=TextEditingController();
+    TextEditingController Group_desc=TextEditingController();
+
 
 
  _selectimage(BuildContext context)async{
@@ -108,7 +111,12 @@ class _CreationState extends State<Creation> {
                           ],
                         ),
                 ),
-                TextFormField()
+                TextFormField(
+                  controller: Group_name,
+                ),
+                TextFormField(
+                  controller: Group_desc,
+                ),
               ],
             )
             ),
