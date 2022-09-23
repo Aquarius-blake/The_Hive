@@ -12,7 +12,7 @@ class Creation extends StatefulWidget {
 class _CreationState extends State<Creation> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
       
     );
   }
