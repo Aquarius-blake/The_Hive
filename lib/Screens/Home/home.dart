@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Group_page.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MPost.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mhome.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mmessages.dart';
@@ -261,7 +262,13 @@ class _HomeState extends State<Home> {
                         color: Colors.white,
                       )
                       ),
-                    onTap: ()async{},
+                    onTap: ()async{
+                      Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context)=>GroupPage(),
+            )
+        );
+                    },
                 ),
               const  SizedBox(height: 5.0,),
                 ListTile(
