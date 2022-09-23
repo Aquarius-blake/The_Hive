@@ -36,7 +36,7 @@ class _CreationState extends State<Creation> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                
+                TextFormField()
               ],
             )
             ),
