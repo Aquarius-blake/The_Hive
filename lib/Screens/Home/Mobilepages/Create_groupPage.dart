@@ -118,6 +118,8 @@ class _CreationState extends State<Creation> {
                     children: [
                       TextFormField(
                         controller: Group_name,
+                       validator: (val)=>val!.isEmpty ? "Enter Your Group Name" : null,
+
                       ),
                       TextFormField(
                   controller: Group_desc,
