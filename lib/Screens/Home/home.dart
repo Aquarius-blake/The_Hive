@@ -234,7 +234,8 @@ class _HomeState extends State<Home> {
                 ListTile(
                   leading: const Icon(LineIcons.alternateSignOut,
                     color: Colors.white,
-                    size:35.0,),
+                    size:35.0,
+                    ),
                   title: const Text(
                     "Sign Out",
                     style: TextStyle(
@@ -255,6 +256,7 @@ class _HomeState extends State<Home> {
                   leading: const FaIcon(
                     FontAwesomeIcons.peopleGroup,
                     color: Colors.white,
+                    size:35.0,
                     ),
                     title: const Text(
                       "Groups",
