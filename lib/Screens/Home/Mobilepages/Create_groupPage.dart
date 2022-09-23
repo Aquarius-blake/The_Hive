@@ -123,6 +123,8 @@ class _CreationState extends State<Creation> {
                       ),
                       TextFormField(
                   controller: Group_desc,
+                   validator: (val)=>val!.isEmpty ? "Enter Your Group's description" : null,
+
                 ),
                     ],
                   ),
