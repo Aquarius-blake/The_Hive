@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/user_provider.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Create_groupPage.dart';
 import 'package:forum3/shared/Widgets/Group_card.dart';
 import 'package:provider/provider.dart';
 
@@ -35,9 +36,18 @@ class _GroupPageState extends State<GroupPage> {
           actions: [
             TextButton(
               onPressed: (){
-                
+                Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context)=>Creation(),
+                        )
+                    );
               },
-             child: const Text("Create New Group"),
+             child: const Text(
+              "Create New Group",
+              style: TextStyle(
+                color:Colors.lightBlueAccent
+              ),
+              ),
              )
           ],
       ),
