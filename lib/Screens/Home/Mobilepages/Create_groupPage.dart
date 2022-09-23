@@ -25,7 +25,9 @@ class _CreationState extends State<Creation> {
         ),
       ),
       body: SafeArea(
-        child: Container(),
+        child: Container(
+          padding: const EdgeInsets.all(15),
+        ),
         ),
     );
   }
