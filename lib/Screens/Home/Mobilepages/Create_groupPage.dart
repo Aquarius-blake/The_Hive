@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:forum3/Provider/user_provider.dart';
+import 'package:forum3/Services/Upload.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
 
@@ -13,6 +15,53 @@ class Creation extends StatefulWidget {
 }
 
 class _CreationState extends State<Creation> {
+  dynamic image;
+  final Upload Selection=Upload();
+
+
+ _selectimage(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: const Text("Set Group Profile Picture"),
+            children: [
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text("Take a Photo"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.camera);
+                  setState(() {
+                    image=file;
+                  });
+                },
+              ),
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: const Text("Choose from gallery"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.gallery);
+                  setState(() {
+                    image=file;
+                  });
+                },
+              ),
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: const Text("Cancel"),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        }
+    );
+  }
+
+
   @override
   Widget build(BuildContext context) {
             late  User1 user1=  Provider.of<UserProvider>(context).getUser;
@@ -36,6 +85,29 @@ class _CreationState extends State<Creation> {
           child: SingleChildScrollView(
             child: Column(
               children: [
+                Center(
+                  child:Stack(
+                          children: [
+                            image!=null? CircleAvatar(
+                              radius: 60.0,
+                              backgroundImage:MemoryImage(image) ,
+                            ):CircleAvatar(
+                              radius: 60.0,
+                            ),
+                            Positioned(
+                                bottom: -5,
+                                left: 65,
+                                child: IconButton(
+                                    onPressed: ()=>_selectimage(context),
+                                    icon: const Icon(
+                                      Icons.add_a_photo,
+                                      color: Colors.white,
+                                    )
+                                )
+                            )
+                          ],
+                        ),
+                ),
                 TextFormField()
               ],
             )
