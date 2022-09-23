@@ -19,6 +19,7 @@ class _CreationState extends State<Creation> {
   final Upload Selection=Upload();
   TextEditingController Group_name=TextEditingController();
     TextEditingController Group_desc=TextEditingController();
+  final _formKey =GlobalKey<FormState>();
 
 
 
@@ -111,11 +112,18 @@ class _CreationState extends State<Creation> {
                           ],
                         ),
                 ),
-                TextFormField(
-                  controller: Group_name,
-                ),
-                TextFormField(
+                Form(
+                  key: _formKey,
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        controller: Group_name,
+                      ),
+                      TextFormField(
                   controller: Group_desc,
+                ),
+                    ],
+                  ),
                 ),
               ],
             )
