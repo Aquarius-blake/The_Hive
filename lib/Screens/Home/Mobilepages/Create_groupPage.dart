@@ -19,10 +19,16 @@ class _CreationState extends State<Creation> {
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
           color:Colors.white,
         ),
+        title: const Text(
+          "Create New Group",
+          style:TextStyle(
+            color:Colors.white
+          ),),
       ),
       body: SafeArea(
         child: Container(
