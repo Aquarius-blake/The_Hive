@@ -18,7 +18,15 @@ class _CreationState extends State<Creation> {
             late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        iconTheme: IconThemeData(
+          color:Colors.white,
+        ),
+      ),
+      body: SafeArea(
+        child: Container(),
+        ),
     );
   }
 }
