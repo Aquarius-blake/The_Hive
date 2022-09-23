@@ -33,6 +33,9 @@ class _CreationState extends State<Creation> {
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.all(15),
+          child: SingleChildScrollView(
+            child: Column()
+            ),
         ),
         ),
     );
