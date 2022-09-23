@@ -49,7 +49,7 @@ class _CreationState extends State<Creation> {
                 },
               ),
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 child: const Text("Cancel"),
                 onPressed: (){
                   Navigator.of(context).pop();
