@@ -128,8 +128,21 @@ class _CreationState extends State<Creation> {
                 ),
                 Center(
                   child: ElevatedButton(
-                    child: Text(""),
+                    child: Text("Create Group",),
                     onPressed: (){},
+                    style: ElevatedButton.styleFrom(
+                                elevation: 6.0,
+                                shadowColor: Colors.black,
+                                primary: Colors.black,
+                                side: const BorderSide(
+                                  color: Colors.blue,
+                                  width: 2.0,
+                                ),
+
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(100.0)
+                                )
+                            ),
                     ),
                 ),
                     ],
