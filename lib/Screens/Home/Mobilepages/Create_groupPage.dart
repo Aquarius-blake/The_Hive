@@ -148,6 +148,7 @@ class _CreationState extends State<Creation> {
                       ),
                      const SizedBox(height: 20,),
                       TextFormField(
+                        maxLines: 5,
                   controller: Group_desc,
                    validator: (val)=>val!.isEmpty ? "Enter Your Group's description" : null,
                    decoration: InputDecoration(
