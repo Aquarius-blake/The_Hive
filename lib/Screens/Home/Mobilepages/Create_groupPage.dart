@@ -70,7 +70,7 @@ class _CreationState extends State<Creation> {
 
   @override
   Widget build(BuildContext context) {
-            late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+            late  User1 user1=  Provider.of<UserProvider>(context,listen: false).getUser;
 
     return Scaffold(
       backgroundColor: Colors.black,
