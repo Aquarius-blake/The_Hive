@@ -128,7 +128,12 @@ class _CreationState extends State<Creation> {
                 ),
                 Center(
                   child: ElevatedButton(
-                    child: Text("Create Group",),
+                    child: const Text(
+                      "Create Group",
+                      style: TextStyle(
+                        color: Colors.lightBlueAccent,
+                      )
+                      ),
                     onPressed: (){},
                     style: ElevatedButton.styleFrom(
                                 elevation: 6.0,
