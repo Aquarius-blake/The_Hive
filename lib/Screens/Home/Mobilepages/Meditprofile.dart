@@ -257,10 +257,8 @@ late DateTime? _dateTime;
 
                             ),
                           ),
-
                           style: const TextStyle(
                             color: Colors.white,
-                        
                           ),
                         ),
                         const SizedBox(height: 10,),
