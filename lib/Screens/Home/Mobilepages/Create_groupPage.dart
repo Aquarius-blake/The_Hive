@@ -129,7 +129,7 @@ class _CreationState extends State<Creation> {
                             labelStyle: const TextStyle(
                               color: Colors.white,
                             ),
-                            hintText: "Enter Gender",
+                            hintText: "Enter Group Description",
                             filled: true,
                             fillColor: Colors.black,
                             focusedBorder: OutlineInputBorder(
