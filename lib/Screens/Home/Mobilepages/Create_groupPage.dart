@@ -114,6 +114,7 @@ class _CreationState extends State<Creation> {
                           ],
                         ),
                 ),
+                SizedBox(height: 20,),
                 Form(
                   key: _formKey,
                   child: Column(
@@ -145,6 +146,7 @@ class _CreationState extends State<Creation> {
                           ),
 
                       ),
+                     const SizedBox(height: 20,),
                       TextFormField(
                   controller: Group_desc,
                    validator: (val)=>val!.isEmpty ? "Enter Your Group's description" : null,
@@ -172,6 +174,7 @@ class _CreationState extends State<Creation> {
                           ),
 
                 ),
+               const SizedBox(height: 20,),
                 Center(
                   child: ElevatedButton(
                     child: const Text(
