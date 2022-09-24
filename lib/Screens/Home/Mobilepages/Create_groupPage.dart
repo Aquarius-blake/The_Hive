@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:forum3/Provider/user_provider.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
@@ -184,7 +185,11 @@ class _CreationState extends State<Creation> {
                         color: Colors.lightBlueAccent,
                       )
                       ),
-                    onPressed: (){},
+                    onPressed: ()async{
+                      if(_formKey.currentState!.validate()){
+                       String ress= await FirestoreMethods().CreateGroup(user1.UID!, user1.Username!, Group_name.text, Group_desc.text, image);
+                      }
+                    },
                     style: ElevatedButton.styleFrom(
                                 elevation: 6.0,
                                 shadowColor: Colors.black,
