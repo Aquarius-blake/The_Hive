@@ -27,19 +27,31 @@ class _GroupCardState extends State<GroupCard> {
                 backgroundImage: NetworkImage(widget.snap['Group Pic']),
                 radius:20,
               ),
+              SizedBox(width: 10,),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    "${widget.snap['Group Name']}",
-                    style: const TextStyle(
-                      color: Colors.white,
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width*0.6,
+                      child: Text(
+                        "${widget.snap['Group Name']}",
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold
+                        ),
+                        ),
                     ),
-                    ),
-                  Text(
-                    "${widget.snap['Group Description']}",
-                    style: const TextStyle(
-                      color:Colors.white
-                    ) ,
+                  ),
+                  SizedBox(height: 5,),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width*0.7,
+                      child: RichText(
+                        text: TextSpan(
+                          text:"${widget.snap['Group Description']}",)
+                          ),
                     ),
                 ],
               ),
