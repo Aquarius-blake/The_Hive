@@ -71,6 +71,7 @@ class _CreationState extends State<Creation> {
             late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
@@ -95,8 +96,9 @@ class _CreationState extends State<Creation> {
                             image!=null? CircleAvatar(
                               radius: 60.0,
                               backgroundImage:MemoryImage(image) ,
-                            ):CircleAvatar(
+                            ):const CircleAvatar(
                               radius: 60.0,
+                              backgroundColor:Colors.lightBlueAccent,
                             ),
                             Positioned(
                                 bottom: -5,
