@@ -124,6 +124,28 @@ class _CreationState extends State<Creation> {
                       TextFormField(
                   controller: Group_desc,
                    validator: (val)=>val!.isEmpty ? "Enter Your Group's description" : null,
+                   decoration: InputDecoration(
+                            label: const Text("Group Description"),
+                            labelStyle: const TextStyle(
+                              color: Colors.white,
+                            ),
+                            hintText: "Enter Gender",
+                            filled: true,
+                            fillColor: Colors.black,
+                            focusedBorder: OutlineInputBorder(
+                              borderSide: const BorderSide(
+                                  color: Colors.redAccent
+                              ),
+                              borderRadius: BorderRadius.circular(100.0),
+                            ),
+                            enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(100.0),
+
+                            ),
+                          ),
+                          style: const TextStyle(
+                            color: Colors.white,
+                          ),
 
                 ),
                 Center(
