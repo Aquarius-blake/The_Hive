@@ -484,6 +484,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     Future<String> CreateGroup(String uid,String author,String grpname,String grpdesc,dynamic file)async{
       String ress;
       String photourl;
+      List members=[];
       try{
 
         if(file!=null){
@@ -493,8 +494,9 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
                 photourl="";
             }
             String groupid= const Uuid().v1();
+            members.add(uid);
 
-            Group group= Group(Header: "",author_uid: uid, Group_uid: groupid, author: author, Timeposted: DateTime.now(), members: [], Group_name: grpname, Group_description: grpdesc,ppurl: photourl);
+            Group group= Group(Header: "",author_uid: uid, Group_uid: groupid, author: author, Timeposted: DateTime.now(), members: members, Group_name: grpname, Group_description: grpdesc,ppurl: photourl);
 
           _firestore.collection("Groups").doc(groupid).set(
             group.toJson(),
