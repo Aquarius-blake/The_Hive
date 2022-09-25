@@ -104,8 +104,15 @@ _selectimage(BuildContext context)async{
                       child: IconButton(
                         onPressed: ()async{
                          await _selectimage(context);
+                         if(image!=null){
                          String content= await FirestoreMethods().UpdateHeader(widget.snap['Group Uid'], image);
                          Showsnackbar(content, context);
+                         setState(() {
+                           
+                         });
+                         }else{
+                           Showsnackbar("No image selected", context);
+                         }
                         },
                         icon: const FaIcon(
                           FontAwesomeIcons.camera,
