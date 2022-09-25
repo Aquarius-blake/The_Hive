@@ -146,11 +146,30 @@ _selectimage(BuildContext context)async{
                   onPressed: (){}, 
                   child: Row(
                     children: [
-                      Text("Joined"),
+                      Text(
+                        "Joined",
+                        style: TextStyle(
+                          color: Colors.lightBlueAccent,
+                          fontSize: 20,
+                          ),
+                        ),
                       SizedBox(width: 5,),
                       FaIcon( FontAwesomeIcons.check)
                     ],
-                  )
+                  ),
+                  style: ElevatedButton.styleFrom(
+                                    elevation: 6.0,
+                                    shadowColor: Colors.black,
+                                    primary: Colors.white,
+                                    side: const BorderSide(
+                                      color: Colors.blue,
+                                     width: 2.0,
+                                    ),
+
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(100.0)
+                                    )
+                                ),
                   ):
                 ElevatedButton(
                   onPressed: (){}, 
