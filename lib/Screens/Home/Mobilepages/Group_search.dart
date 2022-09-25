@@ -50,7 +50,9 @@ class _GroupsearchState extends State<Groupsearch> {
       onTap: (){
        Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context)=>Ghome(),
+              builder: (context)=>Ghome(
+                snap:data,
+              ),
             )
         );
       },
