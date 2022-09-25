@@ -15,6 +15,9 @@ class _GhomeState extends State<Ghome> {
     return Scaffold(
       appBar:AppBar(
         backgroundColor: Colors.black,
+        iconTheme: IconThemeData(
+          color: Colors.white
+          ),
       )
     );
   }
