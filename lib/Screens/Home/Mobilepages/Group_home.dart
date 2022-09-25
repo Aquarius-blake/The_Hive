@@ -132,6 +132,14 @@ _selectimage(BuildContext context)async{
                         ),
                       ),
               ],
+            ),
+            SizedBox(height: 30,),
+            Divider(),
+            Text(
+              "sfdjgsufsefy",
+            style: TextStyle(
+              color: Colors.white
+            ),
             )
           ],
         ),
