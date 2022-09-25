@@ -64,6 +64,7 @@ _selectimage(BuildContext context)async{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar:AppBar(
         backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
