@@ -84,6 +84,7 @@ _selectimage(BuildContext context)async{
         child: Column(
           children: [
             Stack(
+              clipBehavior: Clip.none,
               children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width,
@@ -100,7 +101,7 @@ _selectimage(BuildContext context)async{
                       left: 150,
                       child: IconButton(
                         onPressed: ()async{
-                          _selectimage(context);
+                         await _selectimage(context);
                         },
                         icon: const FaIcon(
                           FontAwesomeIcons.camera,
@@ -110,7 +111,8 @@ _selectimage(BuildContext context)async{
                         ),
                     ),
                     Positioned(
-                      bottom: -10,
+                      left: 10,
+                      bottom: -50,
                       child: CircleAvatar(
                         radius: 50,
                         backgroundColor: Colors.lightBlueAccent,
