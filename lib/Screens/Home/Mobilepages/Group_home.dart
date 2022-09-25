@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class Ghome extends StatefulWidget {
-  Ghome({Key? key}) : super(key: key);
+  final snap;
+  Ghome({Key? key,this.snap}) : super(key: key);
 
   @override
   State<Ghome> createState() => _GhomeState();
