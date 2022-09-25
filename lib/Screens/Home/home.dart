@@ -18,7 +18,6 @@ import 'package:forum3/Services/Storagemethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Networkconnection.dart';
 import 'package:forum3/shared/Pop_up.dart';
-//import 'package:forum3/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:provider/provider.dart';
