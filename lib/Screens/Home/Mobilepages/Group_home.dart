@@ -4,6 +4,10 @@ import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
+
+import '../../../Models/Users1.dart';
+import '../../../Provider/user_provider.dart';
 
 
 class Ghome extends StatefulWidget {
@@ -63,6 +67,8 @@ _selectimage(BuildContext context)async{
 
   @override
   Widget build(BuildContext context) {
+        late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar:AppBar(
@@ -133,7 +139,25 @@ _selectimage(BuildContext context)async{
                       ),
               ],
             ),
-            SizedBox(height: 30,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                widget.snap['Members'].contains(user1.UID)?ElevatedButton(
+                  onPressed: (){}, 
+                  child: Row(
+                    children: [
+                      Text("Joined"),
+                      SizedBox(width: 5,),
+                      FaIcon( FontAwesomeIcons.check)
+                    ],
+                  )
+                  ):
+                ElevatedButton(
+                  onPressed: (){}, 
+                  child: Text("Join Group")
+                  ),
+              ],
+            ),
             Divider(),
             Text(
               "sfdjgsufsefy",
