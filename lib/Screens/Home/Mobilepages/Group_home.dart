@@ -153,7 +153,7 @@ _selectimage(BuildContext context)async{
                           fontSize: 20,
                           ),
                         ),
-                      SizedBox(width: 5,),
+                      SizedBox(width: 10,),
                       FaIcon(
                         FontAwesomeIcons.check,
                         color: Colors.lightBlueAccent,
