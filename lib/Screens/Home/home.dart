@@ -44,7 +44,7 @@ class _HomeState extends State<Home> {
     User? result=await FirebaseAuth.instance.currentUser;
     User1? currentUser =await _auth.fbuser(result);
 
-    String photourl= await  store.Storageip("Profilepic", image, false);
+    String photourl= await  store.Storageip("Profilepic", image, false,null);
     currentUser?.ppurl=photourl;
 
     await  _firestore.collection("users").doc(currentUser!.UID).set(

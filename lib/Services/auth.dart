@@ -109,7 +109,7 @@ class AuthService{
       UserCredential result= await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
 
-    String photourl= await  Store.Storageip("Profilepic", image, false);
+    String photourl= await  Store.Storageip("Profilepic", image, false,null);
      User1 user1= User1(Admin: false,Guest: false,UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl,searchkey: username.substring(0,1));
 
       await  _firestore.collection("users").doc(user!.uid).set(

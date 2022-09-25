@@ -12,12 +12,16 @@ class StorageMethods{
 
 
 //add image to storage
-  Future  Storageip(String name,dynamic file,bool isPost) async{
+  Future  Storageip(String name,dynamic file,bool isPost,String? Groupid) async{
     Reference ref=_Storage.ref().child(name).child(_auth.currentUser!.uid);
 
     if(isPost){
       String id =Uuid().v1();
       ref=ref.child(id);
+    }
+
+    if(Groupid!=null){
+      ref=ref.child(Groupid);
     }
 
     UploadTask uploadTask= ref.putData(file);

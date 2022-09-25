@@ -27,7 +27,7 @@ class FirestoreMethods{
         String err;
         try{
             if(file!=null){
-                photourl=await StorageMethods().Storageip("Posts", file, true);
+                photourl=await StorageMethods().Storageip("Posts", file, false,null);
             }
             else{
                 photourl="";
@@ -159,7 +159,7 @@ class FirestoreMethods{
         String photourl;
         try{
             if(image!=null && upload){
-                photourl=await StorageMethods().Storageip("Posts", image, true);
+                photourl=await StorageMethods().Storageip("Posts", image, true,null);
                 await  _firestore.collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
                     'Image Url':photourl,
@@ -220,7 +220,7 @@ class FirestoreMethods{
         try{
             String ppurl;
             if(image!=null){
-                ppurl =await StorageMethods().Storageip("Profilepic", image, false);
+                ppurl =await StorageMethods().Storageip("Profilepic", image, false,null);
             }else{
                 ppurl=Profileurl;
             }
@@ -485,15 +485,16 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       String ress;
       String photourl;
       List members=[];
+      String groupid= const Uuid().v1();
+
       try{
 
         if(file!=null){
-                photourl=await StorageMethods().Storageip("Group Profile", file, true);
+                photourl=await StorageMethods().Storageip("Group Profile", file, true,groupid);
             }
             else{
                 photourl="";
             }
-            String groupid= const Uuid().v1();
             members.add(uid);
 
             Group group= Group(Header: "",author_uid: uid, Group_uid: groupid, author: author, Timeposted: DateTime.now(), members: members, Group_name: grpname, Group_description: grpdesc,ppurl: photourl);
