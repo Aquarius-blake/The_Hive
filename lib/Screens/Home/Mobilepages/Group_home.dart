@@ -34,7 +34,13 @@ class _GhomeState extends State<Ghome> {
       ),
       body:SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            Stack(
+              children: [
+                
+              ],
+            )
+          ],
         ),
       ),
     );
