@@ -18,6 +18,13 @@ class SearchService{
             .get();
     }
 
+    SearchGroup(String searchfield) {
+        return   FirebaseFirestore.instance
+            .collection("Groups")
+            .where("searchkey",isEqualTo: searchfield.substring(0,1).toUpperCase())
+            .get();
+    }
+
 
 }
 
