@@ -512,8 +512,9 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       }
     }
 
-    Future UpdateHeader(String Groupid,dynamic file)async{
+    Future<String> UpdateHeader(String Groupid,dynamic file)async{
       String photourl;
+      String ress;
       try{
         if(file!=null){
           photourl=await StorageMethods().Storageip("Group Header", file, true,Groupid);
@@ -524,8 +525,11 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         _firestore.collection("Groups").doc(Groupid).update(
           {"Header":photourl},
         );
+        ress="Header Updated Successfully";
+        return ress;
       }catch(e){
-        print(e.toString());
+        ress=e.toString();
+        return ress;
       }
 
     }
