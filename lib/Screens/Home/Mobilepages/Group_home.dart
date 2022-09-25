@@ -145,7 +145,7 @@ _selectimage(BuildContext context)async{
                 widget.snap['Members'].contains(user1.UID)?ElevatedButton(
                   onPressed: (){}, 
                   child: Row(
-                    children: [
+                    children:const [
                       Text(
                         "Joined",
                         style: TextStyle(
@@ -154,7 +154,10 @@ _selectimage(BuildContext context)async{
                           ),
                         ),
                       SizedBox(width: 5,),
-                      FaIcon( FontAwesomeIcons.check)
+                      FaIcon(
+                        FontAwesomeIcons.check,
+                        color: Colors.lightBlueAccent,
+                      )
                     ],
                   ),
                   style: ElevatedButton.styleFrom(
