@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 
 class Ghome extends StatefulWidget {
@@ -24,6 +25,12 @@ class _GhomeState extends State<Ghome> {
               color:Colors.white
             ),
             ),
+            actions: [
+              IconButton(
+                onPressed: (){},
+                icon: const FaIcon(FontAwesomeIcons.message),
+                ),
+            ],
       )
     );
   }
