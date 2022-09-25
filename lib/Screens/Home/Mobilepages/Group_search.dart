@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Group_home.dart';
 import 'package:forum3/Services/Searchmethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 
@@ -46,7 +47,13 @@ class _GroupsearchState extends State<Groupsearch> {
 
   Widget groupcard(data){
     return GestureDetector(
-      onTap: (){},
+      onTap: (){
+       Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context)=>Ghome(),
+            )
+        );
+      },
       child: Card(
         color: Colors.black,
         shape: RoundedRectangleBorder(
