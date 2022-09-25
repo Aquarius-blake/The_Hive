@@ -109,10 +109,14 @@ _selectimage(BuildContext context)async{
                           ),
                         ),
                     ),
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundColor: Colors.lightBlueAccent,
-                    )
+                    Positioned(
+                      bottom: -10,
+                      child: CircleAvatar(
+                        radius: 50,
+                        backgroundColor: Colors.lightBlueAccent,
+                        backgroundImage: NetworkImage(widget.snap['Group Pic']),
+                        ),
+                      ),
               ],
             )
           ],
