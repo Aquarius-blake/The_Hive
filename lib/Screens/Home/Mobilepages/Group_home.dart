@@ -38,7 +38,7 @@ class _GhomeState extends State<Ghome> {
             Stack(
               children: [
                 SizedBox(
-                  width: MediaQuery.of(context).size.width*0.9,
+                  width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height*0.3,
                   child: widget.snap['Header']!=""? Image.network(
                     "${widget.snap['Header']}",
@@ -47,6 +47,18 @@ class _GhomeState extends State<Ghome> {
                       color: Colors.grey,
                       ),
                     ),
+                    Positioned(
+                      bottom: 90,
+                      left: 150,
+                      child: IconButton(
+                        onPressed: (){},
+                        icon: const FaIcon(
+                          FontAwesomeIcons.camera,
+                          size: 50,
+                          color: Colors.white,
+                          ),
+                        ),
+                    )
               ],
             )
           ],
