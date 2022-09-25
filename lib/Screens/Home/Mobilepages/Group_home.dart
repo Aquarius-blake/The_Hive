@@ -108,6 +108,10 @@ _selectimage(BuildContext context)async{
                           color: Colors.white,
                           ),
                         ),
+                    ),
+                    CircleAvatar(
+                      radius: 50,
+                      backgroundColor: Colors.lightBlueAccent,
                     )
               ],
             )
