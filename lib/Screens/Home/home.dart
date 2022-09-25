@@ -259,7 +259,7 @@ class _HomeState extends State<Home> {
                     size:35.0,
                     ),
                     title: const Text(
-                      "Groups",
+                      "My Groups",
                       style:TextStyle(
                         color: Colors.white,
                       )
