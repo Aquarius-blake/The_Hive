@@ -114,6 +114,12 @@ class _GroupsearchState extends State<Groupsearch> {
 
           decoration: const InputDecoration(
             labelText: "Search Groups",
+            labelStyle: TextStyle(
+              color: Colors.white,
+            ),
+          ),
+          style: const TextStyle(
+            color: Colors.white,
           ),
         ),
         actions: [
