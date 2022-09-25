@@ -163,7 +163,7 @@ _selectimage(BuildContext context)async{
                   style: ElevatedButton.styleFrom(
                                     elevation: 6.0,
                                     shadowColor: Colors.black,
-                                    primary: Colors.white,
+                                    primary: Colors.black,
                                     side: const BorderSide(
                                       color: Colors.blue,
                                      width: 2.0,
@@ -176,7 +176,26 @@ _selectimage(BuildContext context)async{
                   ):
                 ElevatedButton(
                   onPressed: (){}, 
-                  child: Text("Join Group")
+                  child: const Text(
+                    "Join Group",
+                    style: TextStyle(
+                      color: Colors.lightBlueAccent,
+                      fontSize: 20,
+                      ),
+                    ),
+                  style: ElevatedButton.styleFrom(
+                                    elevation: 6.0,
+                                    shadowColor: Colors.black,
+                                    primary: Colors.black,
+                                    side: const BorderSide(
+                                      color: Colors.blue,
+                                     width: 2.0,
+                                    ),
+
+                                    shape: RoundedRectangleBorder(
+                                        borderRadius: BorderRadius.circular(100.0)
+                                    )
+                                ),
                   ),
               ],
             ),
