@@ -31,7 +31,12 @@ class _GhomeState extends State<Ghome> {
                 icon: const FaIcon(FontAwesomeIcons.message),
                 ),
             ],
-      )
+      ),
+      body:SingleChildScrollView(
+        child: Column(
+          children: [],
+        ),
+      ),
     );
   }
 }
