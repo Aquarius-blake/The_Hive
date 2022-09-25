@@ -12,6 +12,8 @@ class Ghome extends StatefulWidget {
 class _GhomeState extends State<Ghome> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar:AppBar()
+    );
   }
 }
