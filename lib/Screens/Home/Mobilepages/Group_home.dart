@@ -13,7 +13,9 @@ class _GhomeState extends State<Ghome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar:AppBar()
+      appBar:AppBar(
+        backgroundColor: Colors.black,
+      )
     );
   }
 }
