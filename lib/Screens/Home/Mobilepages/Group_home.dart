@@ -11,6 +11,10 @@ class Ghome extends StatefulWidget {
 }
 
 class _GhomeState extends State<Ghome> {
+dynamic image;
+
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
