@@ -121,10 +121,10 @@ _selectimage(BuildContext context)async{
                            Showsnackbar("No image selected", context);
                          }
                         },
-                        icon: const FaIcon(
+                        icon:  FaIcon(
                           FontAwesomeIcons.camera,
                           size: 50,
-                          color: Colors.white,
+                          color: widget.snap['author uid']==user1.UID? Colors.white:Colors.transparent,
                           ),
                         ),
                     ),
