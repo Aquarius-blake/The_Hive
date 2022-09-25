@@ -18,7 +18,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
 
 
 
-  initiateusersearch(value)async{
+  initiategroupsearch(value)async{
     if(value.length==0){
       setState(() {
         queryResultset=[];
@@ -45,7 +45,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
   }
 
 
-  Widget usercard(data){
+  Widget groupcard(data){
     return GestureDetector(
       onTap: (){},
       child: Card(
@@ -107,14 +107,14 @@ class _MchatusersearchState extends State<Mchatusersearch> {
           controller: _search,
           onChanged: (value){
             try{
-                initiateusersearch(value);
+                initiategroupsearch(value);
             }catch(e){
               Showsnackbar(e.toString(), context);
             }
           },
 
           decoration: const InputDecoration(
-            labelText: "Search User",
+            labelText: "Search Groups",
           ),
         ),
         actions: [
@@ -154,7 +154,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
       body:
       ListView(
         children:tempSearchstore.map((element){
-          return usercard(element);
+          return groupcard(element);
         }).toList()
 
         ,
