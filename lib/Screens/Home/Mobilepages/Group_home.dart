@@ -18,6 +18,12 @@ class _GhomeState extends State<Ghome> {
         iconTheme: const IconThemeData(
           color: Colors.white
           ),
+          title: Text(
+            "${widget.snap['Group Name']}",
+            style:const TextStyle(
+              color:Colors.white
+            ),
+            ),
       )
     );
   }
