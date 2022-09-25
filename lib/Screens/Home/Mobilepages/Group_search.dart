@@ -1,17 +1,16 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:forum3/Screens/Home/Mobilepages/Mpprofile_screen.dart';
 import 'package:forum3/Services/Searchmethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 
-class Mchatusersearch extends StatefulWidget {
-  const Mchatusersearch({Key? key}) : super(key: key);
+class Groupsearch extends StatefulWidget {
+  const Groupsearch({Key? key}) : super(key: key);
 
   @override
-  State<Mchatusersearch> createState() => _MchatusersearchState();
+  State<Groupsearch> createState() => _GroupsearchState();
 }
 
-class _MchatusersearchState extends State<Mchatusersearch> {
+class _GroupsearchState extends State<Groupsearch> {
   TextEditingController _search=TextEditingController();
   var queryResultset=[];
   var tempSearchstore=[];
