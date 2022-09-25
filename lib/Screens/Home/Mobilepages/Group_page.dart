@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Create_groupPage.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Group_home.dart';
 import 'package:forum3/shared/Widgets/Group_card.dart';
 import 'package:provider/provider.dart';
 
@@ -62,7 +63,15 @@ class _GroupPageState extends State<GroupPage> {
           return ListView.builder(
               itemCount: snapshot.data!.docs.length,
               itemBuilder: (context, index) => GestureDetector(
-                onTap: (){},
+                onTap: (){
+                  Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context)=>Ghome(
+                snap: snapshot.data!.docs[index].data(),
+              ),
+            )
+        );
+                },
                 child: GroupCard(
                   snap: snapshot.data!.docs[index].data(),
                 ),
