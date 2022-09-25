@@ -200,12 +200,47 @@ _selectimage(BuildContext context)async{
               ],
             ),
             Divider(),
-            Text(
-              "sfdjgsufsefy",
-            style: TextStyle(
-              color: Colors.white
-            ),
+            RichText(text: TextSpan(
+              text: "About",
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold
+              ),
+              children: [
+                TextSpan(
+                  text: " ${widget.snap['Group Name']}",
+                  style: const TextStyle(
+                    color: Colors.lightBlueAccent,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold
+                  ),
+                )
+              ]
             )
+            ),
+            const SizedBox(height: 10,),
+            RichText(
+              text: TextSpan(
+                children: [
+                 const TextSpan(
+                    text: "Description: ",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold
+                    ),
+                  ),
+                  TextSpan(
+                    text: "${widget.snap['Group Description']}",
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 15,
+                    ),
+                  )
+                ]
+              )
+              )
           ],
         ),
       ),
