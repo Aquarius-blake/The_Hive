@@ -286,10 +286,10 @@ class _HomeState extends State<Home> {
                       ),
                     onTap: ()async{
                       Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context)=>Groupsearch(),
-            )
-        );
+                        MaterialPageRoute(
+                          builder: (context)=>Groupsearch(),
+                        )
+                      );
                     },
                 ),
               const  SizedBox(height: 5.0,),
