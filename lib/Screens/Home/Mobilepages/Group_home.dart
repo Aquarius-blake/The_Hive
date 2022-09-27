@@ -220,27 +220,33 @@ _selectimage(BuildContext context)async{
             )
             ),
             const SizedBox(height: 10,),
-            RichText(
-              text: TextSpan(
-                children: [
-                 const TextSpan(
-                    text: "Description: ",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold
+            Padding(
+              padding: const EdgeInsets.only(
+                left:5.0,
+                right: 5.0
+                ),
+              child: RichText(
+                text: TextSpan(
+                  children: [
+                   const TextSpan(
+                      text: "Description: ",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold
+                      ),
                     ),
-                  ),
-                  TextSpan(
-                    text: "${widget.snap['Group Description']}",
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 15,
-                    ),
-                  )
-                ]
-              )
-              )
+                    TextSpan(
+                      text: "${widget.snap['Group Description']}",
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                      ),
+                    )
+                  ]
+                )
+                ),
+            )
           ],
         ),
       ),
