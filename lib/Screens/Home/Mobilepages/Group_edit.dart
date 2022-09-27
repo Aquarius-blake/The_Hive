@@ -13,6 +13,7 @@ class _GeditState extends State<Gedit> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      appBar: AppBar(),
     );
   }
 }
