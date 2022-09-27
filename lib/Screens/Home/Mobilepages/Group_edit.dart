@@ -14,7 +14,18 @@ class _GeditState extends State<Gedit> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),
+        title: const Text(
+          "Edit Group",
+          style: TextStyle(
+            color:Colors.white,
+          ),
+          ),
+      ),
     );
   }
 }
