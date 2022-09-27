@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 
 class Gedit extends StatefulWidget {
-  const Gedit({ Key? key }) : super(key: key);
+  final snap;
+  const Gedit({ Key? key ,this.snap}) : super(key: key);
 
   @override
   State<Gedit> createState() => _GeditState();

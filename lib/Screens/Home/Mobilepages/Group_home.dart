@@ -144,7 +144,13 @@ _selectimage(BuildContext context)async{
               children: [
                 widget.snap['author uid']==user1.UID? IconButton(
                   onPressed: ()async{
-                    
+                        Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context)=>Ghome(
+                                  snap: widget.snap,
+                                ),
+                              )
+                          );
                   },
                   icon: const FaIcon(
                     FontAwesomeIcons.pencil,
