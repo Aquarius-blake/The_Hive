@@ -147,7 +147,8 @@ _selectimage(BuildContext context)async{
                     
                   },
                   icon: const FaIcon(
-                    FontAwesomeIcons.pencil
+                    FontAwesomeIcons.pencil,
+                    color: Colors.white,
                     ),
                   ):Container(),
                 widget.snap['Members'].contains(user1.UID)?ElevatedButton(
