@@ -142,6 +142,14 @@ _selectimage(BuildContext context)async{
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
+                widget.snap['author uid']==user1.UID? IconButton(
+                  onPressed: ()async{
+                    
+                  },
+                  icon: const FaIcon(
+                    FontAwesomeIcons.pencil
+                    ),
+                  ):Container(),
                 widget.snap['Members'].contains(user1.UID)?ElevatedButton(
                   onPressed: (){}, 
                   child: Row(
