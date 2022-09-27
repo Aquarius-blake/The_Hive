@@ -150,6 +150,7 @@ _selectimage(BuildContext context)async{
                     FontAwesomeIcons.pencil,
                     color: Colors.white,
                     ),
+                    color:Colors.transparent
                   ):Container(),
                 widget.snap['Members'].contains(user1.UID)?ElevatedButton(
                   onPressed: (){}, 
