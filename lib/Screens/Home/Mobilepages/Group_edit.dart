@@ -28,9 +28,7 @@ class _GeditState extends State<Gedit> {
       ),
       body:SingleChildScrollView(
         child: Column(
-          children: [
-            
-          ],
+          children: [],
         ),
         )
     );
