@@ -210,7 +210,6 @@ _selectimage(BuildContext context)async{
                                       color: Colors.blue,
                                      width: 2.0,
                                     ),
-
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(100.0)
                                     )
