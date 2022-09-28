@@ -304,14 +304,14 @@ _selectimage(BuildContext context)async{
                       children: [
                         TextSpan(
                           text: "${widget.snap['Post Name']}: ",
-                          style: TextStyle(
+                          style: const TextStyle(
                             color: Colors.white,
                             fontSize: 20,
                             fontWeight: FontWeight.bold
                           ),
                         ),
                         TextSpan(
-                          text: "0",
+                          text: "${widget.snap['noP']}",
                           style: const TextStyle(
                             color: Colors.white,
                             fontSize: 15,
