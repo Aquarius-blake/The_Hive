@@ -19,6 +19,7 @@ class Group{
   late  String? searchkey=Group_name.substring(0,1);
   late final String? Identity;
   late final int noP;
+  late final String? Post_name;
 
   Group(
       { required this.author_uid,
@@ -32,7 +33,8 @@ class Group{
         this.Header,
         this.searchkey,
         this.Identity,
-        required this.noP
+        required this.noP,
+        this.Post_name,
       }
       );
 
@@ -48,7 +50,8 @@ class Group{
     "Header":Header,
     "searchkey":searchkey,
     "Identity":Identity,
-    "noP":noP
+    "noP":noP,  
+    "Post Name":Post_name,
   };
 
   static Group? FromSnap(DocumentSnapshot snap){
@@ -65,7 +68,8 @@ class Group{
       Header: snapshot['Header'],
       searchkey: snapshot['searchkey'],
       Identity: snapshot['Identity'],
-      noP: snapshot['noP']
+      noP: snapshot['noP'],
+      Post_name: snapshot['Post Name'],
     );
 
     return Group12;
