@@ -75,6 +75,7 @@ _selectimage(BuildContext context)async{
     return Scaffold(
       backgroundColor: Colors.black,
       appBar:AppBar(
+        centerTitle: true,
         backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
           color: Colors.white
