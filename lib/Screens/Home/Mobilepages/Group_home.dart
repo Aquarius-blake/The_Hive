@@ -243,7 +243,7 @@ _selectimage(BuildContext context)async{
             const SizedBox(height: 10,),
             Padding(
               padding: const EdgeInsets.only(
-                left:5.0,
+                left:10.0,
                 right: 5.0
                 ),
               child: RichText(
