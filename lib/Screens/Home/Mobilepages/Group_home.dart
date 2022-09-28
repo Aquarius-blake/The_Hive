@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Screens/Home/Mobilepages/GMember_list.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_Post.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_edit.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
@@ -280,7 +281,14 @@ _selectimage(BuildContext context)async{
                 children: [
                   GestureDetector(
                     onTap: (){
-                      
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context)=>GroupMembers(
+                            snap: widget.snap,
+                          ),
+                        )
+                      );
+                    
                     },
                     child: RichText(
                       text: TextSpan(
@@ -329,6 +337,7 @@ _selectimage(BuildContext context)async{
                 ],
               ),
             ),
+           const SizedBox(height: 10,),
             SizedBox(
               width: MediaQuery.of(context).size.width,
               height:double.maxFinite,

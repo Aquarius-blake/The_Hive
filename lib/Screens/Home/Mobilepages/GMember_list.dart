@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 
 
 class GroupMembers extends StatefulWidget {
-  const GroupMembers({ Key? key }) : super(key: key);
+  final snap;
+  const GroupMembers({ Key? key ,this.snap}) : super(key: key);
 
   @override
   State<GroupMembers> createState() => _GroupMembersState();
