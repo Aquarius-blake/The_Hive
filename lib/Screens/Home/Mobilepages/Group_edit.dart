@@ -15,6 +15,7 @@ class _GeditState extends State<Gedit> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.black,
         iconTheme: const IconThemeData(
           color: Colors.white,
