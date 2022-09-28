@@ -5,6 +5,7 @@ import 'package:forum3/Models/Groups.dart';
 import 'package:forum3/Models/Notifs.dart';
 import 'package:forum3/Models/Posts.dart';
 import 'package:forum3/Models/Requests.dart';
+import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 
 import 'package:uuid/uuid.dart';
@@ -481,7 +482,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             return ress;
         }
     }
-    Future<String> CreateGroup(String uid,String author,String grpname,String grpdesc,dynamic file)async{
+    Future<String> CreateGroup(String uid,String author,String grpname,String grpdesc,dynamic file,User1 user)async{
       String ress;
       String photourl;
       List members=[];
