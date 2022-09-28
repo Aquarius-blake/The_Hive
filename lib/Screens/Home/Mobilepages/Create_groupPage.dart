@@ -188,7 +188,7 @@ class _CreationState extends State<Creation> {
                       ),
                     onPressed: ()async{
                       if(_formKey.currentState?.validate()!=null && image!=null){
-                       String ress= await FirestoreMethods().CreateGroup(user1.UID!, user1.Username!, Group_name.text, Group_desc.text, image);
+                       String ress= await FirestoreMethods().CreateGroup(user1.UID!, user1.Username!, Group_name.text, Group_desc.text, image,user1);
                      Showsnackbar(ress, context);
                       }else{
                         Showsnackbar("Please fill all the fields", context);
