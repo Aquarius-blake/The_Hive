@@ -127,7 +127,7 @@ _selectimage(BuildContext context)async{
                         icon:  FaIcon(
                           FontAwesomeIcons.camera,
                           size: 50,
-                          color: widget.snap['author uid']==user1.UID? Colors.white:Colors.transparent,
+                          color: widget.snap['author uid']==user1.UID && widget.snap['Header']==""? Colors.white:Colors.transparent,
                           ),
                         ),
                     ),
