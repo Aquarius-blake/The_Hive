@@ -161,6 +161,7 @@ _selectimage(BuildContext context)async{
                     ),
                     color:Colors.transparent
                   ):Container(),
+                  SizedBox(width: 10,),
                 widget.snap['Members'].contains(user1.UID)?ElevatedButton(
                   onPressed: (){}, 
                   child: Row(
