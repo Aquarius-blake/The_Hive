@@ -278,27 +278,32 @@ _selectimage(BuildContext context)async{
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  RichText(
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "${widget.snap['Identity']}: ",
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold
+                  GestureDetector(
+                    onTap: (){
+                      
+                    },
+                    child: RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "${widget.snap['Identity']}: ",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold
+                            ),
                           ),
-                        ),
-                        TextSpan(
-                          text: "${widget.snap['Members'].length}",
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 15,
-                          ),
-                        )
-                      ]
-                    )
-                    ),
+                          TextSpan(
+                            text: "${widget.snap['Members'].length}",
+                            style: const TextStyle(
+                              color: Colors.white,
+                              fontSize: 15,
+                            ),
+                          )
+                        ]
+                      )
+                      ),
+                  ),
                      RichText(
                     text: TextSpan(
                       children: [
@@ -324,6 +329,10 @@ _selectimage(BuildContext context)async{
                 ],
               ),
             ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height:double.maxFinite,
+              ),
           ],
         ),
       ),
