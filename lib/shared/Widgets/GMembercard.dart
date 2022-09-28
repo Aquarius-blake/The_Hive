@@ -13,7 +13,11 @@ class _GmembercardState extends State<Gmembercard> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child:Card()
+      child:Card(
+        child:Row(
+          children: []
+          ),
+      )
     );
   }
 }
