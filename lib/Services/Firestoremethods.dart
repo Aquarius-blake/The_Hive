@@ -505,6 +505,11 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             SetOptions(merge: true)
             );
 
+            _firestore.collection("Groups").doc(groupid).collection("Members").doc(uid).set(
+              user.toJson(),
+              SetOptions(merge: true)
+            );
+
         ress="Group Created Successfully";
         return ress;
       }catch(e){
