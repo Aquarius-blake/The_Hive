@@ -326,6 +326,13 @@ _selectimage(BuildContext context)async{
           ],
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+      child: const FaIcon(
+        FontAwesomeIcons.featherPointed,
+        color: Colors.white,
+        ),
+      ),
     );
   }
 }
