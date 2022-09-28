@@ -302,8 +302,8 @@ _selectimage(BuildContext context)async{
                      RichText(
                     text: TextSpan(
                       children: [
-                       const TextSpan(
-                          text: "Posts: ",
+                        TextSpan(
+                          text: "${widget.snap['Post Name']}: ",
                           style: TextStyle(
                             color: Colors.white,
                             fontSize: 20,
