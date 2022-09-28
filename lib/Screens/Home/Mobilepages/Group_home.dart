@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Group_Post.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_edit.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
@@ -327,7 +328,15 @@ _selectimage(BuildContext context)async{
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: (){
+          Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context)=>GrPost(
+                                  snap: widget.snap,
+                                ),
+                              )
+                          );
+        },
       child: const FaIcon(
         FontAwesomeIcons.featherPointed,
         color: Colors.white,
