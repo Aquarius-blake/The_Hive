@@ -15,7 +15,18 @@ class _GmembercardState extends State<Gmembercard> {
     return Container(
       child:Card(
         child:Row(
-          children: []
+          children: [
+            CircleAvatar(
+              radius: 30,
+              backgroundImage: NetworkImage(widget.snap['profilepic']),
+            ),
+            const SizedBox(width: 10,),
+            Text("${widget.snap['username']}",
+            style: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+            ),),
+          ]
           ),
       )
     );
