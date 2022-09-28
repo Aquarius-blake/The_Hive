@@ -267,7 +267,62 @@ _selectimage(BuildContext context)async{
                   ]
                 )
                 ),
-            )
+            ),
+            const SizedBox(height: 5,),
+            Padding(
+              padding: const EdgeInsets.only(
+                left:10.0,
+                right: 5.0
+                ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "${widget.snap['Identity']}: ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        TextSpan(
+                          text: "${widget.snap['Members'].length}",
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        )
+                      ]
+                    )
+                    ),
+                     RichText(
+                    text: TextSpan(
+                      children: [
+                       const TextSpan(
+                          text: "Posts: ",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                        TextSpan(
+                          text: "0",
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 15,
+                          ),
+                        )
+                      ]
+                    )
+                    ),
+                    
+                ],
+              ),
+            ),
           ],
         ),
       ),
