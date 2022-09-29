@@ -18,14 +18,17 @@ class _GmembercardState extends State<Gmembercard> {
           children: [
             CircleAvatar(
               radius: 30,
-              backgroundImage: NetworkImage(widget.snap['profilepic']),
+              backgroundImage: NetworkImage(
+                widget.snap['profilepic']
+                ),
             ),
             const SizedBox(width: 10,),
             Text("${widget.snap['username']}",
             style: const TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
-            ),),
+            ),
+            ),
           ]
           ),
       )
