@@ -63,11 +63,13 @@ class _GrPostState extends State<GrPost> {
     try{
       return user1.ppurl==""?const CircleAvatar(
            radius: 20,
-        backgroundImage: AssetImage('Assets/hac.jpg'),     
+        backgroundImage: AssetImage('Assets/hac.jpg'),  
+        backgroundColor: Colors.transparent,   
       )
        : CircleAvatar(
         radius: 20,
         backgroundImage: NetworkImage(user1.ppurl!),
+        backgroundColor: Colors.transparent,
       );
     }catch(e){
       return const CircleAvatar(
