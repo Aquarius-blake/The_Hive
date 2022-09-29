@@ -15,24 +15,30 @@ class _GmembercardState extends State<Gmembercard> {
     return Container(
       child:Card(
         color: Colors.black,
-        child:Row(
-          children: [
-            CircleAvatar(
-              radius: 30,
-              backgroundImage: NetworkImage(
-                widget.snap['profilepic']
+        child:Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Row(
+            children: [
+              CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage(
+                  widget.snap['profilepic']
+                  ),
+                  backgroundColor: Colors.transparent,
+              ),
+              const SizedBox(
+                width: 10,
                 ),
+              Text("${widget.snap['username']}",
+              style: const TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+                color:Colors.white
+              ),
+              ),
+            ]
             ),
-            const SizedBox(width: 10,),
-            Text("${widget.snap['username']}",
-            style: const TextStyle(
-              fontSize: 20,
-              fontWeight: FontWeight.bold,
-              color:Colors.white
-            ),
-            ),
-          ]
-          ),
+        ),
       )
     );
   }
