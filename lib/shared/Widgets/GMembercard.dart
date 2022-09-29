@@ -14,6 +14,7 @@ class _GmembercardState extends State<Gmembercard> {
   Widget build(BuildContext context) {
     return Container(
       child:Card(
+        color: Colors.black,
         child:Row(
           children: [
             CircleAvatar(
@@ -27,6 +28,7 @@ class _GmembercardState extends State<Gmembercard> {
             style: const TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.bold,
+              color:Colors.white
             ),
             ),
           ]
