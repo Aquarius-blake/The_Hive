@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Widgets/GMembercard.dart';
 
 
 
@@ -27,6 +29,26 @@ class _GroupMembersState extends State<GroupMembers> {
             color:Colors.white,
           ),
           ),
+      ),
+      body: StreamBuilder(
+        stream: FirebaseFirestore.instance.collection("Groups").doc(widget.snap['Group Uid']).collection("Members").snapshots(),
+          builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
+            if(snapshots.connectionState==ConnectionState.waiting){
+              return const Center(
+                child: CircularProgressIndicator(
+                  color: Colors.white,
+                ),
+              );
+            }
+            return ListView.builder(
+                itemCount: snapshots.data!.docs.length,
+                itemBuilder: (context, index) => Container(
+                  child: Gmembercard(
+                    snap: snapshots.data!.docs[index].data(),
+                  ),
+                )
+            );
+          }
       ),
     );
   }
