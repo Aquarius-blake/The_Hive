@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/user_provider.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
@@ -209,7 +211,17 @@ class _GrPostState extends State<GrPost> {
           )
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: (){},
+        onPressed: ()async{
+          String ress= await FirestoreMethods().GroupPost(
+            widget.snap["Group Uid"],
+             user1.UID!,
+              _textEditingController.text,
+               _textEditingController2.text,
+                _image,
+                 user1.Username!,
+                 user1.ppurl!);
+                 Showsnackbar(ress, context);
+        },
         child: const FaIcon(
           FontAwesomeIcons.featherPointed,
         ),
