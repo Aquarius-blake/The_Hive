@@ -29,11 +29,12 @@ class _GmembercardState extends State<Gmembercard> {
               const SizedBox(
                 width: 10,
                 ),
-              Text("${widget.snap['username']}",
+              Text(
+                "${widget.snap['username']}",
               style: const TextStyle(
                 fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color:Colors.white
+                color:Colors.white,
+                fontStyle: FontStyle.italic
               ),
               ),
             ]
