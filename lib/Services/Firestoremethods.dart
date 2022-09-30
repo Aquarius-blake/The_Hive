@@ -542,8 +542,10 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
 
 
-  Future GroupPost()async{
-    
+  Future GroupPost(String Groupid)async{
+
+    try{}catch(e){}
+
   }
 
 
