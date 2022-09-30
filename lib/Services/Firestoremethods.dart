@@ -559,6 +559,11 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             gpost.toJson(),
             SetOptions(merge: true)
             );
+             _firestore.collection("Groups").doc(Groupid).update(
+              { 
+               "noP":FieldValue.increment(1),
+               }
+            );
       
       ress="Post Successfully";
       return ress;

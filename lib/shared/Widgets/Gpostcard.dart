@@ -16,17 +16,17 @@ import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
 import '../../Screens/Platforms/WebSceens/Wcomments_screen.dart';
 
-class PostCard extends StatefulWidget {
+class GPostCard extends StatefulWidget {
   final snap;
   final Groupid;
-  const PostCard({ Key? key,this.snap,this.Groupid}) : super(key: key);
+  const GPostCard({ Key? key,this.snap,this.Groupid}) : super(key: key);
 
   @override
-  State<PostCard> createState() => _PostCardState();
+  State<GPostCard> createState() => _GPostCardState();
 }
 
 
-class _PostCardState extends State<PostCard> {
+class _GPostCardState extends State<GPostCard> {
   bool islikeanimating=false;
   bool liked=false;
   int commentlen=0;

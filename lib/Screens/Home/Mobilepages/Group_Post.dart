@@ -221,6 +221,12 @@ class _GrPostState extends State<GrPost> {
                  user1.Username!,
                  user1.ppurl!);
                  Showsnackbar(ress, context);
+                  setState(() {
+          _isloading=false;
+          _textEditingController.text="";
+          _textEditingController2.text="";
+          _image=null;
+                            });
         },
         child: const FaIcon(
           FontAwesomeIcons.featherPointed,
