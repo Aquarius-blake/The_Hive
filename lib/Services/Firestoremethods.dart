@@ -578,7 +578,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
                     }
                 );
             }else{
-                await  _firestore.collection("Posts").doc(postid).update(
+                await  _firestore.collection("Groups").doc(Groupid).collection("Posts").doc(postid).update(
                     {'likes':FieldValue.arrayUnion([author_uid]),
                         'nol':FieldValue.increment(1),
                     }
