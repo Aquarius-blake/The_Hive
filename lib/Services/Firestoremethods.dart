@@ -543,8 +543,14 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
 
   Future GroupPost(String Groupid)async{
-
-    try{}catch(e){}
+      String ress;
+    try{
+      ress="Post Successfully";
+      return ress;
+    }catch(e){
+      ress=e.toString();
+      return ress;
+    }
 
   }
 
