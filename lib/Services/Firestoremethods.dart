@@ -542,8 +542,9 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
 
 
-  Future<String> GroupPost(String Groupid,String uid,String Title,String Detail)async{
+  Future<String> GroupPost(String Groupid,String uid,String Title,String Detail,dynamic file,String author , String ppurl)async{
       String ress;
+      String photourl;
     try{
       ress="Post Successfully";
       return ress;
