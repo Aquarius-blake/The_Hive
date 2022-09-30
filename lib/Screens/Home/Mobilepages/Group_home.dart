@@ -343,7 +343,7 @@ _selectimage(BuildContext context)async{
               ),
              const SizedBox(height: 10,),
               SizedBox(
-                width: MediaQuery.of(context).size.width*0.95,
+                width: MediaQuery.of(context).size.width,
                 height:double.maxFinite,
                 child:  StreamBuilder(
           stream: FirebaseFirestore.instance.collection('Groups').doc(widget.snap['Group Uid']).collection("Posts").orderBy("Post Time",descending: true).snapshots(),
