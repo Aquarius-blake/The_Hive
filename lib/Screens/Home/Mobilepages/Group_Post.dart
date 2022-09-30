@@ -169,7 +169,7 @@ class _GrPostState extends State<GrPost> {
                                 floatingLabelAlignment: FloatingLabelAlignment.start,
                                 floatingLabelBehavior: FloatingLabelBehavior.always,
                             ),
-                            style: TextStyle(
+                            style: const TextStyle(
                               color:Colors.white,
                             ),
                           ),

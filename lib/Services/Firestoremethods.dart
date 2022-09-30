@@ -542,7 +542,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
 
 
-  Future<String> GroupPost(String Groupid)async{
+  Future<String> GroupPost(String Groupid,String uid)async{
       String ress;
     try{
       ress="Post Successfully";
