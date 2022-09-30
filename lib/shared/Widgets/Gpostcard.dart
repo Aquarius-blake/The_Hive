@@ -393,13 +393,7 @@ class _PostCardState extends State<PostCard> {
                                   )
                               );
                             }else{
-                              Navigator.of(context).push(
-                                  MaterialPageRoute(
-                                    builder: (context)=>McommentsScreen(
-                                      snap: widget.snap,
-                                    ),
-                                  )
-                              );
+                             
                             }
                           },
                           icon: const FaIcon(
