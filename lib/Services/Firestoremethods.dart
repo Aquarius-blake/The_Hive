@@ -555,6 +555,10 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             String postid= const Uuid().v1();
         Post gpost=Post(searchkey: Title.substring(0,1),author_uid: uid, postuid: postid, detail: Detail, author: author, Timeposted: DateTime.now(), likes:[], nol: 0,ppurl: ppurl,imageUrl: photourl,title: Title);
 
+        _firestore.collection("Groups").doc(Groupid).collection("Posts").doc(postid).set(
+            gpost.toJson(),
+            SetOptions(merge: true)
+            );
       
       ress="Post Successfully";
       return ress;
