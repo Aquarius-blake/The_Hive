@@ -547,11 +547,14 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       String photourl;
     try{
         if(file!=null){
-                photourl=await StorageMethods().Storageip("GroupPosts", file, false,Groupid);
+                photourl=await StorageMethods().Storageip("GroupPosts", file, true,Groupid);
             }
             else{
                 photourl="";
             }
+            String postid= const Uuid().v1();
+        Post gpost=Post(searchkey: Title.substring(0,1),author_uid: uid, postuid: postid, detail: Detail, author: author, Timeposted: DateTime.now(), likes:[], nol: 0,ppurl: ppurl,imageUrl: photourl,title: Title);
+
       
       ress="Post Successfully";
       return ress;
