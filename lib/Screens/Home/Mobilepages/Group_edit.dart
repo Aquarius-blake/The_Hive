@@ -24,6 +24,8 @@ dynamic image;
   final Upload Selection=Upload();
   TextEditingController groupname=TextEditingController();
   TextEditingController groupdesc=TextEditingController();
+  TextEditingController memalias=TextEditingController();
+  TextEditingController postalias=TextEditingController();
 
 
 _selectimage(BuildContext context)async{
@@ -181,6 +183,7 @@ _selectimage(BuildContext context)async{
                Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
+                  maxLines: 5,
                   controller: groupdesc,
                   style: const TextStyle(
                     color: Colors.white,
@@ -209,6 +212,77 @@ _selectimage(BuildContext context)async{
                   ),
                 ),
               ),
+               Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: memalias,
+                  style: const TextStyle(
+                    color: Colors.white,
+                  ),
+                  decoration: const InputDecoration(
+                    hintText: "Enter Member Alias here",
+                    hintStyle:  TextStyle(
+                      color: Colors.white,
+                    ),
+                    label: Text(
+                      "Member Alias",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      ),
+                    enabledBorder:  OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                    focusedBorder:  OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+               Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: postalias,
+                  style: const TextStyle(
+                    color: Colors.white,
+                  ),
+                  decoration: const InputDecoration(
+                    hintText: "Enter Post Alias here",
+                    hintStyle:  TextStyle(
+                      color: Colors.white,
+                    ),
+                    label: Text(
+                      "Post Alias",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      ),
+                    enabledBorder:  OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                    focusedBorder:  OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              Center(
+                child: ElevatedButton(
+                  onPressed: ()async{
+                    String content=await FirestoreMethods().UpdateGroup(widget.snap['Group Uid'], groupname.text, groupdesc.text, memalias.text, postalias.text,image);
+                    Showsnackbar(content, context);
+                  },
+                  child: const Text("Update"),
+                  ),
+              ),     
           ],
         ),
         )

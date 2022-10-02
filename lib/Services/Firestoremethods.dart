@@ -598,6 +598,9 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
   }
 
 
+  Future UpdateGroup(String uid,String Groupname,String Groupdesc,String memberalias,String postalias,dynamic file)async{}
+
+
 
 
 
