@@ -14,10 +14,14 @@ class _GchatscreenState extends State<Gchatscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
         title: Text(
-          widget.snap['Group Name']
+          widget.snap['Group Name'],
+          style: TextStyle(
+            color: Colors.white,
+          ),
           ),
       ),
     );
