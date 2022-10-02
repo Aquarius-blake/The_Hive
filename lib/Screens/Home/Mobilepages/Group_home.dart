@@ -349,7 +349,7 @@ _selectimage(BuildContext context)async{
           stream: FirebaseFirestore.instance.collection('Groups').doc(widget.snap['Group Uid']).collection("Posts").orderBy("Post Time",descending: true).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
         if(snapshot.connectionState==ConnectionState.waiting){
-            return Center(
+            return const Center(
               child: CircularProgressIndicator(),
             );
         }
