@@ -186,12 +186,12 @@ _selectimage(BuildContext context)async{
                     color: Colors.white,
                   ),
                   decoration: const InputDecoration(
-                    hintText: "Enter Group Name here",
+                    hintText: "Enter Group description here",
                     hintStyle:  TextStyle(
                       color: Colors.white,
                     ),
                     label: Text(
-                      "Group Name",
+                      "Group Description",
                       style: TextStyle(
                         color: Colors.white,
                       ),
