@@ -172,7 +172,9 @@ _selectimage(BuildContext context)async{
                     width: 10,
                     ),
                   widget.snap['Members'].contains(user1.UID)?ElevatedButton(
-                    onPressed: (){}, 
+                    onPressed: (){
+                      //TODO: leave group
+                    }, 
                     child: Row(
                       children:const [
                         Text(
@@ -204,7 +206,9 @@ _selectimage(BuildContext context)async{
                                   ),
                     ):
                   ElevatedButton(
-                    onPressed: (){}, 
+                    onPressed: (){
+                      //TODO: Join Group
+                    }, 
                     child: const Text(
                       "Join Group",
                       style: TextStyle(
