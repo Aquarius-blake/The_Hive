@@ -23,6 +23,9 @@ class _GchatscreenState extends State<Gchatscreen> {
             color: Colors.white,
           ),
           ),
+          iconTheme: IconThemeData(
+            color: Colors.white,
+          ),
       ),
     );
   }
