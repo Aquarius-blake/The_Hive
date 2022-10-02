@@ -122,7 +122,7 @@ _selectimage(BuildContext context)async{
                              Showsnackbar("No image selected", context);
                            }
                           },
-                          icon:  FaIcon(
+                          icon: const FaIcon(
                             FontAwesomeIcons.camera,
                             size: 50,
                             color:  Colors.white,
