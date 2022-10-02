@@ -14,7 +14,12 @@ class _GchatscreenState extends State<Gchatscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          widget.snap['Group Name']
+          ),
+      ),
     );
   }
 }
