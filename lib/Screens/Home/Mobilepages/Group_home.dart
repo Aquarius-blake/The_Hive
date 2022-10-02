@@ -372,13 +372,17 @@ _selectimage(BuildContext context)async{
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: (){
-          Navigator.of(context).push(
+          if(widget.snap['Members'].contains(user1.UID)==true){
+            Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context)=>GrPost(
                                   snap: widget.snap,
                                 ),
                               )
                           );
+          }else{
+            Showsnackbar("Access Denied, please join group", context);
+          }
         },
       child: const FaIcon(
         FontAwesomeIcons.featherPointed,
