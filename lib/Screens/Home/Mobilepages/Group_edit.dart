@@ -22,6 +22,7 @@ class _GeditState extends State<Gedit> {
 
 dynamic image;
   final Upload Selection=Upload();
+  TextEditingController groupname=TextEditingController();
 
 
 _selectimage(BuildContext context)async{
@@ -128,13 +129,53 @@ _selectimage(BuildContext context)async{
                       Positioned(
                         left: 10,
                         bottom: -50,
-                        child: CircleAvatar(
-                          radius: 50,
-                          backgroundColor: Colors.lightBlueAccent,
-                          backgroundImage: NetworkImage(widget.snap['Group Pic']),
-                          ),
+                        child: GestureDetector(
+                          onTap: ()async{
+                            await _selectimage(context);
+                          },
+                          child: CircleAvatar(
+                            radius: 50,
+                            backgroundColor: Colors.lightBlueAccent,
+                            backgroundImage: image==null? NetworkImage(widget.snap['Group Pic']):Image.memory(image).image,
+                            ),
                         ),
+                        ),
+                       
                 ],
+              ),
+            const  SizedBox(
+                height: 50,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: TextField(
+                  controller: groupname,
+                  style: const TextStyle(
+                    color: Colors.white,
+                  ),
+                  decoration: const InputDecoration(
+                    hintText: "Enter Group Name here",
+                    hintStyle:  TextStyle(
+                      color: Colors.white,
+                    ),
+                    label: Text(
+                      "Group Name",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                      ),
+                    enabledBorder:  OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                    focusedBorder:  OutlineInputBorder(
+                      borderSide: BorderSide(
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ),
               ),
           ],
         ),
