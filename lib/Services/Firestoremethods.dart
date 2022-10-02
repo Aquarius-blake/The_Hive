@@ -598,7 +598,34 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
   }
 
 
-  Future UpdateGroup(String uid,String Groupname,String Groupdesc,String memberalias,String postalias,dynamic file)async{}
+  Future<String> UpdateGroup(String uid,String Groupname,String Groupdesc,String memberalias,String postalias,dynamic file)async{
+    String ress;
+    String photourl;
+    String key=Groupname.substring(0,1);
+    try{
+      if(file!=null){
+        photourl=await StorageMethods().Storageip("Group Profile", file, true,uid);
+      }
+      else{
+        photourl="";
+      }
+      _firestore.collection("Groups").doc(uid).update(
+        {"Group Name":Groupname,
+        "Group Description":Groupdesc,
+        "Identity":memberalias,
+        "Post Name":postalias,
+        "Group Pic":photourl,
+        "searchkey":key,
+        },
+      );
+      ress="Group Updated Successfully";
+      return ress;
+    }catch(e){
+      ress=e.toString();
+      return ress;
+    }
+
+  }
 
 
 
