@@ -16,6 +16,7 @@ class _GchatscreenState extends State<Gchatscreen> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         centerTitle: true,
         title: Row(
           children: [
