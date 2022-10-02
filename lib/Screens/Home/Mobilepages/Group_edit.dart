@@ -274,13 +274,31 @@ _selectimage(BuildContext context)async{
                   ),
                 ),
               ),
+             const SizedBox(
+                height: 20,
+                ),
               Center(
                 child: ElevatedButton(
                   onPressed: ()async{
                     String content=await FirestoreMethods().UpdateGroup(widget.snap['Group Uid'], groupname.text, groupdesc.text, memalias.text, postalias.text,image);
                     Showsnackbar(content, context);
                   },
-                  child: const Text("Update"),
+                  child: const Padding(
+                    padding:  EdgeInsets.all(15.0),
+                    child:  Text("Update"),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    elevation: 6.0,
+                                      shadowColor: Colors.black,
+                                      primary: Colors.black,
+                                      side: const BorderSide(
+                                        color: Colors.blue,
+                                       width: 2.0,
+                                      ),
+                                      shape: RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.circular(100.0)
+                                      )
+                  ),
                   ),
               ),     
           ],
