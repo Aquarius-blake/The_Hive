@@ -19,7 +19,7 @@ class _GchatscreenState extends State<Gchatscreen> {
         centerTitle: true,
         title: Text(
           widget.snap['Group Name'],
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.white,
           ),
           ),
