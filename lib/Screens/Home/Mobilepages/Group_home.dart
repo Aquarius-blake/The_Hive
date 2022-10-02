@@ -381,7 +381,7 @@ _selectimage(BuildContext context)async{
                               )
                           );
           }else{
-            Showsnackbar("Access Denied, please join group", context);
+            Showsnackbar("Access Denied, please join group first", context);
           }
         },
       child: const FaIcon(
