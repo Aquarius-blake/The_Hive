@@ -13,7 +13,7 @@ class Gchatscreen extends StatefulWidget {
 class _GchatscreenState extends State<Gchatscreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
       
     );
   }
