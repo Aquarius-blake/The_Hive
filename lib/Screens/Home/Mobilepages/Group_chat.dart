@@ -17,12 +17,22 @@ class _GchatscreenState extends State<Gchatscreen> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
-        title: Text(
-          widget.snap['Group Name'],
-          style: const TextStyle(
-            color: Colors.white,
-          ),
-          ),
+        title: Row(
+          children: [
+            CircleAvatar(
+              backgroundColor: Colors.transparent,
+              backgroundImage: NetworkImage(
+                widget.snap['Group Pic'],
+              ),
+            ),
+            Text(
+              widget.snap['Group Name'],
+              style: const TextStyle(
+                color: Colors.white,
+              ),
+              ),
+          ],
+        ),
           iconTheme:const IconThemeData(
             color: Colors.white,
           ),
