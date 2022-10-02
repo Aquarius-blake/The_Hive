@@ -25,6 +25,7 @@ class _GchatscreenState extends State<Gchatscreen> {
                 widget.snap['Group Pic'],
               ),
             ),
+          const  SizedBox(width: 10,),
             Text(
               widget.snap['Group Name'],
               style: const TextStyle(
