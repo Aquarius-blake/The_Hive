@@ -181,7 +181,7 @@ _selectimage(BuildContext context)async{
                Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
-                  controller: groupname,
+                  controller: groupdesc,
                   style: const TextStyle(
                     color: Colors.white,
                   ),
