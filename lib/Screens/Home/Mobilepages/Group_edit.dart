@@ -282,6 +282,9 @@ _selectimage(BuildContext context)async{
                   onPressed: ()async{
                     String content=await FirestoreMethods().UpdateGroup(widget.snap['Group Uid'], groupname.text, groupdesc.text, memalias.text, postalias.text,image);
                     Showsnackbar(content, context);
+                    if(groupdesc.text==""|| groupname==""|| memalias==""|| postalias==""){
+                      Showsnackbar("Please fill all the fields", context);
+                    }
                   },
                   child: const Padding(
                     padding:  EdgeInsets.all(15.0),

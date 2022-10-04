@@ -610,7 +610,8 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         photourl="";
       }
       _firestore.collection("Groups").doc(uid).update(
-        {"Group Name":Groupname,
+        { 
+        "Group Name":Groupname,
         "Group Description":Groupdesc,
         "Identity":memberalias,
         "Post Name":postalias,
