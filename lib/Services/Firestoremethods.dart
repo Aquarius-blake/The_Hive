@@ -609,7 +609,8 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       else{
         photourl="";
       }
-      _firestore.collection("Groups").doc(uid).update(
+      if(photourl!=""){
+        _firestore.collection("Groups").doc(uid).update(
         { 
         "Group Name":Groupname,
         "Group Description":Groupdesc,
@@ -619,6 +620,18 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         "searchkey":key,
         },
       );
+      }else{
+        _firestore.collection("Groups").doc(uid).update(
+        { 
+        "Group Name":Groupname,
+        "Group Description":Groupdesc,
+        "Identity":memberalias,
+        "Post Name":postalias,
+        "searchkey":key,
+        },
+      );
+      }
+      
       ress="Group Updated Successfully";
       return ress;
     }catch(e){
