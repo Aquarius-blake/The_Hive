@@ -300,7 +300,10 @@ _selectimage(BuildContext context)async{
                                       )
                   ),
                   ),
-              ),     
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height*0.1,
+                ),     
           ],
         ),
         )
