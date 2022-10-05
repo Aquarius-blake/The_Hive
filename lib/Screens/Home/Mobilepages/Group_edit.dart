@@ -21,14 +21,14 @@ class Gedit extends StatefulWidget {
 class _GeditState extends State<Gedit> {
 
 dynamic image;
+dynamic image2;
   final Upload Selection=Upload();
   TextEditingController groupname=TextEditingController();
   TextEditingController groupdesc=TextEditingController();
   TextEditingController memalias=TextEditingController();
   TextEditingController postalias=TextEditingController();
 
-
-_selectimage(BuildContext context)async{
+_selectimage2(BuildContext context)async{
     return showDialog(
         context: context,
         builder: (context){
@@ -54,6 +54,49 @@ _selectimage(BuildContext context)async{
                   dynamic file=await Selection.uploadpic(ImageSource.gallery);
                   setState(() {
                     image=file;
+                  });
+                },
+              ),
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text("Cancel"),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        }
+    );
+  }
+
+
+_selectimage(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: const Text("Set Group Header Picture"),
+            children: [
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text("Take a Photo"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.camera);
+                  setState(() {
+                    image2=file;
+                  });
+                },
+              ),
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: const Text("Choose from gallery"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                  dynamic file=await Selection.uploadpic(ImageSource.gallery);
+                  setState(() {
+                    image2=file;
                   });
                 },
               ),
@@ -111,9 +154,9 @@ _selectimage(BuildContext context)async{
                         left: 150,
                         child: IconButton(
                           onPressed: ()async{
-                           await _selectimage(context);
+                           await _selectimage2(context);
                            if(image!=null){
-                           String content= await FirestoreMethods().UpdateHeader(widget.snap['Group Uid'], image);
+                           String content= await FirestoreMethods().UpdateHeader(widget.snap['Group Uid'], image2);
                            Showsnackbar(content, context);
                            setState(() {
                              
