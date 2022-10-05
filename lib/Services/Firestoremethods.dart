@@ -640,7 +640,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
   }
 
-  Future JoinGroup(String Groupid,User1 user)async{
+  Future<String> JoinGroup(String Groupid,User1 user)async{
     String ress;
     try{
       _firestore.collection("Groups").doc(Groupid).collection("Members").doc(user.UID).set(
