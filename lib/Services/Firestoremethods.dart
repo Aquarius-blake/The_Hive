@@ -640,6 +640,22 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
   }
 
+  Future JoinGroup(String Groupid,User1 user)async{
+    String ress;
+    try{
+      _firestore.collection("Groups").doc(Groupid).collection("Members").doc(user.UID).set(
+        user.toJson(),
+        SetOptions(merge: true)
+      );
+      ress="Group Joined Successfully";
+      return ress;
+    }
+    catch(e){
+      ress=e.toString();
+      return ress;
+    }
+  }
+
 
 
 
