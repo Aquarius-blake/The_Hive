@@ -661,6 +661,23 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
+  Future<String> Leavegroup(String Groupid,User1 user)async{
+    String ress;
+    try{
+      _firestore.collection("Groups").doc(Groupid).update(
+        {"Members":FieldValue.arrayRemove([user.UID])},
+      );
+
+      _firestore.collection("Groups").doc(Groupid).collection("Members").doc(user.UID).delete();
+      ress="Successfully Left Group";
+      return ress;
+    }
+    catch(e){
+      ress=e.toString();
+      return ress;
+    }
+  }
+
 
 
 
