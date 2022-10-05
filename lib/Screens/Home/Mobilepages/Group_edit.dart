@@ -332,10 +332,13 @@ _selectimage(BuildContext context)async{
               Center(
                 child: ElevatedButton(
                   onPressed: ()async{
-                    String content=await FirestoreMethods().UpdateGroup(widget.snap['Group Uid'], groupname.text, groupdesc.text, memalias.text, postalias.text,image);
-                    Showsnackbar(content, context);
+                    
                     if(groupdesc.text==""|| groupname==""|| memalias==""|| postalias==""){
                       Showsnackbar("Please fill all the fields", context);
+                    }else{
+                       String content=await FirestoreMethods().UpdateGroup(widget.snap['Group Uid'], groupname.text, groupdesc.text, memalias.text, postalias.text,image);
+                    Showsnackbar(content, context);
+                    Navigator.of(context).pop();
                     }
                   },
                   child: const Padding(
