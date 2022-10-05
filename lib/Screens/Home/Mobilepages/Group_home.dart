@@ -235,7 +235,6 @@ _selectimage(BuildContext context)async{
                     setState(() {
                       
                     });
-                    
                     }, 
                     child: const Text(
                       "Join Group",
