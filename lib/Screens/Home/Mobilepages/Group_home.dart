@@ -28,6 +28,11 @@ class _GhomeState extends State<Ghome> {
 dynamic image;
   final Upload Selection=Upload();
 
+@override
+void didChangeDependencies() {
+  super.didChangeDependencies();
+  
+}
 
 _selectimage(BuildContext context)async{
     return showDialog(

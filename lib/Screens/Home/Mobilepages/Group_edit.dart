@@ -29,9 +29,9 @@ dynamic image2;
   TextEditingController postalias=TextEditingController();
 
   @override
-  void didChangeDependencies() {
-    super.didChangeDependencies();
-    widget.snap["Group Name"]!=null?groupname.text=widget.snap["Group Name"]:"";
+  void initState() {
+    super.initState();
+     widget.snap["Group Name"]!=null?groupname.text=widget.snap["Group Name"]:"";
     widget.snap["Group Description"]!=null?groupdesc.text=widget.snap["Group Description"]:"";
     widget.snap["Identity"]!=null?memalias.text=widget.snap["Identity"]:"";
     widget.snap["Post Name"]!=null?postalias.text=widget.snap["Post Name"]:"";
