@@ -26,6 +26,7 @@ class Ghome extends StatefulWidget {
 
 class _GhomeState extends State<Ghome> {
 dynamic image;
+late bool memstate;
   final Upload Selection=Upload();
 
 @override
@@ -195,6 +196,7 @@ _selectimage(BuildContext context)async{
                     onPressed: ()async{
                      String content=await FirestoreMethods().Leavegroup(widget.snap['Group Uid'], user1);
                       Showsnackbar(content, context);
+                      Navigator.of(context).pop();
                     }, 
                     child: Row(
                       children:const [
