@@ -647,6 +647,11 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         user.toJson(),
         SetOptions(merge: true)
       );
+
+      _firestore.collection("Groups").doc(Groupid).update(
+        {"members":FieldValue.arrayUnion([user.UID])},
+      );
+
       ress="Group Joined Successfully";
       return ress;
     }
