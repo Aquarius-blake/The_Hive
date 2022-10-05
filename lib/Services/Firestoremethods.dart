@@ -605,8 +605,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     try{
       if(file!=null){
         photourl=await StorageMethods().Storageip("Group Profile", file, true,uid);
-      }
-      else{
+      }else{
         photourl="";
       }
       if(photourl!=""){
