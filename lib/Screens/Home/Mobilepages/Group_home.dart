@@ -227,8 +227,8 @@ _selectimage(BuildContext context)async{
                     ):
                   ElevatedButton(
                     onPressed: ()async{
-                      //TODO: Join Group
-                     await FirestoreMethods().JoinGroup(widget.snap['Group Uid'], user1);
+                    String content= await FirestoreMethods().JoinGroup(widget.snap['Group Uid'], user1);
+                    Showsnackbar(content, context);
                     }, 
                     child: const Text(
                       "Join Group",
