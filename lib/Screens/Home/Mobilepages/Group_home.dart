@@ -31,7 +31,9 @@ dynamic image;
 @override
 void didChangeDependencies() {
   super.didChangeDependencies();
-  
+  setState(() {
+    
+  });
 }
 
 _selectimage(BuildContext context)async{
