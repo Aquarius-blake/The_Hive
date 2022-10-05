@@ -192,8 +192,9 @@ _selectimage(BuildContext context)async{
                     width: 10,
                     ),
                   widget.snap['Members'].contains(user1.UID)?ElevatedButton(
-                    onPressed: (){
-                      //TODO: leave group
+                    onPressed: ()async{
+                     String content=await FirestoreMethods().Leavegroup(widget.snap['Group Uid'], user1);
+                      Showsnackbar(content, context);
                     }, 
                     child: Row(
                       children:const [
