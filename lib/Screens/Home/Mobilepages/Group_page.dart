@@ -17,6 +17,15 @@ class GroupPage extends StatefulWidget {
 }
 
 class _GroupPageState extends State<GroupPage> {
+
+@override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    setState(() {
+      
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
