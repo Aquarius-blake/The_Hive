@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/Comment_card.dart';
+import 'package:forum3/shared/Widgets/Groupcommentcard.dart';
 import 'package:provider/provider.dart';
 
 import '../../../Models/Users1.dart';
@@ -22,9 +23,9 @@ class GcommentsScreen extends StatefulWidget {
 class _GcommentsScreenState extends State<GcommentsScreen> {
 dynamic image;
 
-  commenting(String postid, String textt,String author_uid,String author,String ppurl,String title,String onweruid) async{
-    String ress=await FirestoreMethods().postcomment(postid, textt, author_uid, author, ppurl,title,onweruid);
-    if( ress=="Comment success"){
+  commenting(String groupid,String postid, String textt,String author_uid,String author,String ppurl,String title,String onweruid) async{
+    String ress=await FirestoreMethods().Groupcomment(groupid,postid, textt, author_uid, author, ppurl);
+    if( ress=="Commented Successfully"){
       Showsnackbar(ress, context);
     }else if(ress=="Empty field"){
       ress="Please Enter text";
@@ -98,7 +99,7 @@ text.dispose();
             return ListView.builder(
                 itemCount: snapshots.data!.docs.length,
                 itemBuilder: (context, index) => Container(
-                  child: Commentcard(
+                  child: GCommentcard(
                     snap: snapshots.data!.docs[index].data(),
                     postid: widget.snap['Post Uid'],
                   ),
@@ -143,7 +144,15 @@ text.dispose();
                 ElevatedButton(
                     onPressed: ()async{
                      try {
-                      
+                       commenting(
+                        widget.groupid,
+                           widget.snap['Post Uid'],
+                           text.text,
+                           user1.UID!,
+                           user1.Username!,
+                           user1.ppurl!,
+                           widget.snap['title'],
+                           widget.snap['author uid']);
                      }catch(e){
                        Showsnackbar(e.toString(), context);
                      }

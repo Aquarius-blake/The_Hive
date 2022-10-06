@@ -704,7 +704,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
                 ress="Commented Successfully";
                 return ress;
                 }else{
-                  ress="Comment Cannot be Empty";
+                  ress="Empty field";
                   return ress;
                 }
     }
