@@ -142,14 +142,7 @@ text.dispose();
                 ElevatedButton(
                     onPressed: ()async{
                      try {
-                       commenting(
-                           widget.snap['Post Uid'],
-                           text.text,
-                           user1.UID!,
-                           user1.Username!,
-                           user1.ppurl!,
-                           widget.snap['title'],
-                           widget.snap['author uid']);
+                      
                      }catch(e){
                        Showsnackbar(e.toString(), context);
                      }
