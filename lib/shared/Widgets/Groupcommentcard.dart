@@ -11,16 +11,16 @@ import '../../Screens/Home/Mobilepages/Meditcomment.dart';
 import '../Pop_up.dart';
 
 //TODO: Replace codes
-class Commentcard extends StatefulWidget {
+class GCommentcard extends StatefulWidget {
   final snap;
   final postid;
-  const Commentcard({Key? key,this.snap,this.postid}) : super(key: key);
+  const GCommentcard({Key? key,this.snap,this.postid}) : super(key: key);
 
   @override
-  State<Commentcard> createState() => _CommentcardState();
+  State<GCommentcard> createState() => _GCommentcardState();
 }
 
-class _CommentcardState extends State<Commentcard> {
+class _GCommentcardState extends State<GCommentcard> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
