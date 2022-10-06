@@ -680,7 +680,23 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
   Future Groupcomment(String groupid,String postid, String text,String author_uid,String author,String ppurl)async{
   String ress;
-    try{}
+    try{
+      if(text.isNotEmpty){
+                String commentid=const Uuid().v1();
+                Comments comments=Comments(
+                    author_uid: author_uid,
+                    commentuid: commentid,
+                    detail: text,
+                    author: author,
+                    Timeposted: DateTime.now(),
+                    ppurl: ppurl
+                );
+                await _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).collection("Comments").doc(commentid).set(
+                    comments.toJson(),
+                    SetOptions(merge: true)
+                );
+                }
+    }
     catch(e){
       print(e.toString());
       ress=e.toString();
