@@ -678,7 +678,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
-  Future Groupcomment()async{}
+  Future Groupcomment(String groupid)async{}
 
 
 
