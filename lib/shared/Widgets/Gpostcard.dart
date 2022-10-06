@@ -191,7 +191,7 @@ class _GPostCardState extends State<GPostCard> {
   }
 
 
-  getcommentlen()async{
+/*  getcommentlen()async{
     try{
       QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").get();
       setState(() {
@@ -200,7 +200,7 @@ class _GPostCardState extends State<GPostCard> {
     catch(e){
       Showsnackbar(e.toString(), context);
     }
-  }
+  }*/
 
   void likedf(String authoruid,List list){
     setState(() {
@@ -212,7 +212,7 @@ class _GPostCardState extends State<GPostCard> {
   @override
   void initState() {
     super.initState();
-    getcommentlen();
+  //  getcommentlen();
   }
 
   @override
@@ -378,7 +378,7 @@ class _GPostCardState extends State<GPostCard> {
                           child: SizedBox()
                       ),
                       Text(
-                        "$commentlen",
+                        "${widget.snap['nocomments']}",
                         style: const TextStyle(
                           color: Colors.white,
                         ),
