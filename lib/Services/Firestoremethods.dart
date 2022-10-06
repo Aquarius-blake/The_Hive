@@ -700,6 +700,12 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
                         'nocomments':FieldValue.increment(1),
                     }
                 );
+
+                ress="Commented Successfully";
+                return ress;
+                }else{
+                  ress="Comment Cannot be Empty";
+                  return ress;
                 }
     }
     catch(e){
