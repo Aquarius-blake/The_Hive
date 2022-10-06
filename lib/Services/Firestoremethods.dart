@@ -695,6 +695,11 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
                     comments.toJson(),
                     SetOptions(merge: true)
                 );
+                await _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).update(
+                    {
+                        'nocomments':FieldValue.increment(1),
+                    }
+                );
                 }
     }
     catch(e){
