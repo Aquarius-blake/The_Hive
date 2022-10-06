@@ -10,15 +10,16 @@ import '../../../Provider/user_provider.dart';
 
 //TODO:Replace code
 
-class McommentsScreen extends StatefulWidget {
+class GcommentsScreen extends StatefulWidget {
   final snap;
-  const McommentsScreen({Key? key,this.snap}) : super(key: key);
+  final groupid;
+  const GcommentsScreen({Key? key,this.snap,this.groupid}) : super(key: key);
 
   @override
-  State<McommentsScreen> createState() => _McommentsScreenState();
+  State<GcommentsScreen> createState() => _GcommentsScreenState();
 }
 
-class _McommentsScreenState extends State<McommentsScreen> {
+class _GcommentsScreenState extends State<GcommentsScreen> {
 dynamic image;
 
   commenting(String postid, String textt,String author_uid,String author,String ppurl,String title,String onweruid) async{
