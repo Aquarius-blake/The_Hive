@@ -83,7 +83,7 @@ TextEditingController text=TextEditingController();
                         ),
                         border: InputBorder.none,
                       ),
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                       ),
                     ),
