@@ -733,6 +733,8 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
+  Future<String> EditGroupPost()async{}
+
 
 
 
