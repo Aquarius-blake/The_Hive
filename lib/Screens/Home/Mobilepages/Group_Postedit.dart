@@ -9,16 +9,16 @@ import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 import '../../../Services/Upload.dart';
 
-class Mobeditpost extends StatefulWidget {
+class Geditpost extends StatefulWidget {
   final snap;
   final groupid;
-  const Mobeditpost({Key? key,this.snap,this.groupid}) : super(key: key);
+  const Geditpost({Key? key,this.snap,this.groupid}) : super(key: key);
 
   @override
-  State<Mobeditpost> createState() => _MobeditpostState();
+  State<Geditpost> createState() => _GeditpostState();
 }
 
-class _MobeditpostState extends State<Mobeditpost> {
+class _GeditpostState extends State<Geditpost> {
   dynamic _image;
   Upload Selection=Upload();
   final TextEditingController _title=TextEditingController();
