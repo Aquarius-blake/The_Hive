@@ -79,6 +79,34 @@ _selectimage2(BuildContext context)async{
     );
   }
 
+_deleteconfirm(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: const Text("Are you sure you want to delete this group?"),
+            children: [
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text("Yes, Delete"),
+                onPressed: ()async{
+                  
+                },
+              ),
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: const Text("No, this was a mistake"),
+                onPressed: ()async{
+                  Navigator.of(context).pop();
+                },
+              ),
+              
+            ],
+          );
+        }
+    );
+  }
+
 
 _selectimage(BuildContext context)async{
     return showDialog(
@@ -141,6 +169,17 @@ _selectimage(BuildContext context)async{
             color:Colors.white,
           ),
           ),
+          actions: [
+            TextButton(
+              onPressed: (){},
+              child: const Text(
+                "Delete Group",
+                style: TextStyle(
+                  color: Colors.blue,
+                ),
+                ),
+            )
+          ],
       ),
       body:SingleChildScrollView(
         child: Column(
