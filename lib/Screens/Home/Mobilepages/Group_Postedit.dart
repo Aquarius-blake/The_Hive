@@ -182,6 +182,15 @@ _detail.text=widget.snap['detail'];
                             decoration: const InputDecoration(
                               hintText: "Write Something.....",
                               border: InputBorder.none,
+                              hintStyle: TextStyle(
+                                color: Colors.white,
+                              ),
+                              label: Text(
+                                "Detail",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                ),
+                              )
                             ),
                             style:const TextStyle(
                               color: Colors.white,
@@ -189,7 +198,9 @@ _detail.text=widget.snap['detail'];
                           ),
                         ),
                         Post(),
-                        const Divider(),
+                        const Divider(
+                          color: Colors.white,
+                        ),
                         Row(
                           children: [
                             IconButton(
