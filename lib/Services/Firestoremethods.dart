@@ -777,6 +777,19 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
+  Future<String> Deletegroup(String groupid)async{
+    String ress;
+    try{
+      await _firestore.collection("Groups").doc(groupid).delete();
+      ress="Group Deleted Successfully";
+      return ress;
+    }catch(e){
+      print(e.toString());
+      ress=e.toString();
+      return ress;
+    }
+  }
+
 
 
 
