@@ -123,6 +123,7 @@ _detail.text=widget.snap['detail'];
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
         centerTitle: true,
@@ -141,7 +142,7 @@ _detail.text=widget.snap['detail'];
             child: Column(
               children: [
                 _isloading? const LinearProgressIndicator():Container(),
-                SizedBox(height: 10,),
+               const SizedBox(height: 10,),
                 Card(
                   color:Colors.black,
                   child: Padding(
@@ -195,15 +196,18 @@ _detail.text=widget.snap['detail'];
                               onPressed: ()=>_selectimage(context),
                               icon: const Icon(
                                 Icons.add_a_photo,
+                                color: Colors.white,
                               ),
                             ),
-                            IconButton(onPressed: (){
+                            IconButton(
+                              onPressed: (){
                               setState(() {
                                 _image=null;
                               });
                             },
                                 icon: const Icon(
-                                Icons.remove_circle
+                                Icons.remove_circle,
+                                color:Colors.white
                             )
                             )
                           ],
