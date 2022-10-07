@@ -90,7 +90,7 @@ _deleteconfirm(BuildContext context)async{
                 padding: const EdgeInsets.all(15.0),
                 child: const Text("Yes, Delete"),
                 onPressed: ()async{
-                  
+                  await FirestoreMethods().Deletegroup(widget.snap["Group Uid"]);
                   setState(() {
                     pop=true;
                   });
