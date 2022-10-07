@@ -14,7 +14,8 @@ import '../Pop_up.dart';
 class GCommentcard extends StatefulWidget {
   final snap;
   final postid;
-  const GCommentcard({Key? key,this.snap,this.postid}) : super(key: key);
+  final groupid;
+  const GCommentcard({Key? key,this.snap,this.postid,this.groupid}) : super(key: key);
 
   @override
   State<GCommentcard> createState() => _GCommentcardState();
