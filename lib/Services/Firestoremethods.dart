@@ -746,7 +746,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
                 }
                 );
                 if(title!=""){
-                    await   _firestore.collection("Posts").doc(postid).update({
+                    await   _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).update({
                         'title':title,
                         'searchkey':title.substring(0,1)
                     });
