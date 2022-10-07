@@ -717,13 +717,15 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
   }
 
 
-  Future Deletegroupost(String groupid,String postid)async{
+  Future<String> Deletegroupost(String groupid,String postid)async{
     String ress;
     try{
       await _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).delete();
       await _firestore.collection("Groups").doc(groupid).update(
         {"noP":FieldValue.increment(-1)},
       );
+      ress="Post Deleted Successfully";
+      return ress;
     }catch(e){
       print(e.toString());
       ress=e.toString();
