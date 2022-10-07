@@ -169,6 +169,12 @@ _detail.text=widget.snap['detail'];
                             hintStyle: TextStyle(
                               color: Colors.white,
                             ),
+                            label: Text(
+                              "Title",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
                           ),
                           style:const TextStyle(
                             color: Colors.white,
