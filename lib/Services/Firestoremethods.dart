@@ -790,6 +790,22 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
+  Future<String> Deletegroupcomment(String groupid,String postid,String commentid)async{
+    String ress;
+    try{
+      await _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).collection("Comments").doc(commentid).delete();
+      await _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).update(
+        {"nocomments":FieldValue.increment(-1)},
+      );
+      ress="Comment Deleted Successfully";
+      return ress;
+    }catch(e){
+      print(e.toString());
+      ress=e.toString();
+      return ress;
+    }
+  }
+
 
 
 
