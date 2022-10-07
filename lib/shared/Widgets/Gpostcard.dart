@@ -3,6 +3,7 @@ import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Group_Postedit.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_commentscreen.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mcomments_screen.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Meditpost.dart';
@@ -98,8 +99,9 @@ class _GPostCardState extends State<GPostCard> {
                   }else{
                     Navigator.of(context).push(
                         MaterialPageRoute(
-                          builder: (context)=>Mobeditpost(
+                          builder: (context)=>Geditpost(
                             snap: widget.snap,
+                            groupid: widget.Groupid,
                           ),
                         )
                     );
