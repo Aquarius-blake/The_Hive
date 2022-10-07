@@ -738,8 +738,8 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     String photourl;
     try{
       if(image!=null && upload){
-                photourl=await StorageMethods().Storageip("Posts", image, true,null);
-                await  _firestore.collection("Posts").doc(postid).update({
+                photourl=await StorageMethods().Storageip("GroupPosts", image, true,null);
+                await  _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
                     'Image Url':photourl,
                     'detail':details
