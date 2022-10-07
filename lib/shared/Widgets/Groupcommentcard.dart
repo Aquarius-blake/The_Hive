@@ -127,7 +127,7 @@ class _GCommentcardState extends State<GCommentcard> {
                   ),
                   TextButton(
                       onPressed: ()async{
-                        String ress= await FirestoreMethods().Deletecomment(widget.postid, widget.snap['Comment Uid']);
+                        String ress= await FirestoreMethods().Deletegroupcomment(widget.groupid,widget.postid, widget.snap['Comment Uid']);
                         Showsnackbar(ress, context);
                       },
                       child: const Text(
