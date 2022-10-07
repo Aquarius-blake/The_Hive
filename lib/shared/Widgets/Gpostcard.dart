@@ -115,7 +115,7 @@ class _GPostCardState extends State<GPostCard> {
                   ),
                 ),
                 onPressed: ()async{
-                  String ress=  await FirestoreMethods().Deletepost(widget.snap['Post Uid']);
+                  String ress=  await FirestoreMethods().Deletegroupost(widget.Groupid,widget.snap['Post Uid']);
                   Showsnackbar(ress, context);
                   Navigator.of(context).pop();
                 },
