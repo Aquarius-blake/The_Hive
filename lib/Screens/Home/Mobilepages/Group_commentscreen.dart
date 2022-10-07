@@ -102,6 +102,7 @@ text.dispose();
                   child: GCommentcard(
                     snap: snapshots.data!.docs[index].data(),
                     postid: widget.snap['Post Uid'],
+                    groupid: widget.groupid,
                   ),
                 )
             );
