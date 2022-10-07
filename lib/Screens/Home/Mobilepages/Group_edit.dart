@@ -19,7 +19,7 @@ class Gedit extends StatefulWidget {
 }
 
 class _GeditState extends State<Gedit> {
-
+bool pop=false;
 dynamic image;
 dynamic image2;
   final Upload Selection=Upload();
@@ -91,6 +91,9 @@ _deleteconfirm(BuildContext context)async{
                 child: const Text("Yes, Delete"),
                 onPressed: ()async{
                   
+                  setState(() {
+                    pop=true;
+                  });
                 },
               ),
               SimpleDialogOption(
@@ -98,6 +101,9 @@ _deleteconfirm(BuildContext context)async{
                 child: const Text("No, this was a mistake"),
                 onPressed: ()async{
                   Navigator.of(context).pop();
+                  setState(() {
+                    pop=false;
+                  });
                 },
               ),
               
@@ -171,7 +177,12 @@ _selectimage(BuildContext context)async{
           ),
           actions: [
             TextButton(
-              onPressed: (){},
+              onPressed: ()async{
+               await _deleteconfirm(context);
+               if(pop==true){
+                Navigator.of(context).pop();
+                }
+              },
               child: const Text(
                 "Delete Group",
                 style: TextStyle(
