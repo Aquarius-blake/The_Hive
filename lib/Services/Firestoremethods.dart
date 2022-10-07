@@ -733,7 +733,17 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
-  Future<String> EditGroupPost()async{}
+  Future<String> EditGroupPost(String groupid,String title)async{
+    String ress;
+    try{
+      ress="Post Edited Successfully";
+      return ress;
+    }catch(e){
+      print(e.toString());
+      ress=e.toString();
+      return ress;
+    }
+  }
 
 
 
