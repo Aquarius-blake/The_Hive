@@ -748,7 +748,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
                 if(title!=""){
                     await   _firestore.collection("Posts").doc(postid).update({
                         'title':title,
-                        'searchkey':title!.substring(0,1)
+                        'searchkey':title.substring(0,1)
                     });
                 }
 
@@ -763,7 +763,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
                 if(title!=""){
                     await    _firestore.collection("Posts").doc(postid).update({
                         'title':title,
-                        'searchkey':title!.substring(0,1)
+                        'searchkey':title.substring(0,1)
 
                     });
                 }
