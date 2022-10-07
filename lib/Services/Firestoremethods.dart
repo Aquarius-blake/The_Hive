@@ -733,9 +733,41 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
-  Future<String> EditGroupPost(String groupid,String title,String detail,dynamic image, bool upload)async{
+  Future<String> EditGroupPost(String groupid,String postid,String title,String details,dynamic image, bool upload)async{
     String ress;
+    String photourl;
     try{
+      if(image!=null && upload){
+                photourl=await StorageMethods().Storageip("Posts", image, true,null);
+                await  _firestore.collection("Posts").doc(postid).update({
+                    'Post Time':DateTime.now(),
+                    'Image Url':photourl,
+                    'detail':details
+                }
+                );
+                if(title!=""){
+                    await   _firestore.collection("Posts").doc(postid).update({
+                        'title':title,
+                        'searchkey':title!.substring(0,1)
+                    });
+                }
+
+            }else{
+                photourl="";
+                await  _firestore.collection("Posts").doc(postid).update({
+                    'Post Time':DateTime.now(),
+                    'Image Url':photourl,
+                    'detail':details
+                }
+                );
+                if(title!=""){
+                    await    _firestore.collection("Posts").doc(postid).update({
+                        'title':title,
+                        'searchkey':title!.substring(0,1)
+
+                    });
+                }
+            }
       ress="Post Edited Successfully";
       return ress;
     }catch(e){
