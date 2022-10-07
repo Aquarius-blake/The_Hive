@@ -94,6 +94,7 @@ _deleteconfirm(BuildContext context)async{
                   setState(() {
                     pop=true;
                   });
+                  Navigator.of(context).pop();
                 },
               ),
               SimpleDialogOption(
