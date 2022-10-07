@@ -754,14 +754,14 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
             }else{
                 photourl="";
-                await  _firestore.collection("Posts").doc(postid).update({
+                await  _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).update({
                     'Post Time':DateTime.now(),
                     'Image Url':photourl,
                     'detail':details
                 }
                 );
                 if(title!=""){
-                    await    _firestore.collection("Posts").doc(postid).update({
+                    await    _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).update({
                         'title':title,
                         'searchkey':title.substring(0,1)
 
