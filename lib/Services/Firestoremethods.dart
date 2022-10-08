@@ -823,6 +823,19 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
   }
 
 
+  Future <String> Groupchat()async{
+    String ress;
+    try{
+      ress="Message Sent";
+      return ress;
+    }catch(e){
+      print(e.toString());
+      ress=e.toString();
+      return ress;
+    }
+  }
+
+
 
 
 
