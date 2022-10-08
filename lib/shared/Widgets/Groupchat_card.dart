@@ -18,33 +18,57 @@ class _GchatcardState extends State<Gchatcard> {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     if(widget.snap['author uid']==user1.UID){
     return Container(
-      child: Card(
-        child: Column(
-          children: [
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 10,
-                  backgroundImage: NetworkImage(user1.ppurl!),
-                ),
-               const SizedBox(
-                  width: 10,
-                ),
-                const Text("Me")
-              ],
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Card(
+            elevation: 4,
+            color: Colors.blue,
+            shadowColor: Colors.grey,
+            borderOnForeground: true,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(10),
             ),
-            const SizedBox(height: 10,),
-            RichText(
-              text: TextSpan(
-                text:widget.snap['message'],
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  )
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left:15.0,
+                right:15.0,
+                top: 5,
+                bottom: 5, 
                 ),
+              child: SizedBox(
+                width: double.minPositive +100,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 10,
+                          backgroundImage: NetworkImage(user1.ppurl!),
+                        ),
+                       const SizedBox(
+                          width: 10,
+                        ),
+                        const Text("Me")
+                      ],
+                    ),
+                    const SizedBox(height: 2,),
+                    RichText(
+                      text: TextSpan(
+                        text:widget.snap['Message'],
+                        style: const TextStyle(
+                          color: Colors.white,  
+                          fontSize: 15,
+                          )
+                        ),
+                      ),
+                  ]
+                  ),
               ),
-          ]
+            ),
           ),
+        ],
       ),
     );}else{
       return Container(
