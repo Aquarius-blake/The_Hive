@@ -105,6 +105,7 @@ _selectimage(BuildContext context)async{
                               MaterialPageRoute(
                                 builder: (context)=>Gchatscreen(
                                   snap: widget.snap,
+                                  groupid: widget.snap['Group Uid'],
                                 ),
                               )
                           );
