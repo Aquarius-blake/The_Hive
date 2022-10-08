@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/user_provider.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:provider/provider.dart';
 
@@ -9,7 +10,8 @@ import 'package:provider/provider.dart';
 
 class Gchatscreen extends StatefulWidget {
   final snap;
-  const Gchatscreen({ Key? key,this.snap }) : super(key: key);
+  final groupid;
+  const Gchatscreen({ Key? key,this.snap,this.groupid }) : super(key: key);
 
   @override
   State<Gchatscreen> createState() => _GchatscreenState();
@@ -91,7 +93,7 @@ TextEditingController text=TextEditingController();
                 ),
                 ElevatedButton(
                   onPressed: ()async{
-                    String ress="";
+                    String ress= await FirestoreMethods().Groupchat(widget.groupid, user1.UID!, text.text, user1.ppurl!,user1.Username!);
                     Showsnackbar(ress, context);
                   },
                   child: const FaIcon(
