@@ -36,36 +36,33 @@ class _GchatcardState extends State<Gchatcard> {
                 top: 5,
                 bottom: 5, 
                 ),
-              child: SizedBox(
-                width: double.minPositive +100,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 10,
-                          backgroundImage: NetworkImage(user1.ppurl!),
-                        ),
-                       const SizedBox(
-                          width: 10,
-                        ),
-                        const Text("Me")
-                      ],
-                    ),
-                    const SizedBox(height: 2,),
-                    RichText(
-                      text: TextSpan(
-                        text:widget.snap['Message'],
-                        style: const TextStyle(
-                          color: Colors.white,  
-                          fontSize: 15,
-                          )
-                        ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 10,
+                        backgroundImage: NetworkImage(user1.ppurl!),
                       ),
-                  ]
+                     const SizedBox(
+                        width: 10,
+                      ),
+                      const Text("Me")
+                    ],
                   ),
-              ),
+                  const SizedBox(height: 2,),
+                  RichText(
+                    text: TextSpan(
+                      text:widget.snap['Message'],
+                      style: const TextStyle(
+                        color: Colors.white,  
+                        fontSize: 15,
+                        )
+                      ),
+                    ),
+                ]
+                ),
             ),
           ),
         ],
