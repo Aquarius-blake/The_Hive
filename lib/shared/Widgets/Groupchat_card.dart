@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/user_provider.dart';
+import 'package:forum3/Services/Encryption.dart';
 import 'package:provider/provider.dart';
 
 
@@ -13,9 +14,11 @@ class Gchatcard extends StatefulWidget {
 }
 
 class _GchatcardState extends State<Gchatcard> {
+  var plaintext;
   @override
   Widget build(BuildContext context) {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+        plaintext=Encryption.decrypt(widget.snap['Message']);
     if(widget.snap['author uid']==user1.UID){
     return Container(
       child: Row(
@@ -56,7 +59,7 @@ class _GchatcardState extends State<Gchatcard> {
                     const SizedBox(height: 2,),
                     RichText(
                       text: TextSpan(
-                        text:widget.snap['Message'],
+                        text:plaintext,
                         style: const TextStyle(
                           color: Colors.white,  
                           fontSize: 15,
@@ -91,7 +94,7 @@ class _GchatcardState extends State<Gchatcard> {
                   const SizedBox(height: 10,),
                   RichText(
                   text: TextSpan(
-                    text:widget.snap['message'],
+                    text:plaintext,
                     style: const TextStyle(
                       color: Colors.white,
                       fontSize: 20,

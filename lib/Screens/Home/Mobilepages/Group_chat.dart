@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/user_provider.dart';
+import 'package:forum3/Services/Encryption.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/Groupchat_card.dart';
@@ -116,8 +117,11 @@ var plaintext,enctext;
                 ),
                 ElevatedButton(
                   onPressed: ()async{
-
-                    String ress= await FirestoreMethods().Groupchat(widget.groupid, user1.UID!, text.text, user1.ppurl!,user1.Username!);
+                    setState(() {
+                      plaintext=text.text;
+                    });
+                    enctext= await Encryption.encrypt(plaintext);
+                    String ress= await FirestoreMethods().Groupchat(widget.groupid, user1.UID!, enctext, user1.ppurl!,user1.Username!);
                     Showsnackbar(ress, context);
                   },
                   child: const FaIcon(
