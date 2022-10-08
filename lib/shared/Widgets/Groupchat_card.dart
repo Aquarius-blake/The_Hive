@@ -51,9 +51,13 @@ class _GchatcardState extends State<Gchatcard> {
                           backgroundImage: NetworkImage(user1.ppurl!),
                         ),
                        const SizedBox(
-                          width: 10,
+                          width: 2,
                         ),
-                        const Text("Me")
+                        const Text(
+                          "Me",
+                          style: TextStyle(
+                            color: Colors.white,)
+                          ),
                       ],
                     ),
                     const SizedBox(height: 2,),
