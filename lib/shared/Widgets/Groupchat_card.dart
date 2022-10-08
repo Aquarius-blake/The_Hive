@@ -41,7 +41,7 @@ class _GchatcardState extends State<Gchatcard> {
                 children: [
                   CircleAvatar(
                     radius: 10,
-                    backgroundImage: NetworkImage(user1.ppurl!),
+                    backgroundImage: NetworkImage(widget.snap['Profile Pic']),
                   )
                 ],
               ),
