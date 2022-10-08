@@ -10,7 +10,6 @@ import '../../Provider/user_provider.dart';
 import '../../Screens/Home/Mobilepages/Meditcomment.dart';
 import '../Pop_up.dart';
 
-//TODO: Replace codes, that is edit comment page
 class GCommentcard extends StatefulWidget {
   final snap;
   final postid;
