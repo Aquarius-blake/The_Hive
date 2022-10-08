@@ -21,79 +21,87 @@ class _GchatcardState extends State<Gchatcard> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          Card(
-            elevation: 4,
-            color: Colors.blue,
-            shadowColor: Colors.grey,
-            borderOnForeground: true,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Padding(
-              padding: const EdgeInsets.only(
-                left:15.0,
-                right:15.0,
-                top: 5,
-                bottom: 5, 
-                ),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 10,
-                        backgroundImage: NetworkImage(user1.ppurl!),
-                      ),
-                     const SizedBox(
-                        width: 10,
-                      ),
-                      const Text("Me")
-                    ],
+          SizedBox(
+            width: MediaQuery.of(context).size.width*0.5,
+            child: Card(
+              elevation: 4,
+              color: Colors.blue,
+              shadowColor: Colors.grey,
+              borderOnForeground: true,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.only(
+                  left:15.0,
+                  right:15.0,
+                  top: 5,
+                  bottom: 5, 
                   ),
-                  const SizedBox(height: 2,),
-                  RichText(
-                    text: TextSpan(
-                      text:widget.snap['Message'],
-                      style: const TextStyle(
-                        color: Colors.white,  
-                        fontSize: 15,
-                        )
-                      ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 10,
+                          backgroundImage: NetworkImage(user1.ppurl!),
+                        ),
+                       const SizedBox(
+                          width: 10,
+                        ),
+                        const Text("Me")
+                      ],
                     ),
-                ]
-                ),
+                    const SizedBox(height: 2,),
+                    RichText(
+                      text: TextSpan(
+                        text:widget.snap['Message'],
+                        style: const TextStyle(
+                          color: Colors.white,  
+                          fontSize: 15,
+                          )
+                        ),
+                      ),
+                  ]
+                  ),
+              ),
             ),
           ),
         ],
       ),
     );}else{
       return Container(
-        child: Card(
-          child: Column(
-            children: [
-              Row(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Card(
+              child: Column(
                 children: [
-                  CircleAvatar(
-                    radius: 10,
-                    backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                  Row(
+                    children: [
+                      CircleAvatar(
+                        radius: 10,
+                        backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                      ),
+                     const SizedBox(width: 10,),
+                     Text("${widget.snap['author']}"),
+                    ],
                   ),
-                 const SizedBox(width: 10,),
-                 Text("${widget.snap['author']}"),
+                  const SizedBox(height: 10,),
+                  RichText(
+                  text: TextSpan(
+                    text:widget.snap['message'],
+                    style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                      )
+                    ),
+                  ),
                 ],
               ),
-              const SizedBox(height: 10,),
-              RichText(
-              text: TextSpan(
-                text:widget.snap['message'],
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 20,
-                  )
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       );
     }
