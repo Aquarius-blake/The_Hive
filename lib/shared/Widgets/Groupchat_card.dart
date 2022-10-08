@@ -78,30 +78,33 @@ class _GchatcardState extends State<Gchatcard> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Card(
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      CircleAvatar(
-                        radius: 10,
-                        backgroundImage: NetworkImage(widget.snap['Profile Pic']),
-                      ),
-                     const SizedBox(width: 10,),
-                     Text("${widget.snap['author']}"),
-                    ],
-                  ),
-                  const SizedBox(height: 10,),
-                  RichText(
-                  text: TextSpan(
-                    text:plaintext,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 20,
-                      )
+            SizedBox(
+              width: MediaQuery.of(context).size.width*0.5,
+              child: Card(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        CircleAvatar(
+                          radius: 10,
+                          backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                        ),
+                       const SizedBox(width: 10,),
+                       Text("${widget.snap['author']}"),
+                      ],
                     ),
-                  ),
-                ],
+                    const SizedBox(height: 10,),
+                    RichText(
+                    text: TextSpan(
+                      text:plaintext,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        )
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
