@@ -18,7 +18,11 @@ class _GchatcardState extends State<Gchatcard> {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     if(widget.snap['author uid']==user1.UID){
     return Container(
-      child: Card(),
+      child: Card(
+        child: Column(
+          children: []
+          ),
+      ),
     );}else{
       return Container(
         child: Card(),
