@@ -83,6 +83,12 @@ class _GcomeditState extends State<Gcomedit> {
                     decoration:  InputDecoration(
                       border: InputBorder.none,
                       hintText: "Edit comment as ${user1.Username}",
+                      label: Text(
+                        "Edit comment as ${user1.Username}",
+                        style:const TextStyle(
+                          color: Colors.white,
+                        ),
+                        )
                     ),
                     style:const TextStyle(
                       color: Colors.white,
