@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 class Chats{
 
   late final  String? author_uid;
+  late final String groupid;
   late final String? author;
   late final String? message;
   late final  Timeposted;
@@ -23,7 +24,8 @@ class Chats{
         required  this.Timeposted,
         required this.ppurl,
         required this.receiver,
-        required this.appurl
+        required this.appurl,
+        required this.groupid
       }
       );
 
@@ -37,6 +39,7 @@ class Chats{
     "Receiver":receiver,
     "Receiver Uid":receiver_uid,
     "author pic":appurl,
+    "Group Uid":groupid
   };
 
 
@@ -51,7 +54,8 @@ class Chats{
       message_uid: snapshot['Message Uid'],
       receiver: snapshot['Receiver'],
       receiver_uid: snapshot['Receiver Uid'],
-      appurl: snapshot['author pic']
+      appurl: snapshot['author pic'],
+      groupid: snapshot['Group Uid']
     );
 
     return Chats12;
