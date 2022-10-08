@@ -36,7 +36,16 @@ class _GchatcardState extends State<Gchatcard> {
       return Container(
         child: Card(
           child: Column(
-            children: [],
+            children: [
+              Row(
+                children: [
+                  CircleAvatar(
+                    radius: 10,
+                    backgroundImage: NetworkImage(user1.ppurl!),
+                  )
+                ],
+              ),
+            ],
           ),
         ),
       );
