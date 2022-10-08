@@ -23,7 +23,10 @@ class _GchatcardState extends State<Gchatcard> {
           children: [
             Row(
               children: [
-                CircleAvatar()
+                CircleAvatar(
+                  radius: 10,
+                  backgroundImage: NetworkImage(user1.ppurl!),
+                )
               ],
             ),
           ]
