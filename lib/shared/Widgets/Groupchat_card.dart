@@ -25,7 +25,11 @@ class _GchatcardState extends State<Gchatcard> {
       ),
     );}else{
       return Container(
-        child: Card(),
+        child: Card(
+          child: Column(
+            children: [],
+          ),
+        ),
       );
     }
   }
