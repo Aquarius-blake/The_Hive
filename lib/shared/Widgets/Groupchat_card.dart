@@ -61,6 +61,16 @@ class _GchatcardState extends State<Gchatcard> {
                  Text("${widget.snap['author']}"),
                 ],
               ),
+              const SizedBox(height: 10,),
+              RichText(
+              text: TextSpan(
+                text:widget.snap['message'],
+                style: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  )
+                ),
+              ),
             ],
           ),
         ),
