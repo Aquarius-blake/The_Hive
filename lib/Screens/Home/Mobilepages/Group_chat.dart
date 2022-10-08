@@ -119,6 +119,7 @@ var plaintext,enctext;
                   onPressed: ()async{
                     setState(() {
                       plaintext=text.text;
+                      text.text="";
                     });
                     enctext= await Encryption.encrypt(plaintext);
                     String ress= await FirestoreMethods().Groupchat(widget.groupid, user1.UID!, enctext, user1.ppurl!,user1.Username!);
