@@ -837,6 +837,15 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         groupid: groupid,
         author: author
         );
+      await _firestore.collection("Groups").doc(groupid).collection("Chats").doc(message_uid).set(
+        groupchat1.toJson(),
+        SetOptions(merge: true)
+      );
+
+
+
+
+
       ress="Message Sent";
       return ress;
     }catch(e){
