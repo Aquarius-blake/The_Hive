@@ -22,6 +22,7 @@ class Gchatscreen extends StatefulWidget {
 class _GchatscreenState extends State<Gchatscreen> {
 
 TextEditingController text=TextEditingController();
+var plaintext,enctext;
 
 
   @override
@@ -115,6 +116,7 @@ TextEditingController text=TextEditingController();
                 ),
                 ElevatedButton(
                   onPressed: ()async{
+
                     String ress= await FirestoreMethods().Groupchat(widget.groupid, user1.UID!, text.text, user1.ppurl!,user1.Username!);
                     Showsnackbar(ress, context);
                   },
