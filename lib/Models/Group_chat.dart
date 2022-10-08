@@ -2,7 +2,7 @@
 // Custom Post Class
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-class Chats{
+class GChats{
 
   late final  String? author_uid;
   late final String groupid;
@@ -15,7 +15,7 @@ class Chats{
   late final String message_uid;
   late final String appurl;
 
-  Chats(
+  GChats(
       { required this.author_uid,
         required this.message_uid,
         required  this.message,
@@ -43,9 +43,9 @@ class Chats{
   };
 
 
-  static Chats? FromSnap(DocumentSnapshot snap){
+  static GChats? FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
-    Chats? Chats12=Chats(
+    GChats? Chats12=GChats(
       message: snapshot['Message'],
       author_uid: snapshot['author uid'],
       author: snapshot['author'],
