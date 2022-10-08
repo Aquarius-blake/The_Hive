@@ -6,16 +6,17 @@ import '../../../Provider/user_provider.dart';
 import '../../../Services/Firestoremethods.dart';
 import '../../../shared/Pop_up.dart';
 
-class Mobcomedit extends StatefulWidget {
+class Gcomedit extends StatefulWidget {
   final snap;
   final postid;
-  const Mobcomedit({Key? key,this.snap,this.postid}) : super(key: key);
+  final groupid;
+  const Gcomedit({Key? key,this.snap,this.postid,this.groupid}) : super(key: key);
 
   @override
-  State<Mobcomedit> createState() => _MobcomeditState();
+  State<Gcomedit> createState() => _GcomeditState();
 }
 
-class _MobcomeditState extends State<Mobcomedit> {
+class _GcomeditState extends State<Gcomedit> {
   TextEditingController text=TextEditingController();
   @override
   void initState() {
@@ -26,6 +27,7 @@ class _MobcomeditState extends State<Mobcomedit> {
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         centerTitle: true,
         iconTheme: const IconThemeData(
@@ -103,7 +105,7 @@ class _MobcomeditState extends State<Mobcomedit> {
         elevation: 4.0,
         backgroundColor: Colors.lightBlueAccent,
         onPressed: () async{
-          String ress=await FirestoreMethods().Editcomment(widget.postid, widget.snap['Comment Uid'], text.text);
+          String ress=await FirestoreMethods().Editgroupcomment(widget.groupid,widget.postid, widget.snap['Comment Uid'], text.text);
           await  Showsnackbar(ress, context);
           Navigator.of(context).pop();
         },
