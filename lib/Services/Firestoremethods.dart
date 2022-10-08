@@ -807,6 +807,22 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
   }
 
 
+  Future <String> Editgroupcomment(String groupid,String postid,String commentid,String text)async{
+    String ress;
+    try{
+      await _firestore.collection("Groups").doc(groupid).collection("Posts").doc(postid).collection("Comments").doc(commentid).update(
+        {"detail":text},
+      );
+      ress="Comment Edited Successfully";
+      return ress;
+    }catch(e){
+      print(e.toString());
+      ress=e.toString();
+      return ress;
+    }
+  }
+
+
 
 
 
