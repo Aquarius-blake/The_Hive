@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Screens/Home/Mobilepages/Group_commentedit.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/editcomment.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:intl/intl.dart';
@@ -109,9 +110,10 @@ class _GCommentcardState extends State<GCommentcard> {
                         }else{
                           Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (context)=>Mobcomedit(
+                                builder: (context)=>Gcomedit(
                                   snap: widget.snap,
                                   postid: widget.postid,
+                                  groupid: widget.groupid,
                                 ),
                               )
                           );
