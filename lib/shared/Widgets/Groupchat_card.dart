@@ -42,7 +42,8 @@ class _GchatcardState extends State<Gchatcard> {
                   CircleAvatar(
                     radius: 10,
                     backgroundImage: NetworkImage(widget.snap['Profile Pic']),
-                  )
+                  ),
+                 const SizedBox(width: 10,),
                 ],
               ),
             ],
