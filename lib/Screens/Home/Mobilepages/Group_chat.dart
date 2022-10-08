@@ -59,7 +59,7 @@ var plaintext,enctext;
           ),
       ),
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("Groups").doc(widget.snap['Group Uid']).collection("Chats").snapshots(),
+        stream: FirebaseFirestore.instance.collection("Groups").doc(widget.snap['Group Uid']).collection("Chats").orderBy('Message Time').snapshots(),
           builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
             if(snapshots.connectionState==ConnectionState.waiting){
               return const Center(

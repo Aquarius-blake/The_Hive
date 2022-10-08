@@ -1,7 +1,9 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Encryption.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 
@@ -19,6 +21,10 @@ class _GchatcardState extends State<Gchatcard> {
   Widget build(BuildContext context) {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
         plaintext=Encryption.decrypt(widget.snap['Message']);
+            final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
+    final DateTime dateTime = timestamp.toDate();
+    final dateString = DateFormat('K:mm').format(dateTime);
+
     if(widget.snap['author uid']==user1.UID){
     return Container(
       child: Row(
@@ -68,6 +74,14 @@ class _GchatcardState extends State<Gchatcard> {
                           color: Colors.white,  
                           fontSize: 15,
                           )
+                        ),
+                      ),
+                    const SizedBox(height: 2,),
+                    Text(
+                      dateString,
+                      style: const TextStyle(
+                        color: Colors.white60,
+                        fontSize: 10,
                         ),
                       ),
                   ]
