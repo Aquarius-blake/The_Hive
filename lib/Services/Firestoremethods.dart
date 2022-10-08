@@ -855,6 +855,19 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
+  Future <String> Groupchatdelete(String groupid,String message_uid)async{
+    String ress;
+    try{
+      await _firestore.collection("Groups").doc(groupid).collection("Chats").doc(message_uid).delete();
+      ress="Message Deleted";
+      return ress;
+    }catch(e){
+      print(e.toString());
+      ress=e.toString();
+      return ress;
+    }
+  }
+
 
 
 
