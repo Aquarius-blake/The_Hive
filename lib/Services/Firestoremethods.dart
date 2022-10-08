@@ -826,6 +826,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
   Future <String> Groupchat(String groupid,String author_uid,String message,String ppurl,String author)async{
     String ress;
     try{
+      String message_uid=const Uuid().v1();
       ress="Message Sent";
       return ress;
     }catch(e){
