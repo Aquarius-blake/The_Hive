@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Provider/user_provider.dart';
+import 'package:provider/provider.dart';
 
 
 class Gchatcard extends StatefulWidget {
@@ -12,6 +15,8 @@ class Gchatcard extends StatefulWidget {
 class _GchatcardState extends State<Gchatcard> {
   @override
   Widget build(BuildContext context) {
+        late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+
     return Container(
       
     );
