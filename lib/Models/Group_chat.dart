@@ -9,22 +9,16 @@ class GChats{
   late final String? author;
   late final String? message;
   late final  Timeposted;
-  late final String receiver;
-  late final String receiver_uid;
   late final String? ppurl;
   late final String message_uid;
-  late final String appurl;
 
   GChats(
       { required this.author_uid,
         required this.message_uid,
         required  this.message,
-        required this. receiver_uid,
         required this.author,
         required  this.Timeposted,
         required this.ppurl,
-        required this.receiver,
-        required this.appurl,
         required this.groupid
       }
       );
@@ -36,9 +30,6 @@ class GChats{
     "Profile Pic":ppurl,
     "Message Uid":message_uid,
     "Message":message,
-    "Receiver":receiver,
-    "Receiver Uid":receiver_uid,
-    "author pic":appurl,
     "Group Uid":groupid
   };
 
@@ -52,9 +43,6 @@ class GChats{
       Timeposted: snapshot['Message Time'],
       ppurl: snapshot['Profile Pic'],
       message_uid: snapshot['Message Uid'],
-      receiver: snapshot['Receiver'],
-      receiver_uid: snapshot['Receiver Uid'],
-      appurl: snapshot['author pic'],
       groupid: snapshot['Group Uid']
     );
 
