@@ -47,7 +47,7 @@ class _GchatcardState extends State<Gchatcard> {
                     Row(
                       children: [
                         CircleAvatar(
-                          radius: 10,
+                          radius: 11,
                           backgroundImage: NetworkImage(user1.ppurl!),
                         ),
                        const SizedBox(
@@ -85,29 +85,37 @@ class _GchatcardState extends State<Gchatcard> {
             SizedBox(
               width: MediaQuery.of(context).size.width*0.5,
               child: Card(
-                child: Column(
-                  children: [
-                    Row(
-                      children: [
-                        CircleAvatar(
-                          radius: 10,
-                          backgroundImage: NetworkImage(widget.snap['Profile Pic']),
-                        ),
-                       const SizedBox(width: 10,),
-                       Text("${widget.snap['author']}"),
-                      ],
-                    ),
-                    const SizedBox(height: 10,),
-                    RichText(
-                    text: TextSpan(
-                      text:plaintext,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        )
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    left:15.0,
+                  right:15.0,
+                  top: 5,
+                  bottom: 5, 
+                  ),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          CircleAvatar(
+                            radius: 11,
+                            backgroundImage: NetworkImage(widget.snap['Profile Pic']),
+                          ),
+                         const SizedBox(width: 10,),
+                         Text("${widget.snap['author']}"),
+                        ],
                       ),
-                    ),
-                  ],
+                      const SizedBox(height: 10,),
+                      RichText(
+                      text: TextSpan(
+                        text:plaintext,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          )
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),
