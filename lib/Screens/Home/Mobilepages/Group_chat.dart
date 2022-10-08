@@ -1,9 +1,11 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:forum3/shared/Widgets/Groupchat_card.dart';
 import 'package:provider/provider.dart';
 
 
@@ -53,6 +55,26 @@ TextEditingController text=TextEditingController();
           iconTheme:const IconThemeData(
             color: Colors.white,
           ),
+      ),
+      body: StreamBuilder(
+        stream: FirebaseFirestore.instance.collection("Groups").doc(widget.snap['Group Uid']).collection("Chats").snapshots(),
+          builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
+            if(snapshots.connectionState==ConnectionState.waiting){
+              return const Center(
+                child: CircularProgressIndicator(
+                  color: Colors.white,
+                ),
+              );
+            }
+            return ListView.builder(
+                itemCount: snapshots.data!.docs.length,
+                itemBuilder: (context, index) => Container(
+                  child: Gchatcard(
+                    snap: snapshots.data!.docs[index].data(),
+                  ),
+                )
+            );
+          }
       ),
        bottomNavigationBar: SafeArea(
           child: Container(
