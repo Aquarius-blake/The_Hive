@@ -25,6 +25,37 @@ class _GchatscreenState extends State<Gchatscreen> {
 TextEditingController text=TextEditingController();
 var plaintext,enctext;
 
+_selectimage(BuildContext context)async{
+    return showDialog(
+        context: context,
+        builder: (context){
+          return SimpleDialog(
+            title: const Text("Set Group Profile Picture"),
+            children: [
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text("Take a Photo"),
+                onPressed: ()async{},
+              ),
+              SimpleDialogOption(
+                padding: EdgeInsets.all(15.0),
+                child: const Text("Choose from gallery"),
+                onPressed: ()async{}
+                  
+              ),
+              SimpleDialogOption(
+                padding: const EdgeInsets.all(15.0),
+                child: const Text("Cancel"),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+              )
+            ],
+          );
+        }
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +105,7 @@ var plaintext,enctext;
                   child: GestureDetector(
                     onTap:()async{
                       if(snapshots.data!.docs[index].data()['author uid']==user1.UID){
-                        
+
                       }
                     },
                     child: Gchatcard(
