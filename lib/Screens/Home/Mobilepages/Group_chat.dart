@@ -37,7 +37,7 @@ _options(BuildContext context,dynamic snap)async{
                 child: const Text("Delete Message"),
                 onPressed: ()async{
                 String content=  await FirestoreMethods().Groupchatdelete(widget.groupid,snap['Message Uid']);
-                
+                Showsnackbar(content, context);
                   Navigator.pop(context);
                 },
               ),
