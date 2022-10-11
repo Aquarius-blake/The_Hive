@@ -72,6 +72,7 @@ var plaintext,enctext;
                 itemCount: snapshots.data!.docs.length,
                 itemBuilder: (context, index) => Container(
                   child: GestureDetector(
+                    onTap:(){},
                     child: Gchatcard(
                       snap: snapshots.data!.docs[index].data(),
                     ),
