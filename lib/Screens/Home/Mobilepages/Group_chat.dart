@@ -57,7 +57,7 @@ _options(BuildContext context,dynamic snap)async{
 
   @override
   Widget build(BuildContext context) {
-            late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
       backgroundColor: Colors.black,
