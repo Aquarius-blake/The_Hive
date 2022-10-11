@@ -25,7 +25,7 @@ class _GchatscreenState extends State<Gchatscreen> {
 TextEditingController text=TextEditingController();
 var plaintext,enctext;
 
-_options(BuildContext context)async{
+_options(BuildContext context,dynamic snap)async{
     return showDialog(
         context: context,
         builder: (context){
@@ -35,7 +35,9 @@ _options(BuildContext context)async{
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
                 child: const Text("Delete Message"),
-                onPressed: ()async{},
+                onPressed: ()async{
+
+                },
               ),
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
@@ -99,7 +101,7 @@ _options(BuildContext context)async{
                   child: GestureDetector(
                     onTap:()async{
                       if(snapshots.data!.docs[index].data()['author uid']==user1.UID){
-
+                        _options(context,snapshots.data!.docs[index]);
                       }
                     },
                     child: Gchatcard(
