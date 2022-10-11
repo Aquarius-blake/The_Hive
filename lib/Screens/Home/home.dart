@@ -292,6 +292,23 @@ class _HomeState extends State<Home> {
                       );
                     },
                 ),
+                SizedBox(height: 5.0,),
+                ListTile(
+                  leading: const FaIcon(
+                    FontAwesomeIcons.gears,
+                    color: Colors.white,
+                    size:35.0,
+                    ),
+                    title: const Text(
+                      "Settings",
+                      style:TextStyle(
+                        color: Colors.white,
+                      )
+                      ),
+                    onTap: ()async{
+                      
+                    },
+                ),
               const  SizedBox(height: 5.0,),
                 ListTile(
                   title: const Text(
