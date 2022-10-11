@@ -25,12 +25,12 @@ class _GchatscreenState extends State<Gchatscreen> {
 TextEditingController text=TextEditingController();
 var plaintext,enctext;
 
-_selectimage(BuildContext context)async{
+_options(BuildContext context)async{
     return showDialog(
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: const Text("Set Group Profile Picture"),
+            title: const Text("More options"),
             children: [
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
