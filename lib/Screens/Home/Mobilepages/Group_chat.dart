@@ -72,7 +72,9 @@ var plaintext,enctext;
                 itemCount: snapshots.data!.docs.length,
                 itemBuilder: (context, index) => Container(
                   child: GestureDetector(
-                    onTap:(){},
+                    onTap:(){
+                      if(snapshots.data!.docs[index].data()['author uid']==user1.UID){}
+                    },
                     child: Gchatcard(
                       snap: snapshots.data!.docs[index].data(),
                     ),
