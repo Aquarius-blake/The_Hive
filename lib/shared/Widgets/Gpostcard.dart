@@ -142,7 +142,6 @@ class _GPostCardState extends State<GPostCard> {
   }
 
 
-
   //dynamic _image;
   Widget Postimage(dynamic image,BuildContext context,User1 user1){
     if(image==""){
