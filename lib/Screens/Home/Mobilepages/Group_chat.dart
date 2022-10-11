@@ -34,14 +34,8 @@ _options(BuildContext context)async{
             children: [
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
-                child: const Text("Take a Photo"),
+                child: const Text("Delete Message"),
                 onPressed: ()async{},
-              ),
-              SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
-                child: const Text("Choose from gallery"),
-                onPressed: ()async{}
-                  
               ),
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
