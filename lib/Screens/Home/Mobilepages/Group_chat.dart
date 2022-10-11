@@ -71,8 +71,10 @@ var plaintext,enctext;
             return ListView.builder(
                 itemCount: snapshots.data!.docs.length,
                 itemBuilder: (context, index) => Container(
-                  child: Gchatcard(
-                    snap: snapshots.data!.docs[index].data(),
+                  child: GestureDetector(
+                    child: Gchatcard(
+                      snap: snapshots.data!.docs[index].data(),
+                    ),
                   ),
                 )
             );
