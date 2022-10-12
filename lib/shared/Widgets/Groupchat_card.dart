@@ -97,10 +97,10 @@ class _GchatcardState extends State<Gchatcard> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(
-              width: MediaQuery.of(context).size.width*0.5,
+              width: MediaQuery.of(context).size.width*0.6,
               child: Card(
                 margin: const EdgeInsets.only(
-                  left: 10,
+                  left: 20,
                   right: 10,
                   top: 5,
                   bottom: 5,
