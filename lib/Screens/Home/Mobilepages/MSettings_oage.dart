@@ -16,6 +16,9 @@ class _MSettingsState extends State<MSettings> {
         backgroundColor: Colors.black,
         centerTitle: true,
         title: const Text('Settings'),
+        iconTheme: const IconThemeData(
+          color: Colors.white,
+        ),     
       ),
     );
   }
