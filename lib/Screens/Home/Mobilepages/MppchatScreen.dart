@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MpChatbody.dart';
+import 'package:forum3/Services/Encryption.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:provider/provider.dart';
@@ -18,6 +19,7 @@ class MpchatScreen extends StatefulWidget {
 
 class _MpchatScreenState extends State<MpchatScreen> {
   TextEditingController text=TextEditingController();
+  var plaintext,enctext;
 
 
   @override
@@ -99,8 +101,14 @@ class _MpchatScreenState extends State<MpchatScreen> {
                 ),
                 ElevatedButton(
                   onPressed: ()async{
+                    if(text.text==""){
+                      setState(() {
+                        plaintext=text.text;
+                        enctext=Encryption.encrypt(plaintext);
+                      });
                     String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], text.text,widget.snap['profilepic'],user1.ppurl!);
                     Showsnackbar(ress!, context);
+                    }
                   },
                   child: const FaIcon(
                       FontAwesomeIcons.featherPointed
