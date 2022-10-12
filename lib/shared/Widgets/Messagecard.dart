@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Encryption.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
@@ -20,6 +21,7 @@ class _chatcardState extends State<chatcard> {
   late bool recever;
   late int timehr;
   late int timemin;
+  var plaintext;
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
@@ -27,6 +29,8 @@ class _chatcardState extends State<chatcard> {
     final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm').format(dateTime);
+
+    plaintext=Encryption.decrypt(widget.snap['Message']);
 
     if(widget.snap['Receiver Uid']!=user1.UID){
       recever=false;
@@ -52,7 +56,7 @@ class _chatcardState extends State<chatcard> {
               children: [
                 RichText(
                     text: TextSpan(
-                      text: widget.snap['Message'],
+                      text: plaintext,
                       style: const TextStyle(
                         color: Colors.black,
                       ),
@@ -94,7 +98,7 @@ class _chatcardState extends State<chatcard> {
                 children: [
                   RichText(
                       text: TextSpan(
-                        text: widget.snap['Message'],
+                        text: plaintext,
                         style: const TextStyle(
                           color: Colors.white,
                         ),

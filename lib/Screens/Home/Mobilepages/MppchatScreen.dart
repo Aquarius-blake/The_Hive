@@ -101,7 +101,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
                 ),
                 ElevatedButton(
                   onPressed: ()async{
-                    if(text.text==""){
+                    if(text.text!=""){
                       setState(() {
                         plaintext=text.text;
                         enctext=Encryption.encrypt(plaintext);

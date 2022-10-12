@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Encryption.dart';
 import 'package:forum3/shared/error_handling.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -18,9 +19,12 @@ class CHcard extends StatefulWidget {
 }
 
 class _CHcardState extends State<CHcard> {
+  var plaintext;
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    plaintext=Encryption.decrypt(widget.snap['lastmessage']);
+
     try{
     final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
@@ -60,7 +64,7 @@ class _CHcardState extends State<CHcard> {
                     ),
                     RichText(
                         text: TextSpan(
-                            text: "${widget.snap['Last Message']}",
+                            text: plaintext,
                           style: const TextStyle(
                             color: Colors.blueGrey,
                             fontStyle: FontStyle.italic,
