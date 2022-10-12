@@ -31,8 +31,9 @@ class _GchatcardState extends State<Gchatcard> {
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           SizedBox(
-            width: MediaQuery.of(context).size.width*0.5,
+            width: MediaQuery.of(context).size.width*0.6,
             child: Card(
+              margin: const EdgeInsets.all(10),
               elevation: 4,
               color: Colors.blue,
               shadowColor: Colors.grey,
@@ -99,6 +100,9 @@ class _GchatcardState extends State<Gchatcard> {
             SizedBox(
               width: MediaQuery.of(context).size.width*0.6,
               child: Card(
+                shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
                 margin: const EdgeInsets.only(
                   left: 20,
                   right: 10,
