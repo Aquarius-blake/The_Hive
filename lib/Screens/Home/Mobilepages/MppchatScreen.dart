@@ -106,7 +106,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
                         plaintext=text.text;
                         enctext=Encryption.encrypt(plaintext);
                       });
-                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], text.text,widget.snap['profilepic'],user1.ppurl!);
+                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['username'], widget.snap['uid'], enctext,widget.snap['profilepic'],user1.ppurl!);
                     Showsnackbar(ress!, context);
                     }
                   },
