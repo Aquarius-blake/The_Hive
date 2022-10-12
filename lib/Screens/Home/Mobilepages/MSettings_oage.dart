@@ -10,7 +10,7 @@ class MSettings extends StatefulWidget {
 class _MSettingsState extends State<MSettings> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return Scaffold(
       
     );
   }
