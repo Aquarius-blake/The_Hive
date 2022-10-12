@@ -107,6 +107,7 @@ class _GchatcardState extends State<Gchatcard> {
                   bottom: 5, 
                   ),
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Row(
                         children: [
@@ -118,16 +119,27 @@ class _GchatcardState extends State<Gchatcard> {
                          Text("${widget.snap['author']}"),
                         ],
                       ),
-                      const SizedBox(height: 10,),
+                      const SizedBox(height: 2,),
                       RichText(
                       text: TextSpan(
                         text:plaintext,
                         style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
+                          color: Colors.black,
+                          fontSize: 15,
                           )
                         ),
                       ),
+                      const SizedBox(height: 2,),
+                    Align(
+                      alignment: Alignment.bottomRight,
+                      child: Text(
+                        dateString,
+                        style: const TextStyle(
+                          color: Colors.grey,
+                          fontSize: 10,
+                          ),
+                        ),
+                    ),
                     ],
                   ),
                 ),
