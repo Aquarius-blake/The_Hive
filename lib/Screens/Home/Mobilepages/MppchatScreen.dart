@@ -34,7 +34,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
         centerTitle: true,
         backgroundColor: Colors.black,
         iconTheme:const IconThemeData(
-          color: Colors.black,
+          color: Colors.white,
         ),
         title: Row(
           children: [
@@ -45,7 +45,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
             Text(
               "${widget.snap['username']}",
               style: const TextStyle(
-                  color: Colors.black
+                  color: Colors.white
               ),
             ),
           ],
@@ -86,7 +86,13 @@ class _MpchatScreenState extends State<MpchatScreen> {
                       controller: text,
                       decoration: InputDecoration(
                         hintText: "Chat as ${user1.Username}",
+                        hintStyle: const TextStyle(
+                            color: Colors.white
+                        ),
                         border: InputBorder.none,
+                      ),
+                      style: const TextStyle(
+                          color: Colors.white
                       ),
                     ),
                   ),
