@@ -8,6 +8,7 @@ import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_page.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_search.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MPost.dart';
+import 'package:forum3/Screens/Home/Mobilepages/MSettings_oage.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mhome.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mmessages.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mnotifications.dart';
@@ -305,7 +306,13 @@ class _HomeState extends State<Home> {
                         color: Colors.white,
                       )
                       ),
-                    onTap: ()async{},
+                    onTap: ()async{
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context)=>MSettings(),
+                        )
+                      );
+                    },
                 ),
               const  SizedBox(height: 5.0,),
                 ListTile(
