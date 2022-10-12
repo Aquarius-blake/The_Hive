@@ -24,6 +24,9 @@ class _GchatscreenState extends State<Gchatscreen> {
 
 TextEditingController text=TextEditingController();
 var plaintext,enctext;
+late ScrollController _scrollController;
+bool _showBackToTopButton = true;
+late double length;
 
 _options(BuildContext context,dynamic snap)async{
     return showDialog(
@@ -53,7 +56,25 @@ _options(BuildContext context,dynamic snap)async{
         }
     );
   }
+@override
+  void initState() {
+    _scrollController = ScrollController()
+      ..addListener(() {
+        
+      });
+    super.initState();
+  }
 
+@override
+  void dispose() {
+    _scrollController.dispose(); // dispose the controller
+    super.dispose();
+  }
+
+void _scrollToTop() {
+    _scrollController.animateTo(0,
+        duration: const Duration(seconds: 1), curve: Curves.linear);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -88,7 +109,7 @@ _options(BuildContext context,dynamic snap)async{
           ),
       ),
       body: StreamBuilder(
-        stream: FirebaseFirestore.instance.collection("Groups").doc(widget.snap['Group Uid']).collection("Chats").orderBy('Message Time').snapshots(),
+        stream: FirebaseFirestore.instance.collection("Groups").doc(widget.snap['Group Uid']).collection("Chats").orderBy('Message Time',descending: true).snapshots(),
           builder: (context,AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshots){
             if(snapshots.connectionState==ConnectionState.waiting){
               return const Center(
@@ -97,7 +118,10 @@ _options(BuildContext context,dynamic snap)async{
                 ),
               );
             }
+            length=snapshots.data!.docs.length.toDouble();
             return ListView.builder(
+              reverse: true,
+              controller: _scrollController,
                 itemCount: snapshots.data!.docs.length,
                 itemBuilder: (context, index) => Container(
                   child: GestureDetector(
@@ -114,6 +138,12 @@ _options(BuildContext context,dynamic snap)async{
             );
           }
       ),
+      floatingActionButton: _showBackToTopButton == false
+          ? null
+          : FloatingActionButton(
+              onPressed:()=> _scrollToTop(),
+              child: const Icon(Icons.arrow_downward),
+            ),
        bottomNavigationBar: SafeArea(
           child: Container(
             height: kToolbarHeight,
