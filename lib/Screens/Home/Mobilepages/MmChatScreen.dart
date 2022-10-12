@@ -45,7 +45,7 @@ class _MmchatScreenState extends State<MmchatScreen> {
             Text(
               "${widget.snap['Receiver']}",
               style: const TextStyle(
-                  color: Colors.black
+                  color: Colors.white
               ),
             ),
           ],
