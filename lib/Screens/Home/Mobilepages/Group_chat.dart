@@ -26,7 +26,6 @@ TextEditingController text=TextEditingController();
 var plaintext,enctext;
 late ScrollController _scrollController;
 bool _showBackToTopButton = true;
-late double length;
 
 _options(BuildContext context,dynamic snap)async{
     return showDialog(
@@ -118,7 +117,6 @@ void _scrollToTop() {
                 ),
               );
             }
-            length=snapshots.data!.docs.length.toDouble();
             return ListView.builder(
               reverse: true,
               controller: _scrollController,
