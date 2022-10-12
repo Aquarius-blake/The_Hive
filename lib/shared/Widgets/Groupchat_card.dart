@@ -99,6 +99,12 @@ class _GchatcardState extends State<Gchatcard> {
             SizedBox(
               width: MediaQuery.of(context).size.width*0.5,
               child: Card(
+                margin: const EdgeInsets.only(
+                  left: 10,
+                  right: 10,
+                  top: 5,
+                  bottom: 5,
+                ),
                 child: Padding(
                   padding: const EdgeInsets.only(
                     left:15.0,
