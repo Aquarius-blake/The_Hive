@@ -23,7 +23,7 @@ class _CHcardState extends State<CHcard> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-    plaintext=Encryption.decrypt(widget.snap['lastmessage']);
+    plaintext=Encryption.decrypt(widget.snap['Last Message']);
 
     try{
     final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
