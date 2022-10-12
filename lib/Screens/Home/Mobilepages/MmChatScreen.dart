@@ -86,7 +86,13 @@ class _MmchatScreenState extends State<MmchatScreen> {
                       controller: text,
                       decoration: InputDecoration(
                         hintText: "Chat as ${user1.Username}",
+                        hintStyle: const TextStyle(
+                            color: Colors.black
+                        ),
                         border: InputBorder.none,
+                      ),
+                      style: const TextStyle(
+                          color: Colors.white
                       ),
                     ),
                   ),
