@@ -14,6 +14,7 @@ class _MSettingsState extends State<MSettings> {
       backgroundColor: Colors.black,
       appBar: AppBar(
         backgroundColor: Colors.black,
+        centerTitle: true,
         title: const Text('Settings'),
       ),
     );
