@@ -30,6 +30,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
