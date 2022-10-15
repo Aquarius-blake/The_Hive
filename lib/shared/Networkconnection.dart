@@ -47,7 +47,7 @@ class _NetconState extends State<Netcon> {
                   message,
                   style: TextStyle(),
                 ),
-                const SizedBox(height: 20,),
+                const SizedBox(height: 200,),
                 const SpinKitPouringHourGlassRefined(
                     color: Colors.black,
                 size: 100,)
