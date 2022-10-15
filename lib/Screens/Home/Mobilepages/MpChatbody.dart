@@ -81,9 +81,9 @@ class _ChatbodyState extends State<Chatbody> {
                 alignment: Alignment.bottomRight,
                 child: Row(
                   children: [
-                  user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']? const Expanded(
+                  user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
                       child:  SizedBox()
-                  ):const SizedBox(),
+                  ): SizedBox(),
                     SizedBox(
                       child: GestureDetector(
                         onLongPress: (){
