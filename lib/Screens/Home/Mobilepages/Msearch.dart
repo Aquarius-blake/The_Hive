@@ -104,7 +104,7 @@ class _MsearchState extends State<Msearch> {
              const SizedBox(width: 10,),
               Text(
                 data['username'],
-                style:TextStyle(
+                style:const TextStyle(
                   color:Colors.white,
                 ),
               )
