@@ -101,13 +101,17 @@ class _MmchatScreenState extends State<MmchatScreen> {
                 ),
                 ElevatedButton(
                   onPressed: ()async{
+                    if(text.text!=""){
                     setState(() {
                       plaintext=text.text;
                       enctext=Encryption.encrypt(plaintext);
                       text.text="";
                     });
-                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['Receiver'], widget.snap['Receiver uid'], plaintext,widget.snap['Profile Pic'],user1.ppurl!);
+                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['Receiver'], widget.snap['Receiver uid'], enctext,widget.snap['Profile Pic'],user1.ppurl!);
                     Showsnackbar(ress!, context);
+                    }else{
+                      Showsnackbar("Enter a message", context);
+                    }
                   },
                   child: const FaIcon(
                       FontAwesomeIcons.featherPointed
