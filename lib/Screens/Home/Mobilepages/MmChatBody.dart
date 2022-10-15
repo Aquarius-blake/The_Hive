@@ -67,6 +67,7 @@ class _mChatbodyState extends State<mChatbody> {
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
+      backgroundColor: Colors.black,
       body:  StreamBuilder(
         stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").doc(widget.snap['Receiver uid']).collection('message').orderBy("Message Time").snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
