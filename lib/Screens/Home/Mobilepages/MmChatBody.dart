@@ -83,7 +83,7 @@ class _mChatbodyState extends State<mChatbody> {
                 child: Row(
                   children: [
                     user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
-                        child: SizedBox()
+                        child:  SizedBox()
                     ):SizedBox(),
                     SizedBox(
                       child: SizedBox(
