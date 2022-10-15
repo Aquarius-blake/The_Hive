@@ -85,10 +85,10 @@ class _chatcardState extends State<chatcard> {
           child: Card(
             shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.all(
-                  Radius.circular(15)
+                  Radius.circular(10)
               )
             ),
-            color: Colors.black,
+            color: Colors.white,
             elevation: 5.0,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -100,7 +100,7 @@ class _chatcardState extends State<chatcard> {
                       text: TextSpan(
                         text: plaintext,
                         style: const TextStyle(
-                          color: Colors.white,
+                          color: Colors.black,
                         ),
                       )
                   ),
