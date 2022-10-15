@@ -38,6 +38,7 @@ class _NetconState extends State<Netcon> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children:  [
+                const SizedBox(height: 50,),
                 const Icon(
                   Icons.wifi_off,
                   size: 40,
