@@ -41,6 +41,7 @@ class _CHcardState extends State<CHcard> {
         top: 5.0,
       ),
       child: Card(
+        color: Colors.black,
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child:   Row(
@@ -60,6 +61,7 @@ class _CHcardState extends State<CHcard> {
                       style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
+                        color:Colors.white,
                       ),
                     ),
                     RichText(
