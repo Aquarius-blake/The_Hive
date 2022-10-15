@@ -43,7 +43,7 @@ class _MpchatScreenState extends State<MpchatScreen> {
             CircleAvatar(
               backgroundImage: NetworkImage(widget.snap['profilepic']),
             ),
-            SizedBox(width: 20,),
+          const SizedBox(width: 20,),
             Text(
               "${widget.snap['username']}",
               style: const TextStyle(
