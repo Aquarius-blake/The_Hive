@@ -101,6 +101,7 @@ class _MsearchState extends State<Msearch> {
                     data['profilepic']
                 ),
               ),
+             const SizedBox(width: 10,),
               Text(
                 data['username'],
                 style:TextStyle(
