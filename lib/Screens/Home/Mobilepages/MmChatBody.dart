@@ -86,18 +86,16 @@ class _mChatbodyState extends State<mChatbody> {
                         child:  SizedBox()
                     ):SizedBox(),
                     SizedBox(
-                      child: SizedBox(
-                        child: GestureDetector(
-                          onLongPress: (){
-                            if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
-                           _options(context, snapshot.data!.docs[index].data()['author'], user1.UID!, snapshot.data!.docs[index].data()['Receiver'], snapshot.data!.docs[index].data()['Receiver Uid'], snapshot.data!.docs[index].data()['Message Uid']);
-                            }else{
-                              Showsnackbar("Access Denied", context);
-                            }
-                          },
-                          child: chatcard(
-                            snap: snapshot.data!.docs[index].data(),
-                          ),
+                      child: GestureDetector(
+                        onLongPress: (){
+                          if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
+                         _options(context, snapshot.data!.docs[index].data()['author'], user1.UID!, snapshot.data!.docs[index].data()['Receiver'], snapshot.data!.docs[index].data()['Receiver Uid'], snapshot.data!.docs[index].data()['Message Uid']);
+                          }else{
+                            Showsnackbar("Access Denied", context);
+                          }
+                        },
+                        child: chatcard(
+                          snap: snapshot.data!.docs[index].data(),
                         ),
                       ),
                     ),

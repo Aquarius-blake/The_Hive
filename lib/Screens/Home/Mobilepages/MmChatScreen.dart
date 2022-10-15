@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Services/Encryption.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:provider/provider.dart';
@@ -18,6 +19,7 @@ class MmchatScreen extends StatefulWidget {
 
 class _MmchatScreenState extends State<MmchatScreen> {
   TextEditingController text=TextEditingController();
+  var plaintext,enctext;
 
 
   @override
@@ -99,7 +101,12 @@ class _MmchatScreenState extends State<MmchatScreen> {
                 ),
                 ElevatedButton(
                   onPressed: ()async{
-                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['Receiver'], widget.snap['Receiver uid'], text.text,widget.snap['Profile Pic'],user1.ppurl!);
+                    setState(() {
+                      plaintext=text.text;
+                      enctext=Encryption.encrypt(plaintext);
+                      text.text="";
+                    });
+                    String? ress= await FirestoreMethods().Sendmessage(user1.Username!, user1.UID!, widget.snap['Receiver'], widget.snap['Receiver uid'], plaintext,widget.snap['Profile Pic'],user1.ppurl!);
                     Showsnackbar(ress!, context);
                   },
                   child: const FaIcon(
