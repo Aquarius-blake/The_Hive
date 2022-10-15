@@ -66,6 +66,7 @@ class _ChatbodyState extends State<Chatbody> {
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
+      backgroundColor: Colors.black,
       body:  StreamBuilder(
         stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").doc(widget.snap['uid']).collection('message').orderBy("Message Time").snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
@@ -80,9 +81,9 @@ class _ChatbodyState extends State<Chatbody> {
                 alignment: Alignment.bottomRight,
                 child: Row(
                   children: [
-                  user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
-                      child: SizedBox()
-                  ):SizedBox(),
+                  user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']? const Expanded(
+                      child:  SizedBox()
+                  ):const SizedBox(),
                     SizedBox(
                       child: GestureDetector(
                         onLongPress: (){
