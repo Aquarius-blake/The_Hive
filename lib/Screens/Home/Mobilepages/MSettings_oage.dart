@@ -1,6 +1,10 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Provider/user_provider.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
+import 'package:provider/provider.dart';
 
 class MSettings extends StatefulWidget {
   const MSettings({ Key? key }) : super(key: key);
@@ -12,6 +16,8 @@ class MSettings extends StatefulWidget {
 class _MSettingsState extends State<MSettings> {
   @override
   Widget build(BuildContext context) {
+        late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -23,7 +29,9 @@ class _MSettingsState extends State<MSettings> {
         ),    
         actions: [
           TextButton(
-            onPressed: (){},
+            onPressed: ()async{
+              await FirestoreMethods().UpdateSettings(user1.UID!);
+            },
              child: Text(
               "Save",
               style: TextStyle(
