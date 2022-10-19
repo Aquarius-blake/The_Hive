@@ -868,7 +868,9 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
-  Future UpdateSettings(String uid)async{}
+  Future UpdateSettings(String uid)async{
+    try{}catch(e){}
+  }
 
 
 
