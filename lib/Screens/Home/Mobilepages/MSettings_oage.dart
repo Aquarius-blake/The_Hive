@@ -30,7 +30,7 @@ class _MSettingsState extends State<MSettings> {
         actions: [
           TextButton(
             onPressed: ()async{
-              await FirestoreMethods().UpdateSettings(user1.UID!);
+             String content= await FirestoreMethods().UpdateSettings(user1.UID!);
             },
              child: Text(
               "Save",
