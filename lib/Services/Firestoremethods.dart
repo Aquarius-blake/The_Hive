@@ -868,7 +868,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
-  Future UpdateSettings(String uid)async{
+  Future<String> UpdateSettings(String uid)async{
     String ress;
     try{
       ress="Settings Updated Successfully";
