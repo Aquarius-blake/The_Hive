@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class MSettings extends StatefulWidget {
@@ -22,7 +24,10 @@ class _MSettingsState extends State<MSettings> {
         actions: [
           TextButton(
             onPressed: (){},
-             child: Text("Save")
+             child: Text(
+              "Save",
+              style: TextStyle(),
+              )
              )
         ], 
       ),
