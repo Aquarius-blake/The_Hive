@@ -18,7 +18,13 @@ class _MSettingsState extends State<MSettings> {
         title: const Text('Settings'),
         iconTheme: const IconThemeData(
           color: Colors.white,
-        ),     
+        ),    
+        actions: [
+          TextButton(
+            onPressed: (){},
+             child: Text("Save")
+             )
+        ], 
       ),
     );
   }
