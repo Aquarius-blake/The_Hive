@@ -26,7 +26,9 @@ class _MSettingsState extends State<MSettings> {
             onPressed: (){},
              child: Text(
               "Save",
-              style: TextStyle(),
+              style: TextStyle(
+                color:Colors.blue
+              ),
               )
              )
         ], 
