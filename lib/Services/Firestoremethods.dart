@@ -870,7 +870,9 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
   Future UpdateSettings(String uid)async{
     String ress;
-    try{}catch(e){
+    try{
+      ress="Settings Updated";
+    }catch(e){
       ress=e.toString();
       return ress;
     }
