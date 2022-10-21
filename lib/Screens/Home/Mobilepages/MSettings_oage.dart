@@ -31,7 +31,6 @@ class _MSettingsState extends State<MSettings> {
         actions: [
           TextButton(
             onPressed: ()async{
-              
              String content= await FirestoreMethods().UpdateSettings(user1.UID!);
              Showsnackbar(content, context);
             },
