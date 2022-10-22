@@ -29,6 +29,7 @@ class _MSettingsState extends State<MSettings> {
           color: Colors.white,
         ),    
         actions: [
+          
           TextButton(
             onPressed: ()async{
              String content= await FirestoreMethods().UpdateSettings(user1.UID!);
