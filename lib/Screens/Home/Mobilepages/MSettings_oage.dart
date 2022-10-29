@@ -35,7 +35,7 @@ class _MSettingsState extends State<MSettings> {
              String content= await FirestoreMethods().UpdateSettings(user1.UID!);
              Showsnackbar(content, context);
             },
-             child: Text(
+             child: const Text(
               "Save",
               style: TextStyle(
                 color:Colors.blue
