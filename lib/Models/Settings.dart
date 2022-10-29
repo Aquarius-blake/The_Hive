@@ -6,6 +6,7 @@
 import 'package:flutter/widgets.dart';
 
 class Settings{
+  late final String? UID;
   late final Color Appbarbackcolor;
   late final Color Appbariconcolor;
   late final Color Appbartextcolor;
