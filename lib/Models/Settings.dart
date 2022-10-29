@@ -9,4 +9,5 @@ class Settings{
   late final Color Appbarbackcolor;
   late final Color Appbariconcolor;
   late final Color Appbartextcolor;
+  late final Color Scaffoldbackcolor;
 }
