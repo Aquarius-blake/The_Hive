@@ -3,4 +3,10 @@
 //TODO: Create settings page for the user to change the settings
 
 
-class Settings{}
+import 'package:flutter/widgets.dart';
+
+class Settings{
+  late final Color Appbarbackcolor;
+  late final Color Appbariconcolor;
+  late final Color Appbartextcolor;
+}
