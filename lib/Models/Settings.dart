@@ -6,10 +6,11 @@
 import 'package:flutter/widgets.dart';
 
 class Settings{
-  late final String? UID;
-  late final Color Appbarbackcolor;
-  late final Color Appbariconcolor;
-  late final Color Appbartextcolor;
-  late final Color Scaffoldbackcolor;
-  late final Color Scaffoldtextcolor;
+  late final String UID;
+  late final Color AppbarbackColor;
+  late final Color AppbariconColor;
+  late final Color AppbartextColor;
+  late final Color ScaffoldbackColor;
+  late final Color ScaffoldtextColor;
+  late final Color ScaffoldiconColor;
 }
