@@ -13,4 +13,5 @@ class Settings{
   late final Color ScaffoldbackColor;
   late final Color ScaffoldtextColor;
   late final Color ScaffoldiconColor;
+  late final Color ScaffoldbuttonColor;
 }
