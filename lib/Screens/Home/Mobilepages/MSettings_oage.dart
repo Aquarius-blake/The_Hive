@@ -49,10 +49,19 @@ class _MSettingsState extends State<MSettings> {
           children: [
             Padding(
               padding: const EdgeInsets.only(
-                top:5.0
+                top:5.0,
+                left:12.0
                 ),
               child: Row(
-                
+                children: [
+                  Text(
+                    "Enable Dark Mode",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20
+                    ),
+                    ),
+                ],
               ),
             )
           ],
