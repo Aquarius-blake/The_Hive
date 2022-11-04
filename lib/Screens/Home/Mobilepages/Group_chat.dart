@@ -140,7 +140,10 @@ void _scrollToTop() {
           ? null
           : FloatingActionButton(
               onPressed:()=> _scrollToTop(),
-              child: const Icon(Icons.arrow_downward),
+              child: const Icon(
+                Icons.arrow_downward
+                ),
+              backgroundColor: Colors.transparent,
             ),
        bottomNavigationBar: SafeArea(
           child: Container(
