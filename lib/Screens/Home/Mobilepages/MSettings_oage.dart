@@ -46,7 +46,11 @@ class _MSettingsState extends State<MSettings> {
       ),
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            Row(
+              
+            )
+          ],
         ),
       ),
     );
