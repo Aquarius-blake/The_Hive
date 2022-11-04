@@ -5,7 +5,7 @@
 
 import 'package:flutter/widgets.dart';
 
-class Theme{
+class UserThemeData{
   late final String UID;
   late final Color AppbarbackColor;
   late final Color AppbariconColor;
