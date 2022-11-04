@@ -44,6 +44,9 @@ class _MSettingsState extends State<MSettings> {
              )
         ], 
       ),
+      body: Column(
+        children: [],
+      ),
     );
   }
 }
