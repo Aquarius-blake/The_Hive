@@ -3,11 +3,12 @@
 //TODO: Create settings page for the user to change the settings
 
 
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class UserThemeData{
-  late final String UID;
-  late final Color AppbarbackColor;
+  late final String? UID;
+  late final Color? AppbarbackColor;
   late final Color AppbariconColor;
   late final Color AppbartextColor;
   late final Color AppbarShadowColor;
@@ -26,6 +27,13 @@ class UserThemeData{
   late final Color BottomNavBackColor;
   late final Color BottomNavTextColor;
   late final Color BottomNavIconColor;
+
+  UserThemeData({
+   this.UID,
+    this.AppbarbackColor=Colors.black,
+    this.AppbarShadowColor=Colors.black,
+    this.AppbariconColor=Colors.white,
+  });
 
   
 }
