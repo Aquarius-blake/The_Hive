@@ -22,6 +22,9 @@ class UserThemeData{
   late final Color CardBorderColor;
   late final Color CardShadowColor;
   late final Color CardIconColor;
+  late final Color BottomNavBackColor;
+  late final Color BottomNavTextColor;
+  late final Color BottomNavIconColor;
 
   
 }
