@@ -78,7 +78,15 @@ class UserThemeData{
 
   static UserThemeData FromSnap(DocumentSnapshot snap){
     var snapshot= snap.data() as Map<String,dynamic>;
-    UserThemeData Theme=UserThemeData();
+    UserThemeData Theme=UserThemeData(
+      UID:snapshot["uid"],
+      AppbarbackColor:snapshot["AppbarbackColor"],
+      AppbarShadowColor:snapshot["AppbarShadowColor"],
+      AppbariconColor:snapshot["AppbariconColor"],
+      AppbartextColor:snapshot["AppbartextColor"],
+      ScaffoldbackColor:snapshot["ScaffoldbackColor"],
+      ScaffoldtextColor:snapshot["ScaffoldtextColor"],
+    );
     return Theme;
   }
   
