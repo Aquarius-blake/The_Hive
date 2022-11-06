@@ -86,6 +86,8 @@ class UserThemeData{
       AppbartextColor:snapshot["AppbartextColor"],
       ScaffoldbackColor:snapshot["ScaffoldbackColor"],
       ScaffoldtextColor:snapshot["ScaffoldtextColor"],
+      ScaffoldiconColor:snapshot["ScaffoldiconColor"],
+      
     );
     return Theme;
   }
