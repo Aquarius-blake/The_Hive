@@ -94,6 +94,7 @@ class UserThemeData{
       CardBackgroundColor:snapshot["CardBackgroundColor"],
       CardTextColor:snapshot["CardTextColor"],
       CardBorderColor:snapshot["CardBorderColor"],
+      CardShadowColor:snapshot["CardShadowColor"],
     );
     return Theme;
   }
