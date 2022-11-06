@@ -45,6 +45,7 @@ class UserThemeData{
     this.CardTextColor=Colors.white,
     this.CardBorderColor=Colors.black,
     this.CardShadowColor=Colors.black,
+    this.CardIconColor=Colors.white,
   });
 
   
