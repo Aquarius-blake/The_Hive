@@ -46,7 +46,11 @@ class UserThemeData{
     this.CardBorderColor=Colors.black,
     this.CardShadowColor=Colors.black,
     this.CardIconColor=Colors.white,
+    this.BottomNavBackColor=Colors.black,
+    this.BottomNavTextColor=Colors.white,
+    this.BottomNavIconColor=Colors.white,
   });
 
+  Map<String,dynamic> toJson()=>{};
   
 }
