@@ -10,6 +10,7 @@ class UserThemeData{
   late final Color AppbarbackColor;
   late final Color AppbariconColor;
   late final Color AppbartextColor;
+  late final Color AppbarShadowColor;
   late final Color ScaffoldbackColor;
   late final Color ScaffoldtextColor;
   late final Color ScaffoldiconColor;
