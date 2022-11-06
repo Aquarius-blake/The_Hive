@@ -17,5 +17,6 @@ class UserThemeData{
   late final Color ScaffoldbuttonTextColor;
   late final Color ScaffoldbuttonIconColor;
   late final Color ScaffoldbuttonborderColor;
+  late final Color CardBackgroundColor;
   
 }
