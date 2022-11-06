@@ -35,6 +35,8 @@ class UserThemeData{
     this.AppbariconColor=Colors.white,
     this.AppbartextColor=Colors.white,
     this.ScaffoldbackColor=Colors.black,
+    this.ScaffoldtextColor=Colors.white,
+    this.ScaffoldiconColor=Colors.white,
   });
 
   
