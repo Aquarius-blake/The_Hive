@@ -33,6 +33,7 @@ class UserThemeData{
     this.AppbarbackColor=Colors.black,
     this.AppbarShadowColor=Colors.black,
     this.AppbariconColor=Colors.white,
+    this.AppbartextColor=Colors.white,
   });
 
   
