@@ -152,7 +152,13 @@ class AuthService{
     }
   }
 
-  Future CurrentUserTheme()async{}
+  Future CurrentUserTheme()async{
+    try {
+      User? result = await _auth.currentUser;
+      }catch(e){
+        print(e.toString());
+      }
+  }
 
 
 
