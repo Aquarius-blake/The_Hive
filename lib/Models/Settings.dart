@@ -97,6 +97,7 @@ class UserThemeData{
       CardShadowColor:snapshot["CardShadowColor"],
       CardIconColor:snapshot["CardIconColor"],
       BottomNavBackColor:snapshot["BottomNavBackColor"],
+      BottomNavTextColor:snapshot["BottomNavTextColor"],
     );
     return Theme;
   }
