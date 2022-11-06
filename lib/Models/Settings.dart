@@ -40,6 +40,7 @@ class UserThemeData{
     this.ScaffoldbuttonColor=Colors.lightBlueAccent,
     this.ScaffoldbuttonTextColor=Colors.white,
     this.ScaffoldbuttonIconColor=Colors.white,
+    this.ScaffoldbuttonborderColor=Colors.white,
   });
 
   
