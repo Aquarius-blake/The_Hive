@@ -87,7 +87,8 @@ class UserThemeData{
       ScaffoldbackColor:snapshot["ScaffoldbackColor"],
       ScaffoldtextColor:snapshot["ScaffoldtextColor"],
       ScaffoldiconColor:snapshot["ScaffoldiconColor"],
-      
+      ScaffoldbuttonColor:snapshot["ScaffoldbuttonColor"],
+
     );
     return Theme;
   }
