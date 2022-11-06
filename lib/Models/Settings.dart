@@ -89,6 +89,10 @@ class UserThemeData{
       ScaffoldiconColor:snapshot["ScaffoldiconColor"],
       ScaffoldbuttonColor:snapshot["ScaffoldbuttonColor"],
       ScaffoldbuttonTextColor:snapshot["ScaffoldbuttonTextColor"],
+      ScaffoldbuttonIconColor:snapshot["ScaffoldbuttonIconColor"],
+      ScaffoldbuttonborderColor:snapshot["ScaffoldbuttonborderColor"],
+      CardBackgroundColor:snapshot["CardBackgroundColor"],
+      CardTextColor:snapshot["CardTextColor"],
     );
     return Theme;
   }
