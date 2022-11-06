@@ -43,7 +43,8 @@ class UserThemeData{
     this.ScaffoldbuttonborderColor=Colors.white,
     this.CardBackgroundColor=Colors.black,
     this.CardTextColor=Colors.white,
-    this.CardBorderColor=Colors.white,
+    this.CardBorderColor=Colors.black,
+    this.CardShadowColor=Colors.black,
   });
 
   
