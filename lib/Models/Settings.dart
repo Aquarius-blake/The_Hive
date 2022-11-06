@@ -20,6 +20,7 @@ class UserThemeData{
   late final Color CardBackgroundColor;
   late final Color CardTextColor;
   late final Color CardBorderColor;
-  
+  late final Color CardShadowColor;
+
   
 }
