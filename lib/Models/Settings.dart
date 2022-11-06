@@ -51,6 +51,28 @@ class UserThemeData{
     this.BottomNavIconColor=Colors.white,
   });
 
-  Map<String,dynamic> toJson()=>{};
+  Map<String,dynamic> toJson()=>{
+    "uid":UID,
+    "AppbarbackColor":AppbarbackColor,
+    "AppbarShadowColor":AppbarShadowColor,
+    "AppbariconColor":AppbariconColor,
+    "AppbartextColor":AppbartextColor,
+    "ScaffoldbackColor":ScaffoldbackColor,
+    "ScaffoldtextColor":ScaffoldtextColor,
+    "ScaffoldiconColor":ScaffoldiconColor,
+    "ScaffoldbuttonColor":ScaffoldbuttonColor,
+    "ScaffoldbuttonTextColor":ScaffoldbuttonTextColor,
+    "ScaffoldbuttonIconColor":ScaffoldbuttonIconColor,
+    "ScaffoldbuttonborderColor":ScaffoldbuttonborderColor,
+    "CardBackgroundColor":CardBackgroundColor,
+    "CardTextColor":CardTextColor,
+    "CardBorderColor":CardBorderColor,
+    "CardShadowColor":CardShadowColor,
+    "CardIconColor":CardIconColor,
+    "BottomNavBackColor":BottomNavBackColor,
+    "BottomNavTextColor":BottomNavTextColor,
+    "BottomNavIconColor":BottomNavIconColor,
+  
+  };
   
 }
