@@ -3,6 +3,7 @@
 //TODO: Create settings page for the user to change the settings
 
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -74,5 +75,17 @@ class UserThemeData{
     "BottomNavIconColor":BottomNavIconColor,
   
   };
+
+  static UserThemeData FromSnap(DocumentSnapshot snap){
+    var snapshot= snap.data() as Map<String,dynamic>;
+    UserThemeData Theme=UserThemeData();
+    return Theme;
+  }
   
+
+
+
+
+
+
 }
