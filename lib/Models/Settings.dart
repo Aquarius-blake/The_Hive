@@ -41,6 +41,7 @@ class UserThemeData{
     this.ScaffoldbuttonTextColor=Colors.white,
     this.ScaffoldbuttonIconColor=Colors.white,
     this.ScaffoldbuttonborderColor=Colors.white,
+    this.CardBackgroundColor=Colors.black,
   });
 
   
