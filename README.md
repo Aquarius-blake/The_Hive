@@ -12,7 +12,7 @@ End-to-End encryption included in chats
 
 ## ScreenShots
 
-(Will be added later)
+(NB: Will be added later)
 
 
 
