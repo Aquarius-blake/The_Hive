@@ -155,6 +155,7 @@ class AuthService{
   Future CurrentUserTheme()async{
     try {
       User? result = await _auth.currentUser;
+     DocumentSnapshot snap= await _firestore.collection("Settings").doc(result!.uid).collection("Theme").doc(result.uid).get();
       }catch(e){
         print(e.toString());
       }
