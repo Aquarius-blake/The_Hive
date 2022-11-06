@@ -437,7 +437,7 @@ class _HomeState extends State<Home> {
               color: _page==4? Colors.lightBlueAccent:Colors.white,
             ),
             label: '',
-            backgroundColor: Colors.black,
+            backgroundColor: Colors.transparent,
           ),
         ],
         onTap: Navitap,
