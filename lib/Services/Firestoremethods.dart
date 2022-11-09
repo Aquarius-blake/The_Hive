@@ -1,5 +1,6 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:forum3/Models/Comments.dart';
 import 'package:forum3/Models/Group_chat.dart';
 import 'package:forum3/Models/Groups.dart';
@@ -891,7 +892,9 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           themedata.toJson(),
           SetOptions(merge: true)
         );
-      }else{}
+      }else{
+        UserThemeData themedata=UserThemeData(UID: uid,AppbarbackColor: Colors.white);
+      }
 
 
       ress="Theme Updated Successfully";
