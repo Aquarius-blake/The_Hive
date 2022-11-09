@@ -895,6 +895,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       }else{
         UserThemeData themedata=UserThemeData(
           UID: uid,
+          AppbarShadowColor: Colors.black,
           AppbariconColor: Colors.black,
           AppbartextColor: Colors.black,
           AppbarbackColor: Colors.white,
