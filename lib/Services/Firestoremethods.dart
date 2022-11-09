@@ -893,6 +893,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           SetOptions(merge: true)
         );
       }else{
+        //TODO: Add the rest later before you continue if you can
         UserThemeData themedata=UserThemeData(
           UID: uid,
           AppbarShadowColor: Colors.black,
@@ -904,6 +905,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           ScaffoldtextColor: Colors.black,
           ScaffoldbuttonColor: Colors.lightBlueAccent,
           ScaffoldbuttonTextColor:Colors.black,
+          ScaffoldbuttonIconColor: Colors.black
 
           );
       }
