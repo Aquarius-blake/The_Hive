@@ -68,6 +68,24 @@ class _MSettingsState extends State<MSettings> {
                     Atogglebutton()
                 ],
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                top:5.0,
+                left:12.0
+                ),
+              child: Row(
+                children: [
+                  Text(
+                    "Set Custom Colors",
+                    textAlign: TextAlign.start,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20  ,
+                    )
+                    ),
+                ],
+              ),
             )
           ],
         ),
