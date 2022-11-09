@@ -11,6 +11,12 @@ class _AtogglebuttonState extends State<Atogglebutton> {
  
 bool toggleValue=false;
 
+toggleButton(){
+  setState(() {
+    toggleValue=!toggleValue;
+  });
+}
+
   @override
   Widget build(BuildContext context) {
     return Container(
