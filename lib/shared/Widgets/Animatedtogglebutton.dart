@@ -37,7 +37,7 @@ toggleButton(){
               left: toggleValue? 30.0: 0.0,
               right: toggleValue? 0.0: 30.0,
               child: InkWell(
-                //onTap: toggleButton, 
+                onTap: toggleButton, 
               ),
               )
           ],
