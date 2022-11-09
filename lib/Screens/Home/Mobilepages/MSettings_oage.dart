@@ -75,6 +75,7 @@ class _MSettingsState extends State<MSettings> {
                 left:12.0
                 ),
               child: GestureDetector(
+                onTap: (){},
                 child: Row(
                   children: [
                     Text(
