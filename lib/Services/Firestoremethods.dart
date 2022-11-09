@@ -887,7 +887,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       if(Mode==true){
 
         UserThemeData themedata=UserThemeData(UID: uid,);
-        await _firestore.collection("Settings").doc(uid).set(
+        await _firestore.collection("Settings").doc(uid).collection("Theme").doc(uid).set(
           themedata.toJson(),
           SetOptions(merge: true)
         );
