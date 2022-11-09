@@ -22,8 +22,8 @@ toggleButton(){
     return Container(
       child:AnimatedContainer(
         duration: Duration(milliseconds: 500),
-        height:40.0,
-        width: 100.0,
+        height:32.0,
+        width: 80.0,
         decoration: BoxDecoration(
           color: toggleValue? Colors.lightBlueAccent: Colors.grey.withOpacity(0.5),
           borderRadius: BorderRadius.circular(20.0),
@@ -34,8 +34,8 @@ toggleButton(){
               curve: Curves.easeIn ,
               duration: Duration(milliseconds: 500),
               top: 3.0,
-              left: toggleValue? 60.0: 0.0,
-              right: toggleValue? 0.0: 60.0,
+              left: toggleValue? 40.0: 0.0,
+              right: toggleValue? 0.0: 40.0,
               child: InkWell(
                 onTap: toggleButton,
                 child: AnimatedSwitcher(
