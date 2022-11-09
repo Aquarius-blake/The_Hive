@@ -38,9 +38,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_)=> UserProvider(),
         ),
-        ChangeNotifierProvider(
+        //TODO: Add Theme Provider(Uncomment this later)
+       /* ChangeNotifierProvider(
           create: (_)=> ThemeProvider(),
-          )
+          )*/
       ],
       child: MaterialApp(
         home: Wrapper(),
