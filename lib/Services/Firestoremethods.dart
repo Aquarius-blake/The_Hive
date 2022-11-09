@@ -900,6 +900,9 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           AppbartextColor: Colors.black,
           AppbarbackColor: Colors.white,
           ScaffoldbackColor: Colors.white,
+          ScaffoldiconColor: Colors.black,
+          ScaffoldtextColor: Colors.black
+
           );
       }
 
