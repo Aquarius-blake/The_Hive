@@ -62,6 +62,9 @@ class _MSettingsState extends State<MSettings> {
                       fontSize: 20
                     ),
                     ),
+                    Expanded(
+                      child: SizedBox()
+                    ),
                     Atogglebutton()
                 ],
               ),
