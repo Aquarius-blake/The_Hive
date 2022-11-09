@@ -11,4 +11,10 @@ class ThemeProvider with ChangeNotifier{
 
   UserThemeData get getUserThemeData=>_userThemeData!;
 
+  Future<void> RefreshTheme()async{
+    UserThemeData? userThemeData = await _auth.CurrentUserTheme();
+    _userThemeData=userThemeData;
+    notifyListeners();
+  }
+
 }
