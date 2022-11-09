@@ -899,6 +899,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           AppbariconColor: Colors.black,
           AppbartextColor: Colors.black,
           AppbarbackColor: Colors.white,
+          ScaffoldbackColor: Colors.white,
           );
       }
 
