@@ -6,6 +6,7 @@ import 'package:forum3/Models/Groups.dart';
 import 'package:forum3/Models/Notifs.dart';
 import 'package:forum3/Models/Posts.dart';
 import 'package:forum3/Models/Requests.dart';
+import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 
@@ -883,7 +884,14 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     String ress;
     try{
 
-      if(Mode==true){}else{}
+      if(Mode==true){
+
+        UserThemeData themedata=UserThemeData(UID: uid,);
+        await _firestore.collection("Settings").doc(uid).set(
+          themedata.toJson(),
+          SetOptions(merge: true)
+        );
+      }else{}
 
 
       ress="Theme Updated Successfully";
