@@ -51,7 +51,7 @@ class UserThemeData{
     this.BottomNavBackColor=Colors.black,
     this.BottomNavTextColor=Colors.white,
     this.BottomNavIconColor=Colors.white,
-    this.DarkMode=false
+    this.DarkMode=true
   });
 
   Map<String,dynamic> toJson()=>{
