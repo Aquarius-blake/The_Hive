@@ -46,7 +46,7 @@ toggleButton(){
                       child: child,
                     );
                   },
-                  child: toggleValue? Icon(Icons.check_circle, color: Colors.green, size: 15.0, key: UniqueKey(),): Icon(Icons.remove_circle_outline, color: Colors.red, size: 15.0, key: UniqueKey(),),
+                  child: toggleValue? Icon(Icons.check_circle, color: Colors.blue, size: 15.0, key: UniqueKey(),): Icon(Icons.remove_circle_outline, color: Colors.white, size: 15.0, key: UniqueKey(),),
                 ), 
               ),
               )
