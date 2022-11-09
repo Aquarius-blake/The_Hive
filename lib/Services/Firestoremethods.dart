@@ -879,9 +879,13 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
-  Future<String> UpdateTheme()async{
+  Future<String> UpdateThemeMode(String uid,bool Mode)async{
     String ress;
     try{
+
+      if(Mode==true){}else{}
+
+
       ress="Theme Updated Successfully";
       return ress;
       }catch(e){

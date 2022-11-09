@@ -28,6 +28,7 @@ class UserThemeData{
   late final Color BottomNavBackColor;
   late final Color BottomNavTextColor;
   late final Color BottomNavIconColor;
+  late final bool DarkMode;
 
   UserThemeData({
    this.UID,
@@ -50,6 +51,7 @@ class UserThemeData{
     this.BottomNavBackColor=Colors.black,
     this.BottomNavTextColor=Colors.white,
     this.BottomNavIconColor=Colors.white,
+    this.DarkMode=false
   });
 
   Map<String,dynamic> toJson()=>{
@@ -73,6 +75,7 @@ class UserThemeData{
     "BottomNavBackColor":BottomNavBackColor,
     "BottomNavTextColor":BottomNavTextColor,
     "BottomNavIconColor":BottomNavIconColor,
+    "DarkMode":DarkMode
   
   };
 
@@ -99,6 +102,8 @@ class UserThemeData{
       BottomNavBackColor:snapshot["BottomNavBackColor"],
       BottomNavTextColor:snapshot["BottomNavTextColor"],
       BottomNavIconColor:snapshot["BottomNavIconColor"],
+      DarkMode:snapshot["DarkMode"]
+
     );
     return Theme;
   }
