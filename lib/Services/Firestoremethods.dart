@@ -893,7 +893,12 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           SetOptions(merge: true)
         );
       }else{
-        UserThemeData themedata=UserThemeData(UID: uid,AppbarbackColor: Colors.white);
+        UserThemeData themedata=UserThemeData(
+          UID: uid,
+          AppbariconColor: Colors.black,
+          AppbartextColor: Colors.black,
+          AppbarbackColor: Colors.white,
+          );
       }
 
 
