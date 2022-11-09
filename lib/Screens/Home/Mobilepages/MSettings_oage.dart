@@ -5,6 +5,7 @@ import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:forum3/shared/Widgets/Animatedtogglebutton.dart';
 import 'package:provider/provider.dart';
 
 class MSettings extends StatefulWidget {
@@ -61,6 +62,7 @@ class _MSettingsState extends State<MSettings> {
                       fontSize: 20
                     ),
                     ),
+                    Atogglebutton()
                 ],
               ),
             )
