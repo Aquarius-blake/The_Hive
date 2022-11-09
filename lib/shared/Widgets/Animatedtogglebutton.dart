@@ -37,7 +37,16 @@ toggleButton(){
               left: toggleValue? 30.0: 0.0,
               right: toggleValue? 0.0: 30.0,
               child: InkWell(
-                onTap: toggleButton, 
+                onTap: toggleButton,
+                child: AnimatedSwitcher(
+                  duration: Duration(milliseconds: 1000),
+                  transitionBuilder: (Widget child, Animation<double> animation){
+                    return RotationTransition(
+                      turns: animation,
+                      child: child,
+                    );
+                  },
+                ), 
               ),
               )
           ],
