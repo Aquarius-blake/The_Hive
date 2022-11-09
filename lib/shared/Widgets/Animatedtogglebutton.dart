@@ -23,7 +23,18 @@ bool toggleValue=false;
           borderRadius: BorderRadius.circular(20.0),
         ),
         child: Stack(
-          children: [],
+          children: <Widget>[
+            AnimatedPositioned(
+              curve: Curves.easeIn ,
+              duration: Duration(milliseconds: 1000),
+              top: 3.0,
+              left: toggleValue? 30.0: 0.0,
+              right: toggleValue? 0.0: 30.0,
+              child: InkWell(
+                //onTap: toggleButton, 
+              ),
+              )
+          ],
         ),
         )
     );
