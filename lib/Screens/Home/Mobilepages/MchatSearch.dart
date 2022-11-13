@@ -124,6 +124,9 @@ class _MchatusersearchState extends State<Mchatusersearch> {
           decoration: const InputDecoration(
             labelText: "Search User",
           ),
+          style: TextStyle(
+            color: Colors.white,
+          ),
         ),
         actions: [
           ElevatedButton(

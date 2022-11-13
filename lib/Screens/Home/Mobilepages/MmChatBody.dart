@@ -99,6 +99,9 @@ class _mChatbodyState extends State<mChatbody> {
                         ),
                       ),
                     ),
+                    user1.UID!=snapshot.data!.docs[index].data()['author Uid']?  Expanded(
+                        child:  SizedBox()
+                    ):SizedBox(),
                   ],
                 ),
               )
