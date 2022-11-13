@@ -123,6 +123,9 @@ class _MchatusersearchState extends State<Mchatusersearch> {
 
           decoration: const InputDecoration(
             labelText: "Search User",
+            labelStyle: TextStyle(
+              color: Colors.white,
+            ),
           ),
           style: TextStyle(
             color: Colors.white,
