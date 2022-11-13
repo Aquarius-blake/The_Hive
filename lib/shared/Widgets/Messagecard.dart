@@ -38,41 +38,44 @@ class _chatcardState extends State<chatcard> {
       recever=true;
     }
     if(recever){
-      return Container(
-        alignment: Alignment.centerRight,
-        child: Card(
-          shape: const RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(
-                  Radius.circular(15)
-              )
-          ),
-          color: Colors.lightBlueAccent[100],
-          elevation: 5.0,
-          child: Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                RichText(
-                    text: TextSpan(
-                      text: plaintext,
-                      style: const TextStyle(
-                        color: Colors.black,
-                      ),
-                    )
-                ),
-                Align(
-                    alignment: Alignment.bottomRight,
-                    child: Text(
-                      "Sent $dateString",
-                      style: const TextStyle(
-                          color: Colors.blueGrey,
-                          fontSize: 12
-                      ),
-                    )
+      return Align(
+        alignment: Alignment.bottomLeft,
+        child: Container(
+          alignment: Alignment.centerRight,
+          child: Card(
+            shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(
+                    Radius.circular(15)
                 )
-              ],
+            ),
+            color: Colors.lightBlueAccent[100],
+            elevation: 5.0,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  RichText(
+                      text: TextSpan(
+                        text: plaintext,
+                        style: const TextStyle(
+                          color: Colors.black,
+                        ),
+                      )
+                  ),
+                  Align(
+                      alignment: Alignment.bottomRight,
+                      child: Text(
+                        "Sent $dateString",
+                        style: const TextStyle(
+                            color: Colors.blueGrey,
+                            fontSize: 12
+                        ),
+                      )
+                  )
+                ],
+              ),
             ),
           ),
         ),
