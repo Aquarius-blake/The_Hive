@@ -111,7 +111,7 @@ class _chatcardState extends State<chatcard> {
                       alignment: Alignment.bottomLeft,
                       child: Text(
                         "Sent $dateString",
-                        style: TextStyle(
+                        style: const TextStyle(
                             color: Colors.blueGrey,
                             fontSize: 12
                         ),
