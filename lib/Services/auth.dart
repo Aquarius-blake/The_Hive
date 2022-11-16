@@ -111,7 +111,9 @@ class AuthService{
       User? user = result.user;
 
     String photourl= await  Store.Storageip("Profilepic", image, false,null);
-     User1 user1= User1(Admin: false,Guest: false,UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl,searchkey: username.substring(0,1));
+    String flname=username.substring(0,1).toUpperCase();
+    username=flname + username.substring(1);
+     User1 user1= User1(Admin: false,Guest: false,UID: user?.uid,Username: username,Name: name,Gender: gender,Email: email,ppurl: photourl,searchkey: username.substring(0,1),Bio: "I am new to Forum3",);
 
       await  _firestore.collection("users").doc(user!.uid).set(
         user1.toJson(),
