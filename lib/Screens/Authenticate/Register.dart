@@ -132,7 +132,7 @@ class _RegisterState extends State<Register> {
                         },
                         decoration: InputDecoration(
                           label: const Text("Username"),
-                          hintText: "Enter Username",
+                          hintText: "Enter Username,NB:start with CAPS",
                           filled: true,
                           fillColor: Colors.white70,
                           focusedBorder: OutlineInputBorder(
