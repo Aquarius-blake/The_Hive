@@ -61,9 +61,7 @@ class _RegisterState extends State<Register> {
               padding: EdgeInsets.all(6.0),
               color: Colors.lightBlueAccent[100],
               child: SingleChildScrollView(
-
                 child: Form(
-
                   key: _formKey,
                   child: Column(
                     children: <Widget>[
@@ -72,7 +70,6 @@ class _RegisterState extends State<Register> {
                           image!=null? CircleAvatar(
                             radius: 60.0,
                             backgroundImage:MemoryImage(image) ,
-
                           ):const CircleAvatar(
                             radius: 60.0,
                           ),
@@ -94,9 +91,7 @@ class _RegisterState extends State<Register> {
                           )
                         ],
                       ),
-                      SizedBox(height:10 ,),
-
-                      SizedBox(height:10 ,),
+                     const SizedBox(height:20 ,),
                       TextFormField(
                         validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
                         onChanged: (val){
