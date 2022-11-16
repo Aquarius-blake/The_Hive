@@ -73,7 +73,7 @@ class _RegisterState extends State<Register> {
                             radius: 60.0,
                             backgroundImage:MemoryImage(image) ,
 
-                          ):CircleAvatar(
+                          ):const CircleAvatar(
                             radius: 60.0,
                           ),
                           Positioned(
