@@ -9,7 +9,6 @@ A Social Media Application project with flutter front-end UI and Firebase back-e
 End-to-End encryption included in chats
 
 
-
 ## ScreenShots
 
 (NB: Will be added later)
