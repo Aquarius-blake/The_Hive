@@ -8,7 +8,6 @@ class User1{
 
   late final  String? UID;
   late final String? Email;
-  late final String? Password;
   late final bool? Guest;
   dynamic profilepic;
   late final String? Username;
@@ -27,7 +26,6 @@ class User1{
     this.Guest,
     this.Username,
     this.Email,
-    this.Password,
     this.DOB,
     this.imageurl,
     this.ppurl,
@@ -43,7 +41,6 @@ class User1{
     "searchkey":searchkey,
     "uid":UID,
     "email":Email,
-    "password":Password,
     "DateofBirth":DOB,
     "profilepic":ppurl,
     "Full Name":Name,
