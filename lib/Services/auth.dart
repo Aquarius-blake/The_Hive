@@ -155,6 +155,7 @@ class AuthService{
     }
   }
 
+//return custom theme
   Future CurrentUserTheme()async{
     try {
       User? result = await _auth.currentUser;
