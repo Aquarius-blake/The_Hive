@@ -907,6 +907,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           ScaffoldbuttonTextColor:Colors.black,
           ScaffoldbuttonIconColor: Colors.black,
           ScaffoldbuttonborderColor: Colors.white,
+          CardBackgroundColor: Colors.white
 
           );
       }
