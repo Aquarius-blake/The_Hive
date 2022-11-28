@@ -914,6 +914,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           CardBorderColor: Colors.transparent, 
           BottomNavBackColor: Colors.white,
 
+
           );
       }
 
