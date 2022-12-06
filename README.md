@@ -6,7 +6,7 @@
 ## Description 
 
 A Social Media Application project with flutter front-end UI and Firebase back-end.
-End-to-End encryption included in chats. Planning to add user customizable theme alongside  the standard light and dark theme . 
+End-to-End encryption included in chats. Planning to add user customizable themes alongside  the standard light and dark theme . 
 
 
 ## ScreenShots
