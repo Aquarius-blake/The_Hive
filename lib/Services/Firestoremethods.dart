@@ -861,7 +861,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     String ress;
     try{
       await _firestore.collection("Groups").doc(groupid).collection("Chats").doc(message_uid).delete();
-      ress="Message Deleted";
+      ress="Message Deleted Successfully";
       return ress;
     }catch(e){
       print(e.toString());
