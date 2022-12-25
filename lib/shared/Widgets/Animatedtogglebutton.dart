@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
+import 'package:forum3/shared/Pop_up.dart';
+
 
 class Atogglebutton extends StatefulWidget {
   const Atogglebutton({ Key? key }) : super(key: key);
@@ -11,7 +14,11 @@ class _AtogglebuttonState extends State<Atogglebutton> {
  
 bool toggleValue=false;
 
-toggleButton(){
+toggleButton(String uid)async{
+
+String content=await FirestoreMethods().UpdateThemeMode(uid,true);
+Showsnackbar(content,context);
+
   setState(() {
     toggleValue=!toggleValue;
   });
