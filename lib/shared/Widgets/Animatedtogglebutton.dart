@@ -26,6 +26,7 @@ await Showsnackbar(content,context);
 
   @override
   Widget build(BuildContext context) {
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     return Container(
       child:AnimatedContainer(
         duration: Duration(milliseconds: 500),
@@ -44,7 +45,7 @@ await Showsnackbar(content,context);
               left: toggleValue? 40.0: 0.0,
               right: toggleValue? 0.0: 40.0,
               child: InkWell(
-                onTap: toggleButton,
+                onTap: toggleButton(User1.UID),
                 child: AnimatedSwitcher(
                   duration: Duration(milliseconds: 500),
                   transitionBuilder: (Widget child, Animation<double> animation){
