@@ -914,10 +914,12 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           CardBorderColor: Colors.transparent, 
           BottomNavBackColor: Colors.white,
           BottomNavTextColor: Colors.black,
-          BottomNavTextColor: Colors.black,
-
-
+          BottomNavIconColor: Colors.black,
           );
+          await _firestore.collection("Settings").doc(uid).collection("Theme").doc(uid).set(
+          themedata.toJson(),
+          SetOptions(merge: true)
+        );
       }
 
 
