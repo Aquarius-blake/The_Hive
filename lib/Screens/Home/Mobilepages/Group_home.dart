@@ -120,7 +120,7 @@ _selectimage(BuildContext context)async{
             ],
       ),
       body:Scrollbar(
-        isAlwaysShown: true,
+        thumbVisibility: true,
         child: SingleChildScrollView(
           child: Column(
             children: [
