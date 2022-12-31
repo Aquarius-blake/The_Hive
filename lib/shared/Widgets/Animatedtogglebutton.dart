@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:provider/provider.dart';
+
+import '../../Models/Users1.dart';
 
 
 class Atogglebutton extends StatefulWidget {
@@ -45,7 +49,7 @@ await Showsnackbar(content,context);
               left: toggleValue? 40.0: 0.0,
               right: toggleValue? 0.0: 40.0,
               child: InkWell(
-                onTap: toggleButton(User1.UID),
+                onTap: toggleButton(user1.UID!),
                 child: AnimatedSwitcher(
                   duration: Duration(milliseconds: 500),
                   transitionBuilder: (Widget child, Animation<double> animation){
