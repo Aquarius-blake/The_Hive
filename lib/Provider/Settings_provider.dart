@@ -1,10 +1,10 @@
 
-
-
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Services/auth.dart';
 
+
+//Theme Settings Provider 
 class ThemeProvider with ChangeNotifier{
   UserThemeData? _userThemeData;
   final AuthService _auth=AuthService();
@@ -16,5 +16,8 @@ class ThemeProvider with ChangeNotifier{
     _userThemeData=userThemeData;
     notifyListeners();
   }
-
 }
+
+
+
+
