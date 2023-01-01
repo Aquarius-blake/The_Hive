@@ -12,7 +12,14 @@ class _CustomThemePageState extends State<CustomThemePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(
+          "Customize the theme",
+          style: TextStyle(
+            color: Colors.white
+          ),
+          ),
+      ),
     );
   }
 }
