@@ -887,8 +887,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       if(Mode==true){
         //Dark Theme
         UserThemeData themedata=UserThemeData(
-          UID: uid
-          
+          UID: uid  
           );
         await _firestore.collection("Settings").doc(uid).collection("Theme").doc(uid).set(
           themedata.toJson(),
