@@ -20,8 +20,8 @@ bool toggleValue=false;
 
 toggleButton(String uid)async{
 
-String content=await FirestoreMethods().UpdateThemeMode(uid,true);
-await Showsnackbar(content,context);
+String? content=await FirestoreMethods().UpdateThemeMode(uid,true);
+await Showsnackbar(content!,context);
 
   setState(() {
     toggleValue=!toggleValue;

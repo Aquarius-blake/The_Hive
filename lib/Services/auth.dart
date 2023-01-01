@@ -2,6 +2,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Storagemethods.dart';
 import '../Models/Users1.dart';
 
@@ -119,7 +120,8 @@ class AuthService{
         user1.toJson(),
       );
       Username=username;
-
+      await FirestoreMethods().UpdateThemeMode(user.uid,true);
+      
       return _userfirebase(user);
     }
     catch(e){

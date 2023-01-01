@@ -871,7 +871,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
-  Future<String> UpdateThemeMode(String uid,bool Mode)async{
+  Future<String?> UpdateThemeMode(String uid,bool Mode)async{
     String ress;
     try{
       if(Mode==true){
