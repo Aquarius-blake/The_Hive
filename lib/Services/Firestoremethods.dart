@@ -92,7 +92,6 @@ class FirestoreMethods{
         }
     }
 
-
     Future<String> postcomment(String postid, String text,String author_uid,String author,String ppurl,String title,String owner_uid) async{
         String ress;
         try{
@@ -247,7 +246,6 @@ class FirestoreMethods{
         }
     }
 
-
     Future<void> Updatepostpic(String postid,String ppurl)async{
 
         await _firestore.collection("Posts").doc(postid).update({
@@ -357,7 +355,6 @@ class FirestoreMethods{
         }
     }
 
-
     Future<String>Deletemessage(  String author,
         String author_uid,
         String receiver,
@@ -442,7 +439,6 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         }
     }
 
-
     Future<String> Approval(String uid)async{
         String ress;
         try{
@@ -458,7 +454,6 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             return ress;
         }
     }
-
 
     Future<String> DenyRequest(String uid)async{
         String ress;
@@ -485,6 +480,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             return ress;
         }
     }
+
     Future<String> CreateGroup(String uid,String author,String grpname,String grpdesc,dynamic file,User1 user)async{
       String ress;
       String photourl;
@@ -543,8 +539,6 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
     }
 
-
-
   Future<String> GroupPost(String Groupid,String uid,String Title,String Detail,dynamic file,String author , String ppurl)async{
       String ress;
       String photourl;
@@ -599,7 +593,6 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             print(e.toString());
         }
   }
-
 
   Future<String> UpdateGroup(String uid,String Groupname,String Groupdesc,String memberalias,String postalias,dynamic file)async{
     String ress;
@@ -719,7 +712,6 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
-
   Future<String> Deletegroupost(String groupid,String postid)async{
     String ress;
     try{
@@ -809,7 +801,6 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
-
   Future <String> Editgroupcomment(String groupid,String postid,String commentid,String text)async{
     String ress;
     try{
@@ -824,7 +815,6 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       return ress;
     }
   }
-
 
   Future <String> Groupchat(String groupid,String author_uid,String message,String ppurl,String author)async{
     String ress;
@@ -934,18 +924,6 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         return ress;
       }
   }
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 
