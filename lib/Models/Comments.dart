@@ -1,5 +1,5 @@
 
-// Custom Post Class
+// Custom Comment Class
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 

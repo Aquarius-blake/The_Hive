@@ -1,5 +1,5 @@
 
-// Custom Post Class
+// Custom Group Chat message Class
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class GChats{

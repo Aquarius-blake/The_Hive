@@ -1,6 +1,6 @@
 
 
-// Custom request Class
+// Custom Group Class
 
 
 import 'package:cloud_firestore/cloud_firestore.dart';

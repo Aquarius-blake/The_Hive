@@ -2,7 +2,6 @@
 
 // Custom request Class
 
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Request{
@@ -41,11 +40,5 @@ class Request{
     );
 
     return Request12;
-
-
-
-
-
-
   }
 }
