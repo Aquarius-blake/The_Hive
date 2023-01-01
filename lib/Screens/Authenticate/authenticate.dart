@@ -19,7 +19,5 @@ class _AuthenticateState extends State<Authenticate> {
     return Container(
       child: Singin(),
     );
-
-
   }
 }

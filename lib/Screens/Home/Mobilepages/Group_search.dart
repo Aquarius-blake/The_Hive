@@ -80,8 +80,9 @@ class _GroupsearchState extends State<Groupsearch> {
                   fontSize: 20,
                 ),
                 ),
-              SizedBox(width:5,),
-             data['Admin']==true ? const Text("Admin",
+             const SizedBox(width:5,),
+             data['Admin']==true ? const Text(
+              "Admin",
               style :TextStyle(
                 color:Colors.white,
                 fontStyle:FontStyle.italic ,

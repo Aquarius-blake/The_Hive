@@ -5,7 +5,6 @@ import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Pop_up.dart';
-import 'package:forum3/shared/error_handling.dart';
 import 'package:image_picker/image_picker.dart';
 
 

@@ -6,7 +6,6 @@ import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
-
 import '../../../Models/Users1.dart';
 
 
@@ -31,10 +30,10 @@ dynamic image2;
   @override
   void initState() {
     super.initState();
-     widget.snap["Group Name"]!=null?groupname.text=widget.snap["Group Name"]:"";
-    widget.snap["Group Description"]!=null?groupdesc.text=widget.snap["Group Description"]:"";
-    widget.snap["Identity"]!=null?memalias.text=widget.snap["Identity"]:"";
-    widget.snap["Post Name"]!=null?postalias.text=widget.snap["Post Name"]:"";
+     widget.snap["Group Name"]!=null?groupname.text=widget.snap["Group Name"]:groupname.text="";
+    widget.snap["Group Description"]!=null?groupdesc.text=widget.snap["Group Description"]:groupdesc.text="";
+    widget.snap["Identity"]!=null?memalias.text=widget.snap["Identity"]:memalias.text="";
+    widget.snap["Post Name"]!=null?postalias.text=widget.snap["Post Name"]:postalias.text="";
   }
 
 _selectimage2(BuildContext context)async{
@@ -384,7 +383,7 @@ _selectimage(BuildContext context)async{
                 child: ElevatedButton(
                   onPressed: ()async{
                     
-                    if(groupdesc.text==""|| groupname==""|| memalias==""|| postalias==""){
+                    if(groupdesc.text==""|| groupname.text==""|| memalias.text==""|| postalias.text==""){
                       Showsnackbar("Please fill all the fields", context);
                     }else{
                        String content=await FirestoreMethods().UpdateGroup(widget.snap['Group Uid'], groupname.text, groupdesc.text, memalias.text, postalias.text,image);

@@ -11,14 +11,15 @@ class Resetpass extends StatefulWidget {
 }
 
 class _ResetpassState extends State<Resetpass> {
-  final _formKey =GlobalKey<FormState>();
-  final AuthService _auth=AuthService();
+double cp=0;
+bool e=false;
   String email="";
 String error="";
-bool e=false;
-double padd=0;
 double fp=0;
-double cp=0;
+double padd=0;
+
+  final AuthService _auth=AuthService();
+  final _formKey =GlobalKey<FormState>();
 
 @override
   void initState() {
@@ -35,12 +36,12 @@ padd=150;
   }
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent[100],
-
       appBar: AppBar(
         title: const Text(
             "Reset Password",
@@ -59,7 +60,6 @@ padd=150;
                 borderRadius: BorderRadius.circular(60.0)
             ),
             child: Container(
-
               child: Padding(
                 padding: const EdgeInsets.all(2.0),
                 child: Center(
@@ -71,14 +71,14 @@ padd=150;
                         key: _formKey,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-
                           children: [
                             Text("Password Reset",
                             style: TextStyle(
-fontSize: 30.0,
+                            fontSize: 30.0,
                               fontWeight: FontWeight.bold,
                               color: Colors.black
-                            ),),
+                            ),
+                            ),
                             Container(
                               child: Padding(
                                 padding:  EdgeInsets.fromLTRB(fp, 10, fp, 30),

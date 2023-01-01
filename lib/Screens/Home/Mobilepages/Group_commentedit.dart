@@ -111,7 +111,7 @@ class _GcomeditState extends State<Gcomedit> {
         elevation: 4.0,
         backgroundColor: Colors.lightBlueAccent,
         onPressed: () async{
-          String ress=await FirestoreMethods().Editgroupcomment(widget.groupid,widget.postid, widget.snap['Comment Uid'], text.text);
+          String ress= await FirestoreMethods().Editgroupcomment(widget.groupid,widget.postid, widget.snap['Comment Uid'], text.text);
           await  Showsnackbar(ress, context);
           Navigator.of(context).pop();
         },

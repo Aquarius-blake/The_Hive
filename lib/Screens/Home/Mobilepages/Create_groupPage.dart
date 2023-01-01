@@ -17,13 +17,12 @@ class Creation extends StatefulWidget {
 }
 
 class _CreationState extends State<Creation> {
-  dynamic image;
-  final Upload Selection=Upload();
-  TextEditingController Group_name=TextEditingController();
     TextEditingController Group_desc=TextEditingController();
+  TextEditingController Group_name=TextEditingController();
+  final Upload Selection=Upload();
+  dynamic image;
+
   final _formKey =GlobalKey<FormState>();
-
-
 
  _selectimage(BuildContext context)async{
     return showDialog(
@@ -66,7 +65,6 @@ class _CreationState extends State<Creation> {
         }
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -196,9 +194,9 @@ class _CreationState extends State<Creation> {
                       }
                     },
                     style: ElevatedButton.styleFrom(
-                                elevation: 6.0,
+                                elevation: 6.0, 
+                                backgroundColor: Colors.black,
                                 shadowColor: Colors.black,
-                                primary: Colors.black,
                                 side: const BorderSide(
                                   color: Colors.blue,
                                   width: 2.0,
