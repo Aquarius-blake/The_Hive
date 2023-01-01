@@ -887,7 +887,8 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       if(Mode==true){
         //Dark Theme
         UserThemeData themedata=UserThemeData(
-          UID: uid  
+          UID: uid,
+          DarkMode: true  
           );
         await _firestore.collection("Settings").doc(uid).collection("Theme").doc(uid).set(
           themedata.toJson(),
@@ -917,6 +918,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           BottomNavBackColor: Colors.white,
           BottomNavTextColor: Colors.black,
           BottomNavIconColor: Colors.black,
+          DarkMode: false
           );
           await _firestore.collection("Settings").doc(uid).collection("Theme").doc(uid).set(
           themedata.toJson(),
