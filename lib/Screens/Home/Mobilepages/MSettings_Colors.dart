@@ -22,6 +22,11 @@ class _CustomThemePageState extends State<CustomThemePage> {
             color: Colors.white
           ),
           ),
+          actions: [
+            TextButton(
+              onPressed: (){},
+              child: Text("Save changes"))
+          ],
       ),
     );
   }
