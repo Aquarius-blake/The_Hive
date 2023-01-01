@@ -13,6 +13,7 @@ class _CustomThemePageState extends State<CustomThemePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        elevation:0.00,
         backgroundColor: Colors.black,
         centerTitle: true,
         title: Text(
