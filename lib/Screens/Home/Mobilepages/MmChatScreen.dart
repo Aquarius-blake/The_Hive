@@ -117,9 +117,9 @@ class _MmchatScreenState extends State<MmchatScreen> {
                       FontAwesomeIcons.featherPointed
                   ),
                   style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
+                      elevation: 0.0, 
+                      backgroundColor: Colors.lightBlueAccent,
                       shadowColor: Colors.black,
-                      primary: Colors.lightBlueAccent,
                       side: const BorderSide(
                         color: Colors.white70,
                         width: 2.0,
