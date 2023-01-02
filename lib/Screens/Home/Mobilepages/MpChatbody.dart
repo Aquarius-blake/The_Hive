@@ -32,7 +32,7 @@ class _ChatbodyState extends State<Chatbody> {
             ),
             children: [
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 child: const Text(
                   "Delete",
                   style: TextStyle(
@@ -83,7 +83,7 @@ class _ChatbodyState extends State<Chatbody> {
                   children: [
                   user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
                       child:  SizedBox()
-                  ): SizedBox(),
+                  ):const SizedBox(),
                     SizedBox(
                       child: GestureDetector(
                         onLongPress: (){
