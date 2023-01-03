@@ -114,7 +114,6 @@ appBar:AppBar(
     ),
   ],
 ),
-
   body: StreamBuilder(
     stream: FirebaseFirestore.instance.collection('Posts').orderBy(sortby,descending: true).snapshots(),
       builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
