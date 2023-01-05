@@ -1,5 +1,4 @@
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/Provider/user_provider.dart';
@@ -34,7 +33,7 @@ class _WebviewState extends State<Webview> {
 
 
     Widget Post(dynamic image){
-    return image==null?SizedBox():SizedBox(
+    return image==null? const SizedBox():SizedBox(
       width: MediaQuery.of(context).size.width*0.3,
       child: Image.memory(image),
     );
@@ -62,12 +61,10 @@ class _WebviewState extends State<Webview> {
     pageController.dispose();
   }
 
-
-
-
   void Navitap(int page){
     pageController.jumpToPage(page);
   }
+
   void pagechange(int page){
     setState(() {
       _page=page;
@@ -99,7 +96,6 @@ class _WebviewState extends State<Webview> {
   Widget build(BuildContext context) {
     User1? user1=  Provider.of<UserProvider>(context).getUser;
     return Scaffold(
-      
       backgroundColor: Colors.lightBlueAccent[100],
       appBar: AppBar(
         centerTitle: true,
@@ -107,7 +103,7 @@ class _WebviewState extends State<Webview> {
         actions: [
           ElevatedButton(
             onPressed: ()async{
-                                await _auth.SignOut(user1.Guest!,user1.UID!);
+              await _auth.SignOut(user1.Guest!,user1.UID!);
 
             },
             child: Text("Sign Out"),
