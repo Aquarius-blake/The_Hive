@@ -29,6 +29,8 @@ class _LayoutState extends State<Layout> {
     UserProvider _userprovider=Provider.of(context,listen: false);
     await _userprovider.Refreshuser();
 
+    //TODO: Get Settings provider here and set the theme
+
   }
   @override
   Widget build(BuildContext context) {
