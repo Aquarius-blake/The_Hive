@@ -93,9 +93,9 @@ class _ForumdetailState extends State<Forumdetail> {
                   onPressed: (){},
                   child: const Text("Post"),
                   style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
+                      elevation: 0.0, 
+                      backgroundColor: Colors.lightBlueAccent,
                       shadowColor: Colors.black,
-                      primary: Colors.lightBlueAccent,
                       side: const BorderSide(
                         color: Colors.white70,
                         width: 2.0,

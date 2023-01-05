@@ -1,12 +1,9 @@
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/shared/loading.dart';
 import '../../Services/auth.dart';
 
 class Singin extends StatefulWidget {
-
 
   @override
   State<Singin> createState() => _SinginState();
@@ -186,9 +183,9 @@ class _SinginState extends State<Singin> {
                       Center(
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                elevation: 7.0,
+                                elevation: 7.0, 
+                                backgroundColor: Colors.blue[400],
                                 shadowColor: Colors.black,
-                                primary: Colors.blue[400],
                                 side: BorderSide(
                                   color: Colors.white70,
                                   width: 2.0,
