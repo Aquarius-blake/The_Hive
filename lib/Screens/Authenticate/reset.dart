@@ -104,10 +104,7 @@ padd=150;
                                       borderRadius: BorderRadius.circular(100.0),
                                     ),
                                   ),
-
-                                  style: TextStyle(
-
-                                  ),
+                                  style: TextStyle(),
                                 ),
                               ),
                             ),
@@ -115,7 +112,6 @@ padd=150;
                             ElevatedButton(
                               onPressed: () async{
                                 if(_formKey.currentState?.validate()!=null){
-
                                   await _auth.Reset(email);
                                   Navigator.pop(context);
                                 }
@@ -131,13 +127,12 @@ padd=150;
                               ),
                               style: ElevatedButton.styleFrom(
                                   elevation: 6.0,
+                                  backgroundColor: Colors.white,
                                   shadowColor: Colors.black,
-                                  primary: Colors.white,
                                   side: const BorderSide(
                                     color: Colors.blue,
                                     width: 2.0,
                                   ),
-
                                   shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(100.0)
                                   )
@@ -146,12 +141,10 @@ padd=150;
                           ],
                         ),
                       ),
-
                     ],
                   ),
                 ),
               ),
-
             ),
           ),
         ),
