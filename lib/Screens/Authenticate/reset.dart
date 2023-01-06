@@ -98,7 +98,9 @@ padd=150;
 
                                     ),
                                     focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(color: Colors.redAccent),
+                                      borderSide: const BorderSide(
+                                        color: Colors.redAccent
+                                        ),
                                       borderRadius: BorderRadius.circular(100.0),
                                     ),
                                   ),
