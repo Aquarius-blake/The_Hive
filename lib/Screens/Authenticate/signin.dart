@@ -79,10 +79,7 @@ class _SinginState extends State<Singin> {
                         borderRadius: BorderRadius.circular(100.0),
                       ),
                     ),
-
-                    style: TextStyle(
-
-                    ),
+                    style: TextStyle(),
                   ),
                   const SizedBox(height: 20,),
                   TextFormField(
