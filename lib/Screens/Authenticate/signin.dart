@@ -130,16 +130,14 @@ class _SinginState extends State<Singin> {
                     ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
-
                     children: <Widget>[
                       Center(
                         child: ElevatedButton(
-
                             style: ElevatedButton.styleFrom(
                                 elevation: 7.0, 
                                 backgroundColor: Colors.blue[400],
                                 shadowColor: Colors.black,
-                                side: BorderSide(
+                                side: const BorderSide(
                                   color: Colors.white70,
                                   width: 2.0,
                                 ),
