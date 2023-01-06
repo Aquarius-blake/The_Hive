@@ -174,7 +174,9 @@ class _SinginState extends State<Singin> {
                             )
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      const SizedBox(
+                        height: 10,
+                        ),
                       Center(
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
