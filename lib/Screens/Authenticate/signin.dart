@@ -224,16 +224,13 @@ class _SinginState extends State<Singin> {
                                   color: Colors.blue,
                                   width: 2.0,
                                 ),
-
                                 shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(100.0)
                                 )
                             ),
                             onPressed: () async {
                               Navigator.pushNamed(context, '/register');
-
                             },
-
                             child: const Padding(
                               padding: EdgeInsets.fromLTRB(100.0,10,100.0,10.0),
                               child: Text(
@@ -254,7 +251,6 @@ class _SinginState extends State<Singin> {
                           ),
                         ),
                       )
-
                     ],
                   ),
                 ],
