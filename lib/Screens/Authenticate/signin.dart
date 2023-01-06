@@ -200,22 +200,20 @@ class _SinginState extends State<Singin> {
                                 print("Success");
                                 print(result.UID);
                               }
-
                             },
-
                             child: Padding(
                               padding: const EdgeInsets.fromLTRB(75.0,0,75.0,0),
                               child: Text(
                                 "Sign in as Guest",
                                 style: TextStyle(
-
                                 ),
-
                               ),
                             )
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      const SizedBox(
+                        height: 10,
+                        ),
                       Center(
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
