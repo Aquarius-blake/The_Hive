@@ -125,7 +125,9 @@ class _SinginState extends State<Singin> {
                           ),)
                     ),
                   ),
-                  SizedBox(height: 50,),
+                  const SizedBox(
+                    height: 50,
+                    ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
 
