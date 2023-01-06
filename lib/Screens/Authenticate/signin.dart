@@ -4,6 +4,7 @@ import 'package:forum3/shared/loading.dart';
 import '../../Services/auth.dart';
 
 class Singin extends StatefulWidget {
+  const Singin({Key? key}) : super(key: key);
 
   @override
   State<Singin> createState() => _SinginState();
