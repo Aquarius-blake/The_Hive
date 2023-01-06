@@ -170,8 +170,6 @@ class _SinginState extends State<Singin> {
                               padding: const EdgeInsets.fromLTRB(100.0,0.0,100.0,0),
                               child: Text(
                                 "Sign in ",
-
-
                               ),
                             )
                         ),
