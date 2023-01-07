@@ -25,6 +25,7 @@ import 'package:provider/provider.dart';
 import '../../Provider/user_provider.dart';
 import '../../Services/auth.dart';
 
+//TODO: Use colors from firebase to set theme
 //Home Screen
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
