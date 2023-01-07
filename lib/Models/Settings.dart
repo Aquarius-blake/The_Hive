@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 
 class UserThemeData{
   late final String? UID;
-  late final Color AppbarbackColor;
+  late final int AppbarbackColor;
   late final Color AppbariconColor;
   late final Color AppbartextColor;
   late final Color AppbarShadowColor;
@@ -31,7 +31,7 @@ class UserThemeData{
 
   UserThemeData({
    this.UID,
-    this.AppbarbackColor=Colors.black,
+    this.AppbarbackColor=0xFF000000,
     this.AppbarShadowColor=Colors.black,
     this.AppbariconColor=Colors.white,
     this.AppbartextColor=Colors.white,
