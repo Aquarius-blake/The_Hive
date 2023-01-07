@@ -883,29 +883,29 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           SetOptions(merge: true)
         );
       }else{
-        //TODO: Store colors in hex code as strings
+        //TODO: Store colors in hex code as int
         //Light Theme
         UserThemeData themedata=UserThemeData(
           UID: uid,
-          /*AppbarShadowColor: Colors.black,
-          AppbariconColor: Colors.black,
-          AppbartextColor: Colors.black,
-          AppbarbackColor: Colors.white,
-          ScaffoldbackColor: Colors.white,
-          ScaffoldiconColor: Colors.black,
-          ScaffoldtextColor: Colors.black,
-          ScaffoldbuttonColor: Colors.lightBlueAccent,
-          ScaffoldbuttonTextColor:Colors.black,
-          ScaffoldbuttonIconColor: Colors.black,
-          ScaffoldbuttonborderColor: Colors.white,
-          CardBackgroundColor: Colors.white,
-          CardTextColor: Colors.black,
-          CardIconColor: Colors.black,
-          CardShadowColor: Colors.black,
-          CardBorderColor: Colors.transparent, 
-          BottomNavBackColor: Colors.white,
-          BottomNavTextColor: Colors.black,
-          BottomNavIconColor: Colors.black,*/
+          AppbarShadowColor: 0xFF000000,
+          AppbariconColor: Colors.black.value,
+          AppbartextColor: Colors.black.value,
+          AppbarbackColor: Colors.white.value,
+          ScaffoldbackColor: Colors.white.value,
+          ScaffoldiconColor: Colors.black.value,
+          ScaffoldtextColor: Colors.black.value,
+          ScaffoldbuttonColor: Colors.lightBlueAccent.value,
+          ScaffoldbuttonTextColor:Colors.black.value,
+          ScaffoldbuttonIconColor: Colors.black.value,
+          ScaffoldbuttonborderColor: Colors.white.value,
+          CardBackgroundColor: Colors.white.value,
+          CardTextColor: Colors.black.value,
+          CardIconColor: Colors.black.value,
+          CardShadowColor: Colors.black.value,
+          CardBorderColor: Colors.transparent.value, 
+          BottomNavBackColor: Colors.white.value,
+          BottomNavTextColor: Colors.black.value,
+          BottomNavIconColor: Colors.black.value,
           DarkMode: false
           );
           await _firestore.collection("Settings").doc(uid).collection("Theme").doc(uid).set(
