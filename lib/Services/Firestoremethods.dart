@@ -885,7 +885,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           SetOptions(merge: true)
         );
       }else{
-        //TODO: Check and update fields later
+        //TODO: Store colors in hex code as sttrings
         //Light Theme
         UserThemeData themedata=UserThemeData(
           UID: uid,
