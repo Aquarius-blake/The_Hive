@@ -11,6 +11,7 @@ class UserThemeData{
   late final int AppbarbackColor;
   late final int AppbariconColor;
   late final int AppbartextColor;
+  late final int AppbartextbuttonColor;
   late final int AppbarShadowColor;
   late final int ScaffoldbackColor;
   late final int ScaffoldtextColor;
@@ -35,6 +36,7 @@ class UserThemeData{
     this.AppbarShadowColor=0xFF000000,
     this.AppbariconColor=0xFFFFFFFF,
     this.AppbartextColor=0xFFFFFFFF,
+    this.AppbartextbuttonColor=0xFF2196F3,
     this.ScaffoldbackColor=0xFF000000,
     this.ScaffoldtextColor=0xFFFFFFFF,
     this.ScaffoldiconColor=0xFFFFFFFF,
@@ -59,6 +61,7 @@ class UserThemeData{
     "AppbarShadowColor":AppbarShadowColor,
     "AppbariconColor":AppbariconColor,
     "AppbartextColor":AppbartextColor,
+    "AppbartextbuttonColor":AppbartextbuttonColor,
     "ScaffoldbackColor":ScaffoldbackColor,
     "ScaffoldtextColor":ScaffoldtextColor,
     "ScaffoldiconColor":ScaffoldiconColor,
@@ -86,6 +89,7 @@ class UserThemeData{
       AppbarShadowColor:snapshot["AppbarShadowColor"],
       AppbariconColor:snapshot["AppbariconColor"],
       AppbartextColor:snapshot["AppbartextColor"],
+      AppbartextbuttonColor: snapshot["AppbartextbuttonColor"],
       ScaffoldbackColor:snapshot["ScaffoldbackColor"],
       ScaffoldtextColor:snapshot["ScaffoldtextColor"],
       ScaffoldiconColor:snapshot["ScaffoldiconColor"],
