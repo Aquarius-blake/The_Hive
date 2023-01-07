@@ -9,7 +9,8 @@ import '../../Models/Users1.dart';
 
 class Atogglebutton extends StatefulWidget {
   final uid;
-   Atogglebutton({ Key? key, this. uid }) : super(key: key);
+  final mode;
+   Atogglebutton({ Key? key, this. uid,this.mode }) : super(key: key);
 
   @override
   State<Atogglebutton> createState() => _AtogglebuttonState();
@@ -19,9 +20,9 @@ class _AtogglebuttonState extends State<Atogglebutton> {
  
 bool toggleValue=false;
 
-toggleButton(String uid)async{
+toggleButton(String uid,bool mode)async{
 
-String? content=await FirestoreMethods().UpdateThemeMode(uid,true);
+String? content=await FirestoreMethods().UpdateThemeMode(uid,!mode);
 await Showsnackbar(content!,context);
 
   setState(() {
@@ -31,9 +32,10 @@ await Showsnackbar(content!,context);
 
   @override
   Widget build(BuildContext context) {
+    toggleValue=widget.mode;
     return Container(
       child:AnimatedContainer(
-        duration: Duration(milliseconds: 500),
+        duration:const Duration(milliseconds: 500),
         height:32.0,
         width: 80.0,
         decoration: BoxDecoration(
@@ -50,7 +52,7 @@ await Showsnackbar(content!,context);
               right: toggleValue? 0.0: 40.0,
               child: InkWell(
                 onTap:()async{
-                  toggleButton(widget.uid);
+                  toggleButton(widget.uid,widget.mode);
                 },
                 child: AnimatedSwitcher(
                   duration: Duration(milliseconds: 500),

@@ -68,7 +68,7 @@ class _MSettingsState extends State<MSettings> {
                     Expanded(
                       child: SizedBox()
                     ),
-                    Atogglebutton(uid: user1.UID!,)
+                    Atogglebutton(uid: user1.UID!,mode: themedata.DarkMode,)
                 ],
               ),
             ),
