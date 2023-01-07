@@ -1,4 +1,3 @@
-import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Users1.dart';
@@ -66,7 +65,7 @@ class _MSettingsState extends State<MSettings> {
                     Expanded(
                       child: SizedBox()
                     ),
-                    Atogglebutton()
+                    Atogglebutton(uid: user1.UID!,)
                 ],
               ),
             ),
