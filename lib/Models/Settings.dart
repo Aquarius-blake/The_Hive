@@ -9,47 +9,47 @@ import 'package:flutter/material.dart';
 class UserThemeData{
   late final String? UID;
   late final int AppbarbackColor;
-  late final Color AppbariconColor;
-  late final Color AppbartextColor;
-  late final Color AppbarShadowColor;
-  late final Color ScaffoldbackColor;
-  late final Color ScaffoldtextColor;
-  late final Color ScaffoldiconColor;
-  late final Color ScaffoldbuttonColor;
-  late final Color ScaffoldbuttonTextColor;
-  late final Color ScaffoldbuttonIconColor;
-  late final Color ScaffoldbuttonborderColor;
-  late final Color CardBackgroundColor;
-  late final Color CardTextColor;
-  late final Color CardBorderColor;
-  late final Color CardShadowColor;
-  late final Color CardIconColor;
-  late final Color BottomNavBackColor;
-  late final Color BottomNavTextColor;
-  late final Color BottomNavIconColor;
+  late final int AppbariconColor;
+  late final int AppbartextColor;
+  late final int AppbarShadowColor;
+  late final int ScaffoldbackColor;
+  late final int ScaffoldtextColor;
+  late final int ScaffoldiconColor;
+  late final int ScaffoldbuttonColor;
+  late final int ScaffoldbuttonTextColor;
+  late final int ScaffoldbuttonIconColor;
+  late final int ScaffoldbuttonborderColor;
+  late final int CardBackgroundColor;
+  late final int CardTextColor;
+  late final int CardBorderColor;
+  late final int CardShadowColor;
+  late final int CardIconColor;
+  late final int BottomNavBackColor;
+  late final int BottomNavTextColor;
+  late final int BottomNavIconColor;
   late final bool DarkMode;
 
   UserThemeData({
    this.UID,
     this.AppbarbackColor=0xFF000000,
-    this.AppbarShadowColor=Colors.black,
-    this.AppbariconColor=Colors.white,
-    this.AppbartextColor=Colors.white,
-    this.ScaffoldbackColor=Colors.black,
-    this.ScaffoldtextColor=Colors.white,
-    this.ScaffoldiconColor=Colors.white,
-    this.ScaffoldbuttonColor=Colors.lightBlueAccent,
-    this.ScaffoldbuttonTextColor=Colors.white,
-    this.ScaffoldbuttonIconColor=Colors.white,
-    this.ScaffoldbuttonborderColor=Colors.white,
-    this.CardBackgroundColor=Colors.black,
-    this.CardTextColor=Colors.white,
-    this.CardBorderColor=Colors.black,
-    this.CardShadowColor=Colors.black,
-    this.CardIconColor=Colors.white,
-    this.BottomNavBackColor=Colors.black,
-    this.BottomNavTextColor=Colors.white,
-    this.BottomNavIconColor=Colors.white,
+    this.AppbarShadowColor=0xFF000000,
+    this.AppbariconColor=0xFFFFFFFF,
+    this.AppbartextColor=0xFFFFFFFF,
+    this.ScaffoldbackColor=0xFF000000,
+    this.ScaffoldtextColor=0xFFFFFFFF,
+    this.ScaffoldiconColor=0xFFFFFFFF,
+    this.ScaffoldbuttonColor=0xFF40C4FF,
+    this.ScaffoldbuttonTextColor=0xFFFFFFFF,
+    this.ScaffoldbuttonIconColor=0xFFFFFFFF,
+    this.ScaffoldbuttonborderColor=0xFFFFFFFF,
+    this.CardBackgroundColor=0xFF000000,
+    this.CardTextColor=0xFFFFFFFF,
+    this.CardBorderColor=0xFF000000,
+    this.CardShadowColor=0xFF000000,
+    this.CardIconColor=0xFFFFFFFF,
+    this.BottomNavBackColor=0xFF000000,
+    this.BottomNavTextColor=0xFFFFFFFF,
+    this.BottomNavIconColor=0xFFFFFFFF,
     this.DarkMode=true
   });
 
