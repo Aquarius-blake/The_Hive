@@ -29,9 +29,9 @@ class _LayoutState extends State<Layout> {
     UserProvider _userprovider=Provider.of(context,listen: false);
     await _userprovider.Refreshuser();
 
-    //TODO: Remove comment to get theme provider
-   /* ThemeProvider _themeProvider=Provider.of(context,listen: false);
-    await _themeProvider.RefreshTheme();*/
+    //Theme provider(in progress)
+    ThemeProvider _themeProvider=Provider.of(context,listen: false);
+    await _themeProvider.RefreshTheme();
     
 
   }

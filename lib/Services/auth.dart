@@ -122,7 +122,6 @@ class AuthService{
       );
       Username=username;
       await FirestoreMethods().UpdateThemeMode(user.uid,true);
-
       return _userfirebase(user);
     }
     catch(e){

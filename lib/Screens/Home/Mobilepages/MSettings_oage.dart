@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MSettings_Colors.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
@@ -19,7 +21,8 @@ class _MSettingsState extends State<MSettings> {
   @override
   Widget build(BuildContext context) {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-
+        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+        print(themedata.AppbartextColor.toString());
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
@@ -36,10 +39,10 @@ class _MSettingsState extends State<MSettings> {
              String content= await FirestoreMethods().UpdateSettings(user1.UID!);
              Showsnackbar(content, context);
             },
-             child: const Text(
+             child:  Text(
               "Save",
               style: TextStyle(
-                color:Colors.blue
+                color:Color(themedata.AppbartextColor)
               ),
               )
              )
