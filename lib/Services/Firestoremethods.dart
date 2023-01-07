@@ -887,7 +887,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         //Light Theme
         UserThemeData themedata=UserThemeData(
           UID: uid,
-          AppbarShadowColor: Colors.black,
+          /*AppbarShadowColor: Colors.black,
           AppbariconColor: Colors.black,
           AppbartextColor: Colors.black,
           AppbarbackColor: Colors.white,
@@ -905,7 +905,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           CardBorderColor: Colors.transparent, 
           BottomNavBackColor: Colors.white,
           BottomNavTextColor: Colors.black,
-          BottomNavIconColor: Colors.black,
+          BottomNavIconColor: Colors.black,*/
           DarkMode: false
           );
           await _firestore.collection("Settings").doc(uid).collection("Theme").doc(uid).set(
