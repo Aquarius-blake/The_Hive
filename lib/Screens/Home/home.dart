@@ -165,7 +165,7 @@ class _HomeState extends State<Home> {
       ),
 
       drawer: Drawer(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.ScaffoldbackColor),
         child: Container(
           child: SingleChildScrollView(
             child: Column(
@@ -198,12 +198,11 @@ class _HomeState extends State<Home> {
                               )
                             ]
                         ),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         Center(
-
                           child: Text(
                             user1.Username!,
-                            style: const TextStyle(
+                            style:  TextStyle(
                               fontSize: 16,
                               color: Colors.white,
 
@@ -217,11 +216,12 @@ class _HomeState extends State<Home> {
                   height: 30,
                 ),
                 ListTile(
-                  leading: const Icon(Icons.person,
+                  leading:  Icon(
+                    Icons.person,
                     color: Colors.white,
                     size:35.0,
                   ),
-                  title: const Text(
+                  title:  Text(
                     "Profile",
                     style: TextStyle(
                       fontSize: 18.0,
@@ -236,11 +236,12 @@ class _HomeState extends State<Home> {
                 ),
                 const SizedBox(height: 15,),
                 ListTile(
-                  leading: const Icon(LineIcons.alternateSignOut,
+                  leading:  Icon(
+                    LineIcons.alternateSignOut,
                     color: Colors.white,
                     size:35.0,
                     ),
-                  title: const Text(
+                  title:  Text(
                     "Sign Out",
                     style: TextStyle(
                       fontSize: 18.0,
@@ -255,14 +256,16 @@ class _HomeState extends State<Home> {
                   await _auth.SignOut(user1.Guest!,user1.UID!);
                   },
                 ),
-                SizedBox(height: 5.0,),
+               const SizedBox(
+                height: 5.0,
+                ),
                 ListTile(
-                  leading: const FaIcon(
+                  leading: FaIcon(
                     FontAwesomeIcons.peopleGroup,
                     color: Colors.white,
                     size:35.0,
                     ),
-                    title: const Text(
+                    title:  Text(
                       "My Groups",
                       style:TextStyle(
                         color: Colors.white,
@@ -276,14 +279,14 @@ class _HomeState extends State<Home> {
         );
                     },
                 ),
-                SizedBox(height: 5.0,),
+               const SizedBox(height: 5.0,),
                 ListTile(
-                  leading: const FaIcon(
+                  leading:  FaIcon(
                     FontAwesomeIcons.userGroup,
                     color: Colors.white,
                     size:35.0,
                     ),
-                    title: const Text(
+                    title:  Text(
                       "Search Groups",
                       style:TextStyle(
                         color: Colors.white,
@@ -297,14 +300,16 @@ class _HomeState extends State<Home> {
                       );
                     },
                 ),
-                SizedBox(height: 5.0,),
+               const SizedBox(
+                height: 5.0,
+                ),
                 ListTile(
-                  leading: const FaIcon(
+                  leading:  FaIcon(
                     FontAwesomeIcons.gears,
                     color: Colors.white,
                     size:35.0,
                     ),
-                    title: const Text(
+                    title:  Text(
                       "Settings",
                       style:TextStyle(
                         color: Colors.white,
@@ -318,9 +323,11 @@ class _HomeState extends State<Home> {
                       );
                     },
                 ),
-              const  SizedBox(height: 5.0,),
+              const  SizedBox(
+                height: 5.0,
+                ),
                 ListTile(
-                  title: const Text(
+                  title:  Text(
                     "Create New Account",
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
@@ -334,7 +341,7 @@ class _HomeState extends State<Home> {
                 ),
                const SizedBox(height: 20.0,),
                user1.Admin==true?  ListTile(
-             title: const Text(
+             title:  Text(
                  "View Requests",
              style:  TextStyle(
                fontStyle: FontStyle.italic,
@@ -350,7 +357,7 @@ class _HomeState extends State<Home> {
              },
            ):
            ListTile(
-             title: const Text(
+             title:  Text(
                "Request Admin Privileges",
                style: TextStyle(
                  fontStyle: FontStyle.italic,

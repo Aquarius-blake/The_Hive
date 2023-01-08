@@ -13,6 +13,11 @@ class UserThemeData{
   late final int AppbartextColor;
   late final int AppbartextbuttonColor;
   late final int AppbarShadowColor;
+  late final int DrawerBackColor;
+  late final int DrawerIconColor;
+  late final int DrawerTextColor;
+  late final int DrawerTextbuttonColor;
+  late final int DividerColor;
   late final int ScaffoldbackColor;
   late final int ScaffoldtextColor;
   late final int ScaffoldiconColor;
@@ -37,6 +42,11 @@ class UserThemeData{
     this.AppbariconColor=0xFFFFFFFF,
     this.AppbartextColor=0xFFFFFFFF,
     this.AppbartextbuttonColor=0xFF2196F3,
+    this.DrawerBackColor=0xFF000000,
+    this.DrawerIconColor=0xFFFFFFFF,
+    this.DrawerTextColor=0xFFFFFFFF,
+    this.DrawerTextbuttonColor=0xFF2196F3,
+    this.DividerColor=0xFFFFFFFF,
     this.ScaffoldbackColor=0xFF000000,
     this.ScaffoldtextColor=0xFFFFFFFF,
     this.ScaffoldiconColor=0xFFFFFFFF,
@@ -62,6 +72,11 @@ class UserThemeData{
     "AppbariconColor":AppbariconColor,
     "AppbartextColor":AppbartextColor,
     "AppbartextbuttonColor":AppbartextbuttonColor,
+    "DrawerBackColor":DrawerBackColor,
+    "DrawerIconColor":DrawerIconColor,
+    "DrawerTextColor":DrawerTextColor,
+    "DrawerTextbuttonColor":DrawerTextbuttonColor,
+    "DividerColor":DividerColor,
     "ScaffoldbackColor":ScaffoldbackColor,
     "ScaffoldtextColor":ScaffoldtextColor,
     "ScaffoldiconColor":ScaffoldiconColor,
@@ -90,6 +105,11 @@ class UserThemeData{
       AppbariconColor:snapshot["AppbariconColor"],
       AppbartextColor:snapshot["AppbartextColor"],
       AppbartextbuttonColor: snapshot["AppbartextbuttonColor"],
+      DrawerBackColor:snapshot["DrawerBackColor"],
+      DrawerIconColor:snapshot["DrawerIconColor"],
+      DrawerTextColor:snapshot["DrawerTextColor"],
+      DrawerTextbuttonColor:snapshot["DrawerTextbuttonColor"],
+      DividerColor:snapshot["DividerColor"],
       ScaffoldbackColor:snapshot["ScaffoldbackColor"],
       ScaffoldtextColor:snapshot["ScaffoldtextColor"],
       ScaffoldiconColor:snapshot["ScaffoldiconColor"],
