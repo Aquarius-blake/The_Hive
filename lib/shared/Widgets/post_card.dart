@@ -377,9 +377,9 @@ class _PostCardState extends State<PostCard> {
                               Icons.favorite,
                               color: Colors.red,
                             )
-                                : const Icon(
+                                :  Icon(
                               Icons.favorite_border_outlined,
-                              color: Colors.white,
+                              color: Color(themedata.CardIconColor),
                             )
                         ),
                       ),
@@ -388,8 +388,8 @@ class _PostCardState extends State<PostCard> {
                       ),
                       Text(
                         "$commentlen",
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style:  TextStyle(
+                          color: Color(themedata.CardTextColor),
                         ),
                         ),
                       IconButton(
@@ -412,9 +412,9 @@ class _PostCardState extends State<PostCard> {
                               );
                             }
                           },
-                          icon: const FaIcon(
+                          icon:  FaIcon(
                             FontAwesomeIcons.comments,
-                            color: Colors.white,
+                            color: Color(themedata.CardIconColor),
                           )
                       ),
                       const Expanded(
@@ -433,9 +433,9 @@ class _PostCardState extends State<PostCard> {
                   }
                 }
                           },
-                          icon: const Icon(
+                          icon:  Icon(
                             Icons.share,
-                            color: Colors.white,
+                            color: Color(themedata.CardIconColor),
                           )
                       ),
                     ],
