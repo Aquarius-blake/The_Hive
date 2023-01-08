@@ -3,6 +3,8 @@ import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mcomments_screen.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Meditpost.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/Webed.dart';
@@ -229,16 +231,16 @@ class _PostCardState extends State<PostCard> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+
     if(user1.UID==widget.snap['author uid']){
       FirestoreMethods().Updatepostpic(widget.snap['Post Uid'], user1.ppurl!);
-      setState(() {
-
-      });
+      setState(() {});
     }
-
     String authoruid=user1.UID!;
     List list=widget.snap['likes'];
     likedf(authoruid, list);
+
     return Container(
       padding: const EdgeInsets.only(
         top: 5,
@@ -247,7 +249,7 @@ class _PostCardState extends State<PostCard> {
         bottom: 5,
       ),
       child: Card(
-        color: Colors.black,
+        color: Color(themedata.CardBackgroundColor),
         child: Container(
           padding: const EdgeInsets.all(10.0),
           child: SingleChildScrollView(
@@ -272,9 +274,9 @@ class _PostCardState extends State<PostCard> {
                               children: [
                                 Text(
                                   widget.snap['author'],
-                                  style: const TextStyle(
+                                  style:  TextStyle(
                                       fontWeight: FontWeight.bold,
-                                      color:Colors.white
+                                      color:Color(themedata.CardTextColor)
                                   ),)
                               ],
                             ) ,
@@ -285,9 +287,9 @@ class _PostCardState extends State<PostCard> {
                     ),
                     widget.snap['author uid']==user1.UID || user1.Admin==true ? IconButton(
                       onPressed: ()=>_options(context,user1),
-                      icon: const Icon(
+                      icon: Icon(
                         Icons.more_vert,
-                        color: Colors.white,
+                        color: Color(themedata.CardIconColor),
                       ),
                     ):const SizedBox()
                   ],
@@ -300,9 +302,9 @@ class _PostCardState extends State<PostCard> {
                     width: MediaQuery.of(context).size.width*0.8,
                     child: Text(
                       widget.snap['title'],
-                      style: const TextStyle(
+                      style:  TextStyle(
                         fontSize: 22,
-                        color: Colors.white,
+                        color: Color(themedata.CardTextColor),
                       ),
                     ),
                   ),
@@ -315,9 +317,9 @@ class _PostCardState extends State<PostCard> {
                     width: MediaQuery.of(context).size.width*0.8,
                     child: Text(
                       widget.snap['detail'],
-                      style: const TextStyle(
+                      style:  TextStyle(
                         fontSize: 14,
-                        color: Colors.white,
+                        color: Color(themedata.CardTextColor),
                       ),
                     ),
                   ),
@@ -352,8 +354,8 @@ class _PostCardState extends State<PostCard> {
                     children: [
                       Text(
                         "${widget.snap['likes'].length}",
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style:  TextStyle(
+                          color: Color(themedata.CardTextColor),
                         ),
                       ),
                       likeAnimation(

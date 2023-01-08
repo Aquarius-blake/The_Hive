@@ -1,9 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/shared/Widgets/post_card.dart';
+import 'package:provider/provider.dart';
 
-
+//TODO: Create theme fields for dialog options
 class Mhome extends StatefulWidget {
   const Mhome({Key? key}) : super(key: key);
 
@@ -12,7 +15,6 @@ class Mhome extends StatefulWidget {
 }
 
 class _MhomeState extends State<Mhome> {
-
 late String sortby="Post Time";
 
  _options(BuildContext context)async{
@@ -77,13 +79,13 @@ late String sortby="Post Time";
 
   }
 
-
   @override
   Widget build(BuildContext context) {
+        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor:Colors. black, 
+      backgroundColor:Color(themedata.ScaffoldbackColor), 
 appBar:AppBar(
-  backgroundColor: Colors.black,
+  backgroundColor: Color(themedata.AppbarbackColor),
   elevation: 0.0,
   actions: [
     Row(
@@ -92,10 +94,10 @@ appBar:AppBar(
             onTap:(){
              _options(context);
             } ,
-          child: const Text(
+          child:  Text(
               "Sort By",
               style: TextStyle(
-          color:Colors.white,
+          color:Color(themedata.AppbartextColor),
           fontStyle: FontStyle.italic,
           fontWeight: FontWeight.bold
               ),
@@ -105,9 +107,9 @@ appBar:AppBar(
           onPressed: (){
             _options(context);
           },
-         icon: const FaIcon(
+         icon: FaIcon(
             FontAwesomeIcons.sort,
-            color: Colors.white,
+            color: Color(themedata.AppbariconColor),
          ),
          ),
       ],
