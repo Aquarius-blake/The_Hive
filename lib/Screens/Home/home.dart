@@ -4,7 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_page.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_search.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MPost.dart';
@@ -133,14 +135,15 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
      try{
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         iconTheme: IconThemeData(
-            color: Colors.white
+            color: Color(themedata.AppbariconColor)
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         elevation: 2.0,
         title: Container(
           padding: const EdgeInsets.only(
@@ -151,9 +154,9 @@ class _HomeState extends State<Home> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Text(
-                "$title",
-                style: const TextStyle(
-                            color: Colors.white
+                title,
+                style:  TextStyle(
+                            color: Color(themedata.AppbartextColor),
                 ),
               )
             ],
