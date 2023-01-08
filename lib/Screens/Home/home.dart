@@ -370,12 +370,12 @@ class _HomeState extends State<Home> {
              },
            ),
              const SizedBox(height: 120.0,),
-              const  Divider(
+                Divider(
                   height: 40,
                   color: Colors.white,
                   thickness: 3,
                 ),
-                const Center(
+                 Center(
                   child: Text(
                     "POWERED by Firebase",
                     style: TextStyle(
@@ -412,40 +412,40 @@ class _HomeState extends State<Home> {
       ),
 
       bottomNavigationBar: CupertinoTabBar(
-        backgroundColor:Colors.black,
+        backgroundColor:Color(themedata.BottomNavBackColor),
         items: [
           BottomNavigationBarItem(
             icon: Icon(
               Icons.home,
-              color: _page==0? Colors.lightBlueAccent:Colors.white,
+              color: _page==0? Colors.lightBlueAccent:Color(themedata.BottomNavIconColor),
             ),
             label: '',
             backgroundColor: Colors.transparent,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search,
-              color: _page==1? Colors.lightBlueAccent:Colors.white,
+              color: _page==1? Colors.lightBlueAccent:Color(themedata.BottomNavIconColor),
             ),
             label: '',
             backgroundColor: Colors.transparent,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.add_circle,
-              color: _page==2? Colors.lightBlueAccent:Colors.white,
+              color: _page==2? Colors.lightBlueAccent:Color(themedata.BottomNavIconColor),
             ),
             label: '',
             backgroundColor: Colors.transparent,
           ),
           BottomNavigationBarItem(
             icon: Icon(LineIcons.bell,
-              color: _page==3? Colors.lightBlueAccent:Colors.white,
+              color: _page==3? Colors.lightBlueAccent:Color(themedata.BottomNavIconColor),
             ),
             label: '',
             backgroundColor: Colors.transparent,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.mail_outline,
-              color: _page==4? Colors.lightBlueAccent:Colors.white,
+              color: _page==4? Colors.lightBlueAccent:Color(themedata.BottomNavIconColor),
             ),
             label: '',
             backgroundColor: Colors.transparent,
