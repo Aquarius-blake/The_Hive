@@ -27,6 +27,7 @@ class UserThemeData{
   late final int ScaffoldbuttonborderColor;
   late final int CardBackgroundColor;
   late final int CardTextColor;
+  late final int CardTextButtonColor;
   late final int CardBorderColor;
   late final int CardShadowColor;
   late final int CardIconColor;
