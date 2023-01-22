@@ -409,9 +409,9 @@ class _GPostCardState extends State<GPostCard> {
                               );
                             }
                           },
-                          icon: const FaIcon(
+                          icon: FaIcon(
                             FontAwesomeIcons.comments,
-                            color: Colors.white,
+                            color: Color(themedata.CardIconColor),
                           )
                       ),
                       const Expanded(
