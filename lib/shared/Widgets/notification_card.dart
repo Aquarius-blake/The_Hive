@@ -98,9 +98,9 @@ Future.delayed(const Duration(
                                     ),
                                     TextSpan(
                                       text: widget.snap['Event Title'],
-                                      style: const TextStyle(
+                                      style:  TextStyle(
                                         fontWeight: FontWeight.bold,
-                                            color:Colors.white,
+                                            color:Color(themedata.CardTextColor),
                                       )
                                     )
                                   ]
