@@ -317,9 +317,9 @@ class _GPostCardState extends State<GPostCard> {
                     width: MediaQuery.of(context).size.width*0.8,
                     child: Text(
                       widget.snap['detail'],
-                      style: const TextStyle(
+                      style:  TextStyle(
                         fontSize: 14,
-                        color: Colors.white,
+                        color: Color(themedata.CardTextColor),
                       ),
                     ),
                   ),
@@ -354,8 +354,8 @@ class _GPostCardState extends State<GPostCard> {
                     children: [
                       Text(
                         "${widget.snap['likes'].length}",
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style:  TextStyle(
+                          color: Color(themedata.CardTextColor),
                         ),
                       ),
                       likeAnimation(
@@ -373,9 +373,9 @@ class _GPostCardState extends State<GPostCard> {
                               Icons.favorite,
                               color: Colors.red,
                             )
-                                : const Icon(
+                                :  Icon(
                               Icons.favorite_border_outlined,
-                              color: Colors.white,
+                              color: Color(themedata.CardIconColor),
                             )
                         ),
                       ),
@@ -384,8 +384,8 @@ class _GPostCardState extends State<GPostCard> {
                       ),
                       Text(
                         "${widget.snap['nocomments']}",
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style:  TextStyle(
+                          color: Color(themedata.CardTextColor),
                         ),
                         ),
                       IconButton(
