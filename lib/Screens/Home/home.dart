@@ -455,6 +455,7 @@ class _HomeState extends State<Home> {
       ),
     );
       }catch(e){
+        print(e.toString());
       return Netcon();
     }
   }

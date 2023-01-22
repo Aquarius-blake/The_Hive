@@ -125,7 +125,7 @@ class _GCommentcardState extends State<GCommentcard> {
                       child:  Text(
                         "Edit",
                         style: TextStyle(
-                          color: Color(themedata.CardTextButtonColor),
+                          color: Color(themedata.CardTextButtonColor!),
                         ),
                       )
                   ),
@@ -137,7 +137,7 @@ class _GCommentcardState extends State<GCommentcard> {
                       child: Text(
                         "Delete",
                         style: TextStyle(
-                          color: Color(themedata.CardTextButtonColor),
+                          color: Color(themedata.CardTextButtonColor!),
                         ),
                       )
                   ),

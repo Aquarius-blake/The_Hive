@@ -78,7 +78,7 @@ class _RequestCardState extends State<RequestCard> {
                       child:  Text(
                           "Approve",
                       style: TextStyle(
-                        color: Color(themedata.CardTextButtonColor)
+                        color: Color(themedata.CardTextButtonColor!)
                       ),
                       )
                   ),
@@ -91,7 +91,7 @@ class _RequestCardState extends State<RequestCard> {
                       child: Text(
                           "Deny",
                       style: TextStyle(
-                        color: Color(themedata.CardTextButtonColor)
+                        color: Color(themedata.CardTextButtonColor!)
                       ),
                       )
                   ),

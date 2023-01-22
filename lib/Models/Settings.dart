@@ -11,13 +11,13 @@ class UserThemeData{
   late final int AppbarbackColor;
   late final int AppbariconColor;
   late final int AppbartextColor;
-  late final int AppbartextbuttonColor;
+  late final int? AppbartextbuttonColor;
   late final int AppbarShadowColor;
-  late final int DrawerBackColor;
-  late final int DrawerIconColor;
-  late final int DrawerTextColor;
-  late final int DrawerTextbuttonColor;
-  late final int DividerColor;
+  late final int? DrawerBackColor;
+  late final int? DrawerIconColor;
+  late final int? DrawerTextColor;
+  late final int? DrawerTextbuttonColor;
+  late final int? DividerColor;
   late final int ScaffoldbackColor;
   late final int ScaffoldtextColor;
   late final int ScaffoldiconColor;
@@ -27,7 +27,7 @@ class UserThemeData{
   late final int ScaffoldbuttonborderColor;
   late final int CardBackgroundColor;
   late final int CardTextColor;
-  late final int CardTextButtonColor;
+  late final int? CardTextButtonColor;
   late final int CardBorderColor;
   late final int CardShadowColor;
   late final int CardIconColor;
