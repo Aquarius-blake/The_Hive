@@ -50,12 +50,16 @@ class _GroupCardState extends State<GroupCard> {
                         ),
                     ),
                   ),
-                  SizedBox(height: 5,),
+                 const  SizedBox(height: 5,),
                     SizedBox(
                       width: MediaQuery.of(context).size.width*0.7,
                       child: RichText(
                         text: TextSpan(
-                          text:"${widget.snap['Group Description']}",)
+                          text:"${widget.snap['Group Description']}",
+                          style: TextStyle(
+                            color: Color(themedata.CardTextColor),
+                          ),
+                          ),
                           ),
                     ),
                 ],
