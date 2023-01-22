@@ -34,7 +34,7 @@ class _GCommentcardState extends State<GCommentcard> {
         horizontal: 16,
       ),
       child: Card(
-        color:Colors.black,
+        color:Color(themedata.CardBackgroundColor),
         child: Container(
           padding: const EdgeInsets.all(5.0),
           child: Column(
