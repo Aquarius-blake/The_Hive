@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:provider/provider.dart';
 
 //TODO:Theme implementation
 class RequestCard extends StatefulWidget {
@@ -14,9 +17,11 @@ class RequestCard extends StatefulWidget {
 class _RequestCardState extends State<RequestCard> {
   @override
   Widget build(BuildContext context) {
+        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+
     return Container(
       child: Card(
-        color:Colors.black,
+        color:Color(themedata.CardBackgroundColor),
         elevation: 2.0,
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -36,24 +41,24 @@ class _RequestCardState extends State<RequestCard> {
                             children: [
                               TextSpan(
                                 text: widget.snap['author'],
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 22,
-                                    color:Colors.white,
+                                    color:Color(themedata.CardTextColor),
                                 )
                               ),
-                            const  TextSpan(
+                              TextSpan(
                                 text: " Requested for Administrative permissions, ",
                                 style: TextStyle(
                                   fontStyle: FontStyle.italic,
-                                  color: Colors.white
+                                  color: Color(themedata.CardTextColor)
                                 ),
                               ),
-                            const  TextSpan(
+                              TextSpan(
                                   text: "Approve or Deny request?",
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
-                                  color: Colors.white,
+                                  color: Color(themedata.CardTextColor),
                                 ),
                               ),
                             ]
