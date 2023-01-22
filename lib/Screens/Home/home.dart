@@ -224,7 +224,7 @@ class _HomeState extends State<Home> {
                   title:  Text(
                     "Profile",
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
                       color:Color(themedata.DrawerTextColor!),
@@ -244,7 +244,7 @@ class _HomeState extends State<Home> {
                   title:  Text(
                     "Sign Out",
                     style: TextStyle(
-                      fontSize: 18.0,
+                      fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
                       color:Color(themedata.DrawerTextColor!),
@@ -269,6 +269,7 @@ class _HomeState extends State<Home> {
                       "My Groups",
                       style:TextStyle(
                         color: Color(themedata.DrawerTextColor!),
+                        fontSize: 22.0,
                       )
                       ),
                     onTap: ()async{
@@ -290,6 +291,7 @@ class _HomeState extends State<Home> {
                       "Search Groups",
                       style:TextStyle(
                         color: Color(themedata.DrawerTextColor!),
+                        fontSize: 22.0,
                       )
                       ),
                     onTap: ()async{
@@ -313,6 +315,7 @@ class _HomeState extends State<Home> {
                       "Settings",
                       style:TextStyle(
                         color: Color(themedata.DrawerTextColor!),
+                        fontSize: 22.0,
                       )
                       ),
                     onTap: ()async{
@@ -331,7 +334,7 @@ class _HomeState extends State<Home> {
                     "Create New Account",
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
-                      fontSize: 12.0,
+                      fontSize: 16.0,
                       color:Color(themedata.DrawerTextbuttonColor!),
                     ),
                   ),
@@ -339,13 +342,14 @@ class _HomeState extends State<Home> {
                     Navigator.pushNamed(context, '/register');
                   },
                 ),
-               const SizedBox(height: 20.0,),
+               const SizedBox(height: 8.0,),
                user1.Admin==true?  ListTile(
              title:  Text(
                  "View Requests",
              style:  TextStyle(
                fontStyle: FontStyle.italic,
                color: Color(themedata.DrawerTextbuttonColor!),
+                fontSize: 16.0,
              ),
              ),
              onTap: (){
@@ -361,7 +365,8 @@ class _HomeState extends State<Home> {
                "Request Admin Privileges",
                style: TextStyle(
                  fontStyle: FontStyle.italic,
-                 color: Colors.white
+                 color: Color(themedata.DrawerTextbuttonColor!),
+                 fontSize: 16.0,
                ),
              ),
              onTap: ()async{
@@ -372,7 +377,7 @@ class _HomeState extends State<Home> {
              const SizedBox(height: 120.0,),
                 Divider(
                   height: 40,
-                  color: Colors.white,
+                  color: Color(themedata.DividerColor!),
                   thickness: 3,
                 ),
                  Center(
@@ -382,8 +387,7 @@ class _HomeState extends State<Home> {
                       fontSize: 22.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
-                      color:Colors.white,
-
+                      color:Color(themedata.DrawerTextColor!),
                     ),
                   ),
                 )
