@@ -42,8 +42,8 @@ class _GroupCardState extends State<GroupCard> {
                       width: MediaQuery.of(context).size.width*0.6,
                       child: Text(
                         "${widget.snap['Group Name']}",
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style:  TextStyle(
+                          color: Color(themedata.CardTextColor),
                           fontSize: 20,
                           fontWeight: FontWeight.bold
                         ),
