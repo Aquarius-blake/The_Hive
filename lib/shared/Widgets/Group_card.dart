@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
+import 'package:provider/provider.dart';
 
 
 class GroupCard extends StatefulWidget {
@@ -13,11 +16,13 @@ class GroupCard extends StatefulWidget {
 class _GroupCardState extends State<GroupCard> {
   @override
   Widget build(BuildContext context) {
+        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+
     return Container(
       padding: const EdgeInsets.all(10.0),
       child:Card(
         elevation: 0.0,
-        color:Colors.black,
+        color:Color(themedata.CardBackgroundColor),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Row(
