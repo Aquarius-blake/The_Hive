@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:provider/provider.dart';
 
 
 class Atogglebutton extends StatefulWidget {
@@ -14,7 +17,7 @@ class Atogglebutton extends StatefulWidget {
 
 class _AtogglebuttonState extends State<Atogglebutton> {
  
-bool toggleValue=false;
+late bool toggleValue;
 
 toggleButton(String uid,bool mode)async{
 
@@ -28,7 +31,9 @@ await Showsnackbar(content!,context);
 
   @override
   Widget build(BuildContext context) {
-    toggleValue=widget.mode;
+        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+
+    toggleValue=themedata.DarkMode;
     return Container(
       child:AnimatedContainer(
         duration:const Duration(milliseconds: 500),
@@ -48,7 +53,7 @@ await Showsnackbar(content!,context);
               right: toggleValue? 0.0: 40.0,
               child: InkWell(
                 onTap:()async{
-                  toggleButton(widget.uid,widget.mode);
+                  toggleButton(widget.uid,toggleValue);
                 },
                 child: AnimatedSwitcher(
                   duration: Duration(milliseconds: 500),

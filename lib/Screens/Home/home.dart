@@ -204,7 +204,7 @@ class _HomeState extends State<Home> {
                             user1.Username!,
                             style:  TextStyle(
                               fontSize: 16,
-                              color: Colors.white,
+                              color: Color(themedata.DrawerTextColor!),
 
                             ),
                           ),
@@ -218,7 +218,7 @@ class _HomeState extends State<Home> {
                 ListTile(
                   leading:  Icon(
                     Icons.person,
-                    color: Colors.white,
+                    color: Color(themedata.DrawerIconColor!),
                     size:35.0,
                   ),
                   title:  Text(
@@ -227,7 +227,7 @@ class _HomeState extends State<Home> {
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
-                      color:Colors.white,
+                      color:Color(themedata.DrawerTextColor!),
                     ),
                   ),
                   onTap: () async{
@@ -238,7 +238,7 @@ class _HomeState extends State<Home> {
                 ListTile(
                   leading:  Icon(
                     LineIcons.alternateSignOut,
-                    color: Colors.white,
+                    color: Color(themedata.DrawerIconColor!),
                     size:35.0,
                     ),
                   title:  Text(
@@ -247,7 +247,7 @@ class _HomeState extends State<Home> {
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
-                      color:Colors.white,
+                      color:Color(themedata.DrawerTextColor!),
 
                     ),
 
@@ -262,13 +262,13 @@ class _HomeState extends State<Home> {
                 ListTile(
                   leading: FaIcon(
                     FontAwesomeIcons.peopleGroup,
-                    color: Colors.white,
+                    color: Color(themedata.DrawerIconColor!),
                     size:35.0,
                     ),
                     title:  Text(
                       "My Groups",
                       style:TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.DrawerTextColor!),
                       )
                       ),
                     onTap: ()async{
@@ -283,13 +283,13 @@ class _HomeState extends State<Home> {
                 ListTile(
                   leading:  FaIcon(
                     FontAwesomeIcons.userGroup,
-                    color: Colors.white,
+                    color: Color(themedata.DrawerIconColor!),
                     size:35.0,
                     ),
                     title:  Text(
                       "Search Groups",
                       style:TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.DrawerTextColor!),
                       )
                       ),
                     onTap: ()async{
@@ -306,13 +306,13 @@ class _HomeState extends State<Home> {
                 ListTile(
                   leading:  FaIcon(
                     FontAwesomeIcons.gears,
-                    color: Colors.white,
+                    color: Color(themedata.DrawerIconColor!),
                     size:35.0,
                     ),
                     title:  Text(
                       "Settings",
                       style:TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.DrawerTextColor!),
                       )
                       ),
                     onTap: ()async{
@@ -332,7 +332,7 @@ class _HomeState extends State<Home> {
                     style: TextStyle(
                       fontStyle: FontStyle.italic,
                       fontSize: 12.0,
-                      color:Colors.white,
+                      color:Color(themedata.DrawerTextbuttonColor!),
                     ),
                   ),
                   onTap: ()async{
@@ -345,7 +345,7 @@ class _HomeState extends State<Home> {
                  "View Requests",
              style:  TextStyle(
                fontStyle: FontStyle.italic,
-               color: Colors.white,
+               color: Color(themedata.DrawerTextbuttonColor!),
              ),
              ),
              onTap: (){
