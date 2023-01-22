@@ -24,11 +24,16 @@ class _MSettingsState extends State<MSettings> {
         late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
         print(themedata.AppbartextColor.toString());
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         centerTitle: true,
-        title: const Text('Settings'),
+        title:  Text(
+          'Settings',
+          style: TextStyle(
+            color: Color(themedata.AppbartextColor)
+            ),
+        ),
         iconTheme: const IconThemeData(
           color: Colors.white,
         ),    

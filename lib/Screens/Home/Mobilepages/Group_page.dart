@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Create_groupPage.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_home.dart';
@@ -27,18 +29,19 @@ class _GroupPageState extends State<GroupPage> {
   @override
   Widget build(BuildContext context) {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar:AppBar(
-        backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        backgroundColor: Color(themedata.AppbarbackColor),
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
-        title: const Text(
+        title:  Text(
           "Group List",
           style: TextStyle(
-            color:Colors.white,
+            color:Color(themedata.AppbartextColor),
           ),
           ),
           actions: [
@@ -50,10 +53,10 @@ class _GroupPageState extends State<GroupPage> {
                         )
                     );
               },
-             child: const Text(
+             child:  Text(
               "Create New Group",
               style: TextStyle(
-                color:Colors.lightBlueAccent
+                color:Color(themedata.AppbartextbuttonColor!)
               ),
               ),
              )
