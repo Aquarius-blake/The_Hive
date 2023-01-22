@@ -75,10 +75,10 @@ class _RequestCardState extends State<RequestCard> {
                         String ress= await FirestoreMethods().Approval(widget.snap['author uid']);
                         Showsnackbar(ress, context);
                       },
-                      child: const Text(
+                      child:  Text(
                           "Approve",
                       style: TextStyle(
-                        color: Colors.lightBlueAccent
+                        color: Color(themedata.CardTextButtonColor)
                       ),
                       )
                   ),
@@ -88,10 +88,10 @@ class _RequestCardState extends State<RequestCard> {
                         String content=await FirestoreMethods().DenyRequest(widget.snap['author uid']);
                         Showsnackbar(content, context);
                       },
-                      child: const Text(
+                      child: Text(
                           "Deny",
                       style: TextStyle(
-                        color: Colors.lightBlueAccent
+                        color: Color(themedata.CardTextButtonColor)
                       ),
                       )
                   ),
