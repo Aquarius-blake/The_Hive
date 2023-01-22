@@ -5,7 +5,7 @@ import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:provider/provider.dart';
 
-//TODO:Theme implementation
+//theme implemented
 class RequestCard extends StatefulWidget {
   final snap;
   const RequestCard({Key? key,this.snap}) : super(key: key);
@@ -31,7 +31,7 @@ class _RequestCardState extends State<RequestCard> {
                 children: [
                   CircleAvatar(
                     backgroundImage: NetworkImage(widget.snap['Profile Pic']),
-                    backgroundColor: Colors.lightBlueAccent,
+                    backgroundColor: Colors.transparent,
                     radius: 20,
                   ),
                   const SizedBox(width: 5,),
