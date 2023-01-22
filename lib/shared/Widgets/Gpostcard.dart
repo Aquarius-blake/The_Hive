@@ -430,9 +430,9 @@ class _GPostCardState extends State<GPostCard> {
                   }
                 }
                           },
-                          icon: const Icon(
+                          icon:  Icon(
                             Icons.share,
-                            color: Colors.white,
+                            color: Color(themedata.CardIconColor),
                           )
                       ),
                     ],
