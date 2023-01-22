@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/shared/Widgets/Requestcard.dart';
+import 'package:provider/provider.dart';
 
 class Request_page extends StatefulWidget {
   const Request_page({Key? key}) : super(key: key);
@@ -12,18 +15,19 @@ class Request_page extends StatefulWidget {
 class _Request_pageState extends State<Request_page> {
   @override
   Widget build(BuildContext context) {
+        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
 appBar: AppBar(
-  backgroundColor: Colors.black,
+  backgroundColor: Color(themedata.AppbarbackColor),
   centerTitle: true,
-  iconTheme: const IconThemeData(
-    color: Colors.white
+  iconTheme:  IconThemeData(
+    color: Color(themedata.AppbariconColor)
   ),
   title: Text(
     "Requests",
     style: TextStyle(
-      color: Colors.white
+      color: Color(themedata.AppbartextColor)
     ),
   ),
 ),

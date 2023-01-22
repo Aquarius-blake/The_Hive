@@ -374,7 +374,7 @@ class _HomeState extends State<Home> {
                Showsnackbar(content, context);
              },
            ),
-             const SizedBox(height: 120.0,),
+             const SizedBox(height: 100.0,),
                 Divider(
                   height: 40,
                   color: Color(themedata.DividerColor!),
@@ -390,7 +390,10 @@ class _HomeState extends State<Home> {
                       color:Color(themedata.DrawerTextColor!),
                     ),
                   ),
-                )
+                ),
+                const  SizedBox(
+                  height: 10,
+                ),
 
               ],
             ),
