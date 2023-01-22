@@ -1,5 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_commentedit.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/editcomment.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
@@ -24,6 +26,8 @@ class _GCommentcardState extends State<GCommentcard> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+
     return Container(
       padding: const EdgeInsets.symmetric(
         vertical: 0,
