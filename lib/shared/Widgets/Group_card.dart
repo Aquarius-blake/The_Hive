@@ -16,7 +16,7 @@ class GroupCard extends StatefulWidget {
 class _GroupCardState extends State<GroupCard> {
   @override
   Widget build(BuildContext context) {
-        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
 
     return Container(
       padding: const EdgeInsets.all(10.0),
@@ -32,7 +32,7 @@ class _GroupCardState extends State<GroupCard> {
                 backgroundImage: NetworkImage(widget.snap['Group Pic']),
                 radius:20,
               ),
-              SizedBox(width: 10,),
+             const SizedBox(width: 10,),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
