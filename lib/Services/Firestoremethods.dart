@@ -920,7 +920,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       }
 
 
-      ress="Theme Updated Successfully";
+      ress="Theme Updated Successfully, Restart App to Apply changes";
       return ress;
       }catch(e){
         ress=e.toString();
