@@ -47,7 +47,7 @@ class _MSettingsState extends State<MSettings> {
              child:  Text(
               "Save",
               style: TextStyle(
-                color:Color(themedata.AppbartextColor)
+                color:Color(themedata.AppbartextbuttonColor!)
               ),
               )
              )
@@ -66,7 +66,7 @@ class _MSettingsState extends State<MSettings> {
                   Text(
                     "Enable Dark Mode",
                     style: TextStyle(
-                      color: Colors.white,
+                      color: Color(themedata.ScaffoldtextColor),
                       fontSize: 20
                     ),
                     ),
@@ -96,7 +96,7 @@ class _MSettingsState extends State<MSettings> {
                       "Set Custom Colors",
                       textAlign: TextAlign.start,
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.ScaffoldtextColor),
                         fontSize: 20  ,
                       )
                       ),
