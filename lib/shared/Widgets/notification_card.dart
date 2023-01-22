@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
+import 'package:provider/provider.dart';
 import '../Pop_up.dart';
 
 class NotifCard extends StatefulWidget {
@@ -52,9 +55,11 @@ Future.delayed(const Duration(
     microseconds: 100
 )
 );
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+
     return Container(
       child:  Card(
-        color:Colors.black,
+        color:Color(themedata.CardBackgroundColor),
         elevation: 2.0,
         child: Padding(
           padding: const EdgeInsets.all(18.0),
@@ -78,9 +83,9 @@ Future.delayed(const Duration(
                                   children: [
                                     TextSpan(
                                       text: widget.snap['author'],
-                                      style: const TextStyle(
+                                      style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                        color: Colors.white,
+                                        color: Color(themedata.CardTextColor),
                                         fontSize: 18,
                                       ),
                                     ),
