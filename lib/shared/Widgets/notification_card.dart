@@ -91,8 +91,8 @@ Future.delayed(const Duration(
                                     ),
                                     TextSpan(
                                       text: widget.snap['message'],
-                                      style: const TextStyle(
-                                        color: Colors.white,
+                                      style:  TextStyle(
+                                        color: Color(themedata.CardTextColor),
                                         fontStyle: FontStyle.italic,
                                       )
                                     ),
