@@ -170,10 +170,10 @@ class _MsearchState extends State<Msearch> {
                 }
               });
             },
-            child: !isShowuser? const Text(
+            child: !isShowuser? Text(
               "User",
               style: TextStyle(
-                color: Colors.lightBlueAccent,
+                color: Color(themedata.AppbartextbuttonColor!),
               ),
             ):const Text(
               "Post",
