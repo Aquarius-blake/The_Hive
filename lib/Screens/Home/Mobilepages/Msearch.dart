@@ -1,9 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mpprofile_screen.dart';
 import 'package:forum3/Services/Searchmethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/post_card.dart';
+import 'package:provider/provider.dart';
 
 class Msearch extends StatefulWidget {
   const Msearch({Key? key}) : super(key: key);
@@ -124,10 +127,12 @@ class _MsearchState extends State<Msearch> {
   }
   @override
   Widget build(BuildContext context) {
+            late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+
     return Scaffold(
-      backgroundColor:Colors.black,
+      backgroundColor:Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         elevation: 0.0,
         title: TextFormField(
           controller: _search,
@@ -145,12 +150,12 @@ class _MsearchState extends State<Msearch> {
 
           decoration: InputDecoration(
             labelText: "Search $se",
-            labelStyle: const TextStyle(
-              color:Colors.white
+            labelStyle:  TextStyle(
+              color:Color(themedata.AppbartextColor),
             ),
           ),
-          style: const TextStyle(
-            color:Colors.white
+          style:  TextStyle(
+            color:Color(themedata.AppbartextColor),
           ),
         ),
         actions: [
