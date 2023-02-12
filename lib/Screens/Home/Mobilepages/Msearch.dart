@@ -176,7 +176,7 @@ class _MsearchState extends State<Msearch> {
                 color: Color(themedata.AppbartextbuttonColor!),
               ),
             ):const Text(
-              "Post",
+              "Posts",
               style: TextStyle(
                 color: Colors.lightBlueAccent,
               ),
