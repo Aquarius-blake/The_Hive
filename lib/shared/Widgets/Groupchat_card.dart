@@ -20,6 +20,8 @@ class _GchatcardState extends State<Gchatcard> {
   @override
   Widget build(BuildContext context) {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+       late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+  
         plaintext=Encryption.decrypt(widget.snap['Message']);
             final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
