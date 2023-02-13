@@ -22,6 +22,9 @@ class _GchatcardState extends State<Gchatcard> {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
   //theme not implemented 
+  //TODO:create new fields 
+  //TODO:replace current with new fields for sender and receiver cards
+
         plaintext=Encryption.decrypt(widget.snap['Message']);
             final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
@@ -84,7 +87,7 @@ class _GchatcardState extends State<Gchatcard> {
                     Text(
                       dateString,
                       style: const TextStyle(
-                        color: Colors.white60,
+                        color: Colors.grey ,
                         fontSize: 10,
                         ),
                       ),
