@@ -65,7 +65,8 @@ class _GchatcardState extends State<Gchatcard> {
                         const Text(
                           "Me",
                           style: TextStyle(
-                            color: Colors.white,)
+                            color: Color(thmedata.CardTextColor),
+                            )
                           ),
                       ],
                     ),
@@ -74,7 +75,7 @@ class _GchatcardState extends State<Gchatcard> {
                       text: TextSpan(
                         text:plaintext,
                         style: const TextStyle(
-                          color: Colors.white,  
+                          color: Color(themedata.CardTextColor),  
                           fontSize: 15,
                           )
                         ),
