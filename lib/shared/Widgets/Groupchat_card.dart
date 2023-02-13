@@ -37,7 +37,7 @@ class _GchatcardState extends State<Gchatcard> {
             child: Card(
               margin: const EdgeInsets.all(10),
               elevation: 4,
-              color: Colors.blue,
+              color: Color(themedata. CardBackgroundColor! ),
               shadowColor: Colors.grey,
               borderOnForeground: true,
               shape: RoundedRectangleBorder(
