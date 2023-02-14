@@ -183,8 +183,8 @@ class _MsearchState extends State<Msearch> {
             ),
             style: ElevatedButton.styleFrom(
                 elevation: 0.0,
+                backgroundColor: Colors.black,
                 shadowColor: Colors.white,
-                primary: Colors.black,
                 side: const BorderSide(
                   color: Colors.lightBlueAccent,
                   width: 2.0,
