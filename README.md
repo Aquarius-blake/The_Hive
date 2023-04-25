@@ -1,16 +1,16 @@
-
+U
 
 
 # Social Media App
 
-## Description 
+## 📃Description 
 
 A Social Media Application project with flutter front-end UI and Firebase back-end.
 End-to-End encryption included in private chats and group chats . 
 Planning to add user customizable themes alongside  the standard light and dark theme (yet to be fully implemented ). 
 
 
-## ScreenShots
+## 📱ScreenShots
 
 (NB: Will be added later)
 
@@ -23,7 +23,8 @@ Contributions are welcome! Feel free to open an issue or submit a pull request i
 
 
 
-## Releases
+## 🎆
+Releases
 Initial release will be added after standard themes are implemented 
 
 
