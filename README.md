@@ -21,7 +21,8 @@ Planning to add user customizable themes alongside  the standard light and dark 
 
 Contributions are welcome! Feel free to open an issue or submit a pull request if you have a way to improve this project.
 
-
+## ❗❗❗ IMPORTANT NOTICE
+If you wish to use this project (as a template) for private/personal purposes, kindly link your own Firebase tools
 
 ## 🎆 Releases
 Initial release will be added after standard themes are implemented 
