@@ -40,7 +40,7 @@ class _GchatcardState extends State<Gchatcard> {
             child: Card(
               margin: const EdgeInsets.all(10),
               elevation: 4,
-              color: Color(themedata. CardBackgroundColor! ),
+              color: Color(Colors. blue),
               shadowColor: Colors.grey,
               borderOnForeground: true,
               shape: RoundedRectangleBorder(
@@ -68,7 +68,7 @@ class _GchatcardState extends State<Gchatcard> {
                         const Text(
                           "Me",
                           style: TextStyle(
-                            color: Color(thmedata.CardTextColor),
+                            color: Color(Colors. white),
                             )
                           ),
                       ],
@@ -78,7 +78,7 @@ class _GchatcardState extends State<Gchatcard> {
                       text: TextSpan(
                         text:plaintext,
                         style: const TextStyle(
-                          color: Color(themedata.CardTextColor),  
+                          color: Color(Colors. white),  
                           fontSize: 15,
                           )
                         ),
