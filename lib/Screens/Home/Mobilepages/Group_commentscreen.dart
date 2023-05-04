@@ -94,7 +94,7 @@ text.dispose();
             if(snapshots.connectionState==ConnectionState.waiting){
               return const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.white,
+                  color: Colors.lightBlueAccent,
                 ),
               );
             }
