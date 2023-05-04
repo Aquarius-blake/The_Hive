@@ -134,12 +134,12 @@ text.dispose();
                       decoration: InputDecoration(
                         hintText: "Comment as ${user1.Username}",
                         hintStyle: const TextStyle(
-                          color: Colors.white,
+                          color: Colors.grey,
                         ),
                         border: InputBorder.none,
                       ),
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.BottomNavTextColor),
                       ),
                     ),
                   ),
