@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/shared/Widgets/GMembercard.dart';
+import 'package:provider/provider.dart';
 
 
 
@@ -17,11 +20,14 @@ class GroupMembers extends StatefulWidget {
 class _GroupMembersState extends State<GroupMembers> {
   @override
   Widget build(BuildContext context) {
+
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         iconTheme: const IconThemeData(
           color: Colors.white,
         ),
@@ -38,7 +44,7 @@ class _GroupMembersState extends State<GroupMembers> {
             if(snapshots.connectionState==ConnectionState.waiting){
               return const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.white,
+                  color: Colors.lightBlueAccent,
                 ),
               );
             }
