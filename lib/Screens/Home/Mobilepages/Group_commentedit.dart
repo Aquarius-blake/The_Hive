@@ -48,7 +48,7 @@ class _GcomeditState extends State<Gcomedit> {
         child: Container(
           padding: const EdgeInsets.all(12),
           child: Card(
-            color: Colors.black,
+            color: Color(themedata.CardBackgroundColor),
             elevation: 4.0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50)
@@ -71,8 +71,8 @@ class _GcomeditState extends State<Gcomedit> {
                           width: MediaQuery.of(context).size.width*0.5,
                           child: Text(
                             user1.Username!,
-                            style:const TextStyle(
-                              color: Colors.white,
+                            style: TextStyle(
+                              color: Color(themedata.CardTextColor),
                             ),
                             ),
                         ),
