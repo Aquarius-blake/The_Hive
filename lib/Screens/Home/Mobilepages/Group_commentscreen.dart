@@ -76,10 +76,10 @@ text.dispose();
     return Scaffold(
       backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         title:const Text(
           "Discussion",
           style: TextStyle(
