@@ -12,11 +12,9 @@ class Profile extends StatelessWidget {
       appBar: AppBar(
         title: Row(
           children: <Widget>[
-
             Text("Profile"),
           ],
         ),
-
       ),
       body: Container(
         child: Column(

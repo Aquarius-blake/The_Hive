@@ -5,10 +5,10 @@ import 'package:forum3/Screens/Home/Mobilepages/MchatSearch.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MmChatScreen.dart';
 import 'package:forum3/shared/Widgets/Chatheadcard.dart';
 import 'package:provider/provider.dart';
-
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 
+//TO DO: Implement theme
 class Mmessages extends StatefulWidget {
   const Mmessages({Key? key}) : super(key: key);
 
@@ -20,7 +20,6 @@ class _MmessagesState extends State<Mmessages> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-
     return user1.Guest==true?  Scaffold(
       backgroundColor:Colors.black,
       body: SafeArea(
