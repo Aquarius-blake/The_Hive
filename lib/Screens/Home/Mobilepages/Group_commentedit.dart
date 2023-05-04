@@ -30,11 +30,11 @@ class _GcomeditState extends State<Gcomedit> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         centerTitle: true,
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
         title: const Text(
           "Edit Comment",
