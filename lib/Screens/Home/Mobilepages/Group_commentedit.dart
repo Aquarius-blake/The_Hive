@@ -88,20 +88,20 @@ class _GcomeditState extends State<Gcomedit> {
                       hintText: "Edit comment as ${user1.Username}",
                       label: Text(
                         "Edit comment as ${user1.Username}",
-                        style:const TextStyle(
-                          color: Colors.white,
+                        style: TextStyle(
+                          color: Color(themedata.CardTextColor),
                         ),
                         )
                     ),
-                    style:const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: Color(themedata.CardTextColor),
                     ),
                   ),
-                const  Divider(
+                const Divider(
                     height: 20,
                     thickness: 2,
                   ),
-                const  SizedBox(
+                const SizedBox(
                     height: 40,
                   )
                 ],
