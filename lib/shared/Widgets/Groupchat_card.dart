@@ -20,6 +20,11 @@ class _GchatcardState extends State<Gchatcard> {
   @override
   Widget build(BuildContext context) {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+       late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+  //theme not implemented 
+  //TODO:create new fields 
+  //TODO:replace current with new fields for sender and receiver cards
+
         plaintext=Encryption.decrypt(widget.snap['Message']);
             final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
@@ -35,7 +40,7 @@ class _GchatcardState extends State<Gchatcard> {
             child: Card(
               margin: const EdgeInsets.all(10),
               elevation: 4,
-              color: Colors.blue,
+              color: Color(Colors. blue),
               shadowColor: Colors.grey,
               borderOnForeground: true,
               shape: RoundedRectangleBorder(
@@ -63,7 +68,8 @@ class _GchatcardState extends State<Gchatcard> {
                         const Text(
                           "Me",
                           style: TextStyle(
-                            color: Colors.white,)
+                            color: Color(Colors. white),
+                            )
                           ),
                       ],
                     ),
@@ -72,7 +78,7 @@ class _GchatcardState extends State<Gchatcard> {
                       text: TextSpan(
                         text:plaintext,
                         style: const TextStyle(
-                          color: Colors.white,  
+                          color: Color(Colors. white),  
                           fontSize: 15,
                           )
                         ),
@@ -81,7 +87,7 @@ class _GchatcardState extends State<Gchatcard> {
                     Text(
                       dateString,
                       style: const TextStyle(
-                        color: Colors.white60,
+                        color: Colors.grey ,
                         fontSize: 10,
                         ),
                       ),
