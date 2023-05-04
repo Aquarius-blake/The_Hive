@@ -36,10 +36,10 @@ class _GcomeditState extends State<Gcomedit> {
         iconTheme: IconThemeData(
           color: Color(themedata.AppbariconColor),
         ),
-        title: const Text(
+        title:  Text(
           "Edit Comment",
           style: TextStyle(
-            color: Colors.white,
+            color: Color(themedata.AppbartextColor),
           ),
         ),
         backgroundColor:Colors.black ,
