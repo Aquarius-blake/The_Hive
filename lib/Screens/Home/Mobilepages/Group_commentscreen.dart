@@ -80,10 +80,10 @@ text.dispose();
           color: Color(themedata.AppbariconColor),
         ),
         backgroundColor: Color(themedata.AppbarbackColor),
-        title:const Text(
+        title: Text(
           "Discussion",
           style: TextStyle(
-            color: Colors.white,
+            color: Color(themedata.AppbartextColor),
           ),
         ),
         centerTitle: true,
