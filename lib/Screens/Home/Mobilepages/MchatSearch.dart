@@ -1,8 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mpprofile_screen.dart';
 import 'package:forum3/Services/Searchmethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:provider/provider.dart';
 
 class Mchatusersearch extends StatefulWidget {
   const Mchatusersearch({Key? key}) : super(key: key);
@@ -105,13 +108,14 @@ class _MchatusersearchState extends State<Mchatusersearch> {
   }
   @override
   Widget build(BuildContext context) {
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         elevation: 3.0,
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
         title: TextFormField(
           controller: _search,
@@ -123,14 +127,14 @@ class _MchatusersearchState extends State<Mchatusersearch> {
             }
           },
 
-          decoration: const InputDecoration(
+          decoration:  InputDecoration(
             labelText: "Search User",
             labelStyle: TextStyle(
-              color: Colors.white,
+              color: Color(themedata.AppbartextColor),
             ),
           ),
           style: TextStyle(
-            color: Colors.white,
+            color: Color(themedata.AppbartextColor),
           ),
         ),
         actions: [
