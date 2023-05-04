@@ -13,7 +13,7 @@ Planning to add user customizable themes alongside  the standard light and dark 
 
 ## 🤗 Contributing
 
-Contributions are welcome! Feel free to open an issue or submit a pull request if you have a way to improve this project.
+Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## ❗❗❗ IMPORTANT NOTICE
 
