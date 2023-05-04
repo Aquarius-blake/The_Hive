@@ -102,14 +102,14 @@ void _scrollToTop() {
             ),
             Text(
               widget.snap['Group Name'],
-              style: const TextStyle(
-                color: Colors.white,
+              style:  TextStyle(
+                color: Color(themedata.AppbartextColor),
               ),
               ),
           ],
         ),
-          iconTheme:const IconThemeData(
-            color: Colors.white,
+          iconTheme: IconThemeData(
+            color: Color(themedata.AppbariconColor),
           ),
       ),
       body: StreamBuilder(
@@ -118,7 +118,7 @@ void _scrollToTop() {
             if(snapshots.connectionState==ConnectionState.waiting){
               return const Center(
                 child: CircularProgressIndicator(
-                  color: Colors.white,
+                  color: Colors.lightBlueAccent,
                 ),
               );
             }
