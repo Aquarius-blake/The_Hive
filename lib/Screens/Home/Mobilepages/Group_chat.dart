@@ -177,12 +177,12 @@ void _scrollToTop() {
                       decoration: InputDecoration(
                         hintText: "Chat as ${user1.Username}",
                         hintStyle: const TextStyle(
-                          color: Colors.white,
+                          color: Colors.grey,
                         ),
                         border: InputBorder.none,
                       ),
-                      style: const TextStyle(
-                        color: Colors.white,
+                      style:  TextStyle(
+                        color: Color(themedata.BottomNavTextColor),
                       ),
                     ),
                   ),
