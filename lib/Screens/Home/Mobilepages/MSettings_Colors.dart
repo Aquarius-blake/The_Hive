@@ -29,7 +29,9 @@ class _CustomThemePageState extends State<CustomThemePage> {
           actions: [
             TextButton(
               onPressed: (){},
-              child: Text("Save changes")
+              child: Text(
+                "Save changes"
+                )
               )
           ],
       ),
