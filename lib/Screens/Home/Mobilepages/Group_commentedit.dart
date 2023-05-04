@@ -42,7 +42,7 @@ class _GcomeditState extends State<Gcomedit> {
             color: Color(themedata.AppbartextColor),
           ),
         ),
-        backgroundColor:Colors.black ,
+        backgroundColor:Color(themedata.AppbarbackColor) ,
       ),
       body: SafeArea(
         child: Container(
