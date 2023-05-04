@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Encryption.dart';
 import 'package:intl/intl.dart';
@@ -40,7 +42,7 @@ class _GchatcardState extends State<Gchatcard> {
             child: Card(
               margin: const EdgeInsets.all(10),
               elevation: 4,
-              color: Color(Colors. blue),
+              color: Colors.blue,
               shadowColor: Colors.grey,
               borderOnForeground: true,
               shape: RoundedRectangleBorder(
@@ -68,7 +70,7 @@ class _GchatcardState extends State<Gchatcard> {
                         const Text(
                           "Me",
                           style: TextStyle(
-                            color: Color(Colors. white),
+                            color: Colors. white,
                             )
                           ),
                       ],
@@ -78,7 +80,7 @@ class _GchatcardState extends State<Gchatcard> {
                       text: TextSpan(
                         text:plaintext,
                         style: const TextStyle(
-                          color: Color(Colors. white),  
+                          color: Colors. white,  
                           fontSize: 15,
                           )
                         ),
