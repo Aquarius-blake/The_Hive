@@ -3,7 +3,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Encryption.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
@@ -80,6 +82,7 @@ void _scrollToTop() {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
 
     return Scaffold(
       backgroundColor: Colors.black,
