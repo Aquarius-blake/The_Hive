@@ -28,13 +28,13 @@ class _GroupMembersState extends State<GroupMembers> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color(themedata.AppbarbackColor),
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        iconTheme:  IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
-        title: const Text(
+        title:  Text(
           "Group Members",
           style: TextStyle(
-            color:Colors.white,
+            color:Color(themedata.AppbartextColor),
           ),
           ),
       ),
