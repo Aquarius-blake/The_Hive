@@ -158,7 +158,7 @@ text.dispose();
                     child: const Text("Post"),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0, 
-                      backgroundColor: Colors.lightBlueAccent,
+                      backgroundColor: Color(themedata.ScaffoldbuttonColor),
                       shadowColor: Colors.black,
                       side: const BorderSide(
                         color: Colors.white70,
