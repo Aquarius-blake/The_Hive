@@ -38,7 +38,6 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (_)=> UserProvider(),
         ),
-        //TODO: Add Theme Provider(Uncomment this later)
         ChangeNotifierProvider(
           create: (_)=> ThemeProvider(),
           )
