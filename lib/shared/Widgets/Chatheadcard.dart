@@ -81,7 +81,7 @@ class _CHcardState extends State<CHcard> {
               Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  SizedBox(height: 15,),
+                 const SizedBox(height: 15,),
                   Text(
                       "$sent  $dateString",
                     style: const TextStyle(
