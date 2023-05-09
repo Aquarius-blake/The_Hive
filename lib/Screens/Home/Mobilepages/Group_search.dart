@@ -111,10 +111,10 @@ class _GroupsearchState extends State<Groupsearch> {
     return Scaffold(
       backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         elevation: 3.0,
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
         title: TextFormField(
           controller: _search,
@@ -126,14 +126,14 @@ class _GroupsearchState extends State<Groupsearch> {
             }
           },
 
-          decoration: const InputDecoration(
+          decoration:  InputDecoration(
             labelText: "Search Groups",
             labelStyle: TextStyle(
-              color: Colors.white,
+              color: Color(themedata.ScaffoldtextColor),
             ),
           ),
-          style: const TextStyle(
-            color: Colors.white,
+          style:  TextStyle(
+            color: Color(themedata.ScaffoldtextColor),
           ),
         ),
         actions: [
@@ -148,18 +148,18 @@ class _GroupsearchState extends State<Groupsearch> {
 
               });
             },
-            child:  const Text(
+            child:   Text(
               "Refresh",
               style: TextStyle(
-                color: Colors.lightBlueAccent,
+                color: Color(themedata.ScaffoldbuttonTextColor),
               ),
             ),
             style: ElevatedButton.styleFrom(
-                elevation: 0.0,
+                elevation: 0.0, 
+                backgroundColor: Color(themedata.ScaffoldbuttonColor),
                 shadowColor: Colors.black,
-                primary: Colors.black,
-                side: const BorderSide(
-                  color: Colors.lightBlueAccent,
+                side: BorderSide(
+                  color: Color(themedata.ScaffoldbuttonborderColor),
                   width: 2.0,
                 ),
                 shape: RoundedRectangleBorder(
