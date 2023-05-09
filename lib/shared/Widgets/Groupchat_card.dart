@@ -25,7 +25,7 @@ class _GchatcardState extends State<Gchatcard> {
        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
   //theme not implemented 
   //TODO:create new fields 
-  //TODO:replace current THEME with new fields for sender and receiver cards
+  //TODO:replace current theme with new fields for sender and receiver cards
 
         plaintext=Encryption.decrypt(widget.snap['Message']);
             final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
