@@ -48,7 +48,7 @@ class _MobcomeditState extends State<Mobcomedit> {
         child: Container(
           padding: const EdgeInsets.all(12),
           child: Card(
-            color: Colors.black,
+            color: Color(themedata.CardBackgroundColor),
             elevation: 4.0,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(50)
@@ -71,8 +71,8 @@ class _MobcomeditState extends State<Mobcomedit> {
                           width: MediaQuery.of(context).size.width*0.5,
                           child: Text(
                             user1.Username!,
-                            style:const TextStyle(
-                              color: Colors.white,
+                            style: TextStyle(
+                              color: Color(themedata.CardTextColor),
                             ),
                             ),
                         ),
@@ -87,8 +87,8 @@ class _MobcomeditState extends State<Mobcomedit> {
                       border: InputBorder.none,
                       hintText: "Edit comment as ${user1.Username}",
                     ),
-                    style:const TextStyle(
-                      color: Colors.white,
+                    style: TextStyle(
+                      color: Color(themedata.CardTextColor),
                     ),
                   ),
                 const  Divider(
