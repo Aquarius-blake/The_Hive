@@ -1,11 +1,12 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Encryption.dart';
 import 'package:forum3/shared/error_handling.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-
 import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
 
@@ -23,6 +24,7 @@ class _CHcardState extends State<CHcard> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     plaintext=Encryption.decrypt(widget.snap['Last Message']);
 
     try{
@@ -41,7 +43,7 @@ class _CHcardState extends State<CHcard> {
         top: 5.0,
       ),
       child: Card(
-        color: Colors.black,
+        color: Color(themedata.CardBackgroundColor),
         child: Padding(
           padding: const EdgeInsets.all(12.0),
           child:   Row(
@@ -58,10 +60,10 @@ class _CHcardState extends State<CHcard> {
                   children: [
                     Text(
                       "${widget.snap['Receiver']}",
-                      style: const TextStyle(
+                      style:  TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
-                        color:Colors.white,
+                        color:Color(themedata.CardTextColor),
                       ),
                     ),
                     RichText(
