@@ -129,13 +129,13 @@ text.dispose();
                       controller: text,
                       decoration: InputDecoration(
                         hintText: "Comment as ${user1.Username}",
-                        hintStyle: const TextStyle(
-                          color: Colors.white,
+                        hintStyle:  TextStyle(
+                          color: Color(themedata.ScaffoldtextColor),
                         ),
                         border: InputBorder.none,
                       ),
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.ScaffoldtextColor),
                       ),
                     ),
                   ),
