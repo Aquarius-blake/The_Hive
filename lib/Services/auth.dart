@@ -66,7 +66,7 @@ class AuthService{
       await  _firestore.collection("users").doc(user!.uid).set(
         user1.toJson(),
       );
-
+    await FirestoreMethods().UpdateThemeMode(user.uid,true);
       return _userfirebase(user);
     }catch(e){
       print(e.toString());
