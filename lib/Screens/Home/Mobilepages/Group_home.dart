@@ -81,10 +81,10 @@ _selectimage(BuildContext context)async{
   @override
   Widget build(BuildContext context) {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-        
+        late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.Scaffoldbackcolor),
       appBar:AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
