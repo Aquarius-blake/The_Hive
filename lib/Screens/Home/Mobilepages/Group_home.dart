@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/GMember_list.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_Post.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_chat.dart';
@@ -84,7 +86,7 @@ _selectimage(BuildContext context)async{
         late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
 
     return Scaffold(
-      backgroundColor: Color(themedata.Scaffoldbackcolor),
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar:AppBar(
         centerTitle: true,
         backgroundColor: Colors.black,
