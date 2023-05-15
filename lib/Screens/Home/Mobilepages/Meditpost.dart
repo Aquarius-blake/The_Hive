@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
@@ -121,17 +123,19 @@ _detail.text=widget.snap['detail'];
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         centerTitle: true,
-        iconTheme:const IconThemeData(
-          color: Colors.white,
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
-        title:const Text(
+        title: Text(
           "Edit Post",
           style: TextStyle(
-            color: Colors.white,
+            color: Color(themedata.AppbartextColor),
           ),
         ),
       ),
@@ -140,9 +144,9 @@ _detail.text=widget.snap['detail'];
             child: Column(
               children: [
                 _isloading? const LinearProgressIndicator():Container(),
-                SizedBox(height: 10,),
+                const SizedBox(height: 10,),
                 Card(
-                  color:Colors.black,
+                  color:Color(themedata.CardBackgroundColor),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -150,11 +154,11 @@ _detail.text=widget.snap['detail'];
                         Row(
                           children: [
                             Avatar(user1),
-                            SizedBox(width: 15,),
+                            const SizedBox(width: 15,),
                             Text(
                               user1.Username!,
-                            style:const TextStyle(
-                            color:Colors.white
+                            style: TextStyle(
+                            color:Color(themedata.CardTextColor)
                             ),
                             ),
                           ],
@@ -165,11 +169,11 @@ _detail.text=widget.snap['detail'];
                           decoration: const InputDecoration(
                             hintText: "Title",
                             hintStyle: TextStyle(
-                              color: Colors.white,
+                              color: Colors.grey,
                             ),
                           ),
-                          style:const TextStyle(
-                            color: Colors.white,
+                          style: TextStyle(
+                            color: Color(themedata.CardTextColor),
                           ),
                         ),
                        const SizedBox(height: 10,),
@@ -181,19 +185,22 @@ _detail.text=widget.snap['detail'];
                               hintText: "Write Something.....",
                               border: InputBorder.none,
                             ),
-                            style:const TextStyle(
-                              color: Colors.white,
+                            style: TextStyle(
+                              color: Color(themedata.CardTextColor),
                             ),
                           ),
                         ),
                         Post(),
-                        const Divider(),
+                        Divider(
+                          color:Color(themedata.DividerColor!)
+                        ),
                         Row(
                           children: [
                             IconButton(
                               onPressed: ()=>_selectimage(context),
-                              icon: const Icon(
+                              icon: Icon(
                                 Icons.add_a_photo,
+                                color: Color(themedata.CardIconColor),
                               ),
                             ),
                             IconButton(onPressed: (){
@@ -201,8 +208,9 @@ _detail.text=widget.snap['detail'];
                                 _image=null;
                               });
                             },
-                                icon: const Icon(
-                                Icons.remove_circle
+                                icon: Icon(
+                                Icons.remove_circle,
+                                color: Color(themedata.CardIconColor)
                             )
                             )
                           ],
