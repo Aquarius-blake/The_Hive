@@ -22,7 +22,7 @@ class _MSettingsState extends State<MSettings> {
   Widget build(BuildContext context) {
         late  User1 user1=  Provider.of<UserProvider>(context).getUser;
         late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
-        print(themedata.AppbartextColor.toString());
+        
     return Scaffold(
       backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
@@ -34,8 +34,8 @@ class _MSettingsState extends State<MSettings> {
             color: Color(themedata.AppbartextColor)
             ),
         ),
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        iconTheme:  IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),    
         actions: [
           
