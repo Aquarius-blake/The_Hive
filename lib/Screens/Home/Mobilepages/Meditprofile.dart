@@ -1,11 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Models/Users1.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 
 //TODO:implement Theme
 
@@ -107,24 +110,25 @@ late DateTime? _dateTime;
 
   @override
   Widget build(BuildContext context) {
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        backgroundColor: Color(themedata.AppbarbackColor),
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
-        title: const Text(
+        title:  Text(
           "Edit Profile",
           style: TextStyle(
-            color: Colors.white,
+            color: Color(themedata.AppbartextColor),
           ),
         ),
       ),
       body: Container(
         child: Card(
-          color: Colors.black,
+          color: Color(themedata.CardBackgroundColor),
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: ListView(
@@ -149,9 +153,9 @@ late DateTime? _dateTime;
                                 left: 65,
                                 child: IconButton(
                                     onPressed: ()=>_selectimage(context),
-                                    icon: const Icon(
+                                    icon: Icon(
                                       Icons.add_a_photo,
-                                      color: Colors.white,
+                                      color: Color(themedata.CardIconColor),
                                     )
                                 )
                             )
@@ -161,8 +165,8 @@ late DateTime? _dateTime;
                           height: 20,
                         ),
                         TextFormField(
-                          style: const TextStyle(
-                            color: Colors.white,
+                          style: TextStyle(
+                            color: Color(themedata.CardTextColor),
                           ),
                           controller: Fname,
                           validator: (val)=>val!.isEmpty ? "Enter Your Full Name" : null,
@@ -173,15 +177,15 @@ late DateTime? _dateTime;
                           },
                           decoration: InputDecoration(
                             label: const Text("Full Name"),
-                            labelStyle: const TextStyle(
-                              color: Colors.white,
+                            labelStyle:  TextStyle(
+                              color: Color(themedata.CardTextColor),
                             ),
                             hintText: "Enter Full Name",
                             hintStyle:const TextStyle(
-                              color: Colors.white,
+                              color: Colors.grey,
                             ) ,
                             filled: true,
-                            fillColor: Colors.black,
+                            fillColor: Colors.transparent,
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                   color: Colors.redAccent
@@ -207,8 +211,8 @@ late DateTime? _dateTime;
                           },
                           decoration: InputDecoration(
                             label: const Text("Username"),
-                            labelStyle: const TextStyle(
-                              color: Colors.white,
+                            labelStyle:  TextStyle(
+                              color: Color(themedata.CardTextColor),
                             ),
                             hintText: "Enter Nick Name",
                             filled: true,
@@ -240,12 +244,12 @@ late DateTime? _dateTime;
                           },
                           decoration: InputDecoration(
                             label: const Text("Gender"),
-                            labelStyle: const TextStyle(
-                              color: Colors.white,
+                            labelStyle:  TextStyle(
+                              color: Color(themedata.CardTextColor),
                             ),
                             hintText: "Enter Gender",
                             filled: true,
-                            fillColor: Colors.black,
+                            fillColor: Colors.transparent,
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                   color: Colors.redAccent
@@ -257,8 +261,8 @@ late DateTime? _dateTime;
 
                             ),
                           ),
-                          style: const TextStyle(
-                            color: Colors.white,
+                          style:  TextStyle(
+                            color: Color(themedata.CardTextColor),
                           ),
                         ),
                         const SizedBox(height: 10,),
@@ -279,9 +283,9 @@ late DateTime? _dateTime;
                                   });
                               });
                             },
-                            child: const FaIcon(
+                            child:  FaIcon(
                                 FontAwesomeIcons.calendar,
-                                color: Colors.white,
+                                color: Color(themedata.CardIconColor),
                             ),
                           ),
                           horizontalTitleGap: 0.0,
@@ -296,12 +300,12 @@ late DateTime? _dateTime;
                             },
                             decoration: InputDecoration(
                               label: const Text("Date of Birth"),
-                              labelStyle: const TextStyle(
-                                color: Colors.white,
+                              labelStyle: TextStyle(
+                                color: Color(themedata.CardTextColor),
                               ),
                               hintText: "Enter Date of Birth",
                               filled: true,
-                              fillColor: Colors.black,
+                              fillColor: Colors.transparent,
                               focusedBorder: OutlineInputBorder(
                                 borderSide: const BorderSide(
                                     color: Colors.redAccent
@@ -314,8 +318,8 @@ late DateTime? _dateTime;
                               ),
                             ),
 
-                            style: const TextStyle(
-                              color: Colors.white,
+                            style:  TextStyle(
+                              color: Color(themedata.CardTextColor),
                             
                             ),
                           ),
@@ -334,14 +338,14 @@ late DateTime? _dateTime;
                               "Bio",
                               textAlign: TextAlign.start,
                             ),
-                            labelStyle: const TextStyle(
-                              color: Colors.white,
+                            labelStyle:  TextStyle(
+                              color: Color(themedata.CardTextColor),
                             ),
                             floatingLabelAlignment: FloatingLabelAlignment.start,
                             floatingLabelBehavior: FloatingLabelBehavior.always,
                             hintText: "Write Something about yourself",
                             filled: true,
-                            fillColor: Colors.black,
+                            fillColor: Colors.transparent,
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                   color: Colors.redAccent
@@ -354,8 +358,8 @@ late DateTime? _dateTime;
                             ),
                           ),
 
-                          style: const TextStyle(
-                            color: Colors.white,
+                          style:  TextStyle(
+                            color: Color(themedata.CardTextColor),
                           ),
                         ),
                         const SizedBox(height: 20,),
