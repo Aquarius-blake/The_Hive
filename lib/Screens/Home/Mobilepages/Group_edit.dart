@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
@@ -160,19 +162,19 @@ _selectimage(BuildContext context)async{
   @override
   Widget build(BuildContext context) {
             late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-
+            late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(
-          color: Colors.white,
+        backgroundColor: Color(themedata.AppbarbackColor),
+        iconTheme:  IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
-        title: const Text(
+        title:  Text(
           "Edit Group",
           style: TextStyle(
-            color:Colors.white,
+            color:Color(themedata.AppbartextColor),
           ),
           ),
           actions: [
@@ -183,10 +185,10 @@ _selectimage(BuildContext context)async{
                 Navigator.of(context).pop();
                 }
               },
-              child: const Text(
+              child:  Text(
                 "Delete Group",
                 style: TextStyle(
-                  color: Colors.blue,
+                  color: Color(themedata.AppbartextbuttonColor!),
                 ),
                 ),
             )
@@ -224,10 +226,10 @@ _selectimage(BuildContext context)async{
                              Showsnackbar("No image selected", context);
                            }
                           },
-                          icon: const FaIcon(
+                          icon:  FaIcon(
                             FontAwesomeIcons.camera,
                             size: 50,
-                            color:  Colors.white,
+                            color:  Color(themedata.ScaffoldiconColor),
                             ),
                           ),
                       ),
@@ -255,18 +257,18 @@ _selectimage(BuildContext context)async{
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   controller: groupname,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style:  TextStyle(
+                    color: Color(themedata.ScaffoldtextColor),
                   ),
-                  decoration: const InputDecoration(
+                  decoration:  InputDecoration(
                     hintText: "Enter Group Name here",
-                    hintStyle:  TextStyle(
-                      color: Colors.white,
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
                     ),
                     label: Text(
                       "Group Name",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.ScaffoldtextColor),
                       ),
                       ),
                     enabledBorder:  OutlineInputBorder(
