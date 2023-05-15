@@ -1,5 +1,7 @@
 
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
@@ -69,19 +71,20 @@ class _CreationState extends State<Creation> {
   @override
   Widget build(BuildContext context) {
             late  User1 user1=  Provider.of<UserProvider>(context,listen: false).getUser;
+            late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
 
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(
-          color:Colors.white,
+        backgroundColor: Color(themedata.AppbarbackColor),
+        iconTheme:  IconThemeData(
+          color:Color(themedata.AppbariconColor),
         ),
-        title: const Text(
+        title:  Text(
           "Create New Group",
           style:TextStyle(
-            color:Colors.white
+            color:Color(themedata.AppbartextColor)
           ),),
       ),
       body: SafeArea(
@@ -105,16 +108,16 @@ class _CreationState extends State<Creation> {
                                 left: 65,
                                 child: IconButton(
                                     onPressed: ()=>_selectimage(context),
-                                    icon: const Icon(
+                                    icon:  Icon(
                                       Icons.add_a_photo,
-                                      color: Colors.white,
+                                      color: Color(themedata.ScaffoldiconColor),
                                     )
                                 )
                             )
                           ],
                         ),
                 ),
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Form(
                   key: _formKey,
                   child: Column(
@@ -124,12 +127,12 @@ class _CreationState extends State<Creation> {
                        validator: (val)=>val!.isEmpty ? "Enter Your Group Name" : null,
                        decoration: InputDecoration(
                             label: const Text("Group Name"),
-                            labelStyle: const TextStyle(
-                              color: Colors.white,
+                            labelStyle:  TextStyle(
+                              color: Color(themedata.ScaffoldtextColor),
                             ),
                             hintText: "Enter Your Group Name",
                             filled: true,
-                            fillColor: Colors.black,
+                            fillColor: Colors.transparent,
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                   color: Colors.redAccent
@@ -141,8 +144,8 @@ class _CreationState extends State<Creation> {
 
                             ),
                           ),
-                          style: const TextStyle(
-                            color: Colors.white,
+                          style:  TextStyle(
+                            color: Color(themedata.ScaffoldtextColor),
                           ),
 
                       ),
@@ -153,12 +156,12 @@ class _CreationState extends State<Creation> {
                    validator: (val)=>val!.isEmpty ? "Enter Your Group's description" : null,
                    decoration: InputDecoration(
                             label: const Text("Group Description"),
-                            labelStyle: const TextStyle(
-                              color: Colors.white,
+                            labelStyle:  TextStyle(
+                              color: Color(themedata.ScaffoldtextColor),
                             ),
                             hintText: "Enter Group Description",
                             filled: true,
-                            fillColor: Colors.black,
+                            fillColor: Colors.transparent,
                             focusedBorder: OutlineInputBorder(
                               borderSide: const BorderSide(
                                   color: Colors.redAccent
@@ -170,8 +173,8 @@ class _CreationState extends State<Creation> {
 
                             ),
                           ),
-                          style: const TextStyle(
-                            color: Colors.white,
+                          style:  TextStyle(
+                            color: Color(themedata.ScaffoldtextColor),
                           ),
 
                 ),
@@ -195,7 +198,7 @@ class _CreationState extends State<Creation> {
                     },
                     style: ElevatedButton.styleFrom(
                                 elevation: 6.0, 
-                                backgroundColor: Colors.black,
+                                backgroundColor: Colors.transparent,
                                 shadowColor: Colors.black,
                                 side: const BorderSide(
                                   color: Colors.blue,
