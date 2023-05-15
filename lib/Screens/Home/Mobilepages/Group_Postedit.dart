@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
@@ -122,18 +124,19 @@ _detail.text=widget.snap['detail'];
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         centerTitle: true,
-        iconTheme:const IconThemeData(
-          color: Colors.white,
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
-        title:const Text(
+        title: Text(
           "Edit Post",
           style: TextStyle(
-            color: Colors.white,
+            color: Color(themedata.AppbartextColor),
           ),
         ),
       ),
@@ -144,7 +147,7 @@ _detail.text=widget.snap['detail'];
                 _isloading? const LinearProgressIndicator():Container(),
                const SizedBox(height: 10,),
                 Card(
-                  color:Colors.black,
+                  color:Color(themedata.CardBackgroundColor),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -152,11 +155,11 @@ _detail.text=widget.snap['detail'];
                         Row(
                           children: [
                             Avatar(user1),
-                            SizedBox(width: 15,),
+                           const SizedBox(width: 15,),
                             Text(
                               user1.Username!,
-                            style:const TextStyle(
-                            color:Colors.white
+                            style: TextStyle(
+                            color:Color(themedata.CardTextColor)
                             ),
                             ),
                           ],
@@ -164,20 +167,20 @@ _detail.text=widget.snap['detail'];
                        const SizedBox(height: 15,),
                         TextField(
                           controller: _title,
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             hintText: "Title",
                             hintStyle: TextStyle(
-                              color: Colors.white,
+                              color: Color(themedata.CardTextColor),
                             ),
                             label: Text(
                               "Title",
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Color(themedata.CardTextColor),
                               ),
                             ),
                           ),
-                          style:const TextStyle(
-                            color: Colors.white,
+                          style: TextStyle(
+                            color: Color(themedata.CardTextColor),
                           ),
                         ),
                        const SizedBox(height: 10,),
@@ -185,27 +188,27 @@ _detail.text=widget.snap['detail'];
                           child: TextField(
                             controller: _detail,
                             maxLines: 8,
-                            decoration: const InputDecoration(
+                            decoration:  InputDecoration(
                               hintText: "Write Something.....",
                               border: InputBorder.none,
                               hintStyle: TextStyle(
-                                color: Colors.white,
+                                color: Color(themedata.CardTextColor),
                               ),
                               label: Text(
                                 "Detail",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color: Color(themedata.CardTextColor),
                                 ),
                               )
                             ),
-                            style:const TextStyle(
-                              color: Colors.white,
+                            style: TextStyle(
+                              color: Color(themedata.CardTextColor),
                             ),
                           ),
                         ),
                         Post(),
-                        const Divider(
-                          color: Colors.white,
+                         Divider(
+                          color: Color(themedata.DividerColor!),
                         ),
                         Row(
                           children: [

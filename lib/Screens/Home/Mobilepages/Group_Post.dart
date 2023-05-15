@@ -11,7 +11,7 @@ import 'package:forum3/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 
-//TODO: implement theme
+//TODO: implement theme for dialog options
 class GrPost extends StatefulWidget {
   final snap;
   const GrPost({ Key? key,this.snap }) : super(key: key);
