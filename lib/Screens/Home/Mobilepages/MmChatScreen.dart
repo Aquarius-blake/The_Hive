@@ -35,12 +35,12 @@ class _MmchatScreenState extends State<MmchatScreen> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
-        iconTheme:const IconThemeData(
-          color: Colors.white,
+        backgroundColor: Color(themedata.AppbarbackColor),
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
         title: Row(
           children: [
@@ -50,8 +50,8 @@ class _MmchatScreenState extends State<MmchatScreen> {
             const SizedBox(width: 20,),
             Text(
               "${widget.snap['Receiver']}",
-              style: const TextStyle(
-                  color: Colors.white
+              style:  TextStyle(
+                  color: Color(themedata.AppbartextColor)
               ),
             ),
           ],
@@ -93,12 +93,12 @@ class _MmchatScreenState extends State<MmchatScreen> {
                       decoration: InputDecoration(
                         hintText: "Chat as ${user1.Username}",
                         hintStyle: const TextStyle(
-                            color: Colors.white
+                            color: Colors.grey
                         ),
                         border: InputBorder.none,
                       ),
-                      style: const TextStyle(
-                          color: Colors.white
+                      style:  TextStyle(
+                          color: Color(themedata.BottomNavTextColor)
                       ),
                     ),
                   ),
