@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MchatSearch.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MmChatScreen.dart';
 import 'package:forum3/shared/Widgets/Chatheadcard.dart';
@@ -20,20 +22,21 @@ class _MmessagesState extends State<Mmessages> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return user1.Guest==true?  Scaffold(
-      backgroundColor:Colors.black,
+      backgroundColor:Color(themedata.ScaffoldbackColor),
       body: SafeArea(
         child: Center(
             child:Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 RichText(
-                    text: const TextSpan(
+                    text:  TextSpan(
                       children: [
                         TextSpan(
                           text: "Access Denied",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Color(themedata.ScaffoldtextColor),
                               fontSize: 32,
                               fontWeight: FontWeight.bold
                           ),
@@ -42,10 +45,10 @@ class _MmessagesState extends State<Mmessages> {
                     )
                 ),
                 RichText(
-                    text: const TextSpan(
+                    text:  TextSpan(
                       text: "Please Sign in/Sign up to continue",
                       style: TextStyle(
-                          color: Colors.white
+                          color: Color(themedata.ScaffoldtextColor)
                       ),
                     )
                 )
@@ -54,7 +57,7 @@ class _MmessagesState extends State<Mmessages> {
         ),
       ),
     ): Scaffold(
-      backgroundColor:Colors.black,
+      backgroundColor:Color(themedata.ScaffoldbackColor),
       body: StreamBuilder(
         stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").orderBy("Chat Time",descending: true).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
