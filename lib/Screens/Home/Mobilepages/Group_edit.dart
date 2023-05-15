@@ -10,7 +10,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
 
-//TODO:implement theme
+//TODO:implement theme for simple dialog
 class Gedit extends StatefulWidget {
   const Gedit({ Key? key ,this.snap}) : super(key: key);
 
