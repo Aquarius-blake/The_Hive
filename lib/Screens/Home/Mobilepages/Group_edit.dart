@@ -12,21 +12,22 @@ import '../../../Models/Users1.dart';
 
 //TODO:implement theme
 class Gedit extends StatefulWidget {
-  final snap;
   const Gedit({ Key? key ,this.snap}) : super(key: key);
+
+  final snap;
 
   @override
   State<Gedit> createState() => _GeditState();
 }
 
 class _GeditState extends State<Gedit> {
-bool pop=false;
+  final Upload Selection=Upload();
+  TextEditingController groupdesc=TextEditingController();
+  TextEditingController groupname=TextEditingController();
 dynamic image;
 dynamic image2;
-  final Upload Selection=Upload();
-  TextEditingController groupname=TextEditingController();
-  TextEditingController groupdesc=TextEditingController();
   TextEditingController memalias=TextEditingController();
+bool pop=false;
   TextEditingController postalias=TextEditingController();
 
   @override
@@ -115,7 +116,6 @@ _deleteconfirm(BuildContext context)async{
     );
   }
 
-
 _selectimage(BuildContext context)async{
     return showDialog(
         context: context,
@@ -157,7 +157,6 @@ _selectimage(BuildContext context)async{
         }
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
@@ -278,7 +277,7 @@ _selectimage(BuildContext context)async{
                     ),
                     focusedBorder:  OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Colors.red,
                       ),
                     ),
                   ),
@@ -289,18 +288,18 @@ _selectimage(BuildContext context)async{
                 child: TextField(
                   maxLines: 5,
                   controller: groupdesc,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style:  TextStyle(
+                    color: Color(themedata.ScaffoldtextColor),
                   ),
-                  decoration: const InputDecoration(
+                  decoration:  InputDecoration(
                     hintText: "Enter Group description here",
                     hintStyle:  TextStyle(
-                      color: Colors.white,
+                      color: Colors.grey,
                     ),
                     label: Text(
                       "Group Description",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.ScaffoldtextColor),
                       ),
                       ),
                     enabledBorder:  OutlineInputBorder(
@@ -310,7 +309,7 @@ _selectimage(BuildContext context)async{
                     ),
                     focusedBorder:  OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Colors.red,
                       ),
                     ),
                   ),
@@ -320,18 +319,18 @@ _selectimage(BuildContext context)async{
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   controller: memalias,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style:  TextStyle(
+                    color: Color(themedata.ScaffoldtextColor),
                   ),
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     hintText: "Enter Member Alias here",
-                    hintStyle:  TextStyle(
-                      color: Colors.white,
+                    hintStyle:const TextStyle(
+                      color: Colors.grey,
                     ),
                     label: Text(
                       "Member Alias",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.ScaffoldtextColor),
                       ),
                       ),
                     enabledBorder:  OutlineInputBorder(
@@ -341,7 +340,7 @@ _selectimage(BuildContext context)async{
                     ),
                     focusedBorder:  OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Colors.red,
                       ),
                     ),
                   ),
@@ -351,28 +350,28 @@ _selectimage(BuildContext context)async{
                 padding: const EdgeInsets.all(8.0),
                 child: TextField(
                   controller: postalias,
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style:  TextStyle(
+                    color: Color(themedata.ScaffoldtextColor),
                   ),
-                  decoration: const InputDecoration(
+                  decoration: InputDecoration(
                     hintText: "Enter Post Alias here",
-                    hintStyle:  TextStyle(
-                      color: Colors.white,
+                    hintStyle: const TextStyle(
+                      color: Colors.grey,
                     ),
                     label: Text(
                       "Post Alias",
                       style: TextStyle(
-                        color: Colors.white,
+                        color: Color(themedata.ScaffoldtextColor),
                       ),
                       ),
-                    enabledBorder:  OutlineInputBorder(
+                    enabledBorder: const OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Colors.white,
                       ),
                     ),
-                    focusedBorder:  OutlineInputBorder(
+                    focusedBorder: const OutlineInputBorder(
                       borderSide: BorderSide(
-                        color: Colors.white,
+                        color: Colors.red,
                       ),
                     ),
                   ),
@@ -393,20 +392,25 @@ _selectimage(BuildContext context)async{
                     Navigator.of(context).pop();
                     }
                   },
-                  child: const Padding(
-                    padding:  EdgeInsets.all(15.0),
-                    child:  Text("Update"),
+                  child:  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child:  Text(
+                      "Update",
+                      style: TextStyle(
+                        color: Color(themedata.ScaffoldbuttonTextColor),
+                      ),
+                      ),
                   ),
                   style: ElevatedButton.styleFrom(
-                    elevation: 6.0,
-                                      shadowColor: Colors.black,
-                                      primary: Colors.black,
-                                      side: const BorderSide(
-                                        color: Colors.blue,
-                                       width: 2.0,
-                                      ),
-                                      shape: RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(100.0)
+                    elevation: 6.0, 
+                    backgroundColor: Colors.transparent,
+                    shadowColor: Colors.black,
+                    side: const BorderSide(
+                         color: Colors.blue,
+                             width: 2.0,
+                                  ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(100.0)
                                       )
                   ),
                   ),
