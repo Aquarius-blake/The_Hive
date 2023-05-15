@@ -89,14 +89,14 @@ _selectimage(BuildContext context)async{
       backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar:AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(
-          color: Colors.white
+        backgroundColor: Color(themedata.AppbarbackColor),
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor)
           ),
           title: Text(
             "${widget.snap['Group Name']}",
-            style:const TextStyle(
-              color:Colors.white
+            style: TextStyle(
+              color:Color(themedata.AppbartextColor)
             ),
             ),
             actions: [
@@ -158,7 +158,7 @@ _selectimage(BuildContext context)async{
                           icon:  FaIcon(
                             FontAwesomeIcons.camera,
                             size: 50,
-                            color: widget.snap['author uid']==user1.UID && widget.snap['Header']==""? Colors.white:Colors.transparent,
+                            color: widget.snap['author uid']==user1.UID && widget.snap['Header']==""? Color(themedata.ScaffoldbuttonIconColor):Colors.transparent,
                             ),
                           ),
                       ),
@@ -186,9 +186,9 @@ _selectimage(BuildContext context)async{
                                 )
                             );
                     },
-                    icon: const FaIcon(
+                    icon: FaIcon(
                       FontAwesomeIcons.pencil,
-                      color: Colors.white,
+                      color: Color(themedata.ScaffoldbuttonIconColor),
                       ),
                       color:Colors.transparent
                     ):Container(),
@@ -218,9 +218,9 @@ _selectimage(BuildContext context)async{
                       ],
                     ),
                     style: ElevatedButton.styleFrom(
-                                      elevation: 6.0,
+                                      elevation: 6.0, 
+                                      backgroundColor: Color(themedata.ScaffoldbuttonColor),
                                       shadowColor: Colors.black,
-                                      primary: Colors.black,
                                       side: const BorderSide(
                                         color: Colors.blue,
                                        width: 2.0,
@@ -249,7 +249,7 @@ _selectimage(BuildContext context)async{
                     style: ElevatedButton.styleFrom(
                                       elevation: 6.0,
                                       shadowColor: Colors.black,
-                                      primary: Colors.black,
+                                      backgroundColor: Color(themedata.ScaffoldbuttonColor),
                                       side: const BorderSide(
                                         color: Colors.blue,
                                        width: 2.0,
@@ -261,11 +261,14 @@ _selectimage(BuildContext context)async{
                     ),
                 ],
               ),
-              Divider(),
-              RichText(text: TextSpan(
+              Divider(
+                color: Color(themedata.DividerColor!),
+              ),
+              RichText(
+                text: TextSpan(
                 text: "About",
-                style: const TextStyle(
-                  color: Colors.white,
+                style:  TextStyle(
+                  color: Color(themedata.ScaffoldtextColor),
                   fontSize: 20,
                   fontWeight: FontWeight.bold
                 ),
@@ -290,18 +293,18 @@ _selectimage(BuildContext context)async{
                 child: RichText(
                   text: TextSpan(
                     children: [
-                     const TextSpan(
+                      TextSpan(
                         text: "Description: ",
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Color(themedata.ScaffoldtextColor),
                           fontSize: 20,
                           fontWeight: FontWeight.bold
                         ),
                       ),
                       TextSpan(
                         text: "${widget.snap['Group Description']}",
-                        style: const TextStyle(
-                          color: Colors.white,
+                        style:  TextStyle(
+                          color: Color(themedata.ScaffoldtextColor),
                           fontSize: 15,
                         ),
                       )
@@ -335,15 +338,15 @@ _selectimage(BuildContext context)async{
                             TextSpan(
                               text: "${widget.snap['Identity']}: ",
                               style: TextStyle(
-                                color: Colors.white,
+                                color: Color(themedata.ScaffoldtextColor),
                                 fontSize: 20,
                                 fontWeight: FontWeight.bold
                               ),
                             ),
                             TextSpan(
                               text: "${widget.snap['Members'].length}",
-                              style: const TextStyle(
-                                color: Colors.white,
+                              style:  TextStyle(
+                                color: Color(themedata.ScaffoldtextColor),
                                 fontSize: 15,
                               ),
                             )
@@ -356,16 +359,16 @@ _selectimage(BuildContext context)async{
                         children: [
                           TextSpan(
                             text: "${widget.snap['Post Name']}: ",
-                            style: const TextStyle(
-                              color: Colors.white,
+                            style:  TextStyle(
+                              color: Color(themedata.ScaffoldtextColor),
                               fontSize: 20,
                               fontWeight: FontWeight.bold
                             ),
                           ),
                           TextSpan(
                             text: "${widget.snap['noP']}",
-                            style: const TextStyle(
-                              color: Colors.white,
+                            style:  TextStyle(
+                              color: Color(themedata.ScaffoldtextColor),
                               fontSize: 15,
                             ),
                           )
@@ -418,9 +421,9 @@ _selectimage(BuildContext context)async{
             Showsnackbar("Access Denied, please join group first", context);
           }
         },
-      child: const FaIcon(
+      child:  FaIcon(
         FontAwesomeIcons.featherPointed,
-        color: Colors.white,
+        color: Color(themedata.ScaffoldbuttonIconColor),
         ),
       ),
     );
