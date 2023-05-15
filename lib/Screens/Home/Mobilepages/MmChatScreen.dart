@@ -122,7 +122,7 @@ class _MmchatScreenState extends State<MmchatScreen> {
                   ),
                   style: ElevatedButton.styleFrom(
                       elevation: 0.0, 
-                      backgroundColor: Colors.lightBlueAccent,
+                      backgroundColor: Colors.transparent,
                       shadowColor: Colors.black,
                       side: const BorderSide(
                         color: Colors.white70,
