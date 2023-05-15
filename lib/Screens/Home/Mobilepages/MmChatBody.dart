@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/Messagecard.dart';
@@ -7,7 +9,7 @@ import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 
-//TODO: Implement theme
+//TODO: Implement theme for dialog options
 class mChatbody extends StatefulWidget {
   final snap;
   const mChatbody({Key? key,this.snap}) : super(key: key);
@@ -66,8 +68,9 @@ class _mChatbodyState extends State<mChatbody> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       body:  StreamBuilder(
         stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").doc(widget.snap['Receiver uid']).collection('message').orderBy("Message Time").snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
