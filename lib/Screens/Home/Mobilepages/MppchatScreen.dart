@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MpChatbody.dart';
 import 'package:forum3/Services/Encryption.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
@@ -31,13 +33,14 @@ class _MpchatScreenState extends State<MpchatScreen> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;   
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Colors.black,
-        iconTheme:const IconThemeData(
-          color: Colors.white,
+        backgroundColor: Color(themedata.AppbarbackColor),
+        iconTheme: IconThemeData(
+          color: Color(themedata.AppbariconColor),
         ),
         title: Row(
           children: [
@@ -47,8 +50,8 @@ class _MpchatScreenState extends State<MpchatScreen> {
           const SizedBox(width: 20,),
             Text(
               "${widget.snap['username']}",
-              style: const TextStyle(
-                  color: Colors.white
+              style:  TextStyle(
+                  color: Color(themedata.AppbartextColor)
               ),
             ),
           ],
@@ -89,8 +92,8 @@ class _MpchatScreenState extends State<MpchatScreen> {
                       controller: text,
                       decoration: InputDecoration(
                         hintText: "Chat as ${user1.Username}",
-                        hintStyle: const TextStyle(
-                            color: Colors.white
+                        hintStyle:  TextStyle(
+                            color: Color(themedata.BottomNavTextColor)
                         ),
                         border: InputBorder.none,
                       ),
