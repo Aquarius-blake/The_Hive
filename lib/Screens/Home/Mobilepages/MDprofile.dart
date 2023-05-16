@@ -1,6 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Meditprofile.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
@@ -44,18 +46,20 @@ class _MDprofileState extends State<MDprofile>with
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     getPostlen(user1.UID!);
 
     return Scaffold(
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        iconTheme: const IconThemeData(
-            color: Colors.black
+        backgroundColor: Color(themedata.AppbarbackColor),
+        iconTheme: IconThemeData(
+            color: Color(themedata.AppbariconColor)
         ),
-        title: const Text(
+        title: Text(
           "Profile",
           style: TextStyle(
-              color: Colors.black
+              color: Color(themedata.AppbartextColor)
           ),
         ),
         centerTitle: true,
@@ -81,18 +85,20 @@ class _MDprofileState extends State<MDprofile>with
                           children: [
                             Text(
                               "$postlen",
-                              style: const TextStyle(
+                              style: TextStyle(
                                 fontSize: 24,
                                 fontStyle: FontStyle.italic,
+                                color: Color(themedata.ScaffoldtextColor),
                               ),
                             ),
                             const SizedBox(width: 10,),
-                            const Text(
+                             Text(
                               "Posts",
                               style: TextStyle(
                                   fontSize: 24,
                                   fontStyle: FontStyle.italic,
-                                  fontWeight: FontWeight.bold
+                                  fontWeight: FontWeight.bold,
+                                  color:Color(themedata.ScaffoldtextColor),
                               ),
                             )
                           ],
@@ -102,9 +108,9 @@ class _MDprofileState extends State<MDprofile>with
                           children: [
                             ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  elevation: 6.0,
+                                  elevation: 6.0, 
+                                  backgroundColor: Color(themedata.ScaffoldbuttonColor),
                                   shadowColor: Colors.black,
-                                  primary: Colors.white,
                                   side: const BorderSide(
                                     color: Colors.blue,
                                     width: 2.0,
@@ -124,15 +130,15 @@ class _MDprofileState extends State<MDprofile>with
                                     )
                                 );
                               },
-                              child: const Padding(
-                                padding: EdgeInsets.only(
+                              child:  Padding(
+                                padding: const EdgeInsets.only(
                                   left:18.0,
                                   right: 18.0,
                                 ),
                                 child: Text(
                                   "Edit Profile",
                                   style: TextStyle(
-                                      color: Colors.lightBlueAccent
+                                      color: Color(themedata.ScaffoldbuttonTextColor)
                                   ),
                                 ),
                               ),
@@ -148,9 +154,10 @@ class _MDprofileState extends State<MDprofile>with
                   alignment: Alignment.centerLeft,
                   child: Text(
                     user1.Username!,
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18
+                        fontSize: 18,
+                        color: Color(themedata.ScaffoldtextColor)
                     ),
                   ),
                 ),
