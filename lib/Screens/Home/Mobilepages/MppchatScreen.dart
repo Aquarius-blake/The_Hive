@@ -135,7 +135,6 @@ class _MpchatScreenState extends State<MpchatScreen> {
           )
       ),
     );
-
   }
 }
 
