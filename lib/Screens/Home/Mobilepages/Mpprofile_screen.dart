@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Meditprofile.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mliked_post.dart';
 import 'package:forum3/Screens/Home/Mobilepages/MppchatScreen.dart';
@@ -51,18 +54,18 @@ class _MprofileState extends State<Mprofile>with
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        backgroundColor: Colors.black,
-        iconTheme: const IconThemeData(
-            color: Colors.white
+        backgroundColor: Color(themedata.AppbarbackColor),
+        iconTheme:  IconThemeData(
+            color: Color(themedata.AppbariconColor)
         ),
-        title: const Text(
+        title:  Text(
           "Profile",
           style: TextStyle(
-              color: Colors.white
+              color: Color(themedata.AppbartextColor)
           ),
         ),
         centerTitle: true,
@@ -88,20 +91,20 @@ class _MprofileState extends State<Mprofile>with
                           children: [
                             Text(
                               "$postlen",
-                              style: const TextStyle(
+                              style:  TextStyle(
                                   fontSize: 24,
                                   fontStyle: FontStyle.italic,
-                                  color:Colors.white
+                                  color:Color(themedata.ScaffoldtextColor)
                               ),
                             ),
                             const SizedBox(width: 10,),
-                            const Text(
+                             Text(
                               "Posts",
                               style: TextStyle(
                                   fontSize: 24,
                                   fontStyle: FontStyle.italic,
                                   fontWeight: FontWeight.bold,
-                                  color:Colors.white
+                                  color:Color(themedata.ScaffoldtextColor)
                               ),
                             )
                           ],
@@ -109,9 +112,9 @@ class _MprofileState extends State<Mprofile>with
                        const SizedBox(height: 10,),
                         widget.snap['Admin']==true && user1.Admin==true ?ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                elevation: 6.0,
+                                elevation: 6.0, 
+                                backgroundColor: Color(themedata.ScaffoldbuttonColor),
                                 shadowColor: Colors.black,
-                                primary: Colors.black,
                                 side: const BorderSide(
                                   color: Colors.blue,
                                   width: 2.0,
@@ -128,11 +131,11 @@ class _MprofileState extends State<Mprofile>with
                             child:Text(
                               "Remove Admin",
                             style: TextStyle(
-                                color: Colors.lightBlueAccent
+                                color: Color(themedata.ScaffoldbuttonTextColor)
                             ),
                             )
-                        ):SizedBox(),
-                        SizedBox(height: 5,),
+                        ): const SizedBox(),
+                        const SizedBox(height: 5,),
                         Row(
                           children: [
                             widget.snap['uid']!=user1.UID? ElevatedButton(
@@ -145,21 +148,21 @@ class _MprofileState extends State<Mprofile>with
                                     )
                                 );
                               },
-                              child: const Padding(
-                                padding: EdgeInsets.only(
+                              child:  Padding(
+                                padding: const EdgeInsets.only(
                                     left: 16.0,
                                     right: 16.0),
                                 child: Text(
                                   "Message",
                                   style: TextStyle(
-                                      color: Colors.lightBlueAccent
+                                      color: Color(themedata.ScaffoldbuttonTextColor)
                                   ),
                                 ),
                               ),
                               style: ElevatedButton.styleFrom(
-                                  elevation: 6.0,
+                                  elevation: 6.0, 
+                                  backgroundColor: Color(themedata.ScaffoldbuttonColor),
                                   shadowColor: Colors.black,
-                                  primary: Colors.black,
                                   side: const BorderSide(
                                     color: Colors.blue,
                                     width: 2.0,
@@ -171,9 +174,9 @@ class _MprofileState extends State<Mprofile>with
                               ),
                             ):ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  elevation: 6.0,
+                                  elevation: 6.0, 
+                                  backgroundColor: Color(themedata.ScaffoldbackColor),
                                   shadowColor: Colors.black,
-                                  primary: Colors.black,
                                   side: const BorderSide(
                                     color: Colors.blue,
                                     width: 2.0,
@@ -193,15 +196,15 @@ class _MprofileState extends State<Mprofile>with
                                     )
                                 );
                               },
-                              child: const Padding(
-                                padding: EdgeInsets.only(
+                              child:  Padding(
+                                padding: const EdgeInsets.only(
                                   left:18.0,
                                   right: 18.0,
                                 ),
                                 child: Text(
                                   "Edit Profile",
                                   style: TextStyle(
-                                      color: Colors.lightBlueAccent
+                                      color: Color(themedata.ScaffoldbuttonTextColor)
                                   ),
                                 ),
                               ),
@@ -212,14 +215,15 @@ class _MprofileState extends State<Mprofile>with
                     )
                   ],
                 ),
-                SizedBox(height: 15.0,),
+                const SizedBox(height: 15.0,),
                 Container(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     widget.snap['username'],
                     style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18
+                        fontSize: 18,
+                        color: Color(themedata.ScaffoldtextColor)
                     ),
                   ),
                 ),
@@ -267,9 +271,9 @@ class _MprofileState extends State<Mprofile>with
                         color: Colors.grey
                     ),),
                 ),
-                const Divider(
+                 Divider(
                   height: 40,
-                  color:Colors.white,
+                  color:Color(themedata.DividerColor!),
                 )
               ],
             ),
@@ -282,17 +286,27 @@ class _MprofileState extends State<Mprofile>with
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: TabBar(
-                      labelColor: Colors.lightBlueAccent,
+                      labelColor: Color(themedata.ScaffoldbuttonTextColor),
                         labelPadding: const EdgeInsets.only(
                           left: 80,
                           right: 35
                         ),
                         isScrollable: true,
-                        unselectedLabelColor: Colors.white,
+                        unselectedLabelColor: Color(themedata.ScaffoldtextColor),
                         controller: _tabController,
-                        tabs: [
-                          Tab(text: "Posts",),
-                          Tab(text: "Likes",)
+                        tabs:const [
+                          Tab(
+                            text: "Posts",
+                            icon: FaIcon(
+                              FontAwesomeIcons.featherPointed
+                              )
+                            ),
+                          Tab(
+                            text: "Likes",
+                            icon: Icon(
+                              Icons.favorite
+                              ),
+                            )
                         ]
                     ),
                   ),
