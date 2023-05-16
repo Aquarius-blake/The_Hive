@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:provider/provider.dart';
-
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 
@@ -19,16 +20,18 @@ class _MprofileState extends State<Mprofilel> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Color(themedata.AppbarbackColor),
         iconTheme: IconThemeData(
-            color: Colors.black
+            color: Color(themedata.AppbariconColor)
         ),
         title: Text(
           "Profile",
           style: TextStyle(
-              color: Colors.black
+              color: Color(themedata.AppbartextColor)
           ),
         ),
         centerTitle: true,
