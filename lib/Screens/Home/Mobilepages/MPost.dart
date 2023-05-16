@@ -12,7 +12,7 @@ import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
 import '../../../Provider/user_provider.dart';
 
-//TODO:Implement theme
+
 class Mpost extends StatefulWidget {
   Mpost({Key? key}) : super(key: key);
 
@@ -64,7 +64,7 @@ class _MpostState extends State<Mpost> {
             title: Text("Create Post"),
             children: [
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 child: Text("Take a Photo"),
                 onPressed: ()async{
                   Navigator.of(context).pop();
