@@ -191,9 +191,9 @@ class _HomeState extends State<Home> {
                                     onPressed:() {
                                       pic();
                                     },
-                                    icon:const Icon(
+                                    icon: Icon(
                                       Icons.add_a_photo,
-                                      color: Colors.white,
+                                      color: Color(themedata.DrawerIconColor!),
                                     )
                                 ),
                               )
