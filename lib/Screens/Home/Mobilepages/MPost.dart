@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Pop_up.dart';
@@ -136,8 +138,9 @@ class _MpostState extends State<Mpost> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
@@ -145,7 +148,7 @@ class _MpostState extends State<Mpost> {
                 _isloading? const LinearProgressIndicator():Container(),
                const SizedBox(height: 10,),
                 Card(
-                  color:Colors.black,
+                  color:Color(themedata.CardBackgroundColor),
                   child: Padding(
                     padding: const EdgeInsets.all(15.0),
                     child: Column(
@@ -156,62 +159,62 @@ class _MpostState extends State<Mpost> {
                             SizedBox(width: 15,),
                             Text(
                               user1.Username!,
-                              style:const TextStyle(
-                                color:Colors.white
+                              style: TextStyle(
+                                color:Color(themedata.CardTextColor)
                               ),
                               ),
                           ],
                         ),
-                        SizedBox(height: 15,),
+                       const SizedBox(height: 15,),
                         TextField(
                           controller: _textEditingController,
-                          decoration: const InputDecoration(
+                          decoration:  InputDecoration(
                             hintText: "Title",
                             label: Text(
                               "Title",
                               style: TextStyle(
-                                color: Colors.white
+                                color: Color(themedata.CardTextColor)
                               ),
                               ),
                           ),
-                          style: const TextStyle(
-                            color:Colors.white
+                          style: TextStyle(
+                            color:Color(themedata.CardTextColor)
                           ),
                         ),
                         SingleChildScrollView(
                           child: TextField(
                             controller: _textEditingController2,
                             maxLines: 8,
-                            decoration: const InputDecoration(
+                            decoration:  InputDecoration(
                               hintText: "Write Something.....",
-                        hintStyle: TextStyle(
-                          color:Colors.white
+                        hintStyle:const TextStyle(
+                          color:Colors.grey
                         ),
                               border: InputBorder.none,
                               label:Text("Details",
                                 style: TextStyle(
-                                  color: Colors.white
+                                  color: Color(themedata.CardTextColor)
                                 ),
                                 ),
                                 floatingLabelAlignment: FloatingLabelAlignment.start,
                                 floatingLabelBehavior: FloatingLabelBehavior.always,
                             ),
                             style: TextStyle(
-                              color:Colors.white,
+                              color:Color(themedata.CardTextColor),
                             ),
                           ),
                         ),
                         Post(),
-                       const Divider(
-                          color:Colors.white
+                        Divider(
+                          color:Color(themedata.DividerColor!)
                         ),
                         Row(
                           children: [
                             IconButton(
                               onPressed: ()=>_selectimage(context),
-                              icon: const Icon(
+                              icon:  Icon(
                                 Icons.add_a_photo,
-                                color:Colors.white
+                                color:Color(themedata.CardIconColor)
                               ),
                             ),
                             IconButton(
@@ -220,9 +223,9 @@ class _MpostState extends State<Mpost> {
                                   _image=null;
                                 });
                               },
-                              icon: const Icon(
+                              icon: Icon(
                                 FontAwesomeIcons.xmark,
-                                color:Colors.white
+                                color:Color(themedata.CardIconColor)
                               ),
                             )
                           ],
@@ -241,15 +244,6 @@ class _MpostState extends State<Mpost> {
           FontAwesomeIcons.featherPointed,
         ),
       ),
-
-
-
-
-
-
-
-
-
     );
   }
 }

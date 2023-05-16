@@ -1,5 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Forum/Forum_detail.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
@@ -7,7 +9,7 @@ import '../../../Provider/user_provider.dart';
 import '../../../shared/Widgets/notification_card.dart';
 
 
-//TODO:Implement themme
+
 class Notifications extends StatefulWidget {
   final uid;
   const Notifications({Key? key,this.uid}) : super(key: key);
@@ -20,20 +22,21 @@ class _NotificationsState extends State<Notifications> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return user1.Guest==true?  Scaffold(
-      backgroundColor:Colors.black ,
+      backgroundColor:Color(themedata.ScaffoldbackColor) ,
       body: SafeArea(
         child: Center(
             child:Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 RichText(
-                    text: const TextSpan(
+                    text:  TextSpan(
                       children: [
                         TextSpan(
                           text: "Access Denied",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Color(themedata.ScaffoldtextColor),
                               fontSize: 32,
                               fontWeight: FontWeight.bold
                           ),
@@ -42,10 +45,10 @@ class _NotificationsState extends State<Notifications> {
                     )
                 ),
                 RichText(
-                    text: const TextSpan(
+                    text:  TextSpan(
                       text: "Please Sign in/Sign up to continue",
                       style: TextStyle(
-                          color: Colors.white
+                          color: Color(themedata.ScaffoldtextColor)
                       ),
                     )
                 )
@@ -54,7 +57,7 @@ class _NotificationsState extends State<Notifications> {
         ),
       ),
     ):Scaffold(
-      backgroundColor:Colors.black ,
+      backgroundColor:Color(themedata.ScaffoldbackColor) ,
       body: StreamBuilder(
         stream: FirebaseFirestore.instance
             .collection('Notification')
