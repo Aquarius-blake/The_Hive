@@ -97,8 +97,8 @@ class _MpchatScreenState extends State<MpchatScreen> {
                         ),
                         border: InputBorder.none,
                       ),
-                      style: const TextStyle(
-                          color: Colors.white
+                      style: TextStyle(
+                          color: Color(themedata.BottomNavTextColor)
                       ),
                     ),
                   ),
