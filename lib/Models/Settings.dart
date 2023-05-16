@@ -1,3 +1,4 @@
+//For Later Updates
 //TODO: Create a model to store the settings of the app per each user
 //TODO: Create a settings provider for getting the settings of the app per user
 //TODO: Create settings page for the user to change the settings
@@ -6,6 +7,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
+//Custom User Theme Data Class
 class UserThemeData{
   late final String? UID;
   late final int AppbarbackColor;
@@ -52,8 +54,8 @@ class UserThemeData{
     this.ScaffoldtextColor=0xFFFFFFFF,
     this.ScaffoldiconColor=0xFFFFFFFF,
     this.ScaffoldbuttonColor=0xFF40C4FF,
-    this.ScaffoldbuttonTextColor=0xFFFFFFFF,
-    this.ScaffoldbuttonIconColor=0xFFFFFFFF,
+    this.ScaffoldbuttonTextColor=0xFF2196F3,
+    this.ScaffoldbuttonIconColor=0xFF2196F3,
     this.ScaffoldbuttonborderColor=0xFFFFFFFF,
     this.CardBackgroundColor=0xFF000000,
     this.CardTextColor=0xFFFFFFFF,
