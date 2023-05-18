@@ -50,7 +50,6 @@ dependencies:
   get: ^4.6.5
   firebase_dynamic_links: ^2.0.6
   encrypt: ^5.0.1
-  package_info_plus: ^4.0.0
 
 dev_dependencies:
   flutter_test:
