@@ -399,7 +399,20 @@ class _HomeState extends State<Home> {
                 const  SizedBox(
                   height: 10,
                 ),
-
+                Center(
+                  child: Text(
+                    "v1.0",
+                    style: TextStyle(
+                      fontSize: 12.0,
+                      fontWeight: FontWeight.bold,
+                      fontStyle: FontStyle.italic,
+                      color:Color(themedata.DrawerTextColor!),
+                    ),
+                  ),
+                ),
+                const  SizedBox(
+                  height: 10,
+                ),
               ],
             ),
           ),
