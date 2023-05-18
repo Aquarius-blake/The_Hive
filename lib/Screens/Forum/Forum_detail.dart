@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/shared/Widgets/Comdetail.dart';
 import 'package:forum3/shared/Widgets/Detailpost.dart';
 import 'package:provider/provider.dart';
@@ -22,18 +24,18 @@ class _ForumdetailState extends State<Forumdetail> {
   Widget build(BuildContext context) {
 
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.white,
+          backgroundColor: Color(themedata.ScaffoldbackColor),
           centerTitle: true,
-          iconTheme: const IconThemeData(
-              color: Colors.black
+          iconTheme: IconThemeData(
+              color: Color(themedata.AppbariconColor)
           ),
-          title:const Text(
+          title: Text(
             "Details",
             style: TextStyle(
-                color: Colors.black
+                color: Color(themedata.AppbartextColor)
             ),
           )
       ),
