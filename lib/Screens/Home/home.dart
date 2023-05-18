@@ -1,4 +1,6 @@
 
+import 'dart:ffi';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
@@ -24,6 +26,7 @@ import 'package:forum3/shared/Networkconnection.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import '../../Provider/user_provider.dart';
 import '../../Services/auth.dart';
@@ -44,6 +47,8 @@ class _HomeState extends State<Home> {
   final Upload _upload=Upload();
   final User1? u2=User1();
   dynamic image;
+  late String version1;
+ 
   
   void pic()async{
     image= await _upload.uploadpic(ImageSource.gallery);
@@ -132,12 +137,24 @@ class _HomeState extends State<Home> {
     });
   }
 
+  
+
   @override
   Widget build(BuildContext context) {
      try{
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+    
+   void ver()async{
+    
+      PackageInfo packageInfo = await PackageInfo.fromPlatform();
 
+      String appName = packageInfo.appName;
+      String packageName = packageInfo.packageName;
+      String version = packageInfo.version;
+      String buildNumber = packageInfo.buildNumber;
+      version1=version;
+   };
     return Scaffold(
       backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
@@ -401,7 +418,7 @@ class _HomeState extends State<Home> {
                 ),
                 Center(
                   child: Text(
-                    "v1.0",
+                    "v"+version1,
                     style: TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.bold,
