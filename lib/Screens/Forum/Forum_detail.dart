@@ -47,7 +47,9 @@ class _ForumdetailState extends State<Forumdetail> {
                 width: MediaQuery.of(context).size.width,
                 child: detailp(snap:widget.snap,)
             ),
-            Divider(),
+            Divider(
+              color: Color(themedata.DividerColor!),
+            ),
             SizedBox(
               height: MediaQuery.of(context).size.height*0.4,
               width: MediaQuery.of(context).size.width,
@@ -60,6 +62,7 @@ class _ForumdetailState extends State<Forumdetail> {
       ),
       bottomNavigationBar: SafeArea(
           child: Container(
+            color: Color(themedata.BottomNavBackColor),
             height: kToolbarHeight,
             margin: EdgeInsets.only(
                 bottom: MediaQuery.of(context).viewInsets.bottom
@@ -87,6 +90,9 @@ class _ForumdetailState extends State<Forumdetail> {
                       decoration: InputDecoration(
                         hintText: "Comment as ${user1.Username}",
                         border: InputBorder.none,
+                        hintStyle: TextStyle(
+                          color: Color(themedata.BottomNavTextColor)
+                        )
                       ),
                     ),
                   ),
