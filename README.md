@@ -17,8 +17,8 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## ❗❗❗ IMPORTANT NOTICE
 
-If you wish to use this project (as a template) for private/personal purposes, kindly link your own Firebase tools
+If you wish to use this project (as a template) for private/personal purposes, kindly link your own Firebase tools.
 
 ## 🎆 Releases
 
-Initial release will be added after standard themes are implemented
+Initial release will be added after standard themes are implemented.
