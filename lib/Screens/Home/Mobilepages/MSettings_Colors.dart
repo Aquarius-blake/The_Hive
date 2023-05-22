@@ -24,7 +24,7 @@ class _CustomThemePageState extends State<CustomThemePage> {
         backgroundColor: Color(themedata.AppbarbackColor),
         centerTitle: true,
         title: Text(
-          "Customize the theme",
+          "Customize theme",
           style: TextStyle(
             color: Color(themedata.AppbartextColor)
           ),
