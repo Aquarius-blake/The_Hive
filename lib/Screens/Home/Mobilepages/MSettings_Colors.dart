@@ -40,6 +40,7 @@ class _CustomThemePageState extends State<CustomThemePage> {
                 )
               )
           ],
+          //body
       ),
     );
   }
