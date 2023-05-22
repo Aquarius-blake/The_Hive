@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Settings.dart';
+import 'package:provider/provider.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 
 class CustomThemePage extends StatefulWidget {
   const CustomThemePage({ Key? key }) : super(key: key);
@@ -14,6 +16,7 @@ class _CustomThemePageState extends State<CustomThemePage> {
 
   @override
   Widget build(BuildContext context) {
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
