@@ -18,22 +18,25 @@ class _CustomThemePageState extends State<CustomThemePage> {
   Widget build(BuildContext context) {
     late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         elevation:0.00,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(themedata.AppbarbackColor),
         centerTitle: true,
         title: Text(
           "Customize the theme",
           style: TextStyle(
-            color: Colors.white
+            color: Color(themedata.AppbartextColor)
           ),
           ),
           actions: [
             TextButton(
               onPressed: (){},
               child: Text(
-                "Save changes"
+                "Save changes",
+                style: TextStyle(
+                  color: Color(themedata.AppbartextColor)
+                )
                 )
               )
           ],
