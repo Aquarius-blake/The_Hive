@@ -60,15 +60,15 @@ class _CommentcardState extends State<Commentcard> {
                               children: [
                                 TextSpan(
                                   text: widget.snap['author'],
-                                  style: const TextStyle(
-                                    color: Colors.white,
+                                  style:  TextStyle(
+                                    color: Color(themedata.CardTextColor),
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 TextSpan(
                                   text: "   ${widget.snap['detail']}",
-                                  style: const TextStyle(
-                                    color: Colors.white,
+                                  style:  TextStyle(
+                                    color: Color(themedata.CardTextColor),
                                     fontStyle: FontStyle.italic,
                                   ),
                                 ),
@@ -119,10 +119,10 @@ class _CommentcardState extends State<Commentcard> {
                           );
                         }
                       },
-                      child: const Text(
+                      child:  Text(
                         "Edit",
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
+                          color: Color(themedata.CardTextButtonColor!),
                         ),
                       )
                   ),
@@ -131,10 +131,10 @@ class _CommentcardState extends State<Commentcard> {
                         String ress= await FirestoreMethods().Deletecomment(widget.postid, widget.snap['Comment Uid']);
                         Showsnackbar(ress, context);
                       },
-                      child: const Text(
+                      child:  Text(
                         "Delete",
                         style: TextStyle(
-                          color: Colors.lightBlueAccent,
+                          color: Color(themedata.CardTextButtonColor!),
                         ),
                       )
                   ),
