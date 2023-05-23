@@ -60,6 +60,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
         );
       },
       child: Card(
+        shadowColor: Colors.transparent,
         color: Colors.transparent,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10)
