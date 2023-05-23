@@ -161,10 +161,10 @@ class _MprofileState extends State<Mprofile>with
                               ),
                               style: ElevatedButton.styleFrom(
                                   elevation: 6.0, 
-                                  backgroundColor: Color(themedata.ScaffoldbuttonColor),
+                                  backgroundColor: Colors.lightBlueAccent,
                                   shadowColor: Colors.black,
                                   side: const BorderSide(
-                                    color: Colors.blue,
+                                    color: Colors.lightBlueAccent,
                                     width: 2.0,
                                   ),
 
@@ -272,7 +272,7 @@ class _MprofileState extends State<Mprofile>with
                     ),),
                 ),
                  Divider(
-                  height: 40,
+                  height: 35,
                   color:Color(themedata.DividerColor!),
                 )
               ],

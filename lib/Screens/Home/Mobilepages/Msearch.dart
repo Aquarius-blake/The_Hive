@@ -90,13 +90,14 @@ class _MsearchState extends State<Msearch> {
         );
       },
       child: Card(
-        color:Colors.black,
+        color:Colors.transparent,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10)
         ),
         elevation: 2.0,
+        shadowColor: Colors.transparent,
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding:const EdgeInsets.all(10),
           child: Row(
             children: [
               CircleAvatar(
@@ -108,7 +109,7 @@ class _MsearchState extends State<Msearch> {
               Text(
                 data['username'],
                 style:const TextStyle(
-                  color:Colors.white,
+                  color:Colors.lightBlueAccent,
                 ),
               )
             ],
