@@ -35,7 +35,8 @@ class _CustomThemePageState extends State<CustomThemePage> {
               child: Text(
                 "Save changes",
                 style: TextStyle(
-                  color: Color(themedata.AppbartextColor)
+                  color: Color(themedata.AppbartextbuttonColor!),
+                  fontSize: 12, 
                 )
                 )
               )
