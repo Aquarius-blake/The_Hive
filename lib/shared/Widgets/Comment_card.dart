@@ -28,7 +28,7 @@ class _CommentcardState extends State<Commentcard> {
 
     return Container(
       padding: const EdgeInsets.symmetric(
-        vertical: 0,
+        vertical: 3,
         horizontal: 16,
       ),
       child: Card(
