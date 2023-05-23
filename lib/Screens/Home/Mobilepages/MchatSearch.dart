@@ -60,7 +60,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
         );
       },
       child: Card(
-        color: Colors.black,
+        color: Colors.transparent,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10)
         ),
@@ -79,7 +79,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
               Text(
                 data['username'],
                 style: const TextStyle(
-                  color: Colors.white,
+                  color: Colors.lightBlueAccent,
                   fontSize: 20,
                 ),
                 ),
@@ -157,7 +157,7 @@ class _MchatusersearchState extends State<Mchatusersearch> {
             ),
             style: ElevatedButton.styleFrom(
                 elevation: 0.0,
-                backgroundColor: Colors.black,
+                backgroundColor: Colors.transparent,
                 shadowColor: Colors.black,
                 side: const BorderSide(
                   color: Colors.lightBlueAccent,
