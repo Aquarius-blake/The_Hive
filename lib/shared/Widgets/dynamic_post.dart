@@ -1,6 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/shared/Widgets/post_card.dart';
+import 'package:provider/provider.dart';
 
 
 class dynamicp extends StatefulWidget {
@@ -14,6 +17,7 @@ class dynamicp extends StatefulWidget {
 class _dynamicpState extends State<dynamicp> {
   @override
   Widget build(BuildContext context) {
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
       body:  StreamBuilder(
         stream: FirebaseFirestore.instance.collection('Posts').where('Post Uid', isEqualTo: widget.postid).snapshots(),
