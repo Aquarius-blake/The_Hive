@@ -139,7 +139,7 @@ class _CommentcardState extends State<Commentcard> {
                       )
                   ),
                 ],
-              ):SizedBox(),
+              ):const SizedBox(),
             ],
           ),
         ),
