@@ -1,5 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Provider/Settings_provider.dart';
+import 'package:provider/provider.dart';
 
 import 'Comment_card.dart';
 
@@ -14,7 +17,9 @@ class dynamicCom extends StatefulWidget {
 class _dynamicComState extends State<dynamicCom> {
   @override
   Widget build(BuildContext context) {
+    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
+      backgroundColor: Color(themedata.ScaffoldbackColor),
       body: StreamBuilder(
           stream: FirebaseFirestore.instance
               .collection("Posts")
