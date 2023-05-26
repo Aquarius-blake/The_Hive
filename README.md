@@ -9,7 +9,7 @@ Planning to add user customizable themes alongside  the standard light and dark 
 
 ## 📱 ScreenShots
 
-(NB: Will be added later)
+(NB: Will be added after initial release)
 
 ## 🤗 Contributing
 
