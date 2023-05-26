@@ -18,7 +18,7 @@ import '../../Models/Users1.dart';
 import '../../Provider/user_provider.dart';
 import '../../Screens/Platforms/WebSceens/Wcomments_screen.dart';
 
-//TODO: Create theme fields for dialog options
+
 class dynamicCard extends StatefulWidget {
   final snap;
   const dynamicCard({ Key? key,this.snap}) : super(key: key);
