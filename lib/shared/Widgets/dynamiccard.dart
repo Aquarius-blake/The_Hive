@@ -108,7 +108,7 @@ class _dynamicCardState extends State<dynamicCard> {
                 },
               ),
               SimpleDialogOption(
-                padding: EdgeInsets.all(15.0),
+                padding: const EdgeInsets.all(15.0),
                 child: const Text(
                     "Delete",
                   style: TextStyle(
