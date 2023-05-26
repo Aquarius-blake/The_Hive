@@ -4,6 +4,7 @@ import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Screens/Authenticate/reset.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/webprofile.dart';
+import 'package:get/get.dart';
 import 'package:provider/provider.dart';
 import 'Models/Users1.dart';
 import 'Screens/Authenticate/Register.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
           create: (_)=> ThemeProvider(),
           )
       ],
-      child: MaterialApp(
+      child: GetMaterialApp(
         home: Wrapper(),
         routes: {
           '/register':(context)=>Register(),
