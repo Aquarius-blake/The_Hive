@@ -9,8 +9,6 @@ import '../../Provider/user_provider.dart';
 import '../../Screens/Home/Mobilepages/Meditcomment.dart';
 import '../Pop_up.dart';
 
-//TODO: Make theme constant 
-//TODO: Change class name
 
 class dycomcard extends StatefulWidget {
   final snap;
