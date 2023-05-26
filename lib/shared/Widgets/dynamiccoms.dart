@@ -1,7 +1,5 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:forum3/Models/Settings.dart';
-import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/editcomment.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:intl/intl.dart';
@@ -14,20 +12,20 @@ import '../Pop_up.dart';
 //TODO: Make theme constant 
 //TODO: Change class name
 
-class Commentcard extends StatefulWidget {
+class dycomcard extends StatefulWidget {
   final snap;
   final postid;
-  const Commentcard({Key? key,this.snap,this.postid}) : super(key: key);
+  const dycomcard({Key? key,this.snap,this.postid}) : super(key: key);
 
   @override
-  State<Commentcard> createState() => _CommentcardState();
+  State<dycomcard> createState() => _dycomcardState();
 }
 
-class _CommentcardState extends State<Commentcard> {
+class _dycomcardState extends State<dycomcard> {
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
-    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+    
 
     return Container(
       padding: const EdgeInsets.symmetric(
@@ -35,7 +33,7 @@ class _CommentcardState extends State<Commentcard> {
         horizontal: 16,
       ),
       child: Card(
-        color:Color(themedata.CardBackgroundColor),
+        color:Colors.white,
         child: Container(
           padding: const EdgeInsets.all(5.0),
           child: Column(
@@ -63,15 +61,15 @@ class _CommentcardState extends State<Commentcard> {
                               children: [
                                 TextSpan(
                                   text: widget.snap['author'],
-                                  style:  TextStyle(
-                                    color: Color(themedata.CardTextColor),
+                                  style:  const TextStyle(
+                                    color: Colors.black,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 TextSpan(
                                   text: "   ${widget.snap['detail']}",
-                                  style:  TextStyle(
-                                    color: Color(themedata.CardTextColor),
+                                  style: const TextStyle(
+                                    color: Colors.black,
                                     fontStyle: FontStyle.italic,
                                   ),
                                 ),
@@ -122,10 +120,10 @@ class _CommentcardState extends State<Commentcard> {
                           );
                         }
                       },
-                      child:  Text(
+                      child: const Text(
                         "Edit",
                         style: TextStyle(
-                          color: Color(themedata.CardTextButtonColor!),
+                          color: Colors.lightBlueAccent,
                         ),
                       )
                   ),
@@ -134,10 +132,10 @@ class _CommentcardState extends State<Commentcard> {
                         String ress= await FirestoreMethods().Deletecomment(widget.postid, widget.snap['Comment Uid']);
                         Showsnackbar(ress, context);
                       },
-                      child:  Text(
+                      child: const Text(
                         "Delete",
                         style: TextStyle(
-                          color: Color(themedata.CardTextButtonColor!),
+                          color: Colors.lightBlueAccent,
                         ),
                       )
                   ),
