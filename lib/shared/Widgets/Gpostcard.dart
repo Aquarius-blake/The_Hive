@@ -418,7 +418,7 @@ class _GPostCardState extends State<GPostCard> {
                           child: SizedBox()
                       ),
                       IconButton(
-                          onPressed: (){
+                          onPressed: null/*(){
                                   try{
                 buildDynamicLinks(widget.snap['title'], widget.snap['Profile Pic'], widget.snap['Post Uid']);
                 }catch(e){
@@ -429,11 +429,11 @@ class _GPostCardState extends State<GPostCard> {
                   Showsnackbar(e.toString(), context);
                   }
                 }
-                          },
+                          }*/,
                           icon:  Icon(
                             Icons.share,
                             color: Color(themedata.CardIconColor),
-                          )
+                          ),
                       ),
                     ],
                   ),
