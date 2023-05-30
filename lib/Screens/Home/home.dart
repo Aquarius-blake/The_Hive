@@ -61,7 +61,7 @@ class _HomeState extends State<Home> {
         }
       },
       onError: (OnLinkErrorException e)async{
-print(e.toString());
+        print(e.toString());
       }
     );
   }
@@ -101,6 +101,7 @@ print(e.toString());
     //  initial();
     pageController=PageController();
     super.initState();
+    initiateDynamiclink();
   }
   @override
   void dispose() {

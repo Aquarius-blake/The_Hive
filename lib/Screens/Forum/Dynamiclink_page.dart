@@ -28,7 +28,7 @@ appBar: AppBar(
     color: Colors.black
   ),
   title: const Text(
-      "Forum Details",
+      "Post Details",
   style: TextStyle(
     color: Colors.black
   ),
