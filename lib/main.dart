@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
           create: (_)=> ThemeProvider(),
           )
       ],
-      child: MaterialApp(
+      child: GetMaterialApp(
         home: Wrapper(),
         routes: {
           '/register':(context)=>Register(),
