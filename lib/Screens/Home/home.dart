@@ -72,7 +72,7 @@ class _HomeState extends State<Home> {
     Get.to(()=>dynamicHandler(
       postid: seperatedlink[1],
     ));
-    print("The Token that i'm interesed in is ${seperatedlink[1]}");
+    print ("The Token that i'm interesed in is ${seperatedlink[1]}");
 }
   
   void pic()async{
