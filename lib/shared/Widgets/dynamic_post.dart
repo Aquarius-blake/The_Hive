@@ -18,9 +18,9 @@ class dynamicp extends StatefulWidget {
 class _dynamicpState extends State<dynamicp> {
   @override
   Widget build(BuildContext context) {
-    late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+    
     return Scaffold(
-      backgroundColor: Color(themedata.ScaffoldbackColor),
+      backgroundColor: Colors.white,
       body:  StreamBuilder(
         stream: FirebaseFirestore.instance.collection('Posts').where('Post Uid', isEqualTo: widget.postid).snapshots(),
         builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
@@ -35,6 +35,7 @@ class _dynamicpState extends State<dynamicp> {
           );
         },
       ),
+      
     );
   }
 }

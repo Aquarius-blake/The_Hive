@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
+import 'package:forum3/shared/Widgets/dynamiccoms.dart';
 import 'package:provider/provider.dart';
 
 import 'Comment_card.dart';
@@ -19,7 +20,7 @@ class _dynamicComState extends State<dynamicCom> {
   Widget build(BuildContext context) {
     late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
-      backgroundColor: Color(themedata.ScaffoldbackColor),
+      backgroundColor: Colors.white,
       body: StreamBuilder(
           stream: FirebaseFirestore.instance
               .collection("Posts")
@@ -36,7 +37,7 @@ class _dynamicComState extends State<dynamicCom> {
             return ListView.builder(
                 itemCount: snapshots.data!.docs.length,
                 itemBuilder: (context, index) => Container(
-                  child: Commentcard(
+                  child: dycomcard(
                     snap: snapshots.data!.docs[index].data(),
                     postid: widget.postid,
                   ),

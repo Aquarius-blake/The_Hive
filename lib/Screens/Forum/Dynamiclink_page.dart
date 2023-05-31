@@ -20,6 +20,7 @@ class _dynamicHandlerState extends State<dynamicHandler> {
   Widget build(BuildContext context) {
     
     return Scaffold(
+      backgroundColor: Colors.white,
 appBar: AppBar(
   backgroundColor: Colors.white,
   elevation: 2.0,
@@ -44,9 +45,9 @@ appBar: AppBar(
                 postid: widget.postid,
               ),
             ),
-            Divider(),
+            const Divider(height: 2,),
             SizedBox(
-              height: MediaQuery.of(context).size.height*0.4,
+              height: double.maxFinite,
               width: MediaQuery.of(context).size.width,
               child: dynamicCom(
                 postid: widget.postid,

@@ -246,7 +246,7 @@ class _dynamicCardState extends State<dynamicCard> {
         top: 5,
         left: 10,
         right: 10,
-        bottom: 5,
+        bottom: 0,
       ),
       child: Card(
         color: Colors.white,
