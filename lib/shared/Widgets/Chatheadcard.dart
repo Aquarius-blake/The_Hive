@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Encryption.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/error_handling.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -25,7 +26,14 @@ class _CHcardState extends State<CHcard> {
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
-    plaintext=Encryption.decrypt(widget.snap['Last Message']);
+
+    try {
+  plaintext=Encryption.decrypt(widget.snap['Last Message']);
+}  catch (e) {
+  print(e.toString);
+  plaintext="This message was deleted";
+}
+
     double length;
     if(plaintext.length>25){
       length=plaintext.length/2;
