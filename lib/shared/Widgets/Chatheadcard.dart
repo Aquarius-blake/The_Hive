@@ -26,6 +26,12 @@ class _CHcardState extends State<CHcard> {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
     late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     plaintext=Encryption.decrypt(widget.snap['Last Message']);
+    double length;
+    if(plaintext.length>25){
+      length=plaintext.length/2;
+    }else{
+      length=plaintext.length+0.0;
+    }
 
     try{
     final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
@@ -68,7 +74,7 @@ class _CHcardState extends State<CHcard> {
                     ),
                     RichText(
                         text: TextSpan(
-                            text: plaintext.substring(0,plaintext.length/2),
+                            text: plaintext.substring(0,length.toInt()),
                           style: const TextStyle(
                             color: Colors.blueGrey,
                             fontStyle: FontStyle.italic,
