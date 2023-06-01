@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/home.dart';
@@ -39,7 +40,7 @@ class _LayoutState extends State<Layout> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
         builder: (context, constraints) {
-          if(constraints.maxWidth >websreensize){
+          if(kIsWeb){
             return Webview();
           }else{
             return Home();

@@ -179,6 +179,7 @@ class _HomeState extends State<Home> {
             color: Color(themedata.AppbariconColor)
         ),
         backgroundColor: Color(themedata.AppbarbackColor),
+        shadowColor: Color(themedata.AppbarShadowColor),
         elevation: 2.0,
         title: Container(
           padding: const EdgeInsets.only(

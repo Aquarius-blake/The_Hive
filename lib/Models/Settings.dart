@@ -41,7 +41,7 @@ class UserThemeData{
   UserThemeData({
    this.UID,
     this.AppbarbackColor=0xFF000000,
-    this.AppbarShadowColor=0xFF000000,
+    this.AppbarShadowColor=0xFFFFFFFF,
     this.AppbariconColor=0xFFFFFFFF,
     this.AppbartextColor=0xFFFFFFFF,
     this.AppbartextbuttonColor=0xFF2196F3,

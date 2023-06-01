@@ -68,7 +68,7 @@ class _CHcardState extends State<CHcard> {
                     ),
                     RichText(
                         text: TextSpan(
-                            text: plaintext,
+                            text: plaintext.substring(0,plaintext.length/2),
                           style: const TextStyle(
                             color: Colors.blueGrey,
                             fontStyle: FontStyle.italic,
