@@ -113,7 +113,7 @@ class _MprofileState extends State<Mprofile>with
                         widget.snap['Admin']==true && user1.Admin==true ?ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 elevation: 6.0, 
-                                backgroundColor: Color(themedata.ScaffoldbuttonColor),
+                                backgroundColor: Colors.transparent,
                                 shadowColor: Colors.black,
                                 side: const BorderSide(
                                   color: Colors.blue,
@@ -161,7 +161,7 @@ class _MprofileState extends State<Mprofile>with
                               ),
                               style: ElevatedButton.styleFrom(
                                   elevation: 6.0, 
-                                  backgroundColor: Colors.lightBlueAccent,
+                                  backgroundColor: Colors.transparent,
                                   shadowColor: Colors.black,
                                   side: const BorderSide(
                                     color: Colors.lightBlueAccent,
@@ -175,7 +175,7 @@ class _MprofileState extends State<Mprofile>with
                             ):ElevatedButton(
                               style: ElevatedButton.styleFrom(
                                   elevation: 6.0, 
-                                  backgroundColor: Color(themedata.ScaffoldbackColor),
+                                  backgroundColor: Colors.transparent,
                                   shadowColor: Colors.black,
                                   side: const BorderSide(
                                     color: Colors.blue,
