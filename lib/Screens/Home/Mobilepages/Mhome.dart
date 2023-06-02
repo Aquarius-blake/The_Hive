@@ -33,7 +33,7 @@ late String sortby="Post Time";
              SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
                 child: const Text(
-                    "Recent Post",
+                    "Recent Buzz",
                   style: TextStyle(
                     fontStyle: FontStyle.italic,
                   ),
@@ -48,7 +48,7 @@ late String sortby="Post Time";
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
                 child: const Text(
-                    "Most Liked",
+                    "Trending Buzz",
                   style: TextStyle(
                       fontStyle: FontStyle.italic,
                   ),
