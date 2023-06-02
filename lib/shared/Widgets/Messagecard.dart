@@ -56,6 +56,7 @@ class _chatcardState extends State<chatcard> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   RichText(
+                    softWrap: true,
                       text: TextSpan(
                         text: plaintext,
                         style: const TextStyle(
@@ -99,6 +100,7 @@ class _chatcardState extends State<chatcard> {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   RichText(
+                    softWrap: true,
                       text: TextSpan(
                         text: plaintext,
                         style: const TextStyle(
