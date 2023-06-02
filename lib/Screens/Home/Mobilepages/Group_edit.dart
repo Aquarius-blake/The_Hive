@@ -44,7 +44,7 @@ _selectimage2(BuildContext context)async{
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: const Text("Set Group Profile Picture"),
+            title: const Text("Set Colony Profile Picture"),
             children: [
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
@@ -86,7 +86,7 @@ _deleteconfirm(BuildContext context)async{
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: const Text("Are you sure you want to delete this group?"),
+            title: const Text("Are you sure you want to delete this Colony?"),
             children: [
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
@@ -121,7 +121,7 @@ _selectimage(BuildContext context)async{
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: const Text("Set Group Header Picture"),
+            title: const Text("Set Colony Header Picture"),
             children: [
               SimpleDialogOption(
                 padding: const EdgeInsets.all(15.0),
@@ -171,7 +171,7 @@ _selectimage(BuildContext context)async{
           color: Color(themedata.AppbariconColor),
         ),
         title:  Text(
-          "Edit Group",
+          "Edit Colony",
           style: TextStyle(
             color:Color(themedata.AppbartextColor),
           ),
@@ -185,7 +185,7 @@ _selectimage(BuildContext context)async{
                 }
               },
               child:  Text(
-                "Delete Group",
+                "Delete Colony",
                 style: TextStyle(
                   color: Color(themedata.AppbartextbuttonColor!),
                 ),
@@ -260,12 +260,12 @@ _selectimage(BuildContext context)async{
                     color: Color(themedata.ScaffoldtextColor),
                   ),
                   decoration:  InputDecoration(
-                    hintText: "Enter Group Name here",
+                    hintText: "Enter Colony Name here",
                     hintStyle: const TextStyle(
                       color: Colors.grey,
                     ),
                     label: Text(
-                      "Group Name",
+                      "Colony Name",
                       style: TextStyle(
                         color: Color(themedata.ScaffoldtextColor),
                       ),
@@ -292,12 +292,12 @@ _selectimage(BuildContext context)async{
                     color: Color(themedata.ScaffoldtextColor),
                   ),
                   decoration:  InputDecoration(
-                    hintText: "Enter Group description here",
+                    hintText: "Enter Colony description here",
                     hintStyle:  TextStyle(
                       color: Colors.grey,
                     ),
                     label: Text(
-                      "Group Description",
+                      "Colony Description",
                       style: TextStyle(
                         color: Color(themedata.ScaffoldtextColor),
                       ),

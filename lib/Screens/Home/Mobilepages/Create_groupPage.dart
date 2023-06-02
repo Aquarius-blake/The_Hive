@@ -82,7 +82,7 @@ class _CreationState extends State<Creation> {
           color:Color(themedata.AppbariconColor),
         ),
         title:  Text(
-          "Create New Group",
+          "Create New Colony",
           style:TextStyle(
             color:Color(themedata.AppbartextColor)
           ),),
@@ -124,13 +124,13 @@ class _CreationState extends State<Creation> {
                     children: [
                       TextFormField(
                         controller: Group_name,
-                       validator: (val)=>val!.isEmpty ? "Enter Your Group Name" : null,
+                       validator: (val)=>val!.isEmpty ? "Enter Your Colony Name" : null,
                        decoration: InputDecoration(
                             label: const Text("Group Name"),
                             labelStyle:  TextStyle(
                               color: Color(themedata.ScaffoldtextColor),
                             ),
-                            hintText: "Enter Your Group Name",
+                            hintText: "Enter Your Colony Name",
                             filled: true,
                             fillColor: Colors.transparent,
                             focusedBorder: OutlineInputBorder(
@@ -153,13 +153,13 @@ class _CreationState extends State<Creation> {
                       TextFormField(
                         maxLines: 8,
                   controller: Group_desc,
-                   validator: (val)=>val!.isEmpty ? "Enter Your Group's description" : null,
+                   validator: (val)=>val!.isEmpty ? "Enter Your Colony's description" : null,
                    decoration: InputDecoration(
-                            label: const Text("Group Description"),
+                            label: const Text("Colony Description"),
                             labelStyle:  TextStyle(
                               color: Color(themedata.ScaffoldtextColor),
                             ),
-                            hintText: "Enter Group Description",
+                            hintText: "Enter Colony Description",
                             filled: true,
                             fillColor: Colors.transparent,
                             focusedBorder: OutlineInputBorder(
@@ -182,7 +182,7 @@ class _CreationState extends State<Creation> {
                 Center(
                   child: ElevatedButton(
                     child: const Text(
-                      "Create Group",
+                      "Create Colony",
                       style: TextStyle(
                         color: Colors.lightBlueAccent,
                       )

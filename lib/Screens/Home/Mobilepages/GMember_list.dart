@@ -32,7 +32,7 @@ class _GroupMembersState extends State<GroupMembers> {
           color: Color(themedata.AppbariconColor),
         ),
         title:  Text(
-          "Group Members",
+          "Colony Members",
           style: TextStyle(
             color:Color(themedata.AppbartextColor),
           ),
