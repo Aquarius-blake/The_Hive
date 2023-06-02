@@ -33,7 +33,7 @@ class _GrPostState extends State<GrPost> {
         context: context,
         builder: (context){
           return SimpleDialog(
-            title: Text("Create Post"),
+            title: Text("Add Picture"),
             children: [
               SimpleDialogOption(
                 padding: EdgeInsets.all(15.0),
@@ -110,7 +110,7 @@ class _GrPostState extends State<GrPost> {
           color: Color(themedata.AppbariconColor),
         ),
         title:  Text(
-          "Group Post",
+          "Create Colony Post",
           style: TextStyle(
             color:Color(themedata.AppbartextColor),
           ),

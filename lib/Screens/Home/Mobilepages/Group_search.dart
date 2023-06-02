@@ -127,7 +127,7 @@ class _GroupsearchState extends State<Groupsearch> {
           },
 
           decoration:  InputDecoration(
-            labelText: "Search Groups",
+            labelText: "Search Colonies",
             labelStyle: TextStyle(
               color: Color(themedata.ScaffoldtextColor),
             ),

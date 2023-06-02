@@ -54,7 +54,7 @@ class _GroupPageState extends State<GroupPage> {
                     );
               },
              child:  Text(
-              "Create New Group",
+              "Create New Colony",
               style: TextStyle(
                 color:Color(themedata.AppbartextbuttonColor!)
               ),
