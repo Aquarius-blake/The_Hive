@@ -33,15 +33,21 @@ class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
     return loading ? Loading(): Scaffold(
-      backgroundColor: Colors.lightBlueAccent[100],
+      backgroundColor: Colors.yellow[200],
       appBar: AppBar(
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Colors.yellow[200],
         elevation: 2.0,
+        shadowColor: Colors.black,
         title: Row(
           children:const <Widget> [
             Padding(
               padding: EdgeInsets.fromLTRB(20.0,0,0,0),
-              child:   Text("Register New Account"),
+              child:   Text(
+                "Register New Account",
+                style: TextStyle(
+                  color:Colors.black,
+                ),
+                ),
             )
           ],
         ),
@@ -49,14 +55,12 @@ class _RegisterState extends State<Register> {
       body: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Container(
-
           child: Container(
             color: Colors.white,
             padding: const EdgeInsets.all(8.0),
             child: Container(
-
               padding: EdgeInsets.all(6.0),
-              color: Colors.lightBlueAccent[100],
+              color: Colors.yellow[200],
               child: SingleChildScrollView(
                 child: Form(
                   key: _formKey,
@@ -82,7 +86,7 @@ class _RegisterState extends State<Register> {
                                   },
                                   icon: const Icon(
                                     Icons.add_a_photo,
-                                    color: Colors.white,
+                                    color: Colors.black,
                                   )
                               )
                           )
@@ -236,6 +240,11 @@ class _RegisterState extends State<Register> {
                           Center(
                             child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.yellow,
+                                  side: const BorderSide(
+                                  color: Colors.black,
+                                  width: 2.0,
+                                ),
                                     shape: RoundedRectangleBorder(
                                         borderRadius: BorderRadius.circular(100.0)
                                     )
@@ -258,7 +267,7 @@ class _RegisterState extends State<Register> {
                                   child: Text(
                                     "Sign in as Guest",
                                     style: TextStyle(
-
+                                      color:Colors.black,
                                     ),
 
                                   ),
@@ -270,11 +279,11 @@ class _RegisterState extends State<Register> {
                             child: ElevatedButton(
 
                                 style: ElevatedButton.styleFrom(
-                                    elevation: 6.0,
+                                    elevation: 6.0, 
+                                    backgroundColor: Colors.black,
                                     shadowColor: Colors.black,
-                                    primary: Colors.white,
                                     side: const BorderSide(
-                                      color: Colors.blue,
+                                      color: Colors.yellow,
                                      width: 2.0,
                                     ),
 
@@ -307,7 +316,7 @@ class _RegisterState extends State<Register> {
                                   child: Text(
                                     "Register",
                                     style: TextStyle(
-                                      color: Colors.blue,
+                                      color: Colors.yellow,
                                     ),
                                   ),
                                 )
