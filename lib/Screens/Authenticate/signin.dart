@@ -24,10 +24,11 @@ class _SinginState extends State<Singin> {
   @override
   Widget build(BuildContext context) {
     return loading ? Loading(): Scaffold(
-      backgroundColor: Colors.lightBlueAccent[100] ,
+      backgroundColor: Colors.yellow[200] ,
       appBar: AppBar(
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Colors.yellow[200] ,
         elevation: 2.0,
+        shadowColor: Colors.black,
         title: const Center(
             child: Text(
               "Welcome",
