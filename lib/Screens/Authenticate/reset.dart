@@ -41,10 +41,17 @@ padd=150;
   Widget build(BuildContext context) {
 
     return Scaffold(
-      backgroundColor: Colors.lightBlueAccent[100],
+      backgroundColor: Colors.yellow[200],
       appBar: AppBar(
+        backgroundColor: Colors.yellow[300],
+        iconTheme: IconThemeData(
+          color: Colors.black,
+        ),
         title: const Text(
             "Reset Password",
+            style: TextStyle(
+              color: Colors.black,
+            ),
         ),
         centerTitle: true,
       ),
@@ -53,7 +60,7 @@ padd=150;
           padding:  EdgeInsets.all(padd),
           child: Card(
             margin: EdgeInsets.fromLTRB(16.0, cp,16.0, cp),
-            color: Colors.white,
+            color: Colors.black,
             shadowColor: Colors.black,
             elevation: 12.0,
             shape: RoundedRectangleBorder(
@@ -76,7 +83,7 @@ padd=150;
                             style: TextStyle(
                             fontSize: 30.0,
                               fontWeight: FontWeight.bold,
-                              color: Colors.black
+                              color: Colors.yellow
                             ),
                             ),
                             Container(
@@ -121,16 +128,16 @@ padd=150;
                                 child: Text(
                                     "Reset Password",
                                         style: TextStyle(
-                                          color: Colors.blue
+                                          color: Colors.yellow
                                         ),
                                 ),
                               ),
                               style: ElevatedButton.styleFrom(
                                   elevation: 6.0,
-                                  backgroundColor: Colors.white,
+                                  backgroundColor: Colors.black,
                                   shadowColor: Colors.black,
                                   side: const BorderSide(
-                                    color: Colors.blue,
+                                    color: Colors.yellow,
                                     width: 2.0,
                                   ),
                                   shape: RoundedRectangleBorder(

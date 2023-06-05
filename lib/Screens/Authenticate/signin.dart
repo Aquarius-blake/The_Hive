@@ -32,7 +32,7 @@ class _SinginState extends State<Singin> {
         shadowColor: Colors.black,
         title: const Center(
             child: Text(
-              "Welcome",
+              "Welcome To The Hive",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
