@@ -34,6 +34,7 @@ class _SinginState extends State<Singin> {
               "Welcome",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
+                color: Colors.black,
               ),)
         ),
       ),
@@ -48,7 +49,7 @@ class _SinginState extends State<Singin> {
                   const   SizedBox(height:30 ,),
                   const FaIcon(
                     FontAwesomeIcons.peopleGroup,
-                    color: Colors.white70,
+                    color: Colors.black54,
                     size: 180,
                   ),
                   const SizedBox(
@@ -121,7 +122,7 @@ class _SinginState extends State<Singin> {
                         child: const Text(
                           "Forgot Password?",
                           style: TextStyle(
-                              color: Colors.white,
+                              color: Colors.black,
                               fontStyle: FontStyle.italic
                           ),)
                     ),
@@ -136,10 +137,10 @@ class _SinginState extends State<Singin> {
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 elevation: 7.0, 
-                                backgroundColor: Colors.blue[400],
+                                backgroundColor: Colors.yellow,
                                 shadowColor: Colors.black,
                                 side: const BorderSide(
-                                  color: Colors.white70,
+                                  color: Colors.black,
                                   width: 2.0,
                                 ),
                                 shape: RoundedRectangleBorder(
@@ -171,6 +172,9 @@ class _SinginState extends State<Singin> {
                               padding: const EdgeInsets.fromLTRB(100.0,0.0,100.0,0),
                               child: Text(
                                 "Sign in ",
+                                style: TextStyle(
+                                  color: Colors.black
+                                ),
                               ),
                             )
                         ),
@@ -182,10 +186,10 @@ class _SinginState extends State<Singin> {
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
                                 elevation: 7.0, 
-                                backgroundColor: Colors.blue[400],
+                                backgroundColor: Colors.yellow,
                                 shadowColor: Colors.black,
                                 side: BorderSide(
-                                  color: Colors.white70,
+                                  color: Colors.black,
                                   width: 2.0,
                                 ),
                                 shape: RoundedRectangleBorder(
@@ -207,6 +211,7 @@ class _SinginState extends State<Singin> {
                               child: Text(
                                 "Sign in as Guest",
                                 style: TextStyle(
+                                  color: Colors.black
                                 ),
                               ),
                             )
@@ -218,11 +223,11 @@ class _SinginState extends State<Singin> {
                       Center(
                         child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                                elevation: 6.0,
+                                elevation: 6.0, 
+                                backgroundColor: Colors.black,
                                 shadowColor: Colors.black,
-                                primary: Colors.white,
                                 side: const BorderSide(
-                                  color: Colors.blue,
+                                  color: Colors.yellow,
                                   width: 2.0,
                                 ),
                                 shape: RoundedRectangleBorder(
@@ -237,7 +242,7 @@ class _SinginState extends State<Singin> {
                               child: Text(
                                 "Sign Up",
                                 style: TextStyle(
-                                  color: Colors.blue,
+                                  color: Colors.yellow,
                                 ),
                               ),
                             )
