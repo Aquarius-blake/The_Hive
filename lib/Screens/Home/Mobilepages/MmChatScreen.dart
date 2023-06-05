@@ -58,7 +58,7 @@ class _MmchatScreenState extends State<MmchatScreen> {
         ),
       ),
       body: SizedBox(
-          height: MediaQuery.of(context).size.height*0.8,
+          height: MediaQuery.of(context).size.height*0.9,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: mChatbody(

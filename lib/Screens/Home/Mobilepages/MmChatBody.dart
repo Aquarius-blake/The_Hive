@@ -71,44 +71,48 @@ class _mChatbodyState extends State<mChatbody> {
     late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
     return Scaffold(
       backgroundColor: Color(themedata.ScaffoldbackColor),
-      body:  StreamBuilder(
-        stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").doc(widget.snap['Receiver uid']).collection('message').orderBy("Message Time").snapshots(),
-        builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
-          if(snapshot.connectionState==ConnectionState.waiting){
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-          return ListView.builder(
-              itemCount: snapshot.data!.docs.length,
-              itemBuilder: (context, index) => Wrap(
-                children: [Row(//TODO: change row to wrap(fix overflow)
+      body:  SafeArea(
+        child: StreamBuilder(
+          stream: FirebaseFirestore.instance.collection('Chats').doc(user1.UID).collection("Chathead").doc(widget.snap['Receiver uid']).collection('message').orderBy("Message Time").snapshots(),
+          builder: (context, AsyncSnapshot<QuerySnapshot<Map<String,dynamic>>>snapshot){
+            if(snapshot.connectionState==ConnectionState.waiting){
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            }
+            return ListView.builder(
+                itemCount: snapshot.data!.docs.length,
+                itemBuilder: (context, index) => Row(//TODO: change row to wrap(fix overflow)
                   children: [
                     user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
                         child:  SizedBox()
                     ):SizedBox(),
-                    SizedBox(
-                      child: GestureDetector(
-                        onLongPress: (){
-                          if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
-                         _options(context, snapshot.data!.docs[index].data()['author'], user1.UID!, snapshot.data!.docs[index].data()['Receiver'], snapshot.data!.docs[index].data()['Receiver Uid'], snapshot.data!.docs[index].data()['Message Uid']);
-                          }else{
-                            Showsnackbar("Access Denied", context);
-                          }
-                        },
-                        child: chatcard(
-                          snap: snapshot.data!.docs[index].data(),
+                    Flexible(
+                      flex: 2,
+                      fit: FlexFit.tight,
+                      child: SizedBox(    
+                        child: GestureDetector(
+                          onLongPress: (){
+                            if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
+                           _options(context, snapshot.data!.docs[index].data()['author'], user1.UID!, snapshot.data!.docs[index].data()['Receiver'], snapshot.data!.docs[index].data()['Receiver Uid'], snapshot.data!.docs[index].data()['Message Uid']);
+                            }else{
+                              Showsnackbar("Access Denied", context);
+                            }
+                          },
+                          child: chatcard(
+                            snap: snapshot.data!.docs[index].data(),
+                          ),
                         ),
                       ),
                     ),
-                 SizedBox(
-                   width: 10.0,)
+                    user1.UID==snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
+                        child:  SizedBox()
+                    ):SizedBox(),
                   ],
-                ),
-                ]
-              )
-          );
-        },
+                )
+            );
+          },
+        ),
       ),
     );
   }
