@@ -25,5 +25,5 @@ Initial release will be added after standard themes are implemented.
 
 
 ## 💡 Planned updates
-   -User custom themes
+   - User custom themes
    - ...and some other stuff 
