@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.project.forum3">
    <application
-        android:label="Beehive"
+        android:label="The Hive"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
