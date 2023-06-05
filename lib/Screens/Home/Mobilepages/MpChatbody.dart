@@ -89,20 +89,27 @@ class _ChatbodyState extends State<Chatbody> {
                   user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
                       child:  SizedBox()
                   ):const SizedBox(),
-                    SizedBox(
-                      child: GestureDetector(
-                        onLongPress: (){
-                          if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
-                            _options(context, snapshot.data!.docs[index].data()['author'], user1.UID!, snapshot.data!.docs[index].data()['Receiver'], snapshot.data!.docs[index].data()['Receiver Uid'], snapshot.data!.docs[index].data()['Message Uid']);
-                          }else{
-                            Showsnackbar("Access Denied", context);
-                          }
-                        },
-                        child: chatcard(
-                          snap: snapshot.data!.docs[index].data(),
+                    Flexible(
+                      flex: 2,
+                      fit: FlexFit.tight,
+                      child: SizedBox(
+                        child: GestureDetector(
+                          onLongPress: (){
+                            if(snapshot.data!.docs[index].data()['author uid']==user1.UID){
+                              _options(context, snapshot.data!.docs[index].data()['author'], user1.UID!, snapshot.data!.docs[index].data()['Receiver'], snapshot.data!.docs[index].data()['Receiver Uid'], snapshot.data!.docs[index].data()['Message Uid']);
+                            }else{
+                              Showsnackbar("Access Denied", context);
+                            }
+                          },
+                          child: chatcard(
+                            snap: snapshot.data!.docs[index].data(),
+                          ),
                         ),
                       ),
                     ),
+                     user1.UID==snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
+                      child:  SizedBox()
+                  ):const SizedBox(),
                   ],
                 ),
               )
