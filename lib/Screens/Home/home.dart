@@ -30,6 +30,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/get_core.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:provider/provider.dart';
 import '../../Provider/user_provider.dart';
 import '../../Services/auth.dart';
@@ -93,7 +94,20 @@ class _HomeState extends State<Home> {
   int _page=0;
   late PageController pageController;
   String title="Home";
+  late String appName;
+  late String packageName;
+  late String version;
+  late String buildNumber;
 
+  void getappinfo()async{
+    PackageInfo packageInfo = await PackageInfo.fromPlatform();
+    setState(() {
+      appName = packageInfo.appName;
+      packageName = packageInfo.packageName;
+      version = packageInfo.version;
+      buildNumber = packageInfo.buildNumber;
+    });
+  }
 
   @override
   void initState() {
@@ -101,6 +115,7 @@ class _HomeState extends State<Home> {
     pageController=PageController();
     super.initState();
     initiateDynamiclink();
+    getappinfo();
   }
   @override
   void dispose() {
@@ -435,7 +450,7 @@ class _HomeState extends State<Home> {
                 ),
                 Center(
                   child: Text(
-                    "v1.0 BETA",
+                    "v"+version+" BETA",
                     style: TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.bold,
