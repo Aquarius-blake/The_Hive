@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/shared/loading.dart';
 import '../../Services/auth.dart';
+import 'dart:math' as math;
 
 class Singin extends StatefulWidget {
   const Singin({Key? key}) : super(key: key);
@@ -26,7 +27,7 @@ class _SinginState extends State<Singin> {
     return loading ? Loading(): Scaffold(
       backgroundColor: Colors.yellow[200] ,
       appBar: AppBar(
-        backgroundColor: Colors.yellow[200] ,
+        backgroundColor: Colors.yellow[300] ,
         elevation: 2.0,
         shadowColor: Colors.black,
         title: const Center(
@@ -47,10 +48,13 @@ class _SinginState extends State<Singin> {
               child: Column(
                 children: <Widget>[
                   const   SizedBox(height:30 ,),
-                  const FaIcon(
-                    FontAwesomeIcons.peopleGroup,
-                    color: Colors.black54,
-                    size: 180,
+                  Transform.rotate(
+                    angle: 90.0* math.pi / 180,
+                    child: const FaIcon(
+                      FontAwesomeIcons.hive,
+                      color: Colors.black,
+                      size: 180,
+                    ),
                   ),
                   const SizedBox(
                     height: 20,

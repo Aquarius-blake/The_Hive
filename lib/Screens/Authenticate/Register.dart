@@ -35,9 +35,12 @@ class _RegisterState extends State<Register> {
     return loading ? Loading(): Scaffold(
       backgroundColor: Colors.yellow[200],
       appBar: AppBar(
-        backgroundColor: Colors.yellow[200],
+        backgroundColor: Colors.yellow[300],
         elevation: 2.0,
         shadowColor: Colors.black,
+        iconTheme: const IconThemeData(
+          color: Colors.black,
+        ),
         title: Row(
           children:const <Widget> [
             Padding(
