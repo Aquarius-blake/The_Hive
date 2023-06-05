@@ -82,7 +82,7 @@ class _mChatbodyState extends State<mChatbody> {
             }
             return ListView.builder(
                 itemCount: snapshot.data!.docs.length,
-                itemBuilder: (context, index) => Row(//TODO: change row to wrap(fix overflow)
+                itemBuilder: (context, index) => Row(
                   children: [
                     user1.UID!=snapshot.data!.docs[index].data()['Receiver Uid']?  Expanded(
                         child:  SizedBox()

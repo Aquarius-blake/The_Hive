@@ -3,8 +3,6 @@ import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:forum3/Models/Settings.dart';
-import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Mcomments_screen.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Meditpost.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/Webed.dart';

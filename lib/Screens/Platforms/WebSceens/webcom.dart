@@ -101,9 +101,9 @@ class _webcomState extends State<webcom> {
                   onPressed: ()=>commenting(widget.snap['Post Uid'], text.text, user1.UID!, user1.Username!, user1.ppurl!,widget.snap['title'],widget.snap['author uid']),
                   child: const Text("Post"),
                   style: ElevatedButton.styleFrom(
-                      elevation: 0.0,
+                      elevation: 0.0, 
+                      backgroundColor: Colors.lightBlueAccent,
                       shadowColor: Colors.black,
-                      primary: Colors.lightBlueAccent,
                       side: const BorderSide(
                         color: Colors.white70,
                         width: 2.0,

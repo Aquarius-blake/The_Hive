@@ -1,5 +1,5 @@
 
-import 'dart:ffi';
+
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -34,7 +34,6 @@ import 'package:provider/provider.dart';
 import '../../Provider/user_provider.dart';
 import '../../Services/auth.dart';
 
-//TODO: Update firebase themedata fields and change corresponnding code
 //Home Screen
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);

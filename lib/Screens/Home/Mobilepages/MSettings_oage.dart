@@ -4,7 +4,6 @@ import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Provider/user_provider.dart';
-import 'package:forum3/Screens/Home/Mobilepages/MSettings_Colors.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/Animatedtogglebutton.dart';

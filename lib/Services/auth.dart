@@ -165,6 +165,7 @@ class AuthService{
       return User1.FromSnap(snap) ;
     }catch(e){
       print(e.toString());
+      return null;
     }
   }
 

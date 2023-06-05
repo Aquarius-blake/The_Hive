@@ -161,9 +161,9 @@ class _WebeditpostState extends State<Webeditpost> {
                       },
                       child: Text("Edit Post"),
                       style: ElevatedButton.styleFrom(
-                          elevation: 0.0,
+                          elevation: 0.0, 
+                          backgroundColor: Colors.blue[400],
                           shadowColor: Colors.black,
-                          primary: Colors.blue[400],
                           side: const BorderSide(
                             color: Colors.white70,
                             width: 2.0,

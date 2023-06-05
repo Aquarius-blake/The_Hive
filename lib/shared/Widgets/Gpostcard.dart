@@ -1,4 +1,3 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_dynamic_links/firebase_dynamic_links.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -7,8 +6,6 @@ import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_Postedit.dart';
 import 'package:forum3/Screens/Home/Mobilepages/Group_commentscreen.dart';
-import 'package:forum3/Screens/Home/Mobilepages/Mcomments_screen.dart';
-import 'package:forum3/Screens/Home/Mobilepages/Meditpost.dart';
 import 'package:forum3/Screens/Platforms/WebSceens/Webed.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';

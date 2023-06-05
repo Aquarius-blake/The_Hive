@@ -90,9 +90,9 @@ class _MprofileState extends State<Mprofilel> {
                                 ),
                               ),
                               style: ElevatedButton.styleFrom(
-                                  elevation: 6.0,
+                                  elevation: 6.0, 
+                                  backgroundColor: Colors.white,
                                   shadowColor: Colors.black,
-                                  primary: Colors.white,
                                   side: const BorderSide(
                                     color: Colors.blue,
                                     width: 2.0,
@@ -104,9 +104,9 @@ class _MprofileState extends State<Mprofilel> {
                               ),
                             ):ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                  elevation: 6.0,
+                                  elevation: 6.0, 
+                                  backgroundColor: Colors.white,
                                   shadowColor: Colors.black,
-                                  primary: Colors.white,
                                   side: const BorderSide(
                                     color: Colors.blue,
                                     width: 2.0,

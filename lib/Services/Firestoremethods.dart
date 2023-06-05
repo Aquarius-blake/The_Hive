@@ -883,7 +883,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
           SetOptions(merge: true)
         );
       }else{
-        //TODO: Store colors in hex code as int
+        //Store colors in hex code as int
         //Light Theme
         UserThemeData themedata=UserThemeData(
           UID: uid,
