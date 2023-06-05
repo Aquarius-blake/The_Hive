@@ -22,3 +22,8 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 ## 🎆 Releases
 
 Initial release will be added after standard themes are implemented.
+
+
+## 💡 Planned updates
+   -User custom themes
+   - ...and some other stuff 
