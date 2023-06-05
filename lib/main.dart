@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
           )
       ],
       child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
         home: AnimatedSplashScreen(
           splash: Splashscreen(), 
           nextScreen: Wrapper(),

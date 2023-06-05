@@ -31,7 +31,7 @@ class _NetconState extends State<Netcon> {
   Widget build(BuildContext context) {
     delay();
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.yellow[200],
       body: SafeArea(
         child: Center(
           child: Container(
