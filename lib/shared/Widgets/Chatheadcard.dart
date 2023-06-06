@@ -45,6 +45,7 @@ class _CHcardState extends State<CHcard> {
     final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm').format(dateTime);
+    final dateday=DateFormat('E').format(dateTime);
     late String sent;
     if(widget.snap['Receiver uid']==user1.UID){
 
@@ -97,7 +98,7 @@ class _CHcardState extends State<CHcard> {
                 children: [
                  const SizedBox(height: 15,),
                   Text(
-                      "$sent  $dateString",
+                      "$sent $dateday $dateString",
                     style: const TextStyle(
                       color: Colors.grey,
                     ),
