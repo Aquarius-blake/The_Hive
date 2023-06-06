@@ -249,7 +249,7 @@ _selectimage(BuildContext context)async{
                     style: ElevatedButton.styleFrom(
                                       elevation: 6.0,
                                       shadowColor: Colors.black,
-                                      backgroundColor: Color(themedata.ScaffoldbuttonColor),
+                                      backgroundColor: Colors.transparent,
                                       side: const BorderSide(
                                         color: Colors.blue,
                                        width: 2.0,

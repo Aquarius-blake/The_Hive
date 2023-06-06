@@ -156,7 +156,7 @@ class _GroupsearchState extends State<Groupsearch> {
             ),
             style: ElevatedButton.styleFrom(
                 elevation: 0.0, 
-                backgroundColor: Color(themedata.ScaffoldbuttonColor),
+                backgroundColor: Colors.transparent,
                 shadowColor: Colors.black,
                 side: BorderSide(
                   color: Color(themedata.ScaffoldbuttonborderColor),
