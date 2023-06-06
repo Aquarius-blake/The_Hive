@@ -9,7 +9,7 @@ Planning to add user customizable themes alongside  the standard light and dark 
 
 ## 📱 ScreenShots
 
-<img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/signin.png?raw=true" alt="image" width="250" height="650"> <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/home.png?raw=true" alt="image" width="250" height="650"> <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/chats.png?raw=true" alt="image" width="250" height="650">
+<img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/signin.png?raw=true" alt="image" width="250" height="650">  <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/home.png?raw=true" alt="image" width="250" height="650">  <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/chats.png?raw=true" alt="image" width="250" height="650">
 
 ## 🤗 Contributing
 
