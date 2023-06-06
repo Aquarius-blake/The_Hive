@@ -11,6 +11,8 @@ Planning to add user customizable themes alongside  the standard light and dark 
 
 <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/signin.png?raw=true" alt="image" width="260" height="650">  <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/home.png?raw=true" alt="image" width="260" height="650">  <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/chats.png?raw=true" alt="image" width="260" height="650">
 
+<img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/grouphome.png?raw=true" alt="image" width="260" height="650">
+
 ## 🤗 Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
