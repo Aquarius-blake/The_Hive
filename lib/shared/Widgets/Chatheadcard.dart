@@ -105,7 +105,7 @@ class _CHcardState extends State<CHcard> {
                 children: [
                  const SizedBox(height: 15,),
                   Text(
-                      "$sent $dateday $dateString",
+                      "Sent $dateday $dateString",
                     style: const TextStyle(
                       color: Colors.grey,
                     ),
