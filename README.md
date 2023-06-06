@@ -1,5 +1,5 @@
 
-# Social Media App
+# The Hive
 
 ## 📃 Description
 
