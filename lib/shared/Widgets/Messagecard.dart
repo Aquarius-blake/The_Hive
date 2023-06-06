@@ -28,6 +28,8 @@ class _chatcardState extends State<chatcard> {
     final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm').format(dateTime);
+    final dateday=DateFormat('E').format(dateTime);
+
 
     plaintext=Encryption.decrypt(widget.snap['Message']);
 
@@ -67,7 +69,7 @@ class _chatcardState extends State<chatcard> {
                   Align(
                       alignment: Alignment.bottomRight,
                       child: Text(
-                        "Sent $dateString",
+                        "Sent $dateday $dateString",
                         style: const TextStyle(
                             color: Colors.blueGrey,
                             fontSize: 12
@@ -111,7 +113,7 @@ class _chatcardState extends State<chatcard> {
                   Align(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        "Sent $dateString",
+                        "Sent $dateday $dateString",
                         style: const TextStyle(
                             color: Colors.blueGrey,
                             fontSize: 12
