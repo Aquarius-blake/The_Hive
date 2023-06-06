@@ -52,7 +52,7 @@ class _CHcardState extends State<CHcard> {
     try{
     final Timestamp timestamp = widget.snap['Chat Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
-    final dateString = DateFormat('K:mm').format(dateTime);
+    final dateString = DateFormat('K:mm a').format(dateTime);
     final dateday=DateFormat('E').format(dateTime);
      String sent;
     if(widget.snap['Receiver uid']==user1.UID){
