@@ -46,7 +46,5 @@ class _dynamicComState extends State<dynamicCom> {
       ),
     );
   }
-
 }
-
 

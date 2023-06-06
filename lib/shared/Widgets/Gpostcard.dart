@@ -191,17 +191,6 @@ class _GPostCardState extends State<GPostCard> {
   }
 
 
-/*  getcommentlen()async{
-    try{
-      QuerySnapshot snapshot=await FirebaseFirestore.instance.collection("Posts").doc(widget.snap['Post Uid']).collection("comments").get();
-      setState(() {
-        commentlen=snapshot.docs.length;
-      });    }
-    catch(e){
-      Showsnackbar(e.toString(), context);
-    }
-  }*/
-
   void likedf(String authoruid,List list){
     setState(() {
       if(list.contains(authoruid)){
@@ -212,7 +201,6 @@ class _GPostCardState extends State<GPostCard> {
   @override
   void initState() {
     super.initState();
-  //  getcommentlen();
   }
 
   @override
@@ -414,6 +402,7 @@ class _GPostCardState extends State<GPostCard> {
                       const Expanded(
                           child: SizedBox()
                       ),
+                      //TODO:Work on group share buttons in future versions
                       IconButton(
                           onPressed: null/*(){
                                   try{

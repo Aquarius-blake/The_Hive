@@ -1,8 +1,10 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 //theme implemented
@@ -18,6 +20,10 @@ class _RequestCardState extends State<RequestCard> {
   @override
   Widget build(BuildContext context) {
         late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+         final Timestamp timestamp = widget.snap['Request Time'] as Timestamp;
+    final DateTime dateTime = timestamp.toDate();
+    final dateString = DateFormat('K:mm a').format(dateTime);
+    final dateday=DateFormat('E').format(dateTime);
 
     return Container(
       child: Card(
@@ -97,6 +103,16 @@ class _RequestCardState extends State<RequestCard> {
                   ),
                 ],
               ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Text(
+                  "$dateday $dateString",
+                  style: TextStyle(
+                    color: Color(themedata.CardTextColor),
+                    fontSize: 8,
+                  ),
+                ),
+              )
             ],
           ),
         ),

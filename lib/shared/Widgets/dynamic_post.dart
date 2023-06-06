@@ -28,11 +28,9 @@ class _dynamicpState extends State<dynamicp> {
           }
           return  dynamicCard(
             snap: snapshot.data!.docs[0].data(),
-
           );
         },
       ),
-      
     );
   }
 }

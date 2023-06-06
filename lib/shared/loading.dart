@@ -20,7 +20,7 @@ class Loading extends StatelessWidget {
                 children: [
                   const SpinKitHourGlass(
                       color: Colors.white,
-                          size: 100.0,
+                          size: 110.0,
                   ),
                   const SizedBox(height: 5.0,),
                   Text(

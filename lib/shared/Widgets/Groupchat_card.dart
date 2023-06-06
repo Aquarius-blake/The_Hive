@@ -31,6 +31,7 @@ class _GchatcardState extends State<Gchatcard> {
             final Timestamp timestamp = widget.snap['Message Time'] as Timestamp;
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm').format(dateTime);
+    final dateday=DateFormat('E').format(dateTime);
 
     if(widget.snap['author uid']==user1.UID){
     return Container(
@@ -87,7 +88,7 @@ class _GchatcardState extends State<Gchatcard> {
                       ),
                     const SizedBox(height: 2,),
                     Text(
-                      dateString,
+                      "$dateday $dateString",
                       style: const TextStyle(
                         color: Colors.grey ,
                         fontSize: 10,
@@ -151,7 +152,7 @@ class _GchatcardState extends State<Gchatcard> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: Text(
-                        dateString,
+                        "$dateday $dateString",
                         style: const TextStyle(
                           color: Colors.grey,
                           fontSize: 10,

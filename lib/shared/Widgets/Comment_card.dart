@@ -72,7 +72,6 @@ class _CommentcardState extends State<Commentcard> {
                                     fontStyle: FontStyle.italic,
                                   ),
                                 ),
-
                               ],
                             ),
                           ),

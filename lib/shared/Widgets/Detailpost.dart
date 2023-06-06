@@ -31,7 +31,6 @@ class _detailpState extends State<detailp> {
           }
           return  PostCard(
                   snap: snapshot.data!.docs[0].data(),
-
           );
         },
       ),

@@ -157,7 +157,6 @@ class _dynamicCardState extends State<dynamicCard> {
             user1.Username!,
             user1.ppurl!,
             widget.snap['title']
-
         );
         setState(() {
           islikeanimating=true;
@@ -337,7 +336,6 @@ class _dynamicCardState extends State<dynamicCard> {
                           fontSize: 12,
                           fontStyle: FontStyle.italic
                       ),
-
                     ),
                   ),
                 ),
