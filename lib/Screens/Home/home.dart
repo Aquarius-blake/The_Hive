@@ -320,7 +320,7 @@ class _HomeState extends State<Home> {
                     size:35.0,
                     ),
                     title:  Text(
-                      "My Groups",
+                      "My Colonies",
                       style:TextStyle(
                         color: Color(themedata.DrawerTextColor!),
                         fontSize: 22.0,
@@ -342,7 +342,7 @@ class _HomeState extends State<Home> {
                     size:35.0,
                     ),
                     title:  Text(
-                      "Search Groups",
+                      "Search Colonies",
                       style:TextStyle(
                         color: Color(themedata.DrawerTextColor!),
                         fontSize: 22.0,
