@@ -20,8 +20,16 @@ class CHcard extends StatefulWidget {
   State<CHcard> createState() => _CHcardState();
 }
 
+
 class _CHcardState extends State<CHcard> {
   var plaintext;
+
+@override
+  void didChangeDependencies() {
+    
+    super.didChangeDependencies();
+  }
+
   @override
   Widget build(BuildContext context) {
     late  User1 user1=  Provider.of<UserProvider>(context).getUser;
@@ -48,7 +56,6 @@ class _CHcardState extends State<CHcard> {
     final dateday=DateFormat('E').format(dateTime);
      String sent;
     if(widget.snap['Receiver uid']==user1.UID){
-
       sent="Received";
     }else{
       sent="Sent";
