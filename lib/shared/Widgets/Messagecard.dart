@@ -29,14 +29,16 @@ class _chatcardState extends State<chatcard> {
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm').format(dateTime);
     final dateday=DateFormat('E').format(dateTime);
-
+    String restate;
 
     plaintext=Encryption.decrypt(widget.snap['Message']);
 
     if(widget.snap['Receiver Uid']!=user1.UID){
       recever=false;
+      restate="Sent";
     }else{
       recever=true;
+      restate="Recceived";
     }
     if(recever){
       return Align(
@@ -69,7 +71,7 @@ class _chatcardState extends State<chatcard> {
                   Align(
                       alignment: Alignment.bottomRight,
                       child: Text(
-                        "Sent $dateday $dateString",
+                        "$restate $dateday $dateString",
                         style: const TextStyle(
                             color: Colors.blueGrey,
                             fontSize: 12
@@ -113,7 +115,7 @@ class _chatcardState extends State<chatcard> {
                   Align(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        "Sent $dateday $dateString",
+                        "$restate $dateday $dateString",
                         style: const TextStyle(
                             color: Colors.blueGrey,
                             fontSize: 12
