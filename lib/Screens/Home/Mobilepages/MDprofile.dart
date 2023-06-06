@@ -57,7 +57,7 @@ class _MDprofileState extends State<MDprofile>with
             color: Color(themedata.AppbariconColor)
         ),
         title: Text(
-          "Profile",
+          "My Profile",
           style: TextStyle(
               color: Color(themedata.AppbartextColor)
           ),
@@ -76,7 +76,9 @@ class _MDprofileState extends State<MDprofile>with
                       backgroundImage: NetworkImage(user1.ppurl!),
                       radius: 50,
                     ),
-                    SizedBox(width: MediaQuery.of(context).size.width*0.05,),
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width*0.05,
+                      ),
                     Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       crossAxisAlignment: CrossAxisAlignment.center,
@@ -91,7 +93,9 @@ class _MDprofileState extends State<MDprofile>with
                                 color: Color(themedata.ScaffoldtextColor),
                               ),
                             ),
-                            const SizedBox(width: 10,),
+                            const SizedBox(
+                              width: 10,
+                              ),
                              Text(
                               "Posts",
                               style: TextStyle(

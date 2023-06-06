@@ -29,4 +29,5 @@ Initial release will be added after standard themes are implemented.
 ## 💡 Planned updates
    - User custom themes
    - Remove user from group(Kick user out)
+   - Redesign Snackbar
    - ...and some other stuff 
