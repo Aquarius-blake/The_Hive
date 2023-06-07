@@ -24,6 +24,7 @@ class _RequestCardState extends State<RequestCard> {
     final DateTime dateTime = timestamp.toDate();
     final dateString = DateFormat('K:mm a').format(dateTime);
     final dateday=DateFormat('E').format(dateTime);
+    final date=DateFormat('d/M/y').format(dateTime);
 
     return Container(
       child: Card(
@@ -106,10 +107,10 @@ class _RequestCardState extends State<RequestCard> {
               Align(
                 alignment: Alignment.bottomRight,
                 child: Text(
-                  "$dateday $dateString",
+                  "$date $dateday $dateString",
                   style: TextStyle(
                     color: Color(themedata.CardTextColor),
-                    fontSize: 8,
+                    fontSize: 12,
                   ),
                 ),
               )
