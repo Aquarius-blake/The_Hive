@@ -928,6 +928,25 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         return ress;
       }
   }
+
+ Future<String> Kickout(String Groupid,String uid)async{
+    String ress;
+    try{
+      _firestore.collection("Groups").doc(Groupid).update(
+        {"Members":FieldValue.arrayRemove([uid])},
+      );
+
+      _firestore.collection("Groups").doc(Groupid).collection("Members").doc(uid).delete();
+      ress="Successfully kicked out of Group";
+      return ress;
+    }
+    catch(e){
+      ress=e.toString();
+      return ress;
+    }
+  }
+
+
 }
 
 
