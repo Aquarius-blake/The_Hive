@@ -51,8 +51,11 @@ class _GroupMembersState extends State<GroupMembers> {
             return ListView.builder(
                 itemCount: snapshots.data!.docs.length,
                 itemBuilder: (context, index) => Container(
-                  child: Gmembercard(
-                    snap: snapshots.data!.docs[index].data(),
+                  child: GestureDetector(
+                    onLongPress: (){},
+                    child: Gmembercard(
+                      snap: snapshots.data!.docs[index].data(),
+                    ),
                   ),
                 )
             );
