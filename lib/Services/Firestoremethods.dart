@@ -929,7 +929,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
       }
   }
 
- Future<String> Kickout(String Groupid,String uid)async{
+ Future<String> GroupKickout(String Groupid,String uid)async{
     String ress;
     try{
       _firestore.collection("Groups").doc(Groupid).update(

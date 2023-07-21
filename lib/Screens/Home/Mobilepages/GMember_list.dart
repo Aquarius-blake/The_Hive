@@ -2,6 +2,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
+import 'package:forum3/Services/Firestoremethods.dart';
+import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/Alert.dart';
 import 'package:forum3/shared/Widgets/GMembercard.dart';
 import 'package:provider/provider.dart';
@@ -54,7 +56,11 @@ class _GroupMembersState extends State<GroupMembers> {
                 itemBuilder: (context, index) => Container(
                   child: GestureDetector(
                     onLongPress: (){
-                      showConfirmation("Kick "+ snapshots.data!.docs[index].data()['username'] +" out", "Are you sure?", KickOut(widget.snap['Group Uid'],snapshots.data!.docs[index].data()['username']), context);
+                      showConfirmation("Kick "+ snapshots.data!.docs[index].data()['username'] +" out",
+                       "Are you sure?",
+                        KickOut(widget.snap['Group Uid'],snapshots.data!.docs[index].data()['username'],context),
+                         context
+                                      );
                     },
                     child: Gmembercard(
                       snap: snapshots.data!.docs[index].data(),
@@ -68,9 +74,12 @@ class _GroupMembersState extends State<GroupMembers> {
   }
 }
 
-Widget KickOut(String groupid,String useruid){
+Widget KickOut(String groupid,String useruid,context){
   return TextButton(
-    onPressed: (){}, 
+    onPressed: ()async{
+      String content= await FirestoreMethods().GroupKickout(groupid, useruid);
+      Showsnackbar(content, context);
+    }, 
     child: Text("Yes")
     );
 }
