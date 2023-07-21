@@ -19,7 +19,7 @@ Future<void> showConfirmation(String title,String message,Widget widg,context) a
             child: const Text(
               'Cancel',
               style: TextStyle(
-                color: Colors.greenAccent,
+                color: Colors.lightBlueAccent,
               ),
               ),
             onPressed: () {
