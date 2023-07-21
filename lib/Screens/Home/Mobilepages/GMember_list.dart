@@ -54,7 +54,7 @@ class _GroupMembersState extends State<GroupMembers> {
                 itemBuilder: (context, index) => Container(
                   child: GestureDetector(
                     onLongPress: (){
-                      showConfirmation("KIck "+ snapshots.data!.docs[index].data()['username'] +" out", "Are you sure?", KickOut(widget.snap[''],snapshots.data!.docs[index].data()['username']), context);
+                      showConfirmation("KIck "+ snapshots.data!.docs[index].data()['username'] +" out", "Are you sure?", KickOut(widget.snap['Group Uid'],snapshots.data!.docs[index].data()['username']), context);
                     },
                     child: Gmembercard(
                       snap: snapshots.data!.docs[index].data(),
