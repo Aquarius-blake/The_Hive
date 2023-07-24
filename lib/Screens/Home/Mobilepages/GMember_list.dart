@@ -1,7 +1,9 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Settings.dart';
+import 'package:forum3/Models/Users1.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
+import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
 import 'package:forum3/shared/Widgets/Alert.dart';
@@ -25,6 +27,7 @@ class _GroupMembersState extends State<GroupMembers> {
   Widget build(BuildContext context) {
 
     late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
+    late  User1 user1=  Provider.of<UserProvider>(context).getUser;
 
     return Scaffold(
       backgroundColor: Color(themedata.ScaffoldbackColor),
@@ -56,12 +59,14 @@ class _GroupMembersState extends State<GroupMembers> {
                 itemBuilder: (context, index) => Container(
                   child: GestureDetector(
                     onLongPress: (){
-                      print(snapshots.data!.docs[index].data()['username']);
+                      if(user1.UID==widget.snap['author uid']){
+                        print(snapshots.data!.docs[index].data()['username']);
                       showConfirmation("Kick "+ snapshots.data!.docs[index].data()['username'] +" out",
                        "Are you sure?",
                         KickOut(widget.snap['Group Uid'],snapshots.data!.docs[index].data()['uid'],context),
                          context
                                       );
+                      }
                     },
                     child: Gmembercard(
                       snap: snapshots.data!.docs[index].data(),
