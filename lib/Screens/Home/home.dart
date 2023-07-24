@@ -423,8 +423,12 @@ class _HomeState extends State<Home> {
                ),
              ),
              onTap: ()async{
-               String content= await FirestoreMethods().Makerequest(user1.Username!, user1.UID!, user1.ppurl!);
+               if(user1.Guest!=true){
+                String content= await FirestoreMethods().Makerequest(user1.Username!, user1.UID!, user1.ppurl!);
                Showsnackbar(content, context);
+               }else{
+                 Showsnackbar("Guests can't make requests", context);
+               }
              },
            ),
              const SizedBox(height: 100.0,),
@@ -449,7 +453,7 @@ class _HomeState extends State<Home> {
                 ),
                 Center(
                   child: Text(
-                    "v"+version+" BETA",
+                    "v"+version+" ",
                     style: TextStyle(
                       fontSize: 12.0,
                       fontWeight: FontWeight.bold,
