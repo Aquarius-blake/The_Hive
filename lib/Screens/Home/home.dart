@@ -254,7 +254,6 @@ class _HomeState extends State<Home> {
                             style:  TextStyle(
                               fontSize: 16,
                               color: Color(themedata.DrawerTextColor!),
-
                             ),
                           ),
                         ),
@@ -304,9 +303,7 @@ class _HomeState extends State<Home> {
                       fontWeight: FontWeight.bold,
                       fontStyle: FontStyle.italic,
                       color:Color(themedata.DrawerTextColor!),
-
                     ),
-
                   ),
                   onTap: () async{
                   await _auth.SignOut(user1.Guest!,user1.UID!);
@@ -472,8 +469,8 @@ class _HomeState extends State<Home> {
             ),
           ),
         ),
-
       ),
+      
       body: PageView(
         children: [
           Mhome(),
