@@ -289,11 +289,14 @@ class _HomeState extends State<Home> {
                 ),
                 const SizedBox(height: 15,),
                 ListTile(
-                  leading:  Icon(
-                    LineIcons.alternateSignOut,
-                    color: Color(themedata.DrawerIconColor!),
-                    size:35.0,
-                    ),
+                  leading:  Transform.flip(
+                    flipX: true,
+                    child: Icon(
+                      Icons.directions_walk,
+                      color: Color(themedata.DrawerIconColor!),
+                      size:35.0,
+                      ),
+                  ),
                   title:  Text(
                     "Sign Out",
                     style: TextStyle(
