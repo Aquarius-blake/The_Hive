@@ -56,9 +56,10 @@ class _GroupMembersState extends State<GroupMembers> {
                 itemBuilder: (context, index) => Container(
                   child: GestureDetector(
                     onLongPress: (){
+                      print(snapshots.data!.docs[index].data()['username']);
                       showConfirmation("Kick "+ snapshots.data!.docs[index].data()['username'] +" out",
                        "Are you sure?",
-                        KickOut(widget.snap['Group Uid'],snapshots.data!.docs[index].data()['username'],context),
+                        KickOut(widget.snap['Group Uid'],snapshots.data!.docs[index].data()['uid'],context),
                          context
                                       );
                     },
@@ -79,6 +80,9 @@ Widget KickOut(String groupid,String useruid,context){
     onPressed: ()async{
       String content= await FirestoreMethods().GroupKickout(groupid, useruid);
       Showsnackbar(content, context);
+      Future.delayed(Duration(seconds: 2),(){
+        Navigator.pop(context);
+      });
     }, 
     child: Text("Yes")
     );
