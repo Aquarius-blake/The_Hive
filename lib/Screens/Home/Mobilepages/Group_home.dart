@@ -237,8 +237,9 @@ _selectimage(BuildContext context)async{
                     String content= await FirestoreMethods().JoinGroup(widget.snap['Group Uid'], user1);
                     Showsnackbar(content, context);
                     setState(() {
-                      
-                    });}
+                    });}else{
+                      Showsnackbar("Please Sign in to continue", context);
+                    }
                     }, 
                     child: const Text(
                       "Join Colony",
