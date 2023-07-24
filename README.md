@@ -28,6 +28,6 @@ Initial release will be added after standard themes are implemented.
 
 ## 💡 Planned updates
    - User custom themes
-   - Remove user from group(Kick user out)
+   - Remove user from group(Kick user out) [X]
    - Redesign Snackbar
    - ...and some other stuff 
