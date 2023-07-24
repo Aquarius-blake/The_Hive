@@ -42,7 +42,7 @@ class _dynamicCardState extends State<dynamicCard> {
         packageName: "com.blake.social",
         minimumVersion: 0,
       ),
-      iosParameters: IosParameters(
+      iosParameters: IOSParameters(
         bundleId: "com.blake.social",
         minimumVersion: '0',
         appStoreId: "000000000",
@@ -54,7 +54,7 @@ class _dynamicCardState extends State<dynamicCard> {
           Uri.parse("$image"),
           title: title),
     );
-    final ShortDynamicLink dynamicUrl = await parameters.buildShortLink();
+    final ShortDynamicLink dynamicUrl = await FirebaseDynamicLinks.instance.buildShortLink(parameters);
 
     String? desc = '${dynamicUrl.shortUrl.toString()}';
 

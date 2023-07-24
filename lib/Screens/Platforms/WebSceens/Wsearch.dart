@@ -175,9 +175,8 @@ bool loadin=false;
               ),
             ),
             style: ElevatedButton.styleFrom(
-                elevation: 0.0,
+                elevation: 0.0, backgroundColor: Colors.white,
                 shadowColor: Colors.black,
-                primary: Colors.white,
                 side: const BorderSide(
                   color: Colors.lightBlueAccent,
                   width: 2.0,

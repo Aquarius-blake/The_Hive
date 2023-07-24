@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
