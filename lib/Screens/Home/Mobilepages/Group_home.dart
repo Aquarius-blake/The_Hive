@@ -233,11 +233,12 @@ _selectimage(BuildContext context)async{
                     ):
                   ElevatedButton(
                     onPressed: ()async{
+                      if(user1.Guest!=true){
                     String content= await FirestoreMethods().JoinGroup(widget.snap['Group Uid'], user1);
                     Showsnackbar(content, context);
                     setState(() {
                       
-                    });
+                    });}
                     }, 
                     child: const Text(
                       "Join Colony",
