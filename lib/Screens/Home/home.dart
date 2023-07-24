@@ -427,7 +427,7 @@ class _HomeState extends State<Home> {
                 String content= await FirestoreMethods().Makerequest(user1.Username!, user1.UID!, user1.ppurl!);
                Showsnackbar(content, context);
                }else{
-                 Showsnackbar("Guests can't make requests", context);
+                 Showsnackbar("Sorry, Guests can't make requests", context);
                }
              },
            ),
