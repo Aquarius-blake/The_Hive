@@ -22,8 +22,8 @@ currently in development and is not yet ready for production.
 
 ## 🤗 Contributing
 
-- Contributions are welcome! If you would like to contribute, please read the
-[contribution guidelines](CONTRIBUTING.md)
+- Contributions are welcome! <!--If you would like to contribute, please read the
+[contribution guidelines](CONTRIBUTING.md) -->
 - Feel free to open an [issue](https://github.com/Aquarius-blake/The_Hive/issues) or submit a [pull request](https://github.com/Aquarius-blake/The_Hive/pulls).
 - We are also open to design suggestions. If you would like to suggest a design, feel free to open an [issue](https://github.com/Aquarius-blake/The_Hive/issues).
 
