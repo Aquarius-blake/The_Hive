@@ -15,7 +15,7 @@ Planning to add user customizable themes alongside the standard light and dark t
 
 ## 🤗 Contributing
 
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+Contributions are welcome! Feel free to open an issue or [submit](https://github.com/Aquarius-blake/The_Hive/issues) a [pull request](https://github.com/Aquarius-blake/The_Hive/pulls).
 
 ## ❗❗❗ IMPORTANT NOTICE
 
