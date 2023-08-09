@@ -43,6 +43,5 @@ currently in development and is not yet ready for production.
 ## 💡 Planned updates
 
 - User custom themes
-- Remove user from group(Kick user out) [✓]
 - Redesign Snackbar
 - ...and some other stuff 
