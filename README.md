@@ -7,6 +7,13 @@ The Hive is a social media application project with flutter front-end UI and Fir
 End-to-End encryption included in private chats and group chats.This project aims to provide a social platform with maximum customizability whiles maintaining a sufficient level of security and simplicity.
 Planning to add user customizable themes alongside the standard light and dark theme.
 
+- This project is powered by Blake Technologies.
+
+- The app is developed using Flutter,firebase and GetX state management. The app is
+currently in development and is not yet ready for production.
+
+- Right now, the app is only available for Android devices.
+
 ## 📱 ScreenShots
 
 <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/signin.png?raw=true" alt="image" width="260" height="650">  <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/home.png?raw=true" alt="image" width="260" height="650">  <img src="https://github.com/Aquarius-blake/Images/blob/main/The%20Hive/chats.png?raw=true" alt="image" width="260" height="650">
@@ -15,7 +22,14 @@ Planning to add user customizable themes alongside the standard light and dark t
 
 ## 🤗 Contributing
 
-Contributions are welcome! Feel free to open an issue or [submit](https://github.com/Aquarius-blake/The_Hive/issues) a [pull request](https://github.com/Aquarius-blake/The_Hive/pulls).
+- Contributions are welcome! If you would like to contribute, please read the
+[contribution guidelines](CONTRIBUTING.md)
+- Feel free to open an [issue](https://github.com/Aquarius-blake/The_Hive/issues) or submit a [pull request](https://github.com/Aquarius-blake/The_Hive/pulls).
+- We are also open to design suggestions. If you would like to suggest a design, feel free to open an [issue](https://github.com/Aquarius-blake/The_Hive/issues).
+
+- We are also open to feature requests. If you would like to request a feature, please feel free to open an [issue](https://github.com/Aquarius-blake/The_Hive/issues). We will try to implement the feature as soon as possible.
+
+- We are also open to bug reports. If you would like to report a bug, please feel free to open an [issue](https://github.com/Aquarius-blake/The_Hive/issues). We will try to fix the bug as soon as possible.
 
 ## ❗❗❗ IMPORTANT NOTICE
 
@@ -23,7 +37,7 @@ Contributions are welcome! Feel free to open an issue or [submit](https://github
 
 ## 🎆 Releases
 
-Initial release will be added after standard themes are implemented.
+- [Latest Downloads available](https://github.com/Aquarius-blake/The_Hive/releases)
 
 
 ## 💡 Planned updates
