@@ -12,7 +12,7 @@ Planning to add user customizable themes alongside the standard light and dark t
 - The app is developed using Flutter,Firebase and GetX state management. The app is
 currently in development and is not yet ready for production.
 
-- Right now, the app is only available for Android devices.
+- Currently, the app is only available for Android devices.
 
 ## 📱 ScreenShots
 
