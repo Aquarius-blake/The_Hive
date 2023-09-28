@@ -7,7 +7,7 @@ The Hive is a social media application project with flutter front-end UI and Fir
 End-to-End encryption included in private chats and group chats.This project aims to provide a social platform with maximum customizability whiles maintaining a sufficient level of security and simplicity.
 Planning to add user customizable themes alongside the standard light and dark theme.
 
-- This project is powered by Blake Technologies.
+- This project is powered by [Blake Technologies](https://aquarius-blake.github.io/portfolio/).
 
 - The app is developed using Flutter,Firebase and GetX state management. The app is
 currently in development and is not yet ready for production.
