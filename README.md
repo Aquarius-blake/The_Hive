@@ -9,7 +9,7 @@ Planning to add user customizable themes alongside the standard light and dark t
 
 - This project is powered by Blake Technologies.
 
-- The app is developed using Flutter,Firebase and GetX state management. The app is
+- The app is developed using Flutter, Firebase and GetX state management. The app is
 currently in development and is not yet ready for production.
 
 - Currently, the app is only available for Android devices.
