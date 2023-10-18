@@ -33,7 +33,7 @@ currently in development and is not yet ready for production.
 
 ## ❗❗❗ IMPORTANT NOTICE
 
-#### If you wish to use this project (as a template) for private/personal purposes, kindly link your own Firebase tools.(Don't forget to change applicationId first)
+### If you wish to use this project (as a template) for private/personal purposes, kindly link your own Firebase tools.(Don't forget to change applicationId first)
 
 ## 🎆 Releases
 
