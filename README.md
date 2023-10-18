@@ -42,6 +42,6 @@ currently in development and is not yet ready for production.
 
 ## 💡 Planned updates
 
-- User custom themes
-- Redesign Snackbar
+- [] User custom themes
+- [] Redesign Snackbar
 - ...and some other stuff 
