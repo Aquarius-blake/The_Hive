@@ -13,5 +13,9 @@ void main(){
   MockFirebaseAuth _auth = MockFirebaseAuth();
   BehaviorSubject<MockFirebaseUser> _user = BehaviorSubject<MockFirebaseUser>();
 
-  group("user_repository_test", () { });
+  group("user_repository_test", () { 
+    test("sign in with email and password",() async {
+
+    });
+  });
 }
