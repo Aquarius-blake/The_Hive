@@ -57,6 +57,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  mockito: ^5.4.2
+  rxdart: 
   flutter_launcher_icons: any
 
 flutter_icons:
