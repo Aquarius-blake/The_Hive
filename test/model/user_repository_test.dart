@@ -17,5 +17,10 @@ void main(){
     test("sign in with email and password",() async {
 
     });
+
+    test("sign out",(){
+      
+    });
+
   });
 }
