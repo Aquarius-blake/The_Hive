@@ -111,6 +111,7 @@ class AuthService{
     try{
       UserCredential result= await _auth.createUserWithEmailAndPassword(email: email, password: password);
       User? user = result.user;
+      
 
     String photourl= await  Store.Storageip("Profilepic", image, false,null);
     String flname=username.substring(0,1).toUpperCase();
