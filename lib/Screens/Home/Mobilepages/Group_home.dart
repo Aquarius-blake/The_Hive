@@ -40,7 +40,11 @@ void didChangeDependencies() {
     
   });
 }
-
+@override
+  void dispose() {
+    _bannerAd?.dispose();
+    super.dispose();
+  }
 @override
 void initState() {
   // TODO: Load a banner ad
@@ -63,6 +67,21 @@ void initState() {
 
   super.initState();
   
+}
+
+Widget ad(){
+   if (_bannerAd != null){
+    return Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                width: _bannerAd!.size.width.toDouble(),
+                height: _bannerAd!.size.height.toDouble(),
+                child: AdWidget(ad: _bannerAd!),
+              ),
+            );
+   } else {
+    return Container();
+   }   
 }
 
 _selectimage(BuildContext context)async{
