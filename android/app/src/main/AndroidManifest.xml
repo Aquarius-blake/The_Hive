@@ -30,8 +30,10 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+            
+        <!-- TODO:Change Id from Test to realtime -->
         <meta-data
         android:name="com.google.android.gms.ads.APPLICATION_ID"
-        android:value="ca-app-pub-9974885887776001~9115128640"/>
+        android:value="ca-app-pub-3940256099942544~3347511713"/>
     </application>
 </manifest>
