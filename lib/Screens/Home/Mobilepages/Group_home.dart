@@ -266,7 +266,7 @@ _selectimage(BuildContext context)async{
                     style: ElevatedButton.styleFrom(
                                       elevation: 6.0, 
                                       backgroundColor: Colors.transparent,
-                                      shadowColor: Colors.black,
+                                      shadowColor: Colors.transparent,
                                       side: const BorderSide(
                                         color: Colors.blue,
                                        width: 2.0,
@@ -296,7 +296,7 @@ _selectimage(BuildContext context)async{
                       ),
                     style: ElevatedButton.styleFrom(
                                       elevation: 6.0,
-                                      shadowColor: Colors.black,
+                                      shadowColor: Colors.transparent,
                                       backgroundColor: Colors.transparent,
                                       side: const BorderSide(
                                         color: Colors.blue,
