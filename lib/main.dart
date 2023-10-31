@@ -36,7 +36,7 @@ void main() async{
   runApp(const MyApp());
 }
 Future<InitializationStatus> _initGoogleMobileAds() {
-    // TODO: Initialize Google Mobile Ads SDK
+    //Initialize Google Mobile Ads SDK
     return MobileAds.instance.initialize();
   }
 

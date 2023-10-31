@@ -47,7 +47,7 @@ void didChangeDependencies() {
   }
 @override
 void initState() {
-  // TODO: Load a banner ad
+  //Load a banner ad
   BannerAd(
     adUnitId: AdHelper.bannerAdUnitId,
     request: AdRequest(),
