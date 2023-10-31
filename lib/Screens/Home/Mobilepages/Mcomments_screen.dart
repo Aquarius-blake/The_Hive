@@ -73,7 +73,7 @@ text.dispose();
       backgroundColor: Color(themedata.ScaffoldbackColor),
       appBar: AppBar(
         iconTheme:  IconThemeData(
-          color: Color(themedata.AppbarbackColor),
+          color: Color(themedata.AppbariconColor),
         ),
         backgroundColor: Color(themedata.AppbarbackColor),
         title: Text(
