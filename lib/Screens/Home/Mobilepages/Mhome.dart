@@ -113,6 +113,21 @@ BannerAd? _bannerAd;
     super.initState();
   }
 
+  Widget ad(index){
+   if ((_bannerAd != null) && (index % 8 == 0)){
+    return Align(
+              alignment: Alignment.topCenter,
+              child: Container(
+                width: _bannerAd!.size.width.toDouble(),
+                height: _bannerAd!.size.height.toDouble(),
+                child: AdWidget(ad: _bannerAd!),
+              ),
+            );
+   } else {
+    return Container();
+   }   
+}
+
   @override
   Widget build(BuildContext context) {
         late  UserThemeData themedata= Provider.of<ThemeProvider>(context).getUserThemeData;
@@ -161,8 +176,13 @@ appBar:AppBar(
       return ListView.builder(
         itemCount: snapshot.data!.docs.length,
           itemBuilder: (context, index) => Container(
-        child: PostCard(
-          snap: snapshot.data!.docs[index].data(),
+        child: Column(
+          children: [
+            ad(index),
+            PostCard(
+              snap: snapshot.data!.docs[index].data(),
+            ),
+          ],
         ),
       )
       );
