@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:forum3/Ads/ad_helper.dart';
 import 'package:forum3/Models/Settings.dart';
 import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/shared/Widgets/post_card.dart';
@@ -87,6 +88,29 @@ BannerAd? _bannerAd;
         }
     );
 
+  }
+
+  @override
+  void initState() {
+     //Load a banner ad
+  BannerAd(
+    adUnitId: AdHelper.bannerAdUnitId,
+    request: AdRequest(),
+    size: AdSize.banner,
+    listener: BannerAdListener(
+      onAdLoaded: (ad) {
+        setState(() {
+          _bannerAd = ad as BannerAd;
+        });
+      },
+      onAdFailedToLoad: (ad, err) {
+        print('Failed to load a banner ad: ${err.message}');
+        ad.dispose();
+      },
+    ),
+  ).load();
+
+    super.initState();
   }
 
   @override
