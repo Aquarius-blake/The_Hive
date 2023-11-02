@@ -78,8 +78,9 @@ class _NotificationsState extends State<Notifications> {
               itemBuilder: (context, index) => Container(
                 child: GestureDetector(
                   onTap: (){
+                    //Checks if notification should follow a route
                     if(snapshot.data!.docs[index].data()['Event Uid']==snapshot.data!.docs[index].data()['owner uid']){
-                      
+
                     }else{
                       Navigator.of(context).push(
                         MaterialPageRoute(
