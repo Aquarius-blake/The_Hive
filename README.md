@@ -59,7 +59,7 @@ currently in development and is not yet ready for production.
 
 ## 💡 Planned updates
 
-- [] User custom themes
-- [] Redesign Snackbar
-- [] Post Reporting
+- [ ] User custom themes
+- [ ] Redesign Snackbar
+- [ ] Post Reporting
 - ...and some other stuff 
