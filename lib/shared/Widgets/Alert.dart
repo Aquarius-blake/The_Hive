@@ -34,7 +34,7 @@ Future<void> showConfirmation(String title,String message,Widget widg,context) a
 }
 
 
-Future<void> showAlert(String title,String message,Widget widg,context) async {
+Future<void> showAlert(String title,String message,context) async {
   return showDialog<void>(
     context: context,
     barrierDismissible: false, // user must tap button!
@@ -60,7 +60,17 @@ Future<void> showAlert(String title,String message,Widget widg,context) async {
               Navigator.of(context).pop();
             },
           ),
-          widg,
+           TextButton(
+            child: const Text(
+              'Ok',
+              style: TextStyle(
+                color: Colors.lightBlueAccent,
+              ),
+              ),
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+          ),
         ],
       );
     },

@@ -11,6 +11,7 @@ import 'package:forum3/Screens/Home/Mobilepages/Group_edit.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:forum3/shared/Widgets/Alert.dart';
 import 'package:forum3/shared/Widgets/Gpostcard.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:image_picker/image_picker.dart';
@@ -473,6 +474,7 @@ _selectimage(BuildContext context)async{
                           );
           }else{
             Showsnackbar("Access Denied, please join group first", context);
+            showAlert("Access Denied", "Please Join the group to access this feature", context);
           }
         },
       child:  FaIcon(
