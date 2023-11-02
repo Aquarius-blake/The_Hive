@@ -473,7 +473,7 @@ _selectimage(BuildContext context)async{
                               )
                           );
           }else{
-            Showsnackbar("Access Denied, please join group first", context);
+            //Showsnackbar("Access Denied, please join group first", context);
             showAlert("Access Denied", "Please Join the group to access this feature", context);
           }
         },
