@@ -447,7 +447,8 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             await _firestore.collection("Requests").doc(uid).delete();
             ress="Request Approved";
 
-             String notifid=const Uuid().v1();
+            //Notify user
+            String notifid=const Uuid().v1();
             String message="Accepted your request";
             dynamic Timeposted=DateTime.now();
             Notifs notification=Notifs(author_uid: user.UID, notifid: notifid, Eventuid: uid, message: message, author: user.Username, Timeposted: Timeposted, owner_uid: uid, title: "Request Accepted");
@@ -469,6 +470,8 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         try{
             await _firestore.collection("Requests").doc(uid).delete();
             ress="Request Denied Successfully";
+           
+           // Notify User
             String notifid=const Uuid().v1();
             String message="Denied your request";
             dynamic Timeposted=DateTime.now();
