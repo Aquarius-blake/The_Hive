@@ -437,7 +437,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         }
     }
 
-    Future<String> Approval(String uid)async{
+    Future<String> Approval(String uid,User1 user)async{
         String ress;
         try{
             await _firestore.collection("users").doc(uid).update(
@@ -453,11 +453,15 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         }
     }
 
-    Future<String> DenyRequest(String uid)async{
+    Future<String> DenyRequest(String uid,User1 user)async{
         String ress;
         try{
             await _firestore.collection("Requests").doc(uid).delete();
             ress="Request Denied Successfully";
+            String notifid=const Uuid().v1();
+            String message="Denied your request";
+            dynamic Timeposted=DateTime.now();
+            Notifs notification=Notifs(author_uid: user.UID, notifid: notifid, Eventuid: uid, message: message, author: user.Username, Timeposted: Timeposted, owner_uid: uid, title: "Request Denied");
             return ress;
         }catch(e){
             ress=e.toString();
