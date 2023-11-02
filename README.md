@@ -39,6 +39,14 @@ currently in development and is not yet ready for production.
 
 - [Latest Downloads available](https://github.com/Aquarius-blake/The_Hive/releases)
 
+##   Current Features
+- [X] Authentication
+- [X] Private Chats
+- [X] Group Chats
+- [X] End-to-End Encryption
+- [X] User Profile
+- [X] User Search
+
 
 ## 💡 Planned updates
 
