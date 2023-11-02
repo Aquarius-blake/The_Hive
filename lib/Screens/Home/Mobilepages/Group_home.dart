@@ -69,8 +69,8 @@ void initState() {
   
 }
 
-Widget ad(){
-   if (_bannerAd != null){
+Widget ad(index){
+   if ((_bannerAd != null) && (index % 8 == 0)){
     return Align(
               alignment: Alignment.topCenter,
               child: Container(
@@ -83,6 +83,7 @@ Widget ad(){
     return Container();
    }   
 }
+
 
 _selectimage(BuildContext context)async{
     return showDialog(
@@ -427,10 +428,6 @@ _selectimage(BuildContext context)async{
                 ),
               ),
              const SizedBox(height: 10,),
-             SizedBox(
-              child: ad(),
-             ),
-             const SizedBox(height: 10,),
               SizedBox(
                 width: MediaQuery.of(context).size.width,
                 height:double.maxFinite,
@@ -446,9 +443,14 @@ _selectimage(BuildContext context)async{
           physics: const NeverScrollableScrollPhysics(),
           itemCount: snapshot.data!.docs.length,
             itemBuilder: (context, index) => Container(
-          child: GPostCard(
-            snap: snapshot.data!.docs[index].data(),
-            Groupid: widget.snap['Group Uid'],
+          child: Column(
+            children: [
+              ad(index),
+              GPostCard(
+                snap: snapshot.data!.docs[index].data(),
+                Groupid: widget.snap['Group Uid'],
+              ),
+            ],
           ),
         ),
         );
