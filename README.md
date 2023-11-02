@@ -41,15 +41,24 @@ currently in development and is not yet ready for production.
 
 ##   Current Features
 - [X] Authentication
+- [X] Multiple Themes (more to follow)
 - [X] Private Chats
 - [X] Group Chats
 - [X] End-to-End Encryption
 - [X] User Profile
 - [X] User Search
+- [X] Post Search
+- [X] Post Feed
+- [X] Post Likes
+- [X] Post Comments
+- [X] Post Sharing
+- [X] Group Post Feed
+
 
 
 ## 💡 Planned updates
 
 - [] User custom themes
 - [] Redesign Snackbar
+- [] Post Reporting
 - ...and some other stuff 
