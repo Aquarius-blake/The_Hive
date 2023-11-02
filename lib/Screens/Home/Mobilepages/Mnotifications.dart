@@ -78,7 +78,9 @@ class _NotificationsState extends State<Notifications> {
               itemBuilder: (context, index) => Container(
                 child: GestureDetector(
                   onTap: (){
-                    if(snapshot.data!.docs[index].data()['Event Uid']==snapshot.data!.docs[index].data()['owner uid']){}else{
+                    if(snapshot.data!.docs[index].data()['Event Uid']==snapshot.data!.docs[index].data()['owner uid']){
+                      
+                    }else{
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context)=>Forumdetail(
