@@ -449,7 +449,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
 
             //Notify user
             String notifid=const Uuid().v1();
-            String message="Accepted your request";
+            String message="Approved your request";
             dynamic Timeposted=DateTime.now();
             Notifs notification=Notifs(author_uid: user.UID, notifid: notifid, Eventuid: uid, message: message, author: user.Username, Timeposted: Timeposted, owner_uid: uid, title: "Request Accepted");
             
