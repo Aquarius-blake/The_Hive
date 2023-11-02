@@ -56,7 +56,7 @@ class _LayoutState extends State<Layout> {
 
     // also, you must decide whether the app should exit or not after the work above, by returning a future boolean value:
      _loadInterstitialAd();
-     Future.delayed(Duration(seconds: 2),(){
+     Future.delayed(Duration(seconds: 1),(){
        if (_interstitialAd != null) {
          _interstitialAd!.show();
        } else {
