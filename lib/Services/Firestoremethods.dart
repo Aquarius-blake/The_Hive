@@ -475,7 +475,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             String notifid=const Uuid().v1();
             String message="Denied your request";
             dynamic Timeposted=DateTime.now();
-            Notifs notification=Notifs(author_uid: user.UID, notifid: notifid, Eventuid: uid, message: message, author: user.Username, Timeposted: Timeposted, owner_uid: uid, title: "Request Denied");
+            Notifs notification=Notifs(author_uid: user.UID, notifid: notifid, Eventuid: uid, message: message, author: user.Username, Timeposted: Timeposted, owner_uid: uid, title: "For admin access");
             
             await _firestore.collection("Notification").doc(uid).collection("Notifs").doc(notifid).set(
                     notification.toJson(),
