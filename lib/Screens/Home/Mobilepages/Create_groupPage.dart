@@ -22,6 +22,7 @@ class _CreationState extends State<Creation> {
     TextEditingController Group_desc=TextEditingController();
   TextEditingController Group_name=TextEditingController();
   final Upload Selection=Upload();
+  bool visibility=true;
   dynamic image;
 
   final _formKey =GlobalKey<FormState>();
@@ -85,7 +86,17 @@ class _CreationState extends State<Creation> {
           "Create New Colony",
           style:TextStyle(
             color:Color(themedata.AppbartextColor)
-          ),),
+          ),
+          ),
+          actions: [
+            IconButton(
+              onPressed: (){
+                setState(() {
+                  visibility=!visibility;
+                });
+              }, 
+              icon: visibility?  Icon(Icons.visibility):Icon(Icons.visibility_off))
+          ],
       ),
       body: SafeArea(
         child: Container(
