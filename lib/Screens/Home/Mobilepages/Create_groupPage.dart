@@ -6,6 +6,7 @@ import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/Services/Upload.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:forum3/shared/Widgets/Alert.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../../../Models/Users1.dart';
@@ -69,6 +70,14 @@ class _CreationState extends State<Creation> {
     );
   }
 
+  Widget vis(){
+    return TextButton(
+      onPressed: (){
+        setState(() {
+                  visibility=!visibility;
+                });}, child: Text("Confrim"));
+  }
+
   @override
   Widget build(BuildContext context) {
             late  User1 user1=  Provider.of<UserProvider>(context,listen: false).getUser;
@@ -91,9 +100,7 @@ class _CreationState extends State<Creation> {
           actions: [
             IconButton(
               onPressed: (){
-                setState(() {
-                  visibility=!visibility;
-                });
+                showConfirmation("Group Visibility", "Are you sure you want to change group visibility", vis(), context);
               }, 
               icon: visibility?  Icon(Icons.visibility):Icon(Icons.visibility_off))
           ],
