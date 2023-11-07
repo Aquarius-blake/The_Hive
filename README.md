@@ -54,6 +54,7 @@ currently in development and is not yet ready for production.
 - [X] Post Comments
 - [X] Post Sharing
 - [X] Group Post Feed
+- [ ] Explore Groups
 
 
 
