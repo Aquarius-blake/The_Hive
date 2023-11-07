@@ -57,7 +57,6 @@ currently in development and is not yet ready for production.
 - [ ] Explore Groups
 
 
-
 ## 💡 Planned updates
 
 - [ ] User custom themes
