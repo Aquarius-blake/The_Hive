@@ -62,4 +62,4 @@ currently in development and is not yet ready for production.
 - [ ] User custom themes
 - [ ] Redesign Snackbar and Alerts
 - [ ] Post Reporting
-- ...and some other stuff 
+- ...and some other stuff
