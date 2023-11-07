@@ -75,7 +75,9 @@ class _CreationState extends State<Creation> {
       onPressed: (){
         setState(() {
                   visibility=!visibility;
-                });}, child: Text("Confrim"));
+                });
+                },
+       child: Text("Confrim"));
   }
 
   @override
@@ -207,7 +209,7 @@ class _CreationState extends State<Creation> {
                       ),
                     onPressed: ()async{
                       if(_formKey.currentState?.validate()!=null && image!=null){
-                       String ress= await FirestoreMethods().CreateGroup(user1.UID!, user1.Username!, Group_name.text, Group_desc.text, image,user1);
+                       String ress= await FirestoreMethods().CreateGroup(user1.UID!, user1.Username!, Group_name.text, Group_desc.text, image,user1,visibility);
                      await Showsnackbar(ress, context);
                      Navigator.of(context).pop();
                       }else{

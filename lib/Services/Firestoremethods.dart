@@ -503,7 +503,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
         }
     }
 
-    Future<String> CreateGroup(String uid,String author,String grpname,String grpdesc,dynamic file,User1 user)async{
+    Future<String> CreateGroup(String uid,String author,String grpname,String grpdesc,dynamic file,User1 user,bool visibilty)async{
       String ress;
       String photourl;
       List members=[];
@@ -519,7 +519,20 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
             }
             members.add(uid);
 
-            Group group= Group(searchkey: grpname.substring(0,1).toUpperCase(),Post_name: "Posts",noP: 0,Header: "",author_uid: uid, Group_uid: groupid, author: author, Timeposted: DateTime.now(), members: members, Group_name: grpname.substring(0,1).toUpperCase()+grpname.substring(1), Group_description: grpdesc,ppurl: photourl,Identity: "Members");
+            Group group= Group(
+              searchkey: grpname.substring(0,1).toUpperCase(),
+              Post_name: "Posts",
+              noP: 0,Header: "",
+              author_uid: uid,
+              Group_uid: groupid,
+              author: author,
+              Timeposted: DateTime.now(),
+              members: members, 
+              Group_name: grpname.substring(0,1).toUpperCase()+grpname.substring(1), 
+              Group_description: grpdesc,
+              ppurl: photourl,
+              Identity: "Members",
+              is_private: visibilty);
 
           _firestore.collection("Groups").doc(groupid).set(
             group.toJson(),
