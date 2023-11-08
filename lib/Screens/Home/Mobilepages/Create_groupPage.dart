@@ -104,7 +104,7 @@ class _CreationState extends State<Creation> {
           actions: [
             IconButton(
               onPressed: (){
-                showConfirmation("Group Visibility", "Are you sure you want to change group visibility", vis(), context);
+                showConfirmation("Set Group Visibility", "Are you sure you want to change group visibility?", vis(), context);
               }, 
               icon: visibility?  Icon(Icons.visibility):Icon(Icons.visibility_off))
           ],
