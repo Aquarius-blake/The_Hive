@@ -78,7 +78,8 @@ class _CreationState extends State<Creation> {
                 });
         Navigator.of(context).pop();
                 },
-       child: Text("Confrim"));
+       child: Text("Confrim")
+       );
   }
 
   @override
