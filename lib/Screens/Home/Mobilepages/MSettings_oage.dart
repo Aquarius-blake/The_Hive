@@ -6,10 +6,11 @@ import 'package:forum3/Provider/Settings_provider.dart';
 import 'package:forum3/Provider/user_provider.dart';
 import 'package:forum3/Services/Firestoremethods.dart';
 import 'package:forum3/shared/Pop_up.dart';
+import 'package:forum3/shared/Widgets/Alert.dart';
 import 'package:forum3/shared/Widgets/Animatedtogglebutton.dart';
 import 'package:provider/provider.dart';
 
-//TODO: Link Custom Theme page for v1.0.2
+//TODO: Link Custom Theme page for v1.0.4
 
 class MSettings extends StatefulWidget {
   const MSettings({ Key? key }) : super(key: key);
@@ -90,7 +91,8 @@ class _MSettingsState extends State<MSettings> {
                                 builder: (context)=>CustomThemePage(),
                               )
                           );*/
-                          Showsnackbar("Feature not available for this version", context);
+                         // Showsnackbar("Feature not available for this version", context);
+                          showAlert("OOPS!! Not Yet Implemented", "This Feature has not been implemented yet in this version, Kindly check the download page for the latest releases", context);
                 },
                 child: Row(
                   children: [

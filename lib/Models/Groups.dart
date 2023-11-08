@@ -20,7 +20,7 @@ class Group{
   late final String? Identity;
   late final int noP;
   late final String? Post_name;
-  late final bool is_private;
+  late  bool is_private;
 
   Group(
       { required this.author_uid,
