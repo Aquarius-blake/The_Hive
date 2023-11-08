@@ -76,6 +76,7 @@ class _CreationState extends State<Creation> {
         setState(() {
                   visibility=!visibility;
                 });
+        Navigator.of(context).pop();
                 },
        child: Text("Confrim"));
   }
