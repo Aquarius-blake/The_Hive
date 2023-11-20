@@ -9,7 +9,7 @@ End-to-End encryption included in private chats and group chats.This project aim
 
 - This project is powered by [Blake Technologies](https://aquarius-blake.github.io/portfolio/).
 
-- The app is developed using Flutter, Firebase and GetX state management. The app is
+- The app is developed using Flutter, Firebase and GetX routing management. The app is
 currently in development and is not yet ready for production.
 
 - Currently, the app is only available for Android devices.
