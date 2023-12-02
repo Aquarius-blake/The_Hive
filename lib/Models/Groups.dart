@@ -20,7 +20,7 @@ class Group{
   late final String? Identity;
   late final int noP;
   late final String? Post_name;
-  late  bool is_private;
+  late  bool visibility;
 
   Group(
       { required this.author_uid,
@@ -36,7 +36,7 @@ class Group{
         this.Identity,
         required this.noP,
         this.Post_name,
-        this.is_private=false,
+        this.visibility=true,
       }
       );
 
@@ -54,7 +54,7 @@ class Group{
     "Identity":Identity,
     "noP":noP,  
     "Post Name":Post_name,
-    "Visibility":is_private
+    "Visibility":visibility,
   };
 
   static Group? FromSnap(DocumentSnapshot snap){
@@ -73,7 +73,7 @@ class Group{
       Identity: snapshot['Identity'],
       noP: snapshot['noP'],
       Post_name: snapshot['Post Name'],
-      is_private: snapshot['Visibility'],
+      visibility: snapshot['Visibility'],
     );
 
     return Group12;

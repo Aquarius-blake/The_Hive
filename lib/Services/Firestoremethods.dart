@@ -532,7 +532,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
               Group_description: grpdesc,
               ppurl: photourl,
               Identity: "Members",
-              is_private: visibilty);
+              visibility: visibilty);
 
           _firestore.collection("Groups").doc(groupid).set(
             group.toJson(),
