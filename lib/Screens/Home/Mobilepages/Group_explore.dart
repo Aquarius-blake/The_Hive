@@ -18,7 +18,7 @@ class _GroupExploreState extends State<GroupExplore> {
   BannerAd? _bannerAd;
 
   Widget ad(index){
-   if ((_bannerAd != null) && (index % 8 == 0)){
+   if ((_bannerAd != null) && (index % 6 == 0)){
     return Align(
               alignment: Alignment.topCenter,
               child: Container(
@@ -83,19 +83,24 @@ class _GroupExploreState extends State<GroupExplore> {
           }
           return ListView.builder(
               itemCount: snapshot.data!.docs.length,
-              itemBuilder: (context, index) => GestureDetector(
-                onTap: (){
-                  Navigator.of(context).push(
+              itemBuilder: (context, index) => Column(
+                children: [
+                  ad(index),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context)=>Ghome(
-                snap: snapshot.data!.docs[index].data(),
-              ),
+                  builder: (context)=>Ghome(
+                    snap: snapshot.data!.docs[index].data(),
+                  ),
             )
         );
-                },
-                child: GroupCard(
-                  snap: snapshot.data!.docs[index].data(),
-                ),
+                    },
+                    child: GroupCard(
+                      snap: snapshot.data!.docs[index].data(),
+                    ),
+                  ),
+                ],
               )
           );
         },
