@@ -58,6 +58,7 @@ class _GroupExploreState extends State<GroupExplore> {
 
 @override
   void dispose() {
+    _bannerAd?.dispose();
     super.dispose();
   }
 
