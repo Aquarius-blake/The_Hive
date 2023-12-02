@@ -18,15 +18,17 @@ class _GroupExploreState extends State<GroupExplore> {
   BannerAd? _bannerAd;
 
   Widget ad(index){
-   if ((_bannerAd != null) && (index % 6 == 0)){
-    return Align(
-              alignment: Alignment.topCenter,
-              child: Container(
-                width: _bannerAd!.size.width.toDouble(),
-                height: _bannerAd!.size.height.toDouble(),
-                child: AdWidget(ad: _bannerAd!),
+   if ((_bannerAd != null) && (index == 0)){
+    return StatefulBuilder(
+        builder: (context,setState) => Align(
+                   alignment: Alignment.topCenter,
+                   child: Container(
+                     width: _bannerAd!.size.width.toDouble(),
+                     height: _bannerAd!.size.height.toDouble(),
+                     child: new AdWidget(ad: _bannerAd!,),
+                ),
               ),
-            );
+    );
    } else {
     return Container();
    }   
@@ -41,7 +43,7 @@ class _GroupExploreState extends State<GroupExplore> {
     listener: BannerAdListener(
       onAdLoaded: (ad) {
         setState(() {
-          _bannerAd = ad as BannerAd;
+         _bannerAd = ad  as  BannerAd;
         });
       },
       onAdFailedToLoad: (ad, err) {
@@ -52,6 +54,11 @@ class _GroupExploreState extends State<GroupExplore> {
   ).load();
 
     super.initState();
+  }
+
+@override
+  void dispose() {
+    super.dispose();
   }
 
   @override
