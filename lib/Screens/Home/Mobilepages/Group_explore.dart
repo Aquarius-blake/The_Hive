@@ -91,24 +91,26 @@ class _GroupExploreState extends State<GroupExplore> {
           }
           return ListView.builder(
               itemCount: snapshot.data!.docs.length,
-              itemBuilder: (context, index) => Column(
-                children: [
-                  ad(index),
-                  GestureDetector(
-                    onTap: (){
-                      Navigator.of(context).push(
-            MaterialPageRoute(
-                  builder: (context)=>Ghome(
-                    snap: snapshot.data!.docs[index].data(),
-                  ),
-            )
-        );
-                    },
-                    child: GroupCard(
+              itemBuilder: (context, index) => Container(
+                child: Column(
+                  children: [
+                    ad(index),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                    builder: (context)=>Ghome(
                       snap: snapshot.data!.docs[index].data(),
                     ),
-                  ),
-                ],
+                          )
+                      );
+                      },
+                      child: GroupCard(
+                        snap: snapshot.data!.docs[index].data(),
+                      ),
+                    ),
+                  ],
+                ),
               )
           );
         },
