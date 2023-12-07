@@ -45,6 +45,11 @@
 	<false/>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-3940256099942544~1458002511</string>
-
+	<key>NSPhotoLibraryUsageDescription</key>
+    	<string>Photo Library Usage</string>
+    <key>NSCameraUsageDescription</key>
+        <string>Camera Library Usage</string>
+    <key>NSMicrophoneUsageDescription</key>
+        <string>Mic Library Usage</string>
 </dict>
 </plist>
