@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:forum3/shared/Widgets/Alert.dart';
 import 'package:forum3/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../Services/Upload.dart';
@@ -259,8 +260,8 @@ class _RegisterState extends State<Register> {
                                     print("Error Signing into App");
                                   }else
                                   {
-                                    print("Success");
-                                    print(result.UID);
+                                    // print("Success");
+                                    // print(result.UID);
                                     Navigator.pop(context);
                                   }
 
@@ -300,18 +301,28 @@ class _RegisterState extends State<Register> {
                                     setState(() {
                                       loading=true;
                                     });
-                                    print(email);
-                                    dynamic result=await _auth.RegisterNewUserEmail(email, password,Fnmae,Username,Gender,image);
-                                    if (result==null){
+                                    // print(email);
+                                    
+                                    if(image!=null){
+                                      dynamic result=await _auth.RegisterNewUserEmail(email, password,Fnmae,Username,Gender,image);
+                                      if (result == null){
                                       setState(() {
                                         loading=false;
                                         error="Registeration Failed";
                                       }
                                       );
-                                    }else{
-                                      print("success");
+                                    }else if(result is String){
+                                     setState(() {
+                                        loading = false;
+                                     });
+                                      showAlert("Error Message", result, context);
+                                    }
+                                    else{
+                                      // print("success");
                                       Navigator.pop(context);
                                     }
+                                    }
+                                    
                                   }
                                 },
 
