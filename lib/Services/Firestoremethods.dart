@@ -983,6 +983,18 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
+  Future<String>DeleteAcount(String uid)async{
+    String ress;
+    try{
+      //TODO: Delete all user data (including group data)
+      ress = "";
+      return ress;
+    }catch(e){
+      ress = e.toString();
+      return ress;
+    }
+  }
+
 
 }
 

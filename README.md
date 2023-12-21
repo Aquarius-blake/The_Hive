@@ -55,6 +55,7 @@ currently in development and is not yet ready for production.
 - [X] Post Sharing
 - [X] Group Post Feed
 - [ ] Explore Groups
+- [ ] Account Deletion
 
 
 ## 💡 Planned updates
