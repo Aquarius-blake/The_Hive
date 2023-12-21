@@ -9,7 +9,6 @@ import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 
 //TODO: Create theme fields for dialog options
-//TODO: Implement ads after every 5 or 10 post
 class Mhome extends StatefulWidget {
   const Mhome({Key? key}) : super(key: key);
 

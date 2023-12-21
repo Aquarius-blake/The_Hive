@@ -995,6 +995,16 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
     }
   }
 
+  Future<String>DeleteAccountData(String uid)async{
+    String ress;
+    try{
+      ress = "";
+      return ress;
+    }catch(e){
+      ress = e.toString();
+      return ress;
+    }
+  }
 
 }
 
