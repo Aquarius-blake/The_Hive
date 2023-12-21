@@ -998,6 +998,7 @@ Future<String> Makerequest(String author,String uid,String ppurl)async{
   Future<String>DeleteAccountData(String uid)async{
     String ress;
     try{
+      //TODO: With userid find and delete all firestore data related to it.
       ress = "";
       return ress;
     }catch(e){
