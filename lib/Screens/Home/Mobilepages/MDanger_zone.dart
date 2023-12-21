@@ -9,6 +9,11 @@ class MDangerzone extends StatefulWidget {
 class _MDangerzoneState extends State<MDangerzone> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true, 
+        title: const Text("Danger Zone"),
+      ),
+    );
   }
 }
