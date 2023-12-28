@@ -56,6 +56,8 @@ dependencies:
   liquid_pull_to_refresh: ^3.0.1
   #pull_to_refresh: ^2.0.0
   fluttertoast: ^8.2.4
+  badges: ^3.1.2
+  flutter_chat_bubble: ^2.0.2
 
 dev_dependencies:
   flutter_test:

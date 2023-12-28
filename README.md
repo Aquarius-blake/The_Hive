@@ -65,4 +65,5 @@ currently in development and is not yet ready for production.
 - [ ] Redesign Snackbar and Alerts
 - [ ] Redesign Profile Page
 - [ ] User blocking
+- [ ] Redesign chat UI
 - ...and some other stuff
