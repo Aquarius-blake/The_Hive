@@ -1,3 +1,4 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:forum3/shared/loading.dart';
@@ -21,6 +22,8 @@ class _SinginState extends State<Singin> {
   String email="";
   String password="";
   String error="";
+
+  var analytics = FirebaseAnalytics.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -166,6 +169,9 @@ class _SinginState extends State<Singin> {
                                   );
                                 }else{
                                   print("success");
+                                  await analytics.logLogin(
+                                    loginMethod: "Email"
+                                  );
                                 }
                               }else{
                                 error="Signin Failed";}
@@ -202,12 +208,15 @@ class _SinginState extends State<Singin> {
                             ),
                             onPressed: () async {
                               dynamic result= await _auth.Signguest();
-                              if(result== null){
+                              if(result == null){
                                 print("Error Signing into App");
                               }else
                               {
                                 print("Success");
                                 print(result.UID);
+                                await analytics.logLogin(
+                                  loginMethod: "login_guest"
+                                );
                               }
                             },
                             child: Padding(

@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/Services/auth.dart';
+import 'package:forum3/Services/Analytics.dart' as globals;
 
 
 class Resetpass extends StatefulWidget {
@@ -120,6 +121,7 @@ padd=150;
                               onPressed: () async{
                                 if(_formKey.currentState?.validate()!=null){
                                   await _auth.Reset(email);
+                                  globals.analytics.logEvent(name: "Reset_password");
                                   Navigator.pop(context);
                                 }
                               },

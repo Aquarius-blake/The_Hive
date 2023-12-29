@@ -1,9 +1,12 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/material.dart';
 import 'package:forum3/shared/Widgets/Alert.dart';
 import 'package:forum3/shared/loading.dart';
 import 'package:image_picker/image_picker.dart';
 import '../../Services/Upload.dart';
 import '../../Services/auth.dart';
+
+
 
 class Register extends StatefulWidget {
   Register({Key? key}) : super(key: key);
@@ -21,6 +24,7 @@ class _RegisterState extends State<Register> {
   String error="";
   dynamic image;
   DateTime date=DateTime(2022,01,01);
+   var analytics = FirebaseAnalytics.instance;
 
 
   bool loading=false;
@@ -319,6 +323,9 @@ class _RegisterState extends State<Register> {
                                     }
                                     else{
                                       // print("success");
+                                      await analytics.logSignUp(
+                                        signUpMethod: "Email"
+                                        );
                                       Navigator.pop(context);
                                     }
                                     }
