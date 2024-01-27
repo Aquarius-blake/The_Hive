@@ -60,6 +60,7 @@ dependencies:
   flutter_chat_bubble: ^2.0.2
   page_transition: ^2.1.0
   firebase_analytics: ^10.7.4
+  timeago: ^3.6.0
 
 dev_dependencies:
   flutter_test:

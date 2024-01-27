@@ -303,15 +303,15 @@ class _RegisterState extends State<Register> {
                                 onPressed: () async {
                                   if(_formKey.currentState?.validate()!=null){
                                     setState(() {
-                                      loading=true;
+                                      loading = true;
                                     });
                                     // print(email);
                                     
-                                    if(image!=null){
-                                      dynamic result=await _auth.RegisterNewUserEmail(email, password,Fnmae,Username,Gender,image);
+                                    if(image != null){
+                                      dynamic result = await _auth.RegisterNewUserEmail(email, password,Fnmae,Username,Gender,image);
                                       if (result == null){
                                       setState(() {
-                                        loading=false;
+                                        loading = false;
                                         error="Registeration Failed";
                                       }
                                       );
@@ -328,6 +328,12 @@ class _RegisterState extends State<Register> {
                                         );
                                       Navigator.pop(context);
                                     }
+                                    }else if(image == null){
+                                      setState(() {
+                                        loading = false;
+                                      });
+                                      showAlert("Error Message", "Please Upload a Profile Picture", context);
+
                                     }
                                     
                                   }
