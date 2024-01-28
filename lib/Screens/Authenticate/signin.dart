@@ -213,7 +213,7 @@ class _SinginState extends State<Singin> {
                               }else
                               {
                                 print("Success");
-                                print(result.UID);
+                               // print(result.UID);
                                 await analytics.logLogin(
                                   loginMethod: "login_guest"
                                 );
