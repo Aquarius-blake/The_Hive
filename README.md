@@ -32,7 +32,11 @@ currently in development and is not yet ready for production.
 
 ## ❗❗❗ IMPORTANT NOTICE
 
-### If you wish to use this project (as a template) for private/personal purposes, kindly link your own Firebase tools
+### If you wish to use this project (as a template) for private/personal purposes, kindly link your own Firebase tools.
+Run this commannd in your project directory
+```bash
+firebase init
+```
 
 ## 🎆 Releases
 
