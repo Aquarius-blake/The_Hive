@@ -1,4 +1,8 @@
 <!-- GitAds-Verify: 7Y4TV4SSR65D6HNV6CY8JHQ1XBEW137Z -->
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=aquarius-blake/the_hive@github)](https://gitads.dev/v1/ad-track?source=aquarius-blake/the_hive@github)
+
+
 # The Hive
 
 ## 📃 Description
